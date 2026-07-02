@@ -1,0 +1,93 @@
+{
+  "pages": {
+    "specs": [
+      {
+        "name": "home",
+        "entityRef": null,
+        "layout": "Blank",
+        "navigationLabel": "Home",
+        "content": []
+      },
+      {
+        "name": "Employee_Overview",
+        "entityRef": "MyFirstModule.Employee",
+        "layout": "Table",
+        "navigationLabel": "Employees",
+        "content": []
+      },
+      {
+        "name": "Employee_Detail",
+        "entityRef": "MyFirstModule.Employee",
+        "layout": "Form Horizontal",
+        "navigationLabel": "Employee Details",
+        "content": []
+      },
+      {
+        "name": "Complaint_Overview",
+        "entityRef": "MyFirstModule.Complaint",
+        "layout": "Table",
+        "navigationLabel": "Complaints",
+        "content": []
+      },
+      {
+        "name": "Complaint_Detail",
+        "entityRef": "MyFirstModule.Complaint",
+        "layout": "Form Horizontal",
+        "navigationLabel": "Complaint Details",
+        "content": []
+      },
+      {
+        "name": "Payment_Overview",
+        "entityRef": "MyFirstModule.Payment",
+        "layout": "Table",
+        "navigationLabel": "Payments",
+        "content": []
+      },
+      {
+        "name": "Payment_Detail",
+        "entityRef": "MyFirstModule.Payment",
+        "layout": "Form Horizontal",
+        "navigationLabel": "Payment Details",
+        "content": []
+      },
+      {
+        "name": "SalaryStatement_Overview",
+        "entityRef": "MyFirstModule.SalaryStatement",
+        "layout": "Table",
+        "navigationLabel": "Salary Statements",
+        "content": []
+      },
+      {
+        "name": "SalaryStatement_Detail",
+        "entityRef": "MyFirstModule.SalaryStatement",
+        "layout": "Form Horizontal",
+        "navigationLabel": "Salary Statement Details",
+        "content": []
+      }
+    ]
+  },
+  "app": {
+    "navigation": [
+      {
+        "page": "home",
+        "role": "Employee"
+      },
+      {
+        "page": "Employee_Overview",
+        "role": "Manager"
+      },
+      {
+        "page": "Complaint_Overview",
+        "role": "OfficeEmployee"
+      },
+      {
+        "page": "Payment_Overview",
+        "role": "Manager"
+      },
+      {
+        "page": "SalaryStatement_Overview",
+        "role": "Employee"
+      }
+    ]
+  }
+}

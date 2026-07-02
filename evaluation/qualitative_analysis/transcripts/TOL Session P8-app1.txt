@@ -1,0 +1,383 @@
+00:01:19 - 00:01:51
+P8: Oké. Beer2Beer Brewery inderdaad. hospitality business, business user. Oké. Ik denk dat ze allemaal opgepakt heeft of zo. Kijk alleen vaak. Zou je dat wel in je domeinmodel willen zien?
+
+00:01:51 - 00:01:56
+Researcher: Ja dus als het goed is, is elke user role heeft een entiteit gekregen.
+
+00:01:57 - 00:02:08
+P8: Oké. Is Beer2BeerManagement of. Gewoon commentaar hebben over hoe het zo maar gegenereerd is of niet?
+
+00:02:08 - 00:02:27
+Researcher: Ja. En zo ja, hoe vind je de model eruit zien? Koppelen relaties een beetje? Kloppen de attributen een beetje? Ja. Kardinaliteit. Goed. Oké. Ik kan in ieder geval verklappen dat Elke associatie is één op één gemaakt. Dat klopt dus bij bij voorbaat waarschijnlijk al niet.
+
+00:02:28 - 00:02:44
+P8: Nee. Kijk, eigenlijk zou ik graag willen zien dat je een, zeg maar een AppUser. Ja. En die is aan bepaalde attributen. Zeg maar dat dingen. En dan. Je hebt verschillende rollen die dan worden geërfd eigenlijk.
+
+00:02:44 - 00:02:46
+Researcher: Oh ja. Ja, zo is generalization.
+
+00:02:47 - 00:02:57
+P8: Ook als ik dit zo. Maar nu zie ik. Ik weet hoe lastig is. Dat is gewoon kut. Hebben niks meer te doen dan een goede domeinmodel te maken.
+
+00:02:57 - 00:03:03
+P8: Ja, alleen het is een beetje te verspreid, vind ik.
+
+00:03:03 - 00:03:32
+P8: Ja dus ik kijk naar ook naar deze de Als attributen. Zo'n naam. Elk heeft een naam, zo'n e-mail. Je kan natuurlijk vragen of dat verplicht is ja of nee. Tot ik bedoel nee. Het account status. Kan je bedoelen dat de manager orders. Oké, dat klopt wel. PDF format.
+
+00:03:32 - 00:03:45
+P8: Deze is een integer die al die data types hoor denk ik wel te kloppen vind ik. Want ook deze lijn hier had ik contact met de vorige persoon ook een beetje.
+
+00:03:45 - 00:03:45
+Researcher: Ja ja.
+
+00:03:45 - 00:03:46
+P8: Zoals ik.
+
+00:03:46 - 00:03:48
+Researcher: Al zei, hij kan het niet uit zichzelf netjes structureren inderdaad.
+
+00:03:48 - 00:03:57
+P8: Nee, beetje lastig gedaan. Ik kreeg een klein pre-procedure count integer twaalf vind ik. Decimaal makes sense dat een decimaal is.
+
+00:03:59 - 00:04:00
+Researcher: Hmmm.
+
+00:04:03 - 00:04:07
+P8: Ik zie ook geen enumerations. Klopt, dat klopt ja.
+
+00:04:07 - 00:04:10
+Researcher: Bij me zie je wel plekken waar dat wel nodig zou moeten zijn.
+
+00:04:12 - 00:04:28
+P8: Om. Te kijken. Ja, je wilt echt bepaalde. Tenminste, zeg ik uit mezelf altijd. Vaak heb je dat vaker met dan op locatie. Dat je baalt als en en en. Je hebt al verschillende stappen.
+
+00:04:28 - 00:04:31
+Researcher: Klopt ja, dat is ook wel in principe the best practice in Mendix. Ja ja ja.
+
+00:04:32 - 00:04:36
+P8: Ik kan niet één concreet voorbeeld noemen, maar dat wordt wel anders. Wel apart als je een domein meer dan.
+
+00:04:36 - 00:04:39
+Researcher: Ziet, bijvoorbeeld bij status. Status is vaak een enumeration.
+
+00:04:39 - 00:04:46
+P8: Ja. Goed punt. Ja, status is een string, dus dat is niet. Dat is niet heel handig nee. Oh oh, daar zaten ze ook. Een string.
+
+00:04:46 - 00:05:00
+Researcher: Hij heeft eigenlijk een entiteit gezien als een uhm. Of hij heeft een enumeratie gezien als een. Als een entiteit hier. Maar het zou dus eigenlijk een enumeration moeten zijn volgens jou. Ja, ja.
+
+00:05:00 - 00:05:06
+P8: Want vaak wil ik niet als een string hebben zeg maar. Dat zijn gewoon vaste waarden even niet gepakt. Ja dus.
+
+00:05:06 - 00:05:12
+P8: Kijk, als developer, je moet hier verder aan werken, dan is het wel vervelend. Maar dan heb je eigenlijk gewoon.
+
+00:05:12 - 00:05:14
+Researcher: Dan moet je weer helemaal opnieuw beginnen.
+
+00:05:14 - 00:05:41
+P8: Want je moet je eigen ideeën hebben. Ja, refactoren. Ik weet niet of het goede woord is, maar dan moet je weer ja goed doen. Dus vanuit dat oogpunt is dat misschien wat minder handig. Ja. Maar dat ik een beetje af van de scope van het werk. Zeker geen best practice, maar hangt voor zo'n applicatie dat het wel netjes moet hebben. Ja, als een of andere vorm is waar je maar een e-mail verstuurt zodat je iets terugkrijgt ofzo, dan ja, dan maakt het heel veel uit. Heel simpel. Maar ja, voor dit zou je dit wel beter beter willen doen. Ja.
+
+00:05:50 - 00:06:01
+P8: Bijvoorbeeld bij een shopping cart. Zou ik bijvoorbeeld op een totale kosten denk ik wel een required zou moeten zijn. Ja. Mijn mening is dat dat groene.
+
+00:06:01 - 00:06:02
+Researcher: Ja dat klopt.
+
+00:06:02 - 00:06:05
+P8: Ja, die required is wat voor mij wordt niet op de kaart gezet.
+
+00:06:06 - 00:06:13
+Researcher: Ja dus je mist uhm uh, de validatie van de attribute Uh die die moet. Ja, die moet.
+
+00:06:13 - 00:06:20
+P8: Ik denk dat een beetje ie dat een beetje willekeurig is welke die required heeft gemaakt en welke niet.
+
+00:06:20 - 00:06:20
+Researcher: Oké.
+
+00:06:20 - 00:06:41
+P8: Ja. Dus zeg maar een paar dingen die ik gewoon zeg om is zeg maar dat de hoe, zeg maar de visuele eruit ziet. Kan op zich wel beter. Ja. Uhm, je wilt werken met nummers en de attributen die of die krijgt zijn ja of nee. Dat. Is wel een paar dingen.
+
+00:06:43 - 00:06:54
+P8: Ja, Verder als ik ook kijk naar kardinaliteit. BreweryHasContract. Ja. Oké. Make sense. product. Oké.
+
+00:07:01 - 00:07:03
+P8: wat is logical operation?
+
+00:07:03 - 00:07:09
+Researcher: Uhm. Ik. Ik denk dat dat een iets is wat hier uit uh de user stories heeft gehaald. Wat hij dacht dat een entiteit is?
+
+00:07:09 - 00:07:10
+P8: Ja.
+
+00:07:11 - 00:07:15
+Researcher: Ja, misschien kan je komt er wel. Ik weet niet. Ik weet. Ik heb dat eigenlijk niet echt.
+
+00:07:17 - 00:07:18
+Researcher: Oh ja.
+
+00:07:19 - 00:07:22
+P8: as a Beer2Beer management user. I want to view the logical operations performance.
+
+00:07:26 - 00:07:47
+Researcher: Ik denk dat dat ook een een user story fout is, dus dat is ook een een punt natuurlijk. Als de user story z dit zegt, ja, is het dan valide dat hij dit heeft gemaakt? Want hij heeft de link gelegd tussen. Even kijken hoor. Nou niet per se de goede link, maar ja.
+
+00:07:47 - 00:08:04
+P8: Maar hij ziet zoiets als logical operations. En dan denk je van oh, die moet een entiteit zijn of zo ja, heeft ie t een naam gegeven? Dat kan worden. Description Ja, maar het is onduidelijk wat er precies wordt bedoeld. Ja. Oké.
+
+00:08:06 - 00:08:28
+P8: Ja. Verder, als ik zei dat dit een cijfer moest geven, dan denk ik misschien dus zo'n 6,5. Zoiets denk ik. Het is t is ja, t is oké, zeg maar uh. Ja, maar dat kan ook aan mijn persoonlijkheid liggen. Weet je wel waar ik denk dat ik ook het t. Het helpt je wat.
+
+00:08:29 - 00:08:48
+P8: Wat ik ervoor zou gebruiken, zeg maar, is gewoon oké. Ik gooi de user stories gewoon in in zo'n LLM en dan wordt het een of ander piepkleine iets en dan krijg je dat bij model. Ja, ik zou wel zo'n domeinmodel graag willen. Ja, ik denk het wel. Helpt. Maar het zal wel irritant zijn als je het zeg maar gewoon meteen in bent. Ik zet dat je dan alsnog dingen moet gaan veranderen.
+
+00:08:48 - 00:08:57
+Researcher: Dus ze zijn eigenlijk, al zou ik er op het resultaat van de final feedback mogen geven en dat hij dan weer wat verbeterd zeg maar dat zou heel erg veel helpen. Ja, maar.
+
+00:08:58 - 00:09:11
+P8: Je moet eigenlijk iets hebben buiten. Buiten me buiten mendix eigenlijk Ja, op een één of ander. Of ik weet niet of dat ik zelf kan, maar dat jij het gewoon op mijn blog genereert en dat je dan gewoon zegt van oké, ik wil hier zo'n feedback op hebben dat ik het gewoon kom dat zo weer echt wordt gebruikt zeg maar.
+
+00:09:11 - 00:09:12
+Researcher: Ja.
+
+00:09:12 - 00:09:19
+P8: Want anders. Ik heb het gevoel dat uiteindelijk, als je een soort van user stories hebt, je mis je alsnog zoveel context.
+
+00:09:19 - 00:09:20
+Researcher: Ja zeker.
+
+00:09:20 - 00:09:29
+P8: En dan? En dan hallucineert hij gewoon iets, weet je wel. Jij ziet gewoon. Je ziet gewoon een mooie compositie. Dit als een soort van zelfstandig naamwoord staan. Ja, en ik denk dit zal vast een entiteit moeten zijn. Dat doet het hem gewoon in ja.
+
+00:09:29 - 00:09:36
+Researcher: Dus je zegt ook dat extra context zal helpen bij je bij bij het logischer maken van het domeinmodel.
+
+00:09:36 - 00:10:17
+P8: Ja, want ik ik, ik geloof ook wel dat als je. Als je dat van user stories hebt, dan wil je ook als je een functie ontwerp hebt, dan heb je gewoon wat meer context erbij. Ja. Ja. Het is niet alleen maar een soort van UML, die UML diagrammen en de tekst user stories, maar ook wat gewoon wat context erbij. Als ik wil helpen voor de LLM om wat betere zoon er bij me daar op te bouwen. Ja. Ja. Maar het meest mist concerning vind ik eigenlijk dat hij niet heeft begrepen dat hij dat die statussen enumerations hadden moeten zijn. Ja, dat.
+
+00:10:18 - 00:10:24
+Researcher: Heel misschien heeft hij die wel gemaakt, maar niet toegevoegd. Dat zou je hier eventueel kunnen kijken. Hm. Soms heeft ie dat wel gedaan.
+
+00:10:47 - 00:10:52
+Researcher: Ja. Dan kan je nu naar wat pagina's kijken. Ja.
+
+00:10:53 - 00:10:54
+P8: Kijk, vanuit.
+
+00:10:55 - 00:10:57
+Researcher: Daar kan ook. Ja, ik heb hem hier klaargezet.
+
+00:10:58 - 00:10:58
+P8: Ja.
+
+00:10:59 - 00:11:01
+Researcher: Welke user zitten we nu? Weet je.
+
+00:11:01 - 00:11:04
+P8: Dat? Er zit geen User role separation in, dus het is allemaal zo.
+
+00:11:04 - 00:11:05
+Researcher: Oh echt waar.
+
+00:11:05 - 00:11:07
+P8: Oh, dat maakt het iets makkelijker voor je.
+
+00:11:07 - 00:11:11
+Researcher: Ja oké, maar dat dat, dat is wel. Is dat. Is dat expres voor het experiment of.
+
+00:11:11 - 00:11:30
+P8: Dat dat is? Dat behoort niet tot de functionaliteiten van de van de SDK. Dus dat dat. Dat is een soort limitatie, zeg maar. Dus dan zou je. role-based access moet je dan zelf handmatig toevoegen als je dat zou willen. Ja. Per pagina.
+
+00:11:30 - 00:11:30
+Researcher: Oké.
+
+00:11:32 - 00:11:43
+P8: Nou, dat is best wel een dingetje trouwens, dat je die constraints wel hebt in de juiste user roles. Ja. Dat was echt een kut aan Mendix inderdaad je die user roles moet krijgen. Ja maar als. ja, ik kan ze wel en
+
+00:11:43 - 00:11:49
+P8: ik zie ook dat niet. Het is echt heel functioneel zeg maar. Geen. Hij heeft geen functionele dingen.
+
+00:11:50 - 00:11:53
+Researcher: Ja, je mist een. Je UI ook. Dan denk. Ik.
+
+00:11:53 - 00:12:01
+P8: Ja. Dus dit is geen interface, maar dat staat zo. Heb je ook niet in een huis willen staan? Dat is op zich vind ik t. Hij heeft niet een positief punt, heeft geen dingen georganiseerd.
+
+00:12:01 - 00:12:05
+Researcher: Ja. Hij heeft geen requirements in de set gehad, dus hij heeft ze ook niet uitgevoerd.
+
+00:12:05 - 00:12:42
+P8: Ja, is goed. Maar op zich is dat dat. Dat vind ik een goed ding. Ja, ja. Oké. Dat is een order dashboard. mM hu. Even kijken als ik ga zoeken op woorden of een dashboard omgeving dus. Stories. Ja. Het woord dashboard heeft ie verzonnen, maar op zich is van logische term. Ja. Oké, je kan een order toevoegen. Dat heet total cost pdf formaat. Is dat een string?
+
+00:12:43 - 00:12:44
+Researcher: Volgens mij wel ja.
+
+00:12:45 - 00:12:46
+P8: Want wat houdt het precies in?
+
+00:12:47 - 00:12:49
+Researcher: Ik denk dat het ook gewoon iets is wat hij.
+
+00:12:49 - 00:12:55
+P8: Vind ik het wel interessant. E pdf formaat.
+
+00:12:57 - 00:13:00
+Researcher: Ja, dus dat is verkeerd geïnterpreteerd. Ja denk ik, ja.
+
+00:13:02 - 00:13:09
+P8: Dat is die business beer logic operations.
+
+00:13:09 - 00:13:12
+Researcher: Ja, ja, dat is eigenlijk puur omdat die relatie daar zat.
+
+00:13:12 - 00:13:28
+P8: Ja, oké, ik koop gewoon iets. Uh. Gewoon een beetje iets willekeurigs intoetsen. 25 Dan, Als ik gewoon dat ding leeg laat of maken, pakt ie m dan? Dat is niet required. Ja.
+
+00:13:29 - 00:13:30
+Researcher: Pakt ie m gewoon. Ja.
+
+00:13:33 - 00:13:34
+P8: Oké.
+
+00:13:35 - 00:13:43
+Researcher: Oh ja, dat is de ingebakken Mendix homepagina Die heeft hij als zodanig gehouden. Ja. Mmm.
+
+00:13:45 - 00:13:57
+P8: Brewery. Ik weet niet hoe je die je? Aanmaken? Nee. Bedrijfsnaam staat Restproduct product. Dus echt elke brewery heeft ook een brouwerij. Ze maar één product.
+
+00:13:58 - 00:14:02
+Researcher: Volgens de domeinmodel wel. Maar volgens mij volgen ze hier stories niet.
+
+00:14:04 - 00:14:21
+P8: Even terug naar de. Ja. Ja. Ja. Product. Ja, da's één op één. Op één na laatste. Één brouwerij die heeft één product. Ja, dat is waarschijnlijk niet heel. Conform de werkelijkheid.
+
+00:14:22 - 00:14:27
+Researcher: Ja. Jongens.
+
+00:14:28 - 00:14:41
+P8: Ik. Ja kijk die anti die heeft gepakt omdat er staat a product. Ja, als een enkelvoud.
+
+00:14:42 - 00:14:49
+P8: Alleen als je. Als je wat context had zou het waarschijnlijk wel wat. Hij is wel heel strikt gehouden aan.
+
+00:14:50 - 00:14:50
+Researcher: Ja.
+
+00:14:51 - 00:14:55
+P8: Aan de meest letterlijke interpretatie van wat hier staat.
+
+00:14:55 - 00:15:02
+Researcher: Ja, ja, dat is eigenlijk de kwaliteit van de user story set. Heel veel invloed op hoe de hoe de final mendix application eruit ziet.
+
+00:15:02 - 00:15:39
+P8: Ja, of er iets mis met jou of iets mis is, het is maar hoe je het bekijkt. Maar hoe het je model in elkaar zit uiteindelijk Of de pipeline? Ja, want het kan ook wel. Het kan op zich goed zijn dat het heel letterlijk is natuurlijk. Ja. Alleen. Kijk, het is gewoon niet. Exact. Het één op één relatie is een beetje gek zijn. 1 februari Je product is. Op zich zou het wel kunnen, maar ik bedoel als ik Ikea ben maak ik verschillende soorten bellen, weet je wel. Dus het is. Ja, precies dat. Ja, dat is moeilijk te zien.
+
+00:15:41 - 00:15:55
+P8: Contract proposa; . Oké, dat loopt op zich wel. Contract, manager. Contractrecords. wat, zegt de over het contract ook alweer?
+
+00:16:17 - 00:16:35
+P8: Oké, ja, hij pakt de velden wel. Oké. Ja, hij pakt het wel. Velden wel, dus ik kan er niet veel over zeggen. Oké, dat ze je daar naar toe gaan Fussoorten to look. Het is gewoon hoe je nieuwe dingen genereert.
+
+00:16:36 - 00:16:38
+Researcher: Ja, ik zie het gewoon als entiteit. Dus.
+
+00:16:45 - 00:16:50
+P8: Ik kan gewoon nieuwe bier toevoegen. Ja. En zal je als je naar een bepaalde order. Ja, dus dat is niet de bedoeling.
+
+00:16:51 - 00:17:08
+Researcher: Ja, omdat één op één is, heeft hij dat ook niet goed gemodelleerd. Ja, want al zou dat meer opeens zijn, dan zou die. En dan zou die dropdown hier niet. Want dan heb je niet een beer bij een order. Maar een order heeft beers. Ja. Dus nu heeft hij gewoon letterlijk gepakt wat er staat.
+
+00:17:08 - 00:17:09
+P8: Ja.
+
+00:17:19 - 00:17:22
+Researcher: Oké. Oké.
+
+00:17:23 - 00:17:35
+P8: Ja. Oké. Ik had net gekeken. Computer. Is active. Is tot een bepaald veld.
+
+00:17:37 - 00:17:40
+Researcher: Ja, hij heeft die.
+
+00:17:40 - 00:17:40
+P8: Dus echt.
+
+00:17:40 - 00:17:50
+Researcher: als boolean. Dat heeft hij in principe ook deterministisch gegenereerd volgens mij. Aan elke user role entity heeft hij dat. Toegevoegd of actief is.
+
+00:17:50 - 00:17:51
+Researcher: Ja, ja.
+
+00:17:51 - 00:17:53
+P8: Weet je een beetje de reden? Wat denk je zelf?
+
+00:17:56 - 00:18:03
+Researcher: Omdat het een een User role is? Dat denk ik ja. Omdat het dan een soort account idee zou moeten zijn.
+
+00:18:04 - 00:18:06
+P8: Is. Is dat handig voor Mendix? Zo weet je dat. Ik weet echt niet meer.
+
+00:18:06 - 00:18:30
+Researcher: Ja De officiele manier hoe je dit doet in Mendix is dat je hem generaliseerd dat je een generalization maakt op de account entity van die ene marketplace module, die administration module. Ja en en dan op die manier en daar zit ook die is actieve all in volgens mij. Dus het is meer een soort. Doen wat hij kan. Ja. Situatie.
+
+00:18:30 - 00:18:37
+P8: Ja. Oké. Dus jij weet wel iets van de best practices. Maar ja, hij execute ze gewoon niet.
+
+00:18:38 - 00:18:42
+Researcher: Ja, omdat die vaak het niet kan. Ja, omdat het een capabilities heeft daarvoor.
+
+00:18:43 - 00:18:43
+P8: Ja.
+
+00:18:44 - 00:18:46
+Researcher: Mmm. Ja.
+
+00:18:47 - 00:18:51
+P8: Is ook je microflows hier? Ja. Is ook allemaal AI-generated hè? Ja.
+
+00:18:51 - 00:19:11
+Researcher: En hierbij inderdaad, wat ik al zei is je hebt. Hij weet niet. Hij weet wel wat hij wat hij wil doen, maar hij kan het niet vaak omdat heel veel stappen van die microflow niet ondersteund zijn in die SDK. Dus ja. Kijk, ik zou vooral kijken of de microflow het bestaan van mijn flow nuttig is of niet.
+
+00:19:11 - 00:19:21
+P8: Ja. Oké. Ja, ik weet dat is wel logisch. Dat de opstart van de microflow vind ik zelf oké.
+
+00:19:35 - 00:19:41
+P8: Ja, dat vind ik ook logisch. Even kijken. Hoor.
+
+00:19:42 - 00:19:54
+P8: Oké, dit is misschien een beetje gek, maar de d. Maar dit zijn de parameters toch hè? Ja, ja. De parameters die J. Die kunnen misschien wel niet kloppen, maar het idee achter de microflow dat die wel of niet approved.
+
+00:19:54 - 00:19:59
+Researcher: En dat zijn uh o onder die. Dat zijn microflows onderdeel van de workflow.
+
+00:19:59 - 00:20:00
+P8: Ja.
+
+00:20:00 - 00:20:09
+Researcher: Uhm. Dus die zijn hier. Hier zijn die dan. Dit is dan de workflow en daar zijn die microflows. En nou.
+
+00:20:10 - 00:20:11
+P8: Ja.
+
+00:20:11 - 00:20:27
+Researcher: Is natuurlijk ook as a Beer2Beer management user. dat is deze actor hier? want to view an overview of a brewery sign-up request zodat je een view aan approved hebt? Ja. Dus ik neem aan dat deze workflow komt vanuit deze user stories.
+
+00:20:27 - 00:20:31
+P8: Is dat goed geïnterpreteerd en begrepen vermoedelijk.
+
+00:20:31 - 00:20:43
+Researcher: Dat is wel goed gedaan, vind ik. Maar dat hij wel iets doet tussen een microflow en een nanoflow en een hele workflow. Ja. Op zich vind ik dit wel logisch dat dat zijn eigen workflow is.
+
+00:20:45 - 00:20:45
+P8: Een koppel.
+
+00:20:48 - 00:20:52
+Researcher: Is wel klein, maar het is wel het is wel een business process ja.
+
+00:20:53 - 00:20:53
+P8: Dus ja.
+
+00:20:54 - 00:21:07
+Researcher: Ik vind dat logisch. Ja, het is gewoon approval die checkt. Maar dan pakt ie weer die microflow. Ja, die microflow die dan dit zijn. Ja. Ja.

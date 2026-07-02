@@ -1,0 +1,153 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "plan.schema.json",
+  "title": "US2LC pipeline plan",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["app"],
+  "properties": {
+    "meta": { "type": "object" },
+    "app": {
+      "type": "object",
+      "additionalProperties": true,
+      "required": ["moduleName"],
+      "properties": {
+        "appId": { "type": "string", "minLength": 1 },
+        "moduleName": { "type": "string", "minLength": 1 },
+        "branch": { "type": "string" },
+        "layoutQualifiedName": { "type": "string" },
+        "homePageRef": { "type": "string" },
+        "homePageName": { "type": "string" },
+        "homePageQualifiedName": { "type": "string" },
+        "layoutParameterQname": { "type": "string" },
+        "navigation": {
+          "type": "object",
+          "additionalProperties": true,
+          "properties": {
+            "homePageButtonRefs": {
+              "type": "array",
+              "items": { "type": "string", "minLength": 1 }
+            },
+            "homePageButtons": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "additionalProperties": true,
+                "required": ["pageRef"],
+                "properties": {
+                  "pageRef": { "type": "string", "minLength": 1 },
+                  "caption": { "type": "string" },
+                  "icon": {
+                    "anyOf": [
+                      { "type": "string", "enum": ["home"] },
+                      { "type": "object" }
+                    ]
+                  },
+                  "allowedRoles": {
+                    "type": "array",
+                    "items": { "type": "string", "minLength": 1 }
+                  }
+                }
+              }
+            },
+            "navigationItemRefs": {
+              "type": "array",
+              "items": { "type": "string", "minLength": 1 }
+            },
+            "menuItems": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "additionalProperties": true,
+                "required": ["pageRef"],
+                "properties": {
+                  "pageRef": { "type": "string", "minLength": 1 },
+                  "caption": { "type": "string" },
+                  "icon": {
+                    "anyOf": [
+                      { "type": "string", "enum": ["home"] },
+                      { "type": "object" }
+                    ]
+                  },
+                  "allowedRoles": {
+                    "type": "array",
+                    "items": { "type": "string", "minLength": 1 }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "execution": {
+      "type": "object",
+      "additionalProperties": true,
+      "properties": {
+        "commit": { "type": "boolean" },
+        "commitMessage": { "type": "string" },
+        "createApp": { "type": "boolean" },
+        "createAppName": { "type": "string" },
+        "createAppNamePrefix": { "type": "string" },
+        "createAppRepositoryType": { "type": "string", "enum": ["git"] },
+        "seedAppId": { "type": "string" },
+        "forceLegacyWebClientForLookups": { "type": "boolean" },
+        "dg2Cleanup": { "type": "boolean" }
+      }
+    },
+    "packs": {
+      "anyOf": [
+        {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        {
+          "type": "object",
+          "properties": {
+            "refs": {
+              "type": "array",
+              "items": { "type": "string" }
+            }
+          }
+        }
+      ]
+    },
+    "domainModel": { "type": "object" },
+    "security": { "type": "object" },
+    "microflows": { "type": "object" },
+    "nanoflows": { "type": "object" },
+    "workflows": { "type": "object" },
+    "pages": { "type": "object" },
+    "personas": {
+      "type": "object",
+      "additionalProperties": true,
+      "properties": {
+        "enabled": { "type": "boolean" },
+        "specs": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["name"],
+            "properties": {
+              "name": { "type": "string", "minLength": 1 }
+            }
+          }
+        }
+      }
+    },
+    "verification": {
+      "type": "object",
+      "additionalProperties": true,
+      "properties": {
+        "failOnMissing": { "type": "boolean" },
+        "scope": { "type": "string", "enum": ["generatedModule"] },
+        "semanticChecks": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "boolean"
+          }
+        }
+      }
+    }
+  }
+}

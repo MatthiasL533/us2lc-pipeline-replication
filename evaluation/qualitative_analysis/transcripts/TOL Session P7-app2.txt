@@ -1,0 +1,167 @@
+00:00:03 - 00:00:08
+P7: Het is inderdaad weer een berg van entiteiten op elkaar en uh dingen.
+
+00:00:08 - 00:00:31
+P7: Uhm, misschien nog eerst even uhm. De users staan een aantal tussen die wat mij betreft niet nodig zijn voor voor de dataset wat betreft. Ik wil wel de shop of de de sportcenter bellen zodat ik niet de applicatie hoef te gebruiken. Dat hoeft dan dus ook niet in de specificaties waar de applicatie wat mij betreft. Ja dus dat nog.
+
+00:00:33 - 00:00:42
+P7: Even kijken. Het domeinmodel. Eigenlijk staat alles een beetje gecentreerd om de customer.
+
+00:00:52 - 00:01:04
+P7: En dat is allemaal één op één. Uhm. De customer heeft een first name last name email, accountNumber, membershipType. Dat is een integer, typeId even en NoShowCount.
+
+00:01:05 - 00:01:16
+P7: Oké, ik zie dat dus aan een family membership zit, maar volgens mij kon je een verschillende membership hebben, dus lijkt me dat al mooi als dat al anders zou zijn.
+
+00:01:19 - 00:01:27
+P7: Ik zie ook AppUser, wat dan weer los is van de customer en dat is een losse entiteit die niet connected is.
+
+00:01:27 - 00:01:34
+P7: Een nieuw customer, Dat lijkt me ook. Ik weet niet of hij nog een andere status heeft, maar die lijkt me niet nodig.
+
+00:01:35 - 00:01:37
+P7: ReturningCustomer lijkt me ook niet nodig.
+
+00:01:38 - 00:01:44
+P7: Een customer is connected aan de lesson. Dat is één op één. Dat moet sowieso niet één op één zijn.
+
+00:01:44 - 00:01:50
+P7: Lesson heeft allemaal dingetjes en een boekingsstatus. Wat een naam is, dat lijkt me ook gek.
+
+00:01:50 - 00:01:56
+P7: Ik weet ook niet wat booking status verder betekent, maar dat lijkt me best in lesson zelf geplakt kunnen worden.
+
+00:01:56 - 00:02:00
+Researcher: Ja dus. Het is een entiteit die eigenlijk iets van een enumeratie had moeten zijn.
+
+00:02:00 - 00:02:03
+P7: Ja, en dan gewoon in lesson inderdaad ja,
+
+00:02:03 - 00:02:09
+P7: Room die geconnect is aan de lesson. Uhm, nou dat lijkt me op zich niet gek.
+
+00:02:21 - 00:02:23
+P7: een trainer en een Lesson
+
+00:02:23 - 00:02:31
+P7: trainer heeft alleen maar first name last name. Maar volgens mij moest die niet ook nog aan meerdere dingen geconnect worden.
+
+00:02:33 - 00:02:43
+P7: Maar de admin staat ook helemaal los. AppAdministrator is weer een los ding. Volgens mij moest dat samen. Ik zag in de user stories maar drie actors, dus dat kan sowieso ook anders.
+
+00:02:44 - 00:02:51
+P7: Even kijken, dat heeft. De customer heeft een NotificationPreference en dat is een string. Het lijkt me ook dat het gewoon in customer kan.
+
+00:02:53 - 00:03:02
+P7: Een membership type. Oh ja, die heb je hier, maar de member membership is dan weer los en die zit vast aan een subscription. Dat lijkt me op zich prima,
+
+00:03:03 - 00:03:14
+P7: Subscription, subscription, status, dat kan ook in subscription.
+
+00:03:16 - 00:03:26
+P7: Personal information zit vast aan customer, maar die zit niet vast bij de trainer, dus dat lijkt me. Als je die los wil maken, dan kun je hem ook meteen gebruiken bij andere entiteiten. Dat gebeurt niet.
+
+00:03:27 - 00:03:28
+P7: Banking details.
+
+00:03:29 - 00:03:40
+P7: Dan zie ik nog een heleboel losse entiteiten. Er is ook nog een check-in historie. Ja, dat kan ik me voorstellen dat je dat bijhoudt. Maar hoeft returning customer a new customer? Had ik al gezegd.
+
+00:03:40 - 00:03:46
+Researcher: Dat is dan dus de de user roles die kloppen niet helemaal met de de de user story sets.
+
+00:03:46 - 00:03:46
+P7: Nee. Nee.
+
+00:03:46 - 00:03:47
+Researcher: Ja.
+
+00:03:47 - 00:03:52
+P7: Ehm. Even kijken, dan zie ik een fineHistory die nergens aan geconnect is
+
+00:03:52 - 00:03:55
+P7: en notificatie die nergens aan geconnect is.
+
+00:03:59 - 00:04:02
+P7: NoShow. Lijkt me ook niet relevant om los op te slaan.
+
+00:04:02 - 00:04:06
+P7: En cancellation lijkt me niet Logisch om ergens op te slaan
+
+00:04:07 - 00:04:18
+P7: en dus die van de familie membership member. Dat kan denk ik gewoon een uh een relatie worden met de familie membership. Ja
+
+00:04:19 - 00:04:28
+P7: dus die die membership types dat. Dat zou echt nog wel even herzien moeten worden, want dat is nu gewoon niet uh. Ja, niet netjes aan elkaar geconnect. Uhm.
+
+00:04:28 - 00:04:43
+P7: Want de customer kan ook weer aan andere customers geconnect worden met die family membership. En dat lijkt me nu ook niet helemaal lekker weergegeven. Uhm, nou dan hebben we deze wel redelijk gehad.
+
+00:04:43 - 00:04:43
+Researcher: Yes!
+
+00:04:44 - 00:04:47
+P7: Dan zie ik weer inderdaad dat alles gewoon één module is geplemd.
+
+00:04:58 - 00:05:14
+P7: Even kijken, Wat zie ik hier allemaal staan? Ja, da's ook weer hoop. Edit en new/edit en overview customer overview, waarin je zelf ook weer een nieuw customer kan maken en een lijst en load-more-knop.
+
+00:05:15 - 00:05:43
+P7: Uhm. NotificationPreferences new/edit. Dat lijkt me ook gek. Hier staat notification method en customer. Ik weet niet wie dit dan instelt, maar het lijkt me dat customer zelf dit doet. Dus dan doet de customer het er niet nog zelf bij te staan. Dus lijkt me overdreven dat hier een extra losse pagina voor is of een losse module voor is. Dat kan gewoon in de in de customer.
+
+00:05:44 - 00:06:06
+P7: En inderdaad die LLM-gerelateerde pagina's. Customer detail. Staat niks in. Family Membership member Overview. new/edit Ik denk ook niet dat hier. Precies, ook gewoon een lijst van van dingen. Ja uhm.
+
+00:06:07 - 00:06:19
+P7: Ik ga ervan uit dat hier vrijwel hetzelfde informatie beschikbaar is als dat het bij die andere was, dus dat ze vooral lijsten zijn met met items waar je dan die nieuwe dingen kan aanmaken.
+
+00:06:19 - 00:06:31
+P7: Ja, dan ga ik even naar de gedeployde versie. Die staat hier in de lessen dashboard. Ja, het is ook gewoon een lijst en dan allerlei dingen die je kan invullen.
+
+00:06:31 - 00:06:37
+P7: Oh, je kunt bij je lessen ook wel customers toevoegen, Dat lijkt me ook niet handig. Ik denk dat de customer dat gewoon zelf aan zou moeten geven.
+
+00:06:38 - 00:06:44
+Researcher: Ja ja, dus hij heeft eigenlijk niet echt bewust nagedacht over wat nou nuttig is in zo'n new/edit pagina, maar hij heeft meer gewoon.
+
+00:06:44 - 00:06:56
+P7: Deze velden zijn er allemaal, dus dit moet allemaal ingevuld worden. Ja, en ik denk dat ook. Als je die connecties nuttiger kan weergeven in een domeinmodel dan doet, dan kun je dat zelf ook wel weer iets makkelijker.
+
+00:06:56 - 00:06:56
+Researcher: Ja precies.
+
+00:06:57 - 00:06:59
+P7: Meestal iets meer als tekenen zeg maar.
+
+00:06:59 - 00:07:05
+Researcher: Als de associaties kloppen, dan krijg je al gauw een wat betere, wat logischer voorkant.
+
+00:07:05 - 00:07:08
+P7: Ja, dat is wel wat ik me kan herinneren. In ieder geval van niks dat hij dat wel leuk kon doen.
+
+00:07:09 - 00:07:17
+P7: Ja, lesson types, ook een invulveld. Het lijkt me ook mooi als je daar een enumeration van hebt, of iets in die richting.
+
+00:07:22 - 00:07:24
+P7: Room is wel een een lijst. Lijkt me goed.
+
+00:07:24 - 00:07:32
+P7: Training Booking status. Ik heb geen idee wat dat zou moeten betekenen, behalve vol of leeg of nog niet online of zo.
+
+00:07:33 - 00:07:47
+P7: startTime en endTime. Maar dan een datum en niet een tijd. Dat is ook gek. Dat zou wel een tijd moeten zijn. Tenminste, een soort bootcamp van weken.
+
+00:07:50 - 00:07:59
+P7: Lesson overview new customer overview. Ja dus hier zijn ook de rollen en permissies zijn gewoon nog euh, nog niet echt lekker doorgevoerd. Ja uhm.
+
+00:08:06 - 00:08:14
+P7: En ik denk dat hier ook Create Subscription had ook die microflows en zo weer redelijk hetzelfde in elkaar staan.
+
+00:08:14 - 00:08:24
+P7: Oh, hier krijg je wel een object mee. Lijkt het dat dat je wel een customer krijgt en niet de string van de naam van de customer of zo? Dat is wel een verbetering van die andere.
+
+00:08:26 - 00:08:33
+P7: Hier maak je er dan één aan. Ja, volgens mij kon je hier gewoon ook meteen de attributen ingooien, maar dat is dan wel een losse stap.
+
+00:08:35 - 00:08:56
+P7: Oh, dat heeft ie helemaal niet meegekregen. Ah, krijgt ie wel de objecten, maar dan doet ie er niets mee. Dat is nou jammer. Oké. Ja, dus dat lijkt me nog uh. Wel grappig dat ie dat dan anders doet dan dat ie andere applicatie. Dat zou wel. Interessant. Uhm ja, ik denk dat dat m redelijk was ja.

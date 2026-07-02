@@ -1,0 +1,109 @@
+{
+  "actors": [
+    "freelance teacher",
+    "administrator"
+  ],
+  "tasks": [
+    {
+      "actor": "freelance teacher",
+      "action": "communicate with other teachers using a chat function",
+      "condition": "",
+      "gatewayId": "",
+      "gatewayType": "",
+      "storyIndex": 0
+    },
+    {
+      "actor": "freelance teacher",
+      "action": "do a quiz about a certain topic that is connected to a level or part of a level",
+      "condition": "",
+      "gatewayId": "",
+      "gatewayType": "",
+      "storyIndex": 7
+    },
+    {
+      "actor": "freelance teacher",
+      "action": "have flashcards available in a digital format, organized by topic and source",
+      "condition": "",
+      "gatewayId": "",
+      "gatewayType": "",
+      "storyIndex": 15
+    },
+    {
+      "actor": "administrator",
+      "action": "receive email notifications about my progress and new learning opportunities",
+      "condition": "",
+      "gatewayId": "",
+      "gatewayType": "",
+      "storyIndex": 23
+    },
+    {
+      "actor": "administrator",
+      "action": "add videos related to a certain module in the system",
+      "condition": "after reviewing their details and checking their KvK numbers",
+      "gatewayId": "EG0",
+      "gatewayType": "exclusive",
+      "storyIndex": 31
+    },
+    {
+      "actor": "administrator",
+      "action": "add flashcards related to a certain module in the system",
+      "condition": "after reviewing their details and checking their KvK numbers",
+      "gatewayId": "EG0",
+      "gatewayType": "exclusive",
+      "storyIndex": 39
+    }
+  ],
+  "gateways": [
+    {
+      "id": "EG0",
+      "type": "exclusive",
+      "conditions": [
+        "to verify the user as a freelance teacher",
+        "after reviewing their details and checking their KvK numbers"
+      ]
+    }
+  ],
+  "processObjects": [
+    "Using A Chat Function",
+    "Part Of A Level",
+    "By Topic And Source",
+    "And New Learning Opportunities",
+    "Module In The System",
+    "Presentation Skills, And Confidence",
+    "Compassion, Collaboration, And Inclusiveness",
+    "My Teaching/pedagogical/other Skill Levels",
+    "The Modules Using Levels",
+    "As A Progress Bar",
+    "For Completing Certain Tasks",
+    "Completed Quizzes And Exercises",
+    "In A Small Test",
+    "When Creating A Profile",
+    "As A Knowledge Hub",
+    "Subjects I Already Teach",
+    "Publisher, Topic, And Author",
+    "Topic, Year, And Author",
+    "Topic, And Author Outlined",
+    "Specific To Teaching Topics",
+    "And Measurable Learning Outcomes",
+    "Button In The System",
+    "Reset My Password Securely",
+    "My Profile Information",
+    "Kvk Numbers Are Real",
+    "Reject Freelance Teacher Profiles",
+    "Modules In The System",
+    "Inappropriate Or Outdated Content",
+    "Usage Of Freelance Teachers",
+    "Updates About System Specific Events"
+  ],
+  "capabilityHints": {
+    "hasApproval": true,
+    "hasDecision": true,
+    "hasNotification": true,
+    "hasWorkflowLikeRouting": true
+  },
+  "stats": {
+    "taskCount": 6,
+    "gatewayCount": 1,
+    "rawEntityCount": 74
+  }
+}

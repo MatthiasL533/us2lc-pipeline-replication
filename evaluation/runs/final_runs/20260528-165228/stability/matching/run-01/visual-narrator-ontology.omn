@@ -1,0 +1,199 @@
+# Generated with Visual Narrator
+Prefix: : <http://fakesite.org/practicalperf_matching_stability.owl#>
+Prefix: owl: <http://www.w3.org/2002/07/owl#>
+Prefix: rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+Prefix: rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>
+Prefix: dc: <http://purl.org/dc/elements/1.1/>
+Prefix: onto: <http://fakesite.org/practicalperf_matching_stability.owl#>
+
+Ontology: <:>
+
+Annotations:
+	dc:title "PracticalPerf_matching_Stability",
+	dc:creator "Visual Narrator",
+	rdfs:comment "Generated with Visual Narrator"
+
+AnnotationProperty: dc:creator
+
+AnnotationProperty: dc:title
+
+
+# Relationships
+ObjectProperty: :canAdvertise
+	Domain: :Manager
+	Range: :Service
+
+ObjectProperty: :canAccess1
+	Domain: :Student
+	Range: :Platform
+
+ObjectProperty: :canAccess2
+	Domain: :Tutor
+	Range: :Platform
+
+ObjectProperty: :canAccess3
+	Domain: :Manager
+	Range: :Information
+
+ObjectProperty: :canCancel
+	Domain: :Tutor
+	Range: :Session
+
+ObjectProperty: :canNotify1
+	Domain: :Student
+	Range: :Tutor
+
+ObjectProperty: :canNotify2
+	Domain: :Tutor
+	Range: :Student
+
+ObjectProperty: :canChoose
+	Domain: :Student
+	Range: :Type
+
+ObjectProperty: :canMatchWith1
+	Domain: :Student
+	Range: :Subject
+
+ObjectProperty: :canMatchWith2
+	Domain: :Student
+	Range: :Tutor
+
+ObjectProperty: :canMatchWith3
+	Domain: :Student
+	Range: :Session
+
+ObjectProperty: :canMatchWith4
+	Domain: :Tutor
+	Range: :Student
+
+ObjectProperty: :canReceive
+	Domain: :Tutor
+	Range: :Notification
+
+ObjectProperty: :canForget
+	Domain: :Tutor
+	Range: :Session
+
+ObjectProperty: :canMatchTo
+	Domain: :Tutor
+	Range: :Student
+
+ObjectProperty: :canVerify
+	Domain: :Manager
+	Range: :Account
+
+ObjectProperty: :canProvide1
+	Domain: :Tutor
+	Range: :File
+
+ObjectProperty: :canProvide2
+	Domain: :Tutor
+	Range: :Service
+
+ObjectProperty: :canMake1
+	Domain: :Student
+	Range: :Account
+
+ObjectProperty: :canMake2
+	Domain: :Tutor
+	Range: :Account
+
+ObjectProperty: :canSelect
+	Domain: :Student
+	Range: :Subject
+
+ObjectProperty: :canView1
+	Domain: :Tutor
+	Range: :Rating
+
+ObjectProperty: :canView2
+	Domain: :Tutor
+	Range: :Breakdown
+
+ObjectProperty: :canUpdate
+	Domain: :Tutor
+	Range: :Availability
+
+ObjectProperty: :canSee
+	Domain: :Tutor
+	Range: :Feedback
+
+ObjectProperty: :canSpecify1
+	Domain: :Tutor
+	Range: :Subject
+
+ObjectProperty: :canSpecify2
+	Domain: :Tutor
+	Range: :Availability
+
+ObjectProperty: :canSpecify3
+	Domain: :Tutor
+	Range: :Location
+
+ObjectProperty: :canHave
+	Domain: :Manager
+	Range: :Functionality
+
+# Classes
+Class: :Manager
+	Annotations:
+		rdfs:comment "Functional Role"
+
+Class: :Functionality
+
+
+Class: :Account
+
+
+Class: :Student
+	Annotations:
+		rdfs:comment "Functional Role"
+
+Class: :Platform
+
+
+Class: :Subject
+
+
+Class: :Type
+
+
+Class: :Tutor
+	Annotations:
+		rdfs:comment "Functional Role"
+
+Class: :File
+
+
+Class: :Availability
+
+
+Class: :Location
+
+
+Class: :Session
+
+
+Class: :Service
+
+
+Class: :Notification
+
+
+Class: :Rating
+
+
+Class: :Feedback
+
+
+Class: :Breakdown
+
+
+Class: :Information
+
+
+Class: :Confirmation
+
+

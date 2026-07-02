@@ -1,0 +1,62 @@
+{
+  "ok": true,
+  "planPath": "/Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/artifacts/practical-performance/20260528-165228/stability/sports/run-02/plan.json",
+  "reportPath": "/Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/artifacts/practical-performance/20260528-165228/stability/sports/run-02/generation-report.json",
+  "warnings": [
+    "No home page ref found; inserted Home page with ref \"home\".",
+    "Added missing overview page for entity \"Account\".",
+    "Added missing NewEdit page for entity \"Account\".",
+    "Added missing overview page for entity \"Customer\".",
+    "Added missing NewEdit page for entity \"Customer\".",
+    "Added missing overview page for entity \"MembershipType\".",
+    "Added missing NewEdit page for entity \"MembershipType\".",
+    "Added missing overview page for entity \"Subscription\".",
+    "Added missing NewEdit page for entity \"Subscription\".",
+    "Added missing overview page for entity \"PaymentDetails\".",
+    "Added missing NewEdit page for entity \"PaymentDetails\".",
+    "Added missing overview page for entity \"FamilyMember\".",
+    "Added missing NewEdit page for entity \"FamilyMember\".",
+    "Added missing overview page for entity \"Lesson\".",
+    "Added missing NewEdit page for entity \"Lesson\".",
+    "Added missing overview page for entity \"Room\".",
+    "Added missing NewEdit page for entity \"Room\".",
+    "Added missing overview page for entity \"Timeslot\".",
+    "Added missing NewEdit page for entity \"Timeslot\".",
+    "Added missing overview page for entity \"Booking\".",
+    "Added missing NewEdit page for entity \"Booking\".",
+    "Added missing overview page for entity \"LessonBooking\".",
+    "Added missing NewEdit page for entity \"LessonBooking\".",
+    "Added missing overview page for entity \"AttendanceRecord\".",
+    "Added missing NewEdit page for entity \"AttendanceRecord\".",
+    "Dropped placeholder page \"user\" because it had no useful steps."
+  ],
+  "model": "gemma4:e4b",
+  "validationErrors": [],
+  "visualNarrator": {
+    "enabled": true,
+    "status": "completed",
+    "durationMs": 5158,
+    "command": "/Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/visual-narrator/.venv/bin/python /Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/pipeline/scripts/run_visual_narrator.py --input /Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/artifacts/practical-performance/20260528-165228/inputs/sports/user-stories.txt --system-name PracticalPerf_sports_Stability",
+    "artifacts": {
+      "ontologyPath": "/Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/artifacts/practical-performance/20260528-165228/stability/sports/run-02/visual-narrator-ontology.omn",
+      "storiesPath": "/Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/artifacts/practical-performance/20260528-165228/stability/sports/run-02/visual-narrator-stories.json",
+      "summaryPath": "/Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/artifacts/practical-performance/20260528-165228/stability/sports/run-02/visual-narrator-summary.json",
+      "rawPath": "/Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/artifacts/practical-performance/20260528-165228/stability/sports/run-02/visual-narrator-result.json"
+    },
+    "warnings": []
+  },
+  "processVisualizer": {
+    "enabled": true,
+    "status": "completed",
+    "durationMs": 589547,
+    "command": "/Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/process-visualizer/.venv/bin/python /Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/pipeline/scripts/run_process_visualizer.py --input /Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/artifacts/practical-performance/20260528-165228/inputs/sports/user-stories.txt --output-dir /Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/artifacts/practical-performance/20260528-165228/stability/sports/run-02 --model llama3 --ollama-url http://127.0.0.1:11434",
+    "artifacts": {
+      "summaryPath": "/Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/artifacts/practical-performance/20260528-165228/stability/sports/run-02/process-visualizer-summary.json",
+      "rawPath": "/Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/artifacts/practical-performance/20260528-165228/stability/sports/run-02/process-visualizer-result.json",
+      "graphSourcePath": "/Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/artifacts/practical-performance/20260528-165228/stability/sports/run-02/process-visualizer-run/process-visualizer.gv",
+      "graphImagePath": "/Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/artifacts/practical-performance/20260528-165228/stability/sports/run-02/process-visualizer-run/process-visualizer.png",
+      "logsDir": "/Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/artifacts/practical-performance/20260528-165228/stability/sports/run-02/process-visualizer-run/output_logs"
+    },
+    "warnings": []
+  }
+}

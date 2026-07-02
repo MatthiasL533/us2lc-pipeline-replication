@@ -1,0 +1,170 @@
+{
+  "classNames": [
+    "Functionality",
+    "Account",
+    "Platform",
+    "Subject",
+    "Type",
+    "File",
+    "Availability",
+    "Location",
+    "Session",
+    "Service",
+    "Notification",
+    "Rating",
+    "Feedback",
+    "Breakdown",
+    "Confirmation"
+  ],
+  "classes": [
+    {
+      "name": "Functionality",
+      "parent": "",
+      "isRole": false
+    },
+    {
+      "name": "Account",
+      "parent": "",
+      "isRole": false
+    },
+    {
+      "name": "Platform",
+      "parent": "",
+      "isRole": false
+    },
+    {
+      "name": "Subject",
+      "parent": "",
+      "isRole": false
+    },
+    {
+      "name": "Type",
+      "parent": "",
+      "isRole": false
+    },
+    {
+      "name": "File",
+      "parent": "",
+      "isRole": false
+    },
+    {
+      "name": "Availability",
+      "parent": "",
+      "isRole": false
+    },
+    {
+      "name": "Location",
+      "parent": "",
+      "isRole": false
+    },
+    {
+      "name": "Session",
+      "parent": "",
+      "isRole": false
+    },
+    {
+      "name": "Service",
+      "parent": "",
+      "isRole": false
+    },
+    {
+      "name": "Notification",
+      "parent": "",
+      "isRole": false
+    },
+    {
+      "name": "Rating",
+      "parent": "",
+      "isRole": false
+    },
+    {
+      "name": "Feedback",
+      "parent": "",
+      "isRole": false
+    },
+    {
+      "name": "Breakdown",
+      "parent": "",
+      "isRole": false
+    },
+    {
+      "name": "Confirmation",
+      "parent": "",
+      "isRole": false
+    }
+  ],
+  "relationships": [],
+  "keyNouns": [
+    {
+      "term": "Account",
+      "weight": 3
+    },
+    {
+      "term": "Subject",
+      "weight": 3
+    },
+    {
+      "term": "Session",
+      "weight": 2.5
+    },
+    {
+      "term": "Availability",
+      "weight": 2
+    },
+    {
+      "term": "Service",
+      "weight": 1
+    },
+    {
+      "term": "Confirmation",
+      "weight": 1
+    },
+    {
+      "term": "Platform",
+      "weight": 1
+    },
+    {
+      "term": "Functionality",
+      "weight": 1
+    },
+    {
+      "term": "Breakdown",
+      "weight": 1
+    },
+    {
+      "term": "Location",
+      "weight": 1
+    },
+    {
+      "term": "File",
+      "weight": 1
+    },
+    {
+      "term": "Type",
+      "weight": 1
+    },
+    {
+      "term": "Rating",
+      "weight": 1
+    },
+    {
+      "term": "Feedback",
+      "weight": 1
+    },
+    {
+      "term": "Notification",
+      "weight": 1
+    }
+  ],
+  "inferredRoles": [
+    "manager",
+    "student",
+    "tutor"
+  ],
+  "discardedClassNames": [
+    "Manager",
+    "Student",
+    "Tutor",
+    "Information"
+  ]
+}

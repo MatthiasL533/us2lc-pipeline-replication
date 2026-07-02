@@ -1,0 +1,2869 @@
+{
+  "ok": true,
+  "generatedAt": "2026-05-30T00:03:01.508Z",
+  "inputDir": "/Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/artifacts/practical-performance/20260528-165228/inputs/matching",
+  "outputPlanPath": "/Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/artifacts/practical-performance/20260528-165228/stability/matching/run-03/plan.json",
+  "warnings": [
+    "Dropped association \"<unnamed>\" because entities could not be resolved after normalization.",
+    "Dropped association \"<unnamed>\" because entities could not be resolved after normalization.",
+    "Dropped association \"<unnamed>\" because entities could not be resolved after normalization.",
+    "Dropped association \"<unnamed>\" because entities could not be resolved after normalization.",
+    "Dropped association \"<unnamed>\" because entities could not be resolved after normalization.",
+    "Dropped association \"<unnamed>\" because entities could not be resolved after normalization.",
+    "Dropped association \"<unnamed>\" because entities could not be resolved after normalization.",
+    "Dropped association \"<unnamed>\" because entities could not be resolved after normalization.",
+    "Dropped association \"<unnamed>\" because entities could not be resolved after normalization.",
+    "Dropped association \"<unnamed>\" because entities could not be resolved after normalization.",
+    "Dropped association \"<unnamed>\" because entities could not be resolved after normalization.",
+    "Dropped association \"<unnamed>\" because entities could not be resolved after normalization.",
+    "Dropped association \"<unnamed>\" because entities could not be resolved after normalization.",
+    "Dropped association \"<unnamed>\" because entities could not be resolved after normalization.",
+    "Dropped association \"<unnamed>\" because entities could not be resolved after normalization.",
+    "Dropped association \"<unnamed>\" because entities could not be resolved after normalization.",
+    "Dropped association \"<unnamed>\" because entities could not be resolved after normalization.",
+    "Dropped association \"<unnamed>\" because entities could not be resolved after normalization.",
+    "Dropped association \"<unnamed>\" because entities could not be resolved after normalization.",
+    "No home page ref found; inserted Home page with ref \"home\".",
+    "Added missing overview page for entity \"User\".",
+    "Added missing NewEdit page for entity \"User\".",
+    "Added missing overview page for entity \"Student\".",
+    "Added missing NewEdit page for entity \"Student\".",
+    "Added missing overview page for entity \"Tutor\".",
+    "Added missing NewEdit page for entity \"Tutor\".",
+    "Added missing overview page for entity \"Subject\".",
+    "Added missing NewEdit page for entity \"Subject\".",
+    "Added missing overview page for entity \"Availability\".",
+    "Added missing NewEdit page for entity \"Availability\".",
+    "Added missing overview page for entity \"Session\".",
+    "Added missing NewEdit page for entity \"Session\".",
+    "Added missing overview page for entity \"TutorDocument\".",
+    "Added missing NewEdit page for entity \"TutorDocument\".",
+    "Added missing overview page for entity \"Match\".",
+    "Added missing NewEdit page for entity \"Match\".",
+    "Added missing overview page for entity \"Rating\".",
+    "Added missing NewEdit page for entity \"Rating\".",
+    "Added missing overview page for entity \"PaymentTransaction\".",
+    "Added missing NewEdit page for entity \"PaymentTransaction\".",
+    "Added missing overview page for entity \"ChatMessage\".",
+    "Added missing NewEdit page for entity \"ChatMessage\".",
+    "Dropped placeholder page \"home_dashboard\" because it had no useful steps.",
+    "Dropped placeholder page \"profile_management\" because it had no useful steps.",
+    "Dropped placeholder page \"booking_search\" because it had no useful steps.",
+    "Dropped placeholder page \"activity_log\" because it had no useful steps.",
+    "Domain review dropped unsupported entity \"Student\": The concept of Student attributes (address, session type, etc.) are better modeled as associations or attributes on the 'User' entity, or specialized roles/profiles linked to 'User', rather than a standalone entity, especially since 'User' already captures the core account functionality. Keeping both 'User' and 'Student' risks redundancy and violates the principle of modeling roles within a single 'User' entity.",
+    "Domain review dropped unsupported entity \"Tutor\": Similar to 'Student', the concept of Tutor attributes (address, specialization, availability, etc.) should be modeled as specialized profiles or attributes linked to the 'User' entity, avoiding redundancy. The core identity is covered by 'User'.",
+    "Removed page \"student_overview\" for dropped entity \"Student\".",
+    "Removed page \"student_newedit\" for dropped entity \"Student\".",
+    "Removed page \"tutor_overview\" for dropped entity \"Tutor\".",
+    "Removed page \"tutor_newedit\" for dropped entity \"Tutor\"."
+  ],
+  "validation": {
+    "ok": true,
+    "errors": []
+  },
+  "model": "gemma4:e4b",
+  "coverage": {
+    "score": 0.4897959183673469,
+    "covered": 24,
+    "total": 49,
+    "missingStoryIds": [
+      "US01",
+      "US02",
+      "US05",
+      "US07",
+      "US10",
+      "US16",
+      "US20",
+      "US21",
+      "US23",
+      "US25",
+      "US27",
+      "US29",
+      "US30",
+      "US31",
+      "US32",
+      "US34",
+      "US36",
+      "US39",
+      "US40",
+      "US41",
+      "US44",
+      "US45",
+      "US46",
+      "US47",
+      "US49"
+    ],
+    "entries": [
+      {
+        "id": "US01",
+        "story": "As a manager, I want to have an overview and modification functionality of all ongoing and upcoming sessions, tutor and student statuses, and matching details, so that I can address issues in real time.",
+        "storyConcepts": [
+          "addressissue",
+          "studentstatuse",
+          "address",
+          "functionality",
+          "issue",
+          "matching",
+          "modification",
+          "ongoing",
+          "real",
+          "session",
+          "statuse",
+          "student",
+          "time",
+          "tutor",
+          "upcoming",
+          "manager"
+        ],
+        "matchedConcepts": [
+          "matching",
+          "session",
+          "time",
+          "tutor"
+        ],
+        "processVisualizerAlignedConcepts": [
+          "session"
+        ],
+        "matchedUiRefs": [
+          "matching_overview",
+          "session_overview"
+        ],
+        "lexicalScore": 0.25,
+        "covered": false
+      },
+      {
+        "id": "US02",
+        "story": "As a manager, I want tutors to be able to upload their files (CV, and other documents), so that I can have them at hand to aid me in hiring.",
+        "storyConcepts": [
+          "irfile",
+          "athand",
+          "aid",
+          "document",
+          "file",
+          "hand",
+          "hiring",
+          "other",
+          "them",
+          "tutor",
+          "manager"
+        ],
+        "matchedConcepts": [
+          "document",
+          "file",
+          "tutor"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [],
+        "lexicalScore": 0.2727272727272727,
+        "covered": false
+      },
+      {
+        "id": "US03",
+        "story": "As a manager, I want students to be able to indicate their availability for the session, so that the matching can be made.",
+        "storyConcepts": [
+          "availability",
+          "indicate",
+          "made",
+          "matching",
+          "session",
+          "student",
+          "manager"
+        ],
+        "matchedConcepts": [
+          "availability",
+          "matching",
+          "session"
+        ],
+        "processVisualizerAlignedConcepts": [
+          "session"
+        ],
+        "matchedUiRefs": [
+          "availability_overview",
+          "matching_overview",
+          "session_overview"
+        ],
+        "lexicalScore": 0.42857142857142855,
+        "covered": true
+      },
+      {
+        "id": "US04",
+        "story": "As a manager, I want for tutors to be able to indicate their availability for sessions, so that the matching can be made.",
+        "storyConcepts": [
+          "availability",
+          "indicate",
+          "made",
+          "matching",
+          "session",
+          "tutor",
+          "manager"
+        ],
+        "matchedConcepts": [
+          "availability",
+          "matching",
+          "session",
+          "tutor"
+        ],
+        "processVisualizerAlignedConcepts": [
+          "session"
+        ],
+        "matchedUiRefs": [
+          "availability_overview",
+          "matching_overview",
+          "session_overview"
+        ],
+        "lexicalScore": 0.5714285714285714,
+        "covered": true
+      },
+      {
+        "id": "US05",
+        "story": "As a manager, I want for students to be able to state their address, so that the matching can be made.",
+        "storyConcepts": [
+          "address",
+          "made",
+          "matching",
+          "state",
+          "student",
+          "manager"
+        ],
+        "matchedConcepts": [
+          "matching"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "matching_overview"
+        ],
+        "lexicalScore": 0.16666666666666666,
+        "covered": false
+      },
+      {
+        "id": "US06",
+        "story": "As a manager, I want for tutors to be able to state their address, so that the matching can be made.",
+        "storyConcepts": [
+          "address",
+          "made",
+          "matching",
+          "state",
+          "tutor",
+          "manager"
+        ],
+        "matchedConcepts": [
+          "matching",
+          "tutor"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "matching_overview"
+        ],
+        "lexicalScore": 0.3333333333333333,
+        "covered": true
+      },
+      {
+        "id": "US07",
+        "story": "As a manager, I want the students to be able to choose between online and in-person session types, so that the number of potential matches can be increased.",
+        "storyConcepts": [
+          "betweenonline",
+          "personsession",
+          "between",
+          "increased",
+          "matche",
+          "number",
+          "online",
+          "person",
+          "potential",
+          "session",
+          "student",
+          "type",
+          "manager"
+        ],
+        "matchedConcepts": [
+          "session",
+          "type"
+        ],
+        "processVisualizerAlignedConcepts": [
+          "session"
+        ],
+        "matchedUiRefs": [
+          "session_overview"
+        ],
+        "lexicalScore": 0.15384615384615385,
+        "covered": false
+      },
+      {
+        "id": "US08",
+        "story": "As a manager, I want to be able to verify accounts of students and tutors.",
+        "storyConcepts": [
+          "verifyaccount",
+          "account",
+          "student",
+          "tutor",
+          "verify",
+          "manager"
+        ],
+        "matchedConcepts": [
+          "account",
+          "tutor"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [],
+        "lexicalScore": 0.3333333333333333,
+        "covered": true
+      },
+      {
+        "id": "US09",
+        "story": "As a student, I want to be able to make my account, so that I can access the platform where I can manage my matches, sessions, and pay securely.",
+        "storyConcepts": [
+          "platformwhere",
+          "account",
+          "make",
+          "matche",
+          "pay",
+          "platform",
+          "securely",
+          "session",
+          "where",
+          "student"
+        ],
+        "matchedConcepts": [
+          "account",
+          "platform",
+          "session"
+        ],
+        "processVisualizerAlignedConcepts": [
+          "session"
+        ],
+        "matchedUiRefs": [
+          "platform_overview",
+          "session_overview"
+        ],
+        "lexicalScore": 0.3,
+        "covered": true
+      },
+      {
+        "id": "US10",
+        "story": "As a student, I want to be able to select one or multiple subjects I want to be tutored in.",
+        "storyConcepts": [
+          "multiple",
+          "one",
+          "subject",
+          "tutored",
+          "student"
+        ],
+        "matchedConcepts": [
+          "subject"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "subject_overview"
+        ],
+        "lexicalScore": 0.2,
+        "covered": false
+      },
+      {
+        "id": "US11",
+        "story": "As a student, I want to choose the type of session: online or in-person.",
+        "storyConcepts": [
+          "online",
+          "person",
+          "session",
+          "type",
+          "student"
+        ],
+        "matchedConcepts": [
+          "session",
+          "type"
+        ],
+        "processVisualizerAlignedConcepts": [
+          "session"
+        ],
+        "matchedUiRefs": [
+          "session_overview"
+        ],
+        "lexicalScore": 0.4,
+        "covered": true
+      },
+      {
+        "id": "US12",
+        "story": "As a tutor, I want to be able to make an account with my personal information, so that I can access the platform where I can find clients for my services.",
+        "storyConcepts": [
+          "findclient",
+          "platformwhere",
+          "account",
+          "client",
+          "find",
+          "make",
+          "personal",
+          "platform",
+          "service",
+          "where",
+          "tutor"
+        ],
+        "matchedConcepts": [
+          "account",
+          "platform",
+          "service",
+          "tutor"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "platform_overview",
+          "service_overview"
+        ],
+        "lexicalScore": 0.36363636363636365,
+        "covered": true
+      },
+      {
+        "id": "US13",
+        "story": "As a tutor, I want to be able to provide my files (CV, and other documents) in the system, so that the hiring process is easy and streamlined.",
+        "storyConcepts": [
+          "document",
+          "easy",
+          "file",
+          "hiring",
+          "other",
+          "provide",
+          "streamlined",
+          "tutor",
+          "system",
+          "process"
+        ],
+        "matchedConcepts": [
+          "document",
+          "file",
+          "tutor"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [],
+        "lexicalScore": 0.3,
+        "covered": true
+      },
+      {
+        "id": "US14",
+        "story": "As a tutor, I want to specify my subjects, so that I can be matched to a student based on this.",
+        "storyConcepts": [
+          "studentbased",
+          "based",
+          "matched",
+          "specify",
+          "student",
+          "subject",
+          "thi",
+          "tutor"
+        ],
+        "matchedConcepts": [
+          "based",
+          "matched",
+          "subject",
+          "tutor"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "based_overview",
+          "matched_overview",
+          "subject_overview"
+        ],
+        "lexicalScore": 0.5,
+        "covered": true
+      },
+      {
+        "id": "US15",
+        "story": "As a tutor, I want to specify my availability, so that I can be matched to a student based on this.",
+        "storyConcepts": [
+          "studentbased",
+          "availability",
+          "based",
+          "matched",
+          "specify",
+          "student",
+          "thi",
+          "tutor"
+        ],
+        "matchedConcepts": [
+          "availability",
+          "based",
+          "matched",
+          "tutor"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "availability_overview",
+          "based_overview",
+          "matched_overview"
+        ],
+        "lexicalScore": 0.5,
+        "covered": true
+      },
+      {
+        "id": "US16",
+        "story": "As a tutor, I want to update my availability dynamically in the app, so that I don't get matched for unavailable slots.",
+        "storyConcepts": [
+          "availabilitydynamically",
+          "tget",
+          "unavailableslot",
+          "availability",
+          "don",
+          "dynamically",
+          "get",
+          "matched",
+          "slot",
+          "unavailable",
+          "tutor"
+        ],
+        "matchedConcepts": [
+          "availability",
+          "matched",
+          "tutor"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "availability_overview",
+          "matched_overview"
+        ],
+        "lexicalScore": 0.2727272727272727,
+        "covered": false
+      },
+      {
+        "id": "US17",
+        "story": "As a tutor, I want to specify my location, so that I can be matched to a student based on this.",
+        "storyConcepts": [
+          "studentbased",
+          "based",
+          "location",
+          "matched",
+          "specify",
+          "student",
+          "thi",
+          "tutor"
+        ],
+        "matchedConcepts": [
+          "based",
+          "matched",
+          "tutor"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "based_overview",
+          "matched_overview"
+        ],
+        "lexicalScore": 0.375,
+        "covered": true
+      },
+      {
+        "id": "US18",
+        "story": "As a tutor, I want to be able to cancel a session.",
+        "storyConcepts": [
+          "cancel",
+          "session",
+          "tutor"
+        ],
+        "matchedConcepts": [
+          "session",
+          "tutor"
+        ],
+        "processVisualizerAlignedConcepts": [
+          "session"
+        ],
+        "matchedUiRefs": [
+          "session_overview"
+        ],
+        "lexicalScore": 0.6666666666666666,
+        "covered": true
+      },
+      {
+        "id": "US19",
+        "story": "As a manager, I want students and tutors to be automatically matched based on address, subject, and availability, so that I do not have to do it manually.",
+        "storyConcepts": [
+          "matchedbased",
+          "address",
+          "automatically",
+          "availability",
+          "based",
+          "manually",
+          "matched",
+          "not",
+          "student",
+          "subject",
+          "tutor",
+          "manager"
+        ],
+        "matchedConcepts": [
+          "availability",
+          "based",
+          "matched",
+          "subject",
+          "tutor"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "availability_overview",
+          "based_overview",
+          "matched_overview",
+          "subject_overview"
+        ],
+        "lexicalScore": 0.4166666666666667,
+        "covered": true
+      },
+      {
+        "id": "US20",
+        "story": "As a manager, I want the matching functionality to enforce strict criteria, so that partial matches do not have to be provided.",
+        "storyConcepts": [
+          "donot",
+          "enforcestrict",
+          "partialmatche",
+          "criteria",
+          "enforce",
+          "functionality",
+          "matche",
+          "matching",
+          "not",
+          "partial",
+          "provided",
+          "strict",
+          "manager"
+        ],
+        "matchedConcepts": [
+          "criteria",
+          "matching"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "matching_overview"
+        ],
+        "lexicalScore": 0.15384615384615385,
+        "covered": false
+      },
+      {
+        "id": "US21",
+        "story": "As a manager, I want the system to search for a match until the tutor is found every hour.",
+        "storyConcepts": [
+          "matchuntil",
+          "every",
+          "found",
+          "hour",
+          "match",
+          "tutor",
+          "until",
+          "manager",
+          "system"
+        ],
+        "matchedConcepts": [
+          "match",
+          "tutor"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "match_overview"
+        ],
+        "lexicalScore": 0.2222222222222222,
+        "covered": false
+      },
+      {
+        "id": "US22",
+        "story": "As a student, I want to be matched with a tutor that teaches the subject I am interested in.",
+        "storyConcepts": [
+          "interested",
+          "matched",
+          "subject",
+          "teache",
+          "tutor",
+          "student"
+        ],
+        "matchedConcepts": [
+          "matched",
+          "subject",
+          "tutor"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "matched_overview",
+          "subject_overview"
+        ],
+        "lexicalScore": 0.5,
+        "covered": true
+      },
+      {
+        "id": "US23",
+        "story": "As a student, I want to be matched with a tutor that lives in the same area.",
+        "storyConcepts": [
+          "samearea",
+          "area",
+          "live",
+          "matched",
+          "same",
+          "tutor",
+          "student"
+        ],
+        "matchedConcepts": [
+          "matched",
+          "tutor"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "matched_overview"
+        ],
+        "lexicalScore": 0.2857142857142857,
+        "covered": false
+      },
+      {
+        "id": "US24",
+        "story": "As a student, I want to be matched with a tutor that is available in the hours I have specified.",
+        "storyConcepts": [
+          "hour",
+          "matched",
+          "specified",
+          "tutor",
+          "student"
+        ],
+        "matchedConcepts": [
+          "matched",
+          "tutor"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "matched_overview"
+        ],
+        "lexicalScore": 0.4,
+        "covered": true
+      },
+      {
+        "id": "US25",
+        "story": "As a student, I want to be matched with a tutor who, if located far away, can offer online sessions, so that I can still receive tutoring regardless of location.",
+        "storyConcepts": [
+          "faraway",
+          "iflocated",
+          "onlinesession",
+          "stillreceive",
+          "tutoringregardless",
+          "away",
+          "far",
+          "located",
+          "location",
+          "matched",
+          "offer",
+          "online",
+          "regardless",
+          "session",
+          "still",
+          "tutor",
+          "tutoring",
+          "who",
+          "student"
+        ],
+        "matchedConcepts": [
+          "matched",
+          "session",
+          "tutor"
+        ],
+        "processVisualizerAlignedConcepts": [
+          "session"
+        ],
+        "matchedUiRefs": [
+          "matched_overview",
+          "session_overview"
+        ],
+        "lexicalScore": 0.15789473684210525,
+        "covered": false
+      },
+      {
+        "id": "US26",
+        "story": "As a tutor, I want to be matched with a student that is interested in the subject I teach.",
+        "storyConcepts": [
+          "interested",
+          "matched",
+          "student",
+          "subject",
+          "teach",
+          "tutor"
+        ],
+        "matchedConcepts": [
+          "matched",
+          "subject",
+          "tutor"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "matched_overview",
+          "subject_overview"
+        ],
+        "lexicalScore": 0.5,
+        "covered": true
+      },
+      {
+        "id": "US27",
+        "story": "As a tutor, I want to be matched with a student that lives in the same area.",
+        "storyConcepts": [
+          "samearea",
+          "area",
+          "live",
+          "matched",
+          "same",
+          "student",
+          "tutor"
+        ],
+        "matchedConcepts": [
+          "matched",
+          "tutor"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "matched_overview"
+        ],
+        "lexicalScore": 0.2857142857142857,
+        "covered": false
+      },
+      {
+        "id": "US28",
+        "story": "As a tutor, I want to be matched with a student that is available in the hours I have specified.",
+        "storyConcepts": [
+          "hour",
+          "matched",
+          "specified",
+          "student",
+          "tutor"
+        ],
+        "matchedConcepts": [
+          "matched",
+          "tutor"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "matched_overview"
+        ],
+        "lexicalScore": 0.4,
+        "covered": true
+      },
+      {
+        "id": "US29",
+        "story": "As a tutor, I want to be matched with a student who, if located far away, can agree to online sessions, so that I can still provide my services regardless of location.",
+        "storyConcepts": [
+          "faraway",
+          "iflocated",
+          "stillprovide",
+          "agree",
+          "away",
+          "far",
+          "located",
+          "location",
+          "matched",
+          "online",
+          "provide",
+          "regardless",
+          "service",
+          "session",
+          "still",
+          "student",
+          "who",
+          "tutor"
+        ],
+        "matchedConcepts": [
+          "matched",
+          "service",
+          "session",
+          "tutor"
+        ],
+        "processVisualizerAlignedConcepts": [
+          "session"
+        ],
+        "matchedUiRefs": [
+          "matched_overview",
+          "service_overview",
+          "session_overview"
+        ],
+        "lexicalScore": 0.2222222222222222,
+        "covered": false
+      },
+      {
+        "id": "US30",
+        "story": "As a manager, I want students to receive notifications about an upcoming session on WhatsApp 1 and 3 days prior, so that the no-show rate decreases.",
+        "storyConcepts": [
+          "dayprior",
+          "upcomingsession",
+          "about",
+          "day",
+          "decrease",
+          "notification",
+          "prior",
+          "rate",
+          "session",
+          "student",
+          "upcoming",
+          "whatsapp",
+          "manager"
+        ],
+        "matchedConcepts": [
+          "day",
+          "session"
+        ],
+        "processVisualizerAlignedConcepts": [
+          "session"
+        ],
+        "matchedUiRefs": [
+          "session_overview"
+        ],
+        "lexicalScore": 0.15384615384615385,
+        "covered": false
+      },
+      {
+        "id": "US31",
+        "story": "As a manager, I want tutors to receive notifications about an upcoming session on WhatsApp, so that the no-show rate decreases.",
+        "storyConcepts": [
+          "upcomingsession",
+          "about",
+          "decrease",
+          "notification",
+          "rate",
+          "session",
+          "tutor",
+          "upcoming",
+          "whatsapp",
+          "manager"
+        ],
+        "matchedConcepts": [
+          "session",
+          "tutor"
+        ],
+        "processVisualizerAlignedConcepts": [
+          "session"
+        ],
+        "matchedUiRefs": [
+          "session_overview"
+        ],
+        "lexicalScore": 0.2,
+        "covered": false
+      },
+      {
+        "id": "US32",
+        "story": "As a manager, I want the platform to have a chat function with restricted sharing of personal contact information, so that I can ensure tutors adhere to platform policies and do not exchange phone numbers directly.",
+        "storyConcepts": [
+          "platform",
+          "contactinformation",
+          "ensuretutor",
+          "notexchange",
+          "phonenumber",
+          "platformpolicy",
+          "restrictedsharing",
+          "adhere",
+          "chat",
+          "contact",
+          "directly",
+          "ensure",
+          "exchange",
+          "function",
+          "not",
+          "number",
+          "personal",
+          "phone",
+          "restricted",
+          "sharing",
+          "tutor",
+          "manager",
+          "policy"
+        ],
+        "matchedConcepts": [
+          "platform",
+          "chat",
+          "contact",
+          "tutor"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "platform_overview"
+        ],
+        "lexicalScore": 0.17391304347826086,
+        "covered": false
+      },
+      {
+        "id": "US33",
+        "story": "As a manager, I want the student to receive an email when the match is found.",
+        "storyConcepts": [
+          "email",
+          "found",
+          "match",
+          "student",
+          "when",
+          "manager"
+        ],
+        "matchedConcepts": [
+          "email",
+          "match"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "match_overview"
+        ],
+        "lexicalScore": 0.3333333333333333,
+        "covered": true
+      },
+      {
+        "id": "US34",
+        "story": "As a student, I want to receive email confirmation after payment, so that I have proof of transaction and assurance that my payment was successfully processed.",
+        "storyConcepts": [
+          "payment",
+          "afterpayment",
+          "emailconfirmation",
+          "wassuccessfully",
+          "after",
+          "assurance",
+          "confirmation",
+          "email",
+          "processed",
+          "proof",
+          "successfully",
+          "transaction",
+          "was",
+          "student"
+        ],
+        "matchedConcepts": [
+          "payment",
+          "email",
+          "transaction"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [],
+        "lexicalScore": 0.21428571428571427,
+        "covered": false
+      },
+      {
+        "id": "US35",
+        "story": "As a student, I want to be notified if a session is cancelled by the tutor.",
+        "storyConcepts": [
+          "notifiedif",
+          "cancelled",
+          "notified",
+          "session",
+          "tutor",
+          "student"
+        ],
+        "matchedConcepts": [
+          "session",
+          "tutor"
+        ],
+        "processVisualizerAlignedConcepts": [
+          "session"
+        ],
+        "matchedUiRefs": [
+          "session_overview"
+        ],
+        "lexicalScore": 0.3333333333333333,
+        "covered": true
+      },
+      {
+        "id": "US36",
+        "story": "As a tutor, I want to receive notifications three and one day prior to the session date, so that I don't forget the session.",
+        "storyConcepts": [
+          "session",
+          "dayprior",
+          "notificationthree",
+          "sessiondate",
+          "tforget",
+          "date",
+          "day",
+          "don",
+          "forget",
+          "notification",
+          "one",
+          "prior",
+          "three",
+          "tutor"
+        ],
+        "matchedConcepts": [
+          "session",
+          "date",
+          "day",
+          "tutor"
+        ],
+        "processVisualizerAlignedConcepts": [
+          "session"
+        ],
+        "matchedUiRefs": [
+          "session_overview"
+        ],
+        "lexicalScore": 0.2857142857142857,
+        "covered": false
+      },
+      {
+        "id": "US37",
+        "story": "As a tutor, I want to be notified if a session is cancelled by the student.",
+        "storyConcepts": [
+          "notifiedif",
+          "cancelled",
+          "notified",
+          "session",
+          "student",
+          "tutor"
+        ],
+        "matchedConcepts": [
+          "session",
+          "tutor"
+        ],
+        "processVisualizerAlignedConcepts": [
+          "session"
+        ],
+        "matchedUiRefs": [
+          "session_overview"
+        ],
+        "lexicalScore": 0.3333333333333333,
+        "covered": true
+      },
+      {
+        "id": "US38",
+        "story": "As a manager, I want students to be able to rate each session, so that the credit system can calculate the rating of the tutor.",
+        "storyConcepts": [
+          "calculate",
+          "credit",
+          "each",
+          "rate",
+          "rating",
+          "session",
+          "student",
+          "tutor",
+          "manager",
+          "system"
+        ],
+        "matchedConcepts": [
+          "rating",
+          "session",
+          "tutor"
+        ],
+        "processVisualizerAlignedConcepts": [
+          "session"
+        ],
+        "matchedUiRefs": [
+          "rating_overview",
+          "session_overview"
+        ],
+        "lexicalScore": 0.3,
+        "covered": true
+      },
+      {
+        "id": "US39",
+        "story": "As a manager, I want a credit system for tutors to include the feedback from multiple sessions, no-show rate, and late count.",
+        "storyConcepts": [
+          "multiplesession",
+          "count",
+          "credit",
+          "feedback",
+          "include",
+          "late",
+          "multiple",
+          "rate",
+          "session",
+          "tutor",
+          "manager",
+          "system"
+        ],
+        "matchedConcepts": [
+          "feedback",
+          "session",
+          "tutor"
+        ],
+        "processVisualizerAlignedConcepts": [
+          "session"
+        ],
+        "matchedUiRefs": [
+          "session_overview"
+        ],
+        "lexicalScore": 0.25,
+        "covered": false
+      },
+      {
+        "id": "US40",
+        "story": "As a manager, I want the credit system to reward tutors for regular students, so that the tutors have motivation to not arrange sessions outside the system.",
+        "storyConcepts": [
+          "tutor",
+          "arrangesession",
+          "rewardtutor",
+          "arrange",
+          "credit",
+          "motivation",
+          "not",
+          "outside",
+          "regular",
+          "reward",
+          "session",
+          "student",
+          "manager",
+          "system"
+        ],
+        "matchedConcepts": [
+          "tutor",
+          "session"
+        ],
+        "processVisualizerAlignedConcepts": [
+          "session"
+        ],
+        "matchedUiRefs": [
+          "session_overview"
+        ],
+        "lexicalScore": 0.14285714285714285,
+        "covered": false
+      },
+      {
+        "id": "US41",
+        "story": "As a manager, I want the credit system to consider all available data.",
+        "storyConcepts": [
+          "consider",
+          "credit",
+          "manager",
+          "system"
+        ],
+        "matchedConcepts": [],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [],
+        "lexicalScore": 0,
+        "covered": false
+      },
+      {
+        "id": "US42",
+        "story": "As a tutor, I want to be able to view my ratings.",
+        "storyConcepts": [
+          "rating",
+          "tutor"
+        ],
+        "matchedConcepts": [
+          "rating",
+          "tutor"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "rating_overview"
+        ],
+        "lexicalScore": 1,
+        "covered": true
+      },
+      {
+        "id": "US43",
+        "story": "As a tutor, I want to see session-specific feedback, so that I can improve my performance based on student input.",
+        "storyConcepts": [
+          "performancebased",
+          "based",
+          "feedback",
+          "improve",
+          "input",
+          "performance",
+          "session",
+          "student",
+          "tutor"
+        ],
+        "matchedConcepts": [
+          "based",
+          "feedback",
+          "session",
+          "tutor"
+        ],
+        "processVisualizerAlignedConcepts": [
+          "session"
+        ],
+        "matchedUiRefs": [
+          "based_overview",
+          "session_overview"
+        ],
+        "lexicalScore": 0.4444444444444444,
+        "covered": true
+      },
+      {
+        "id": "US44",
+        "story": "As a manager, I want the system to be integrated with the external accounting service that is already in place.",
+        "storyConcepts": [
+          "accountingservice",
+          "accounting",
+          "already",
+          "external",
+          "integrated",
+          "service",
+          "manager",
+          "system",
+          "place"
+        ],
+        "matchedConcepts": [
+          "service"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "service_overview"
+        ],
+        "lexicalScore": 0.1111111111111111,
+        "covered": false
+      },
+      {
+        "id": "US45",
+        "story": "As a manager, I want students to be billed by automatically transferring them to the paying system, so that the user experience is enhanced.",
+        "storyConcepts": [
+          "payingsystem",
+          "transferringthem",
+          "automatically",
+          "billed",
+          "enhanced",
+          "experience",
+          "paying",
+          "student",
+          "them",
+          "transferring",
+          "user",
+          "manager",
+          "system"
+        ],
+        "matchedConcepts": [
+          "user"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "user_overview"
+        ],
+        "lexicalScore": 0.07692307692307693,
+        "covered": false
+      },
+      {
+        "id": "US46",
+        "story": "As a manager, I want students to receive automated receipts after successful payments, so that the payment process feels transparent.",
+        "storyConcepts": [
+          "payment",
+          "processfeel",
+          "receiptafter",
+          "successfulpayment",
+          "after",
+          "automated",
+          "feel",
+          "receipt",
+          "student",
+          "successful",
+          "transparent",
+          "manager",
+          "process"
+        ],
+        "matchedConcepts": [
+          "payment",
+          "successful"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [],
+        "lexicalScore": 0.15384615384615385,
+        "covered": false
+      },
+      {
+        "id": "US47",
+        "story": "As a manager, I want the session to be considered for the salary even if the student did not show up.",
+        "storyConcepts": [
+          "didnot",
+          "evenif",
+          "considered",
+          "did",
+          "even",
+          "not",
+          "salary",
+          "session",
+          "student",
+          "manager"
+        ],
+        "matchedConcepts": [
+          "session"
+        ],
+        "processVisualizerAlignedConcepts": [
+          "session"
+        ],
+        "matchedUiRefs": [
+          "session_overview"
+        ],
+        "lexicalScore": 0.1,
+        "covered": false
+      },
+      {
+        "id": "US48",
+        "story": "As a tutor, I want to view a detailed breakdown of my earnings, including completed sessions and cancellations, so that I can track my income.",
+        "storyConcepts": [
+          "includingcompleted",
+          "breakdown",
+          "cancellation",
+          "completed",
+          "earning",
+          "including",
+          "income",
+          "session",
+          "tutor"
+        ],
+        "matchedConcepts": [
+          "cancellation",
+          "session",
+          "tutor"
+        ],
+        "processVisualizerAlignedConcepts": [
+          "session"
+        ],
+        "matchedUiRefs": [
+          "session_overview"
+        ],
+        "lexicalScore": 0.3333333333333333,
+        "covered": true
+      },
+      {
+        "id": "US49",
+        "story": "As a manager, I want to access information about shortages of students or tutors by neighborhoods, so that I can advertise the services in the given areas.",
+        "storyConcepts": [
+          "about",
+          "advertise",
+          "area",
+          "given",
+          "neighborhood",
+          "service",
+          "shortage",
+          "student",
+          "tutor",
+          "manager"
+        ],
+        "matchedConcepts": [
+          "service",
+          "tutor"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "service_overview"
+        ],
+        "lexicalScore": 0.2,
+        "covered": false
+      }
+    ]
+  },
+  "coverageGate": {
+    "enabled": false,
+    "minimum": null,
+    "score": 0.4897959183673469,
+    "passed": true
+  },
+  "ollama": {
+    "model": "gemma4:e4b",
+    "totalDuration": 209500065583,
+    "loadDuration": 5999132875,
+    "promptEvalCount": 5617,
+    "evalCount": 2710,
+    "numCtx": 8192,
+    "numPredict": 6144,
+    "likelyPromptTruncated": false
+  },
+  "visualNarrator": {
+    "enabled": true,
+    "status": "completed",
+    "durationMs": 4238,
+    "command": "/Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/visual-narrator/.venv/bin/python /Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/pipeline/scripts/run_visual_narrator.py --input /Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/artifacts/practical-performance/20260528-165228/inputs/matching/user-stories.txt --system-name PracticalPerf_matching_Stability",
+    "artifacts": {
+      "ontologyPath": "/Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/artifacts/practical-performance/20260528-165228/stability/matching/run-03/visual-narrator-ontology.omn",
+      "storiesPath": "/Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/artifacts/practical-performance/20260528-165228/stability/matching/run-03/visual-narrator-stories.json",
+      "summaryPath": "/Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/artifacts/practical-performance/20260528-165228/stability/matching/run-03/visual-narrator-summary.json",
+      "rawPath": "/Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/artifacts/practical-performance/20260528-165228/stability/matching/run-03/visual-narrator-result.json"
+    },
+    "warnings": []
+  },
+  "processVisualizer": {
+    "enabled": true,
+    "status": "completed",
+    "durationMs": 296964,
+    "command": "/Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/process-visualizer/.venv/bin/python /Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/pipeline/scripts/run_process_visualizer.py --input /Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/artifacts/practical-performance/20260528-165228/inputs/matching/user-stories.txt --output-dir /Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/artifacts/practical-performance/20260528-165228/stability/matching/run-03 --model llama3 --ollama-url http://127.0.0.1:11434",
+    "artifacts": {
+      "summaryPath": "/Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/artifacts/practical-performance/20260528-165228/stability/matching/run-03/process-visualizer-summary.json",
+      "rawPath": "/Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/artifacts/practical-performance/20260528-165228/stability/matching/run-03/process-visualizer-result.json",
+      "graphSourcePath": "/Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/artifacts/practical-performance/20260528-165228/stability/matching/run-03/process-visualizer-run/process-visualizer.gv",
+      "graphImagePath": "/Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/artifacts/practical-performance/20260528-165228/stability/matching/run-03/process-visualizer-run/process-visualizer.png",
+      "logsDir": "/Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/artifacts/practical-performance/20260528-165228/stability/matching/run-03/process-visualizer-run/output_logs"
+    },
+    "warnings": []
+  },
+  "domainModelReview": {
+    "enabled": true,
+    "status": "completed",
+    "droppedEntities": [
+      {
+        "name": "Student",
+        "reason": "The concept of Student attributes (address, session type, etc.) are better modeled as associations or attributes on the 'User' entity, or specialized roles/profiles linked to 'User', rather than a standalone entity, especially since 'User' already captures the core account functionality. Keeping both 'User' and 'Student' risks redundancy and violates the principle of modeling roles within a single 'User' entity."
+      },
+      {
+        "name": "Tutor",
+        "reason": "Similar to 'Student', the concept of Tutor attributes (address, specialization, availability, etc.) should be modeled as specialized profiles or attributes linked to the 'User' entity, avoiding redundancy. The core identity is covered by 'User'."
+      }
+    ],
+    "droppedAssociations": [],
+    "repairedAssociations": [],
+    "addedAssociations": [],
+    "warnings": []
+  },
+  "planDiagnostics": {
+    "preprocessing": {
+      "visualNarratorEnabled": true,
+      "visualNarratorStatus": "completed",
+      "processVisualizerEnabled": true,
+      "processVisualizerStatus": "completed"
+    },
+    "domainModelReview": {
+      "enabled": true,
+      "status": "completed",
+      "droppedEntities": [
+        {
+          "name": "Student",
+          "reason": "The concept of Student attributes (address, session type, etc.) are better modeled as associations or attributes on the 'User' entity, or specialized roles/profiles linked to 'User', rather than a standalone entity, especially since 'User' already captures the core account functionality. Keeping both 'User' and 'Student' risks redundancy and violates the principle of modeling roles within a single 'User' entity."
+        },
+        {
+          "name": "Tutor",
+          "reason": "Similar to 'Student', the concept of Tutor attributes (address, specialization, availability, etc.) should be modeled as specialized profiles or attributes linked to the 'User' entity, avoiding redundancy. The core identity is covered by 'User'."
+        }
+      ],
+      "droppedAssociations": [],
+      "repairedAssociations": [],
+      "addedAssociations": [],
+      "warnings": []
+    },
+    "referenceAppBaseline": {
+      "source": "reference-app-baseline",
+      "capabilities": [
+        "searchable_data_management",
+        "workflow_support",
+        "role_separated_views",
+        "file_handling"
+      ],
+      "archetypes": [
+        "management",
+        "tasks",
+        "role_separation"
+      ],
+      "recommendedWidgetFamilies": [
+        "data_grid",
+        "data_grid_filters",
+        "workflow_commons"
+      ]
+    },
+    "capabilityRequirements": [],
+    "storyCoverage": {
+      "entries": [
+        {
+          "id": "US01",
+          "story": "As a manager, I want to have an overview and modification functionality of all ongoing and upcoming sessions, tutor and student statuses, and matching details, so that I can address issues in real time.",
+          "storyConcepts": [
+            "addressissue",
+            "studentstatuse",
+            "address",
+            "functionality",
+            "issue",
+            "matching",
+            "modification",
+            "ongoing",
+            "real",
+            "session",
+            "statuse",
+            "student",
+            "time",
+            "tutor",
+            "upcoming",
+            "manager"
+          ],
+          "matchedConcepts": [
+            "matching",
+            "session",
+            "time",
+            "tutor"
+          ],
+          "processVisualizerAlignedConcepts": [
+            "session"
+          ],
+          "matchedUiRefs": [
+            "matching_overview",
+            "session_overview"
+          ],
+          "lexicalScore": 0.25,
+          "covered": false
+        },
+        {
+          "id": "US02",
+          "story": "As a manager, I want tutors to be able to upload their files (CV, and other documents), so that I can have them at hand to aid me in hiring.",
+          "storyConcepts": [
+            "irfile",
+            "athand",
+            "aid",
+            "document",
+            "file",
+            "hand",
+            "hiring",
+            "other",
+            "them",
+            "tutor",
+            "manager"
+          ],
+          "matchedConcepts": [
+            "document",
+            "file",
+            "tutor"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [],
+          "lexicalScore": 0.2727272727272727,
+          "covered": false
+        },
+        {
+          "id": "US03",
+          "story": "As a manager, I want students to be able to indicate their availability for the session, so that the matching can be made.",
+          "storyConcepts": [
+            "availability",
+            "indicate",
+            "made",
+            "matching",
+            "session",
+            "student",
+            "manager"
+          ],
+          "matchedConcepts": [
+            "availability",
+            "matching",
+            "session"
+          ],
+          "processVisualizerAlignedConcepts": [
+            "session"
+          ],
+          "matchedUiRefs": [
+            "availability_overview",
+            "matching_overview",
+            "session_overview"
+          ],
+          "lexicalScore": 0.42857142857142855,
+          "covered": true
+        },
+        {
+          "id": "US04",
+          "story": "As a manager, I want for tutors to be able to indicate their availability for sessions, so that the matching can be made.",
+          "storyConcepts": [
+            "availability",
+            "indicate",
+            "made",
+            "matching",
+            "session",
+            "tutor",
+            "manager"
+          ],
+          "matchedConcepts": [
+            "availability",
+            "matching",
+            "session",
+            "tutor"
+          ],
+          "processVisualizerAlignedConcepts": [
+            "session"
+          ],
+          "matchedUiRefs": [
+            "availability_overview",
+            "matching_overview",
+            "session_overview"
+          ],
+          "lexicalScore": 0.5714285714285714,
+          "covered": true
+        },
+        {
+          "id": "US05",
+          "story": "As a manager, I want for students to be able to state their address, so that the matching can be made.",
+          "storyConcepts": [
+            "address",
+            "made",
+            "matching",
+            "state",
+            "student",
+            "manager"
+          ],
+          "matchedConcepts": [
+            "matching"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "matching_overview"
+          ],
+          "lexicalScore": 0.16666666666666666,
+          "covered": false
+        },
+        {
+          "id": "US06",
+          "story": "As a manager, I want for tutors to be able to state their address, so that the matching can be made.",
+          "storyConcepts": [
+            "address",
+            "made",
+            "matching",
+            "state",
+            "tutor",
+            "manager"
+          ],
+          "matchedConcepts": [
+            "matching",
+            "tutor"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "matching_overview"
+          ],
+          "lexicalScore": 0.3333333333333333,
+          "covered": true
+        },
+        {
+          "id": "US07",
+          "story": "As a manager, I want the students to be able to choose between online and in-person session types, so that the number of potential matches can be increased.",
+          "storyConcepts": [
+            "betweenonline",
+            "personsession",
+            "between",
+            "increased",
+            "matche",
+            "number",
+            "online",
+            "person",
+            "potential",
+            "session",
+            "student",
+            "type",
+            "manager"
+          ],
+          "matchedConcepts": [
+            "session",
+            "type"
+          ],
+          "processVisualizerAlignedConcepts": [
+            "session"
+          ],
+          "matchedUiRefs": [
+            "session_overview"
+          ],
+          "lexicalScore": 0.15384615384615385,
+          "covered": false
+        },
+        {
+          "id": "US08",
+          "story": "As a manager, I want to be able to verify accounts of students and tutors.",
+          "storyConcepts": [
+            "verifyaccount",
+            "account",
+            "student",
+            "tutor",
+            "verify",
+            "manager"
+          ],
+          "matchedConcepts": [
+            "account",
+            "tutor"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [],
+          "lexicalScore": 0.3333333333333333,
+          "covered": true
+        },
+        {
+          "id": "US09",
+          "story": "As a student, I want to be able to make my account, so that I can access the platform where I can manage my matches, sessions, and pay securely.",
+          "storyConcepts": [
+            "platformwhere",
+            "account",
+            "make",
+            "matche",
+            "pay",
+            "platform",
+            "securely",
+            "session",
+            "where",
+            "student"
+          ],
+          "matchedConcepts": [
+            "account",
+            "platform",
+            "session"
+          ],
+          "processVisualizerAlignedConcepts": [
+            "session"
+          ],
+          "matchedUiRefs": [
+            "platform_overview",
+            "session_overview"
+          ],
+          "lexicalScore": 0.3,
+          "covered": true
+        },
+        {
+          "id": "US10",
+          "story": "As a student, I want to be able to select one or multiple subjects I want to be tutored in.",
+          "storyConcepts": [
+            "multiple",
+            "one",
+            "subject",
+            "tutored",
+            "student"
+          ],
+          "matchedConcepts": [
+            "subject"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "subject_overview"
+          ],
+          "lexicalScore": 0.2,
+          "covered": false
+        },
+        {
+          "id": "US11",
+          "story": "As a student, I want to choose the type of session: online or in-person.",
+          "storyConcepts": [
+            "online",
+            "person",
+            "session",
+            "type",
+            "student"
+          ],
+          "matchedConcepts": [
+            "session",
+            "type"
+          ],
+          "processVisualizerAlignedConcepts": [
+            "session"
+          ],
+          "matchedUiRefs": [
+            "session_overview"
+          ],
+          "lexicalScore": 0.4,
+          "covered": true
+        },
+        {
+          "id": "US12",
+          "story": "As a tutor, I want to be able to make an account with my personal information, so that I can access the platform where I can find clients for my services.",
+          "storyConcepts": [
+            "findclient",
+            "platformwhere",
+            "account",
+            "client",
+            "find",
+            "make",
+            "personal",
+            "platform",
+            "service",
+            "where",
+            "tutor"
+          ],
+          "matchedConcepts": [
+            "account",
+            "platform",
+            "service",
+            "tutor"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "platform_overview",
+            "service_overview"
+          ],
+          "lexicalScore": 0.36363636363636365,
+          "covered": true
+        },
+        {
+          "id": "US13",
+          "story": "As a tutor, I want to be able to provide my files (CV, and other documents) in the system, so that the hiring process is easy and streamlined.",
+          "storyConcepts": [
+            "document",
+            "easy",
+            "file",
+            "hiring",
+            "other",
+            "provide",
+            "streamlined",
+            "tutor",
+            "system",
+            "process"
+          ],
+          "matchedConcepts": [
+            "document",
+            "file",
+            "tutor"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [],
+          "lexicalScore": 0.3,
+          "covered": true
+        },
+        {
+          "id": "US14",
+          "story": "As a tutor, I want to specify my subjects, so that I can be matched to a student based on this.",
+          "storyConcepts": [
+            "studentbased",
+            "based",
+            "matched",
+            "specify",
+            "student",
+            "subject",
+            "thi",
+            "tutor"
+          ],
+          "matchedConcepts": [
+            "based",
+            "matched",
+            "subject",
+            "tutor"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "based_overview",
+            "matched_overview",
+            "subject_overview"
+          ],
+          "lexicalScore": 0.5,
+          "covered": true
+        },
+        {
+          "id": "US15",
+          "story": "As a tutor, I want to specify my availability, so that I can be matched to a student based on this.",
+          "storyConcepts": [
+            "studentbased",
+            "availability",
+            "based",
+            "matched",
+            "specify",
+            "student",
+            "thi",
+            "tutor"
+          ],
+          "matchedConcepts": [
+            "availability",
+            "based",
+            "matched",
+            "tutor"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "availability_overview",
+            "based_overview",
+            "matched_overview"
+          ],
+          "lexicalScore": 0.5,
+          "covered": true
+        },
+        {
+          "id": "US16",
+          "story": "As a tutor, I want to update my availability dynamically in the app, so that I don't get matched for unavailable slots.",
+          "storyConcepts": [
+            "availabilitydynamically",
+            "tget",
+            "unavailableslot",
+            "availability",
+            "don",
+            "dynamically",
+            "get",
+            "matched",
+            "slot",
+            "unavailable",
+            "tutor"
+          ],
+          "matchedConcepts": [
+            "availability",
+            "matched",
+            "tutor"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "availability_overview",
+            "matched_overview"
+          ],
+          "lexicalScore": 0.2727272727272727,
+          "covered": false
+        },
+        {
+          "id": "US17",
+          "story": "As a tutor, I want to specify my location, so that I can be matched to a student based on this.",
+          "storyConcepts": [
+            "studentbased",
+            "based",
+            "location",
+            "matched",
+            "specify",
+            "student",
+            "thi",
+            "tutor"
+          ],
+          "matchedConcepts": [
+            "based",
+            "matched",
+            "tutor"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "based_overview",
+            "matched_overview"
+          ],
+          "lexicalScore": 0.375,
+          "covered": true
+        },
+        {
+          "id": "US18",
+          "story": "As a tutor, I want to be able to cancel a session.",
+          "storyConcepts": [
+            "cancel",
+            "session",
+            "tutor"
+          ],
+          "matchedConcepts": [
+            "session",
+            "tutor"
+          ],
+          "processVisualizerAlignedConcepts": [
+            "session"
+          ],
+          "matchedUiRefs": [
+            "session_overview"
+          ],
+          "lexicalScore": 0.6666666666666666,
+          "covered": true
+        },
+        {
+          "id": "US19",
+          "story": "As a manager, I want students and tutors to be automatically matched based on address, subject, and availability, so that I do not have to do it manually.",
+          "storyConcepts": [
+            "matchedbased",
+            "address",
+            "automatically",
+            "availability",
+            "based",
+            "manually",
+            "matched",
+            "not",
+            "student",
+            "subject",
+            "tutor",
+            "manager"
+          ],
+          "matchedConcepts": [
+            "availability",
+            "based",
+            "matched",
+            "subject",
+            "tutor"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "availability_overview",
+            "based_overview",
+            "matched_overview",
+            "subject_overview"
+          ],
+          "lexicalScore": 0.4166666666666667,
+          "covered": true
+        },
+        {
+          "id": "US20",
+          "story": "As a manager, I want the matching functionality to enforce strict criteria, so that partial matches do not have to be provided.",
+          "storyConcepts": [
+            "donot",
+            "enforcestrict",
+            "partialmatche",
+            "criteria",
+            "enforce",
+            "functionality",
+            "matche",
+            "matching",
+            "not",
+            "partial",
+            "provided",
+            "strict",
+            "manager"
+          ],
+          "matchedConcepts": [
+            "criteria",
+            "matching"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "matching_overview"
+          ],
+          "lexicalScore": 0.15384615384615385,
+          "covered": false
+        },
+        {
+          "id": "US21",
+          "story": "As a manager, I want the system to search for a match until the tutor is found every hour.",
+          "storyConcepts": [
+            "matchuntil",
+            "every",
+            "found",
+            "hour",
+            "match",
+            "tutor",
+            "until",
+            "manager",
+            "system"
+          ],
+          "matchedConcepts": [
+            "match",
+            "tutor"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "match_overview"
+          ],
+          "lexicalScore": 0.2222222222222222,
+          "covered": false
+        },
+        {
+          "id": "US22",
+          "story": "As a student, I want to be matched with a tutor that teaches the subject I am interested in.",
+          "storyConcepts": [
+            "interested",
+            "matched",
+            "subject",
+            "teache",
+            "tutor",
+            "student"
+          ],
+          "matchedConcepts": [
+            "matched",
+            "subject",
+            "tutor"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "matched_overview",
+            "subject_overview"
+          ],
+          "lexicalScore": 0.5,
+          "covered": true
+        },
+        {
+          "id": "US23",
+          "story": "As a student, I want to be matched with a tutor that lives in the same area.",
+          "storyConcepts": [
+            "samearea",
+            "area",
+            "live",
+            "matched",
+            "same",
+            "tutor",
+            "student"
+          ],
+          "matchedConcepts": [
+            "matched",
+            "tutor"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "matched_overview"
+          ],
+          "lexicalScore": 0.2857142857142857,
+          "covered": false
+        },
+        {
+          "id": "US24",
+          "story": "As a student, I want to be matched with a tutor that is available in the hours I have specified.",
+          "storyConcepts": [
+            "hour",
+            "matched",
+            "specified",
+            "tutor",
+            "student"
+          ],
+          "matchedConcepts": [
+            "matched",
+            "tutor"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "matched_overview"
+          ],
+          "lexicalScore": 0.4,
+          "covered": true
+        },
+        {
+          "id": "US25",
+          "story": "As a student, I want to be matched with a tutor who, if located far away, can offer online sessions, so that I can still receive tutoring regardless of location.",
+          "storyConcepts": [
+            "faraway",
+            "iflocated",
+            "onlinesession",
+            "stillreceive",
+            "tutoringregardless",
+            "away",
+            "far",
+            "located",
+            "location",
+            "matched",
+            "offer",
+            "online",
+            "regardless",
+            "session",
+            "still",
+            "tutor",
+            "tutoring",
+            "who",
+            "student"
+          ],
+          "matchedConcepts": [
+            "matched",
+            "session",
+            "tutor"
+          ],
+          "processVisualizerAlignedConcepts": [
+            "session"
+          ],
+          "matchedUiRefs": [
+            "matched_overview",
+            "session_overview"
+          ],
+          "lexicalScore": 0.15789473684210525,
+          "covered": false
+        },
+        {
+          "id": "US26",
+          "story": "As a tutor, I want to be matched with a student that is interested in the subject I teach.",
+          "storyConcepts": [
+            "interested",
+            "matched",
+            "student",
+            "subject",
+            "teach",
+            "tutor"
+          ],
+          "matchedConcepts": [
+            "matched",
+            "subject",
+            "tutor"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "matched_overview",
+            "subject_overview"
+          ],
+          "lexicalScore": 0.5,
+          "covered": true
+        },
+        {
+          "id": "US27",
+          "story": "As a tutor, I want to be matched with a student that lives in the same area.",
+          "storyConcepts": [
+            "samearea",
+            "area",
+            "live",
+            "matched",
+            "same",
+            "student",
+            "tutor"
+          ],
+          "matchedConcepts": [
+            "matched",
+            "tutor"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "matched_overview"
+          ],
+          "lexicalScore": 0.2857142857142857,
+          "covered": false
+        },
+        {
+          "id": "US28",
+          "story": "As a tutor, I want to be matched with a student that is available in the hours I have specified.",
+          "storyConcepts": [
+            "hour",
+            "matched",
+            "specified",
+            "student",
+            "tutor"
+          ],
+          "matchedConcepts": [
+            "matched",
+            "tutor"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "matched_overview"
+          ],
+          "lexicalScore": 0.4,
+          "covered": true
+        },
+        {
+          "id": "US29",
+          "story": "As a tutor, I want to be matched with a student who, if located far away, can agree to online sessions, so that I can still provide my services regardless of location.",
+          "storyConcepts": [
+            "faraway",
+            "iflocated",
+            "stillprovide",
+            "agree",
+            "away",
+            "far",
+            "located",
+            "location",
+            "matched",
+            "online",
+            "provide",
+            "regardless",
+            "service",
+            "session",
+            "still",
+            "student",
+            "who",
+            "tutor"
+          ],
+          "matchedConcepts": [
+            "matched",
+            "service",
+            "session",
+            "tutor"
+          ],
+          "processVisualizerAlignedConcepts": [
+            "session"
+          ],
+          "matchedUiRefs": [
+            "matched_overview",
+            "service_overview",
+            "session_overview"
+          ],
+          "lexicalScore": 0.2222222222222222,
+          "covered": false
+        },
+        {
+          "id": "US30",
+          "story": "As a manager, I want students to receive notifications about an upcoming session on WhatsApp 1 and 3 days prior, so that the no-show rate decreases.",
+          "storyConcepts": [
+            "dayprior",
+            "upcomingsession",
+            "about",
+            "day",
+            "decrease",
+            "notification",
+            "prior",
+            "rate",
+            "session",
+            "student",
+            "upcoming",
+            "whatsapp",
+            "manager"
+          ],
+          "matchedConcepts": [
+            "day",
+            "session"
+          ],
+          "processVisualizerAlignedConcepts": [
+            "session"
+          ],
+          "matchedUiRefs": [
+            "session_overview"
+          ],
+          "lexicalScore": 0.15384615384615385,
+          "covered": false
+        },
+        {
+          "id": "US31",
+          "story": "As a manager, I want tutors to receive notifications about an upcoming session on WhatsApp, so that the no-show rate decreases.",
+          "storyConcepts": [
+            "upcomingsession",
+            "about",
+            "decrease",
+            "notification",
+            "rate",
+            "session",
+            "tutor",
+            "upcoming",
+            "whatsapp",
+            "manager"
+          ],
+          "matchedConcepts": [
+            "session",
+            "tutor"
+          ],
+          "processVisualizerAlignedConcepts": [
+            "session"
+          ],
+          "matchedUiRefs": [
+            "session_overview"
+          ],
+          "lexicalScore": 0.2,
+          "covered": false
+        },
+        {
+          "id": "US32",
+          "story": "As a manager, I want the platform to have a chat function with restricted sharing of personal contact information, so that I can ensure tutors adhere to platform policies and do not exchange phone numbers directly.",
+          "storyConcepts": [
+            "platform",
+            "contactinformation",
+            "ensuretutor",
+            "notexchange",
+            "phonenumber",
+            "platformpolicy",
+            "restrictedsharing",
+            "adhere",
+            "chat",
+            "contact",
+            "directly",
+            "ensure",
+            "exchange",
+            "function",
+            "not",
+            "number",
+            "personal",
+            "phone",
+            "restricted",
+            "sharing",
+            "tutor",
+            "manager",
+            "policy"
+          ],
+          "matchedConcepts": [
+            "platform",
+            "chat",
+            "contact",
+            "tutor"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "platform_overview"
+          ],
+          "lexicalScore": 0.17391304347826086,
+          "covered": false
+        },
+        {
+          "id": "US33",
+          "story": "As a manager, I want the student to receive an email when the match is found.",
+          "storyConcepts": [
+            "email",
+            "found",
+            "match",
+            "student",
+            "when",
+            "manager"
+          ],
+          "matchedConcepts": [
+            "email",
+            "match"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "match_overview"
+          ],
+          "lexicalScore": 0.3333333333333333,
+          "covered": true
+        },
+        {
+          "id": "US34",
+          "story": "As a student, I want to receive email confirmation after payment, so that I have proof of transaction and assurance that my payment was successfully processed.",
+          "storyConcepts": [
+            "payment",
+            "afterpayment",
+            "emailconfirmation",
+            "wassuccessfully",
+            "after",
+            "assurance",
+            "confirmation",
+            "email",
+            "processed",
+            "proof",
+            "successfully",
+            "transaction",
+            "was",
+            "student"
+          ],
+          "matchedConcepts": [
+            "payment",
+            "email",
+            "transaction"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [],
+          "lexicalScore": 0.21428571428571427,
+          "covered": false
+        },
+        {
+          "id": "US35",
+          "story": "As a student, I want to be notified if a session is cancelled by the tutor.",
+          "storyConcepts": [
+            "notifiedif",
+            "cancelled",
+            "notified",
+            "session",
+            "tutor",
+            "student"
+          ],
+          "matchedConcepts": [
+            "session",
+            "tutor"
+          ],
+          "processVisualizerAlignedConcepts": [
+            "session"
+          ],
+          "matchedUiRefs": [
+            "session_overview"
+          ],
+          "lexicalScore": 0.3333333333333333,
+          "covered": true
+        },
+        {
+          "id": "US36",
+          "story": "As a tutor, I want to receive notifications three and one day prior to the session date, so that I don't forget the session.",
+          "storyConcepts": [
+            "session",
+            "dayprior",
+            "notificationthree",
+            "sessiondate",
+            "tforget",
+            "date",
+            "day",
+            "don",
+            "forget",
+            "notification",
+            "one",
+            "prior",
+            "three",
+            "tutor"
+          ],
+          "matchedConcepts": [
+            "session",
+            "date",
+            "day",
+            "tutor"
+          ],
+          "processVisualizerAlignedConcepts": [
+            "session"
+          ],
+          "matchedUiRefs": [
+            "session_overview"
+          ],
+          "lexicalScore": 0.2857142857142857,
+          "covered": false
+        },
+        {
+          "id": "US37",
+          "story": "As a tutor, I want to be notified if a session is cancelled by the student.",
+          "storyConcepts": [
+            "notifiedif",
+            "cancelled",
+            "notified",
+            "session",
+            "student",
+            "tutor"
+          ],
+          "matchedConcepts": [
+            "session",
+            "tutor"
+          ],
+          "processVisualizerAlignedConcepts": [
+            "session"
+          ],
+          "matchedUiRefs": [
+            "session_overview"
+          ],
+          "lexicalScore": 0.3333333333333333,
+          "covered": true
+        },
+        {
+          "id": "US38",
+          "story": "As a manager, I want students to be able to rate each session, so that the credit system can calculate the rating of the tutor.",
+          "storyConcepts": [
+            "calculate",
+            "credit",
+            "each",
+            "rate",
+            "rating",
+            "session",
+            "student",
+            "tutor",
+            "manager",
+            "system"
+          ],
+          "matchedConcepts": [
+            "rating",
+            "session",
+            "tutor"
+          ],
+          "processVisualizerAlignedConcepts": [
+            "session"
+          ],
+          "matchedUiRefs": [
+            "rating_overview",
+            "session_overview"
+          ],
+          "lexicalScore": 0.3,
+          "covered": true
+        },
+        {
+          "id": "US39",
+          "story": "As a manager, I want a credit system for tutors to include the feedback from multiple sessions, no-show rate, and late count.",
+          "storyConcepts": [
+            "multiplesession",
+            "count",
+            "credit",
+            "feedback",
+            "include",
+            "late",
+            "multiple",
+            "rate",
+            "session",
+            "tutor",
+            "manager",
+            "system"
+          ],
+          "matchedConcepts": [
+            "feedback",
+            "session",
+            "tutor"
+          ],
+          "processVisualizerAlignedConcepts": [
+            "session"
+          ],
+          "matchedUiRefs": [
+            "session_overview"
+          ],
+          "lexicalScore": 0.25,
+          "covered": false
+        },
+        {
+          "id": "US40",
+          "story": "As a manager, I want the credit system to reward tutors for regular students, so that the tutors have motivation to not arrange sessions outside the system.",
+          "storyConcepts": [
+            "tutor",
+            "arrangesession",
+            "rewardtutor",
+            "arrange",
+            "credit",
+            "motivation",
+            "not",
+            "outside",
+            "regular",
+            "reward",
+            "session",
+            "student",
+            "manager",
+            "system"
+          ],
+          "matchedConcepts": [
+            "tutor",
+            "session"
+          ],
+          "processVisualizerAlignedConcepts": [
+            "session"
+          ],
+          "matchedUiRefs": [
+            "session_overview"
+          ],
+          "lexicalScore": 0.14285714285714285,
+          "covered": false
+        },
+        {
+          "id": "US41",
+          "story": "As a manager, I want the credit system to consider all available data.",
+          "storyConcepts": [
+            "consider",
+            "credit",
+            "manager",
+            "system"
+          ],
+          "matchedConcepts": [],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [],
+          "lexicalScore": 0,
+          "covered": false
+        },
+        {
+          "id": "US42",
+          "story": "As a tutor, I want to be able to view my ratings.",
+          "storyConcepts": [
+            "rating",
+            "tutor"
+          ],
+          "matchedConcepts": [
+            "rating",
+            "tutor"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "rating_overview"
+          ],
+          "lexicalScore": 1,
+          "covered": true
+        },
+        {
+          "id": "US43",
+          "story": "As a tutor, I want to see session-specific feedback, so that I can improve my performance based on student input.",
+          "storyConcepts": [
+            "performancebased",
+            "based",
+            "feedback",
+            "improve",
+            "input",
+            "performance",
+            "session",
+            "student",
+            "tutor"
+          ],
+          "matchedConcepts": [
+            "based",
+            "feedback",
+            "session",
+            "tutor"
+          ],
+          "processVisualizerAlignedConcepts": [
+            "session"
+          ],
+          "matchedUiRefs": [
+            "based_overview",
+            "session_overview"
+          ],
+          "lexicalScore": 0.4444444444444444,
+          "covered": true
+        },
+        {
+          "id": "US44",
+          "story": "As a manager, I want the system to be integrated with the external accounting service that is already in place.",
+          "storyConcepts": [
+            "accountingservice",
+            "accounting",
+            "already",
+            "external",
+            "integrated",
+            "service",
+            "manager",
+            "system",
+            "place"
+          ],
+          "matchedConcepts": [
+            "service"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "service_overview"
+          ],
+          "lexicalScore": 0.1111111111111111,
+          "covered": false
+        },
+        {
+          "id": "US45",
+          "story": "As a manager, I want students to be billed by automatically transferring them to the paying system, so that the user experience is enhanced.",
+          "storyConcepts": [
+            "payingsystem",
+            "transferringthem",
+            "automatically",
+            "billed",
+            "enhanced",
+            "experience",
+            "paying",
+            "student",
+            "them",
+            "transferring",
+            "user",
+            "manager",
+            "system"
+          ],
+          "matchedConcepts": [
+            "user"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "user_overview"
+          ],
+          "lexicalScore": 0.07692307692307693,
+          "covered": false
+        },
+        {
+          "id": "US46",
+          "story": "As a manager, I want students to receive automated receipts after successful payments, so that the payment process feels transparent.",
+          "storyConcepts": [
+            "payment",
+            "processfeel",
+            "receiptafter",
+            "successfulpayment",
+            "after",
+            "automated",
+            "feel",
+            "receipt",
+            "student",
+            "successful",
+            "transparent",
+            "manager",
+            "process"
+          ],
+          "matchedConcepts": [
+            "payment",
+            "successful"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [],
+          "lexicalScore": 0.15384615384615385,
+          "covered": false
+        },
+        {
+          "id": "US47",
+          "story": "As a manager, I want the session to be considered for the salary even if the student did not show up.",
+          "storyConcepts": [
+            "didnot",
+            "evenif",
+            "considered",
+            "did",
+            "even",
+            "not",
+            "salary",
+            "session",
+            "student",
+            "manager"
+          ],
+          "matchedConcepts": [
+            "session"
+          ],
+          "processVisualizerAlignedConcepts": [
+            "session"
+          ],
+          "matchedUiRefs": [
+            "session_overview"
+          ],
+          "lexicalScore": 0.1,
+          "covered": false
+        },
+        {
+          "id": "US48",
+          "story": "As a tutor, I want to view a detailed breakdown of my earnings, including completed sessions and cancellations, so that I can track my income.",
+          "storyConcepts": [
+            "includingcompleted",
+            "breakdown",
+            "cancellation",
+            "completed",
+            "earning",
+            "including",
+            "income",
+            "session",
+            "tutor"
+          ],
+          "matchedConcepts": [
+            "cancellation",
+            "session",
+            "tutor"
+          ],
+          "processVisualizerAlignedConcepts": [
+            "session"
+          ],
+          "matchedUiRefs": [
+            "session_overview"
+          ],
+          "lexicalScore": 0.3333333333333333,
+          "covered": true
+        },
+        {
+          "id": "US49",
+          "story": "As a manager, I want to access information about shortages of students or tutors by neighborhoods, so that I can advertise the services in the given areas.",
+          "storyConcepts": [
+            "about",
+            "advertise",
+            "area",
+            "given",
+            "neighborhood",
+            "service",
+            "shortage",
+            "student",
+            "tutor",
+            "manager"
+          ],
+          "matchedConcepts": [
+            "service",
+            "tutor"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "service_overview"
+          ],
+          "lexicalScore": 0.2,
+          "covered": false
+        }
+      ],
+      "score": 0.4897959183673469,
+      "covered": 24,
+      "total": 49
+    }
+  },
+  "generationStrategy": {
+    "llmPassCount": 1,
+    "repairPassEnabled": false
+  }
+}

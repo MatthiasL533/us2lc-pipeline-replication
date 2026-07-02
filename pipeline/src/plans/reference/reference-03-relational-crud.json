@@ -1,0 +1,250 @@
+{
+  "meta": {
+    "planVersion": "1.1.0",
+    "name": "reference-03-relational-crud.json"
+  },
+  "app": {
+    "appId": "id",
+    "branch": "main",
+    "moduleName": "MyFirstModule",
+    "layoutQualifiedName": "Atlas_Core.Atlas_Default",
+    "homePageRef": "home",
+    "navigation": {
+      "homePageButtons": [
+        { "pageRef": "project_overview", "caption": "Projects", "icon": { "name": "home" }, "allowedRoles": ["Coordinator", "Sales"] },
+        { "pageRef": "customer_overview", "caption": "Customers", "icon": { "name": "home" }, "allowedRoles": ["Coordinator", "Sales"] }
+      ],
+      "menuItems": [
+        { "pageRef": "home", "caption": "Home", "icon": { "name": "home" }, "allowedRoles": ["Coordinator", "Sales"] },
+        { "pageRef": "project_overview", "caption": "Projects", "icon": { "name": "home" }, "allowedRoles": ["Coordinator", "Sales"] },
+        { "pageRef": "customer_overview", "caption": "Customers", "icon": { "name": "home" }, "allowedRoles": ["Coordinator", "Sales"] },
+        { "pageRef": "tag_overview", "caption": "Tags", "icon": { "name": "home" }, "allowedRoles": ["Coordinator"] }
+      ]
+    }
+  },
+  "execution": {
+    "createApp": true,
+    "createAppNamePrefix": "Reference03Relational",
+    "createAppRepositoryType": "git",
+    "commit": true,
+    "commitMessage": "Reference 03: relational CRUD reference plan",
+    "deleteExistingDomainModel": true,
+    "deleteExistingPages": true,
+    "deleteExistingMicroflows": true,
+    "deleteExistingWorkflows": true,
+    "dg2Cleanup": true
+  },
+  "domainModel": {
+    "entities": [
+      {
+        "name": "Customer",
+        "attributes": [
+          { "name": "Name", "type": "String", "required": true },
+          { "name": "Segment", "type": "String", "required": true }
+        ]
+      },
+      {
+        "name": "Project",
+        "attributes": [
+          { "name": "Title", "type": "String", "required": true },
+          { "name": "Status", "type": "String", "required": true },
+          { "name": "Budget", "type": "Decimal", "required": false },
+          { "name": "Phase", "type": "String", "required": false }
+        ]
+      },
+      {
+        "name": "Tag",
+        "attributes": [
+          { "name": "Name", "type": "String", "required": true },
+          { "name": "Color", "type": "String", "required": false }
+        ]
+      }
+    ],
+    "associations": [
+      { "name": "Customer_Project", "parentEntity": "Customer", "childEntity": "Project", "type": "Reference" },
+      { "name": "Tag_Project", "parentEntity": "Tag", "childEntity": "Project", "type": "Reference" }
+    ],
+    "enumerations": []
+  },
+  "security": {
+    "enabled": true,
+    "securityLevel": "prototype",
+    "moduleRoles": ["Coordinator", "Sales"],
+    "userRoles": [
+      { "name": "Coordinator", "moduleRoles": ["Coordinator"], "systemModuleRole": "System.User" },
+      { "name": "Sales", "moduleRoles": ["Sales"], "systemModuleRole": "System.User" }
+    ],
+    "demoUsers": [
+      { "userName": "demo_coordinator", "password": "Coordinator123!", "userRoles": ["Coordinator"] },
+      { "userName": "demo_sales", "password": "Sales123!", "userRoles": ["Sales"] }
+    ]
+  },
+  "pages": {
+    "specs": [
+      {
+        "ref": "home",
+        "name": "Home",
+        "title": "Relationship Workspace",
+        "allowedRoles": ["Coordinator", "Sales"],
+        "content": [
+          { "type": "dynamicText", "text": "Relational CRUD workspace", "renderMode": "H2" },
+          { "type": "dynamicText", "text": "Projects belong to customers and can be linked to multiple tags.", "renderMode": "Paragraph" },
+          { "type": "buttonToPage", "caption": "Open Projects", "targetPageRef": "project_overview" }
+        ]
+      },
+      {
+        "ref": "customer_overview",
+        "name": "Customer_Overview",
+        "title": "Customers",
+        "entityRef": "MyFirstModule.Customer",
+        "allowedRoles": ["Coordinator", "Sales"],
+        "content": [
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.Customer",
+            "rowClickTargetPageRef": "customer_detail",
+            "itemContent": [
+              { "type": "attributeInput", "attributeRef": "Name", "autoLabel": true },
+              { "type": "attributeInput", "attributeRef": "Segment", "autoLabel": false }
+            ]
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Add Customer",
+            "entityRef": "MyFirstModule.Customer",
+            "targetPageRef": "customer_detail"
+          }
+        ]
+      },
+      {
+        "ref": "project_overview",
+        "name": "Project_Overview",
+        "title": "Projects",
+        "entityRef": "MyFirstModule.Project",
+        "allowedRoles": ["Coordinator", "Sales"],
+        "content": [
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.Project",
+            "rowClickTargetPageRef": "project_detail",
+            "itemContent": [
+              { "type": "attributeInput", "attributeRef": "Title", "autoLabel": true },
+              { "type": "attributeInput", "attributeRef": "Status", "autoLabel": false },
+              { "type": "attributeInput", "attributeRef": "Budget", "autoLabel": false },
+              { "type": "attributeInput", "attributeRef": "Phase", "autoLabel": false }
+            ]
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Add Project",
+            "entityRef": "MyFirstModule.Project",
+            "targetPageRef": "project_detail"
+          }
+        ]
+      },
+      {
+        "ref": "tag_overview",
+        "name": "Tag_Overview",
+        "title": "Tags",
+        "entityRef": "MyFirstModule.Tag",
+        "allowedRoles": ["Coordinator"],
+        "content": [
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.Tag",
+            "rowClickTargetPageRef": "tag_detail",
+            "itemContent": [
+              { "type": "attributeInput", "attributeRef": "Name", "autoLabel": true },
+              { "type": "attributeInput", "attributeRef": "Color", "autoLabel": false }
+            ]
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Add Tag",
+            "entityRef": "MyFirstModule.Tag",
+            "targetPageRef": "tag_detail"
+          }
+        ]
+      },
+      {
+        "ref": "customer_detail",
+        "name": "Customer_Detail",
+        "title": "Customer Detail",
+        "entityRef": "MyFirstModule.Customer",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          { "name": "Customer", "entityRef": "MyFirstModule.Customer", "required": true }
+        ],
+        "allowedRoles": ["Coordinator", "Sales"],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "Customer",
+            "labelWidth": 3,
+            "content": [
+              { "type": "attributeInput", "attributeRef": "Name" },
+              { "type": "attributeInput", "attributeRef": "Segment" },
+              { "type": "saveChangesButton", "caption": "Save", "closePage": true },
+              { "type": "cancelChangesButton", "caption": "Cancel", "closePage": true }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "project_detail",
+        "name": "Project_Detail",
+        "title": "Project Detail",
+        "entityRef": "MyFirstModule.Project",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          { "name": "Project", "entityRef": "MyFirstModule.Project", "required": true }
+        ],
+        "allowedRoles": ["Coordinator", "Sales"],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "Project",
+            "labelWidth": 3,
+            "content": [
+              { "type": "attributeInput", "attributeRef": "Title" },
+              { "type": "attributeInput", "attributeRef": "Status" },
+              { "type": "attributeInput", "attributeRef": "Budget" },
+              { "type": "attributeInput", "attributeRef": "Phase" },
+              { "type": "associationInput", "associationRef": "Customer_Project", "targetEntityRef": "MyFirstModule.Customer", "displayAttributeRef": "Name", "label": "Customer" },
+              { "type": "associationInput", "associationRef": "Tag_Project", "targetEntityRef": "MyFirstModule.Tag", "displayAttributeRef": "Name", "label": "Primary Tag" },
+              { "type": "saveChangesButton", "caption": "Save", "closePage": true },
+              { "type": "cancelChangesButton", "caption": "Cancel", "closePage": true }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "tag_detail",
+        "name": "Tag_Detail",
+        "title": "Tag Detail",
+        "entityRef": "MyFirstModule.Tag",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          { "name": "Tag", "entityRef": "MyFirstModule.Tag", "required": true }
+        ],
+        "allowedRoles": ["Coordinator"],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "Tag",
+            "labelWidth": 3,
+            "content": [
+              { "type": "attributeInput", "attributeRef": "Name" },
+              { "type": "attributeInput", "attributeRef": "Color" },
+              { "type": "saveChangesButton", "caption": "Save", "closePage": true },
+              { "type": "cancelChangesButton", "caption": "Cancel", "closePage": true }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "verification": {
+    "failOnMissing": true
+  }
+}

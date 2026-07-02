@@ -1,0 +1,63 @@
+{
+  "ok": true,
+  "planPath": "/Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/artifacts/practical-performance/20260528-165228/stability/cinema/run-02/plan.json",
+  "reportPath": "/Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/artifacts/practical-performance/20260528-165228/stability/cinema/run-02/generation-report.json",
+  "warnings": [
+    "No home page ref found; inserted Home page with ref \"home\".",
+    "Added missing overview page for entity \"User\".",
+    "Added missing NewEdit page for entity \"User\".",
+    "Added missing overview page for entity \"Subscription\".",
+    "Added missing NewEdit page for entity \"Subscription\".",
+    "Added missing overview page for entity \"PaymentMethod\".",
+    "Added missing NewEdit page for entity \"PaymentMethod\".",
+    "Added missing overview page for entity \"PaymentTransaction\".",
+    "Added missing NewEdit page for entity \"PaymentTransaction\".",
+    "Added missing overview page for entity \"Movie\".",
+    "Added missing NewEdit page for entity \"Movie\".",
+    "Added missing overview page for entity \"MovieCastMember\".",
+    "Added missing NewEdit page for entity \"MovieCastMember\".",
+    "Added missing overview page for entity \"MovieCrewMember\".",
+    "Added missing NewEdit page for entity \"MovieCrewMember\".",
+    "Added missing overview page for entity \"MovieShowing\".",
+    "Added missing NewEdit page for entity \"MovieShowing\".",
+    "Added missing overview page for entity \"Cinema\".",
+    "Added missing NewEdit page for entity \"Cinema\".",
+    "Added missing overview page for entity \"FilmHouse\".",
+    "Added missing NewEdit page for entity \"FilmHouse\".",
+    "Added missing overview page for entity \"StreamingPlatform\".",
+    "Added missing NewEdit page for entity \"StreamingPlatform\".",
+    "Added missing overview page for entity \"UserPreference\".",
+    "Added missing NewEdit page for entity \"UserPreference\".",
+    "Dropped placeholder page \"user\" because it had no useful steps.",
+    "Dropped placeholder page \"userpreference\" because it had no useful steps.",
+    "Repaired NewEdit page for entity \"Movie\" because its form inputs no longer matched current associations.",
+    "Repaired NewEdit page for entity \"MovieShowing\" because its form inputs no longer matched current associations.",
+    "Domain review dropped duplicate generic entity \"Showing\": Generic entity duplicates more specific story-backed entity \"MovieShowing\".",
+    "Removed page \"showing_overview\" for dropped entity \"Showing\".",
+    "Removed page \"showing_newedit\" for dropped entity \"Showing\"."
+  ],
+  "model": "gemma4:e4b",
+  "validationErrors": [],
+  "visualNarrator": {
+    "enabled": true,
+    "status": "completed",
+    "durationMs": 6237,
+    "command": "/Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/visual-narrator/.venv/bin/python /Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/pipeline/scripts/run_visual_narrator.py --input /Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/artifacts/practical-performance/20260528-165228/inputs/cinema/user-stories.txt --system-name PracticalPerf_cinema_Stability",
+    "artifacts": {
+      "ontologyPath": "/Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/artifacts/practical-performance/20260528-165228/stability/cinema/run-02/visual-narrator-ontology.omn",
+      "storiesPath": "/Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/artifacts/practical-performance/20260528-165228/stability/cinema/run-02/visual-narrator-stories.json",
+      "summaryPath": "/Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/artifacts/practical-performance/20260528-165228/stability/cinema/run-02/visual-narrator-summary.json",
+      "rawPath": "/Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/artifacts/practical-performance/20260528-165228/stability/cinema/run-02/visual-narrator-result.json"
+    },
+    "warnings": []
+  },
+  "processVisualizer": {
+    "enabled": false,
+    "status": "skipped",
+    "durationMs": 0,
+    "command": "",
+    "artifacts": {},
+    "warnings": [],
+    "error": ""
+  }
+}

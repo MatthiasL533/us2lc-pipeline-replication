@@ -1,0 +1,2037 @@
+{
+  "meta": {
+    "planVersion": "1.1.0",
+    "generatedAt": "2026-06-07T11:18:05.124Z",
+    "generatedBy": "pipeline.plan-generator"
+  },
+  "app": {
+    "appId": "",
+    "branch": "main",
+    "moduleName": "MyFirstModule",
+    "layoutQualifiedName": "Atlas_Core.Atlas_Default",
+    "homePageRef": "home",
+    "navigation": {
+      "homePageButtons": [
+        {
+          "pageRef": "appuser_overview",
+          "caption": "",
+          "icon": null,
+          "allowedRoles": []
+        },
+        {
+          "pageRef": "beer_overview",
+          "caption": "",
+          "icon": null,
+          "allowedRoles": []
+        },
+        {
+          "pageRef": "beer2beermanagementuser_overview",
+          "caption": "",
+          "icon": null,
+          "allowedRoles": []
+        },
+        {
+          "pageRef": "brewery_overview",
+          "caption": "",
+          "icon": null,
+          "allowedRoles": []
+        },
+        {
+          "pageRef": "breweryorhospitalitybusiness_overview",
+          "caption": "",
+          "icon": null,
+          "allowedRoles": []
+        },
+        {
+          "pageRef": "contract_overview",
+          "caption": "",
+          "icon": null,
+          "allowedRoles": []
+        }
+      ],
+      "menuItems": [
+        {
+          "pageRef": "appuser_overview",
+          "caption": "",
+          "icon": null,
+          "allowedRoles": []
+        },
+        {
+          "pageRef": "beer_overview",
+          "caption": "",
+          "icon": null,
+          "allowedRoles": []
+        },
+        {
+          "pageRef": "beer2beermanagementuser_overview",
+          "caption": "",
+          "icon": null,
+          "allowedRoles": []
+        },
+        {
+          "pageRef": "brewery_overview",
+          "caption": "",
+          "icon": null,
+          "allowedRoles": []
+        },
+        {
+          "pageRef": "breweryorhospitalitybusiness_overview",
+          "caption": "",
+          "icon": null,
+          "allowedRoles": []
+        },
+        {
+          "pageRef": "contract_overview",
+          "caption": "",
+          "icon": null,
+          "allowedRoles": []
+        }
+      ],
+      "homePageButtonRefs": [
+        "appuser_overview",
+        "beer_overview",
+        "beer2beermanagementuser_overview",
+        "brewery_overview",
+        "breweryorhospitalitybusiness_overview",
+        "contract_overview"
+      ],
+      "navigationItemRefs": [
+        "appuser_overview",
+        "beer_overview",
+        "beer2beermanagementuser_overview",
+        "brewery_overview",
+        "breweryorhospitalitybusiness_overview",
+        "contract_overview"
+      ]
+    }
+  },
+  "execution": {
+    "commit": false,
+    "dg2Cleanup": true,
+    "forceLegacyWebClientForLookups": true,
+    "createApp": true,
+    "createAppName": "PracticalPerf_brewery_Stability"
+  },
+  "domainModel": {
+    "entities": [
+      {
+        "name": "Brewery",
+        "attributes": [
+          {
+            "name": "Name",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "Address",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "AccountStatus",
+            "type": "String",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "HospitalityBusiness",
+        "attributes": [
+          {
+            "name": "Name",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "Address",
+            "type": "String",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "Beer",
+        "attributes": [
+          {
+            "name": "Name",
+            "type": "String",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "Order",
+        "attributes": [
+          {
+            "name": "Date",
+            "type": "DateTime",
+            "required": false
+          },
+          {
+            "name": "TotalCost",
+            "type": "Decimal",
+            "required": false
+          },
+          {
+            "name": "PdfFormat",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "Updates",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "LogicOperationId",
+            "type": "Integer",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "OrderTemplate",
+        "attributes": [
+          {
+            "name": "Name",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "Description",
+            "type": "String",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "Contract",
+        "attributes": [
+          {
+            "name": "StartDate",
+            "type": "DateTime",
+            "required": false
+          },
+          {
+            "name": "EndDate",
+            "type": "DateTime",
+            "required": false
+          },
+          {
+            "name": "OrderCommissions",
+            "type": "Decimal",
+            "required": false
+          },
+          {
+            "name": "DeliveryCapacity",
+            "type": "Integer",
+            "required": false
+          },
+          {
+            "name": "RenewalDate",
+            "type": "DateTime",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "Product",
+        "attributes": [
+          {
+            "name": "Name",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "Description",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "ProductType",
+            "type": "String",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "Proposal",
+        "attributes": [
+          {
+            "name": "Date",
+            "type": "DateTime",
+            "required": false
+          },
+          {
+            "name": "Status",
+            "type": "String",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "AppUser",
+        "attributes": [
+          {
+            "name": "Name",
+            "type": "String",
+            "required": true
+          },
+          {
+            "name": "Email",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "IsActive",
+            "type": "Boolean",
+            "required": false,
+            "defaultValue": false
+          }
+        ]
+      },
+      {
+        "name": "Beer2beerManagementUser",
+        "attributes": [
+          {
+            "name": "Name",
+            "type": "String",
+            "required": true
+          },
+          {
+            "name": "Email",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "IsActive",
+            "type": "Boolean",
+            "required": false,
+            "defaultValue": false
+          },
+          {
+            "name": "Title",
+            "type": "String",
+            "required": true
+          },
+          {
+            "name": "Description",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "Status",
+            "type": "String",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "BreweryOrHospitalityBusiness",
+        "attributes": [
+          {
+            "name": "Name",
+            "type": "String",
+            "required": true
+          },
+          {
+            "name": "Email",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "IsActive",
+            "type": "Boolean",
+            "required": false,
+            "defaultValue": false
+          }
+        ]
+      },
+      {
+        "name": "ShoppingCart",
+        "attributes": [
+          {
+            "name": "TotalCost",
+            "type": "Decimal",
+            "required": false
+          },
+          {
+            "name": "Items",
+            "type": "String",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "SalesProposal",
+        "attributes": [
+          {
+            "name": "Date",
+            "type": "DateTime",
+            "required": false
+          },
+          {
+            "name": "Status",
+            "type": "String",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "OrderCommissions",
+        "attributes": [
+          {
+            "name": "CommissionRate",
+            "type": "Decimal",
+            "required": false
+          },
+          {
+            "name": "CommissionAmount",
+            "type": "Decimal",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "DeliveryCapacity",
+        "attributes": [
+          {
+            "name": "Capacity",
+            "type": "Integer",
+            "required": false
+          },
+          {
+            "name": "UnitOfMeasure",
+            "type": "String",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "Cancellation",
+        "attributes": [
+          {
+            "name": "CancellationDate",
+            "type": "DateTime",
+            "required": false
+          },
+          {
+            "name": "CancellationReason",
+            "type": "String",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "ModificationHistory",
+        "attributes": [
+          {
+            "name": "ModificationDate",
+            "type": "DateTime",
+            "required": false
+          },
+          {
+            "name": "ModifiedBy",
+            "type": "String",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "RenewalDate",
+        "attributes": [
+          {
+            "name": "RenewalDate",
+            "type": "DateTime",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "OrderStatus",
+        "attributes": [
+          {
+            "name": "Status",
+            "type": "String",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "PaymentStatus",
+        "attributes": [
+          {
+            "name": "Status",
+            "type": "String",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "ClientBase",
+        "attributes": [
+          {
+            "name": "BreweryCount",
+            "type": "Integer",
+            "required": false
+          },
+          {
+            "name": "TotalRevenue",
+            "type": "Decimal",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "LogicOperation",
+        "attributes": [
+          {
+            "name": "Name",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "Description",
+            "type": "String",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "BreweryUser",
+        "attributes": [
+          {
+            "name": "Name",
+            "type": "String",
+            "required": true
+          },
+          {
+            "name": "Email",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "IsActive",
+            "type": "Boolean",
+            "required": false,
+            "defaultValue": false
+          }
+        ]
+      },
+      {
+        "name": "HospitalityBusinessUser",
+        "attributes": [
+          {
+            "name": "Name",
+            "type": "String",
+            "required": true
+          },
+          {
+            "name": "Email",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "IsActive",
+            "type": "Boolean",
+            "required": false,
+            "defaultValue": false
+          }
+        ]
+      },
+      {
+        "name": "AppAdministrator",
+        "attributes": [
+          {
+            "name": "Name",
+            "type": "String",
+            "required": true
+          },
+          {
+            "name": "Email",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "IsActive",
+            "type": "Boolean",
+            "required": false,
+            "defaultValue": false
+          }
+        ]
+      }
+    ],
+    "associations": [
+      {
+        "name": "HasProduct",
+        "parentEntity": "Brewery",
+        "childEntity": "Product",
+        "type": "Reference",
+        "owner": "Both"
+      },
+      {
+        "name": "PlacesOrder",
+        "parentEntity": "HospitalityBusiness",
+        "childEntity": "Order",
+        "type": "Reference",
+        "owner": "Both"
+      },
+      {
+        "name": "HasContract",
+        "parentEntity": "Brewery",
+        "childEntity": "Contract",
+        "type": "Reference",
+        "owner": "Both"
+      },
+      {
+        "name": "HasOrderTemplate",
+        "parentEntity": "HospitalityBusiness",
+        "childEntity": "OrderTemplate",
+        "type": "Reference",
+        "owner": "Both"
+      },
+      {
+        "name": "ContainsBeer",
+        "parentEntity": "Order",
+        "childEntity": "Beer",
+        "type": "ReferenceSet",
+        "owner": "Both"
+      },
+      {
+        "name": "HasProposal",
+        "parentEntity": "Brewery",
+        "childEntity": "Proposal",
+        "type": "Reference",
+        "owner": "Both"
+      },
+      {
+        "name": "ManagesOrder",
+        "parentEntity": "Brewery",
+        "childEntity": "Order",
+        "type": "Reference",
+        "owner": "Both"
+      },
+      {
+        "name": "HasSalesProposal",
+        "parentEntity": "Brewery",
+        "childEntity": "SalesProposal",
+        "type": "Reference",
+        "owner": "Both"
+      },
+      {
+        "name": "HasClientBase",
+        "parentEntity": "Beer2beerManagementUser",
+        "childEntity": "ClientBase",
+        "type": "Reference",
+        "owner": "Both"
+      },
+      {
+        "name": "HasLogicOperation",
+        "parentEntity": "Order",
+        "childEntity": "LogicOperation",
+        "type": "Reference",
+        "owner": "Both"
+      },
+      {
+        "name": "HasAccount",
+        "parentEntity": "BreweryOrHospitalityBusiness",
+        "childEntity": "AppUser",
+        "type": "Reference",
+        "owner": "Both"
+      }
+    ],
+    "enumerations": [],
+    "_associationDiagnostics": {
+      "rawAssociationCount": 0,
+      "normalizedAssociationCount": 0,
+      "malformedAssociationCandidates": []
+    }
+  },
+  "security": {
+    "enabled": true,
+    "securityLevel": "prototype",
+    "moduleRoles": [
+      "Beer2BeerManagementUser",
+      "AppAdministrator",
+      "BreweryUser",
+      "AppUser",
+      "HospitalityBusinessUser",
+      "BreweryOrHospitalityBusiness",
+      "HospitalityBusiness",
+      "Brewery"
+    ],
+    "userRoles": [
+      {
+        "name": "Beer2BeerManagementUser",
+        "description": "Beer2Beer management user role",
+        "moduleRoles": [
+          "AppAdministrator"
+        ],
+        "systemModuleRole": "System.User"
+      },
+      {
+        "name": "BreweryUser",
+        "description": "Brewery user role",
+        "moduleRoles": [
+          "AppUser"
+        ],
+        "systemModuleRole": "System.User"
+      },
+      {
+        "name": "HospitalityBusinessUser",
+        "description": "Hospitality business user role",
+        "moduleRoles": [
+          "AppUser"
+        ],
+        "systemModuleRole": "System.User"
+      },
+      {
+        "name": "AppAdministrator",
+        "moduleRoles": [
+          "AppAdministrator"
+        ],
+        "systemModuleRole": "System.User"
+      },
+      {
+        "name": "AppUser",
+        "moduleRoles": [
+          "AppUser"
+        ],
+        "systemModuleRole": "System.User"
+      },
+      {
+        "name": "BreweryOrHospitalityBusiness",
+        "moduleRoles": [
+          "BreweryOrHospitalityBusiness"
+        ],
+        "systemModuleRole": "System.User"
+      },
+      {
+        "name": "HospitalityBusiness",
+        "moduleRoles": [
+          "HospitalityBusiness"
+        ],
+        "systemModuleRole": "System.User"
+      },
+      {
+        "name": "Brewery",
+        "moduleRoles": [
+          "Brewery"
+        ],
+        "systemModuleRole": "System.User"
+      }
+    ],
+    "demoUsers": []
+  },
+  "pages": {
+    "specs": [
+      {
+        "ref": "home",
+        "name": "Home",
+        "title": "Home",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "Order Workspace",
+            "renderMode": "H2"
+          },
+          {
+            "type": "dynamicText",
+            "text": "Generated from user stories",
+            "renderMode": "Paragraph"
+          },
+          {
+            "type": "buttonToPage",
+            "caption": "Order Dashboard",
+            "targetPageRef": "order_dashboard"
+          },
+          {
+            "type": "buttonToPage",
+            "caption": "Order Overview",
+            "targetPageRef": "order_overview"
+          },
+          {
+            "type": "buttonToPage",
+            "caption": "Beer Overview",
+            "targetPageRef": "beer_overview"
+          },
+          {
+            "type": "buttonToPage",
+            "caption": "Product Overview",
+            "targetPageRef": "product_overview"
+          },
+          {
+            "type": "buttonToPage",
+            "caption": "Contract Overview",
+            "targetPageRef": "contract_overview"
+          },
+          {
+            "type": "buttonToPage",
+            "caption": "appuser overview",
+            "targetPageRef": "appuser_overview"
+          },
+          {
+            "type": "buttonToPage",
+            "caption": "beer2beermanagementuser overview",
+            "targetPageRef": "beer2beermanagementuser_overview"
+          },
+          {
+            "type": "buttonToPage",
+            "caption": "brewery overview",
+            "targetPageRef": "brewery_overview"
+          },
+          {
+            "type": "buttonToPage",
+            "caption": "breweryorhospitalitybusiness overview",
+            "targetPageRef": "breweryorhospitalitybusiness_overview"
+          }
+        ]
+      },
+      {
+        "ref": "order_dashboard",
+        "name": "Order_Dashboard",
+        "title": "Order Dashboard",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "Order Dashboard",
+            "renderMode": "H2"
+          },
+          {
+            "type": "dynamicText",
+            "text": "Overview and data management for order.",
+            "renderMode": "Paragraph"
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Add Order",
+            "entityRef": "MyFirstModule.Order",
+            "targetPageRef": "order_newedit"
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.Order",
+            "rowClickTargetPageRef": "order_newedit",
+            "autoRowClickToDetail": true,
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Title",
+                "autoLabel": true
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Description",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Status",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "CreatedAt",
+                "autoLabel": false
+              }
+            ]
+          }
+        ],
+        "entityRef": "MyFirstModule.Order"
+      },
+      {
+        "ref": "order_overview",
+        "name": "Order_Overview",
+        "title": "Order Overview",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "Order Overview",
+            "renderMode": "H2"
+          },
+          {
+            "type": "dynamicText",
+            "text": "Manage order records and open the create dialog when new data is needed.",
+            "renderMode": "Paragraph"
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Add Order",
+            "entityRef": "MyFirstModule.Order",
+            "targetPageRef": "order_newedit"
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.Order",
+            "rowClickTargetPageRef": "order_newedit",
+            "autoRowClickToDetail": true,
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Title",
+                "autoLabel": true
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Description",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Status",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "CreatedAt",
+                "autoLabel": false
+              }
+            ]
+          }
+        ],
+        "entityRef": "MyFirstModule.Order"
+      },
+      {
+        "ref": "order_newedit",
+        "name": "Order_NewEdit",
+        "title": "Order NewEdit",
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "Order",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Title"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Description"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Status"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "CreatedAt"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ],
+        "entityRef": "MyFirstModule.Order",
+        "pageParameters": [
+          {
+            "name": "Order",
+            "entityRef": "MyFirstModule.Order",
+            "required": true
+          }
+        ]
+      },
+      {
+        "ref": "beer_overview",
+        "name": "Beer_Overview",
+        "title": "Beer Overview",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "Beer Overview",
+            "renderMode": "H2"
+          },
+          {
+            "type": "dynamicText",
+            "text": "Manage beer records and open the create dialog when new data is needed.",
+            "renderMode": "Paragraph"
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Add Beer",
+            "entityRef": "MyFirstModule.Beer",
+            "targetPageRef": "beer_newedit"
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.Beer",
+            "rowClickTargetPageRef": "beer_newedit",
+            "autoRowClickToDetail": true,
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Title",
+                "autoLabel": true
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Description",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Status",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "CreatedAt",
+                "autoLabel": false
+              }
+            ]
+          }
+        ],
+        "entityRef": "MyFirstModule.Beer"
+      },
+      {
+        "ref": "beer_newedit",
+        "name": "Beer_NewEdit",
+        "title": "Beer NewEdit",
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "Beer",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Title"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Description"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Status"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "CreatedAt"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ],
+        "entityRef": "MyFirstModule.Beer",
+        "pageParameters": [
+          {
+            "name": "Beer",
+            "entityRef": "MyFirstModule.Beer",
+            "required": true
+          }
+        ]
+      },
+      {
+        "ref": "product_overview",
+        "name": "Product_Overview",
+        "title": "Product Overview",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "Product Overview",
+            "renderMode": "H2"
+          },
+          {
+            "type": "dynamicText",
+            "text": "Manage product records and open the create dialog when new data is needed.",
+            "renderMode": "Paragraph"
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Add Product",
+            "entityRef": "MyFirstModule.Product",
+            "targetPageRef": "product_newedit"
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.Product",
+            "rowClickTargetPageRef": "product_newedit",
+            "autoRowClickToDetail": true,
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Title",
+                "autoLabel": true
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Description",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Status",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "CreatedAt",
+                "autoLabel": false
+              }
+            ]
+          }
+        ],
+        "entityRef": "MyFirstModule.Product"
+      },
+      {
+        "ref": "product_newedit",
+        "name": "Product_NewEdit",
+        "title": "Product NewEdit",
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "Product",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Title"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Description"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Status"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "CreatedAt"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ],
+        "entityRef": "MyFirstModule.Product",
+        "pageParameters": [
+          {
+            "name": "Product",
+            "entityRef": "MyFirstModule.Product",
+            "required": true
+          }
+        ]
+      },
+      {
+        "ref": "contract_overview",
+        "name": "Contract_Overview",
+        "title": "Contract Overview",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "Contract Overview",
+            "renderMode": "H2"
+          },
+          {
+            "type": "dynamicText",
+            "text": "Manage contract records and open the create dialog when new data is needed.",
+            "renderMode": "Paragraph"
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Add Contract",
+            "entityRef": "MyFirstModule.Contract",
+            "targetPageRef": "contract_newedit"
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.Contract",
+            "rowClickTargetPageRef": "contract_newedit",
+            "autoRowClickToDetail": true,
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Title",
+                "autoLabel": true
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Description",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Status",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "CreatedAt",
+                "autoLabel": false
+              }
+            ]
+          }
+        ],
+        "entityRef": "MyFirstModule.Contract"
+      },
+      {
+        "ref": "contract_newedit",
+        "name": "Contract_NewEdit",
+        "title": "Contract NewEdit",
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "Contract",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Title"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Description"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Status"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "CreatedAt"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ],
+        "entityRef": "MyFirstModule.Contract",
+        "pageParameters": [
+          {
+            "name": "Contract",
+            "entityRef": "MyFirstModule.Contract",
+            "required": true
+          }
+        ]
+      },
+      {
+        "ref": "appuser_overview",
+        "name": "AppUser_Overview",
+        "title": "AppUser Overview",
+        "entityRef": "MyFirstModule.AppUser",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "AppUser Overview",
+            "renderMode": "H2"
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Create AppUser",
+            "entityRef": "MyFirstModule.AppUser",
+            "targetPageRef": "appuser_newedit"
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.AppUser",
+            "autoRowClickToDetail": true,
+            "rowClickTargetPageRef": "appuser_newedit",
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name",
+                "autoLabel": true
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Email",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "IsActive",
+                "autoLabel": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "appuser_newedit",
+        "name": "AppUser_NewEdit",
+        "title": "AppUser NewEdit",
+        "entityRef": "MyFirstModule.AppUser",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          {
+            "name": "AppUser",
+            "entityRef": "MyFirstModule.AppUser",
+            "required": true
+          }
+        ],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "AppUser",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Email"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "IsActive"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "beer2beermanagementuser_overview",
+        "name": "Beer2beerManagementUser_Overview",
+        "title": "Beer2beerManagementUser Overview",
+        "entityRef": "MyFirstModule.Beer2beerManagementUser",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "Beer2beerManagementUser Overview",
+            "renderMode": "H2"
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Create Beer2beerManagementUser",
+            "entityRef": "MyFirstModule.Beer2beerManagementUser",
+            "targetPageRef": "beer2beermanagementuser_newedit"
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.Beer2beerManagementUser",
+            "autoRowClickToDetail": true,
+            "rowClickTargetPageRef": "beer2beermanagementuser_newedit",
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name",
+                "autoLabel": true
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Email",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "IsActive",
+                "autoLabel": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "beer2beermanagementuser_newedit",
+        "name": "Beer2beerManagementUser_NewEdit",
+        "title": "Beer2beerManagementUser NewEdit",
+        "entityRef": "MyFirstModule.Beer2beerManagementUser",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          {
+            "name": "Beer2beerManagementUser",
+            "entityRef": "MyFirstModule.Beer2beerManagementUser",
+            "required": true
+          }
+        ],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "Beer2beerManagementUser",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Email"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "IsActive"
+              },
+              {
+                "type": "callWorkflowButton",
+                "caption": "Start Beer2beer Management User Workflow",
+                "workflowRef": "wf_beer2beermanagementuser",
+                "closePage": true
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "breweryorhospitalitybusiness_overview",
+        "name": "BreweryOrHospitalityBusiness_Overview",
+        "title": "BreweryOrHospitalityBusiness Overview",
+        "entityRef": "MyFirstModule.BreweryOrHospitalityBusiness",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "BreweryOrHospitalityBusiness Overview",
+            "renderMode": "H2"
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Create BreweryOrHospitalityBusiness",
+            "entityRef": "MyFirstModule.BreweryOrHospitalityBusiness",
+            "targetPageRef": "breweryorhospitalitybusiness_newedit"
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.BreweryOrHospitalityBusiness",
+            "autoRowClickToDetail": true,
+            "rowClickTargetPageRef": "breweryorhospitalitybusiness_newedit",
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name",
+                "autoLabel": true
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Email",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "IsActive",
+                "autoLabel": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "breweryorhospitalitybusiness_newedit",
+        "name": "BreweryOrHospitalityBusiness_NewEdit",
+        "title": "BreweryOrHospitalityBusiness NewEdit",
+        "entityRef": "MyFirstModule.BreweryOrHospitalityBusiness",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          {
+            "name": "BreweryOrHospitalityBusiness",
+            "entityRef": "MyFirstModule.BreweryOrHospitalityBusiness",
+            "required": true
+          }
+        ],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "BreweryOrHospitalityBusiness",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Email"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "IsActive"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "hospitalitybusiness_overview",
+        "name": "HospitalityBusiness_Overview",
+        "title": "HospitalityBusiness Overview",
+        "entityRef": "MyFirstModule.HospitalityBusiness",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "HospitalityBusiness Overview",
+            "renderMode": "H2"
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Create HospitalityBusiness",
+            "entityRef": "MyFirstModule.HospitalityBusiness",
+            "targetPageRef": "hospitalitybusiness_newedit"
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.HospitalityBusiness",
+            "autoRowClickToDetail": true,
+            "rowClickTargetPageRef": "hospitalitybusiness_newedit",
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name",
+                "autoLabel": true
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Email",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "IsActive",
+                "autoLabel": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "hospitalitybusiness_newedit",
+        "name": "HospitalityBusiness_NewEdit",
+        "title": "HospitalityBusiness NewEdit",
+        "entityRef": "MyFirstModule.HospitalityBusiness",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          {
+            "name": "HospitalityBusiness",
+            "entityRef": "MyFirstModule.HospitalityBusiness",
+            "required": true
+          }
+        ],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "HospitalityBusiness",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Email"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "IsActive"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "brewery_overview",
+        "name": "Brewery_Overview",
+        "title": "Brewery Overview",
+        "entityRef": "MyFirstModule.Brewery",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "Brewery Overview",
+            "renderMode": "H2"
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Create Brewery",
+            "entityRef": "MyFirstModule.Brewery",
+            "targetPageRef": "brewery_newedit"
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.Brewery",
+            "autoRowClickToDetail": true,
+            "rowClickTargetPageRef": "brewery_newedit",
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name",
+                "autoLabel": true
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Email",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "IsActive",
+                "autoLabel": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "brewery_newedit",
+        "name": "Brewery_NewEdit",
+        "title": "Brewery NewEdit",
+        "entityRef": "MyFirstModule.Brewery",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          {
+            "name": "Brewery",
+            "entityRef": "MyFirstModule.Brewery",
+            "required": true
+          }
+        ],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "Brewery",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Email"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "IsActive"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "beer2beermanagementuser_workflow_tasks",
+        "name": "Beer2beerManagementUser_WorkflowTasks",
+        "title": "Beer2beer Management User Workflow Tasks",
+        "entityRef": "System.WorkflowUserTask",
+        "allowedRoles": [
+          "Beer2BeerManagementUser"
+        ],
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "Beer2beer Management User Workflow Tasks",
+            "renderMode": "H2"
+          },
+          {
+            "type": "listView",
+            "entityRef": "System.WorkflowUserTask",
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Description",
+                "autoLabel": false
+              },
+              {
+                "type": "showUserTaskPageButton",
+                "caption": "Open Task",
+                "assignOnOpen": true,
+                "openWhenAssigned": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "beer2beermanagementuser_workflow_task",
+        "name": "Beer2beerManagementUser_WorkflowTask",
+        "title": "Beer2beer Management User Workflow Task",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "allowedRoles": [
+          "Beer2BeerManagementUser"
+        ],
+        "pageParameters": [
+          {
+            "name": "WorkflowUserTask",
+            "entityRef": "System.WorkflowUserTask",
+            "required": true
+          }
+        ],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "WorkflowUserTask",
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name",
+                "autoLabel": true
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Description",
+                "autoLabel": true
+              },
+              {
+                "type": "setTaskOutcomeButton",
+                "caption": "Approve",
+                "outcomeValue": "Approve"
+              },
+              {
+                "type": "setTaskOutcomeButton",
+                "caption": "Reject",
+                "outcomeValue": "Reject"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "verification": {
+    "failOnMissing": true
+  },
+  "microflows": {
+    "specs": [
+      {
+        "name": "CreateProposal",
+        "parameters": [
+          {
+            "name": "breweryId",
+            "type": "Integer"
+          },
+          {
+            "name": "proposalDate",
+            "type": "DateTime"
+          }
+        ],
+        "actions": [
+          {
+            "type": "createObject",
+            "entity": "Proposal",
+            "outputVariableName": "Proposal_New"
+          },
+          {
+            "type": "changeObject",
+            "targetVariableName": "Proposal_New",
+            "changes": [
+              {
+                "attributeRef": "Date",
+                "valueExpression": "$proposalDate"
+              },
+              {
+                "attributeRef": "Status",
+                "valueExpression": "'New'"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "CreateContract",
+        "parameters": [
+          {
+            "name": "proposalId",
+            "type": "Integer"
+          },
+          {
+            "name": "startDate",
+            "type": "DateTime"
+          },
+          {
+            "name": "endDate",
+            "type": "DateTime"
+          }
+        ],
+        "actions": [
+          {
+            "type": "createObject",
+            "entity": "Contract",
+            "outputVariableName": "Contract_New"
+          },
+          {
+            "type": "changeObject",
+            "targetVariableName": "Contract_New",
+            "changes": [
+              {
+                "attributeRef": "StartDate",
+                "valueExpression": "$startDate"
+              },
+              {
+                "attributeRef": "EndDate",
+                "valueExpression": "$endDate"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "UpdateOrderStatus",
+        "parameters": [
+          {
+            "name": "orderId",
+            "type": "Integer"
+          },
+          {
+            "name": "status",
+            "type": "String"
+          }
+        ],
+        "actions": [
+          {
+            "type": "retrieveObject",
+            "entity": "Order",
+            "id": "$orderId",
+            "outputVariableName": "Order_Object"
+          }
+        ]
+      },
+      {
+        "ref": "mf_beer2beermanagementuser_prepare",
+        "name": "MF_Beer2beerManagementUser_Prepare",
+        "parameters": [
+          {
+            "name": "WorkflowContext",
+            "type": {
+              "kind": "Object",
+              "entityRef": "MyFirstModule.Beer2beerManagementUser"
+            },
+            "required": true
+          }
+        ],
+        "actions": [
+          {
+            "type": "changeObject",
+            "targetVariableName": "WorkflowContext",
+            "commit": "yes",
+            "changes": [
+              {
+                "attributeRef": "Status",
+                "valueExpression": "'In review'"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "mf_beer2beermanagementuser_approve",
+        "name": "MF_Beer2beerManagementUser_Approve",
+        "parameters": [
+          {
+            "name": "WorkflowContext",
+            "type": {
+              "kind": "Object",
+              "entityRef": "MyFirstModule.Beer2beerManagementUser"
+            },
+            "required": true
+          }
+        ],
+        "actions": [
+          {
+            "type": "changeObject",
+            "targetVariableName": "WorkflowContext",
+            "commit": "yes",
+            "changes": [
+              {
+                "attributeRef": "Status",
+                "valueExpression": "'Approved'"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "mf_beer2beermanagementuser_reject",
+        "name": "MF_Beer2beerManagementUser_Reject",
+        "parameters": [
+          {
+            "name": "WorkflowContext",
+            "type": {
+              "kind": "Object",
+              "entityRef": "MyFirstModule.Beer2beerManagementUser"
+            },
+            "required": true
+          }
+        ],
+        "actions": [
+          {
+            "type": "changeObject",
+            "targetVariableName": "WorkflowContext",
+            "commit": "yes",
+            "changes": [
+              {
+                "attributeRef": "Status",
+                "valueExpression": "'Rejected'"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "nanoflows": {
+    "specs": [
+      {
+        "name": "ValidateOrder",
+        "parameters": [
+          {
+            "name": "orderId",
+            "type": "Integer"
+          }
+        ],
+        "actions": [
+          {
+            "type": "retrieveObject",
+            "entity": "Order",
+            "id": "$orderId",
+            "outputVariableName": "Order_Object"
+          }
+        ]
+      }
+    ]
+  },
+  "workflows": {
+    "specs": [
+      {
+        "ref": "wf_beer2beermanagementuser",
+        "name": "WF_Beer2beerManagementUser",
+        "bindings": {
+          "contextEntityRef": "MyFirstModule.Beer2beerManagementUser"
+        },
+        "steps": [
+          {
+            "type": "start",
+            "name": "Start"
+          },
+          {
+            "type": "serviceTask",
+            "name": "Beer2beerManagementUserPrepare",
+            "handlerMicroflowRef": "mf_beer2beermanagementuser_prepare"
+          },
+          {
+            "type": "userTask",
+            "name": "Beer2beerManagementUserReview",
+            "taskName": "{1}",
+            "taskNameArgs": [
+              "$WorkflowContext/Title"
+            ],
+            "taskDescription": "{1}",
+            "taskDescriptionArgs": [
+              "$WorkflowContext/Description"
+            ],
+            "taskPageRef": "beer2beermanagementuser_workflow_task",
+            "userRoleRefs": [
+              "Beer2BeerManagementUser"
+            ],
+            "outcomes": [
+              {
+                "value": "Approve",
+                "steps": [
+                  {
+                    "type": "serviceTask",
+                    "name": "Approved",
+                    "handlerMicroflowRef": "mf_beer2beermanagementuser_approve"
+                  },
+                  {
+                    "type": "end",
+                    "name": "Approved"
+                  }
+                ]
+              },
+              {
+                "value": "Reject",
+                "steps": [
+                  {
+                    "type": "serviceTask",
+                    "name": "Rejected",
+                    "handlerMicroflowRef": "mf_beer2beermanagementuser_reject"
+                  },
+                  {
+                    "type": "end",
+                    "name": "Rejected"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

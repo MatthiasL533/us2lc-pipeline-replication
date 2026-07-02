@@ -1,0 +1,2320 @@
+{
+  "appId": "collaboration-a6-domain-model-from-image",
+  "branch": "main",
+  "exportedAt": "2026-05-25T14:08:07.007436Z",
+  "repository": {
+    "type": "image/pdf extraction",
+    "url": "/Users/matthiaslouws/Downloads/AN5.2 - DomainModelA6.png"
+  },
+  "summary": {
+    "domainModels": 1,
+    "modules": [
+      "CollaborationA6"
+    ],
+    "entities": 24,
+    "associations": 36,
+    "enumerations": 9
+  },
+  "domainModels": [
+    {
+      "module": "CollaborationA6",
+      "documentation": "Extracted from AN5.2 - DomainModelA6.png. Enumeration values and exact Mendix association ownership/cardinality should be verified against the original model file if needed.",
+      "entities": [
+        {
+          "name": "ActionMapping",
+          "qualifiedName": "CollaborationA6.ActionMapping",
+          "documentation": "Non-persistent helper class inferred from diagram.",
+          "location": {
+            "x": 0,
+            "y": 0
+          },
+          "generalization": "DomainModels$NoGeneralization",
+          "attributes": [
+            {
+              "name": "CurrentParentUUID",
+              "qualifiedName": "CollaborationA6.ActionMapping.CurrentParentUUID",
+              "documentation": "",
+              "type": {
+                "kind": "String",
+                "structureTypeName": "DomainModels$StringAttributeType",
+                "length": 200
+              },
+              "defaultValue": "",
+              "valueType": "DomainModels$StoredValue",
+              "dataStorageGuid": "651d18ff-da1e-53c8-9b77-cc3ad3422751"
+            },
+            {
+              "name": "DraggedUUID",
+              "qualifiedName": "CollaborationA6.ActionMapping.DraggedUUID",
+              "documentation": "",
+              "type": {
+                "kind": "String",
+                "structureTypeName": "DomainModels$StringAttributeType",
+                "length": 200
+              },
+              "defaultValue": "",
+              "valueType": "DomainModels$StoredValue",
+              "dataStorageGuid": "953141e7-e183-5c2f-aa82-c5aaaeb475f1"
+            },
+            {
+              "name": "DroppedOnParentUUID",
+              "qualifiedName": "CollaborationA6.ActionMapping.DroppedOnParentUUID",
+              "documentation": "",
+              "type": {
+                "kind": "String",
+                "structureTypeName": "DomainModels$StringAttributeType",
+                "length": 200
+              },
+              "defaultValue": "",
+              "valueType": "DomainModels$StoredValue",
+              "dataStorageGuid": "ed6e71c4-bb4e-586c-b8c1-ed23cd6d4732"
+            },
+            {
+              "name": "DroppedOnUUID",
+              "qualifiedName": "CollaborationA6.ActionMapping.DroppedOnUUID",
+              "documentation": "",
+              "type": {
+                "kind": "String",
+                "structureTypeName": "DomainModels$StringAttributeType",
+                "length": 200
+              },
+              "defaultValue": "",
+              "valueType": "DomainModels$StoredValue",
+              "dataStorageGuid": "cf8d8759-4856-5553-8ab3-cba3623c7960"
+            },
+            {
+              "name": "Index",
+              "qualifiedName": "CollaborationA6.ActionMapping.Index",
+              "documentation": "",
+              "type": {
+                "kind": "Integer",
+                "structureTypeName": "DomainModels$IntegerAttributeType"
+              },
+              "defaultValue": "0",
+              "valueType": "DomainModels$StoredValue",
+              "dataStorageGuid": "9638003f-81e1-50e4-aab0-40cbbc47c3f5"
+            }
+          ],
+          "validationRules": [],
+          "indexes": [],
+          "accessRules": [],
+          "image": null,
+          "dataStorageGuid": "d07c6637-024b-5389-bc6a-b7b65136b805"
+        },
+        {
+          "name": "JSONObject",
+          "qualifiedName": "CollaborationA6.JSONObject",
+          "documentation": "Non-persistent helper class inferred from diagram.",
+          "location": {
+            "x": 280,
+            "y": 0
+          },
+          "generalization": "DomainModels$NoGeneralization",
+          "attributes": [
+            {
+              "name": "JSONActionMapping",
+              "qualifiedName": "CollaborationA6.JSONObject.JSONActionMapping",
+              "documentation": "",
+              "type": {
+                "kind": "String",
+                "structureTypeName": "DomainModels$StringAttributeType",
+                "length": 200
+              },
+              "defaultValue": "",
+              "valueType": "DomainModels$StoredValue",
+              "dataStorageGuid": "9615d743-ad9b-5363-a94b-6f0255b63a28"
+            }
+          ],
+          "validationRules": [],
+          "indexes": [],
+          "accessRules": [],
+          "image": null,
+          "dataStorageGuid": "3ea73e4e-e0fa-5fc3-867d-4945ae90ba44"
+        },
+        {
+          "name": "FiletypeHelper",
+          "qualifiedName": "CollaborationA6.FiletypeHelper",
+          "documentation": "Non-persistent helper class inferred from diagram.",
+          "location": {
+            "x": 560,
+            "y": 0
+          },
+          "generalization": "DomainModels$NoGeneralization",
+          "attributes": [
+            {
+              "name": "ButtonSelection",
+              "qualifiedName": "CollaborationA6.FiletypeHelper.ButtonSelection",
+              "documentation": "",
+              "type": {
+                "kind": "Enumeration",
+                "structureTypeName": "DomainModels$EnumerationAttributeType",
+                "enumerationQualifiedName": "CollaborationA6.ButtonSelection",
+                "enumeration": "ButtonSelection"
+              },
+              "defaultValue": "",
+              "valueType": "DomainModels$StoredValue",
+              "dataStorageGuid": "cdc8fe9d-ca71-53eb-bd26-065755818971"
+            }
+          ],
+          "validationRules": [],
+          "indexes": [],
+          "accessRules": [],
+          "image": null,
+          "dataStorageGuid": "26891924-f3c4-5639-a0ce-4ec016871e53"
+        },
+        {
+          "name": "KPISelection",
+          "qualifiedName": "CollaborationA6.KPISelection",
+          "documentation": "Non-persistent helper class inferred from diagram.",
+          "location": {
+            "x": 840,
+            "y": 0
+          },
+          "generalization": "DomainModels$NoGeneralization",
+          "attributes": [
+            {
+              "name": "SelectedKPI",
+              "qualifiedName": "CollaborationA6.KPISelection.SelectedKPI",
+              "documentation": "",
+              "type": {
+                "kind": "Enumeration",
+                "structureTypeName": "DomainModels$EnumerationAttributeType",
+                "enumerationQualifiedName": "CollaborationA6.KPI",
+                "enumeration": "KPI"
+              },
+              "defaultValue": "",
+              "valueType": "DomainModels$StoredValue",
+              "dataStorageGuid": "c2c4cbdd-b2d7-5026-adf1-dc8ea8149cde"
+            }
+          ],
+          "validationRules": [],
+          "indexes": [],
+          "accessRules": [],
+          "image": null,
+          "dataStorageGuid": "ff3e65b9-3566-5fa7-a91e-8a00a13bf027"
+        },
+        {
+          "name": "Calendar",
+          "qualifiedName": "CollaborationA6.Calendar",
+          "documentation": "",
+          "location": {
+            "x": 1120,
+            "y": 0
+          },
+          "generalization": "DomainModels$NoGeneralization",
+          "attributes": [
+            {
+              "name": "EventName",
+              "qualifiedName": "CollaborationA6.Calendar.EventName",
+              "documentation": "",
+              "type": {
+                "kind": "String",
+                "structureTypeName": "DomainModels$StringAttributeType",
+                "length": 200
+              },
+              "defaultValue": "",
+              "valueType": "DomainModels$StoredValue",
+              "dataStorageGuid": "96005dc6-08e0-515a-b5d9-7279430f1abe"
+            },
+            {
+              "name": "StartDate",
+              "qualifiedName": "CollaborationA6.Calendar.StartDate",
+              "documentation": "",
+              "type": {
+                "kind": "DateTime",
+                "structureTypeName": "DomainModels$DateTimeAttributeType"
+              },
+              "defaultValue": "",
+              "valueType": "DomainModels$StoredValue",
+              "dataStorageGuid": "885c9a31-0657-5417-aa9b-49078cdda1d8"
+            },
+            {
+              "name": "EndDate",
+              "qualifiedName": "CollaborationA6.Calendar.EndDate",
+              "documentation": "",
+              "type": {
+                "kind": "DateTime",
+                "structureTypeName": "DomainModels$DateTimeAttributeType"
+              },
+              "defaultValue": "",
+              "valueType": "DomainModels$StoredValue",
+              "dataStorageGuid": "5a5b7d56-a833-54fd-9d82-02cd222a75e8"
+            }
+          ],
+          "validationRules": [],
+          "indexes": [],
+          "accessRules": [],
+          "image": null,
+          "dataStorageGuid": "b4e619fe-2fa2-5e1c-b29b-bcc21be53919"
+        },
+        {
+          "name": "Employee",
+          "qualifiedName": "CollaborationA6.Employee",
+          "documentation": "",
+          "location": {
+            "x": 1400,
+            "y": 0
+          },
+          "generalization": "DomainModels$NoGeneralization",
+          "attributes": [
+            {
+              "name": "EmployeeID",
+              "qualifiedName": "CollaborationA6.Employee.EmployeeID",
+              "documentation": "",
+              "type": {
+                "kind": "AutoNumber",
+                "structureTypeName": "DomainModels$AutoNumberAttributeType"
+              },
+              "defaultValue": "1",
+              "valueType": "DomainModels$StoredValue",
+              "dataStorageGuid": "a11c4d11-275f-50f6-a93d-14fc58c01613"
+            },
+            {
+              "name": "FirstName",
+              "qualifiedName": "CollaborationA6.Employee.FirstName",
+              "documentation": "",
+              "type": {
+                "kind": "String",
+                "structureTypeName": "DomainModels$StringAttributeType",
+                "length": 200
+              },
+              "defaultValue": "",
+              "valueType": "DomainModels$StoredValue",
+              "dataStorageGuid": "c94dc481-e161-5c12-9da5-40bc6da851ae"
+            },
+            {
+              "name": "LastName",
+              "qualifiedName": "CollaborationA6.Employee.LastName",
+              "documentation": "",
+              "type": {
+                "kind": "String",
+                "structureTypeName": "DomainModels$StringAttributeType",
+                "length": 200
+              },
+              "defaultValue": "",
+              "valueType": "DomainModels$StoredValue",
+              "dataStorageGuid": "2c1cf50d-1a68-58e8-aef7-5fca4f6dada8"
+            }
+          ],
+          "validationRules": [],
+          "indexes": [],
+          "accessRules": [],
+          "image": null,
+          "dataStorageGuid": "e3cde64a-b8aa-5000-a75f-254e1ba464a5"
+        },
+        {
+          "name": "PieChartHelper",
+          "qualifiedName": "CollaborationA6.PieChartHelper",
+          "documentation": "",
+          "location": {
+            "x": 0,
+            "y": 180
+          },
+          "generalization": "DomainModels$NoGeneralization",
+          "attributes": [
+            {
+              "name": "KPI",
+              "qualifiedName": "CollaborationA6.PieChartHelper.KPI",
+              "documentation": "",
+              "type": {
+                "kind": "Enumeration",
+                "structureTypeName": "DomainModels$EnumerationAttributeType",
+                "enumerationQualifiedName": "CollaborationA6.KPI",
+                "enumeration": "KPI"
+              },
+              "defaultValue": "",
+              "valueType": "DomainModels$StoredValue",
+              "dataStorageGuid": "b6fbcf05-1692-5a42-a986-7dc79f1693f7"
+            }
+          ],
+          "validationRules": [],
+          "indexes": [],
+          "accessRules": [],
+          "image": null,
+          "dataStorageGuid": "e141949f-46cc-5a24-852f-fcbc87b49a56"
+        },
+        {
+          "name": "PieChartHelperDimension",
+          "qualifiedName": "CollaborationA6.PieChartHelperDimension",
+          "documentation": "",
+          "location": {
+            "x": 280,
+            "y": 180
+          },
+          "generalization": "DomainModels$NoGeneralization",
+          "attributes": [
+            {
+              "name": "Attribute",
+              "qualifiedName": "CollaborationA6.PieChartHelperDimension.Attribute",
+              "documentation": "",
+              "type": {
+                "kind": "Enumeration",
+                "structureTypeName": "DomainModels$EnumerationAttributeType",
+                "enumerationQualifiedName": "CollaborationA6.PieChartAttribute",
+                "enumeration": "PieChartAttribute"
+              },
+              "defaultValue": "",
+              "valueType": "DomainModels$StoredValue",
+              "dataStorageGuid": "7cff4c81-05ab-51b3-abe2-0a4bd9e6a232"
+            },
+            {
+              "name": "ChartValue",
+              "qualifiedName": "CollaborationA6.PieChartHelperDimension.ChartValue",
+              "documentation": "",
+              "type": {
+                "kind": "Decimal",
+                "structureTypeName": "DomainModels$DecimalAttributeType"
+              },
+              "defaultValue": "0",
+              "valueType": "DomainModels$StoredValue",
+              "dataStorageGuid": "820f9f16-7cbf-5380-9b49-0dbb2510482e"
+            }
+          ],
+          "validationRules": [],
+          "indexes": [],
+          "accessRules": [],
+          "image": null,
+          "dataStorageGuid": "1bd79ff9-81d1-5a2d-975f-62279a28ed64"
+        },
+        {
+          "name": "Project",
+          "qualifiedName": "CollaborationA6.Project",
+          "documentation": "",
+          "location": {
+            "x": 560,
+            "y": 180
+          },
+          "generalization": "DomainModels$NoGeneralization",
+          "attributes": [
+            {
+              "name": "ProjectID",
+              "qualifiedName": "CollaborationA6.Project.ProjectID",
+              "documentation": "",
+              "type": {
+                "kind": "AutoNumber",
+                "structureTypeName": "DomainModels$AutoNumberAttributeType"
+              },
+              "defaultValue": "1",
+              "valueType": "DomainModels$StoredValue",
+              "dataStorageGuid": "9daf376c-8de6-546a-b97c-a649c3b99040"
+            },
+            {
+              "name": "ProjectTitle",
+              "qualifiedName": "CollaborationA6.Project.ProjectTitle",
+              "documentation": "",
+              "type": {
+                "kind": "String",
+                "structureTypeName": "DomainModels$StringAttributeType",
+                "length": 200
+              },
+              "defaultValue": "",
+              "valueType": "DomainModels$StoredValue",
+              "dataStorageGuid": "84501634-fa78-577b-914a-8bcf8ba4c529"
+            },
+            {
+              "name": "Client",
+              "qualifiedName": "CollaborationA6.Project.Client",
+              "documentation": "",
+              "type": {
+                "kind": "String",
+                "structureTypeName": "DomainModels$StringAttributeType",
+                "length": 200
+              },
+              "defaultValue": "",
+              "valueType": "DomainModels$StoredValue",
+              "dataStorageGuid": "b451e5f9-14a2-54e1-8620-fe3acd301016"
+            },
+            {
+              "name": "StartDate",
+              "qualifiedName": "CollaborationA6.Project.StartDate",
+              "documentation": "",
+              "type": {
+                "kind": "DateTime",
+                "structureTypeName": "DomainModels$DateTimeAttributeType"
+              },
+              "defaultValue": "",
+              "valueType": "DomainModels$StoredValue",
+              "dataStorageGuid": "df5f129f-d504-5265-9b9c-3384776c4b14"
+            },
+            {
+              "name": "DeadlineDate",
+              "qualifiedName": "CollaborationA6.Project.DeadlineDate",
+              "documentation": "",
+              "type": {
+                "kind": "DateTime",
+                "structureTypeName": "DomainModels$DateTimeAttributeType"
+              },
+              "defaultValue": "",
+              "valueType": "DomainModels$StoredValue",
+              "dataStorageGuid": "a891ac5c-26ee-5c50-810d-abf8ff3d2290"
+            },
+            {
+              "name": "Budget",
+              "qualifiedName": "CollaborationA6.Project.Budget",
+              "documentation": "",
+              "type": {
+                "kind": "Integer",
+                "structureTypeName": "DomainModels$IntegerAttributeType"
+              },
+              "defaultValue": "0",
+              "valueType": "DomainModels$StoredValue",
+              "dataStorageGuid": "0a1a96a3-fb85-508d-8ee5-77600ddfb4e2"
+            },
+            {
+              "name": "FreelanceFTE",
+              "qualifiedName": "CollaborationA6.Project.FreelanceFTE",
+              "documentation": "",
+              "type": {
+                "kind": "Integer",
+                "structureTypeName": "DomainModels$IntegerAttributeType"
+              },
+              "defaultValue": "0",
+              "valueType": "DomainModels$StoredValue",
+              "dataStorageGuid": "70afe796-6ebf-5fe1-857c-92c45cf3c9fd"
+            },
+            {
+              "name": "InternalFTE",
+              "qualifiedName": "CollaborationA6.Project.InternalFTE",
+              "documentation": "",
+              "type": {
+                "kind": "Integer",
+                "structureTypeName": "DomainModels$IntegerAttributeType"
+              },
+              "defaultValue": "0",
+              "valueType": "DomainModels$StoredValue",
+              "dataStorageGuid": "fdeb85b5-b3b0-559e-8277-8a82b6a426d0"
+            }
+          ],
+          "validationRules": [],
+          "indexes": [],
+          "accessRules": [],
+          "image": null,
+          "dataStorageGuid": "f9ebd6a4-565f-5bd6-8bf0-736d973e6a78"
+        },
+        {
+          "name": "Image",
+          "qualifiedName": "CollaborationA6.Image",
+          "documentation": "",
+          "location": {
+            "x": 840,
+            "y": 180
+          },
+          "generalization": "System.Image",
+          "attributes": [],
+          "validationRules": [],
+          "indexes": [],
+          "accessRules": [],
+          "image": null,
+          "dataStorageGuid": "3b76e06a-b175-5e12-8e1b-36d25c058b61"
+        },
+        {
+          "name": "ProjectListHelper",
+          "qualifiedName": "CollaborationA6.ProjectListHelper",
+          "documentation": "",
+          "location": {
+            "x": 1120,
+            "y": 180
+          },
+          "generalization": "DomainModels$NoGeneralization",
+          "attributes": [],
+          "validationRules": [],
+          "indexes": [],
+          "accessRules": [],
+          "image": null,
+          "dataStorageGuid": "cd0a6d92-e60b-577e-83ca-8f9a12cab82b"
+        },
+        {
+          "name": "FeedbackDimension",
+          "qualifiedName": "CollaborationA6.FeedbackDimension",
+          "documentation": "",
+          "location": {
+            "x": 1400,
+            "y": 180
+          },
+          "generalization": "DomainModels$NoGeneralization",
+          "attributes": [
+            {
+              "name": "DimensionID",
+              "qualifiedName": "CollaborationA6.FeedbackDimension.DimensionID",
+              "documentation": "",
+              "type": {
+                "kind": "AutoNumber",
+                "structureTypeName": "DomainModels$AutoNumberAttributeType"
+              },
+              "defaultValue": "1",
+              "valueType": "DomainModels$StoredValue",
+              "dataStorageGuid": "e7850417-fd4e-524f-980b-3bccdafd1e89"
+            },
+            {
+              "name": "DimensionType",
+              "qualifiedName": "CollaborationA6.FeedbackDimension.DimensionType",
+              "documentation": "",
+              "type": {
+                "kind": "Enumeration",
+                "structureTypeName": "DomainModels$EnumerationAttributeType",
+                "enumerationQualifiedName": "CollaborationA6.DimensionType",
+                "enumeration": "DimensionType"
+              },
+              "defaultValue": "",
+              "valueType": "DomainModels$StoredValue",
+              "dataStorageGuid": "cddd61f1-e247-5a53-ab24-9e4726325346"
+            },
+            {
+              "name": "Score",
+              "qualifiedName": "CollaborationA6.FeedbackDimension.Score",
+              "documentation": "",
+              "type": {
+                "kind": "Integer",
+                "structureTypeName": "DomainModels$IntegerAttributeType"
+              },
+              "defaultValue": "0",
+              "valueType": "DomainModels$StoredValue",
+              "dataStorageGuid": "cb2f8b1f-abe8-58d0-81d0-1c16552143ef"
+            },
+            {
+              "name": "Message",
+              "qualifiedName": "CollaborationA6.FeedbackDimension.Message",
+              "documentation": "",
+              "type": {
+                "kind": "String",
+                "structureTypeName": "DomainModels$StringAttributeType",
+                "length": 200
+              },
+              "defaultValue": "",
+              "valueType": "DomainModels$StoredValue",
+              "dataStorageGuid": "8024782d-2e4b-5608-bff7-29d8bda25cb1"
+            }
+          ],
+          "validationRules": [],
+          "indexes": [],
+          "accessRules": [],
+          "image": null,
+          "dataStorageGuid": "a880ab15-5643-5849-bf70-925e9adb1e53"
+        },
+        {
+          "name": "ClientFeedback",
+          "qualifiedName": "CollaborationA6.ClientFeedback",
+          "documentation": "",
+          "location": {
+            "x": 0,
+            "y": 360
+          },
+          "generalization": "DomainModels$NoGeneralization",
+          "attributes": [
+            {
+              "name": "ClientFeedbackID",
+              "qualifiedName": "CollaborationA6.ClientFeedback.ClientFeedbackID",
+              "documentation": "",
+              "type": {
+                "kind": "AutoNumber",
+                "structureTypeName": "DomainModels$AutoNumberAttributeType"
+              },
+              "defaultValue": "1",
+              "valueType": "DomainModels$StoredValue",
+              "dataStorageGuid": "c54427d3-6361-5fbc-8162-5019870a6303"
+            },
+            {
+              "name": "SendDate",
+              "qualifiedName": "CollaborationA6.ClientFeedback.SendDate",
+              "documentation": "",
+              "type": {
+                "kind": "DateTime",
+                "structureTypeName": "DomainModels$DateTimeAttributeType"
+              },
+              "defaultValue": "",
+              "valueType": "DomainModels$StoredValue",
+              "dataStorageGuid": "805e9e68-64bc-56b9-b70f-e62c2e445dec"
+            }
+          ],
+          "validationRules": [],
+          "indexes": [],
+          "accessRules": [],
+          "image": null,
+          "dataStorageGuid": "15dc439c-dfff-5c14-be41-8dfedc14d2fb"
+        },
+        {
+          "name": "Client",
+          "qualifiedName": "CollaborationA6.Client",
+          "documentation": "",
+          "location": {
+            "x": 280,
+            "y": 360
+          },
+          "generalization": "DomainModels$NoGeneralization",
+          "attributes": [
+            {
+              "name": "ClientID",
+              "qualifiedName": "CollaborationA6.Client.ClientID",
+              "documentation": "",
+              "type": {
+                "kind": "AutoNumber",
+                "structureTypeName": "DomainModels$AutoNumberAttributeType"
+              },
+              "defaultValue": "1",
+              "valueType": "DomainModels$StoredValue",
+              "dataStorageGuid": "14234d5f-d309-576b-91f9-2851d86d531b"
+            },
+            {
+              "name": "CompanyName",
+              "qualifiedName": "CollaborationA6.Client.CompanyName",
+              "documentation": "",
+              "type": {
+                "kind": "String",
+                "structureTypeName": "DomainModels$StringAttributeType",
+                "length": 200
+              },
+              "defaultValue": "",
+              "valueType": "DomainModels$StoredValue",
+              "dataStorageGuid": "016ebea8-0cb8-52ab-be36-3e636c82b81f"
+            },
+            {
+              "name": "AccessKey",
+              "qualifiedName": "CollaborationA6.Client.AccessKey",
+              "documentation": "",
+              "type": {
+                "kind": "String",
+                "structureTypeName": "DomainModels$StringAttributeType",
+                "length": 200
+              },
+              "defaultValue": "",
+              "valueType": "DomainModels$StoredValue",
+              "dataStorageGuid": "0b023abe-4549-577e-82d3-30507ed1d2ea"
+            }
+          ],
+          "validationRules": [],
+          "indexes": [],
+          "accessRules": [],
+          "image": null,
+          "dataStorageGuid": "8500fbb4-9988-5d23-bf26-80db51b96eec"
+        },
+        {
+          "name": "Delivery",
+          "qualifiedName": "CollaborationA6.Delivery",
+          "documentation": "",
+          "location": {
+            "x": 560,
+            "y": 360
+          },
+          "generalization": "DomainModels$NoGeneralization",
+          "attributes": [
+            {
+              "name": "DeliveryID",
+              "qualifiedName": "CollaborationA6.Delivery.DeliveryID",
+              "documentation": "",
+              "type": {
+                "kind": "AutoNumber",
+                "structureTypeName": "DomainModels$AutoNumberAttributeType"
+              },
+              "defaultValue": "1",
+              "valueType": "DomainModels$StoredValue",
+              "dataStorageGuid": "b4c1e474-b162-54b2-b222-59c6ec7a77c0"
+            },
+            {
+              "name": "FeedbackGoal",
+              "qualifiedName": "CollaborationA6.Delivery.FeedbackGoal",
+              "documentation": "",
+              "type": {
+                "kind": "String",
+                "structureTypeName": "DomainModels$StringAttributeType",
+                "length": 200
+              },
+              "defaultValue": "",
+              "valueType": "DomainModels$StoredValue",
+              "dataStorageGuid": "815ae427-1f39-5a42-bc31-3f9b61a1c0e9"
+            },
+            {
+              "name": "DeliveryDate",
+              "qualifiedName": "CollaborationA6.Delivery.DeliveryDate",
+              "documentation": "",
+              "type": {
+                "kind": "DateTime",
+                "structureTypeName": "DomainModels$DateTimeAttributeType"
+              },
+              "defaultValue": "",
+              "valueType": "DomainModels$StoredValue",
+              "dataStorageGuid": "c590e499-85d1-52ae-bd9d-72f5345875da"
+            },
+            {
+              "name": "Published",
+              "qualifiedName": "CollaborationA6.Delivery.Published",
+              "documentation": "",
+              "type": {
+                "kind": "Boolean",
+                "structureTypeName": "DomainModels$BooleanAttributeType"
+              },
+              "defaultValue": "false",
+              "valueType": "DomainModels$StoredValue",
+              "dataStorageGuid": "7bcdc78c-be74-511e-a16a-bfe28c5caf15"
+            }
+          ],
+          "validationRules": [],
+          "indexes": [],
+          "accessRules": [],
+          "image": null,
+          "dataStorageGuid": "93dac137-e2d8-5019-a293-c6a5d64c92db"
+        },
+        {
+          "name": "Milestone",
+          "qualifiedName": "CollaborationA6.Milestone",
+          "documentation": "",
+          "location": {
+            "x": 840,
+            "y": 360
+          },
+          "generalization": "DomainModels$NoGeneralization",
+          "attributes": [
+            {
+              "name": "MilestoneID",
+              "qualifiedName": "CollaborationA6.Milestone.MilestoneID",
+              "documentation": "",
+              "type": {
+                "kind": "AutoNumber",
+                "structureTypeName": "DomainModels$AutoNumberAttributeType"
+              },
+              "defaultValue": "1",
+              "valueType": "DomainModels$StoredValue",
+              "dataStorageGuid": "4632f98b-7b00-57b9-bd5e-8915d7ee6bb1"
+            },
+            {
+              "name": "StartDate",
+              "qualifiedName": "CollaborationA6.Milestone.StartDate",
+              "documentation": "",
+              "type": {
+                "kind": "DateTime",
+                "structureTypeName": "DomainModels$DateTimeAttributeType"
+              },
+              "defaultValue": "",
+              "valueType": "DomainModels$StoredValue",
+              "dataStorageGuid": "823907d4-d220-5c61-b226-bc0026a5d23f"
+            },
+            {
+              "name": "DeadlineDate",
+              "qualifiedName": "CollaborationA6.Milestone.DeadlineDate",
+              "documentation": "",
+              "type": {
+                "kind": "DateTime",
+                "structureTypeName": "DomainModels$DateTimeAttributeType"
+              },
+              "defaultValue": "",
+              "valueType": "DomainModels$StoredValue",
+              "dataStorageGuid": "61e842a1-b7b8-5f29-960c-ca5da1566c59"
+            },
+            {
+              "name": "MilestoneStatus",
+              "qualifiedName": "CollaborationA6.Milestone.MilestoneStatus",
+              "documentation": "",
+              "type": {
+                "kind": "Enumeration",
+                "structureTypeName": "DomainModels$EnumerationAttributeType",
+                "enumerationQualifiedName": "CollaborationA6.MilestoneStatus",
+                "enumeration": "MilestoneStatus"
+              },
+              "defaultValue": "",
+              "valueType": "DomainModels$StoredValue",
+              "dataStorageGuid": "ac0a2a56-6905-5638-a80c-fd6abca4f252"
+            },
+            {
+              "name": "MilestoneTitle",
+              "qualifiedName": "CollaborationA6.Milestone.MilestoneTitle",
+              "documentation": "",
+              "type": {
+                "kind": "String",
+                "structureTypeName": "DomainModels$StringAttributeType",
+                "length": 200
+              },
+              "defaultValue": "",
+              "valueType": "DomainModels$StoredValue",
+              "dataStorageGuid": "07388934-5646-51ba-8da7-c9378bf4dd01"
+            },
+            {
+              "name": "Pos",
+              "qualifiedName": "CollaborationA6.Milestone.Pos",
+              "documentation": "",
+              "type": {
+                "kind": "Enumeration",
+                "structureTypeName": "DomainModels$EnumerationAttributeType",
+                "enumerationQualifiedName": "CollaborationA6.MilestonePosition",
+                "enumeration": "MilestonePosition"
+              },
+              "defaultValue": "",
+              "valueType": "DomainModels$StoredValue",
+              "dataStorageGuid": "a24d52ee-31f3-5df8-8901-5246fc3df28c"
+            }
+          ],
+          "validationRules": [],
+          "indexes": [],
+          "accessRules": [],
+          "image": null,
+          "dataStorageGuid": "90197dd4-3156-5fba-903a-e87d59de2ab6"
+        },
+        {
+          "name": "ManagerFeedback",
+          "qualifiedName": "CollaborationA6.ManagerFeedback",
+          "documentation": "",
+          "location": {
+            "x": 1120,
+            "y": 360
+          },
+          "generalization": "DomainModels$NoGeneralization",
+          "attributes": [
+            {
+              "name": "ManagerFeedbackID",
+              "qualifiedName": "CollaborationA6.ManagerFeedback.ManagerFeedbackID",
+              "documentation": "",
+              "type": {
+                "kind": "String",
+                "structureTypeName": "DomainModels$StringAttributeType",
+                "length": 200
+              },
+              "defaultValue": "",
+              "valueType": "DomainModels$StoredValue",
+              "dataStorageGuid": "29ab34b6-0ee6-501b-9759-dcea58882361"
+            },
+            {
+              "name": "Message",
+              "qualifiedName": "CollaborationA6.ManagerFeedback.Message",
+              "documentation": "",
+              "type": {
+                "kind": "String",
+                "structureTypeName": "DomainModels$StringAttributeType",
+                "length": 200
+              },
+              "defaultValue": "",
+              "valueType": "DomainModels$StoredValue",
+              "dataStorageGuid": "bb60548e-ff34-5c52-b1ad-485447b25365"
+            },
+            {
+              "name": "SendDate",
+              "qualifiedName": "CollaborationA6.ManagerFeedback.SendDate",
+              "documentation": "",
+              "type": {
+                "kind": "DateTime",
+                "structureTypeName": "DomainModels$DateTimeAttributeType"
+              },
+              "defaultValue": "",
+              "valueType": "DomainModels$StoredValue",
+              "dataStorageGuid": "23e76bed-7f2c-5e2b-a792-3cf2253fc85b"
+            }
+          ],
+          "validationRules": [],
+          "indexes": [],
+          "accessRules": [],
+          "image": null,
+          "dataStorageGuid": "a4a367d2-48da-5d53-8b7b-fc9954bbd467"
+        },
+        {
+          "name": "Comment",
+          "qualifiedName": "CollaborationA6.Comment",
+          "documentation": "",
+          "location": {
+            "x": 1400,
+            "y": 360
+          },
+          "generalization": "DomainModels$NoGeneralization",
+          "attributes": [
+            {
+              "name": "CommentID",
+              "qualifiedName": "CollaborationA6.Comment.CommentID",
+              "documentation": "",
+              "type": {
+                "kind": "AutoNumber",
+                "structureTypeName": "DomainModels$AutoNumberAttributeType"
+              },
+              "defaultValue": "1",
+              "valueType": "DomainModels$StoredValue",
+              "dataStorageGuid": "dd9beb07-0a66-5a17-8645-81457a5cd50d"
+            },
+            {
+              "name": "EmployeeID",
+              "qualifiedName": "CollaborationA6.Comment.EmployeeID",
+              "documentation": "",
+              "type": {
+                "kind": "AutoNumber",
+                "structureTypeName": "DomainModels$AutoNumberAttributeType"
+              },
+              "defaultValue": "1",
+              "valueType": "DomainModels$StoredValue",
+              "dataStorageGuid": "d2c0f294-272d-5775-8311-7f82474001e4"
+            },
+            {
+              "name": "SendDate",
+              "qualifiedName": "CollaborationA6.Comment.SendDate",
+              "documentation": "",
+              "type": {
+                "kind": "DateTime",
+                "structureTypeName": "DomainModels$DateTimeAttributeType"
+              },
+              "defaultValue": "",
+              "valueType": "DomainModels$StoredValue",
+              "dataStorageGuid": "82d0f166-e50f-5008-9d23-1c2ce257a728"
+            },
+            {
+              "name": "CommentText",
+              "qualifiedName": "CollaborationA6.Comment.CommentText",
+              "documentation": "",
+              "type": {
+                "kind": "String",
+                "structureTypeName": "DomainModels$StringAttributeType",
+                "length": 200
+              },
+              "defaultValue": "",
+              "valueType": "DomainModels$StoredValue",
+              "dataStorageGuid": "e6c3638d-4923-5dd3-a834-d488a77bea9b"
+            }
+          ],
+          "validationRules": [],
+          "indexes": [],
+          "accessRules": [],
+          "image": null,
+          "dataStorageGuid": "5377ecf4-7736-5286-88a7-c99ab5514e37"
+        },
+        {
+          "name": "Task",
+          "qualifiedName": "CollaborationA6.Task",
+          "documentation": "",
+          "location": {
+            "x": 0,
+            "y": 540
+          },
+          "generalization": "DomainModels$NoGeneralization",
+          "attributes": [
+            {
+              "name": "TaskID",
+              "qualifiedName": "CollaborationA6.Task.TaskID",
+              "documentation": "",
+              "type": {
+                "kind": "AutoNumber",
+                "structureTypeName": "DomainModels$AutoNumberAttributeType"
+              },
+              "defaultValue": "1",
+              "valueType": "DomainModels$StoredValue",
+              "dataStorageGuid": "d09d18fb-7dd3-5333-96fe-582af3dbe38a"
+            },
+            {
+              "name": "TaskIDString",
+              "qualifiedName": "CollaborationA6.Task.TaskIDString",
+              "documentation": "",
+              "type": {
+                "kind": "String",
+                "structureTypeName": "DomainModels$StringAttributeType",
+                "length": 200
+              },
+              "defaultValue": "",
+              "valueType": "DomainModels$StoredValue",
+              "dataStorageGuid": "8ff88c35-b399-5f36-819d-7eb66bde0003"
+            },
+            {
+              "name": "TaskTitle",
+              "qualifiedName": "CollaborationA6.Task.TaskTitle",
+              "documentation": "",
+              "type": {
+                "kind": "String",
+                "structureTypeName": "DomainModels$StringAttributeType",
+                "length": 200
+              },
+              "defaultValue": "",
+              "valueType": "DomainModels$StoredValue",
+              "dataStorageGuid": "6c76745f-c611-5d96-a4c5-ffa60d0e342e"
+            },
+            {
+              "name": "Description",
+              "qualifiedName": "CollaborationA6.Task.Description",
+              "documentation": "",
+              "type": {
+                "kind": "String",
+                "structureTypeName": "DomainModels$StringAttributeType",
+                "length": 200
+              },
+              "defaultValue": "",
+              "valueType": "DomainModels$StoredValue",
+              "dataStorageGuid": "61cec927-bc2b-5eb3-a3cc-31b137bd4d69"
+            },
+            {
+              "name": "StartDate",
+              "qualifiedName": "CollaborationA6.Task.StartDate",
+              "documentation": "",
+              "type": {
+                "kind": "DateTime",
+                "structureTypeName": "DomainModels$DateTimeAttributeType"
+              },
+              "defaultValue": "",
+              "valueType": "DomainModels$StoredValue",
+              "dataStorageGuid": "b537b1f7-a681-51f2-b6f6-9cd2ddc724fa"
+            },
+            {
+              "name": "DeadlineDate",
+              "qualifiedName": "CollaborationA6.Task.DeadlineDate",
+              "documentation": "",
+              "type": {
+                "kind": "DateTime",
+                "structureTypeName": "DomainModels$DateTimeAttributeType"
+              },
+              "defaultValue": "",
+              "valueType": "DomainModels$StoredValue",
+              "dataStorageGuid": "8ea706a9-dac7-5816-99f2-07c111665a33"
+            },
+            {
+              "name": "TaskStatus",
+              "qualifiedName": "CollaborationA6.Task.TaskStatus",
+              "documentation": "",
+              "type": {
+                "kind": "Enumeration",
+                "structureTypeName": "DomainModels$EnumerationAttributeType",
+                "enumerationQualifiedName": "CollaborationA6.TaskStatus",
+                "enumeration": "TaskStatus"
+              },
+              "defaultValue": "",
+              "valueType": "DomainModels$StoredValue",
+              "dataStorageGuid": "d7384c18-26e7-57e2-b3c0-5119c5d0711f"
+            },
+            {
+              "name": "Priority",
+              "qualifiedName": "CollaborationA6.Task.Priority",
+              "documentation": "",
+              "type": {
+                "kind": "Boolean",
+                "structureTypeName": "DomainModels$BooleanAttributeType"
+              },
+              "defaultValue": "false",
+              "valueType": "DomainModels$StoredValue",
+              "dataStorageGuid": "ee9380ae-3c5f-5a86-b9f2-c8aa33a94047"
+            },
+            {
+              "name": "SortValue",
+              "qualifiedName": "CollaborationA6.Task.SortValue",
+              "documentation": "",
+              "type": {
+                "kind": "Integer",
+                "structureTypeName": "DomainModels$IntegerAttributeType"
+              },
+              "defaultValue": "0",
+              "valueType": "DomainModels$StoredValue",
+              "dataStorageGuid": "3609b59b-9a47-54c0-802b-80d4fe8db4ac"
+            }
+          ],
+          "validationRules": [],
+          "indexes": [],
+          "accessRules": [],
+          "image": null,
+          "dataStorageGuid": "88cfb789-56b6-5d64-8fea-45b07392ed42"
+        },
+        {
+          "name": "Subtask",
+          "qualifiedName": "CollaborationA6.Subtask",
+          "documentation": "",
+          "location": {
+            "x": 280,
+            "y": 540
+          },
+          "generalization": "DomainModels$NoGeneralization",
+          "attributes": [
+            {
+              "name": "SubtaskID",
+              "qualifiedName": "CollaborationA6.Subtask.SubtaskID",
+              "documentation": "",
+              "type": {
+                "kind": "AutoNumber",
+                "structureTypeName": "DomainModels$AutoNumberAttributeType"
+              },
+              "defaultValue": "1",
+              "valueType": "DomainModels$StoredValue",
+              "dataStorageGuid": "dd778e65-bdd4-50ad-9871-f12a1f3133a4"
+            },
+            {
+              "name": "Note",
+              "qualifiedName": "CollaborationA6.Subtask.Note",
+              "documentation": "",
+              "type": {
+                "kind": "String",
+                "structureTypeName": "DomainModels$StringAttributeType",
+                "length": 200
+              },
+              "defaultValue": "",
+              "valueType": "DomainModels$StoredValue",
+              "dataStorageGuid": "b4860be2-14bb-5347-b47d-039b05d79cbe"
+            },
+            {
+              "name": "Done",
+              "qualifiedName": "CollaborationA6.Subtask.Done",
+              "documentation": "",
+              "type": {
+                "kind": "Boolean",
+                "structureTypeName": "DomainModels$BooleanAttributeType"
+              },
+              "defaultValue": "false",
+              "valueType": "DomainModels$StoredValue",
+              "dataStorageGuid": "bb262926-ac86-54e2-b57c-38defff03c0e"
+            }
+          ],
+          "validationRules": [],
+          "indexes": [],
+          "accessRules": [],
+          "image": null,
+          "dataStorageGuid": "ae9961f8-c318-5e97-a6c8-cc699caeda6d"
+        },
+        {
+          "name": "AccessRequest",
+          "qualifiedName": "CollaborationA6.AccessRequest",
+          "documentation": "",
+          "location": {
+            "x": 560,
+            "y": 540
+          },
+          "generalization": "DomainModels$NoGeneralization",
+          "attributes": [
+            {
+              "name": "Reason",
+              "qualifiedName": "CollaborationA6.AccessRequest.Reason",
+              "documentation": "",
+              "type": {
+                "kind": "String",
+                "structureTypeName": "DomainModels$StringAttributeType",
+                "length": 200
+              },
+              "defaultValue": "",
+              "valueType": "DomainModels$StoredValue",
+              "dataStorageGuid": "8324527e-7efd-55be-9186-52d8f223324b"
+            },
+            {
+              "name": "RequestStatus",
+              "qualifiedName": "CollaborationA6.AccessRequest.RequestStatus",
+              "documentation": "",
+              "type": {
+                "kind": "Enumeration",
+                "structureTypeName": "DomainModels$EnumerationAttributeType",
+                "enumerationQualifiedName": "CollaborationA6.RequestStatus",
+                "enumeration": "RequestStatus"
+              },
+              "defaultValue": "",
+              "valueType": "DomainModels$StoredValue",
+              "dataStorageGuid": "2558f37f-2438-52c7-8845-3e9fb04db3cf"
+            }
+          ],
+          "validationRules": [],
+          "indexes": [],
+          "accessRules": [],
+          "image": null,
+          "dataStorageGuid": "dd28781a-4841-5f54-95bc-76bd3e3ea1a6"
+        },
+        {
+          "name": "TeamMember",
+          "qualifiedName": "CollaborationA6.TeamMember",
+          "documentation": "",
+          "location": {
+            "x": 840,
+            "y": 540
+          },
+          "generalization": "CollaborationA6.Employee",
+          "attributes": [
+            {
+              "name": "Internal",
+              "qualifiedName": "CollaborationA6.TeamMember.Internal",
+              "documentation": "",
+              "type": {
+                "kind": "Boolean",
+                "structureTypeName": "DomainModels$BooleanAttributeType"
+              },
+              "defaultValue": "false",
+              "valueType": "DomainModels$StoredValue",
+              "dataStorageGuid": "3c643f63-d566-5afb-9b48-e0c85a65ade3"
+            },
+            {
+              "name": "IsLead",
+              "qualifiedName": "CollaborationA6.TeamMember.IsLead",
+              "documentation": "",
+              "type": {
+                "kind": "Boolean",
+                "structureTypeName": "DomainModels$BooleanAttributeType"
+              },
+              "defaultValue": "false",
+              "valueType": "DomainModels$StoredValue",
+              "dataStorageGuid": "c8490e36-78ac-50f0-8bec-802b4a62f4ec"
+            }
+          ],
+          "validationRules": [],
+          "indexes": [],
+          "accessRules": [],
+          "image": null,
+          "dataStorageGuid": "ea51c2e9-98f0-54b7-8eed-ca2b97dc0918"
+        },
+        {
+          "name": "EmployeeFileAccess",
+          "qualifiedName": "CollaborationA6.EmployeeFileAccess",
+          "documentation": "",
+          "location": {
+            "x": 1120,
+            "y": 540
+          },
+          "generalization": "DomainModels$NoGeneralization",
+          "attributes": [
+            {
+              "name": "HasAccess",
+              "qualifiedName": "CollaborationA6.EmployeeFileAccess.HasAccess",
+              "documentation": "",
+              "type": {
+                "kind": "Boolean",
+                "structureTypeName": "DomainModels$BooleanAttributeType"
+              },
+              "defaultValue": "false",
+              "valueType": "DomainModels$StoredValue",
+              "dataStorageGuid": "7fc64446-229c-50b8-be49-5b3fd03ad68b"
+            },
+            {
+              "name": "FileTypePassthrough",
+              "qualifiedName": "CollaborationA6.EmployeeFileAccess.FileTypePassthrough",
+              "documentation": "",
+              "type": {
+                "kind": "String",
+                "structureTypeName": "DomainModels$StringAttributeType",
+                "length": 200
+              },
+              "defaultValue": "",
+              "valueType": "DomainModels$StoredValue",
+              "dataStorageGuid": "b972c932-6320-5c5c-955b-9ce7f23bed54"
+            }
+          ],
+          "validationRules": [],
+          "indexes": [],
+          "accessRules": [],
+          "image": null,
+          "dataStorageGuid": "c61dff14-a375-5fe1-b07a-440c4ddb248c"
+        },
+        {
+          "name": "File",
+          "qualifiedName": "CollaborationA6.File",
+          "documentation": "",
+          "location": {
+            "x": 1400,
+            "y": 540
+          },
+          "generalization": "System.FileDocument",
+          "attributes": [
+            {
+              "name": "FileType",
+              "qualifiedName": "CollaborationA6.File.FileType",
+              "documentation": "",
+              "type": {
+                "kind": "String",
+                "structureTypeName": "DomainModels$StringAttributeType",
+                "length": 200
+              },
+              "defaultValue": "",
+              "valueType": "DomainModels$StoredValue",
+              "dataStorageGuid": "dc28b8b5-c07b-5559-bd1c-fa9894eb0a74"
+            },
+            {
+              "name": "Version",
+              "qualifiedName": "CollaborationA6.File.Version",
+              "documentation": "",
+              "type": {
+                "kind": "Integer",
+                "structureTypeName": "DomainModels$IntegerAttributeType"
+              },
+              "defaultValue": "0",
+              "valueType": "DomainModels$StoredValue",
+              "dataStorageGuid": "dc672420-3a77-5255-a1d7-79f6faebd8d6"
+            },
+            {
+              "name": "IsLatestVersion",
+              "qualifiedName": "CollaborationA6.File.IsLatestVersion",
+              "documentation": "",
+              "type": {
+                "kind": "Boolean",
+                "structureTypeName": "DomainModels$BooleanAttributeType"
+              },
+              "defaultValue": "false",
+              "valueType": "DomainModels$StoredValue",
+              "dataStorageGuid": "cfc12e3c-8b4c-5d81-bedf-ffeef5cb49d0"
+            },
+            {
+              "name": "FileTypeCategory",
+              "qualifiedName": "CollaborationA6.File.FileTypeCategory",
+              "documentation": "",
+              "type": {
+                "kind": "Enumeration",
+                "structureTypeName": "DomainModels$EnumerationAttributeType",
+                "enumerationQualifiedName": "CollaborationA6.FileTypeCategory",
+                "enumeration": "FileTypeCategory"
+              },
+              "defaultValue": "",
+              "valueType": "DomainModels$StoredValue",
+              "dataStorageGuid": "8cfb2851-8652-5933-ab3c-114d127cf588"
+            }
+          ],
+          "validationRules": [],
+          "indexes": [],
+          "accessRules": [],
+          "image": null,
+          "dataStorageGuid": "eaa89ec7-99a1-5417-a02d-5deeef864678"
+        }
+      ],
+      "associations": [
+        {
+          "name": "PieChartHelper_PieChartHelperDimension",
+          "qualifiedName": "CollaborationA6.PieChartHelper_PieChartHelperDimension",
+          "documentation": "",
+          "parent": "CollaborationA6.PieChartHelper",
+          "child": "CollaborationA6.PieChartHelperDimension",
+          "type": "ReferenceSet",
+          "owner": "Both",
+          "storageFormat": null,
+          "deleteBehavior": {
+            "parentDeleteBehavior": "DeleteMeButKeepReferences",
+            "childDeleteBehavior": "DeleteMeButKeepReferences",
+            "parentErrorMessage": null,
+            "childErrorMessage": null
+          },
+          "parentConnection": {
+            "x": 50,
+            "y": 50
+          },
+          "childConnection": {
+            "x": 50,
+            "y": 50
+          },
+          "dataStorageGuid": "dd510b81-dd1e-58b5-8800-7728ccc34518"
+        },
+        {
+          "name": "PieChartHelperDimension_PieChartHelper",
+          "qualifiedName": "CollaborationA6.PieChartHelperDimension_PieChartHelper",
+          "documentation": "",
+          "parent": "CollaborationA6.PieChartHelperDimension",
+          "child": "CollaborationA6.PieChartHelper",
+          "type": "Reference",
+          "owner": "Default",
+          "storageFormat": null,
+          "deleteBehavior": {
+            "parentDeleteBehavior": "DeleteMeButKeepReferences",
+            "childDeleteBehavior": "DeleteMeButKeepReferences",
+            "parentErrorMessage": null,
+            "childErrorMessage": null
+          },
+          "parentConnection": {
+            "x": 50,
+            "y": 50
+          },
+          "childConnection": {
+            "x": 50,
+            "y": 50
+          },
+          "dataStorageGuid": "d1bd0b6c-7f52-5b77-aba9-43c05cfe1d7e"
+        },
+        {
+          "name": "PieChartHelper_Project",
+          "qualifiedName": "CollaborationA6.PieChartHelper_Project",
+          "documentation": "",
+          "parent": "CollaborationA6.PieChartHelper",
+          "child": "CollaborationA6.Project",
+          "type": "Reference",
+          "owner": "Default",
+          "storageFormat": null,
+          "deleteBehavior": {
+            "parentDeleteBehavior": "DeleteMeButKeepReferences",
+            "childDeleteBehavior": "DeleteMeButKeepReferences",
+            "parentErrorMessage": null,
+            "childErrorMessage": null
+          },
+          "parentConnection": {
+            "x": 50,
+            "y": 50
+          },
+          "childConnection": {
+            "x": 50,
+            "y": 50
+          },
+          "dataStorageGuid": "938a14fb-973a-5a29-a608-c41d876dda81"
+        },
+        {
+          "name": "Project_Image",
+          "qualifiedName": "CollaborationA6.Project_Image",
+          "documentation": "",
+          "parent": "CollaborationA6.Project",
+          "child": "CollaborationA6.Image",
+          "type": "ReferenceSet",
+          "owner": "Default",
+          "storageFormat": null,
+          "deleteBehavior": {
+            "parentDeleteBehavior": "DeleteMeButKeepReferences",
+            "childDeleteBehavior": "DeleteMeButKeepReferences",
+            "parentErrorMessage": null,
+            "childErrorMessage": null
+          },
+          "parentConnection": {
+            "x": 50,
+            "y": 50
+          },
+          "childConnection": {
+            "x": 50,
+            "y": 50
+          },
+          "dataStorageGuid": "625cc9f9-c25c-51d0-b2a3-f58ef30dbb25"
+        },
+        {
+          "name": "Image_Project",
+          "qualifiedName": "CollaborationA6.Image_Project",
+          "documentation": "",
+          "parent": "CollaborationA6.Image",
+          "child": "CollaborationA6.Project",
+          "type": "Reference",
+          "owner": "Default",
+          "storageFormat": null,
+          "deleteBehavior": {
+            "parentDeleteBehavior": "DeleteMeButKeepReferences",
+            "childDeleteBehavior": "DeleteMeButKeepReferences",
+            "parentErrorMessage": null,
+            "childErrorMessage": null
+          },
+          "parentConnection": {
+            "x": 50,
+            "y": 50
+          },
+          "childConnection": {
+            "x": 50,
+            "y": 50
+          },
+          "dataStorageGuid": "47d0cfdd-b412-5ce6-a556-8cbd102e2eec"
+        },
+        {
+          "name": "ProjectListHelper_Project",
+          "qualifiedName": "CollaborationA6.ProjectListHelper_Project",
+          "documentation": "",
+          "parent": "CollaborationA6.ProjectListHelper",
+          "child": "CollaborationA6.Project",
+          "type": "Reference",
+          "owner": "Default",
+          "storageFormat": null,
+          "deleteBehavior": {
+            "parentDeleteBehavior": "DeleteMeButKeepReferences",
+            "childDeleteBehavior": "DeleteMeButKeepReferences",
+            "parentErrorMessage": null,
+            "childErrorMessage": null
+          },
+          "parentConnection": {
+            "x": 50,
+            "y": 50
+          },
+          "childConnection": {
+            "x": 50,
+            "y": 50
+          },
+          "dataStorageGuid": "27984795-37c0-5de8-8d8f-6f3bbacb18c6"
+        },
+        {
+          "name": "Project_ProjectListHelper",
+          "qualifiedName": "CollaborationA6.Project_ProjectListHelper",
+          "documentation": "",
+          "parent": "CollaborationA6.Project",
+          "child": "CollaborationA6.ProjectListHelper",
+          "type": "ReferenceSet",
+          "owner": "Default",
+          "storageFormat": null,
+          "deleteBehavior": {
+            "parentDeleteBehavior": "DeleteMeButKeepReferences",
+            "childDeleteBehavior": "DeleteMeButKeepReferences",
+            "parentErrorMessage": null,
+            "childErrorMessage": null
+          },
+          "parentConnection": {
+            "x": 50,
+            "y": 50
+          },
+          "childConnection": {
+            "x": 50,
+            "y": 50
+          },
+          "dataStorageGuid": "c432cfbd-bd90-5c5e-81cc-0f8d95283830"
+        },
+        {
+          "name": "Project_Client",
+          "qualifiedName": "CollaborationA6.Project_Client",
+          "documentation": "",
+          "parent": "CollaborationA6.Project",
+          "child": "CollaborationA6.Client",
+          "type": "Reference",
+          "owner": "Default",
+          "storageFormat": null,
+          "deleteBehavior": {
+            "parentDeleteBehavior": "DeleteMeButKeepReferences",
+            "childDeleteBehavior": "DeleteMeButKeepReferences",
+            "parentErrorMessage": null,
+            "childErrorMessage": null
+          },
+          "parentConnection": {
+            "x": 50,
+            "y": 50
+          },
+          "childConnection": {
+            "x": 50,
+            "y": 50
+          },
+          "dataStorageGuid": "4ceea02f-0a12-5300-92e8-4c2abebdcc03"
+        },
+        {
+          "name": "milestone_project",
+          "qualifiedName": "CollaborationA6.milestone_project",
+          "documentation": "",
+          "parent": "CollaborationA6.Milestone",
+          "child": "CollaborationA6.Project",
+          "type": "Reference",
+          "owner": "Default",
+          "storageFormat": null,
+          "deleteBehavior": {
+            "parentDeleteBehavior": "DeleteMeButKeepReferences",
+            "childDeleteBehavior": "DeleteMeButKeepReferences",
+            "parentErrorMessage": null,
+            "childErrorMessage": null
+          },
+          "parentConnection": {
+            "x": 50,
+            "y": 50
+          },
+          "childConnection": {
+            "x": 50,
+            "y": 50
+          },
+          "dataStorageGuid": "9034fdba-8a29-53bb-a5a0-cb1b99e2df76"
+        },
+        {
+          "name": "ManagerFeedback_Project",
+          "qualifiedName": "CollaborationA6.ManagerFeedback_Project",
+          "documentation": "",
+          "parent": "CollaborationA6.ManagerFeedback",
+          "child": "CollaborationA6.Project",
+          "type": "Reference",
+          "owner": "Default",
+          "storageFormat": null,
+          "deleteBehavior": {
+            "parentDeleteBehavior": "DeleteMeButKeepReferences",
+            "childDeleteBehavior": "DeleteMeButKeepReferences",
+            "parentErrorMessage": null,
+            "childErrorMessage": null
+          },
+          "parentConnection": {
+            "x": 50,
+            "y": 50
+          },
+          "childConnection": {
+            "x": 50,
+            "y": 50
+          },
+          "dataStorageGuid": "b93378cd-dd14-5b6a-aa38-48390200d3d2"
+        },
+        {
+          "name": "Project_File",
+          "qualifiedName": "CollaborationA6.Project_File",
+          "documentation": "",
+          "parent": "CollaborationA6.Project",
+          "child": "CollaborationA6.File",
+          "type": "ReferenceSet",
+          "owner": "Default",
+          "storageFormat": null,
+          "deleteBehavior": {
+            "parentDeleteBehavior": "DeleteMeButKeepReferences",
+            "childDeleteBehavior": "DeleteMeButKeepReferences",
+            "parentErrorMessage": null,
+            "childErrorMessage": null
+          },
+          "parentConnection": {
+            "x": 50,
+            "y": 50
+          },
+          "childConnection": {
+            "x": 50,
+            "y": 50
+          },
+          "dataStorageGuid": "6da76c35-9001-5211-bd59-5616e8486af6"
+        },
+        {
+          "name": "file_project",
+          "qualifiedName": "CollaborationA6.file_project",
+          "documentation": "",
+          "parent": "CollaborationA6.File",
+          "child": "CollaborationA6.Project",
+          "type": "Reference",
+          "owner": "Default",
+          "storageFormat": null,
+          "deleteBehavior": {
+            "parentDeleteBehavior": "DeleteMeButKeepReferences",
+            "childDeleteBehavior": "DeleteMeButKeepReferences",
+            "parentErrorMessage": null,
+            "childErrorMessage": null
+          },
+          "parentConnection": {
+            "x": 50,
+            "y": 50
+          },
+          "childConnection": {
+            "x": 50,
+            "y": 50
+          },
+          "dataStorageGuid": "0be4bd62-7e71-5c21-bf19-9f434b1601bb"
+        },
+        {
+          "name": "ClientFeedback_FeedbackDimension",
+          "qualifiedName": "CollaborationA6.ClientFeedback_FeedbackDimension",
+          "documentation": "",
+          "parent": "CollaborationA6.ClientFeedback",
+          "child": "CollaborationA6.FeedbackDimension",
+          "type": "ReferenceSet",
+          "owner": "Both",
+          "storageFormat": null,
+          "deleteBehavior": {
+            "parentDeleteBehavior": "DeleteMeButKeepReferences",
+            "childDeleteBehavior": "DeleteMeButKeepReferences",
+            "parentErrorMessage": null,
+            "childErrorMessage": null
+          },
+          "parentConnection": {
+            "x": 50,
+            "y": 50
+          },
+          "childConnection": {
+            "x": 50,
+            "y": 50
+          },
+          "dataStorageGuid": "c2b97f73-7eef-56bc-ab4b-a8fa4645f7a2"
+        },
+        {
+          "name": "feedback_client",
+          "qualifiedName": "CollaborationA6.feedback_client",
+          "documentation": "",
+          "parent": "CollaborationA6.ClientFeedback",
+          "child": "CollaborationA6.Client",
+          "type": "Reference",
+          "owner": "Default",
+          "storageFormat": null,
+          "deleteBehavior": {
+            "parentDeleteBehavior": "DeleteMeButKeepReferences",
+            "childDeleteBehavior": "DeleteMeButKeepReferences",
+            "parentErrorMessage": null,
+            "childErrorMessage": null
+          },
+          "parentConnection": {
+            "x": 50,
+            "y": 50
+          },
+          "childConnection": {
+            "x": 50,
+            "y": 50
+          },
+          "dataStorageGuid": "19b33a26-6d26-5dff-85d2-066dfcc26632"
+        },
+        {
+          "name": "clientfeedback_delivery",
+          "qualifiedName": "CollaborationA6.clientfeedback_delivery",
+          "documentation": "",
+          "parent": "CollaborationA6.ClientFeedback",
+          "child": "CollaborationA6.Delivery",
+          "type": "Reference",
+          "owner": "Default",
+          "storageFormat": null,
+          "deleteBehavior": {
+            "parentDeleteBehavior": "DeleteMeButKeepReferences",
+            "childDeleteBehavior": "DeleteMeButKeepReferences",
+            "parentErrorMessage": null,
+            "childErrorMessage": null
+          },
+          "parentConnection": {
+            "x": 50,
+            "y": 50
+          },
+          "childConnection": {
+            "x": 50,
+            "y": 50
+          },
+          "dataStorageGuid": "e35ad7ca-2e71-588d-a37f-ef3c441b832b"
+        },
+        {
+          "name": "delivery_client",
+          "qualifiedName": "CollaborationA6.delivery_client",
+          "documentation": "",
+          "parent": "CollaborationA6.Delivery",
+          "child": "CollaborationA6.Client",
+          "type": "Reference",
+          "owner": "Default",
+          "storageFormat": null,
+          "deleteBehavior": {
+            "parentDeleteBehavior": "DeleteMeButKeepReferences",
+            "childDeleteBehavior": "DeleteMeButKeepReferences",
+            "parentErrorMessage": null,
+            "childErrorMessage": null
+          },
+          "parentConnection": {
+            "x": 50,
+            "y": 50
+          },
+          "childConnection": {
+            "x": 50,
+            "y": 50
+          },
+          "dataStorageGuid": "e857d2b9-0de2-5da3-8d23-44f74dfaa62f"
+        },
+        {
+          "name": "Delivery_Milestone",
+          "qualifiedName": "CollaborationA6.Delivery_Milestone",
+          "documentation": "",
+          "parent": "CollaborationA6.Delivery",
+          "child": "CollaborationA6.Milestone",
+          "type": "Reference",
+          "owner": "Default",
+          "storageFormat": null,
+          "deleteBehavior": {
+            "parentDeleteBehavior": "DeleteMeButKeepReferences",
+            "childDeleteBehavior": "DeleteMeButKeepReferences",
+            "parentErrorMessage": null,
+            "childErrorMessage": null
+          },
+          "parentConnection": {
+            "x": 50,
+            "y": 50
+          },
+          "childConnection": {
+            "x": 50,
+            "y": 50
+          },
+          "dataStorageGuid": "c33f2361-fdb4-53b2-ae32-7e70a9dd867b"
+        },
+        {
+          "name": "Milestone_Delivery",
+          "qualifiedName": "CollaborationA6.Milestone_Delivery",
+          "documentation": "",
+          "parent": "CollaborationA6.Milestone",
+          "child": "CollaborationA6.Delivery",
+          "type": "Reference",
+          "owner": "Default",
+          "storageFormat": null,
+          "deleteBehavior": {
+            "parentDeleteBehavior": "DeleteMeButKeepReferences",
+            "childDeleteBehavior": "DeleteMeButKeepReferences",
+            "parentErrorMessage": null,
+            "childErrorMessage": null
+          },
+          "parentConnection": {
+            "x": 50,
+            "y": 50
+          },
+          "childConnection": {
+            "x": 50,
+            "y": 50
+          },
+          "dataStorageGuid": "e6c5a3e6-c4ea-523f-9e58-67d214bb41d0"
+        },
+        {
+          "name": "Task_Milestone",
+          "qualifiedName": "CollaborationA6.Task_Milestone",
+          "documentation": "",
+          "parent": "CollaborationA6.Task",
+          "child": "CollaborationA6.Milestone",
+          "type": "Reference",
+          "owner": "Default",
+          "storageFormat": null,
+          "deleteBehavior": {
+            "parentDeleteBehavior": "DeleteMeButKeepReferences",
+            "childDeleteBehavior": "DeleteMeButKeepReferences",
+            "parentErrorMessage": null,
+            "childErrorMessage": null
+          },
+          "parentConnection": {
+            "x": 50,
+            "y": 50
+          },
+          "childConnection": {
+            "x": 50,
+            "y": 50
+          },
+          "dataStorageGuid": "ca937b1f-87c4-536a-b2aa-dd261746847e"
+        },
+        {
+          "name": "Milestone_Task",
+          "qualifiedName": "CollaborationA6.Milestone_Task",
+          "documentation": "",
+          "parent": "CollaborationA6.Milestone",
+          "child": "CollaborationA6.Task",
+          "type": "ReferenceSet",
+          "owner": "Default",
+          "storageFormat": null,
+          "deleteBehavior": {
+            "parentDeleteBehavior": "DeleteMeButKeepReferences",
+            "childDeleteBehavior": "DeleteMeButKeepReferences",
+            "parentErrorMessage": null,
+            "childErrorMessage": null
+          },
+          "parentConnection": {
+            "x": 50,
+            "y": 50
+          },
+          "childConnection": {
+            "x": 50,
+            "y": 50
+          },
+          "dataStorageGuid": "c39017f0-7ced-5ce2-857c-c362ad11498c"
+        },
+        {
+          "name": "task_subtask",
+          "qualifiedName": "CollaborationA6.task_subtask",
+          "documentation": "",
+          "parent": "CollaborationA6.Task",
+          "child": "CollaborationA6.Subtask",
+          "type": "ReferenceSet",
+          "owner": "Default",
+          "storageFormat": null,
+          "deleteBehavior": {
+            "parentDeleteBehavior": "DeleteMeButKeepReferences",
+            "childDeleteBehavior": "DeleteMeButKeepReferences",
+            "parentErrorMessage": null,
+            "childErrorMessage": null
+          },
+          "parentConnection": {
+            "x": 50,
+            "y": 50
+          },
+          "childConnection": {
+            "x": 50,
+            "y": 50
+          },
+          "dataStorageGuid": "29fea812-ec33-5725-903e-b708f7d96ac3"
+        },
+        {
+          "name": "feedback_task",
+          "qualifiedName": "CollaborationA6.feedback_task",
+          "documentation": "",
+          "parent": "CollaborationA6.ManagerFeedback",
+          "child": "CollaborationA6.Task",
+          "type": "Reference",
+          "owner": "Default",
+          "storageFormat": null,
+          "deleteBehavior": {
+            "parentDeleteBehavior": "DeleteMeButKeepReferences",
+            "childDeleteBehavior": "DeleteMeButKeepReferences",
+            "parentErrorMessage": null,
+            "childErrorMessage": null
+          },
+          "parentConnection": {
+            "x": 50,
+            "y": 50
+          },
+          "childConnection": {
+            "x": 50,
+            "y": 50
+          },
+          "dataStorageGuid": "478747bc-1f8b-52d1-99e2-afcea772bd26"
+        },
+        {
+          "name": "ManagerFeedback_TeamMember",
+          "qualifiedName": "CollaborationA6.ManagerFeedback_TeamMember",
+          "documentation": "",
+          "parent": "CollaborationA6.ManagerFeedback",
+          "child": "CollaborationA6.TeamMember",
+          "type": "Reference",
+          "owner": "Default",
+          "storageFormat": null,
+          "deleteBehavior": {
+            "parentDeleteBehavior": "DeleteMeButKeepReferences",
+            "childDeleteBehavior": "DeleteMeButKeepReferences",
+            "parentErrorMessage": null,
+            "childErrorMessage": null
+          },
+          "parentConnection": {
+            "x": 50,
+            "y": 50
+          },
+          "childConnection": {
+            "x": 50,
+            "y": 50
+          },
+          "dataStorageGuid": "f8945d39-1853-5e15-815f-38a6ca9ecf12"
+        },
+        {
+          "name": "Delivery_File",
+          "qualifiedName": "CollaborationA6.Delivery_File",
+          "documentation": "",
+          "parent": "CollaborationA6.Delivery",
+          "child": "CollaborationA6.File",
+          "type": "ReferenceSet",
+          "owner": "Default",
+          "storageFormat": null,
+          "deleteBehavior": {
+            "parentDeleteBehavior": "DeleteMeButKeepReferences",
+            "childDeleteBehavior": "DeleteMeButKeepReferences",
+            "parentErrorMessage": null,
+            "childErrorMessage": null
+          },
+          "parentConnection": {
+            "x": 50,
+            "y": 50
+          },
+          "childConnection": {
+            "x": 50,
+            "y": 50
+          },
+          "dataStorageGuid": "ced819eb-4c27-5950-a759-925dc008a399"
+        },
+        {
+          "name": "Delivery_File_2",
+          "qualifiedName": "CollaborationA6.Delivery_File_2",
+          "documentation": "",
+          "parent": "CollaborationA6.Delivery",
+          "child": "CollaborationA6.File",
+          "type": "ReferenceSet",
+          "owner": "Default",
+          "storageFormat": null,
+          "deleteBehavior": {
+            "parentDeleteBehavior": "DeleteMeButKeepReferences",
+            "childDeleteBehavior": "DeleteMeButKeepReferences",
+            "parentErrorMessage": null,
+            "childErrorMessage": null
+          },
+          "parentConnection": {
+            "x": 50,
+            "y": 50
+          },
+          "childConnection": {
+            "x": 50,
+            "y": 50
+          },
+          "dataStorageGuid": "200b3b7f-fea9-515c-b2ae-edf5f8a1e013"
+        },
+        {
+          "name": "Comment_TeamMember",
+          "qualifiedName": "CollaborationA6.Comment_TeamMember",
+          "documentation": "",
+          "parent": "CollaborationA6.Comment",
+          "child": "CollaborationA6.TeamMember",
+          "type": "Reference",
+          "owner": "Default",
+          "storageFormat": null,
+          "deleteBehavior": {
+            "parentDeleteBehavior": "DeleteMeButKeepReferences",
+            "childDeleteBehavior": "DeleteMeButKeepReferences",
+            "parentErrorMessage": null,
+            "childErrorMessage": null
+          },
+          "parentConnection": {
+            "x": 50,
+            "y": 50
+          },
+          "childConnection": {
+            "x": 50,
+            "y": 50
+          },
+          "dataStorageGuid": "edbda010-03df-53c8-8592-2708a24388cb"
+        },
+        {
+          "name": "comment_task",
+          "qualifiedName": "CollaborationA6.comment_task",
+          "documentation": "",
+          "parent": "CollaborationA6.Comment",
+          "child": "CollaborationA6.Task",
+          "type": "Reference",
+          "owner": "Default",
+          "storageFormat": null,
+          "deleteBehavior": {
+            "parentDeleteBehavior": "DeleteMeButKeepReferences",
+            "childDeleteBehavior": "DeleteMeButKeepReferences",
+            "parentErrorMessage": null,
+            "childErrorMessage": null
+          },
+          "parentConnection": {
+            "x": 50,
+            "y": 50
+          },
+          "childConnection": {
+            "x": 50,
+            "y": 50
+          },
+          "dataStorageGuid": "09253f2e-bab6-5bfb-bd19-76b1b1c1b430"
+        },
+        {
+          "name": "Task_TeamMember",
+          "qualifiedName": "CollaborationA6.Task_TeamMember",
+          "documentation": "",
+          "parent": "CollaborationA6.Task",
+          "child": "CollaborationA6.TeamMember",
+          "type": "ReferenceSet",
+          "owner": "Both",
+          "storageFormat": null,
+          "deleteBehavior": {
+            "parentDeleteBehavior": "DeleteMeButKeepReferences",
+            "childDeleteBehavior": "DeleteMeButKeepReferences",
+            "parentErrorMessage": null,
+            "childErrorMessage": null
+          },
+          "parentConnection": {
+            "x": 50,
+            "y": 50
+          },
+          "childConnection": {
+            "x": 50,
+            "y": 50
+          },
+          "dataStorageGuid": "f78beba3-f15f-5426-932a-741a9fbf83ce"
+        },
+        {
+          "name": "Task_TeamMember_2",
+          "qualifiedName": "CollaborationA6.Task_TeamMember_2",
+          "documentation": "",
+          "parent": "CollaborationA6.Task",
+          "child": "CollaborationA6.TeamMember",
+          "type": "ReferenceSet",
+          "owner": "Both",
+          "storageFormat": null,
+          "deleteBehavior": {
+            "parentDeleteBehavior": "DeleteMeButKeepReferences",
+            "childDeleteBehavior": "DeleteMeButKeepReferences",
+            "parentErrorMessage": null,
+            "childErrorMessage": null
+          },
+          "parentConnection": {
+            "x": 50,
+            "y": 50
+          },
+          "childConnection": {
+            "x": 50,
+            "y": 50
+          },
+          "dataStorageGuid": "d06e447e-d8b2-57c5-b2b1-514422395951"
+        },
+        {
+          "name": "task_file",
+          "qualifiedName": "CollaborationA6.task_file",
+          "documentation": "",
+          "parent": "CollaborationA6.Task",
+          "child": "CollaborationA6.File",
+          "type": "ReferenceSet",
+          "owner": "Default",
+          "storageFormat": null,
+          "deleteBehavior": {
+            "parentDeleteBehavior": "DeleteMeButKeepReferences",
+            "childDeleteBehavior": "DeleteMeButKeepReferences",
+            "parentErrorMessage": null,
+            "childErrorMessage": null
+          },
+          "parentConnection": {
+            "x": 50,
+            "y": 50
+          },
+          "childConnection": {
+            "x": 50,
+            "y": 50
+          },
+          "dataStorageGuid": "a81d48f7-85bd-52b3-83b8-4795d8d14787"
+        },
+        {
+          "name": "Task_File_2",
+          "qualifiedName": "CollaborationA6.Task_File_2",
+          "documentation": "",
+          "parent": "CollaborationA6.Task",
+          "child": "CollaborationA6.File",
+          "type": "ReferenceSet",
+          "owner": "Default",
+          "storageFormat": null,
+          "deleteBehavior": {
+            "parentDeleteBehavior": "DeleteMeButKeepReferences",
+            "childDeleteBehavior": "DeleteMeButKeepReferences",
+            "parentErrorMessage": null,
+            "childErrorMessage": null
+          },
+          "parentConnection": {
+            "x": 50,
+            "y": 50
+          },
+          "childConnection": {
+            "x": 50,
+            "y": 50
+          },
+          "dataStorageGuid": "daa3ea18-ff03-578f-9afe-8a4bee47c385"
+        },
+        {
+          "name": "file_task",
+          "qualifiedName": "CollaborationA6.file_task",
+          "documentation": "",
+          "parent": "CollaborationA6.File",
+          "child": "CollaborationA6.Task",
+          "type": "ReferenceSet",
+          "owner": "Default",
+          "storageFormat": null,
+          "deleteBehavior": {
+            "parentDeleteBehavior": "DeleteMeButKeepReferences",
+            "childDeleteBehavior": "DeleteMeButKeepReferences",
+            "parentErrorMessage": null,
+            "childErrorMessage": null
+          },
+          "parentConnection": {
+            "x": 50,
+            "y": 50
+          },
+          "childConnection": {
+            "x": 50,
+            "y": 50
+          },
+          "dataStorageGuid": "a4f85a79-29f9-55c9-a6fc-c7aa1a55e47d"
+        },
+        {
+          "name": "TeamMember_AccessRequest",
+          "qualifiedName": "CollaborationA6.TeamMember_AccessRequest",
+          "documentation": "",
+          "parent": "CollaborationA6.TeamMember",
+          "child": "CollaborationA6.AccessRequest",
+          "type": "ReferenceSet",
+          "owner": "Default",
+          "storageFormat": null,
+          "deleteBehavior": {
+            "parentDeleteBehavior": "DeleteMeButKeepReferences",
+            "childDeleteBehavior": "DeleteMeButKeepReferences",
+            "parentErrorMessage": null,
+            "childErrorMessage": null
+          },
+          "parentConnection": {
+            "x": 50,
+            "y": 50
+          },
+          "childConnection": {
+            "x": 50,
+            "y": 50
+          },
+          "dataStorageGuid": "0193bffb-c7a5-5d9a-9b76-7a5284145775"
+        },
+        {
+          "name": "accessrequest_file",
+          "qualifiedName": "CollaborationA6.accessrequest_file",
+          "documentation": "",
+          "parent": "CollaborationA6.AccessRequest",
+          "child": "CollaborationA6.File",
+          "type": "Reference",
+          "owner": "Default",
+          "storageFormat": null,
+          "deleteBehavior": {
+            "parentDeleteBehavior": "DeleteMeButKeepReferences",
+            "childDeleteBehavior": "DeleteMeButKeepReferences",
+            "parentErrorMessage": null,
+            "childErrorMessage": null
+          },
+          "parentConnection": {
+            "x": 50,
+            "y": 50
+          },
+          "childConnection": {
+            "x": 50,
+            "y": 50
+          },
+          "dataStorageGuid": "1d98ef52-c8c5-5f45-98db-b50889e14fbd"
+        },
+        {
+          "name": "empfileaccess_emp",
+          "qualifiedName": "CollaborationA6.empfileaccess_emp",
+          "documentation": "",
+          "parent": "CollaborationA6.EmployeeFileAccess",
+          "child": "CollaborationA6.TeamMember",
+          "type": "Reference",
+          "owner": "Default",
+          "storageFormat": null,
+          "deleteBehavior": {
+            "parentDeleteBehavior": "DeleteMeButKeepReferences",
+            "childDeleteBehavior": "DeleteMeButKeepReferences",
+            "parentErrorMessage": null,
+            "childErrorMessage": null
+          },
+          "parentConnection": {
+            "x": 50,
+            "y": 50
+          },
+          "childConnection": {
+            "x": 50,
+            "y": 50
+          },
+          "dataStorageGuid": "f6671b85-f89e-5db7-ae3a-67220af70b6c"
+        },
+        {
+          "name": "file_empfileaccess",
+          "qualifiedName": "CollaborationA6.file_empfileaccess",
+          "documentation": "",
+          "parent": "CollaborationA6.File",
+          "child": "CollaborationA6.EmployeeFileAccess",
+          "type": "ReferenceSet",
+          "owner": "Default",
+          "storageFormat": null,
+          "deleteBehavior": {
+            "parentDeleteBehavior": "DeleteMeButKeepReferences",
+            "childDeleteBehavior": "DeleteMeButKeepReferences",
+            "parentErrorMessage": null,
+            "childErrorMessage": null
+          },
+          "parentConnection": {
+            "x": 50,
+            "y": 50
+          },
+          "childConnection": {
+            "x": 50,
+            "y": 50
+          },
+          "dataStorageGuid": "898aa85a-f1aa-5699-a9ec-ef79e7d8a78b"
+        }
+      ]
+    }
+  ],
+  "enumerations": [
+    {
+      "name": "ButtonSelection",
+      "qualifiedName": "CollaborationA6.ButtonSelection",
+      "module": "CollaborationA6",
+      "documentation": "Values not visible in the supplied domain-model image.",
+      "values": []
+    },
+    {
+      "name": "DimensionType",
+      "qualifiedName": "CollaborationA6.DimensionType",
+      "module": "CollaborationA6",
+      "documentation": "Values not visible in the supplied domain-model image.",
+      "values": []
+    },
+    {
+      "name": "FileTypeCategory",
+      "qualifiedName": "CollaborationA6.FileTypeCategory",
+      "module": "CollaborationA6",
+      "documentation": "Values not visible in the supplied domain-model image.",
+      "values": []
+    },
+    {
+      "name": "KPI",
+      "qualifiedName": "CollaborationA6.KPI",
+      "module": "CollaborationA6",
+      "documentation": "Values not visible in the supplied domain-model image.",
+      "values": []
+    },
+    {
+      "name": "MilestonePosition",
+      "qualifiedName": "CollaborationA6.MilestonePosition",
+      "module": "CollaborationA6",
+      "documentation": "Values not visible in the supplied domain-model image.",
+      "values": []
+    },
+    {
+      "name": "MilestoneStatus",
+      "qualifiedName": "CollaborationA6.MilestoneStatus",
+      "module": "CollaborationA6",
+      "documentation": "Values not visible in the supplied domain-model image.",
+      "values": []
+    },
+    {
+      "name": "PieChartAttribute",
+      "qualifiedName": "CollaborationA6.PieChartAttribute",
+      "module": "CollaborationA6",
+      "documentation": "Values not visible in the supplied domain-model image.",
+      "values": []
+    },
+    {
+      "name": "RequestStatus",
+      "qualifiedName": "CollaborationA6.RequestStatus",
+      "module": "CollaborationA6",
+      "documentation": "Values not visible in the supplied domain-model image.",
+      "values": []
+    },
+    {
+      "name": "TaskStatus",
+      "qualifiedName": "CollaborationA6.TaskStatus",
+      "module": "CollaborationA6",
+      "documentation": "Values not visible in the supplied domain-model image.",
+      "values": []
+    }
+  ]
+}

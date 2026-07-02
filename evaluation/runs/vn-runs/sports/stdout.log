@@ -1,0 +1,307 @@
+
+> us2lc-pipeline@1.0.0 generate:vn
+> node pipeline/generate-vn-cli.js --input-dir=artifacts/practical-performance/20260528-165228/inputs/sports --output-dir=artifacts/vn-runs/sports
+
+{
+  "ok": true,
+  "inputDir": "/workspace/us2lc-pipeline/artifacts/practical-performance/20260528-165228/inputs/sports",
+  "artifacts": {
+    "ontologyPath": "/workspace/us2lc-pipeline/artifacts/vn-runs/sports/visual-narrator-ontology.omn",
+    "storiesPath": "/workspace/us2lc-pipeline/artifacts/vn-runs/sports/visual-narrator-stories.json",
+    "summaryPath": "/workspace/us2lc-pipeline/artifacts/vn-runs/sports/visual-narrator-summary.json",
+    "rawPath": "/workspace/us2lc-pipeline/artifacts/vn-runs/sports/visual-narrator-result.json"
+  },
+  "summary": {
+    "classNames": [
+      "Subscription",
+      "Membership Type",
+      "Type",
+      "Membership",
+      "Practicalperf_sports_stability",
+      "It",
+      "Password",
+      "Detail",
+      "Overview",
+      "Lesson",
+      "Time",
+      "Gym",
+      "Application",
+      "Training Session",
+      "Session",
+      "Training",
+      "Spot",
+      "Timeslot",
+      "Daily Sports",
+      "Description",
+      "Room",
+      "Number",
+      "Notification",
+      "Fine",
+      "They",
+      "Which",
+      "Method",
+      "Booking",
+      "Account",
+      "Daily",
+      "Sports",
+      "Show"
+    ],
+    "classes": [
+      {
+        "name": "Subscription",
+        "parent": "",
+        "isRole": false
+      },
+      {
+        "name": "Membership Type",
+        "parent": "Type",
+        "isRole": false
+      },
+      {
+        "name": "Type",
+        "parent": "",
+        "isRole": false
+      },
+      {
+        "name": "Membership",
+        "parent": "",
+        "isRole": false
+      },
+      {
+        "name": "Practicalperf_sports_stability",
+        "parent": "",
+        "isRole": false
+      },
+      {
+        "name": "It",
+        "parent": "",
+        "isRole": false
+      },
+      {
+        "name": "Password",
+        "parent": "",
+        "isRole": false
+      },
+      {
+        "name": "Detail",
+        "parent": "",
+        "isRole": false
+      },
+      {
+        "name": "Overview",
+        "parent": "",
+        "isRole": false
+      },
+      {
+        "name": "Lesson",
+        "parent": "",
+        "isRole": false
+      },
+      {
+        "name": "Time",
+        "parent": "",
+        "isRole": false
+      },
+      {
+        "name": "Gym",
+        "parent": "",
+        "isRole": false
+      },
+      {
+        "name": "Application",
+        "parent": "",
+        "isRole": false
+      },
+      {
+        "name": "Training Session",
+        "parent": "Session",
+        "isRole": false
+      },
+      {
+        "name": "Session",
+        "parent": "",
+        "isRole": false
+      },
+      {
+        "name": "Training",
+        "parent": "",
+        "isRole": false
+      },
+      {
+        "name": "Spot",
+        "parent": "",
+        "isRole": false
+      },
+      {
+        "name": "Timeslot",
+        "parent": "",
+        "isRole": false
+      },
+      {
+        "name": "Daily Sports",
+        "parent": "",
+        "isRole": false
+      },
+      {
+        "name": "Description",
+        "parent": "",
+        "isRole": false
+      },
+      {
+        "name": "Room",
+        "parent": "",
+        "isRole": false
+      },
+      {
+        "name": "Number",
+        "parent": "",
+        "isRole": false
+      },
+      {
+        "name": "Notification",
+        "parent": "",
+        "isRole": false
+      },
+      {
+        "name": "Fine",
+        "parent": "",
+        "isRole": false
+      },
+      {
+        "name": "They",
+        "parent": "",
+        "isRole": false
+      },
+      {
+        "name": "Which",
+        "parent": "",
+        "isRole": false
+      },
+      {
+        "name": "Method",
+        "parent": "",
+        "isRole": false
+      },
+      {
+        "name": "Booking",
+        "parent": "",
+        "isRole": false
+      },
+      {
+        "name": "Account",
+        "parent": "",
+        "isRole": false
+      },
+      {
+        "name": "Daily",
+        "parent": "",
+        "isRole": false
+      },
+      {
+        "name": "Sports",
+        "parent": "",
+        "isRole": false
+      },
+      {
+        "name": "Show",
+        "parent": "",
+        "isRole": false
+      }
+    ],
+    "relationships": [
+      {
+        "name": "hasType",
+        "domain": "Membership",
+        "range": "Membership Type"
+      },
+      {
+        "name": "hasSession",
+        "domain": "Training",
+        "range": "Training Session"
+      },
+      {
+        "name": "canCorrect For",
+        "domain": "It",
+        "range": "Lesson"
+      }
+    ],
+    "keyNouns": [
+      {
+        "term": "Lesson",
+        "weight": 7.5
+      },
+      {
+        "term": "Notification",
+        "weight": 5
+      },
+      {
+        "term": "Gym",
+        "weight": 4
+      },
+      {
+        "term": "Time",
+        "weight": 3.5
+      },
+      {
+        "term": "Session",
+        "weight": 3
+      },
+      {
+        "term": "Subscription",
+        "weight": 2.5
+      },
+      {
+        "term": "It",
+        "weight": 2.5
+      },
+      {
+        "term": "Room",
+        "weight": 2.5
+      },
+      {
+        "term": "Overview",
+        "weight": 2
+      },
+      {
+        "term": "Timeslot",
+        "weight": 2
+      },
+      {
+        "term": "Type",
+        "weight": 2
+      },
+      {
+        "term": "Number",
+        "weight": 2
+      },
+      {
+        "term": "Detail",
+        "weight": 2
+      },
+      {
+        "term": "Description",
+        "weight": 2
+      }
+    ],
+    "inferredRoles": [
+      "Admin",
+      "Customer",
+      "Trainer",
+      "User"
+    ],
+    "discardedClassNames": [
+      "Customer",
+      "Information",
+      "Record",
+      "Admin",
+      "Trainer",
+      "What",
+      "System",
+      "User",
+      "Person",
+      "Return Customer"
+    ]
+  },
+  "status": "completed",
+  "command": "/workspace/us2lc-pipeline/visual-narrator/.venv/bin/python /workspace/us2lc-pipeline/pipeline/scripts/run_visual_narrator.py --input /workspace/us2lc-pipeline/artifacts/practical-performance/20260528-165228/inputs/sports/user-stories.txt --system-name PracticalPerf_sports_Stability"
+}

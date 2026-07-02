@@ -1,0 +1,200 @@
+00:00:00 - 00:00:01
+P0: Effe kijken wat ik ervan vind.
+
+00:00:01 - 00:00:01
+P0: Ja.
+
+00:00:05 - 00:00:13
+P0: Oh ja. Het eerste wat mij opvalt is dat dingen niet uh dus entiteiten niet heel erg gestructureerd overkomen.
+
+00:00:13 - 00:00:32
+P0: Je kan niet heel makkelijk in één oogopslag zien wat je allemaal, wat je allemaal, wat je allemaal tot je beschikking hebt of de relaties ook uh kloppen en wat je zeg. Maar de comprehensive view is heel lastig te zien in één keer. Dat bedoel ik ermee te zeggen.
+
+00:00:33 - 00:00:53
+P0: Ik ga nu even de entities meer een beetje uit elkaar halen om te kijken hoe de relaties uh eruit zien. Uhm ja, ik heb uh bij Method Engineering heb ik geleerd dat je de associatie ook bepaalde labels moet geven. Dus dit is gewoon puur Mendix gegenereerd. Zie ik.
+
+00:00:56 - 00:01:36
+P0: Ben nu aan t kijken naar de attributen. Oh ja, ik zie voor de entiteiten trouwens ook dat ze Schedule Activity bijvoorbeeld hebben toegevoegd. Ik had tijdens mijn uh method engineering vak ook geleerd uh, dat je bijvoorbeeld als je als je entiteit, uh, als geschiedenis bij wilt houden, dat je die als aparte entiteit moet onderscheiden. En dat wordt hierin wel gedaan. Voor zover ik al kan zien. Dus dat is, uh, dat is ook fijn dat ie op dat niveau kan nadenken zeg maar qua complexiteit. Uh. De LLM hier ook. Ik zie ook events schedule en niet dus Schedule uh activity.
+
+00:01:38 - 00:02:28
+P0: Ik ga nu even kijken naar de attributen zoals ik net zei en daarna de uh multiplicities. Ja, t lijkt erop dat die attributen ook allemaal qua uh standards ook uh kloppen met uh capitals en uh niet capitals. Ik ga nu kijken wat er bijvoorbeeld voor Entity Camp Worker qua attributen daar daarin zitten, ga ik even kijken naar de hoe het is opgeslagen intern technisch gezien. Name, string, max length stored. Hij geeft zelfs default values aan. Dat is ook wel nice dat ie daar ook over nadenkt. Dus hij zegt hier false. Ja, het ziet er vrij compleet uit als ik dit zie.
+
+00:02:28 - 00:02:47
+P0: Uhm ja. Wat mij opvalt is dat er dus nog geen annotaties inzitten, maar dat is natuurlijk iets wat je als human uh d'rbij toe zou voegen. T Is natuurlijk gegenereerd.
+
+00:02:50 - 00:03:18
+P0: Ja. Ik zie ook dat uh het domein model ook rekening houdt met uh Uniek attribuut dus. Ik zie bijvoorbeeld voor. Events Schedule Week een event ID, dus Hij denkt ook na over unieke entiteiten. Ja, t ziet er best uh complex uit. T uh domein model.
+
+00:03:19 - 00:03:31
+P0: Dan ga ik nu even kijken naar de applicatie zelf. Ik heb nu wel een beetje een idee gekregen van uh wat voor entiteiten terugkomen, dus daarmee kan ik ook de pagina's wat beter beter begrijpen.
+
+00:03:36 - 00:04:37
+P0: Dan ga ik nu even door de pagina's heen. Ik ben nu op het homescreen. Welcome to your homepage. Oké, dat is een beetje vreemd. Hij neemt wel de homepage van Mendix mee en daarmee bedoel ik uh. De concepten die in Mendix kan gebruiken, dus dat zou dan in de applicatie natuurlijk niet mee worden genomen. Dus het lijkt erop alsof ie de uhm, de basismodules niet eruit haalt voor een uh uh voor de applicatie op zichzelf. Het doel van de applicaties, in dit geval campers. Oké. Oh ja, dan kom ik weer hier. Uh, Om uit deze homepage te komen kan ik niet via de navigatie verder. Ik moet dan helemaal in dat bovenste balkje moet ik dan verder gaan, dus dat is een beetje verwarrend. Ik denk ook voor de user experience in het echt.
+
+00:04:38 - 00:05:53
+P0: Dus ik Ik druk nu op Campus Administrator Overview en die staat in de bovenste balk in plaats van links en de navigatie. Uh, hier kan ik op deze pagina. Kan ik camp administrator toevoegen? Dus uh, laat ik voor de lol. Even een campusadministratie toevoegen om te kijken hoe dat werkt. Om te kijken of hij of de basisfunctionaliteit hiervan werkt, want dit is puur een beetje CRUD-achtig. Kijk of dat een beetje goed zit, hoe dat is gegenereerd. Oké, kan voor events kan ik niks aanklikken, dus ik ga even kijken in domein model hoe dat dan daar zit. Euh, wat was het camp administrator? Camp administrator. Ja, was een beetje chaotisch gegenereerd. Weet ik niet helemaal waar die staat. Oh hier. Oké, dat is misschien ligt ook een beetje misschien aan mezelf, omdat ik niet in één keer kon zien. Event. Maar event is helemaal geen attribuut in uh camp administrator, dus dat vind ik een beetje gek.
+
+00:05:53 - 00:06:11
+Researcher: Ja, ik zal je daar even mee helpen. De Event is een uh, een attribuut of een een met een association verbonden. Uhm. Daarom zie je m als een soort drop down. En daarom is de drop down ook leeg, omdat de er nog geen events in de database zitten. Dus vandaar.
+
+00:06:12 - 00:06:12
+P0: Ook uh.
+
+00:06:13 - 00:06:15
+Researcher: Eigenlijk vergelijkbaar met uhm.
+
+00:06:15 - 00:06:23
+P0: Ja oké, maar begrijp ik t goed dat uh, wat er in de database nu zit, dat dat ook door de LLM is? Uh d'r ingezet? Of heb jij dat uh gedaan?
+
+00:06:23 - 00:06:36
+Researcher: Er zijn de databases volledig leeg, dus er zitten geen items in de database. Dus bijvoorbeeld als je nu een event wilt toevoegen, zul je die eerst zelf moeten toevoegen in de in de crud operatie. Inderdaad.
+
+00:06:36 - 00:07:01
+P0: Ik was in de war hier omdat ik niet wist dat camp administrator aan event was verbonden. Ik keek eigenlijk puur naar camp en administrator en daardoor zag ik eigenlijk niet dat t uh dat t blijkbaar daaraan verbonden was. Maar nu is t duidelijk, dus dat zit wel goed. Dus als ik dan terugkijk naar domein model lijkt t wel uh goed geconnect uh te zijn in de applicatie zelf. Qua qua crud zeg maar in uh in uh, in de localhost.
+
+00:07:01 - 00:07:43
+P0: Maar omdat t inderdaad leeg is. Maar ik doe alsof ik een event dan heb aangeklikt. Ik doe save. Uh. Ik Oh ja, ik heb ook een item aangemaakt. Ik vind het wel verwarrend dat hier. Oké, even te herhalen. Ik zit in de campadministrator overview en ik heb net een camp administrator aangemaakt en daarvoor een naam, een e-mail en is active aangeklikt. Maar ik zie het als een item erin gepropt. En dat is best verwarrend, want je zou hier eigenlijk verwachten dat hier de naam van de camp administrator of zoiets of iets dergelijks zou staan. Uhm. Maar hij blijkt wel nu inderdaad best te zitten, dus in dat opzicht is wel goed. Gewoon qua basic functionaliteit. Ik druk weer op de homepage.
+
+00:07:45 - 00:07:52
+P0: Oké, dan ga ik even kijken naar Camp Counsellor. Nou, volgens mij werkt dat ongeveer hetzelfde. Het is, uh, het heeft dezelfde functionaliteiten. Ja.
+
+00:07:52 - 00:08:20
+Researcher: In dat uh uh wat verder uitleggen. Alle uhm, alle entiteiten hebben een uh uh, automatisch een uhm uh overview en een nieuw edit pagina toegevoegd gekregen. Vergelijkbaar met hoe dat in Mendix zelf gaat. Als je dat automatisch laat genereren. Dus die uhm uh, die bestaat. Voor elke entiteit bestaat er zo'n pagina uh paar zeg maar van een nieuw edit pop up en een en een overview.
+
+00:08:20 - 00:08:38
+P0: Dan kan je dat dus die overview pages, die heeft ie eigenlijk zelf. Uh ook uh mega ja meegenomen. Oké, dus dat is eigenlijk dat hoef ik denk k niet meer naar te kijken. Want dat dat zit, dat zit wel gewoon goed in elkaar. Behalve dus als ik dus iets aanmaak dat t gewoon als item gewoon hier op het scherm wordt laten zien. En dat vind k als. Dat vind k verwarrend. K Weet niet dat dat uh.
+
+00:08:38 - 00:08:47
+Researcher: Dat is inderdaad te zeggen dat uhm uh, inderdaad, t is deterministisch gedaan. Dus dan. D'r zit geen verschil tussen die overview pages. Inderdaad. Dus wat jij ook al zei.
+
+00:08:48 - 00:09:38
+P0: Ja, ja. Dus uh. Vandaar dat ik dan niet hier verder naar ga kijken naar die camp counsellor en camp worker dat dat werkt allemaal hetzelfde. Ik kan wel even kijken voor de grap wat er met de attendance gebeurt. Oh ja, het attendance status. Ja, ik ben nu even door het domein model. Oh ja, die heeft inderdaad alleen attendance status. Dus boolean. Ja, oké. Dus als ik dit bijvoorbeeld toevoeg oh, hier wordt dan wel weer attendance status. Dus uh. Met yes wordt dat dan weer in de in de database gezet. Mmm. Oké, dat is uh wel nice dat dat uh, dat je t ook echt terugziet zeg maar, die koppeling. Maar volgens mij kan alle basic functionalities die heb ik eigenlijk wel gezien. T Is best wel basic eigenlijk als ik t nu zie.
+
+00:09:39 - 00:09:54
+Researcher: Ja, ik zal je nog iets, iets wijzen. Uh wat? Uhm. Wat ook nog opvallend is Uhm. De w w wa zie je in de navigatie? Dingen die missen in de in de in de in de entiteiten die er bestaan?
+
+00:09:57 - 00:10:54
+P0: Ja, op t oog ziet het er op het domein model er veel groter uit dan alle dingen die op de navigatie staan. Dus het lijkt erop alsof de LLM niet alle, niet alle entiteiten heeft gegenereerd (als pagina). Ik weet even niet met wat voor reden. Ik zie bijvoorbeeld uh rules zie ik bijvoorbeeld niet uh ertussen staan en hij heeft ook geen associatie zie ik nu in t domein model, dus het lijkt erop alsof het domein model wel uh redundant is. Dus uh onnodige entiteit. Nou ja, ligt eraan wat je natuurlijk wil maken, maar het lijkt erop alsof ie wel een beetje entiteit uh aan t hallucineren hallucineren is. Ik ga nu even kijken naar hoe de pagina's en de microflows hierachter zijn gestructureerd. Uh. Wat mij opvalt is dat uh dat er geen dat er geen en niet echt een folderstructuur aanwezig is. Het lijkt erop dat de LLM gewoon de pagina's heeft gegenereerd en gewoon in de My First module heeft gedaan met het domeinmodel. Die die staat er natuurlijk al.
+
+00:10:54 - 00:11:30
+P0: Altijd maar even kijken of ik dan qua pagina's nog verschil zie. Relatief vergeleken met navigatie en het domein model. Hmm ja, het lijkt alsof ik wel meer pagina's heb gekregen dan in de navigatie, euh, navigatie staan. Want ik zie hier bijvoorbeeld uh, event uh overview. Dus ik klik daar nu op om te kijken wat daar uh. Oh, het lijkt erop alsof je die uh pagina's überhaupt niet heeft aangemaakt. Uh, ik bedoel, alsof ie niet heeft. Uh, hoe zeg je dat?
+
+00:11:31 - 00:11:33
+Researcher: Dus als ze niet in de navigatie zitten?
+
+00:11:33 - 00:11:38
+P0: Ja, ze zijn niet aan de navigatie toegevoegd. Dat bedoel ik inderdaad. Maar uh, de pagina zelf bestaat wel.
+
+00:11:38 - 00:12:28
+P0: Oké. Vreemd. Uh. En ik zie trouwens, voor Event Overview zie ik twee dezelfde namen in Mendix. Eentje met capslock event en dan underscore. capslock overview en één pagina die hetzelfde heet, alleen dan zonder underscore en hoofdletter E. Dus ik ga even kijken wat nu het verschil daartussen is. Die is gewoon leeg, dus ik denk dat ie hier ook uh. Dat de LLM hier niet helemaal doorheeft welke pages hij al heeft gemaakt. En op zich uh, dat zeg maar niet goed genoeg bij kan houden. En dat ie daarom uh. Ja. Goh. Dezelfde pagina geprobeerd opnieuw te maken, denk ik.
+
+00:12:29 - 00:13:03
+P0: Maar ik zie dat ie dat uh tweede gedupliceerde dus uh, event overview wel helemaal leeg is en event underscore overview dan wel is gevuld met uhm eventitems. Maar het valt me op dat uhm, dat de LLM meer pagina's en meer entiteiten genereert dan degene die aanwezig zijn in de in de applicatie zelf, Dus ik denk dat ie qua navigatie nog niet helemaal nog niet helemaal werkt.
+
+00:13:05 - 00:13:30
+P0: Eens kijken wat dat nog meer voor interessants kan zien. Ik zie bijvoorbeeld ook geen group overview en daar heeft ie dan ook een een gedupliceerde pagina voorgegemaakt. En dat is exact hetzelfde als wat er met de event overview gebeurt. Dus hij maakt onzinnige pagina's eigenlijk die al zeg maar bestaan. Dus een beetje redundant eigenlijk.
+
+00:13:31 - 00:13:44
+P0: Hmmm. Ik kijk nu naar BI Weekly Feedback Overview, want omdat ik die ook volgens mij niet in de navigatie zag staan. Maar het lijkt erop dat dat exact hetzelfde in mekaar zit als alle pagina's die ik tot nu toe heb gezien.
+
+00:13:44 - 00:14:21
+P0: En ook zijn uh, alle pagina's die ik tot nu toe heb gezien nog steeds de basic uh functionalities, dus ik zie niet. Uhm ja, meer complexe, Complexe pagina's heb ik nog niet gezien. Het is echt. Het blijft echt ook bij meer de CRUD-functionaliteit. Ik zie ook niet dat ie bijvoorbeeld iets met API's heeft kunnen doen. Of workflows zie ik ook nog niet. T zie ik er ook niet tussen staan, dus het lijkt allemaal nog best wel uhm low effort te zijn wat ie wat hij heeft gegenereerd.
+
+00:14:22 - 00:14:27
+Researcher: Stond er in de user stories iets wat jou aanleiding zou hebben tot een workflow?
+
+00:14:29 - 00:14:43
+P0: Maar het is een hele grote lijst, dus daar ga ik even naartoe. Dan ga ik er even wat meer aandachtig naar kijken. Mmm. Even kijken hoor, Ik ga er even snel doorheen.
+
+00:15:09 - 00:15:43
+P0: Nou, ik ben er gewoon eigenlijk een beetje doorheen aan het gaan. Ik zie bijvoorbeeld Parent I want to be able to message my camper counselors. So that I can voice my concerns or check on my camper progress. Uhm. Maar dat dat betekent niet. Volgens mij niet per se dat het een workflow moet zijn. Uhm, d'r staat eigenlijk puur dat de parent in staat moet zijn om de camper counsellor te berichten, maar er wordt niet, voor zover ik zie.
+
+00:15:44 - 00:16:27
+P0: Uhm, nou ja, ik, ik kan even kijken wat de camper counsellor qua uh user stories heeft, want het lijkt erop alsof t zeg maar vanuit één kant wordt gedaan, dus alleen vanuit de parent. Maar dus nu ga ik even kijken of er nog een user stories gegenereerd. Ik bedoel of of er een user story is die ik vanuit de camper counsellor dan bijvoorbeeld het bericht moet. Euh. Ik weet niet hoor, maar misschien dat het bericht dan eerst moet kunnen accepteren voordat dit bericht kunt zien. Zoiets. Want ik ben even aan t kijken of ik vanuit beide perspectieven zeg maar uh, op elkaar aansluiten om te kijken of daar een workflow kan worden gemaakt.
+
+00:16:48 - 00:17:33
+P0: Ik zie één user story voor camp counsellor en die gaat niet over dan wat ik net zei. Dus over t kunnen bevestigen of je een bericht wilt binnenkrijgen of iets dergelijks. Dus als ik hier nu naar kijk lijkt het erop dat er geen user stories zijn. die zeggen dat er geen user stories zijn die kunnen leiden tot genereren van een workflow eigenlijk. Dus hoewel ik dus geen workflow zie, betekent dat niet dat uhm ja, de LLM die wist niet dat ie een workflow moest genereren. Dus daar uh, dat is denk ik niet per se een negatief punt denk ik. Omdat hij heeft t heeft puur de de user stories daarvoor niet eens gekregen, dus dan zou ie ook niet in staat moeten zijn om de workflow te kunnen genereren.
+
+00:17:35 - 00:18:09
+P0: Ik ben toch nog benieuwd. Navigation. Ga k even naar toe? Ja, ja inderdaad. Dus hij neemt niet alle alle pagina's mee. Nee, hij Het lijkt erop dat ie een soort selectie maakt. Oké, uh, ik ga nu een beetje kijken naar hoe die microflows in elkaar zitten. En ik ben eigenlijk ook benieuwd naar wat voor pagina's die uh zeg uh met welke pagina's in verbonden staat. Want verbonden staan. Want tot nu toe heb ik alleen maar basic functionele tests gezien, dus ik ben wel benieuwd of de microflow iets complexer kan nadenken dan dat.
+
+00:18:09 - 00:18:25
+Researcher: Ja, en dan uh. een notitie bij de microflows en nanoflows. Deze stonden eerst op elkaar gestapeld, vergelijkbaar met hoe het domeinmodel ook de blokjes zeg maar, hoe die ook op een bepaalde manier stonden. Maar ik heb ze. Voor de demonstratie heb ik ze uit elkaar gesleept zodat je ze wel kon bekijken.
+
+00:18:26 - 00:18:26
+P0: Oh oké.
+
+00:18:31 - 00:18:43
+P0: Uh. Ik kijk nu naar Create naamtag voor camper en naar die microflow kijk ik nu. Ik ben zo'n beetje uit elkaar aan het slepen. Ik ben trouwens niet op command zeven laat drukken. Uh. Dus puur voor mezelf. Gewoon om t beetje uit elkaar te kunnen trekken.
+
+00:18:44 - 00:18:59
+P0: Uhm. Oké, even kijken. Hij heeft hier een camper van de database en dan pakt ie de eerste. Geen idee waarom. Waarom per se? Eerste. Waarom niet allemaal? Dat is een beetje onduidelijk.
+
+00:19:00 - 00:19:36
+P0: Uhm. Create Naamtag. Oh, helemaal geen member dus je mag geen attributen, Dus hij maakt gewoon een lege name tag aan. En ook niet committen of refreshen client, dus het lijkt erop alsof dit een beetje redundant is. T t t voegt zeg maar niks toe. T Verandert geen data. Commit naam tag. Oké, maar hij commit nu. Oh, hij commit nu hier wel, maar dat is eigenlijk ook redundant. Want je kan ook committen in de in de CreateName tag. Uh activiteit with events refresh in client.
+
+00:19:37 - 00:19:49
+P0: Oké, maar uhm. De naam tag is leeg dus dat uh is wel bevreemdend. Ik weet niet echt wat zeg maar de het nut van deze microflow dan eigenlijk uh is. Ik kan wel effe kijken of of die uh verbonden is.
+
+00:20:08 - 00:20:52
+P0: Uh. Ja, hier find usages. Oké, helemaal leeg dus. Hij is met niks verbonden, dus t lijkt wel alsof dit gewoon of nog niet is verbonden of dus uh, overbodig is gegenereerd. Ik zie uh, één andere opvallende microflow en die heet My First Logic. En dat zegt me eigenlijk niet heel veel. Dus ik ga even kijken wat Uh. Oh, dat is eigenlijk gewoon de zaak aan het begin. Uh hiervoor uh zei uh over de de homepage naar localhost. Die uh, dat is eigenlijk van Mendix zelf dus. Dus blijkbaar is de LLM niet in staat om dat eruit te halen. En da's t zelfde als my first logic. Dat is blijkbaar een uh. Wat van Mendix zelf is dus.
+
+00:20:54 - 00:21:12
+P0: Ik ga nu even kijken naar andere microflows hoe het daar eigenlijk zit. Ben eigenlijk ook wel benieuwd naar. Ik zit nu in send reminder to parent. retrieve from database ook first. Ik weet niet waarom hij per se uh de eerste pakt.
+
+00:21:14 - 00:21:33
+P0: Ook geen xpath zie ik nu. Dus t is allemaal vrij uh low effort. Dus zoals ik al eerder zei, ik snap dan niet waarom die de eerste pakt en niet per se op zoek is naar bepaalde parents, maar dat is mij nog onduidelijk.
+
+00:21:35 - 00:21:56
+P0: En uh, ik zie als template gewoon een dollarteken reminder message. Uh, maar ik zie niet wat de waarde message zegmaar bestaat, dus dat ontbreekt ook. Ik ga even nog kijken naar Suspend camper en dat is volgens mij wel een zo'n beetje alle microflows gezien.
+
+00:21:56 - 00:22:40
+P0: Ik kan nog wel eventueel de de nano flow nog bekijken. Kijken waarom ie dan wel een nano flow kan maken, maar bijvoorbeeld geen XPath. Daar ben ik ook wel benieuwd naar. Ja, echt exact hetzelfde Suspend camper , die uhm haalt ook een camper uit de database. Maar euh. Alleen de eerste, dus ook zonder XPath. En dan komt hij de de camper blijkbaar zonder dat t Uhm. Want de microflow die heet Suspend camper . Dus het lijkt mij logisch als de camper bijvoorbeeld als daar iets mee wordt gedaan. Dus bijvoorbeeld of suspended als status of zoiets wordt, uh wordt gezet. Maar dat wordt in dit geval niet uhm.
+
+00:22:41 - 00:22:51
+P0: Dus de microflows zien er ook erg low effort uit. Net zoals eigenlijk alles wat ik tot nu toe heb gezien. Mmm ja, ik ga dan even nu kijken nog naar de naar de nano flow.
+
+00:22:51 - 00:23:01
+P0: Uh, volgens mij is dit de enige, dus check camper attendance. Ik zie wel weer een decision dus daar. Dat heeft ie. Die complexiteit kan ie wel genereren.
+
+00:23:02 - 00:23:44
+P0: From database first ook weer de eerste pakt ie voor attendance record. The decision is uh oh, die is niet leeg, maar die heeft geen caption. Wat ie zegt als expression is attendance record status is true. Hier wordt de message wel weer goed gedaan en in de andere micro flow weer niet. Uh. Campers absent Campers absent. Oké, dus op zich die pijlen die die lijkt ie wel gewoon t te kunnen snappen en ook dus zeg maar dit is decision. Alleen de caption ontbreekt dus hier. Maar uhm, dat lijkt wel te werken.
+
+00:23:44 - 00:24:16
+P0: T Is natuurlijk wel een bepaalde complexiteit. Uh, tot welke complexiteit die zeg maar kan, want t is best wel een simpele expression t. T moet gewoon gelijk zijn aan true en dat is eigenlijk het enige uh ja uh, complex. Nee, dat is t niet. Oh en hij uh, je kunt ook. Hoe heet t voor object? Ja, de de rode, de merge, de merge, de merge node. Die kan die ook uh genereren. Oké. Ja, dat heb ik de dingen te zeggen.
+
+00:24:16 - 00:24:33
+P0: Ik weet alleen niet waarom dit dan een uh. Ik Ik snap alleen nog niet waarom ie dan dit niet als een micro bijvoorbeeld heeft gemaakt, zeg maar wat. Zeg maar de reden voor de LLM om hier een nanoflow van te maken in plaats van een micro flow. Dus het lijkt erop dat dat ook een beetje uit het niets komt. Ik zeg maar al niet op de plaats.
+
+00:24:36 - 00:24:41
+P0: Kijken wat ik nog iets toe te voegen heb wat je eventueel gemist zou kunnen hebben.
+
+00:24:46 - 00:24:46
+Researcher: Mmm.
+
+00:24:48 - 00:25:02
+P0: Ja, volgens mij heb ik uh, voor zover ik nu zie ik wel op de meest uh relevante dingen gedrukt. Dus kort samengevat het lijkt erop alsof of de LLM dus uh, overbodige entiteiten genereert.
+
+00:25:02 - 00:25:03
+Researcher: De user roles.
+
+00:25:03 - 00:25:21
+P0: Oh, de user roles. Oké, laten we die dan nog even bekijken. T Lijkt op zich wel uh comprehensive uit te zien, want volgens mij komt t ook een beetje overeen met de user stories die zijn gegenereerd. De rollen die hier nu staan.
+
+00:25:26 - 00:25:37
+Researcher: Ja dus. Er zijn twee standaard rollen de administrator en de user. Die zijn van Mendix zelf. Ja, die staan er nog. Uh En dan de De rest is toegevoegd zoals die.
+
+00:25:42 - 00:26:09
+P0: Oké. Parents is responsible for managing their child information and submit consent forms. Dus uh, qua documentatie, uh, qua documentatie? Je ziet dat de LLM dus wel documentatie genereert, dus dat is wel nice dat ie dat wel weer kan. Mijn vraag is dan alleen waarom kan ik dat hier en dan niet bij een microflow of bij een Uh in t domein model of zo? Hij is blijkbaar wel in staat om documentatie te doen, dus waarom zou ie dan geen annotations kunnen toevoegen?
+
+00:26:10 - 00:26:18
+P0: Dat vind ik. T Is ook niet te verklaren. Net zoals waarom een microflow of een nano flow wat zijn zeg maar de reden is daarachter de reden?
+
+00:26:19 - 00:26:49
+P0: Uhm oké, ja, dat kan ie blijkbaar wel. Even kijken naar camp worker. Nou, daar staat ook een documentatie voor Responsible for assisting with camp activities and reporting incidents. Ik klik even snel nog op Camp Path. Ja, dat ziet er gewoon hetzelfde uit. Dus ja, dat kan ie blijkbaar wel. Volgens mij is t ook vrij compleet. T Komt wel overeen met de user stories die zijn gegenereerd. Dus dat uh, dat ziet er wel goed uit eigenlijk.
+
+00:26:50 - 00:26:52
+Researcher: Oké, dan gaan we de vragenlijst invullen.
+
+00:26:52 - 00:26:53
+P0: Ja, ja, da's goed.

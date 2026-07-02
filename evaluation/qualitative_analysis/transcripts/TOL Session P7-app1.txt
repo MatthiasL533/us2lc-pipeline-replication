@@ -1,0 +1,335 @@
+00:00:00 - 00:00:00
+Researcher: Yes!
+
+00:00:02 - 00:00:09
+P7: Oké, ik ben even aan het kijken wat er allemaal in zit. Het is niet super gestructureerd.
+
+00:00:09 - 00:00:14
+P7: Ja, ook de naamgeving is echt de basis.
+
+00:00:37 - 00:00:49
+P7: Ook hier is het domeinmodel niet helemaal lekker te lezen. Ja, ik moet er even in Mendix inkomen. Oké.
+
+00:00:50 - 00:01:04
+P7: Even kijken. We hebben een project en die is één op één verbonden met het project file. Ik dacht dat daar meerdere files toegevoegd konden worden? Ja, add files. In ieder geval toen Delivery.
+
+00:01:08 - 00:01:13
+Researcher: Hij heeft trouwens. Elke relatie heeft hij gemodelleerd als één op één. Oh, oké, dus dat is niet per se.
+
+00:01:22 - 00:01:26
+P7: Ja, ik ga er in ieder geval vanuit dat niet alles één op één is. Dat lijkt me erg overbodig.
+
+00:01:26 - 00:01:33
+P7: Ja, oké, dat is dan in ieder geval eentje. Dat vinkje. Dat betekent ook weer iets.
+
+00:01:33 - 00:01:35
+Researcher: Dat hij required is, dacht ik.
+
+00:01:35 - 00:01:47
+P7: Oh ja, ja ja. Dus daar heeft hij ook een aantal dingen van. Required. Ehm. Kijk. Project T een naam en departement. Ik had gelezen.
+
+00:01:48 - 00:01:56
+P7: Dat is wel lekker. Oké, die heeft hij vrij snel gecreëerd.
+
+00:01:57 - 00:02:05
+P7: En een startdatum en die is verbonden aan een task. Dat zou denk ik in ieder geval meerdere task moeten zijn.
+
+00:02:05 - 00:02:08
+P7: Ja, en dan file dat zouden ook meerdere files moeten zijn
+
+00:02:10 - 00:02:20
+P7: en dan is het een project heeft een milestone en een task heeft een milestone. Ik zou eigenlijk zeggen dat de task alleen maar milestones Heeft een project niet.
+
+00:02:20 - 00:02:25
+Researcher: Dus een wat overbodig gegenereerde. Relaties?
+
+00:02:25 - 00:02:43
+P7: Ja, ik zou zeggen dat je dat lekker kan opsplitsen en hiërarchisch kan houden en dat het project geen milestone hoeft te hebben Ja. Uhm ja, tenzij je daar inderdaad één einddatum of tijd aan wilt geven. Maar dat zou ik allemaal opsplitsen in tasks, denk ik. Of het lijkt me het meest logisch.
+
+00:02:43 - 00:02:48
+P7: Ja, en er is een projectmanager. Nou, het lijkt me ook mooi als dat er meerdere zouden kunnen zijn.
+
+00:02:53 - 00:02:59
+P7: Ja, precies wat losse. En die zouden dan. Ze zijn helemaal niet connected aan iets of hebben die.
+
+00:03:01 - 00:03:02
+Researcher: Die zijn Disconnected Ja
+
+00:03:02 - 00:03:05
+P7: oké, dus die zou je dan uh zelf nog toe moeten voegen
+
+00:03:05 - 00:03:10
+P7: file access requests? Ja, dat zou wel bij een file kunnen horen zou je zeggen. Ja.
+
+00:03:11 - 00:03:18
+P7: subtask status. Ik zie nergens een subtask. Ja, dus die staat ook een beetje los bij
+
+00:03:19 - 00:03:29
+P7: General Chat. Die is ook niet verbonden aan een persoon of iets. Dat lijkt me ook gek van een rol in ieder geval.
+
+00:03:32 - 00:03:44
+P7: File heeft een delivery file Oh En een delivery en een delivery zit weer vast aan feedback aan een client, maar niet aan een task.
+
+00:03:45 - 00:03:52
+P7: Dat zou voor een project alleen maar via de file, maar dat lijkt me ook niet helemaal kloppen. Of is dat project niet meer helder?
+
+00:03:54 - 00:04:01
+P7: Uhm. maar ik zou zeggen dat t toch meer om t project moet draaien dan alleen maar om de file . Ja.
+
+00:04:01 - 00:04:15
+P7: Uh, een assignment is vast aan een task. En wat daar dan weer het verschil tussen is, daar ben ik ook benieuwd naar. En die zit ook niet vast aan een client of iets in die richting, dus dat lijkt me ook een beetje zweven.
+
+00:04:15 - 00:04:16
+Researcher: Ja.
+
+00:04:17 - 00:04:22
+P7: Uhm. ProjectStatus staat ook los. Is ook niet in de buurt van een project.
+
+00:04:22 - 00:04:23
+Researcher: Ja.
+
+00:04:24 - 00:04:36
+P7: En het lijkt me mooi als je hier nou eens status een string. Het lijkt me ook dat je daar dan juist ruimte hebt voor. Voor wat meer. opties.
+
+00:04:37 - 00:04:40
+P7: Een enumeration inderdaad. Ja dan Uh, dan lijkt me dat ook makkelijker voor het filteren.
+
+00:04:41 - 00:04:48
+P7: Uhm, ik zie een client geconnect. Ik zie een losse employee. Die lijkt me ook ergens bij moeten horen nog
+
+00:04:50 - 00:04:55
+P7: sortOrder. Ik ben ook benieuwd wat dat nu betekent. Dat order heb ik nog niet ergens zien staan.
+
+00:04:56 - 00:05:06
+Researcher: Ik denk dat hiermee bedoeld de sorting order van iets is dat dat dat waarschijnlijk ergens genoemd is in de user stories, net als search criteria.
+
+00:05:06 - 00:05:26
+P7: Ja precies. Maar dat je dat is natuurlijk niet iets wat je wat je hoeft te maken. Tenzij je je filters wil opslaan. Dan kan ik me voorstellen dat je dat. Maar dat heb ik niet zo gelezen. Uhm. Even kijken dan. SearchCriteria. Ja, dat lijkt me dus ook niet een losse entiteit. Nogmaals, tenzij je het opslaat.
+
+00:05:27 - 00:05:28
+P7: MilestoneType lijkt me ook een enumeration.
+
+00:05:28 - 00:05:37
+P7: Ja. FileAccessRequest. Ja, dat lijkt me ook van een dan een relatie moet hebben naar de projectmanager en een employee.
+
+00:05:38 - 00:05:41
+P7: General chat lijkt me ook vast moeten zitten aan mensen
+
+00:05:41 - 00:05:52
+P7: en de criteria. Dat staat nu alleen maar in criteria met dan een naam, maar ik denk dat dat ook vast zou moeten zitten aan of een task of een assignment. En wat daar dan weer een verschil tussen zou moeten zijn?
+
+00:05:53 - 00:05:56
+P7: Uhm. Dat even voor t domeinmodel?
+
+00:05:57 - 00:05:57
+Researcher: Nice.
+
+00:05:57 - 00:06:03
+P7: Ga ik even kijken wat er verder nog allemaal in zit. Je had het over security \
+
+00:06:03 - 00:06:14
+Researcher: Ja. Ja, hier zijn administrator en user. Zijn die die standaard ingebakken? Mendix user rollen en alles er al? Alles daarbuiten is door de LLM gemaakt
+
+00:06:14 - 00:06:22
+P7: Ja precies. Oh, dan moet ik echt even graven in hoe het ook alweer allemaal zat met die uh met die dingen. Dus je hebt een client, een employee projectmanager en een teammanager?
+
+00:06:22 - 00:06:34
+Researcher: Ja, en dan kan het makkelijker voor je maken. De modules zijn allemaal hetzelfde. Tenminste, elke user role hier. Die heeft ook dezelfde kleine module rol zeg maar.
+
+00:06:34 - 00:06:42
+P7: Ja oké. Oh ja, oké. Dus in principe is alleen My first module is dan verschillend. En verder komt het.
+
+00:06:42 - 00:06:44
+Researcher: Ze hebben ook allemaal dezelfde rechten bijvoorbeeld.
+
+00:06:44 - 00:06:47
+P7: Oké, er is helemaal geen verschil.
+
+00:06:47 - 00:06:49
+Researcher: Nee, het is geen role-based access.
+
+00:06:49 - 00:06:59
+P7: Oké, dat lijkt me toch wel ook een minpunt. Ja. Nou, dan ga ik daar ook niet veel tijd over. In steken.
+
+00:07:02 - 00:07:07
+P7: ik zie vrij veel pagina's? Ik zie vier of vijf van dit soort dingetjes. Ik ben even kwijt met de
+
+00:07:07 - 00:07:09
+Researcher: microflows. En die groene zijn nanoflows.
+
+00:07:09 - 00:07:10
+P7: Ja precies.
+
+00:07:12 - 00:07:17
+P7: Heel veel. Heel veel pagina's die dus allemaal niet gestructureerd zijn. Dus dat is ook interessant.
+
+00:07:17 - 00:07:36
+P7: Ja. Uhm. Ik ga even beginnen bij de client overview. Uhm. En hier zie ik inderdaad een lijst view met allemaal items die verder niet gespecificeerd zijn dan alleen maar een tekst hebben. Je kunt zelf een klant aanmaken in je client overview. Dat lijkt me gek.
+
+00:07:40 - 00:07:59
+Researcher: Ja dus dit is zo'n deterministische pagina die die gewoon heeft aangemaakt omdat hij zag dat er een entiteit was. Uhm. Ik zag een paar LLM gegenereerde pagina's tussen staan, maar die zijn vaak leeg, dus dat kan je ook bekijken. Kijk of hij iets heeft kunnen doen. Die hebben een geen caps. Gek genoeg.
+
+00:08:05 - 00:08:07
+P7: Ja, die is lekker leeg.
+
+00:08:08 - 00:08:14
+P7: Delivery overview. Ja, volgens mij had delivery ook niet veel in zich. Ja dus dat lijkt me niet gek.
+
+00:08:15 - 00:08:30
+P7: Even kijken. Ga eens even kijken naar een Project overview pagina. Als we die kunnen vinden. Client concept. Ik heb volgens mij geen concept gezien, maar oké, ik zie hier een homepagina.
+
+00:08:30 - 00:08:30
+Researcher: Ja.
+
+00:08:30 - 00:08:42
+P7: Kijken wat dat betekent. Oja, hier heb je al die verschillende overview en ook client overview. Je lijkt me toch wel wat mogelijkheid tot verbetering wat betreft rollen en permissiesystemen.
+
+00:08:42 - 00:08:43
+Researcher: Ja.
+
+00:08:44 - 00:09:08
+P7: Ik zie een TaskDashboard File overview Task overview Delivery Overview Product Overview. Waar link jij heen? Task Dashboard. Die kon ik ook via hier openen. Oh ja, dat is ook gewoon weer een list view en dan kun je een task toevoegen. Dus ook geen filtering die ik wel had beloofd. Heb gekeken bij user stories.
+
+00:09:09 - 00:09:10
+Researcher: Dus je mist filters?
+
+00:09:10 - 00:09:16
+P7: Ja ja zeker. Ik zit namelijk niet je pagina natuurlijk weer kwijt.
+
+00:09:18 - 00:09:20
+Researcher: Ja. Home was het volgens mij. Volgens mij zat ik daar ook.
+
+00:09:21 - 00:09:33
+P7: Oh ja. Uhm. Even kijken, wat zien we in Project overview? Zal ook wel weer gewoon al lijst zijn. Ja, nou er is nog veel ruimte voor verbetering. Wat betreft de UX.
+
+00:09:35 - 00:09:55
+P7: En qua naamgeving vind ik overview en dashboards. Dat wordt nu door elkaar heen gebruikt, maar voor mij hebben die wel echt een verschillende betekenis, waarover inderdaad een soort Overview is van de verschillende entiteiten. In de database. Met inderdaad de details van en preview.
+
+00:09:55 - 00:10:04
+P7: Ja, en dat je daar inderdaad die edit pagina's opnieuw kan navigeren naar de edit pagina's en dat het dashboard echt een soort van geaggregeerde informatievoorziening is.
+
+00:10:04 - 00:10:05
+Researcher: User facing meer.
+
+00:10:05 - 00:10:24
+P7: Ja precies ja. Ja. Dus dat. Daar zie ik wel ruimte voor. Ja, dat er een project status overview, een new/edit en weet ik dat allemaal is. Dat lijkt me dus allemaal overbodig. Dat uh ja, wat we ook in het domeinmodel hebben gezien. Ik ga eens even naar de Create project.
+
+00:10:25 - 00:10:58
+Researcher: Ja, en hier ook de. Hij kan niet alle stappen van een microflow ook al niet doen, dus hij is er redelijk beperkt in en hij doet een soort van. Hij heeft een soort capability matrix. Hij weet wat hij kan doen de LLM. Maar hij weet wat, wat wat hij kan maken en daarmee doet hij het dus vaak zie je wat nonsensical dingen. Maar ja, dan, dan is een een. Een belangrijke vraag is dan meer van. Is de microflow het concept van de microflow? Is dat nuttig of duidelijk? En niet zozeer de inhoud, maar ook de inhoud is. Ben ik natuurlijk wel benieuwd naar wat je ervan vindt.
+
+00:10:59 - 00:11:04
+P7: In ieder geval. Hoe die gestructureerd is kan. Ik kan me wel voorstellen dat het beter kan.
+
+00:11:04 - 00:11:04
+Researcher: Ja.
+
+00:11:05 - 00:11:31
+P7: Maar jij krijgt een departement en een projectnaam mee. Maar dat zijn allebei strings, dus dat lijkt me ook mooier als dat connected is aan een entiteit/object. Hij maakt dan hier eerst een project aan. Daar doet hij vervolgens nog niks mee. Dan gaat hij daar de variabele in plempen en dan komt hij hem. Dus Ik zie ook hier niet dat het woord connect aan echt al een object.
+
+00:11:31 - 00:11:31
+Researcher: Ja.
+
+00:11:32 - 00:11:33
+P7: Dat lijkt me ook een gemiste kans.
+
+00:11:33 - 00:11:34
+Researcher: Ja.
+
+00:11:34 - 00:11:42
+P7: En hij reversed niet een client en je kunt hem archiveren. Een project.
+
+00:11:43 - 00:11:48
+P7: En een task, hoe Ziet ie eruit. Zou die dan gemaakt worden? En wel een project?
+
+00:11:49 - 00:12:02
+P7: Nee, Het zijn ook allemaal losse uhm dingetjes. Geen objecten. Dus die haalt ie ook nergens op. Dat lijkt me ook wel een mooie toevoeging. En hier eigenlijk weer precies hetzelfde, alleen dan voor een task.
+
+00:12:02 - 00:12:06
+Researcher: Ja ja dus hij mist die uhm relatie.
+
+00:12:08 - 00:12:19
+P7: Ja, want t zijn nu vooral heel erg losse dingen. Ja en uhm, t is toch mooi als ie die dan vast kan maken aan uh, nou ja, dan heb je ook iets aan je filtering en zo. Ja. Dus uh, dat lijkt me wel een goeie.
+
+00:12:19 - 00:12:26
+P7: Even kijken naar die nanoflows wat hij daar voor heeft bedacht. Ja, een beetje filtering zit.
+
+00:12:30 - 00:12:37
+P7: Oh, hij had gewoon allemaal milestones op, ongeacht welk project of iets in die richting. En die uh, die pleurt ie dan terug.
+
+00:12:37 - 00:12:40
+Researcher: Daar zitten nog geen XPath in. Dus dat zal het verklaren denk ik.
+
+00:12:40 - 00:12:45
+P7: Precies. Ja. Oké, ik zie ook een MyFirstLogic.
+
+00:12:45 - 00:12:47
+Researcher: Ja, dat is die ingebakken Mendix.
+
+00:12:47 - 00:13:01
+P7: En ik zie jullie nog niks in. Nee. Precies. Ja. Uhm, ik heb nog geen input velden of iets gezien, dus het is echt alleen nog maar weergeven in lijst vorm en nog geen.
+
+00:13:01 - 00:13:06
+Researcher: Ja, die pagina's die zo'n overview hebben, die hebben ook allemaal zo'n new/edit pagina's en een pop up zeg maar.
+
+00:13:06 - 00:13:09
+P7: Oké, ja oké, dus deze pagina's, die doen ook niets.
+
+00:13:09 - 00:13:10
+Researcher: Nee. Nee nee.
+
+00:13:11 - 00:13:13
+P7: Oh zo. Naar overview pagina.
+
+00:13:13 - 00:13:16
+Researcher: Hier en daar kan je dat ook bijvoorbeeld zien. Oh ja.
+
+00:13:17 - 00:13:18
+P7: Nou, gaan we eens een project aanmaken.
+
+00:13:43 - 00:13:44
+P7: Ben benieuwd wat ie dan nu gaat doen.
+
+00:13:47 - 00:13:52
+P7: Hij geeft dus ook niet de namen van de items weer, Alleen maar. Dus een item?
+
+00:13:52 - 00:13:53
+Researcher: Ja. dus labels kloppen nog niet?
+
+00:13:55 - 00:14:06
+P7: En je zou dus inderdaad hopen dat hier dan een soort tabelstructuur is dat je meteen kan filteren. En dan heb je verder inderdaad. Oh, dit ziet er dan ineens zo.
+
+00:14:06 - 00:14:15
+Researcher: Dat is ook die standaard homepagina van niks. Ja, die uhm, dat dat alleraller bovenste home knopje, die kan hij niet omzetten want die heeft hij niet omgezet.
+
+00:14:18 - 00:14:28
+P7: Ja. Dus ook qua vormgeving zou je zoiets meer hopen. En ze zijn nu allemaal huisjes icons. Klopt. Ja, dat zal ook wel vast anders is. Uhm.
+
+00:14:30 - 00:14:51
+P7: Oh, dat je een task ID moet invullen is ook wel onhandig. En een team member ID. Je zou ook hopen dat je dat of kan aanklikken in een soort lijstvorm of dat het gewoon wordt connected aan degene die die m aanmaakt, of iets in die richting. Of dat je dat vanuit een task door kan doen. Ja, het zijn nu allemaal losse overview pagina's en dat zou je eigenlijk denk ik ook meer hiërarchisch door willen laten.
+
+00:14:51 - 00:14:57
+Researcher: Klikken, zodat je meer. Ook dat het aanmaken van nieuwe dingen. Dat je dat in één scherm hebt in plaats van allemaal losse pagina's.
+
+00:14:57 - 00:15:10
+P7: Ja, of wel losse pagina's, maar niet dat je dat vanuit een homepagina kan zien. Is dat je inderdaad eerst dan op een project klikt en dan daar een een delivery aan kan maken, of daar een task aan kan maken. En dat je dan vanuit daar een soort van weer door kan.
+
+00:15:10 - 00:15:14
+Researcher: Ja, echt een beetje meer nauwer met user stories.
+
+00:15:15 - 00:15:42
+P7: Ja, iets meer in de objectvorm blijven. Ja, dat zou ik doen. Aan de andere kant ook ja. Ja, en dan heb ik de chat. Dingen heb ik nog niet gezien. Nou, dan zie ik je onder staan. Maar dat zal ook denk ik vrij gelijk staan. D'raan. Oh, hier zie ik wel al een ander labeltje of iets in die richting. We hebben hier leuk ergens.
+
+00:15:47 - 00:15:51
+Researcher: Neemt het niet één op één over. Helaas. Alle bestaande pagina's.
+
+00:15:52 - 00:16:00
+P7: Nee. Precies. Deze is nog niet beschikbaar. Ja. Oké, dan is dat ook nog iets wat toegevoegd kan worden.
+
+00:16:00 - 00:16:02
+Researcher: Dus zegt de navigatie je moet gewoon.
+
+00:16:02 - 00:16:31
+P7: Ja inderdaad en gewoon echt meer de structuur. Maar dat heb je natuurlijk als je alles ook één op één maakt. Dat snap ik ook al niet zo goed. Waar hij die list vandaan haalt? Uhm. Ja, want dan zit ik. Ja, daar zit natuurlijk de rol. En permissiesysteem zit er helemaal los van. Dus het zijn nu echt nog heel erg losse losse dingen die hij heeft ingevuld. En daar. Daar mis je gewoon wel echt connectiviteit tussen. Ja. Ja, ik denk dat dat het een beetje was.
+
+00:16:31 - 00:16:31
+Researcher: Nice!

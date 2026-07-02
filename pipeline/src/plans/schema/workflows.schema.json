@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "workflows.schema.json",
+  "title": "Workflow section",
+  "type": "object",
+  "additionalProperties": true,
+  "properties": {
+    "clearExisting": { "type": "boolean" },
+    "specs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": true,
+        "required": ["name", "steps"],
+        "properties": {
+          "ref": { "type": "string" },
+          "name": { "type": "string", "minLength": 1 },
+          "bindings": {
+            "type": "object",
+            "additionalProperties": true,
+            "properties": {
+              "contextEntityRef": { "type": "string" }
+            }
+          },
+          "steps": { "type": "array" }
+        }
+      }
+    },
+    "items": { "type": "array" }
+  }
+}

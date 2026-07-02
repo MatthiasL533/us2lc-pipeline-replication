@@ -1,0 +1,875 @@
+{
+  "dataset": "brewery",
+  "run": "run-04",
+  "planPath": "/Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/artifacts/practical-performance/20260606-091359/stability/brewery/run-04/plan.json",
+  "ok": true,
+  "startedAt": "2026-06-07T20:48:39.608Z",
+  "tempPlanPath": "/Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/artifacts/practical-performance/20260606-091359/builder-stage-runs/plans/brewery/run-04/plan.json",
+  "totalMs": 24193,
+  "result": {
+    "appId": "103fb0e5-f7ac-441b-b0b4-9931f6e0d44b",
+    "appCreated": true,
+    "seedAppId": null,
+    "branch": "main",
+    "committed": true,
+    "commitRequested": true,
+    "workingCopyId": "ea5b923a-d450-455c-b27f-565f5321f11c",
+    "personas": {
+      "enabled": false,
+      "generatedPageNames": [],
+      "personaNames": []
+    },
+    "stages": [
+      {
+        "stage": "domainModel",
+        "ok": true,
+        "summary": "entitiesCreated=21, associationsCreated=12, enumerationsCreated=2",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 57
+      },
+      {
+        "stage": "flush.afterDomainModel",
+        "ok": true,
+        "summary": "flush.afterDomainModel completed",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 132
+      },
+      {
+        "stage": "security",
+        "ok": true,
+        "summary": "moduleRolesCreated=8, userRolesCreated=8, demoUsersCreated=0",
+        "artifacts": [
+          {
+            "key": "moduleRoleNames",
+            "count": 9
+          },
+          {
+            "key": "userRoleNames",
+            "count": 10
+          },
+          {
+            "key": "demoUserNames",
+            "count": 2
+          }
+        ],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 329
+      },
+      {
+        "stage": "flush.afterSecurity",
+        "ok": true,
+        "summary": "flush.afterSecurity completed",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 466
+      },
+      {
+        "stage": "microflowsNanoflows",
+        "ok": true,
+        "summary": "microflowsCreated=6, nanoflowsCreated=1",
+        "artifacts": [
+          {
+            "key": "microflowNames",
+            "count": 6
+          },
+          {
+            "key": "nanoflowNames",
+            "count": 1
+          },
+          {
+            "key": "microflowRefsByRef",
+            "count": 3
+          },
+          {
+            "key": "nanoflowRefsByRef",
+            "count": 0
+          }
+        ],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 23
+      },
+      {
+        "stage": "flush.afterMicroflows",
+        "ok": true,
+        "summary": "flush.afterMicroflows completed",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 85
+      },
+      {
+        "stage": "workflows",
+        "ok": true,
+        "summary": "workflowsCreated=1",
+        "artifacts": [
+          {
+            "key": "workflowNames",
+            "count": 1
+          },
+          {
+            "key": "workflowRefsByRef",
+            "count": 1
+          }
+        ],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 9
+      },
+      {
+        "stage": "flush.afterWorkflows",
+        "ok": true,
+        "summary": "flush.afterWorkflows completed",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 44
+      },
+      {
+        "stage": "pageCapabilities",
+        "ok": true,
+        "summary": "pageCapabilities completed",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 0
+      },
+      {
+        "stage": "webClientCompatibility",
+        "ok": true,
+        "summary": "webClientCompatibility completed",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 3
+      },
+      {
+        "stage": "flush.afterWebClientCompatibility",
+        "ok": true,
+        "summary": "flush.afterWebClientCompatibility completed",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 29
+      },
+      {
+        "stage": "pages",
+        "ok": true,
+        "summary": "pages completed",
+        "artifacts": [
+          {
+            "key": "pageNames",
+            "count": 61
+          }
+        ],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 515
+      },
+      {
+        "stage": "navigationUI",
+        "ok": true,
+        "summary": "navigationUI completed",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 40
+      },
+      {
+        "stage": "homePage",
+        "ok": true,
+        "summary": "updatedProfiles=1",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 2
+      },
+      {
+        "stage": "flush.final",
+        "ok": true,
+        "summary": "flush.final completed",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 1866
+      },
+      {
+        "stage": "verification",
+        "ok": true,
+        "summary": "ok=true",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 91
+      },
+      {
+        "stage": "capabilities",
+        "ok": true,
+        "summary": "capabilities completed",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 696
+      },
+      {
+        "stage": "commit",
+        "ok": true,
+        "summary": "commit completed",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 11531
+      }
+    ],
+    "createdApp": {
+      "appId": "103fb0e5-f7ac-441b-b0b4-9931f6e0d44b",
+      "name": "rerun-brewery-run04",
+      "repositoryType": "git"
+    },
+    "beforeCounts": {
+      "pagesInModule": 1,
+      "entitiesInModule": 0,
+      "microflowsInModule": 1,
+      "nanoflowsInModule": 0,
+      "workflowsInModule": 0
+    },
+    "domainModel": {
+      "moduleName": "MyFirstModule",
+      "entitiesCreated": 21,
+      "associationsCreated": 12,
+      "enumerationsCreated": 2
+    },
+    "security": {
+      "moduleName": "MyFirstModule",
+      "securityLevel": "CheckFormsAndMicroflows",
+      "moduleRolesCreated": 8,
+      "userRolesCreated": 8,
+      "demoUsersRequested": 0,
+      "demoUsersCreated": 0,
+      "demoUsersApplied": 0,
+      "demoUserHandling": "notRequested",
+      "skippedDemoUsers": [],
+      "moduleRoleNames": [
+        "AppAdministrator",
+        "AppUser",
+        "Beer2BeerManagementUser",
+        "Brewery",
+        "BreweryOrHospitalityBusiness",
+        "BreweryUser",
+        "HospitalityBusiness",
+        "HospitalityBusinessUser",
+        "User"
+      ],
+      "userRoleNames": [
+        "Administrator",
+        "AppAdministrator",
+        "AppUser",
+        "Beer2BeerManagementUser",
+        "Brewery",
+        "BreweryOrHospitalityBusiness",
+        "BreweryUser",
+        "HospitalityBusiness",
+        "HospitalityBusinessUser",
+        "User"
+      ],
+      "demoUserNames": [
+        "demo_administrator",
+        "demo_user"
+      ]
+    },
+    "microflows": {
+      "moduleName": "MyFirstModule",
+      "microflowsCreated": 6,
+      "nanoflowsCreated": 1,
+      "microflowNames": [
+        "CreateProposal",
+        "CreateContract",
+        "UpdateOrderStatus",
+        "MF_Beer2beerManagementUser_Prepare",
+        "MF_Beer2beerManagementUser_Approve",
+        "MF_Beer2beerManagementUser_Reject"
+      ],
+      "nanoflowNames": [
+        "ValidateOrderQuantity"
+      ],
+      "microflowRefsByRef": {
+        "mf_beer2beermanagementuser_prepare": "MyFirstModule.MF_Beer2beerManagementUser_Prepare",
+        "mf_beer2beermanagementuser_approve": "MyFirstModule.MF_Beer2beerManagementUser_Approve",
+        "mf_beer2beermanagementuser_reject": "MyFirstModule.MF_Beer2beerManagementUser_Reject"
+      },
+      "nanoflowRefsByRef": {}
+    },
+    "workflows": {
+      "moduleName": "MyFirstModule",
+      "workflowsCreated": 1,
+      "workflowNames": [
+        "WF_Beer2beerManagementUser"
+      ],
+      "workflowRefsByRef": {
+        "wf_beer2beermanagementuser": "MyFirstModule.WF_Beer2beerManagementUser"
+      }
+    },
+    "pageCapabilities": null,
+    "webClientCompatibility": {
+      "lookupRequested": true,
+      "classicGridRequested": false,
+      "updated": true,
+      "useOptimizedClient": "No",
+      "previousUseOptimizedClient": "Yes"
+    },
+    "pages": {
+      "moduleName": "MyFirstModule",
+      "layoutQualifiedName": "Atlas_Core.Atlas_Default",
+      "layoutParameterQname": "Atlas_Core.Atlas_Default.Main",
+      "pageNames": [
+        "Home",
+        "Order_Dashboard",
+        "Order_Overview",
+        "Order_NewEdit",
+        "Beer_Overview",
+        "Beer_NewEdit",
+        "Contract_Overview",
+        "Contract_NewEdit",
+        "AppUser_Overview",
+        "AppUser_NewEdit",
+        "Beer2beerManagementUser_Overview",
+        "Beer2beerManagementUser_NewEdit",
+        "BreweryOrHospitalityBusiness_Overview",
+        "BreweryOrHospitalityBusiness_NewEdit",
+        "HospitalityBusiness_Overview",
+        "HospitalityBusiness_NewEdit",
+        "Brewery_Overview",
+        "Brewery_NewEdit",
+        "Beer2beerManagementUser_WorkflowTask",
+        "breweryOverview",
+        "breweryDetail",
+        "hospitalityBusinessOverview",
+        "hospitalityBusinessDetail",
+        "beerOverview",
+        "beerDetail",
+        "orderOverview",
+        "orderDetail",
+        "contractOverview",
+        "contractDetail",
+        "proposalOverview",
+        "proposalDetail",
+        "orderTemplateOverview",
+        "orderTemplateDetail",
+        "shoppingCartOverview",
+        "shoppingCartDetail",
+        "OrderTemplate_Overview",
+        "OrderTemplate_NewEdit",
+        "Proposal_Overview",
+        "Proposal_NewEdit",
+        "ShoppingCart_Overview",
+        "ShoppingCart_NewEdit",
+        "SalesProposal_Overview",
+        "SalesProposal_NewEdit",
+        "OrderCommission_Overview",
+        "OrderCommission_NewEdit",
+        "DeliveryCapacity_Overview",
+        "DeliveryCapacity_NewEdit",
+        "ContractRenewal_Overview",
+        "ContractRenewal_NewEdit",
+        "OrderStatusUpdate_Overview",
+        "OrderStatusUpdate_NewEdit",
+        "ClientBase_Overview",
+        "ClientBase_NewEdit",
+        "LogicOperation_Overview",
+        "LogicOperation_NewEdit",
+        "BreweryUser_Overview",
+        "BreweryUser_NewEdit",
+        "HospitalityBusinessUser_Overview",
+        "HospitalityBusinessUser_NewEdit",
+        "AppAdministrator_Overview",
+        "AppAdministrator_NewEdit"
+      ],
+      "dg2Cleanup": {
+        "enabled": true,
+        "targetedPageNames": [],
+        "deletedPageNames": [],
+        "failed": []
+      },
+      "dataGrid2": {
+        "enabled": false,
+        "widgetId": "",
+        "resolvedFrom": "",
+        "useFallbackSchema": false,
+        "probeVariant": null,
+        "configuredWidgets": 0,
+        "attempts": []
+      }
+    },
+    "dg2Cleanup": {
+      "enabled": true,
+      "targetedPageNames": [],
+      "deletedPageNames": [],
+      "failed": []
+    },
+    "navigationUI": {
+      "requested": true,
+      "homeButtonsAdded": 0,
+      "navItemsAdded": 6
+    },
+    "homePage": {
+      "requested": true,
+      "updatedProfiles": 1,
+      "targetPageQualifiedName": "MyFirstModule.Home"
+    },
+    "afterCounts": {
+      "pagesInModule": 62,
+      "entitiesInModule": 21,
+      "microflowsInModule": 7,
+      "nanoflowsInModule": 1,
+      "workflowsInModule": 1
+    },
+    "beforeRefs": {
+      "pages": [
+        {
+          "name": "Home_Web",
+          "id": "5c6805fc-cadf-4d72-a5ef-f25da7cf4c97"
+        }
+      ],
+      "entities": [],
+      "microflows": [
+        {
+          "name": "MyFirstLogic",
+          "id": "4a8475b3-14cb-4100-8963-58f2fd3a0be8"
+        }
+      ],
+      "nanoflows": [],
+      "workflows": []
+    },
+    "afterRefs": {
+      "pages": [
+        {
+          "name": "Home_Web",
+          "id": "5c6805fc-cadf-4d72-a5ef-f25da7cf4c97"
+        },
+        {
+          "name": "Home",
+          "id": "577004c2-304f-4675-b56a-dde2a6d96006"
+        },
+        {
+          "name": "Order_Dashboard",
+          "id": "bbd711c7-795f-4448-9b9f-6af018660595"
+        },
+        {
+          "name": "Order_Overview",
+          "id": "9a7eb35a-34da-43e8-9796-82dda10b07e8"
+        },
+        {
+          "name": "Order_NewEdit",
+          "id": "edc13551-eb2a-436a-a056-d2d6ccb860eb"
+        },
+        {
+          "name": "Beer_Overview",
+          "id": "e8fba8cc-ac8f-45ef-9b63-df7c580cf1af"
+        },
+        {
+          "name": "Beer_NewEdit",
+          "id": "3b41af8b-12ec-4c3b-a849-65ea09e4f555"
+        },
+        {
+          "name": "Contract_Overview",
+          "id": "79bdea9a-ca38-4f94-892e-e37f04bf3626"
+        },
+        {
+          "name": "Contract_NewEdit",
+          "id": "8b140ba8-9262-40f3-83ad-f75e3cb58d9d"
+        },
+        {
+          "name": "AppUser_Overview",
+          "id": "0e67a14e-f92a-41cb-a871-2da5c425fd24"
+        },
+        {
+          "name": "AppUser_NewEdit",
+          "id": "d781e124-c9ca-48c6-ba5f-054b8b675deb"
+        },
+        {
+          "name": "Beer2beerManagementUser_Overview",
+          "id": "45d03056-2973-479d-8a6d-4e7486edbaed"
+        },
+        {
+          "name": "Beer2beerManagementUser_NewEdit",
+          "id": "1824883b-360a-4b0f-b39f-6c726a854a74"
+        },
+        {
+          "name": "BreweryOrHospitalityBusiness_Overview",
+          "id": "d59f3e21-af35-4e0a-b467-e699fedf7ba0"
+        },
+        {
+          "name": "BreweryOrHospitalityBusiness_NewEdit",
+          "id": "7fb86a7b-c547-4a02-930c-8ad6471b594a"
+        },
+        {
+          "name": "HospitalityBusiness_Overview",
+          "id": "d997358f-7184-4593-b148-eed54103aecc"
+        },
+        {
+          "name": "HospitalityBusiness_NewEdit",
+          "id": "7dd68d0c-dc2b-44dd-9fc3-0f2028e68a4d"
+        },
+        {
+          "name": "Brewery_Overview",
+          "id": "ea0193e9-e617-4a44-b762-6b8bcdd15821"
+        },
+        {
+          "name": "Brewery_NewEdit",
+          "id": "894806de-5eb5-4cda-b35d-cd93e66c7131"
+        },
+        {
+          "name": "Beer2beerManagementUser_WorkflowTask",
+          "id": "95c83550-ae12-44c3-bd3a-c1fc3f627577"
+        },
+        {
+          "name": "breweryOverview",
+          "id": "80d16995-f0b6-40c4-9c9a-09a33a51d83c"
+        },
+        {
+          "name": "breweryDetail",
+          "id": "a5e7f489-0250-4591-a648-466b6a7174d2"
+        },
+        {
+          "name": "hospitalityBusinessOverview",
+          "id": "b21794cd-f4ce-4039-8490-5f58b225cd69"
+        },
+        {
+          "name": "hospitalityBusinessDetail",
+          "id": "88e9e1f0-b569-4559-98af-9352fb96f8d4"
+        },
+        {
+          "name": "beerOverview",
+          "id": "9bb501dc-e42b-4a8b-a7f7-2b04bd02806d"
+        },
+        {
+          "name": "beerDetail",
+          "id": "71cb79be-25c1-49cc-b1c8-901706f7e360"
+        },
+        {
+          "name": "orderOverview",
+          "id": "b2267534-cc3e-4701-8afa-03e4b9612ca9"
+        },
+        {
+          "name": "orderDetail",
+          "id": "9037e1b7-d80f-49ed-98ff-a319ad386ed0"
+        },
+        {
+          "name": "contractOverview",
+          "id": "fe9dffc9-d150-45e3-8fc3-014936bcde52"
+        },
+        {
+          "name": "contractDetail",
+          "id": "a35f76dd-be7e-4402-a24e-62d52d7f0370"
+        },
+        {
+          "name": "proposalOverview",
+          "id": "f2da58ff-5d1e-4b5e-ae8f-ff5eebe0adbf"
+        },
+        {
+          "name": "proposalDetail",
+          "id": "4963d515-7fbf-4c83-be92-a6f4242502b4"
+        },
+        {
+          "name": "orderTemplateOverview",
+          "id": "04811e3c-5eca-48d2-852b-54ea952698a6"
+        },
+        {
+          "name": "orderTemplateDetail",
+          "id": "e1679cb0-8166-417a-ac10-38c8c180ce74"
+        },
+        {
+          "name": "shoppingCartOverview",
+          "id": "e2981978-28f8-4a79-8a08-7a231c77e799"
+        },
+        {
+          "name": "shoppingCartDetail",
+          "id": "11c809b5-05d4-4fe7-a28e-1c5230d4d7fb"
+        },
+        {
+          "name": "OrderTemplate_Overview",
+          "id": "b4b4fd19-350b-4384-aff0-4c5cae86ae15"
+        },
+        {
+          "name": "OrderTemplate_NewEdit",
+          "id": "6270ed26-9892-4ab6-a1e3-96b3354714e5"
+        },
+        {
+          "name": "Proposal_Overview",
+          "id": "3af192d9-ec25-425c-afea-b296e49a6163"
+        },
+        {
+          "name": "Proposal_NewEdit",
+          "id": "83adac36-c9d0-4cec-bbb3-044f6168d002"
+        },
+        {
+          "name": "ShoppingCart_Overview",
+          "id": "9572036d-8999-401a-bf50-8f05a35e9297"
+        },
+        {
+          "name": "ShoppingCart_NewEdit",
+          "id": "71a4e332-1c08-4f19-941e-1169b5cd8508"
+        },
+        {
+          "name": "SalesProposal_Overview",
+          "id": "4b2387f0-d40a-41f5-a084-2dfad1ef60e5"
+        },
+        {
+          "name": "SalesProposal_NewEdit",
+          "id": "155f3503-33ff-4212-93b5-a0cf1b449a1b"
+        },
+        {
+          "name": "OrderCommission_Overview",
+          "id": "c30390c7-3f3c-4d70-9de1-2d97f92cd92b"
+        },
+        {
+          "name": "OrderCommission_NewEdit",
+          "id": "ec06c295-dbf6-4337-8e87-1102319124d5"
+        },
+        {
+          "name": "DeliveryCapacity_Overview",
+          "id": "2587a6a4-0ea6-4fa0-b59d-c1dcafb801fb"
+        },
+        {
+          "name": "DeliveryCapacity_NewEdit",
+          "id": "ae86a16b-85a7-4e4b-9d37-63420b26a54e"
+        },
+        {
+          "name": "ContractRenewal_Overview",
+          "id": "308371d5-9456-4852-a999-fe9a1dca67e9"
+        },
+        {
+          "name": "ContractRenewal_NewEdit",
+          "id": "a9cce6ad-6ad0-4ff3-bd21-9672b6092fe8"
+        },
+        {
+          "name": "OrderStatusUpdate_Overview",
+          "id": "e60d6f06-b627-4647-9c30-b5eb1cc3a7df"
+        },
+        {
+          "name": "OrderStatusUpdate_NewEdit",
+          "id": "28bedb5b-b53d-47f3-90a0-ade51cd09c0d"
+        },
+        {
+          "name": "ClientBase_Overview",
+          "id": "a8c3a508-2111-40e3-b763-760e576c61db"
+        },
+        {
+          "name": "ClientBase_NewEdit",
+          "id": "81abe236-c4d3-4fb5-8a25-e09ef8ab70ac"
+        },
+        {
+          "name": "LogicOperation_Overview",
+          "id": "69e9c3f2-8fb4-45ad-a973-6f057f9b6a92"
+        },
+        {
+          "name": "LogicOperation_NewEdit",
+          "id": "f2581264-ba18-494b-b5ed-2690ee3287a0"
+        },
+        {
+          "name": "BreweryUser_Overview",
+          "id": "20c08363-b9ea-4ae5-8872-0e9b9ef11f58"
+        },
+        {
+          "name": "BreweryUser_NewEdit",
+          "id": "c71cd30d-4a70-47eb-beac-633c9cf52355"
+        },
+        {
+          "name": "HospitalityBusinessUser_Overview",
+          "id": "29e592df-ff7c-4253-8aed-a6b596899554"
+        },
+        {
+          "name": "HospitalityBusinessUser_NewEdit",
+          "id": "4ecdd260-0bbe-4a4a-b1f9-49abf179f4bb"
+        },
+        {
+          "name": "AppAdministrator_Overview",
+          "id": "fa858351-2208-4d03-86a9-24637f633974"
+        },
+        {
+          "name": "AppAdministrator_NewEdit",
+          "id": "44e157dd-f841-4315-9f9b-34c0454a8934"
+        }
+      ],
+      "entities": [
+        {
+          "name": "Brewery",
+          "id": "0bcd6979-1b28-4306-ab01-eb5c87fce7f8"
+        },
+        {
+          "name": "HospitalityBusiness",
+          "id": "ffc7e643-5db7-429b-88d1-a865abbfd095"
+        },
+        {
+          "name": "Beer",
+          "id": "78c24869-29b0-4c07-ba59-a3fbd41ec2d6"
+        },
+        {
+          "name": "Order",
+          "id": "bbb35236-8a54-4111-8894-76347dcdd65d"
+        },
+        {
+          "name": "Contract",
+          "id": "3f12d7d4-cde4-4e90-ab9d-0a48f2616935"
+        },
+        {
+          "name": "OrderTemplate",
+          "id": "c65e46b3-4833-43b5-9520-06aa5b0c2a29"
+        },
+        {
+          "name": "Proposal",
+          "id": "307f1222-22e0-4dbe-8798-db23df51a09a"
+        },
+        {
+          "name": "AppUser",
+          "id": "49709839-8f4c-47e3-a75e-f20c6297f3af"
+        },
+        {
+          "name": "Beer2beerManagementUser",
+          "id": "b4c2330a-01b2-4255-974f-27a2fe00e2e1"
+        },
+        {
+          "name": "BreweryOrHospitalityBusiness",
+          "id": "c61133d4-0215-4b38-a80c-20f447c8de8e"
+        },
+        {
+          "name": "ShoppingCart",
+          "id": "897972e7-f45e-4d03-973f-5138ced5dd17"
+        },
+        {
+          "name": "SalesProposal",
+          "id": "c272f535-1dd5-4d56-a704-0091186c527a"
+        },
+        {
+          "name": "OrderCommission",
+          "id": "62a83938-1730-4a1b-9b60-eba1b766ff19"
+        },
+        {
+          "name": "DeliveryCapacity",
+          "id": "1c9e5b50-3f5e-4037-a1a5-45add5a0d637"
+        },
+        {
+          "name": "ContractRenewal",
+          "id": "e864a579-6563-405e-b256-ba950ce9b014"
+        },
+        {
+          "name": "OrderStatusUpdate",
+          "id": "19cf416b-b4fa-408c-9c83-870ce6fd8a1f"
+        },
+        {
+          "name": "ClientBase",
+          "id": "38fbc2c3-401f-4636-a5c6-4c4acc20e10b"
+        },
+        {
+          "name": "LogicOperation",
+          "id": "c2c6537f-eaf4-4cee-89b3-358e87151906"
+        },
+        {
+          "name": "BreweryUser",
+          "id": "2644e39a-c510-4397-83a2-32d999277fed"
+        },
+        {
+          "name": "HospitalityBusinessUser",
+          "id": "511ec139-41de-4ca3-a5fa-067e9e883289"
+        },
+        {
+          "name": "AppAdministrator",
+          "id": "c88760a4-fc91-4466-b9e4-b992b1ec4480"
+        }
+      ],
+      "microflows": [
+        {
+          "name": "MyFirstLogic",
+          "id": "4a8475b3-14cb-4100-8963-58f2fd3a0be8"
+        },
+        {
+          "name": "CreateProposal",
+          "id": "86b2c55e-bcc4-4c5b-b998-014b83227d8f"
+        },
+        {
+          "name": "CreateContract",
+          "id": "5c235638-5be3-4fe3-a82a-ab0238b94c92"
+        },
+        {
+          "name": "UpdateOrderStatus",
+          "id": "67993d41-7c83-4755-87ae-5d27e60b419d"
+        },
+        {
+          "name": "MF_Beer2beerManagementUser_Prepare",
+          "id": "ac75bbf3-4c8d-4114-a945-f3eebece82af"
+        },
+        {
+          "name": "MF_Beer2beerManagementUser_Approve",
+          "id": "cc2da829-7a61-4937-934d-571b5da960a9"
+        },
+        {
+          "name": "MF_Beer2beerManagementUser_Reject",
+          "id": "0c77287f-e3c9-4a9e-8208-7af09d24252f"
+        }
+      ],
+      "nanoflows": [
+        {
+          "name": "ValidateOrderQuantity",
+          "id": "467dd7b5-6283-4aa1-9f83-4827fc813462"
+        }
+      ],
+      "workflows": [
+        {
+          "name": "WF_Beer2beerManagementUser",
+          "id": "862c6daf-8d8c-416c-a36f-f4533e020e98"
+        }
+      ]
+    },
+    "verification": {
+      "missing": {
+        "pages": [],
+        "entities": [],
+        "microflows": [],
+        "nanoflows": [],
+        "workflows": []
+      },
+      "ok": true,
+      "artifacts": {
+        "ok": true,
+        "missing": {
+          "moduleRoles": [],
+          "userRoles": [],
+          "demoUsers": [],
+          "pageVisibility": [],
+          "homePageButtons": [],
+          "menuItems": [],
+          "widgets": []
+        }
+      },
+      "semantic": {
+        "enabled": false,
+        "ok": true,
+        "errors": []
+      }
+    },
+    "capabilities": {
+      "modules": [
+        "Administration",
+        "Atlas_Core",
+        "Atlas_Web_Content",
+        "DataWidgets",
+        "FeedbackModule",
+        "MyFirstModule",
+        "NanoflowCommons",
+        "WebActions"
+      ],
+      "widgetIds": [],
+      "widgetFamilies": [
+        "datawidgets_module"
+      ]
+    },
+    "commitMessage": "Rerun practical performance builder-stage run: brewery run-04",
+    "ok": true
+  }
+}

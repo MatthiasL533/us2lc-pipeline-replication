@@ -1,0 +1,842 @@
+[
+  {
+    "number": 1,
+    "text": "As a manager, I want to have an overview and modification functionality of all ongoing and upcoming sessions, tutor and student statuses, and matching details, so that I can address issues in real time.",
+    "role": {
+      "name": "manager",
+      "compound": []
+    },
+    "means": {
+      "mainObject": "functionality",
+      "compound": []
+    },
+    "json": {
+      "number": 1,
+      "text": "As a manager, I want to have an overview and modification functionality of all ongoing and upcoming sessions, tutor and student statuses, and matching details, so that I can address issues in real time.",
+      "iloc": [
+        3,
+        27
+      ],
+      "role": {
+        "text": "manager",
+        "indicator": "As a"
+      },
+      "means": {
+        "text": "have an overview and modification functionality of all ongoing and upcoming sessions tutor and student statuses and matching details",
+        "indicator": "I want to"
+      },
+      "ends": {
+        "text": "I can address issues in real time",
+        "indicator": "So that"
+      }
+    }
+  },
+  {
+    "number": 8,
+    "text": "As a manager, I want to be able to verify accounts of students and tutors.",
+    "role": {
+      "name": "manager",
+      "compound": []
+    },
+    "means": {
+      "mainObject": "accounts",
+      "compound": []
+    },
+    "json": {
+      "number": 8,
+      "text": "As a manager, I want to be able to verify accounts of students and tutors.",
+      "iloc": [
+        3
+      ],
+      "role": {
+        "text": "manager",
+        "indicator": "As a"
+      },
+      "means": {
+        "text": "verify accounts of students and tutors",
+        "indicator": "I want to be able to"
+      }
+    }
+  },
+  {
+    "number": 9,
+    "text": "As a student, I want to be able to make my account, so that I can access the platform where I can manage my matches, sessions, and pay securely.",
+    "role": {
+      "name": "student",
+      "compound": []
+    },
+    "means": {
+      "mainObject": "account",
+      "compound": []
+    },
+    "json": {
+      "number": 9,
+      "text": "As a student, I want to be able to make my account, so that I can access the platform where I can manage my matches, sessions, and pay securely.",
+      "iloc": [
+        3,
+        14,
+        20
+      ],
+      "role": {
+        "text": "student",
+        "indicator": "As a"
+      },
+      "means": {
+        "text": "make my account",
+        "indicator": "I want to be able to"
+      },
+      "ends": {
+        "text": "I can access the platform where I can manage my matches sessions and pay securely",
+        "indicator": "So that"
+      }
+    }
+  },
+  {
+    "number": 10,
+    "text": "As a student, I want to be able to select one or multiple subjects I want to be tutored in.",
+    "role": {
+      "name": "student",
+      "compound": []
+    },
+    "means": {
+      "mainObject": "subjects",
+      "compound": []
+    },
+    "json": {
+      "number": 10,
+      "text": "As a student, I want to be able to select one or multiple subjects I want to be tutored in.",
+      "iloc": [
+        3,
+        14
+      ],
+      "role": {
+        "text": "student",
+        "indicator": "As a"
+      },
+      "means": {
+        "text": "select one or multiple subjects I want to be tutored in",
+        "indicator": "I want to be able to"
+      }
+    }
+  },
+  {
+    "number": 11,
+    "text": "As a student, I want to choose the type of session: online or in-person.",
+    "role": {
+      "name": "student",
+      "compound": []
+    },
+    "means": {
+      "mainObject": "type",
+      "compound": []
+    },
+    "json": {
+      "number": 11,
+      "text": "As a student, I want to choose the type of session: online or in-person.",
+      "iloc": [
+        3
+      ],
+      "role": {
+        "text": "student",
+        "indicator": "As a"
+      },
+      "means": {
+        "text": "choose the type of session: online or in-person",
+        "indicator": "I want to"
+      }
+    }
+  },
+  {
+    "number": 12,
+    "text": "As a tutor, I want to be able to make an account with my personal information, so that I can access the platform where I can find clients for my services.",
+    "role": {
+      "name": "tutor",
+      "compound": []
+    },
+    "means": {
+      "mainObject": "account",
+      "compound": []
+    },
+    "json": {
+      "number": 12,
+      "text": "As a tutor, I want to be able to make an account with my personal information, so that I can access the platform where I can find clients for my services.",
+      "iloc": [
+        3,
+        18,
+        24
+      ],
+      "role": {
+        "text": "tutor",
+        "indicator": "As a"
+      },
+      "means": {
+        "text": "make an account with my personal information",
+        "indicator": "I want to be able to"
+      },
+      "ends": {
+        "text": "I can access the platform where I can find clients for my services",
+        "indicator": "So that"
+      }
+    }
+  },
+  {
+    "number": 13,
+    "text": "As a tutor, I want to be able to provide my files (CV, and other documents) in the system, so that the hiring process is easy and streamlined.",
+    "role": {
+      "name": "tutor",
+      "compound": []
+    },
+    "means": {
+      "mainObject": "files",
+      "compound": []
+    },
+    "json": {
+      "number": 13,
+      "text": "As a tutor, I want to be able to provide my files (CV, and other documents) in the system, so that the hiring process is easy and streamlined.",
+      "iloc": [
+        3
+      ],
+      "role": {
+        "text": "tutor",
+        "indicator": "As a"
+      },
+      "means": {
+        "text": "provide my files (CV and other documents) in the system",
+        "indicator": "I want to be able to"
+      },
+      "ends": {
+        "text": "the hiring process is easy and streamlined",
+        "indicator": "So that"
+      }
+    }
+  },
+  {
+    "number": 14,
+    "text": "As a tutor, I want to specify my subjects, so that I can be matched to a student based on this.",
+    "role": {
+      "name": "tutor",
+      "compound": []
+    },
+    "means": {
+      "mainObject": "subjects",
+      "compound": []
+    },
+    "json": {
+      "number": 14,
+      "text": "As a tutor, I want to specify my subjects, so that I can be matched to a student based on this.",
+      "iloc": [
+        3,
+        11
+      ],
+      "role": {
+        "text": "tutor",
+        "indicator": "As a"
+      },
+      "means": {
+        "text": "specify my subjects",
+        "indicator": "I want to"
+      },
+      "ends": {
+        "text": "I can be matched to a student based on this",
+        "indicator": "So that"
+      }
+    }
+  },
+  {
+    "number": 15,
+    "text": "As a tutor, I want to specify my availability, so that I can be matched to a student based on this.",
+    "role": {
+      "name": "tutor",
+      "compound": []
+    },
+    "means": {
+      "mainObject": "availability",
+      "compound": []
+    },
+    "json": {
+      "number": 15,
+      "text": "As a tutor, I want to specify my availability, so that I can be matched to a student based on this.",
+      "iloc": [
+        3,
+        11
+      ],
+      "role": {
+        "text": "tutor",
+        "indicator": "As a"
+      },
+      "means": {
+        "text": "specify my availability",
+        "indicator": "I want to"
+      },
+      "ends": {
+        "text": "I can be matched to a student based on this",
+        "indicator": "So that"
+      }
+    }
+  },
+  {
+    "number": 16,
+    "text": "As a tutor, I want to update my availability dynamically in the app, so that I don't get matched for unavailable slots.",
+    "role": {
+      "name": "tutor",
+      "compound": []
+    },
+    "means": {
+      "mainObject": "availability",
+      "compound": []
+    },
+    "json": {
+      "number": 16,
+      "text": "As a tutor, I want to update my availability dynamically in the app, so that I don't get matched for unavailable slots.",
+      "iloc": [
+        3,
+        15
+      ],
+      "role": {
+        "text": "tutor",
+        "indicator": "As a"
+      },
+      "means": {
+        "text": "update my availability dynamically in the app",
+        "indicator": "I want to"
+      },
+      "ends": {
+        "text": "I don't get matched for unavailable slots",
+        "indicator": "So that"
+      }
+    }
+  },
+  {
+    "number": 17,
+    "text": "As a tutor, I want to specify my location, so that I can be matched to a student based on this.",
+    "role": {
+      "name": "tutor",
+      "compound": []
+    },
+    "means": {
+      "mainObject": "location",
+      "compound": []
+    },
+    "json": {
+      "number": 17,
+      "text": "As a tutor, I want to specify my location, so that I can be matched to a student based on this.",
+      "iloc": [
+        3,
+        11
+      ],
+      "role": {
+        "text": "tutor",
+        "indicator": "As a"
+      },
+      "means": {
+        "text": "specify my location",
+        "indicator": "I want to"
+      },
+      "ends": {
+        "text": "I can be matched to a student based on this",
+        "indicator": "So that"
+      }
+    }
+  },
+  {
+    "number": 18,
+    "text": "As a tutor, I want to be able to cancel a session.",
+    "role": {
+      "name": "tutor",
+      "compound": []
+    },
+    "means": {
+      "mainObject": "session",
+      "compound": []
+    },
+    "json": {
+      "number": 18,
+      "text": "As a tutor, I want to be able to cancel a session.",
+      "iloc": [
+        3
+      ],
+      "role": {
+        "text": "tutor",
+        "indicator": "As a"
+      },
+      "means": {
+        "text": "cancel a session",
+        "indicator": "I want to be able to"
+      }
+    }
+  },
+  {
+    "number": 22,
+    "text": "As a student, I want to be matched with a tutor that teaches the subject I am interested in.",
+    "role": {
+      "name": "student",
+      "compound": []
+    },
+    "means": {
+      "mainObject": "subject",
+      "compound": []
+    },
+    "json": {
+      "number": 22,
+      "text": "As a student, I want to be matched with a tutor that teaches the subject I am interested in.",
+      "iloc": [
+        3,
+        15
+      ],
+      "role": {
+        "text": "student",
+        "indicator": "As a"
+      },
+      "means": {
+        "text": "be matched with a tutor that teaches the subject I am interested in",
+        "indicator": "I want to"
+      }
+    }
+  },
+  {
+    "number": 23,
+    "text": "As a student, I want to be matched with a tutor that lives in the same area.",
+    "role": {
+      "name": "student",
+      "compound": []
+    },
+    "means": {
+      "mainObject": "tutor",
+      "compound": []
+    },
+    "json": {
+      "number": 23,
+      "text": "As a student, I want to be matched with a tutor that lives in the same area.",
+      "iloc": [
+        3
+      ],
+      "role": {
+        "text": "student",
+        "indicator": "As a"
+      },
+      "means": {
+        "text": "be matched with a tutor that lives in the same area",
+        "indicator": "I want to"
+      }
+    }
+  },
+  {
+    "number": 24,
+    "text": "As a student, I want to be matched with a tutor that is available in the hours I have specified.",
+    "role": {
+      "name": "student",
+      "compound": []
+    },
+    "means": {
+      "mainObject": "tutor",
+      "compound": []
+    },
+    "json": {
+      "number": 24,
+      "text": "As a student, I want to be matched with a tutor that is available in the hours I have specified.",
+      "iloc": [
+        3,
+        17
+      ],
+      "role": {
+        "text": "student",
+        "indicator": "As a"
+      },
+      "means": {
+        "text": "be matched with a tutor that is available in the hours I have specified",
+        "indicator": "I want to"
+      }
+    }
+  },
+  {
+    "number": 25,
+    "text": "As a student, I want to be matched with a tutor who, if located far away, can offer online sessions, so that I can still receive tutoring regardless of location.",
+    "role": {
+      "name": "student",
+      "compound": []
+    },
+    "means": {
+      "mainObject": "sessions",
+      "compound": []
+    },
+    "json": {
+      "number": 25,
+      "text": "As a student, I want to be matched with a tutor who, if located far away, can offer online sessions, so that I can still receive tutoring regardless of location.",
+      "iloc": [
+        3,
+        22
+      ],
+      "role": {
+        "text": "student",
+        "indicator": "As a"
+      },
+      "means": {
+        "text": "be matched with a tutor who if located far away can offer online sessions",
+        "indicator": "I want to"
+      },
+      "ends": {
+        "text": "I can still receive tutoring regardless of location",
+        "indicator": "So that"
+      }
+    }
+  },
+  {
+    "number": 26,
+    "text": "As a tutor, I want to be matched with a student that is interested in the subject I teach.",
+    "role": {
+      "name": "tutor",
+      "compound": []
+    },
+    "means": {
+      "mainObject": "student",
+      "compound": []
+    },
+    "json": {
+      "number": 26,
+      "text": "As a tutor, I want to be matched with a student that is interested in the subject I teach.",
+      "iloc": [
+        3,
+        17
+      ],
+      "role": {
+        "text": "tutor",
+        "indicator": "As a"
+      },
+      "means": {
+        "text": "be matched with a student that is interested in the subject I teach",
+        "indicator": "I want to"
+      }
+    }
+  },
+  {
+    "number": 27,
+    "text": "As a tutor, I want to be matched with a student that lives in the same area.",
+    "role": {
+      "name": "tutor",
+      "compound": []
+    },
+    "means": {
+      "mainObject": "student",
+      "compound": []
+    },
+    "json": {
+      "number": 27,
+      "text": "As a tutor, I want to be matched with a student that lives in the same area.",
+      "iloc": [
+        3
+      ],
+      "role": {
+        "text": "tutor",
+        "indicator": "As a"
+      },
+      "means": {
+        "text": "be matched with a student that lives in the same area",
+        "indicator": "I want to"
+      }
+    }
+  },
+  {
+    "number": 28,
+    "text": "As a tutor, I want to be matched with a student that is available in the hours I have specified.",
+    "role": {
+      "name": "tutor",
+      "compound": []
+    },
+    "means": {
+      "mainObject": "student",
+      "compound": []
+    },
+    "json": {
+      "number": 28,
+      "text": "As a tutor, I want to be matched with a student that is available in the hours I have specified.",
+      "iloc": [
+        3,
+        17
+      ],
+      "role": {
+        "text": "tutor",
+        "indicator": "As a"
+      },
+      "means": {
+        "text": "be matched with a student that is available in the hours I have specified",
+        "indicator": "I want to"
+      }
+    }
+  },
+  {
+    "number": 29,
+    "text": "As a tutor, I want to be matched with a student who, if located far away, can agree to online sessions, so that I can still provide my services regardless of location.",
+    "role": {
+      "name": "tutor",
+      "compound": []
+    },
+    "means": {
+      "mainObject": "student",
+      "compound": []
+    },
+    "json": {
+      "number": 29,
+      "text": "As a tutor, I want to be matched with a student who, if located far away, can agree to online sessions, so that I can still provide my services regardless of location.",
+      "iloc": [
+        3,
+        23
+      ],
+      "role": {
+        "text": "tutor",
+        "indicator": "As a"
+      },
+      "means": {
+        "text": "be matched with a student who if located far away can agree to online sessions",
+        "indicator": "I want to"
+      },
+      "ends": {
+        "text": "I can still provide my services regardless of location",
+        "indicator": "So that"
+      }
+    }
+  },
+  {
+    "number": 34,
+    "text": "As a student, I want to receive email confirmation after payment, so that I have proof of transaction and assurance that my payment was successfully processed.",
+    "role": {
+      "name": "student",
+      "compound": []
+    },
+    "means": {
+      "mainObject": "confirmation",
+      "compound": [
+        "email",
+        "confirmation"
+      ]
+    },
+    "json": {
+      "number": 34,
+      "text": "As a student, I want to receive email confirmation after payment, so that I have proof of transaction and assurance that my payment was successfully processed.",
+      "iloc": [
+        3,
+        13
+      ],
+      "role": {
+        "text": "student",
+        "indicator": "As a"
+      },
+      "means": {
+        "text": "receive email confirmation after payment",
+        "indicator": "I want to"
+      },
+      "ends": {
+        "text": "I have proof of transaction and assurance that my payment was successfully processed",
+        "indicator": "So that"
+      }
+    }
+  },
+  {
+    "number": 35,
+    "text": "As a student, I want to be notified if a session is cancelled by the tutor.",
+    "role": {
+      "name": "student",
+      "compound": []
+    },
+    "means": {
+      "mainObject": "tutor",
+      "compound": []
+    },
+    "json": {
+      "number": 35,
+      "text": "As a student, I want to be notified if a session is cancelled by the tutor.",
+      "iloc": [
+        3
+      ],
+      "role": {
+        "text": "student",
+        "indicator": "As a"
+      },
+      "means": {
+        "text": "be notified if a session is cancelled by the tutor",
+        "indicator": "I want to"
+      }
+    }
+  },
+  {
+    "number": 36,
+    "text": "As a tutor, I want to receive notifications three and one day prior to the session date, so that I don't forget the session.",
+    "role": {
+      "name": "tutor",
+      "compound": []
+    },
+    "means": {
+      "mainObject": "notifications",
+      "compound": []
+    },
+    "json": {
+      "number": 36,
+      "text": "As a tutor, I want to receive notifications three and one day prior to the session date, so that I don't forget the session.",
+      "iloc": [
+        3,
+        19
+      ],
+      "role": {
+        "text": "tutor",
+        "indicator": "As a"
+      },
+      "means": {
+        "text": "receive notifications three and one day prior to the session date",
+        "indicator": "I want to"
+      },
+      "ends": {
+        "text": "I don't forget the session",
+        "indicator": "So that"
+      }
+    }
+  },
+  {
+    "number": 37,
+    "text": "As a tutor, I want to be notified if a session is cancelled by the student.",
+    "role": {
+      "name": "tutor",
+      "compound": []
+    },
+    "means": {
+      "mainObject": "student",
+      "compound": []
+    },
+    "json": {
+      "number": 37,
+      "text": "As a tutor, I want to be notified if a session is cancelled by the student.",
+      "iloc": [
+        3
+      ],
+      "role": {
+        "text": "tutor",
+        "indicator": "As a"
+      },
+      "means": {
+        "text": "be notified if a session is cancelled by the student",
+        "indicator": "I want to"
+      }
+    }
+  },
+  {
+    "number": 42,
+    "text": "As a tutor, I want to be able to view my ratings.",
+    "role": {
+      "name": "tutor",
+      "compound": []
+    },
+    "means": {
+      "mainObject": "ratings",
+      "compound": []
+    },
+    "json": {
+      "number": 42,
+      "text": "As a tutor, I want to be able to view my ratings.",
+      "iloc": [
+        3
+      ],
+      "role": {
+        "text": "tutor",
+        "indicator": "As a"
+      },
+      "means": {
+        "text": "view my ratings",
+        "indicator": "I want to be able to"
+      }
+    }
+  },
+  {
+    "number": 43,
+    "text": "As a tutor, I want to see session-specific feedback, so that I can improve my performance based on student input.",
+    "role": {
+      "name": "tutor",
+      "compound": []
+    },
+    "means": {
+      "mainObject": "feedback",
+      "compound": []
+    },
+    "json": {
+      "number": 43,
+      "text": "As a tutor, I want to see session-specific feedback, so that I can improve my performance based on student input.",
+      "iloc": [
+        3,
+        13
+      ],
+      "role": {
+        "text": "tutor",
+        "indicator": "As a"
+      },
+      "means": {
+        "text": "see session-specific feedback",
+        "indicator": "I want to"
+      },
+      "ends": {
+        "text": "I can improve my performance based on student input",
+        "indicator": "So that"
+      }
+    }
+  },
+  {
+    "number": 48,
+    "text": "As a tutor, I want to view a detailed breakdown of my earnings, including completed sessions and cancellations, so that I can track my income.",
+    "role": {
+      "name": "tutor",
+      "compound": []
+    },
+    "means": {
+      "mainObject": "breakdown",
+      "compound": []
+    },
+    "json": {
+      "number": 48,
+      "text": "As a tutor, I want to view a detailed breakdown of my earnings, including completed sessions and cancellations, so that I can track my income.",
+      "iloc": [
+        3,
+        20
+      ],
+      "role": {
+        "text": "tutor",
+        "indicator": "As a"
+      },
+      "means": {
+        "text": "view a detailed breakdown of my earnings including completed sessions and cancellations",
+        "indicator": "I want to"
+      },
+      "ends": {
+        "text": "I can track my income",
+        "indicator": "So that"
+      }
+    }
+  },
+  {
+    "number": 49,
+    "text": "As a manager, I want to access information about shortages of students or tutors by neighborhoods, so that I can advertise the services in the given areas.",
+    "role": {
+      "name": "manager",
+      "compound": []
+    },
+    "means": {
+      "mainObject": "information",
+      "compound": []
+    },
+    "json": {
+      "number": 49,
+      "text": "As a manager, I want to access information about shortages of students or tutors by neighborhoods, so that I can advertise the services in the given areas.",
+      "iloc": [
+        3,
+        18
+      ],
+      "role": {
+        "text": "manager",
+        "indicator": "As a"
+      },
+      "means": {
+        "text": "access information about shortages of students or tutors by neighborhoods",
+        "indicator": "I want to"
+      },
+      "ends": {
+        "text": "I can advertise the services in the given areas",
+        "indicator": "So that"
+      }
+    }
+  }
+]

@@ -1,0 +1,1817 @@
+{
+  "ok": true,
+  "inputPath": "/workspace/us2lc-pipeline/artifacts/practical-performance/20260528-165228/inputs/cinema/user-stories.txt",
+  "outputDir": "/workspace/us2lc-pipeline/artifacts/pv-runs/llama3.1-8b/cinema/process-visualizer-run",
+  "model": "llama3.1:8b",
+  "ollamaUrl": "http://127.0.0.1:11434",
+  "entities": [
+    {
+      "entity_group": "AGENT",
+      "word": "registered user",
+      "start": 5,
+      "end": 20,
+      "score": 0.99
+    },
+    {
+      "entity_group": "TASK",
+      "word": "subscribe to Cinema premium",
+      "start": 32,
+      "end": 57,
+      "score": 0.99
+    },
+    {
+      "entity_group": "PROCESS_INFO",
+      "word": "so that i can access premium features",
+      "start": 59,
+      "end": 96,
+      "score": 0.99
+    },
+    {
+      "entity_group": "TASK",
+      "word": "enter my payment details",
+      "start": 130,
+      "end": 154,
+      "score": 0.99
+    },
+    {
+      "entity_group": "PROCESS_INFO",
+      "word": "so that i can subscribe to cinema premium",
+      "start": 156,
+      "end": 195,
+      "score": 0.99
+    },
+    {
+      "entity_group": "AGENT",
+      "word": "administrator",
+      "start": 204,
+      "end": 217,
+      "score": 0.99
+    },
+    {
+      "entity_group": "TASK",
+      "word": "an overview of historic user payments",
+      "start": 226,
+      "end": 263,
+      "score": 0.99
+    },
+    {
+      "entity_group": "PROCESS_INFO",
+      "word": "so that i can identify customer payment-related issues",
+      "start": 265,
+      "end": 319,
+      "score": 0.99
+    },
+    {
+      "entity_group": "AGENT",
+      "word": "premium user",
+      "start": 326,
+      "end": 338,
+      "score": 0.99
+    },
+    {
+      "entity_group": "TASK",
+      "word": "change my automated renew subscription status",
+      "start": 350,
+      "end": 395,
+      "score": 0.99
+    },
+    {
+      "entity_group": "PROCESS_INFO",
+      "word": "so that my automated renew subscription status aligns with my needs",
+      "start": 397,
+      "end": 464,
+      "score": 0.99
+    },
+    {
+      "entity_group": "TASK",
+      "word": "view my subscription status",
+      "start": 495,
+      "end": 522,
+      "score": 0.99
+    },
+    {
+      "entity_group": "PROCESS_INFO",
+      "word": "so that i am informed about whether my subscription status's active",
+      "start": 524,
+      "end": 591,
+      "score": 0.99
+    },
+    {
+      "entity_group": "TASK",
+      "word": "view my subscription start date",
+      "start": 622,
+      "end": 653,
+      "score": 0.99
+    },
+    {
+      "entity_group": "PROCESS_INFO",
+      "word": "so that i am informed about my subscription",
+      "start": 655,
+      "end": 698,
+      "score": 0.99
+    },
+    {
+      "entity_group": "TASK",
+      "word": "view my subscription end date",
+      "start": 729,
+      "end": 758,
+      "score": 0.99
+    },
+    {
+      "entity_group": "TASK",
+      "word": "view my subscription price",
+      "start": 834,
+      "end": 860,
+      "score": 0.99
+    },
+    {
+      "entity_group": "AGENT",
+      "word": "premium user",
+      "start": 912,
+      "end": 924,
+      "score": 0.99
+    },
+    {
+      "entity_group": "TASK",
+      "word": "view my subscription cancellation date",
+      "start": 936,
+      "end": 974,
+      "score": 0.99
+    },
+    {
+      "entity_group": "CONDITION",
+      "word": "so that i am informed about my subscription",
+      "start": 976,
+      "end": 1019,
+      "score": 0.99
+    },
+    {
+      "entity_group": "TASK",
+      "word": "update my PaymentMethod details",
+      "start": 1050,
+      "end": 1081,
+      "score": 0.99
+    },
+    {
+      "entity_group": "CONDITION",
+      "word": "so that i can ensure my Subscription stays active",
+      "start": 1083,
+      "end": 1132,
+      "score": 0.99
+    },
+    {
+      "entity_group": "TASK",
+      "word": "delete my paymentmethod details",
+      "start": 1163,
+      "end": 1194,
+      "score": 0.99
+    },
+    {
+      "entity_group": "CONDITION",
+      "word": "so that i can ensure i am not billed",
+      "start": 1196,
+      "end": 1232,
+      "score": 0.99
+    },
+    {
+      "entity_group": "TASK",
+      "word": "cancel my subscription",
+      "start": 1263,
+      "end": 1285,
+      "score": 0.99
+    },
+    {
+      "entity_group": "AGENT",
+      "word": "administrator",
+      "start": 1331,
+      "end": 1344,
+      "score": 0.99
+    },
+    {
+      "entity_group": "TASK",
+      "word": "flag suspicious activity based on user location history",
+      "start": 1356,
+      "end": 1411,
+      "score": 0.99
+    },
+    {
+      "entity_group": "CONDITION",
+      "word": "so that i can detect fraudulent behaviour",
+      "start": 1413,
+      "end": 1454,
+      "score": 0.99
+    },
+    {
+      "entity_group": "TASK",
+      "word": "change a premium user's automated renew subscription status",
+      "start": 1487,
+      "end": 1546,
+      "score": 0.99
+    },
+    {
+      "entity_group": "CONDITION",
+      "word": "so that a premium user's automated renew subscription status aligns with their needs",
+      "start": 1548,
+      "end": 1632,
+      "score": 0.99
+    },
+    {
+      "entity_group": "TASK",
+      "word": "view a premium user's subscription status",
+      "start": 1665,
+      "end": 1706,
+      "score": 0.99
+    },
+    {
+      "entity_group": "CONDITION",
+      "word": "so that i am informed about whether a premium user's subscription status's active",
+      "start": 1708,
+      "end": 1789,
+      "score": 0.99
+    },
+    {
+      "entity_group": "TASK",
+      "word": "change a premium user's subscription status",
+      "start": 1822,
+      "end": 1865,
+      "score": 0.99
+    },
+    {
+      "entity_group": "CONDITION",
+      "word": "so that a premium user's subscription status aligns with their needs",
+      "start": 1867,
+      "end": 1935,
+      "score": 0.99
+    },
+    {
+      "entity_group": "AGENT",
+      "word": "administrator",
+      "start": 1943,
+      "end": 1956,
+      "score": 0.99
+    },
+    {
+      "entity_group": "TASK",
+      "word": "view a premium user's subscription start date",
+      "start": 1968,
+      "end": 2013,
+      "score": 0.99
+    },
+    {
+      "entity_group": "PROCESS_INFO",
+      "word": "so that i am informed about their subscription",
+      "start": 2015,
+      "end": 2061,
+      "score": 0.99
+    },
+    {
+      "entity_group": "TASK",
+      "word": "change a premium user's subscription start date",
+      "start": 2094,
+      "end": 2141,
+      "score": 0.99
+    },
+    {
+      "entity_group": "PROCESS_INFO",
+      "word": "so that a premium user's subscription start date aligns with their needs",
+      "start": 2143,
+      "end": 2215,
+      "score": 0.99
+    },
+    {
+      "entity_group": "TASK",
+      "word": "view a premium user's subscription end date",
+      "start": 2248,
+      "end": 2291,
+      "score": 0.99
+    },
+    {
+      "entity_group": "TASK",
+      "word": "change a premium user's subscription end date",
+      "start": 2372,
+      "end": 2417,
+      "score": 0.99
+    },
+    {
+      "entity_group": "PROCESS_INFO",
+      "word": "so that it aligns with their needs",
+      "start": 2419,
+      "end": 2453,
+      "score": 0.99
+    },
+    {
+      "entity_group": "TASK",
+      "word": "view a premium user's subscription price",
+      "start": 2486,
+      "end": 2526,
+      "score": 0.99
+    },
+    {
+      "entity_group": "TASK",
+      "word": "change a premium user's subscription price",
+      "start": 2607,
+      "end": 2649,
+      "score": 0.99
+    },
+    {
+      "entity_group": "PROCESS_INFO",
+      "word": "so that a premium user's subscription price aligns with their needs",
+      "start": 2651,
+      "end": 2718,
+      "score": 0.99
+    },
+    {
+      "entity_group": "TASK",
+      "word": "view a premium user's subscription cancellation date",
+      "start": 2751,
+      "end": 2803,
+      "score": 0.99
+    },
+    {
+      "entity_group": "TASK",
+      "word": "change a premium user's subscription cancellation date",
+      "start": 2884,
+      "end": 2938,
+      "score": 0.99
+    },
+    {
+      "entity_group": "AGENT",
+      "word": "administrator",
+      "start": 2982,
+      "end": 2995,
+      "score": 0.99
+    },
+    {
+      "entity_group": "TASK",
+      "word": "update a premium user's payment method details",
+      "start": 3007,
+      "end": 3053,
+      "score": 0.99
+    },
+    {
+      "entity_group": "AGENT",
+      "word": "premium user",
+      "start": 3016,
+      "end": 3028,
+      "score": 0.99
+    },
+    {
+      "entity_group": "PROCESS_INFO",
+      "word": "so that i can ensure their subscription stays active",
+      "start": 3055,
+      "end": 3107,
+      "score": 0.99
+    },
+    {
+      "entity_group": "TASK",
+      "word": "delete a premium user's payment method details",
+      "start": 3140,
+      "end": 3186,
+      "score": 0.99
+    },
+    {
+      "entity_group": "PROCESS_INFO",
+      "word": "so that i can ensure a premium user's are not billed",
+      "start": 3188,
+      "end": 3240,
+      "score": 0.99
+    },
+    {
+      "entity_group": "TASK",
+      "word": "cancel a premium user's subscription",
+      "start": 3273,
+      "end": 3309,
+      "score": 0.99
+    },
+    {
+      "entity_group": "TASK",
+      "word": "view movie showtimes",
+      "start": 3394,
+      "end": 3414,
+      "score": 0.99
+    },
+    {
+      "entity_group": "PROCESS_INFO",
+      "word": "so that i can plan my cinema trip accordingly",
+      "start": 3416,
+      "end": 3461,
+      "score": 0.99
+    },
+    {
+      "entity_group": "TASK",
+      "word": "view the cinema room for a specific movie showing",
+      "start": 3492,
+      "end": 3541,
+      "score": 0.99
+    },
+    {
+      "entity_group": "PROCESS_INFO",
+      "word": "so that i can make an informed decision",
+      "start": 3543,
+      "end": 3582,
+      "score": 0.99
+    },
+    {
+      "entity_group": "TASK",
+      "word": "view the ticket price for a specific movie showing",
+      "start": 3613,
+      "end": 3663,
+      "score": 0.99
+    },
+    {
+      "entity_group": "TASK",
+      "word": "view the external page of a specific movie showing",
+      "start": 3735,
+      "end": 3785,
+      "score": 0.99
+    },
+    {
+      "entity_group": "PROCESS_INFO",
+      "word": "so that i can view more information",
+      "start": 3787,
+      "end": 3822,
+      "score": 0.99
+    },
+    {
+      "entity_group": "TASK",
+      "word": "mark favourite movie theatres",
+      "start": 3853,
+      "end": 3882,
+      "score": 0.99
+    },
+    {
+      "entity_group": "AGENT",
+      "word": "premium user",
+      "start": 3943,
+      "end": 3955,
+      "score": 0.99
+    },
+    {
+      "entity_group": "TASK",
+      "word": "access movie showing information",
+      "start": 3967,
+      "end": 3999,
+      "score": 0.99
+    },
+    {
+      "entity_group": "CONDITION",
+      "word": "for major cinema chains",
+      "start": 4000,
+      "end": 4023,
+      "score": 0.99
+    },
+    {
+      "entity_group": "CONDITION",
+      "word": "for film houses",
+      "start": 4140,
+      "end": 4155,
+      "score": 0.99
+    },
+    {
+      "entity_group": "TASK",
+      "word": "see on what streaming platform specific series are streamed",
+      "start": 4239,
+      "end": 4298,
+      "score": 0.99
+    },
+    {
+      "entity_group": "CONDITION",
+      "word": "so that i know where to find a premium user's subscription price",
+      "start": 4300,
+      "end": 4364,
+      "score": 0.99
+    },
+    {
+      "entity_group": "TASK",
+      "word": "see on what streaming platform specific seasons are streamed",
+      "start": 4395,
+      "end": 4455,
+      "score": 0.99
+    },
+    {
+      "entity_group": "TASK",
+      "word": "view the external streaming page of a specific series",
+      "start": 4552,
+      "end": 4605,
+      "score": 0.99
+    },
+    {
+      "entity_group": "CONDITION",
+      "word": "so that i can view more information",
+      "start": 4607,
+      "end": 4642,
+      "score": 0.99
+    },
+    {
+      "entity_group": "TASK",
+      "word": "view the external streaming page of a specific season",
+      "start": 4673,
+      "end": 4726,
+      "score": 0.99
+    },
+    {
+      "entity_group": "TASK",
+      "word": "view from where series can be accessed",
+      "start": 4794,
+      "end": 4832,
+      "score": 0.99
+    },
+    {
+      "entity_group": "CONDITION",
+      "word": "so that i can be informed about regional licensing restrictions",
+      "start": 4834,
+      "end": 4897,
+      "score": 0.99
+    },
+    {
+      "entity_group": "AGENT",
+      "word": "administrator",
+      "start": 4905,
+      "end": 4918,
+      "score": 0.99
+    },
+    {
+      "entity_group": "TASK",
+      "word": "add a movie manually",
+      "start": 4930,
+      "end": 4950,
+      "score": 0.99
+    },
+    {
+      "entity_group": "AGENT",
+      "word": "administrator",
+      "start": 5028,
+      "end": 5041,
+      "score": 0.99
+    },
+    {
+      "entity_group": "TASK",
+      "word": "edit a movie manually",
+      "start": 5053,
+      "end": 5074,
+      "score": 0.99
+    },
+    {
+      "entity_group": "PROCESS_INFO",
+      "word": "so that i can ensure the system stays up-to-date",
+      "start": 5076,
+      "end": 5124,
+      "score": 0.99
+    },
+    {
+      "entity_group": "TASK",
+      "word": "delete a movie manually",
+      "start": 5157,
+      "end": 5180,
+      "score": 0.99
+    },
+    {
+      "entity_group": "TASK",
+      "word": "add an episode manually",
+      "start": 5263,
+      "end": 5286,
+      "score": 0.99
+    },
+    {
+      "entity_group": "PROCESS_INFO",
+      "word": "so that i can include episodes not supported by automatic integrations",
+      "start": 5288,
+      "end": 5358,
+      "score": 0.99
+    },
+    {
+      "entity_group": "TASK",
+      "word": "edit an episode manually",
+      "start": 5391,
+      "end": 5415,
+      "score": 0.99
+    },
+    {
+      "entity_group": "TASK",
+      "word": "delete an episode manually",
+      "start": 5498,
+      "end": 5524,
+      "score": 0.99
+    },
+    {
+      "entity_group": "TASK",
+      "word": "add a season manually",
+      "start": 5607,
+      "end": 5628,
+      "score": 0.99
+    },
+    {
+      "entity_group": "PROCESS_INFO",
+      "word": "so that i can include seasons not supported by automatic integrations",
+      "start": 5630,
+      "end": 5699,
+      "score": 0.99
+    },
+    {
+      "entity_group": "TASK",
+      "word": "edit a season manually",
+      "start": 5732,
+      "end": 5754,
+      "score": 0.99
+    },
+    {
+      "entity_group": "TASK",
+      "word": "delete a season manually",
+      "start": 5837,
+      "end": 5861,
+      "score": 0.99
+    },
+    {
+      "entity_group": "AGENT",
+      "word": "administrator",
+      "start": 5919,
+      "end": 5932,
+      "score": 0.99
+    },
+    {
+      "entity_group": "TASK",
+      "word": "add a cinema manually",
+      "start": 5944,
+      "end": 5965,
+      "score": 0.99
+    },
+    {
+      "entity_group": "PROCESS_INFO",
+      "word": "so that i can include cinemas not supported by automatic integrations",
+      "start": 5967,
+      "end": 6036,
+      "score": 0.99
+    },
+    {
+      "entity_group": "TASK",
+      "word": "add a film house manually",
+      "start": 6069,
+      "end": 6094,
+      "score": 0.99
+    },
+    {
+      "entity_group": "PROCESS_INFO",
+      "word": "so that i can include film houses not supported by automatic integrations",
+      "start": 6096,
+      "end": 6169,
+      "score": 0.99
+    },
+    {
+      "entity_group": "TASK",
+      "word": "delete a cinema manually",
+      "start": 6202,
+      "end": 6226,
+      "score": 0.99
+    },
+    {
+      "entity_group": "PROCESS_INFO",
+      "word": "so that i can ensure the system stays up-to-date",
+      "start": 6228,
+      "end": 6276,
+      "score": 0.99
+    },
+    {
+      "entity_group": "TASK",
+      "word": "delete a film house manually",
+      "start": 6309,
+      "end": 6337,
+      "score": 0.99
+    },
+    {
+      "entity_group": "TASK",
+      "word": "edit a cinema manually",
+      "start": 6420,
+      "end": 6442,
+      "score": 0.99
+    },
+    {
+      "entity_group": "TASK",
+      "word": "edit a film house manually",
+      "start": 6525,
+      "end": 6551,
+      "score": 0.99
+    },
+    {
+      "entity_group": "TASK",
+      "word": "add a specific movie showing manually",
+      "start": 6634,
+      "end": 6671,
+      "score": 0.99
+    },
+    {
+      "entity_group": "PROCESS_INFO",
+      "word": "so that i can include movie showings not supported by automatic integrations",
+      "start": 6673,
+      "end": 6749,
+      "score": 0.99
+    },
+    {
+      "entity_group": "TASK",
+      "word": "delete a specific movie showing manually",
+      "start": 6782,
+      "end": 6822,
+      "score": 0.99
+    },
+    {
+      "entity_group": "AGENT",
+      "word": "administrator",
+      "start": 6880,
+      "end": 6893,
+      "score": 0.99
+    },
+    {
+      "entity_group": "TASK",
+      "word": "edit a specific movie showing manually",
+      "start": 6905,
+      "end": 6943,
+      "score": 0.99
+    },
+    {
+      "entity_group": "PROCESS_INFO",
+      "word": "so that i can ensure the system stays up-to-date",
+      "start": 6945,
+      "end": 6993,
+      "score": 0.99
+    },
+    {
+      "entity_group": "TASK",
+      "word": "add a specific streaming platform",
+      "start": 7026,
+      "end": 7059,
+      "score": 0.99
+    },
+    {
+      "entity_group": "PROCESS_INFO",
+      "word": "so that i can include streaming platforms not supported by automatic integrations",
+      "start": 7061,
+      "end": 7142,
+      "score": 0.99
+    },
+    {
+      "entity_group": "TASK",
+      "word": "edit a specific streaming platform",
+      "start": 7175,
+      "end": 7209,
+      "score": 0.99
+    },
+    {
+      "entity_group": "TASK",
+      "word": "delete a specific streaming platform",
+      "start": 7292,
+      "end": 7328,
+      "score": 0.99
+    },
+    {
+      "entity_group": "AGENT",
+      "word": "premium user",
+      "start": 7385,
+      "end": 7397,
+      "score": 0.99
+    },
+    {
+      "entity_group": "TASK",
+      "word": "view the cinema city for a specific movie showing",
+      "start": 7409,
+      "end": 7458,
+      "score": 0.99
+    },
+    {
+      "entity_group": "PROCESS_INFO",
+      "word": "so that i can make an informed decision",
+      "start": 7460,
+      "end": 7499,
+      "score": 0.99
+    },
+    {
+      "entity_group": "PROCESS_INFO",
+      "word": "so that i can get accurate movie showing information nearby",
+      "start": 7555,
+      "end": 7614,
+      "score": 0.99
+    },
+    {
+      "entity_group": "PROCESS_INFO",
+      "word": "so that i can view relevant showings first",
+      "start": 7695,
+      "end": 7737,
+      "score": 0.99
+    },
+    {
+      "entity_group": "TASK",
+      "word": "view only the top 5 nearby movie showings",
+      "start": 7768,
+      "end": 7809,
+      "score": 0.99
+    },
+    {
+      "entity_group": "AGENT",
+      "word": "premium user",
+      "start": 7860,
+      "end": 7872,
+      "score": 0.99
+    },
+    {
+      "entity_group": "AGENT",
+      "word": "user",
+      "start": 7868,
+      "end": 7872,
+      "score": 0.99
+    },
+    {
+      "entity_group": "TASK",
+      "word": "have a standard range limit of 5km",
+      "start": 7909,
+      "end": 7943,
+      "score": 0.99
+    },
+    {
+      "entity_group": "CONDITION",
+      "word": "so that i can view only relevant movie showing information",
+      "start": 7945,
+      "end": 8003,
+      "score": 0.99
+    },
+    {
+      "entity_group": "CONDITION",
+      "word": "so that i can view only relevant movie showing information nearby",
+      "start": 7945,
+      "end": 8010,
+      "score": 0.99
+    },
+    {
+      "entity_group": "TASK",
+      "word": "have an automatically adjusted range limit based on movie showings density",
+      "start": 8066,
+      "end": 8140,
+      "score": 0.99
+    },
+    {
+      "entity_group": "CONDITION",
+      "word": "so that i can view only relevant movie showings nearby",
+      "start": 8142,
+      "end": 8196,
+      "score": 0.99
+    },
+    {
+      "entity_group": "TASK",
+      "word": "specify a location range for nearby movie showings",
+      "start": 8227,
+      "end": 8277,
+      "score": 0.99
+    },
+    {
+      "entity_group": "TASK",
+      "word": "search for movies by director",
+      "start": 8530,
+      "end": 8559,
+      "score": 0.99
+    },
+    {
+      "entity_group": "CONDITION",
+      "word": "so that i can find specific movies",
+      "start": 8561,
+      "end": 8595,
+      "score": 0.99
+    },
+    {
+      "entity_group": "TASK",
+      "word": "search for movies by cast members",
+      "start": 8618,
+      "end": 8651,
+      "score": 0.99
+    },
+    {
+      "entity_group": "TASK",
+      "word": "search for movies by crew members",
+      "start": 8710,
+      "end": 8743,
+      "score": 0.99
+    },
+    {
+      "entity_group": "TASK",
+      "word": "search for movies by production company",
+      "start": 8802,
+      "end": 8841,
+      "score": 0.99
+    },
+    {
+      "entity_group": "AGENT",
+      "word": "registered user",
+      "start": 8884,
+      "end": 8899,
+      "score": 0.99
+    },
+    {
+      "entity_group": "AGENT",
+      "word": "user",
+      "start": 8895,
+      "end": 8899,
+      "score": 0.99
+    },
+    {
+      "entity_group": "TASK",
+      "word": "recommend movies based on my meta-data",
+      "start": 8927,
+      "end": 8965,
+      "score": 0.99
+    },
+    {
+      "entity_group": "PROCESS_INFO",
+      "word": "so that it saves i time searching",
+      "start": 8967,
+      "end": 9000,
+      "score": 0.99
+    },
+    {
+      "entity_group": "TASK",
+      "word": "search for movies by genre",
+      "start": 9023,
+      "end": 9049,
+      "score": 0.99
+    },
+    {
+      "entity_group": "PROCESS_INFO",
+      "word": "so that i can find specific movies",
+      "start": 9051,
+      "end": 9085,
+      "score": 0.99
+    },
+    {
+      "entity_group": "AGENT",
+      "word": "premium user",
+      "start": 9092,
+      "end": 9104,
+      "score": 0.99
+    },
+    {
+      "entity_group": "TASK",
+      "word": "share a specific movie showing on WhatsApp",
+      "start": 9116,
+      "end": 9158,
+      "score": 0.99
+    },
+    {
+      "entity_group": "PROCESS_INFO",
+      "word": "so that i can let my friends know",
+      "start": 9160,
+      "end": 9193,
+      "score": 0.99
+    },
+    {
+      "entity_group": "TASK",
+      "word": "share a specific movie showing via email",
+      "start": 9224,
+      "end": 9264,
+      "score": 0.99
+    },
+    {
+      "entity_group": "TASK",
+      "word": "share a specific movie showing on Instagram",
+      "start": 9438,
+      "end": 9481,
+      "score": 0.99
+    },
+    {
+      "entity_group": "TASK",
+      "word": "import a specific movie showing to my calendar",
+      "start": 9547,
+      "end": 9593,
+      "score": 0.99
+    },
+    {
+      "entity_group": "PROCESS_INFO",
+      "word": "so that i have a record of all my movie plans in one place",
+      "start": 9595,
+      "end": 9653,
+      "score": 0.99
+    },
+    {
+      "entity_group": "TASK",
+      "word": "set my lists to private",
+      "start": 9687,
+      "end": 9710,
+      "score": 0.99
+    },
+    {
+      "entity_group": "PROCESS_INFO",
+      "word": "so that i can ensure my privacy when i want",
+      "start": 9712,
+      "end": 9755,
+      "score": 0.99
+    },
+    {
+      "entity_group": "AGENT",
+      "word": "registered user",
+      "start": 9762,
+      "end": 9777,
+      "score": 0.99
+    },
+    {
+      "entity_group": "TASK",
+      "word": "set my lists to public",
+      "start": 9789,
+      "end": 9811,
+      "score": 0.99
+    },
+    {
+      "entity_group": "PROCESS_INFO",
+      "word": "so that i can ensure my privacy when i want",
+      "start": 9813,
+      "end": 9856,
+      "score": 0.99
+    },
+    {
+      "entity_group": "TASK",
+      "word": "organize my lists into self-defined categories",
+      "start": 9890,
+      "end": 9936,
+      "score": 0.99
+    },
+    {
+      "entity_group": "PROCESS_INFO",
+      "word": "so that i can manage my lists effectively",
+      "start": 9938,
+      "end": 9979,
+      "score": 0.99
+    }
+  ],
+  "bpmnStructure": [
+    {
+      "content": {
+        "agent": {
+          "entity_group": "AGENT",
+          "word": "registered user",
+          "start": 5,
+          "end": 20,
+          "score": 0.99
+        },
+        "task": {
+          "entity_group": "TASK",
+          "word": "subscribe to Cinema premium",
+          "start": 32,
+          "end": 57,
+          "score": 0.99,
+          "task_id": "T0"
+        },
+        "sentence_idx": 0
+      },
+      "type": "task"
+    },
+    {
+      "content": {
+        "agent": {
+          "entity_group": "AGENT",
+          "word": "administrator",
+          "start": 204,
+          "end": 217,
+          "score": 0.99
+        },
+        "task": {
+          "entity_group": "TASK",
+          "word": "an overview of historic user payments",
+          "start": 226,
+          "end": 263,
+          "score": 0.99,
+          "task_id": "T1"
+        },
+        "sentence_idx": 2
+      },
+      "type": "task"
+    },
+    {
+      "content": {
+        "agent": {
+          "entity_group": "AGENT",
+          "word": "premium user",
+          "start": 326,
+          "end": 338,
+          "score": 0.99
+        },
+        "task": {
+          "entity_group": "TASK",
+          "word": "change my automated renew subscription status",
+          "start": 350,
+          "end": 395,
+          "score": 0.99,
+          "task_id": "T2"
+        },
+        "sentence_idx": 3
+      },
+      "type": "task"
+    },
+    {
+      "id": "EG0",
+      "conditions": [
+        "so that i am informed about my subscription",
+        "so that i can ensure my Subscription stays active",
+        "so that i can ensure i am not billed",
+        "so that i can detect fraudulent behaviour",
+        "so that a premium user's automated renew subscription status aligns with their needs",
+        "so that i am informed about whether a premium user's subscription status's active",
+        "so that a premium user's subscription status aligns with their needs",
+        "for major cinema chains",
+        "for film houses",
+        "so that i know where to find a premium user's subscription price",
+        "so that i can view more information",
+        "so that i can be informed about regional licensing restrictions",
+        "so that i can view only relevant movie showing information",
+        "so that i can view only relevant movie showing information nearby",
+        "so that i can view only relevant movie showings nearby",
+        "so that i can find specific movies"
+      ],
+      "start": 655,
+      "end": 9980,
+      "paths": [
+        {
+          "start": 655,
+          "end": 1082
+        },
+        {
+          "start": 1083,
+          "end": 1195
+        },
+        {
+          "start": 1196,
+          "end": 1412
+        },
+        {
+          "start": 1413,
+          "end": 1547
+        },
+        {
+          "start": 1548,
+          "end": 1707
+        },
+        {
+          "start": 1708,
+          "end": 1866
+        },
+        {
+          "start": 1867,
+          "end": 3999
+        },
+        {
+          "start": 4000,
+          "end": 4139
+        },
+        {
+          "start": 4140,
+          "end": 4299
+        },
+        {
+          "start": 4300,
+          "end": 3786
+        },
+        {
+          "start": 3787,
+          "end": 4833
+        },
+        {
+          "start": 4834,
+          "end": 7944
+        },
+        {
+          "start": 7945,
+          "end": 7944
+        },
+        {
+          "start": 7945,
+          "end": 8141
+        },
+        {
+          "start": 8142,
+          "end": 8560
+        },
+        {
+          "start": 8561,
+          "end": 9980
+        }
+      ],
+      "type": "exclusive",
+      "children": [
+        [
+          {
+            "content": {
+              "agent": {
+                "entity_group": "AGENT",
+                "word": "premium user",
+                "start": 912,
+                "end": 924,
+                "score": 0.99
+              },
+              "task": {
+                "entity_group": "TASK",
+                "word": "view my subscription price",
+                "start": 834,
+                "end": 860,
+                "score": 0.99,
+                "task_id": "T3"
+              },
+              "sentence_idx": 7
+            },
+            "type": "task"
+          }
+        ],
+        [],
+        [
+          {
+            "content": {
+              "agent": {
+                "entity_group": "AGENT",
+                "word": "administrator",
+                "start": 1331,
+                "end": 1344,
+                "score": 0.99
+              },
+              "task": {
+                "entity_group": "TASK",
+                "word": "cancel my subscription",
+                "start": 1263,
+                "end": 1285,
+                "score": 0.99,
+                "task_id": "T4"
+              },
+              "sentence_idx": 11
+            },
+            "type": "task"
+          }
+        ],
+        [],
+        [],
+        [
+          {
+            "content": {
+              "agent": {
+                "entity_group": "AGENT",
+                "word": "administrator",
+                "start": 1943,
+                "end": 1956,
+                "score": 0.99
+              },
+              "task": {
+                "entity_group": "TASK",
+                "word": "change a premium user's subscription status",
+                "start": 1822,
+                "end": 1865,
+                "score": 0.99,
+                "task_id": "T5"
+              },
+              "sentence_idx": 15,
+              "condition": {
+                "entity_group": "CONDITION",
+                "word": "so that a premium user's subscription status aligns with their needs",
+                "start": 1867,
+                "end": 1935,
+                "score": 0.99,
+                "condition_id": "C0"
+              }
+            },
+            "type": "task"
+          }
+        ],
+        [
+          {
+            "content": {
+              "agent": {
+                "entity_group": "AGENT",
+                "word": "administrator",
+                "start": 2982,
+                "end": 2995,
+                "score": 0.99
+              },
+              "task": {
+                "entity_group": "TASK",
+                "word": "change a premium user's subscription cancellation date",
+                "start": 2884,
+                "end": 2938,
+                "score": 0.99,
+                "task_id": "T6"
+              },
+              "sentence_idx": 23
+            },
+            "type": "task"
+          },
+          {
+            "content": {
+              "agent": {
+                "entity_group": "AGENT",
+                "word": "premium user",
+                "start": 3016,
+                "end": 3028,
+                "score": 0.99
+              },
+              "task": {
+                "entity_group": "TASK",
+                "word": "update a premium user's payment method details",
+                "start": 3007,
+                "end": 3053,
+                "score": 0.99,
+                "task_id": "T7"
+              },
+              "sentence_idx": 24
+            },
+            "type": "task"
+          },
+          {
+            "content": {
+              "agent": {
+                "entity_group": "AGENT",
+                "word": "premium user",
+                "start": 3943,
+                "end": 3955,
+                "score": 0.99
+              },
+              "task": {
+                "entity_group": "TASK",
+                "word": "access movie showing information",
+                "start": 3967,
+                "end": 3999,
+                "score": 0.99,
+                "task_id": "T8"
+              },
+              "sentence_idx": 31
+            },
+            "type": "task"
+          }
+        ],
+        [],
+        [],
+        [],
+        [],
+        [
+          {
+            "content": {
+              "agent": {
+                "entity_group": "AGENT",
+                "word": "administrator",
+                "start": 4905,
+                "end": 4918,
+                "score": 0.99
+              },
+              "task": {
+                "entity_group": "TASK",
+                "word": "add a movie manually",
+                "start": 4930,
+                "end": 4950,
+                "score": 0.99,
+                "task_id": "T9"
+              },
+              "sentence_idx": 38,
+              "condition": {
+                "entity_group": "CONDITION",
+                "word": "so that i can be informed about regional licensing restrictions",
+                "start": 4834,
+                "end": 4897,
+                "score": 0.99,
+                "condition_id": "C1"
+              }
+            },
+            "type": "task"
+          },
+          {
+            "content": {
+              "agent": {
+                "entity_group": "AGENT",
+                "word": "administrator",
+                "start": 5028,
+                "end": 5041,
+                "score": 0.99
+              },
+              "task": {
+                "entity_group": "TASK",
+                "word": "edit a movie manually",
+                "start": 5053,
+                "end": 5074,
+                "score": 0.99,
+                "task_id": "T10"
+              },
+              "sentence_idx": 39
+            },
+            "type": "task"
+          },
+          {
+            "content": {
+              "agent": {
+                "entity_group": "AGENT",
+                "word": "administrator",
+                "start": 5919,
+                "end": 5932,
+                "score": 0.99
+              },
+              "task": {
+                "entity_group": "TASK",
+                "word": "add a cinema manually",
+                "start": 5944,
+                "end": 5965,
+                "score": 0.99,
+                "task_id": "T11"
+              },
+              "sentence_idx": 47
+            },
+            "type": "task"
+          },
+          {
+            "content": {
+              "agent": {
+                "entity_group": "AGENT",
+                "word": "administrator",
+                "start": 6880,
+                "end": 6893,
+                "score": 0.99
+              },
+              "task": {
+                "entity_group": "TASK",
+                "word": "edit a specific movie showing manually",
+                "start": 6905,
+                "end": 6943,
+                "score": 0.99,
+                "task_id": "T12"
+              },
+              "sentence_idx": 55
+            },
+            "type": "task"
+          },
+          {
+            "content": {
+              "agent": {
+                "entity_group": "AGENT",
+                "word": "premium user",
+                "start": 7385,
+                "end": 7397,
+                "score": 0.99
+              },
+              "task": {
+                "entity_group": "TASK",
+                "word": "view the cinema city for a specific movie showing",
+                "start": 7409,
+                "end": 7458,
+                "score": 0.99,
+                "task_id": "T13"
+              },
+              "sentence_idx": 59
+            },
+            "type": "task"
+          },
+          {
+            "content": {
+              "agent": {
+                "entity_group": "AGENT",
+                "word": "premium user",
+                "start": 7860,
+                "end": 7872,
+                "score": 0.99
+              },
+              "task": {
+                "entity_group": "TASK",
+                "word": "have a standard range limit of 5km",
+                "start": 7909,
+                "end": 7943,
+                "score": 0.99,
+                "task_id": "T15"
+              },
+              "sentence_idx": 63
+            },
+            "type": "task"
+          },
+          {
+            "content": {
+              "agent": {
+                "entity_group": "AGENT",
+                "word": "user",
+                "start": 7868,
+                "end": 7872,
+                "score": 0.99
+              },
+              "task": {
+                "entity_group": "TASK",
+                "word": "have a standard range limit of 5km",
+                "start": 7909,
+                "end": 7943,
+                "score": 0.99,
+                "task_id": "T15"
+              },
+              "sentence_idx": 63
+            },
+            "type": "task"
+          }
+        ],
+        [],
+        [],
+        [],
+        [
+          {
+            "content": {
+              "agent": {
+                "entity_group": "AGENT",
+                "word": "registered user",
+                "start": 8884,
+                "end": 8899,
+                "score": 0.99
+              },
+              "task": {
+                "entity_group": "TASK",
+                "word": "recommend movies based on my meta-data",
+                "start": 8927,
+                "end": 8965,
+                "score": 0.99,
+                "task_id": "T17"
+              },
+              "sentence_idx": 71
+            },
+            "type": "task"
+          },
+          {
+            "content": {
+              "agent": {
+                "entity_group": "AGENT",
+                "word": "user",
+                "start": 8895,
+                "end": 8899,
+                "score": 0.99
+              },
+              "task": {
+                "entity_group": "TASK",
+                "word": "recommend movies based on my meta-data",
+                "start": 8927,
+                "end": 8965,
+                "score": 0.99,
+                "task_id": "T17"
+              },
+              "sentence_idx": 71
+            },
+            "type": "task"
+          },
+          {
+            "content": {
+              "agent": {
+                "entity_group": "AGENT",
+                "word": "premium user",
+                "start": 9092,
+                "end": 9104,
+                "score": 0.99
+              },
+              "task": {
+                "entity_group": "TASK",
+                "word": "share a specific movie showing on WhatsApp",
+                "start": 9116,
+                "end": 9158,
+                "score": 0.99,
+                "task_id": "T18"
+              },
+              "sentence_idx": 73
+            },
+            "type": "task"
+          },
+          {
+            "content": {
+              "agent": {
+                "entity_group": "AGENT",
+                "word": "registered user",
+                "start": 9762,
+                "end": 9777,
+                "score": 0.99
+              },
+              "task": {
+                "entity_group": "TASK",
+                "word": "set my lists to public",
+                "start": 9789,
+                "end": 9811,
+                "score": 0.99,
+                "task_id": "T19"
+              },
+              "sentence_idx": 79
+            },
+            "type": "task"
+          }
+        ]
+      ]
+    }
+  ],
+  "graphData": {
+    "T0": {
+      "after": [
+        "T1"
+      ],
+      "before": [
+        "START_0"
+      ]
+    },
+    "T1": {
+      "after": [
+        "T2"
+      ],
+      "before": [
+        "T0"
+      ]
+    },
+    "T2": {
+      "after": [
+        "EG0_S"
+      ],
+      "before": [
+        "T1"
+      ]
+    },
+    "T3": {
+      "after": [
+        "EG0_E"
+      ],
+      "before": [
+        "START_1"
+      ]
+    },
+    "EG0_E": {
+      "after": [
+        "END_0"
+      ],
+      "before": [
+        "T3",
+        "T4",
+        "T5",
+        "T8",
+        "T15",
+        "T19"
+      ]
+    },
+    "T4": {
+      "after": [
+        "EG0_E"
+      ],
+      "before": [
+        "START_2"
+      ]
+    },
+    "T5": {
+      "after": [
+        "EG0_E"
+      ],
+      "before": [
+        "EG0_S"
+      ]
+    },
+    "EG0_S": {
+      "after": [
+        "T5",
+        "T9"
+      ],
+      "before": [
+        "T2"
+      ]
+    },
+    "T6": {
+      "after": [
+        "T7"
+      ],
+      "before": [
+        "START_3"
+      ]
+    },
+    "T7": {
+      "after": [
+        "T8"
+      ],
+      "before": [
+        "T6"
+      ]
+    },
+    "T8": {
+      "after": [
+        "EG0_E"
+      ],
+      "before": [
+        "T7"
+      ]
+    },
+    "T9": {
+      "after": [
+        "T10"
+      ],
+      "before": [
+        "EG0_S"
+      ]
+    },
+    "T10": {
+      "after": [
+        "T11"
+      ],
+      "before": [
+        "T9"
+      ]
+    },
+    "T11": {
+      "after": [
+        "T12"
+      ],
+      "before": [
+        "T10"
+      ]
+    },
+    "T12": {
+      "after": [
+        "T13"
+      ],
+      "before": [
+        "T11"
+      ]
+    },
+    "T13": {
+      "after": [
+        "T14"
+      ],
+      "before": [
+        "T12"
+      ]
+    },
+    "T14": {
+      "after": [
+        "T15"
+      ],
+      "before": [
+        "T13"
+      ]
+    },
+    "T15": {
+      "after": [
+        "EG0_E"
+      ],
+      "before": [
+        "T14"
+      ]
+    },
+    "T16": {
+      "after": [
+        "T17"
+      ],
+      "before": [
+        "START_4"
+      ]
+    },
+    "T17": {
+      "after": [
+        "T18"
+      ],
+      "before": [
+        "T16"
+      ]
+    },
+    "T18": {
+      "after": [
+        "T19"
+      ],
+      "before": [
+        "T17"
+      ]
+    },
+    "T19": {
+      "after": [
+        "EG0_E"
+      ],
+      "before": [
+        "T18"
+      ]
+    },
+    "START_0": {
+      "after": [
+        "T0"
+      ],
+      "before": []
+    },
+    "START_1": {
+      "after": [
+        "T3"
+      ],
+      "before": []
+    },
+    "END_0": {
+      "after": [],
+      "before": [
+        "EG0_E"
+      ]
+    },
+    "START_2": {
+      "after": [
+        "T4"
+      ],
+      "before": []
+    },
+    "START_3": {
+      "after": [
+        "T6"
+      ],
+      "before": []
+    },
+    "START_4": {
+      "after": [
+        "T16"
+      ],
+      "before": []
+    }
+  },
+  "graphSourcePath": "/workspace/us2lc-pipeline/artifacts/pv-runs/llama3.1-8b/cinema/process-visualizer-run/process-visualizer.gv",
+  "graphImagePath": "/workspace/us2lc-pipeline/artifacts/pv-runs/llama3.1-8b/cinema/process-visualizer-run/process-visualizer.png",
+  "logsDir": "/workspace/us2lc-pipeline/artifacts/pv-runs/llama3.1-8b/cinema/process-visualizer-run/output_logs",
+  "stats": {
+    "entityCount": 147,
+    "topLevelElementCount": 4
+  }
+}

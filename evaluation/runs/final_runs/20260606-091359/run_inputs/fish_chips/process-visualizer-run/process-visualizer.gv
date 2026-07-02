@@ -1,0 +1,43 @@
+digraph bpmn_diagram {
+	node [color=black fillcolor=bisque shape=box style=filled]
+	T0 [label="Kitchen Employee: see the orders with their status"]
+	T1 [label="Ticket Master: receive a notification if the customer makes changes after a new order is already paid"]
+	T0 -> T1
+	T2 [label="Ticket Master: label new orders as 'incoming orders'"]
+	T1 -> T2
+	node [color=black fillcolor=azure shape=diamond style=filled]
+	EG0_S [label=X]
+	node [color=black fillcolor=bisque shape=box style=filled]
+	T3 [label="kitchen: have an overview of all orders that are currently made by the kitchen"]
+	T4 [label="Ticket Master: separate all scheduled orders from the other statuses"]
+	T3 -> T4
+	T5 [label="customer: see the order type"]
+	T4 -> T5
+	T6 [label="Cashier: request a confirmation of payment"]
+	T5 -> T6
+	T7 [label="Cashier: add the phone number to the order"]
+	EG0_S -> T7 [label="so that the delivery person knows where the delivery person needs to bring the order"]
+	T8 [label="Restaurant Owner: see the VAT of each order, so that i have an overview of the taxes."]
+	T9 [label="Restaurant Owner: have an overview of the types of orders"]
+	T8 -> T9
+	T10 [label="Home Delivery Person: have the address printed on the ticket"]
+	T9 -> T10
+	T11 [label="Home Delivery Person: have the order price on a printed ticket"]
+	T10 -> T11
+	T2 -> EG0_S
+	node [color=black fillcolor=lightpink shape=ellipse style=filled]
+	START_0 [label=START]
+	START_0 -> T0
+	START_1 [label=START]
+	START_1 -> T3
+	END_0 [label=END]
+	T6 -> END_0
+	END_1 [label=END]
+	T7 -> END_1
+	END_2 [label=END]
+	EG0_S -> END_2 [label=Else]
+	START_2 [label=START]
+	START_2 -> T8
+	END_3 [label=END]
+	T11 -> END_3
+}

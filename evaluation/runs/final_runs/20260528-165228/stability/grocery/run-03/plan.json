@@ -1,0 +1,2245 @@
+{
+  "meta": {
+    "planVersion": "1.1.0",
+    "generatedAt": "2026-05-29T18:30:22.557Z",
+    "generatedBy": "pipeline.plan-generator",
+    "mergedWithLlm": true
+  },
+  "app": {
+    "appId": "",
+    "branch": "main",
+    "moduleName": "MyFirstModule",
+    "layoutQualifiedName": "Atlas_Core.Atlas_Default",
+    "homePageRef": "home",
+    "navigation": {
+      "homePageButtons": [
+        {
+          "pageRef": "applicant_overview",
+          "caption": "",
+          "allowedRoles": []
+        },
+        {
+          "pageRef": "certificate_overview",
+          "caption": "",
+          "allowedRoles": []
+        },
+        {
+          "pageRef": "clear_overview",
+          "caption": "",
+          "allowedRoles": []
+        },
+        {
+          "pageRef": "complaint_overview",
+          "caption": "",
+          "allowedRoles": []
+        },
+        {
+          "pageRef": "complaintcategory_overview",
+          "caption": "",
+          "allowedRoles": []
+        },
+        {
+          "pageRef": "contract_overview",
+          "caption": "",
+          "allowedRoles": []
+        }
+      ],
+      "menuItems": [
+        {
+          "pageRef": "applicant_overview",
+          "caption": "",
+          "allowedRoles": []
+        },
+        {
+          "pageRef": "certificate_overview",
+          "caption": "",
+          "allowedRoles": []
+        },
+        {
+          "pageRef": "clear_overview",
+          "caption": "",
+          "allowedRoles": []
+        },
+        {
+          "pageRef": "complaint_overview",
+          "caption": "",
+          "allowedRoles": []
+        },
+        {
+          "pageRef": "complaintcategory_overview",
+          "caption": "",
+          "allowedRoles": []
+        },
+        {
+          "pageRef": "contract_overview",
+          "caption": "",
+          "allowedRoles": []
+        }
+      ],
+      "homePageButtonRefs": [
+        "applicant_overview",
+        "certificate_overview",
+        "clear_overview",
+        "complaint_overview",
+        "complaintcategory_overview",
+        "contract_overview"
+      ],
+      "navigationItemRefs": [
+        "applicant_overview",
+        "certificate_overview",
+        "clear_overview",
+        "complaint_overview",
+        "complaintcategory_overview",
+        "contract_overview"
+      ]
+    }
+  },
+  "execution": {
+    "commit": false,
+    "dg2Cleanup": true,
+    "forceLegacyWebClientForLookups": true,
+    "createApp": true,
+    "createAppName": "PracticalPerf_grocery_Stability"
+  },
+  "domainModel": {
+    "entities": [
+      {
+        "name": "Employee",
+        "attributes": [
+          {
+            "name": "Title",
+            "type": "String",
+            "required": true
+          },
+          {
+            "name": "Description",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "Status",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "CreatedAt",
+            "type": "DateTime",
+            "required": false
+          },
+          {
+            "name": "EmployeeID",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "FirstName",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "LastName",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "Email",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "PhoneNumber",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "PersonalDetails",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "IsActive",
+            "type": "Boolean",
+            "required": false
+          },
+          {
+            "name": "PreferredPaymentFrequency",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "PreferredPaymentMethod",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "NotificationPreference",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "IsApplicant",
+            "type": "Boolean",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "Complaint",
+        "attributes": [
+          {
+            "name": "Title",
+            "type": "String",
+            "required": true
+          },
+          {
+            "name": "Description",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "Status",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "CreatedAt",
+            "type": "DateTime",
+            "required": false
+          },
+          {
+            "name": "ComplaintID",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "ReportedDate",
+            "type": "DateTime",
+            "required": false
+          },
+          {
+            "name": "Priority",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "AssignedTo",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "ResolutionNotes",
+            "type": "String",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "When",
+        "attributes": [
+          {
+            "name": "Title",
+            "type": "String",
+            "required": true
+          },
+          {
+            "name": "Description",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "Status",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "CreatedAt",
+            "type": "DateTime",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "Clear",
+        "attributes": [
+          {
+            "name": "Title",
+            "type": "String",
+            "required": true
+          },
+          {
+            "name": "Description",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "Status",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "CreatedAt",
+            "type": "DateTime",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "Easily",
+        "attributes": [
+          {
+            "name": "Title",
+            "type": "String",
+            "required": true
+          },
+          {
+            "name": "Description",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "Status",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "CreatedAt",
+            "type": "DateTime",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "Hour",
+        "attributes": [
+          {
+            "name": "Title",
+            "type": "String",
+            "required": true
+          },
+          {
+            "name": "Description",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "Status",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "CreatedAt",
+            "type": "DateTime",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "Manager",
+        "attributes": [
+          {
+            "name": "ManagerID",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "FirstName",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "LastName",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "Email",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "PhoneNumber",
+            "type": "String",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "Applicant",
+        "attributes": [
+          {
+            "name": "ApplicantID",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "FirstName",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "LastName",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "Email",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "PhoneNumber",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "RegistrationDate",
+            "type": "DateTime",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "Contract",
+        "attributes": [
+          {
+            "name": "ContractID",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "StartDate",
+            "type": "DateTime",
+            "required": false
+          },
+          {
+            "name": "EndDate",
+            "type": "DateTime",
+            "required": false
+          },
+          {
+            "name": "ContractType",
+            "type": "String",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "Certificate",
+        "attributes": [
+          {
+            "name": "CertificateID",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "Name",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "IssuingInstitution",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "IssueDate",
+            "type": "Boolean",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "WorkShift",
+        "attributes": [
+          {
+            "name": "WorkShiftID",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "DayOfWeek",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "StartTime",
+            "type": "DateTime",
+            "required": false
+          },
+          {
+            "name": "EndTime",
+            "type": "DateTime",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "SalaryStatement",
+        "attributes": [
+          {
+            "name": "StatementID",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "StatementDate",
+            "type": "DateTime",
+            "required": false
+          },
+          {
+            "name": "PaymentAmount",
+            "type": "Decimal",
+            "required": false
+          },
+          {
+            "name": "PaymentPeriod",
+            "type": "String",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "ComplaintCategory",
+        "attributes": [
+          {
+            "name": "CategoryID",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "CategoryName",
+            "type": "String",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "PaymentHandler",
+        "attributes": [
+          {
+            "name": "HandlerID",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "Name",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "ContactDetails",
+            "type": "String",
+            "required": false
+          }
+        ]
+      }
+    ],
+    "associations": [],
+    "enumerations": []
+  },
+  "security": {
+    "enabled": true,
+    "securityLevel": "prototype",
+    "moduleRoles": [
+      "Employee",
+      "Manager",
+      "OfficeEmployee",
+      "Applicant"
+    ],
+    "userRoles": [
+      {
+        "name": "Employee",
+        "moduleRoles": [
+          "Employee"
+        ],
+        "systemModuleRole": "System.User"
+      },
+      {
+        "name": "Manager",
+        "moduleRoles": [
+          "Manager"
+        ],
+        "systemModuleRole": "System.User"
+      },
+      {
+        "name": "OfficeEmployee",
+        "moduleRoles": [
+          "OfficeEmployee"
+        ],
+        "systemModuleRole": "System.User"
+      },
+      {
+        "name": "Applicant",
+        "moduleRoles": [
+          "Applicant"
+        ],
+        "systemModuleRole": "System.User"
+      }
+    ],
+    "demoUsers": []
+  },
+  "pages": {
+    "specs": [
+      {
+        "ref": "home",
+        "name": "Home",
+        "title": "Home",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "Employee Workspace",
+            "renderMode": "H2"
+          },
+          {
+            "type": "dynamicText",
+            "text": "Generated from user stories",
+            "renderMode": "Paragraph"
+          },
+          {
+            "type": "buttonToPage",
+            "caption": "Employee Dashboard",
+            "targetPageRef": "employee_dashboard"
+          },
+          {
+            "type": "buttonToPage",
+            "caption": "Employee Overview",
+            "targetPageRef": "employee_overview"
+          },
+          {
+            "type": "buttonToPage",
+            "caption": "Complaint Overview",
+            "targetPageRef": "complaint_overview"
+          },
+          {
+            "type": "buttonToPage",
+            "caption": "When Overview",
+            "targetPageRef": "when_overview"
+          },
+          {
+            "type": "buttonToPage",
+            "caption": "Clear Overview",
+            "targetPageRef": "clear_overview"
+          },
+          {
+            "type": "buttonToPage",
+            "caption": "Easily Overview",
+            "targetPageRef": "easily_overview"
+          },
+          {
+            "type": "buttonToPage",
+            "caption": "Hour Overview",
+            "targetPageRef": "hour_overview"
+          },
+          {
+            "type": "buttonToPage",
+            "caption": "applicant overview",
+            "targetPageRef": "applicant_overview"
+          },
+          {
+            "type": "buttonToPage",
+            "caption": "certificate overview",
+            "targetPageRef": "certificate_overview"
+          },
+          {
+            "type": "buttonToPage",
+            "caption": "complaintcategory overview",
+            "targetPageRef": "complaintcategory_overview"
+          },
+          {
+            "type": "buttonToPage",
+            "caption": "contract overview",
+            "targetPageRef": "contract_overview"
+          }
+        ]
+      },
+      {
+        "ref": "employee_dashboard",
+        "name": "Employee_Dashboard",
+        "title": "Employee Dashboard",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "Employee Dashboard",
+            "renderMode": "H2"
+          },
+          {
+            "type": "dynamicText",
+            "text": "Overview and data management for employee.",
+            "renderMode": "Paragraph"
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Add Employee",
+            "entityRef": "MyFirstModule.Employee",
+            "targetPageRef": "employee_newedit"
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.Employee",
+            "rowClickTargetPageRef": "employee_newedit",
+            "autoRowClickToDetail": true,
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Title",
+                "autoLabel": true
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Description",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Status",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "CreatedAt",
+                "autoLabel": false
+              }
+            ]
+          }
+        ],
+        "entityRef": "MyFirstModule.Employee"
+      },
+      {
+        "ref": "employee_overview",
+        "name": "Employee_Overview",
+        "title": "Employee Overview",
+        "entityRef": "MyFirstModule.Employee",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "Employee Overview",
+            "renderMode": "H2"
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Create Employee",
+            "entityRef": "MyFirstModule.Employee",
+            "targetPageRef": "employee_newedit"
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.Employee",
+            "autoRowClickToDetail": true,
+            "rowClickTargetPageRef": "employee_newedit",
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "EmployeeID",
+                "autoLabel": true
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "FirstName",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "LastName",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Email",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "PhoneNumber",
+                "autoLabel": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "employee_newedit",
+        "name": "Employee_NewEdit",
+        "title": "Employee NewEdit",
+        "entityRef": "MyFirstModule.Employee",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          {
+            "name": "Employee",
+            "entityRef": "MyFirstModule.Employee",
+            "required": true
+          }
+        ],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "Employee",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "EmployeeID"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "FirstName"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "LastName"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Email"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "PhoneNumber"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "PersonalDetails"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "IsActive"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "PreferredPaymentFrequency"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "complaint_overview",
+        "name": "Complaint_Overview",
+        "title": "Complaint Overview",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "Complaint Overview",
+            "renderMode": "H2"
+          },
+          {
+            "type": "dynamicText",
+            "text": "Manage complaint records and open the create dialog when new data is needed.",
+            "renderMode": "Paragraph"
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Add Complaint",
+            "entityRef": "MyFirstModule.Complaint",
+            "targetPageRef": "complaint_newedit"
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.Complaint",
+            "rowClickTargetPageRef": "complaint_newedit",
+            "autoRowClickToDetail": true,
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Title",
+                "autoLabel": true
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Description",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Status",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "CreatedAt",
+                "autoLabel": false
+              }
+            ]
+          }
+        ],
+        "entityRef": "MyFirstModule.Complaint"
+      },
+      {
+        "ref": "complaint_newedit",
+        "name": "Complaint_NewEdit",
+        "title": "Complaint NewEdit",
+        "entityRef": "MyFirstModule.Complaint",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          {
+            "name": "Complaint",
+            "entityRef": "MyFirstModule.Complaint",
+            "required": true
+          }
+        ],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "Complaint",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "ComplaintID"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Title"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Description"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "ReportedDate"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Status"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Priority"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "AssignedTo"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "ResolutionNotes"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "when_overview",
+        "name": "When_Overview",
+        "title": "When Overview",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "When Overview",
+            "renderMode": "H2"
+          },
+          {
+            "type": "dynamicText",
+            "text": "Manage when records and open the create dialog when new data is needed.",
+            "renderMode": "Paragraph"
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Add When",
+            "entityRef": "MyFirstModule.When",
+            "targetPageRef": "when_newedit"
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.When",
+            "rowClickTargetPageRef": "when_newedit",
+            "autoRowClickToDetail": true,
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Title",
+                "autoLabel": true
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Description",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Status",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "CreatedAt",
+                "autoLabel": false
+              }
+            ]
+          }
+        ],
+        "entityRef": "MyFirstModule.When"
+      },
+      {
+        "ref": "when_newedit",
+        "name": "When_NewEdit",
+        "title": "When NewEdit",
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "When",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Title"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Description"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Status"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "CreatedAt"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ],
+        "entityRef": "MyFirstModule.When",
+        "pageParameters": [
+          {
+            "name": "When",
+            "entityRef": "MyFirstModule.When",
+            "required": true
+          }
+        ]
+      },
+      {
+        "ref": "clear_overview",
+        "name": "Clear_Overview",
+        "title": "Clear Overview",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "Clear Overview",
+            "renderMode": "H2"
+          },
+          {
+            "type": "dynamicText",
+            "text": "Manage clear records and open the create dialog when new data is needed.",
+            "renderMode": "Paragraph"
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Add Clear",
+            "entityRef": "MyFirstModule.Clear",
+            "targetPageRef": "clear_newedit"
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.Clear",
+            "rowClickTargetPageRef": "clear_newedit",
+            "autoRowClickToDetail": true,
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Title",
+                "autoLabel": true
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Description",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Status",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "CreatedAt",
+                "autoLabel": false
+              }
+            ]
+          }
+        ],
+        "entityRef": "MyFirstModule.Clear"
+      },
+      {
+        "ref": "clear_newedit",
+        "name": "Clear_NewEdit",
+        "title": "Clear NewEdit",
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "Clear",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Title"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Description"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Status"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "CreatedAt"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ],
+        "entityRef": "MyFirstModule.Clear",
+        "pageParameters": [
+          {
+            "name": "Clear",
+            "entityRef": "MyFirstModule.Clear",
+            "required": true
+          }
+        ]
+      },
+      {
+        "ref": "easily_overview",
+        "name": "Easily_Overview",
+        "title": "Easily Overview",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "Easily Overview",
+            "renderMode": "H2"
+          },
+          {
+            "type": "dynamicText",
+            "text": "Manage easily records and open the create dialog when new data is needed.",
+            "renderMode": "Paragraph"
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Add Easily",
+            "entityRef": "MyFirstModule.Easily",
+            "targetPageRef": "easily_newedit"
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.Easily",
+            "rowClickTargetPageRef": "easily_newedit",
+            "autoRowClickToDetail": true,
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Title",
+                "autoLabel": true
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Description",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Status",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "CreatedAt",
+                "autoLabel": false
+              }
+            ]
+          }
+        ],
+        "entityRef": "MyFirstModule.Easily"
+      },
+      {
+        "ref": "easily_newedit",
+        "name": "Easily_NewEdit",
+        "title": "Easily NewEdit",
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "Easily",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Title"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Description"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Status"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "CreatedAt"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ],
+        "entityRef": "MyFirstModule.Easily",
+        "pageParameters": [
+          {
+            "name": "Easily",
+            "entityRef": "MyFirstModule.Easily",
+            "required": true
+          }
+        ]
+      },
+      {
+        "ref": "hour_overview",
+        "name": "Hour_Overview",
+        "title": "Hour Overview",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "Hour Overview",
+            "renderMode": "H2"
+          },
+          {
+            "type": "dynamicText",
+            "text": "Manage hour records and open the create dialog when new data is needed.",
+            "renderMode": "Paragraph"
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Add Hour",
+            "entityRef": "MyFirstModule.Hour",
+            "targetPageRef": "hour_newedit"
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.Hour",
+            "rowClickTargetPageRef": "hour_newedit",
+            "autoRowClickToDetail": true,
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Title",
+                "autoLabel": true
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Description",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Status",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "CreatedAt",
+                "autoLabel": false
+              }
+            ]
+          }
+        ],
+        "entityRef": "MyFirstModule.Hour"
+      },
+      {
+        "ref": "hour_newedit",
+        "name": "Hour_NewEdit",
+        "title": "Hour NewEdit",
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "Hour",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Title"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Description"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Status"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "CreatedAt"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ],
+        "entityRef": "MyFirstModule.Hour",
+        "pageParameters": [
+          {
+            "name": "Hour",
+            "entityRef": "MyFirstModule.Hour",
+            "required": true
+          }
+        ]
+      },
+      {
+        "ref": "manager_overview",
+        "name": "Manager_Overview",
+        "title": "Manager Overview",
+        "entityRef": "MyFirstModule.Manager",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "Manager Overview",
+            "renderMode": "H2"
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Create Manager",
+            "entityRef": "MyFirstModule.Manager",
+            "targetPageRef": "manager_newedit"
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.Manager",
+            "autoRowClickToDetail": true,
+            "rowClickTargetPageRef": "manager_newedit",
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "ManagerID",
+                "autoLabel": true
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "FirstName",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "LastName",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Email",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "PhoneNumber",
+                "autoLabel": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "manager_newedit",
+        "name": "Manager_NewEdit",
+        "title": "Manager NewEdit",
+        "entityRef": "MyFirstModule.Manager",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          {
+            "name": "Manager",
+            "entityRef": "MyFirstModule.Manager",
+            "required": true
+          }
+        ],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "Manager",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "ManagerID"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "FirstName"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "LastName"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Email"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "PhoneNumber"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "applicant_overview",
+        "name": "Applicant_Overview",
+        "title": "Applicant Overview",
+        "entityRef": "MyFirstModule.Applicant",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "Applicant Overview",
+            "renderMode": "H2"
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Create Applicant",
+            "entityRef": "MyFirstModule.Applicant",
+            "targetPageRef": "applicant_newedit"
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.Applicant",
+            "autoRowClickToDetail": true,
+            "rowClickTargetPageRef": "applicant_newedit",
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "ApplicantID",
+                "autoLabel": true
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "FirstName",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "LastName",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Email",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "PhoneNumber",
+                "autoLabel": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "applicant_newedit",
+        "name": "Applicant_NewEdit",
+        "title": "Applicant NewEdit",
+        "entityRef": "MyFirstModule.Applicant",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          {
+            "name": "Applicant",
+            "entityRef": "MyFirstModule.Applicant",
+            "required": true
+          }
+        ],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "Applicant",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "ApplicantID"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "FirstName"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "LastName"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Email"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "PhoneNumber"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "RegistrationDate"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "contract_overview",
+        "name": "Contract_Overview",
+        "title": "Contract Overview",
+        "entityRef": "MyFirstModule.Contract",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "Contract Overview",
+            "renderMode": "H2"
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Create Contract",
+            "entityRef": "MyFirstModule.Contract",
+            "targetPageRef": "contract_newedit"
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.Contract",
+            "autoRowClickToDetail": true,
+            "rowClickTargetPageRef": "contract_newedit",
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "ContractID",
+                "autoLabel": true
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "StartDate",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "EndDate",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "ContractType",
+                "autoLabel": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "contract_newedit",
+        "name": "Contract_NewEdit",
+        "title": "Contract NewEdit",
+        "entityRef": "MyFirstModule.Contract",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          {
+            "name": "Contract",
+            "entityRef": "MyFirstModule.Contract",
+            "required": true
+          }
+        ],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "Contract",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "ContractID"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "StartDate"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "EndDate"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "ContractType"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "certificate_overview",
+        "name": "Certificate_Overview",
+        "title": "Certificate Overview",
+        "entityRef": "MyFirstModule.Certificate",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "Certificate Overview",
+            "renderMode": "H2"
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Create Certificate",
+            "entityRef": "MyFirstModule.Certificate",
+            "targetPageRef": "certificate_newedit"
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.Certificate",
+            "autoRowClickToDetail": true,
+            "rowClickTargetPageRef": "certificate_newedit",
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "CertificateID",
+                "autoLabel": true
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "IssuingInstitution",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "IssueDate",
+                "autoLabel": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "certificate_newedit",
+        "name": "Certificate_NewEdit",
+        "title": "Certificate NewEdit",
+        "entityRef": "MyFirstModule.Certificate",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          {
+            "name": "Certificate",
+            "entityRef": "MyFirstModule.Certificate",
+            "required": true
+          }
+        ],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "Certificate",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "CertificateID"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "IssuingInstitution"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "IssueDate"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "workshift_overview",
+        "name": "WorkShift_Overview",
+        "title": "WorkShift Overview",
+        "entityRef": "MyFirstModule.WorkShift",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "WorkShift Overview",
+            "renderMode": "H2"
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Create WorkShift",
+            "entityRef": "MyFirstModule.WorkShift",
+            "targetPageRef": "workshift_newedit"
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.WorkShift",
+            "autoRowClickToDetail": true,
+            "rowClickTargetPageRef": "workshift_newedit",
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "WorkShiftID",
+                "autoLabel": true
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "DayOfWeek",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "StartTime",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "EndTime",
+                "autoLabel": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "workshift_newedit",
+        "name": "WorkShift_NewEdit",
+        "title": "WorkShift NewEdit",
+        "entityRef": "MyFirstModule.WorkShift",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          {
+            "name": "WorkShift",
+            "entityRef": "MyFirstModule.WorkShift",
+            "required": true
+          }
+        ],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "WorkShift",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "WorkShiftID"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "DayOfWeek"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "StartTime"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "EndTime"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "workhourrecord_overview",
+        "name": "WorkHourRecord_Overview",
+        "title": "WorkHourRecord Overview",
+        "entityRef": "MyFirstModule.WorkHourRecord",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "WorkHourRecord Overview",
+            "renderMode": "H2"
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Create WorkHourRecord",
+            "entityRef": "MyFirstModule.WorkHourRecord",
+            "targetPageRef": "workhourrecord_newedit"
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.WorkHourRecord",
+            "autoRowClickToDetail": true,
+            "rowClickTargetPageRef": "workhourrecord_newedit",
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "WorkHourRecordID",
+                "autoLabel": true
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Date",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "HoursWorked",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "IsVerified",
+                "autoLabel": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "workhourrecord_newedit",
+        "name": "WorkHourRecord_NewEdit",
+        "title": "WorkHourRecord NewEdit",
+        "entityRef": "MyFirstModule.WorkHourRecord",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          {
+            "name": "WorkHourRecord",
+            "entityRef": "MyFirstModule.WorkHourRecord",
+            "required": true
+          }
+        ],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "WorkHourRecord",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "WorkHourRecordID"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Date"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "HoursWorked"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "IsVerified"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "salarystatement_overview",
+        "name": "SalaryStatement_Overview",
+        "title": "SalaryStatement Overview",
+        "entityRef": "MyFirstModule.SalaryStatement",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "SalaryStatement Overview",
+            "renderMode": "H2"
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Create SalaryStatement",
+            "entityRef": "MyFirstModule.SalaryStatement",
+            "targetPageRef": "salarystatement_newedit"
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.SalaryStatement",
+            "autoRowClickToDetail": true,
+            "rowClickTargetPageRef": "salarystatement_newedit",
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "StatementID",
+                "autoLabel": true
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "StatementDate",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "PaymentAmount",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "PaymentPeriod",
+                "autoLabel": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "salarystatement_newedit",
+        "name": "SalaryStatement_NewEdit",
+        "title": "SalaryStatement NewEdit",
+        "entityRef": "MyFirstModule.SalaryStatement",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          {
+            "name": "SalaryStatement",
+            "entityRef": "MyFirstModule.SalaryStatement",
+            "required": true
+          }
+        ],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "SalaryStatement",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "StatementID"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "StatementDate"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "PaymentAmount"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "PaymentPeriod"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "complaintcategory_overview",
+        "name": "ComplaintCategory_Overview",
+        "title": "ComplaintCategory Overview",
+        "entityRef": "MyFirstModule.ComplaintCategory",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "ComplaintCategory Overview",
+            "renderMode": "H2"
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Create ComplaintCategory",
+            "entityRef": "MyFirstModule.ComplaintCategory",
+            "targetPageRef": "complaintcategory_newedit"
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.ComplaintCategory",
+            "autoRowClickToDetail": true,
+            "rowClickTargetPageRef": "complaintcategory_newedit",
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "CategoryID",
+                "autoLabel": true
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "CategoryName",
+                "autoLabel": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "complaintcategory_newedit",
+        "name": "ComplaintCategory_NewEdit",
+        "title": "ComplaintCategory NewEdit",
+        "entityRef": "MyFirstModule.ComplaintCategory",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          {
+            "name": "ComplaintCategory",
+            "entityRef": "MyFirstModule.ComplaintCategory",
+            "required": true
+          }
+        ],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "ComplaintCategory",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "CategoryID"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "CategoryName"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "paymenthandler_overview",
+        "name": "PaymentHandler_Overview",
+        "title": "PaymentHandler Overview",
+        "entityRef": "MyFirstModule.PaymentHandler",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "PaymentHandler Overview",
+            "renderMode": "H2"
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Create PaymentHandler",
+            "entityRef": "MyFirstModule.PaymentHandler",
+            "targetPageRef": "paymenthandler_newedit"
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.PaymentHandler",
+            "autoRowClickToDetail": true,
+            "rowClickTargetPageRef": "paymenthandler_newedit",
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "HandlerID",
+                "autoLabel": true
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "ContactDetails",
+                "autoLabel": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "paymenthandler_newedit",
+        "name": "PaymentHandler_NewEdit",
+        "title": "PaymentHandler NewEdit",
+        "entityRef": "MyFirstModule.PaymentHandler",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          {
+            "name": "PaymentHandler",
+            "entityRef": "MyFirstModule.PaymentHandler",
+            "required": true
+          }
+        ],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "PaymentHandler",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "HandlerID"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "ContactDetails"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "verification": {
+    "failOnMissing": true
+  },
+  "microflows": {
+    "specs": [
+      {
+        "name": "GetEmployeeDetails",
+        "description": "Retrieves and validates employee's personal information for display/editing (US47)."
+      },
+      {
+        "name": "SubmitComplaint",
+        "description": "Creates a new complaint record and sets initial status (US18, US19)."
+      },
+      {
+        "name": "ViewAllComplaints",
+        "description": "Retrieves list of complaints based on user role (US21, US22)."
+      },
+      {
+        "name": "UpdateComplaintStatus",
+        "description": "Allows office staff to update the status and resolution notes of a complaint (US23)."
+      },
+      {
+        "name": "SendNotification",
+        "description": "Handles sending notifications (email/app) for status changes (US06, US12, US26)."
+      },
+      {
+        "name": "CalculateSalaryStatement",
+        "description": "Automates the calculation of salary statements based on work hours and payment frequency (US01, US15, US16)."
+      },
+      {
+        "name": "GenerateSchedule",
+        "description": "Semi-automates the scheduling process (US08)."
+      },
+      {
+        "name": "SubmitSchedule",
+        "description": "Submits and finalizes the schedule for approval (US14).",
+        "steps": [
+          "Check if all required fields are filled.",
+          "Update the schedule record status."
+        ]
+      }
+    ]
+  }
+}

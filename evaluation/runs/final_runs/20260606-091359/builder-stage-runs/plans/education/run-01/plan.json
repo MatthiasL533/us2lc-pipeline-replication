@@ -1,0 +1,3081 @@
+{
+  "meta": {
+    "planVersion": "1.1.0",
+    "generatedAt": "2026-06-07T10:34:04.414Z",
+    "generatedBy": "pipeline.plan-generator"
+  },
+  "app": {
+    "appId": "",
+    "branch": "main",
+    "moduleName": "MyFirstModule",
+    "layoutQualifiedName": "Atlas_Core.Atlas_Default",
+    "homePageRef": "home",
+    "navigation": {
+      "homePageButtons": [
+        {
+          "pageRef": "appadministrator_overview",
+          "caption": "",
+          "allowedRoles": []
+        },
+        {
+          "pageRef": "freelanceteacher_overview",
+          "caption": "",
+          "allowedRoles": []
+        },
+        {
+          "pageRef": "achievement_overview",
+          "caption": "",
+          "allowedRoles": []
+        },
+        {
+          "pageRef": "appuser_overview",
+          "caption": "",
+          "allowedRoles": []
+        },
+        {
+          "pageRef": "chatfunction_overview",
+          "caption": "",
+          "allowedRoles": []
+        },
+        {
+          "pageRef": "collaboration_overview",
+          "caption": "",
+          "allowedRoles": []
+        }
+      ],
+      "menuItems": [
+        {
+          "pageRef": "home",
+          "caption": "",
+          "allowedRoles": []
+        },
+        {
+          "pageRef": "freelanceteacher_overview",
+          "caption": "",
+          "allowedRoles": []
+        },
+        {
+          "pageRef": "module_overview",
+          "caption": "",
+          "allowedRoles": []
+        },
+        {
+          "pageRef": "level_overview",
+          "caption": "",
+          "allowedRoles": []
+        },
+        {
+          "pageRef": "quiz_overview",
+          "caption": "",
+          "allowedRoles": []
+        },
+        {
+          "pageRef": "flashcard_overview",
+          "caption": "",
+          "allowedRoles": []
+        },
+        {
+          "pageRef": "video_overview",
+          "caption": "",
+          "allowedRoles": []
+        },
+        {
+          "pageRef": "researchpaper_overview",
+          "caption": "",
+          "allowedRoles": []
+        },
+        {
+          "pageRef": "slide_overview",
+          "caption": "",
+          "allowedRoles": []
+        },
+        {
+          "pageRef": "game_overview",
+          "caption": "",
+          "allowedRoles": []
+        },
+        {
+          "pageRef": "achievement_overview",
+          "caption": "",
+          "allowedRoles": []
+        },
+        {
+          "pageRef": "skillassessment_overview",
+          "caption": "",
+          "allowedRoles": []
+        },
+        {
+          "pageRef": "appadministrator_overview",
+          "caption": "",
+          "allowedRoles": []
+        }
+      ],
+      "homePageButtonRefs": [
+        "appadministrator_overview",
+        "freelanceteacher_overview",
+        "achievement_overview",
+        "appuser_overview",
+        "chatfunction_overview",
+        "collaboration_overview"
+      ],
+      "navigationItemRefs": [
+        "home",
+        "freelanceteacher_overview",
+        "module_overview",
+        "level_overview",
+        "quiz_overview",
+        "flashcard_overview",
+        "video_overview",
+        "researchpaper_overview",
+        "slide_overview",
+        "game_overview",
+        "achievement_overview",
+        "skillassessment_overview",
+        "appadministrator_overview"
+      ]
+    }
+  },
+  "execution": {
+    "commit": true,
+    "dg2Cleanup": true,
+    "forceLegacyWebClientForLookups": true,
+    "createApp": true,
+    "createAppName": "rerun-education-run01",
+    "commitMessage": "Rerun practical performance builder-stage run: education run-01"
+  },
+  "domainModel": {
+    "entities": [
+      {
+        "name": "FreelanceTeacher",
+        "attributes": [
+          {
+            "name": "KvKNumber",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "TeachingExperience",
+            "type": "Integer",
+            "required": false
+          },
+          {
+            "name": "TechnicalSkillLevel",
+            "type": "Integer",
+            "required": false
+          },
+          {
+            "name": "Email",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "IsActive",
+            "type": "Boolean",
+            "required": false
+          },
+          {
+            "name": "Title",
+            "type": "String",
+            "required": true
+          },
+          {
+            "name": "Description",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "Status",
+            "type": "String",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "Module",
+        "attributes": [
+          {
+            "name": "Title",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "Description",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "LearningObjective",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "Level",
+            "type": "Integer",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "Level",
+        "attributes": [
+          {
+            "name": "Number",
+            "type": "Integer",
+            "required": false
+          },
+          {
+            "name": "Description",
+            "type": "String",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "Quiz",
+        "attributes": [
+          {
+            "name": "Title",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "Description",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "Topic",
+            "type": "String",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "Flashcard",
+        "attributes": [
+          {
+            "name": "Question",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "Answer",
+            "type": "String",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "Video",
+        "attributes": [
+          {
+            "name": "Title",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "Url",
+            "type": "String",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "ResearchPaper",
+        "attributes": [
+          {
+            "name": "Title",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "Doi",
+            "type": "String",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "Slide",
+        "attributes": [
+          {
+            "name": "Title",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "Content",
+            "type": "String",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "Game",
+        "attributes": [
+          {
+            "name": "Title",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "Description",
+            "type": "String",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "Achievement",
+        "attributes": [
+          {
+            "name": "Title",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "Description",
+            "type": "String",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "SkillAssessment",
+        "attributes": [
+          {
+            "name": "Title",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "Description",
+            "type": "String",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "AppAdministrator",
+        "attributes": [
+          {
+            "name": "Name",
+            "type": "String",
+            "required": true
+          },
+          {
+            "name": "Email",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "IsActive",
+            "type": "Boolean",
+            "required": false,
+            "defaultValue": false
+          }
+        ]
+      },
+      {
+        "name": "ChatFunction",
+        "attributes": [
+          {
+            "name": "Name",
+            "type": "String",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "CommunicationSkills",
+        "attributes": [
+          {
+            "name": "Name",
+            "type": "String",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "PresentationSkills",
+        "attributes": [
+          {
+            "name": "Name",
+            "type": "String",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "Confidence",
+        "attributes": [
+          {
+            "name": "Name",
+            "type": "String",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "Compassion",
+        "attributes": [
+          {
+            "name": "Name",
+            "type": "String",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "Collaboration",
+        "attributes": [
+          {
+            "name": "Name",
+            "type": "String",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "Inclusiveness",
+        "attributes": [
+          {
+            "name": "Name",
+            "type": "String",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "GraphicalOverview",
+        "attributes": [
+          {
+            "name": "Name",
+            "type": "String",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "LearningOpportunity",
+        "attributes": [
+          {
+            "name": "Name",
+            "type": "String",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "Notification",
+        "attributes": [
+          {
+            "name": "Name",
+            "type": "String",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "ApprovalStatus",
+        "attributes": [
+          {
+            "name": "Name",
+            "type": "String",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "RemovalReason",
+        "attributes": [
+          {
+            "name": "Name",
+            "type": "String",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "DataUsage",
+        "attributes": [
+          {
+            "name": "FreelanceTeacherId",
+            "type": "Integer",
+            "required": false
+          },
+          {
+            "name": "ModuleId",
+            "type": "Integer",
+            "required": false
+          },
+          {
+            "name": "UsageCount",
+            "type": "Integer",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "AppUser",
+        "attributes": [
+          {
+            "name": "Name",
+            "type": "String",
+            "required": true
+          },
+          {
+            "name": "Email",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "IsActive",
+            "type": "Boolean",
+            "required": false,
+            "defaultValue": false
+          }
+        ]
+      }
+    ],
+    "associations": [
+      {
+        "name": "Module_Level",
+        "parentEntity": "Module",
+        "childEntity": "Level",
+        "type": "Reference",
+        "owner": "Both",
+        "metadata": {
+          "relationshipType": "Composition"
+        }
+      },
+      {
+        "name": "FreelanceTeacher_Module",
+        "parentEntity": "FreelanceTeacher",
+        "childEntity": "Module",
+        "type": "Reference",
+        "owner": "Both"
+      },
+      {
+        "name": "Module_Quiz",
+        "parentEntity": "Module",
+        "childEntity": "Quiz",
+        "type": "Reference",
+        "owner": "Both",
+        "metadata": {
+          "relationshipType": "Composition"
+        }
+      },
+      {
+        "name": "Module_Video",
+        "parentEntity": "Module",
+        "childEntity": "Video",
+        "type": "Reference",
+        "owner": "Both"
+      },
+      {
+        "name": "Module_ResearchPaper",
+        "parentEntity": "Module",
+        "childEntity": "ResearchPaper",
+        "type": "Reference",
+        "owner": "Both"
+      },
+      {
+        "name": "Module_Slide",
+        "parentEntity": "Module",
+        "childEntity": "Slide",
+        "type": "Reference",
+        "owner": "Both"
+      },
+      {
+        "name": "Module_Flashcard",
+        "parentEntity": "Module",
+        "childEntity": "Flashcard",
+        "type": "Reference",
+        "owner": "Both"
+      },
+      {
+        "name": "Module_Game",
+        "parentEntity": "Module",
+        "childEntity": "Game",
+        "type": "Reference",
+        "owner": "Both"
+      },
+      {
+        "name": "FreelanceTeacher_AppAdministrator",
+        "parentEntity": "AppAdministrator",
+        "childEntity": "FreelanceTeacher",
+        "type": "Reference",
+        "owner": "Both"
+      },
+      {
+        "name": "FreelanceTeacher_Notification",
+        "parentEntity": "FreelanceTeacher",
+        "childEntity": "Notification",
+        "type": "Reference",
+        "owner": "Both"
+      },
+      {
+        "name": "AppAdministrator_DataUsage",
+        "parentEntity": "AppAdministrator",
+        "childEntity": "DataUsage",
+        "type": "Reference",
+        "owner": "Both"
+      },
+      {
+        "name": "Module_Achievement",
+        "parentEntity": "Module",
+        "childEntity": "Achievement",
+        "type": "Reference",
+        "owner": "Both"
+      },
+      {
+        "name": "FreelanceTeacher_SkillAssessment",
+        "parentEntity": "FreelanceTeacher",
+        "childEntity": "SkillAssessment",
+        "type": "Reference",
+        "owner": "Both"
+      }
+    ],
+    "enumerations": []
+  },
+  "security": {
+    "enabled": true,
+    "securityLevel": "prototype",
+    "moduleRoles": [
+      "FreelanceTeacher",
+      "AppUser",
+      "AppAdministrator"
+    ],
+    "userRoles": [
+      {
+        "name": "FreelanceTeacher",
+        "description": "Role for freelance teachers",
+        "moduleRoles": [
+          "AppUser"
+        ],
+        "systemModuleRole": "System.User"
+      },
+      {
+        "name": "AppAdministrator",
+        "description": "Role for application administrators",
+        "moduleRoles": [
+          "AppAdministrator"
+        ],
+        "systemModuleRole": "System.User"
+      },
+      {
+        "name": "AppUser",
+        "moduleRoles": [
+          "AppUser"
+        ],
+        "systemModuleRole": "System.User"
+      }
+    ],
+    "demoUsers": []
+  },
+  "pages": {
+    "specs": [
+      {
+        "ref": "home",
+        "name": "Home",
+        "title": "Home",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "AppropriateMaterial Workspace",
+            "renderMode": "H2",
+            "content": [],
+            "itemContent": [],
+            "templateContent": []
+          },
+          {
+            "type": "dynamicText",
+            "text": "Generated from user stories",
+            "renderMode": "Paragraph",
+            "content": [],
+            "itemContent": [],
+            "templateContent": []
+          },
+          {
+            "type": "buttonToPage",
+            "caption": "Module Overview",
+            "targetPageRef": "module_overview",
+            "content": [],
+            "itemContent": [],
+            "templateContent": []
+          },
+          {
+            "type": "buttonToPage",
+            "caption": "appadministrator overview",
+            "targetPageRef": "appadministrator_overview",
+            "content": [],
+            "itemContent": [],
+            "templateContent": []
+          },
+          {
+            "type": "buttonToPage",
+            "caption": "freelanceteacher overview",
+            "targetPageRef": "freelanceteacher_overview",
+            "content": [],
+            "itemContent": [],
+            "templateContent": []
+          },
+          {
+            "type": "buttonToPage",
+            "caption": "achievement overview",
+            "targetPageRef": "achievement_overview"
+          },
+          {
+            "type": "buttonToPage",
+            "caption": "appuser overview",
+            "targetPageRef": "appuser_overview"
+          },
+          {
+            "type": "buttonToPage",
+            "caption": "chatfunction overview",
+            "targetPageRef": "chatfunction_overview"
+          },
+          {
+            "type": "buttonToPage",
+            "caption": "collaboration overview",
+            "targetPageRef": "collaboration_overview"
+          }
+        ]
+      },
+      {
+        "ref": "module_overview",
+        "name": "module_overview",
+        "title": "Modules Overview",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "Modules Overview",
+            "renderMode": "H2",
+            "content": [],
+            "itemContent": [],
+            "templateContent": []
+          }
+        ],
+        "entityRef": "MyFirstModule.Module"
+      },
+      {
+        "ref": "module_newedit",
+        "name": "Module_NewEdit",
+        "title": "Module NewEdit",
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "Module",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Title"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Description"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "LearningObjective"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Level"
+              },
+              {
+                "type": "associationInput",
+                "associationRef": "Module_Level",
+                "targetEntityRef": "MyFirstModule.Level",
+                "label": "Level"
+              },
+              {
+                "type": "associationInput",
+                "associationRef": "FreelanceTeacher_Module",
+                "targetEntityRef": "MyFirstModule.FreelanceTeacher",
+                "label": "Freelance Teacher"
+              },
+              {
+                "type": "associationInput",
+                "associationRef": "Module_Quiz",
+                "targetEntityRef": "MyFirstModule.Quiz",
+                "label": "Quiz"
+              },
+              {
+                "type": "associationInput",
+                "associationRef": "Module_Video",
+                "targetEntityRef": "MyFirstModule.Video",
+                "label": "Video"
+              },
+              {
+                "type": "associationInput",
+                "associationRef": "Module_ResearchPaper",
+                "targetEntityRef": "MyFirstModule.ResearchPaper",
+                "label": "Research Paper"
+              },
+              {
+                "type": "associationInput",
+                "associationRef": "Module_Slide",
+                "targetEntityRef": "MyFirstModule.Slide",
+                "label": "Slide"
+              },
+              {
+                "type": "associationInput",
+                "associationRef": "Module_Flashcard",
+                "targetEntityRef": "MyFirstModule.Flashcard",
+                "label": "Flashcard"
+              },
+              {
+                "type": "associationInput",
+                "associationRef": "Module_Game",
+                "targetEntityRef": "MyFirstModule.Game",
+                "label": "Game"
+              },
+              {
+                "type": "associationInput",
+                "associationRef": "Module_Achievement",
+                "targetEntityRef": "MyFirstModule.Achievement",
+                "label": "Achievement"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ],
+        "entityRef": "MyFirstModule.Module",
+        "pageParameters": [
+          {
+            "name": "Module",
+            "entityRef": "MyFirstModule.Module",
+            "required": true
+          }
+        ],
+        "layoutQualifiedName": "Atlas_Core.PopupLayout"
+      },
+      {
+        "ref": "freelanceteacher_overview",
+        "name": "freelanceteacher_overview",
+        "title": "Freelance Teachers Overview",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "Freelance Teachers Overview",
+            "renderMode": "H2",
+            "content": [],
+            "itemContent": [],
+            "templateContent": []
+          }
+        ],
+        "entityRef": "MyFirstModule.FreelanceTeacher"
+      },
+      {
+        "ref": "freelanceteacher_newedit",
+        "name": "FreelanceTeacher_NewEdit",
+        "title": "FreelanceTeacher NewEdit",
+        "entityRef": "MyFirstModule.FreelanceTeacher",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          {
+            "name": "FreelanceTeacher",
+            "entityRef": "MyFirstModule.FreelanceTeacher",
+            "required": true
+          }
+        ],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "FreelanceTeacher",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "KvKNumber"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "TeachingExperience"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "TechnicalSkillLevel"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Email"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "IsActive"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Title"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Description"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Status"
+              },
+              {
+                "type": "associationInput",
+                "associationRef": "FreelanceTeacher_Module",
+                "targetEntityRef": "MyFirstModule.Module",
+                "label": "Module"
+              },
+              {
+                "type": "associationInput",
+                "associationRef": "FreelanceTeacher_AppAdministrator",
+                "targetEntityRef": "MyFirstModule.AppAdministrator",
+                "label": "App Administrator"
+              },
+              {
+                "type": "associationInput",
+                "associationRef": "FreelanceTeacher_Notification",
+                "targetEntityRef": "MyFirstModule.Notification",
+                "label": "Notification"
+              },
+              {
+                "type": "associationInput",
+                "associationRef": "FreelanceTeacher_SkillAssessment",
+                "targetEntityRef": "MyFirstModule.SkillAssessment",
+                "label": "Skill Assessment"
+              },
+              {
+                "type": "callWorkflowButton",
+                "caption": "Start Freelance Teacher Workflow",
+                "workflowRef": "wf_freelanceteacher",
+                "closePage": true
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "appadministrator_overview",
+        "name": "AppAdministrator_Overview",
+        "title": "AppAdministrator Overview",
+        "entityRef": "MyFirstModule.AppAdministrator",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "AppAdministrator Overview",
+            "renderMode": "H2",
+            "content": [],
+            "itemContent": [],
+            "templateContent": []
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Create AppAdministrator",
+            "entityRef": "MyFirstModule.AppAdministrator",
+            "targetPageRef": "appadministrator_newedit",
+            "content": [],
+            "itemContent": [],
+            "templateContent": []
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.AppAdministrator",
+            "autoRowClickToDetail": true,
+            "rowClickTargetPageRef": "appadministrator_newedit",
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name",
+                "autoLabel": true,
+                "content": [],
+                "itemContent": [],
+                "templateContent": []
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Email",
+                "autoLabel": false,
+                "content": [],
+                "itemContent": [],
+                "templateContent": []
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "IsActive",
+                "autoLabel": false,
+                "content": [],
+                "itemContent": [],
+                "templateContent": []
+              }
+            ],
+            "content": [],
+            "templateContent": []
+          }
+        ]
+      },
+      {
+        "ref": "appadministrator_newedit",
+        "name": "AppAdministrator_NewEdit",
+        "title": "AppAdministrator NewEdit",
+        "entityRef": "MyFirstModule.AppAdministrator",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          {
+            "name": "AppAdministrator",
+            "entityRef": "MyFirstModule.AppAdministrator",
+            "required": true
+          }
+        ],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "AppAdministrator",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Email"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "IsActive"
+              },
+              {
+                "type": "associationInput",
+                "associationRef": "FreelanceTeacher_AppAdministrator",
+                "targetEntityRef": "MyFirstModule.FreelanceTeacher",
+                "label": "Freelance Teacher"
+              },
+              {
+                "type": "associationInput",
+                "associationRef": "AppAdministrator_DataUsage",
+                "targetEntityRef": "MyFirstModule.DataUsage",
+                "label": "Data Usage"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "freelanceteacher_workflow_task",
+        "name": "FreelanceTeacher_WorkflowTask",
+        "title": "Freelance Teacher Workflow Task",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "allowedRoles": [
+          "FreelanceTeacher"
+        ],
+        "pageParameters": [
+          {
+            "name": "WorkflowUserTask",
+            "entityRef": "System.WorkflowUserTask",
+            "required": true
+          }
+        ],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "WorkflowUserTask",
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name",
+                "autoLabel": true,
+                "content": [],
+                "itemContent": [],
+                "templateContent": []
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Description",
+                "autoLabel": true,
+                "content": [],
+                "itemContent": [],
+                "templateContent": []
+              },
+              {
+                "type": "setTaskOutcomeButton",
+                "caption": "Approve",
+                "outcomeValue": "Approve",
+                "content": [],
+                "itemContent": [],
+                "templateContent": []
+              },
+              {
+                "type": "setTaskOutcomeButton",
+                "caption": "Reject",
+                "outcomeValue": "Reject",
+                "content": [],
+                "itemContent": [],
+                "templateContent": []
+              }
+            ],
+            "itemContent": [],
+            "templateContent": []
+          }
+        ]
+      },
+      {
+        "ref": "freelanceteacher_detail",
+        "name": "freelanceteacher_detail",
+        "title": "Freelance Teacher Details",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "Freelance Teacher Details",
+            "renderMode": "H2",
+            "content": [],
+            "itemContent": [],
+            "templateContent": []
+          }
+        ],
+        "entityRef": "MyFirstModule.FreelanceTeacher"
+      },
+      {
+        "ref": "freelanceteacher_new",
+        "name": "freelanceteacher_new",
+        "title": "Create New Freelance Teacher",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "Create New Freelance Teacher",
+            "renderMode": "H2",
+            "content": [],
+            "itemContent": [],
+            "templateContent": []
+          }
+        ],
+        "entityRef": "MyFirstModule.FreelanceTeacher"
+      },
+      {
+        "ref": "freelanceteacher_edit",
+        "name": "freelanceteacher_edit",
+        "title": "Edit Freelance Teacher",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "Edit Freelance Teacher",
+            "renderMode": "H2",
+            "content": [],
+            "itemContent": [],
+            "templateContent": []
+          }
+        ],
+        "entityRef": "MyFirstModule.FreelanceTeacher"
+      },
+      {
+        "ref": "module_detail",
+        "name": "module_detail",
+        "title": "Module Details",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "Module Details",
+            "renderMode": "H2",
+            "content": [],
+            "itemContent": [],
+            "templateContent": []
+          }
+        ],
+        "entityRef": "MyFirstModule.Module"
+      },
+      {
+        "ref": "level_overview",
+        "name": "level_overview",
+        "title": "Levels Overview",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "Levels Overview",
+            "renderMode": "H2",
+            "content": [],
+            "itemContent": [],
+            "templateContent": []
+          }
+        ],
+        "entityRef": "MyFirstModule.Level"
+      },
+      {
+        "ref": "quiz_overview",
+        "name": "quiz_overview",
+        "title": "Quizzes Overview",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "Quizzes Overview",
+            "renderMode": "H2",
+            "content": [],
+            "itemContent": [],
+            "templateContent": []
+          }
+        ],
+        "entityRef": "MyFirstModule.Quiz"
+      },
+      {
+        "ref": "flashcard_overview",
+        "name": "flashcard_overview",
+        "title": "Flashcards Overview",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "Flashcards Overview",
+            "renderMode": "H2",
+            "content": [],
+            "itemContent": [],
+            "templateContent": []
+          }
+        ],
+        "entityRef": "MyFirstModule.Flashcard"
+      },
+      {
+        "ref": "video_overview",
+        "name": "video_overview",
+        "title": "Videos Overview",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "Videos Overview",
+            "renderMode": "H2",
+            "content": [],
+            "itemContent": [],
+            "templateContent": []
+          }
+        ],
+        "entityRef": "MyFirstModule.Video"
+      },
+      {
+        "ref": "researchpaper_overview",
+        "name": "researchpaper_overview",
+        "title": "Research Papers Overview",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "Research Papers Overview",
+            "renderMode": "H2",
+            "content": [],
+            "itemContent": [],
+            "templateContent": []
+          }
+        ],
+        "entityRef": "MyFirstModule.ResearchPaper"
+      },
+      {
+        "ref": "slide_overview",
+        "name": "slide_overview",
+        "title": "Slides Overview",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "Slides Overview",
+            "renderMode": "H2",
+            "content": [],
+            "itemContent": [],
+            "templateContent": []
+          }
+        ],
+        "entityRef": "MyFirstModule.Slide"
+      },
+      {
+        "ref": "game_overview",
+        "name": "game_overview",
+        "title": "Games Overview",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "Games Overview",
+            "renderMode": "H2",
+            "content": [],
+            "itemContent": [],
+            "templateContent": []
+          }
+        ],
+        "entityRef": "MyFirstModule.Game"
+      },
+      {
+        "ref": "achievement_overview",
+        "name": "achievement_overview",
+        "title": "Achievements Overview",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "Achievements Overview",
+            "renderMode": "H2",
+            "content": [],
+            "itemContent": [],
+            "templateContent": []
+          }
+        ],
+        "entityRef": "MyFirstModule.Achievement"
+      },
+      {
+        "ref": "skillassessment_overview",
+        "name": "skillassessment_overview",
+        "title": "Skill Assessments Overview",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "Skill Assessments Overview",
+            "renderMode": "H2",
+            "content": [],
+            "itemContent": [],
+            "templateContent": []
+          }
+        ],
+        "entityRef": "MyFirstModule.SkillAssessment"
+      },
+      {
+        "ref": "level_newedit",
+        "name": "Level_NewEdit",
+        "title": "Level NewEdit",
+        "entityRef": "MyFirstModule.Level",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          {
+            "name": "Level",
+            "entityRef": "MyFirstModule.Level",
+            "required": true
+          }
+        ],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "Level",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Number"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Description"
+              },
+              {
+                "type": "associationInput",
+                "associationRef": "Module_Level",
+                "targetEntityRef": "MyFirstModule.Module",
+                "label": "Module"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "quiz_newedit",
+        "name": "Quiz_NewEdit",
+        "title": "Quiz NewEdit",
+        "entityRef": "MyFirstModule.Quiz",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          {
+            "name": "Quiz",
+            "entityRef": "MyFirstModule.Quiz",
+            "required": true
+          }
+        ],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "Quiz",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Title"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Description"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Topic"
+              },
+              {
+                "type": "associationInput",
+                "associationRef": "Module_Quiz",
+                "targetEntityRef": "MyFirstModule.Module",
+                "label": "Module"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "flashcard_newedit",
+        "name": "Flashcard_NewEdit",
+        "title": "Flashcard NewEdit",
+        "entityRef": "MyFirstModule.Flashcard",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          {
+            "name": "Flashcard",
+            "entityRef": "MyFirstModule.Flashcard",
+            "required": true
+          }
+        ],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "Flashcard",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Question"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Answer"
+              },
+              {
+                "type": "associationInput",
+                "associationRef": "Module_Flashcard",
+                "targetEntityRef": "MyFirstModule.Module",
+                "label": "Module"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "video_newedit",
+        "name": "Video_NewEdit",
+        "title": "Video NewEdit",
+        "entityRef": "MyFirstModule.Video",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          {
+            "name": "Video",
+            "entityRef": "MyFirstModule.Video",
+            "required": true
+          }
+        ],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "Video",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Title"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Url"
+              },
+              {
+                "type": "associationInput",
+                "associationRef": "Module_Video",
+                "targetEntityRef": "MyFirstModule.Module",
+                "label": "Module"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "researchpaper_newedit",
+        "name": "ResearchPaper_NewEdit",
+        "title": "ResearchPaper NewEdit",
+        "entityRef": "MyFirstModule.ResearchPaper",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          {
+            "name": "ResearchPaper",
+            "entityRef": "MyFirstModule.ResearchPaper",
+            "required": true
+          }
+        ],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "ResearchPaper",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Title"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Doi"
+              },
+              {
+                "type": "associationInput",
+                "associationRef": "Module_ResearchPaper",
+                "targetEntityRef": "MyFirstModule.Module",
+                "label": "Module"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "slide_newedit",
+        "name": "Slide_NewEdit",
+        "title": "Slide NewEdit",
+        "entityRef": "MyFirstModule.Slide",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          {
+            "name": "Slide",
+            "entityRef": "MyFirstModule.Slide",
+            "required": true
+          }
+        ],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "Slide",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Title"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Content"
+              },
+              {
+                "type": "associationInput",
+                "associationRef": "Module_Slide",
+                "targetEntityRef": "MyFirstModule.Module",
+                "label": "Module"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "game_newedit",
+        "name": "Game_NewEdit",
+        "title": "Game NewEdit",
+        "entityRef": "MyFirstModule.Game",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          {
+            "name": "Game",
+            "entityRef": "MyFirstModule.Game",
+            "required": true
+          }
+        ],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "Game",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Title"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Description"
+              },
+              {
+                "type": "associationInput",
+                "associationRef": "Module_Game",
+                "targetEntityRef": "MyFirstModule.Module",
+                "label": "Module"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "achievement_newedit",
+        "name": "Achievement_NewEdit",
+        "title": "Achievement NewEdit",
+        "entityRef": "MyFirstModule.Achievement",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          {
+            "name": "Achievement",
+            "entityRef": "MyFirstModule.Achievement",
+            "required": true
+          }
+        ],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "Achievement",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Title"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Description"
+              },
+              {
+                "type": "associationInput",
+                "associationRef": "Module_Achievement",
+                "targetEntityRef": "MyFirstModule.Module",
+                "label": "Module"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "skillassessment_newedit",
+        "name": "SkillAssessment_NewEdit",
+        "title": "SkillAssessment NewEdit",
+        "entityRef": "MyFirstModule.SkillAssessment",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          {
+            "name": "SkillAssessment",
+            "entityRef": "MyFirstModule.SkillAssessment",
+            "required": true
+          }
+        ],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "SkillAssessment",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Title"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Description"
+              },
+              {
+                "type": "associationInput",
+                "associationRef": "FreelanceTeacher_SkillAssessment",
+                "targetEntityRef": "MyFirstModule.FreelanceTeacher",
+                "label": "Freelance Teacher"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "chatfunction_overview",
+        "name": "ChatFunction_Overview",
+        "title": "ChatFunction Overview",
+        "entityRef": "MyFirstModule.ChatFunction",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "ChatFunction Overview",
+            "renderMode": "H2"
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Create ChatFunction",
+            "entityRef": "MyFirstModule.ChatFunction",
+            "targetPageRef": "chatfunction_newedit"
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.ChatFunction",
+            "autoRowClickToDetail": true,
+            "rowClickTargetPageRef": "chatfunction_newedit",
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name",
+                "autoLabel": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "chatfunction_newedit",
+        "name": "ChatFunction_NewEdit",
+        "title": "ChatFunction NewEdit",
+        "entityRef": "MyFirstModule.ChatFunction",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          {
+            "name": "ChatFunction",
+            "entityRef": "MyFirstModule.ChatFunction",
+            "required": true
+          }
+        ],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "ChatFunction",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "communicationskills_overview",
+        "name": "CommunicationSkills_Overview",
+        "title": "CommunicationSkills Overview",
+        "entityRef": "MyFirstModule.CommunicationSkills",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "CommunicationSkills Overview",
+            "renderMode": "H2"
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Create CommunicationSkills",
+            "entityRef": "MyFirstModule.CommunicationSkills",
+            "targetPageRef": "communicationskills_newedit"
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.CommunicationSkills",
+            "autoRowClickToDetail": true,
+            "rowClickTargetPageRef": "communicationskills_newedit",
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name",
+                "autoLabel": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "communicationskills_newedit",
+        "name": "CommunicationSkills_NewEdit",
+        "title": "CommunicationSkills NewEdit",
+        "entityRef": "MyFirstModule.CommunicationSkills",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          {
+            "name": "CommunicationSkills",
+            "entityRef": "MyFirstModule.CommunicationSkills",
+            "required": true
+          }
+        ],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "CommunicationSkills",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "presentationskills_overview",
+        "name": "PresentationSkills_Overview",
+        "title": "PresentationSkills Overview",
+        "entityRef": "MyFirstModule.PresentationSkills",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "PresentationSkills Overview",
+            "renderMode": "H2"
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Create PresentationSkills",
+            "entityRef": "MyFirstModule.PresentationSkills",
+            "targetPageRef": "presentationskills_newedit"
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.PresentationSkills",
+            "autoRowClickToDetail": true,
+            "rowClickTargetPageRef": "presentationskills_newedit",
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name",
+                "autoLabel": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "presentationskills_newedit",
+        "name": "PresentationSkills_NewEdit",
+        "title": "PresentationSkills NewEdit",
+        "entityRef": "MyFirstModule.PresentationSkills",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          {
+            "name": "PresentationSkills",
+            "entityRef": "MyFirstModule.PresentationSkills",
+            "required": true
+          }
+        ],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "PresentationSkills",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "confidence_overview",
+        "name": "Confidence_Overview",
+        "title": "Confidence Overview",
+        "entityRef": "MyFirstModule.Confidence",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "Confidence Overview",
+            "renderMode": "H2"
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Create Confidence",
+            "entityRef": "MyFirstModule.Confidence",
+            "targetPageRef": "confidence_newedit"
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.Confidence",
+            "autoRowClickToDetail": true,
+            "rowClickTargetPageRef": "confidence_newedit",
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name",
+                "autoLabel": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "confidence_newedit",
+        "name": "Confidence_NewEdit",
+        "title": "Confidence NewEdit",
+        "entityRef": "MyFirstModule.Confidence",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          {
+            "name": "Confidence",
+            "entityRef": "MyFirstModule.Confidence",
+            "required": true
+          }
+        ],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "Confidence",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "compassion_overview",
+        "name": "Compassion_Overview",
+        "title": "Compassion Overview",
+        "entityRef": "MyFirstModule.Compassion",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "Compassion Overview",
+            "renderMode": "H2"
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Create Compassion",
+            "entityRef": "MyFirstModule.Compassion",
+            "targetPageRef": "compassion_newedit"
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.Compassion",
+            "autoRowClickToDetail": true,
+            "rowClickTargetPageRef": "compassion_newedit",
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name",
+                "autoLabel": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "compassion_newedit",
+        "name": "Compassion_NewEdit",
+        "title": "Compassion NewEdit",
+        "entityRef": "MyFirstModule.Compassion",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          {
+            "name": "Compassion",
+            "entityRef": "MyFirstModule.Compassion",
+            "required": true
+          }
+        ],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "Compassion",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "collaboration_overview",
+        "name": "Collaboration_Overview",
+        "title": "Collaboration Overview",
+        "entityRef": "MyFirstModule.Collaboration",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "Collaboration Overview",
+            "renderMode": "H2"
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Create Collaboration",
+            "entityRef": "MyFirstModule.Collaboration",
+            "targetPageRef": "collaboration_newedit"
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.Collaboration",
+            "autoRowClickToDetail": true,
+            "rowClickTargetPageRef": "collaboration_newedit",
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name",
+                "autoLabel": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "collaboration_newedit",
+        "name": "Collaboration_NewEdit",
+        "title": "Collaboration NewEdit",
+        "entityRef": "MyFirstModule.Collaboration",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          {
+            "name": "Collaboration",
+            "entityRef": "MyFirstModule.Collaboration",
+            "required": true
+          }
+        ],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "Collaboration",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "inclusiveness_overview",
+        "name": "Inclusiveness_Overview",
+        "title": "Inclusiveness Overview",
+        "entityRef": "MyFirstModule.Inclusiveness",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "Inclusiveness Overview",
+            "renderMode": "H2"
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Create Inclusiveness",
+            "entityRef": "MyFirstModule.Inclusiveness",
+            "targetPageRef": "inclusiveness_newedit"
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.Inclusiveness",
+            "autoRowClickToDetail": true,
+            "rowClickTargetPageRef": "inclusiveness_newedit",
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name",
+                "autoLabel": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "inclusiveness_newedit",
+        "name": "Inclusiveness_NewEdit",
+        "title": "Inclusiveness NewEdit",
+        "entityRef": "MyFirstModule.Inclusiveness",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          {
+            "name": "Inclusiveness",
+            "entityRef": "MyFirstModule.Inclusiveness",
+            "required": true
+          }
+        ],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "Inclusiveness",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "graphicaloverview_overview",
+        "name": "GraphicalOverview_Overview",
+        "title": "GraphicalOverview Overview",
+        "entityRef": "MyFirstModule.GraphicalOverview",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "GraphicalOverview Overview",
+            "renderMode": "H2"
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Create GraphicalOverview",
+            "entityRef": "MyFirstModule.GraphicalOverview",
+            "targetPageRef": "graphicaloverview_newedit"
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.GraphicalOverview",
+            "autoRowClickToDetail": true,
+            "rowClickTargetPageRef": "graphicaloverview_newedit",
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name",
+                "autoLabel": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "graphicaloverview_newedit",
+        "name": "GraphicalOverview_NewEdit",
+        "title": "GraphicalOverview NewEdit",
+        "entityRef": "MyFirstModule.GraphicalOverview",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          {
+            "name": "GraphicalOverview",
+            "entityRef": "MyFirstModule.GraphicalOverview",
+            "required": true
+          }
+        ],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "GraphicalOverview",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "learningopportunity_overview",
+        "name": "LearningOpportunity_Overview",
+        "title": "LearningOpportunity Overview",
+        "entityRef": "MyFirstModule.LearningOpportunity",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "LearningOpportunity Overview",
+            "renderMode": "H2"
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Create LearningOpportunity",
+            "entityRef": "MyFirstModule.LearningOpportunity",
+            "targetPageRef": "learningopportunity_newedit"
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.LearningOpportunity",
+            "autoRowClickToDetail": true,
+            "rowClickTargetPageRef": "learningopportunity_newedit",
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name",
+                "autoLabel": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "learningopportunity_newedit",
+        "name": "LearningOpportunity_NewEdit",
+        "title": "LearningOpportunity NewEdit",
+        "entityRef": "MyFirstModule.LearningOpportunity",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          {
+            "name": "LearningOpportunity",
+            "entityRef": "MyFirstModule.LearningOpportunity",
+            "required": true
+          }
+        ],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "LearningOpportunity",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "notification_overview",
+        "name": "Notification_Overview",
+        "title": "Notification Overview",
+        "entityRef": "MyFirstModule.Notification",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "Notification Overview",
+            "renderMode": "H2"
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Create Notification",
+            "entityRef": "MyFirstModule.Notification",
+            "targetPageRef": "notification_newedit"
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.Notification",
+            "autoRowClickToDetail": true,
+            "rowClickTargetPageRef": "notification_newedit",
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name",
+                "autoLabel": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "notification_newedit",
+        "name": "Notification_NewEdit",
+        "title": "Notification NewEdit",
+        "entityRef": "MyFirstModule.Notification",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          {
+            "name": "Notification",
+            "entityRef": "MyFirstModule.Notification",
+            "required": true
+          }
+        ],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "Notification",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name"
+              },
+              {
+                "type": "associationInput",
+                "associationRef": "FreelanceTeacher_Notification",
+                "targetEntityRef": "MyFirstModule.FreelanceTeacher",
+                "label": "Freelance Teacher"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "approvalstatus_overview",
+        "name": "ApprovalStatus_Overview",
+        "title": "ApprovalStatus Overview",
+        "entityRef": "MyFirstModule.ApprovalStatus",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "ApprovalStatus Overview",
+            "renderMode": "H2"
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Create ApprovalStatus",
+            "entityRef": "MyFirstModule.ApprovalStatus",
+            "targetPageRef": "approvalstatus_newedit"
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.ApprovalStatus",
+            "autoRowClickToDetail": true,
+            "rowClickTargetPageRef": "approvalstatus_newedit",
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name",
+                "autoLabel": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "approvalstatus_newedit",
+        "name": "ApprovalStatus_NewEdit",
+        "title": "ApprovalStatus NewEdit",
+        "entityRef": "MyFirstModule.ApprovalStatus",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          {
+            "name": "ApprovalStatus",
+            "entityRef": "MyFirstModule.ApprovalStatus",
+            "required": true
+          }
+        ],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "ApprovalStatus",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "removalreason_overview",
+        "name": "RemovalReason_Overview",
+        "title": "RemovalReason Overview",
+        "entityRef": "MyFirstModule.RemovalReason",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "RemovalReason Overview",
+            "renderMode": "H2"
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Create RemovalReason",
+            "entityRef": "MyFirstModule.RemovalReason",
+            "targetPageRef": "removalreason_newedit"
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.RemovalReason",
+            "autoRowClickToDetail": true,
+            "rowClickTargetPageRef": "removalreason_newedit",
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name",
+                "autoLabel": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "removalreason_newedit",
+        "name": "RemovalReason_NewEdit",
+        "title": "RemovalReason NewEdit",
+        "entityRef": "MyFirstModule.RemovalReason",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          {
+            "name": "RemovalReason",
+            "entityRef": "MyFirstModule.RemovalReason",
+            "required": true
+          }
+        ],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "RemovalReason",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "datausage_overview",
+        "name": "DataUsage_Overview",
+        "title": "DataUsage Overview",
+        "entityRef": "MyFirstModule.DataUsage",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "DataUsage Overview",
+            "renderMode": "H2"
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Create DataUsage",
+            "entityRef": "MyFirstModule.DataUsage",
+            "targetPageRef": "datausage_newedit"
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.DataUsage",
+            "autoRowClickToDetail": true,
+            "rowClickTargetPageRef": "datausage_newedit",
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "FreelanceTeacherId",
+                "autoLabel": true
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "ModuleId",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "UsageCount",
+                "autoLabel": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "datausage_newedit",
+        "name": "DataUsage_NewEdit",
+        "title": "DataUsage NewEdit",
+        "entityRef": "MyFirstModule.DataUsage",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          {
+            "name": "DataUsage",
+            "entityRef": "MyFirstModule.DataUsage",
+            "required": true
+          }
+        ],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "DataUsage",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "FreelanceTeacherId"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "ModuleId"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "UsageCount"
+              },
+              {
+                "type": "associationInput",
+                "associationRef": "AppAdministrator_DataUsage",
+                "targetEntityRef": "MyFirstModule.AppAdministrator",
+                "label": "App Administrator"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "appuser_overview",
+        "name": "AppUser_Overview",
+        "title": "AppUser Overview",
+        "entityRef": "MyFirstModule.AppUser",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "AppUser Overview",
+            "renderMode": "H2"
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Create AppUser",
+            "entityRef": "MyFirstModule.AppUser",
+            "targetPageRef": "appuser_newedit"
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.AppUser",
+            "autoRowClickToDetail": true,
+            "rowClickTargetPageRef": "appuser_newedit",
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name",
+                "autoLabel": true
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Email",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "IsActive",
+                "autoLabel": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "appuser_newedit",
+        "name": "AppUser_NewEdit",
+        "title": "AppUser NewEdit",
+        "entityRef": "MyFirstModule.AppUser",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          {
+            "name": "AppUser",
+            "entityRef": "MyFirstModule.AppUser",
+            "required": true
+          }
+        ],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "AppUser",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Email"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "IsActive"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "verification": {
+    "failOnMissing": true
+  },
+  "microflows": {
+    "specs": [
+      {
+        "name": "ApproveFreelanceTeacherProfile",
+        "parameters": [
+          {
+            "name": "freelanceTeacherId",
+            "type": "Integer"
+          },
+          {
+            "name": "approvalStatus",
+            "type": "String"
+          }
+        ],
+        "actions": [
+          {
+            "type": "retrieveObject",
+            "entity": "FreelanceTeacher",
+            "outputVariableName": "FreelanceTeacher_Object"
+          },
+          {
+            "type": "commitObject",
+            "variableName": "FreelanceTeacher_Object"
+          },
+          {
+            "type": "showMessage",
+            "message": "Freelance teacher profile approved successfully."
+          }
+        ]
+      },
+      {
+        "name": "SendNotificationToFreelanceTeacher",
+        "parameters": [
+          {
+            "name": "freelanceTeacherId",
+            "type": "Integer"
+          },
+          {
+            "name": "notificationMessage",
+            "type": "String"
+          }
+        ],
+        "actions": [
+          {
+            "type": "retrieveObject",
+            "entity": "FreelanceTeacher",
+            "outputVariableName": "FreelanceTeacher_Object"
+          },
+          {
+            "type": "createObject",
+            "entity": "Notification",
+            "members": [
+              {
+                "name": "Name",
+                "value": "$notificationMessage"
+              }
+            ],
+            "outputVariableName": "Notification_New"
+          },
+          {
+            "type": "commitObject",
+            "variableName": "Notification_New"
+          },
+          {
+            "type": "showMessage",
+            "message": "Notification sent to freelance teacher successfully."
+          }
+        ]
+      },
+      {
+        "name": "UpdateFreelanceTeacherProfile",
+        "parameters": [
+          {
+            "name": "freelanceTeacherId",
+            "type": "Integer"
+          },
+          {
+            "name": "teachingExperience",
+            "type": "Integer"
+          },
+          {
+            "name": "technicalSkillLevel",
+            "type": "Integer"
+          }
+        ],
+        "actions": [
+          {
+            "type": "retrieveObject",
+            "entity": "FreelanceTeacher",
+            "outputVariableName": "FreelanceTeacher_Object"
+          },
+          {
+            "type": "commitObject",
+            "variableName": "FreelanceTeacher_Object"
+          },
+          {
+            "type": "showMessage",
+            "message": "Freelance teacher profile updated successfully."
+          }
+        ]
+      },
+      {
+        "ref": "mf_freelanceteacher_prepare",
+        "name": "MF_FreelanceTeacher_Prepare",
+        "parameters": [
+          {
+            "name": "WorkflowContext",
+            "type": {
+              "kind": "Object",
+              "entityRef": "MyFirstModule.FreelanceTeacher"
+            },
+            "required": true
+          }
+        ],
+        "actions": [
+          {
+            "type": "changeObject",
+            "targetVariableName": "WorkflowContext",
+            "commit": "yes",
+            "changes": [
+              {
+                "attributeRef": "Status",
+                "valueExpression": "'In review'"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "mf_freelanceteacher_approve",
+        "name": "MF_FreelanceTeacher_Approve",
+        "parameters": [
+          {
+            "name": "WorkflowContext",
+            "type": {
+              "kind": "Object",
+              "entityRef": "MyFirstModule.FreelanceTeacher"
+            },
+            "required": true
+          }
+        ],
+        "actions": [
+          {
+            "type": "changeObject",
+            "targetVariableName": "WorkflowContext",
+            "commit": "yes",
+            "changes": [
+              {
+                "attributeRef": "Status",
+                "valueExpression": "'Approved'"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "mf_freelanceteacher_reject",
+        "name": "MF_FreelanceTeacher_Reject",
+        "parameters": [
+          {
+            "name": "WorkflowContext",
+            "type": {
+              "kind": "Object",
+              "entityRef": "MyFirstModule.FreelanceTeacher"
+            },
+            "required": true
+          }
+        ],
+        "actions": [
+          {
+            "type": "changeObject",
+            "targetVariableName": "WorkflowContext",
+            "commit": "yes",
+            "changes": [
+              {
+                "attributeRef": "Status",
+                "valueExpression": "'Rejected'"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "nanoflows": {
+    "specs": [
+      {
+        "name": "CheckKvKNumber",
+        "parameters": [
+          {
+            "name": "kvkNumber",
+            "type": "String"
+          }
+        ],
+        "actions": [
+          {
+            "type": "decision",
+            "conditionExpression": "$kvkNumber == 'valid'",
+            "trueActions": [],
+            "falseActions": []
+          },
+          {
+            "type": "showMessage",
+            "message": "KvK number is valid."
+          }
+        ]
+      }
+    ]
+  },
+  "workflows": {
+    "specs": [
+      {
+        "ref": "wf_freelanceteacher",
+        "name": "WF_FreelanceTeacher",
+        "bindings": {
+          "contextEntityRef": "MyFirstModule.FreelanceTeacher"
+        },
+        "steps": [
+          {
+            "type": "start",
+            "name": "Start"
+          },
+          {
+            "type": "serviceTask",
+            "name": "FreelanceTeacherPrepare",
+            "handlerMicroflowRef": "mf_freelanceteacher_prepare"
+          },
+          {
+            "type": "userTask",
+            "name": "FreelanceTeacherReview",
+            "taskName": "{1}",
+            "taskNameArgs": [
+              "$WorkflowContext/Title"
+            ],
+            "taskDescription": "{1}",
+            "taskDescriptionArgs": [
+              "$WorkflowContext/Description"
+            ],
+            "taskPageRef": "freelanceteacher_workflow_task",
+            "userRoleRefs": [
+              "FreelanceTeacher"
+            ],
+            "outcomes": [
+              {
+                "value": "Approve",
+                "steps": [
+                  {
+                    "type": "serviceTask",
+                    "name": "Approved",
+                    "handlerMicroflowRef": "mf_freelanceteacher_approve"
+                  },
+                  {
+                    "type": "end",
+                    "name": "Approved"
+                  }
+                ]
+              },
+              {
+                "value": "Reject",
+                "steps": [
+                  {
+                    "type": "serviceTask",
+                    "name": "Rejected",
+                    "handlerMicroflowRef": "mf_freelanceteacher_reject"
+                  },
+                  {
+                    "type": "end",
+                    "name": "Rejected"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

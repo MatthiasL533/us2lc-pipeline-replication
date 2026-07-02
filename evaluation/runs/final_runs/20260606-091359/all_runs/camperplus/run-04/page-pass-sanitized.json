@@ -1,0 +1,189 @@
+{
+  "pages": {
+    "specs": [
+      {
+        "name": "home",
+        "layout": "Blank",
+        "widgets": [
+          {
+            "type": "Text",
+            "caption": "Welcome to the Camp Management System"
+          },
+          {
+            "type": "Button",
+            "caption": "Manage Campers",
+            "onClick": {
+              "type": "Navigation",
+              "page": "camperOverview"
+            }
+          },
+          {
+            "type": "Button",
+            "caption": "Manage Parents",
+            "onClick": {
+              "type": "Navigation",
+              "page": "parentOverview"
+            }
+          },
+          {
+            "type": "Button",
+            "caption": "Manage Groups",
+            "onClick": {
+              "type": "Navigation",
+              "page": "groupOverview"
+            }
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "camperOverview",
+        "layout": "Table",
+        "entity": "Camper",
+        "widgets": [
+          {
+            "type": "DataGrid",
+            "columns": [
+              {
+                "attribute": "Name"
+              },
+              {
+                "attribute": "EmergencyContactInfo"
+              }
+            ]
+          },
+          {
+            "type": "Button",
+            "caption": "New Camper",
+            "onClick": {
+              "type": "Navigation",
+              "page": "camperNewEdit"
+            }
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "camperNewEdit",
+        "layout": "FormHorizontal",
+        "entity": "Camper",
+        "widgets": [
+          {
+            "type": "TextInput",
+            "attribute": "Name"
+          },
+          {
+            "type": "TextInput",
+            "attribute": "EmergencyContactInfo"
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "parentOverview",
+        "layout": "Table",
+        "entity": "Parent",
+        "widgets": [
+          {
+            "type": "DataGrid",
+            "columns": [
+              {
+                "attribute": "Name"
+              },
+              {
+                "attribute": "Email"
+              }
+            ]
+          },
+          {
+            "type": "Button",
+            "caption": "New Parent",
+            "onClick": {
+              "type": "Navigation",
+              "page": "parentNewEdit"
+            }
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "parentNewEdit",
+        "layout": "FormHorizontal",
+        "entity": "Parent",
+        "widgets": [
+          {
+            "type": "TextInput",
+            "attribute": "Name"
+          },
+          {
+            "type": "TextInput",
+            "attribute": "Email"
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "groupOverview",
+        "layout": "Table",
+        "entity": "Group",
+        "widgets": [
+          {
+            "type": "DataGrid",
+            "columns": [
+              {
+                "attribute": "GroupName"
+              }
+            ]
+          },
+          {
+            "type": "Button",
+            "caption": "New Group",
+            "onClick": {
+              "type": "Navigation",
+              "page": "groupNewEdit"
+            }
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "groupNewEdit",
+        "layout": "FormHorizontal",
+        "entity": "Group",
+        "widgets": [
+          {
+            "type": "TextInput",
+            "attribute": "GroupName"
+          }
+        ],
+        "content": []
+      }
+    ]
+  },
+  "app": {
+    "navigation": {
+      "home": {
+        "pages": [
+          "camperOverview",
+          "parentOverview",
+          "groupOverview"
+        ]
+      },
+      "camperOverview": {
+        "pages": [
+          "camperNewEdit"
+        ]
+      },
+      "parentOverview": {
+        "pages": [
+          "parentNewEdit"
+        ]
+      },
+      "groupOverview": {
+        "pages": [
+          "groupNewEdit"
+        ]
+      }
+    }
+  }
+}

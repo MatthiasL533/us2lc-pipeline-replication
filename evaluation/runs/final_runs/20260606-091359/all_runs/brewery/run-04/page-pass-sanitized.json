@@ -1,0 +1,330 @@
+{
+  "pages": {
+    "specs": [
+      {
+        "name": "home",
+        "layout": "Blank",
+        "widgets": [],
+        "content": []
+      },
+      {
+        "name": "breweryOverview",
+        "layout": "Table",
+        "entity": "Brewery",
+        "widgets": [
+          {
+            "type": "DataGrid",
+            "columns": [
+              {
+                "attributeRef": "Name"
+              },
+              {
+                "attributeRef": "Address"
+              }
+            ]
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "breweryDetail",
+        "layout": "FormHorizontal",
+        "entity": "Brewery",
+        "widgets": [
+          {
+            "type": "TextInput",
+            "attributeRef": "Name"
+          },
+          {
+            "type": "TextInput",
+            "attributeRef": "Address"
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "hospitalityBusinessOverview",
+        "layout": "Table",
+        "entity": "HospitalityBusiness",
+        "widgets": [
+          {
+            "type": "DataGrid",
+            "columns": [
+              {
+                "attributeRef": "Name"
+              },
+              {
+                "attributeRef": "Address"
+              }
+            ]
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "hospitalityBusinessDetail",
+        "layout": "FormHorizontal",
+        "entity": "HospitalityBusiness",
+        "widgets": [
+          {
+            "type": "TextInput",
+            "attributeRef": "Name"
+          },
+          {
+            "type": "TextInput",
+            "attributeRef": "Address"
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "beerOverview",
+        "layout": "Table",
+        "entity": "Beer",
+        "widgets": [
+          {
+            "type": "DataGrid",
+            "columns": [
+              {
+                "attributeRef": "Name"
+              }
+            ]
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "beerDetail",
+        "layout": "FormHorizontal",
+        "entity": "Beer",
+        "widgets": [
+          {
+            "type": "TextInput",
+            "attributeRef": "Name"
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "orderOverview",
+        "layout": "Table",
+        "entity": "Order",
+        "widgets": [
+          {
+            "type": "DataGrid",
+            "columns": [
+              {
+                "attributeRef": "OrderId"
+              },
+              {
+                "attributeRef": "BreweryId"
+              },
+              {
+                "attributeRef": "HospitalityBusinessId"
+              }
+            ]
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "orderDetail",
+        "layout": "FormHorizontal",
+        "entity": "Order",
+        "widgets": [
+          {
+            "type": "NumberInput",
+            "attributeRef": "OrderId"
+          },
+          {
+            "type": "ReferenceSelector",
+            "attributeRef": "BreweryId",
+            "entity": "Brewery"
+          },
+          {
+            "type": "ReferenceSelector",
+            "attributeRef": "HospitalityBusinessId",
+            "entity": "HospitalityBusiness"
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "contractOverview",
+        "layout": "Table",
+        "entity": "Contract",
+        "widgets": [
+          {
+            "type": "DataGrid",
+            "columns": [
+              {
+                "attributeRef": "ContractId"
+              },
+              {
+                "attributeRef": "BreweryId"
+              }
+            ]
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "contractDetail",
+        "layout": "FormHorizontal",
+        "entity": "Contract",
+        "widgets": [
+          {
+            "type": "NumberInput",
+            "attributeRef": "ContractId"
+          },
+          {
+            "type": "ReferenceSelector",
+            "attributeRef": "BreweryId",
+            "entity": "Brewery"
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "proposalOverview",
+        "layout": "Table",
+        "entity": "Proposal",
+        "widgets": [
+          {
+            "type": "DataGrid",
+            "columns": [
+              {
+                "attributeRef": "ProposalId"
+              },
+              {
+                "attributeRef": "BreweryId"
+              }
+            ]
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "proposalDetail",
+        "layout": "FormHorizontal",
+        "entity": "Proposal",
+        "widgets": [
+          {
+            "type": "NumberInput",
+            "attributeRef": "ProposalId"
+          },
+          {
+            "type": "ReferenceSelector",
+            "attributeRef": "BreweryId",
+            "entity": "Brewery"
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "orderTemplateOverview",
+        "layout": "Table",
+        "entity": "OrderTemplate",
+        "widgets": [
+          {
+            "type": "DataGrid",
+            "columns": [
+              {
+                "attributeRef": "TemplateId"
+              },
+              {
+                "attributeRef": "HospitalityBusinessId"
+              }
+            ]
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "orderTemplateDetail",
+        "layout": "FormHorizontal",
+        "entity": "OrderTemplate",
+        "widgets": [
+          {
+            "type": "NumberInput",
+            "attributeRef": "TemplateId"
+          },
+          {
+            "type": "ReferenceSelector",
+            "attributeRef": "HospitalityBusinessId",
+            "entity": "HospitalityBusiness"
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "shoppingCartOverview",
+        "layout": "Table",
+        "entity": "ShoppingCart",
+        "widgets": [
+          {
+            "type": "DataGrid",
+            "columns": [
+              {
+                "attributeRef": "CartId"
+              },
+              {
+                "attributeRef": "HospitalityBusinessId"
+              }
+            ]
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "shoppingCartDetail",
+        "layout": "FormHorizontal",
+        "entity": "ShoppingCart",
+        "widgets": [
+          {
+            "type": "NumberInput",
+            "attributeRef": "CartId"
+          },
+          {
+            "type": "ReferenceSelector",
+            "attributeRef": "HospitalityBusinessId",
+            "entity": "HospitalityBusiness"
+          }
+        ],
+        "content": []
+      }
+    ]
+  },
+  "app": {
+    "navigation": [
+      {
+        "pageRef": "home",
+        "caption": "Home"
+      },
+      {
+        "pageRef": "breweryOverview",
+        "caption": "Breweries"
+      },
+      {
+        "pageRef": "hospitalityBusinessOverview",
+        "caption": "Hospitality Businesses"
+      },
+      {
+        "pageRef": "beerOverview",
+        "caption": "Beers"
+      },
+      {
+        "pageRef": "orderOverview",
+        "caption": "Orders"
+      },
+      {
+        "pageRef": "contractOverview",
+        "caption": "Contracts"
+      },
+      {
+        "pageRef": "proposalOverview",
+        "caption": "Proposals"
+      }
+    ]
+  }
+}

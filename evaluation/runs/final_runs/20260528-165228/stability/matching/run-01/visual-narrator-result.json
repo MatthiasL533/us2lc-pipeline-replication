@@ -1,0 +1,2852 @@
+{
+  "ok": true,
+  "inputPath": "/Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/artifacts/practical-performance/20260528-165228/inputs/matching/user-stories.txt",
+  "systemName": "PracticalPerf_matching_Stability",
+  "ontology": "# Generated with Visual Narrator\nPrefix: : <http://fakesite.org/practicalperf_matching_stability.owl#>\nPrefix: owl: <http://www.w3.org/2002/07/owl#>\nPrefix: rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPrefix: rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPrefix: xsd: <http://www.w3.org/2001/XMLSchema#>\nPrefix: dc: <http://purl.org/dc/elements/1.1/>\nPrefix: onto: <http://fakesite.org/practicalperf_matching_stability.owl#>\n\nOntology: <:>\n\nAnnotations:\n\tdc:title \"PracticalPerf_matching_Stability\",\n\tdc:creator \"Visual Narrator\",\n\trdfs:comment \"Generated with Visual Narrator\"\n\nAnnotationProperty: dc:creator\n\nAnnotationProperty: dc:title\n\n\n# Relationships\nObjectProperty: :canAdvertise\n\tDomain: :Manager\n\tRange: :Service\n\nObjectProperty: :canAccess1\n\tDomain: :Student\n\tRange: :Platform\n\nObjectProperty: :canAccess2\n\tDomain: :Tutor\n\tRange: :Platform\n\nObjectProperty: :canAccess3\n\tDomain: :Manager\n\tRange: :Information\n\nObjectProperty: :canCancel\n\tDomain: :Tutor\n\tRange: :Session\n\nObjectProperty: :canNotify1\n\tDomain: :Student\n\tRange: :Tutor\n\nObjectProperty: :canNotify2\n\tDomain: :Tutor\n\tRange: :Student\n\nObjectProperty: :canChoose\n\tDomain: :Student\n\tRange: :Type\n\nObjectProperty: :canMatchWith1\n\tDomain: :Student\n\tRange: :Subject\n\nObjectProperty: :canMatchWith2\n\tDomain: :Student\n\tRange: :Tutor\n\nObjectProperty: :canMatchWith3\n\tDomain: :Student\n\tRange: :Session\n\nObjectProperty: :canMatchWith4\n\tDomain: :Tutor\n\tRange: :Student\n\nObjectProperty: :canReceive\n\tDomain: :Tutor\n\tRange: :Notification\n\nObjectProperty: :canForget\n\tDomain: :Tutor\n\tRange: :Session\n\nObjectProperty: :canMatchTo\n\tDomain: :Tutor\n\tRange: :Student\n\nObjectProperty: :canVerify\n\tDomain: :Manager\n\tRange: :Account\n\nObjectProperty: :canProvide1\n\tDomain: :Tutor\n\tRange: :File\n\nObjectProperty: :canProvide2\n\tDomain: :Tutor\n\tRange: :Service\n\nObjectProperty: :canMake1\n\tDomain: :Student\n\tRange: :Account\n\nObjectProperty: :canMake2\n\tDomain: :Tutor\n\tRange: :Account\n\nObjectProperty: :canSelect\n\tDomain: :Student\n\tRange: :Subject\n\nObjectProperty: :canView1\n\tDomain: :Tutor\n\tRange: :Rating\n\nObjectProperty: :canView2\n\tDomain: :Tutor\n\tRange: :Breakdown\n\nObjectProperty: :canUpdate\n\tDomain: :Tutor\n\tRange: :Availability\n\nObjectProperty: :canSee\n\tDomain: :Tutor\n\tRange: :Feedback\n\nObjectProperty: :canSpecify1\n\tDomain: :Tutor\n\tRange: :Subject\n\nObjectProperty: :canSpecify2\n\tDomain: :Tutor\n\tRange: :Availability\n\nObjectProperty: :canSpecify3\n\tDomain: :Tutor\n\tRange: :Location\n\nObjectProperty: :canHave\n\tDomain: :Manager\n\tRange: :Functionality\n\n# Classes\nClass: :Manager\n\tAnnotations:\n\t\trdfs:comment \"Functional Role\"\n\nClass: :Functionality\n\n\nClass: :Account\n\n\nClass: :Student\n\tAnnotations:\n\t\trdfs:comment \"Functional Role\"\n\nClass: :Platform\n\n\nClass: :Subject\n\n\nClass: :Type\n\n\nClass: :Tutor\n\tAnnotations:\n\t\trdfs:comment \"Functional Role\"\n\nClass: :File\n\n\nClass: :Availability\n\n\nClass: :Location\n\n\nClass: :Session\n\n\nClass: :Service\n\n\nClass: :Notification\n\n\nClass: :Rating\n\n\nClass: :Feedback\n\n\nClass: :Breakdown\n\n\nClass: :Information\n\n\nClass: :Confirmation\n\n\n",
+  "stories": [
+    {
+      "number": 1,
+      "text": "As a manager, I want to have an overview and modification functionality of all ongoing and upcoming sessions, tutor and student statuses, and matching details, so that I can address issues in real time.",
+      "role": {
+        "name": "manager",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "functionality",
+        "compound": []
+      },
+      "json": {
+        "number": 1,
+        "text": "As a manager, I want to have an overview and modification functionality of all ongoing and upcoming sessions, tutor and student statuses, and matching details, so that I can address issues in real time.",
+        "iloc": [
+          3,
+          27
+        ],
+        "role": {
+          "text": "manager",
+          "indicator": "As a"
+        },
+        "means": {
+          "text": "have an overview and modification functionality of all ongoing and upcoming sessions tutor and student statuses and matching details",
+          "indicator": "I want to"
+        },
+        "ends": {
+          "text": "I can address issues in real time",
+          "indicator": "So that"
+        }
+      }
+    },
+    {
+      "number": 8,
+      "text": "As a manager, I want to be able to verify accounts of students and tutors.",
+      "role": {
+        "name": "manager",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "accounts",
+        "compound": []
+      },
+      "json": {
+        "number": 8,
+        "text": "As a manager, I want to be able to verify accounts of students and tutors.",
+        "iloc": [
+          3
+        ],
+        "role": {
+          "text": "manager",
+          "indicator": "As a"
+        },
+        "means": {
+          "text": "verify accounts of students and tutors",
+          "indicator": "I want to be able to"
+        }
+      }
+    },
+    {
+      "number": 9,
+      "text": "As a student, I want to be able to make my account, so that I can access the platform where I can manage my matches, sessions, and pay securely.",
+      "role": {
+        "name": "student",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "account",
+        "compound": []
+      },
+      "json": {
+        "number": 9,
+        "text": "As a student, I want to be able to make my account, so that I can access the platform where I can manage my matches, sessions, and pay securely.",
+        "iloc": [
+          3,
+          14,
+          20
+        ],
+        "role": {
+          "text": "student",
+          "indicator": "As a"
+        },
+        "means": {
+          "text": "make my account",
+          "indicator": "I want to be able to"
+        },
+        "ends": {
+          "text": "I can access the platform where I can manage my matches sessions and pay securely",
+          "indicator": "So that"
+        }
+      }
+    },
+    {
+      "number": 10,
+      "text": "As a student, I want to be able to select one or multiple subjects I want to be tutored in.",
+      "role": {
+        "name": "student",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "subjects",
+        "compound": []
+      },
+      "json": {
+        "number": 10,
+        "text": "As a student, I want to be able to select one or multiple subjects I want to be tutored in.",
+        "iloc": [
+          3,
+          14
+        ],
+        "role": {
+          "text": "student",
+          "indicator": "As a"
+        },
+        "means": {
+          "text": "select one or multiple subjects I want to be tutored in",
+          "indicator": "I want to be able to"
+        }
+      }
+    },
+    {
+      "number": 11,
+      "text": "As a student, I want to choose the type of session: online or in-person.",
+      "role": {
+        "name": "student",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "type",
+        "compound": []
+      },
+      "json": {
+        "number": 11,
+        "text": "As a student, I want to choose the type of session: online or in-person.",
+        "iloc": [
+          3
+        ],
+        "role": {
+          "text": "student",
+          "indicator": "As a"
+        },
+        "means": {
+          "text": "choose the type of session: online or in-person",
+          "indicator": "I want to"
+        }
+      }
+    },
+    {
+      "number": 12,
+      "text": "As a tutor, I want to be able to make an account with my personal information, so that I can access the platform where I can find clients for my services.",
+      "role": {
+        "name": "tutor",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "account",
+        "compound": []
+      },
+      "json": {
+        "number": 12,
+        "text": "As a tutor, I want to be able to make an account with my personal information, so that I can access the platform where I can find clients for my services.",
+        "iloc": [
+          3,
+          18,
+          24
+        ],
+        "role": {
+          "text": "tutor",
+          "indicator": "As a"
+        },
+        "means": {
+          "text": "make an account with my personal information",
+          "indicator": "I want to be able to"
+        },
+        "ends": {
+          "text": "I can access the platform where I can find clients for my services",
+          "indicator": "So that"
+        }
+      }
+    },
+    {
+      "number": 13,
+      "text": "As a tutor, I want to be able to provide my files (CV, and other documents) in the system, so that the hiring process is easy and streamlined.",
+      "role": {
+        "name": "tutor",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "files",
+        "compound": []
+      },
+      "json": {
+        "number": 13,
+        "text": "As a tutor, I want to be able to provide my files (CV, and other documents) in the system, so that the hiring process is easy and streamlined.",
+        "iloc": [
+          3
+        ],
+        "role": {
+          "text": "tutor",
+          "indicator": "As a"
+        },
+        "means": {
+          "text": "provide my files (CV and other documents) in the system",
+          "indicator": "I want to be able to"
+        },
+        "ends": {
+          "text": "the hiring process is easy and streamlined",
+          "indicator": "So that"
+        }
+      }
+    },
+    {
+      "number": 14,
+      "text": "As a tutor, I want to specify my subjects, so that I can be matched to a student based on this.",
+      "role": {
+        "name": "tutor",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "subjects",
+        "compound": []
+      },
+      "json": {
+        "number": 14,
+        "text": "As a tutor, I want to specify my subjects, so that I can be matched to a student based on this.",
+        "iloc": [
+          3,
+          11
+        ],
+        "role": {
+          "text": "tutor",
+          "indicator": "As a"
+        },
+        "means": {
+          "text": "specify my subjects",
+          "indicator": "I want to"
+        },
+        "ends": {
+          "text": "I can be matched to a student based on this",
+          "indicator": "So that"
+        }
+      }
+    },
+    {
+      "number": 15,
+      "text": "As a tutor, I want to specify my availability, so that I can be matched to a student based on this.",
+      "role": {
+        "name": "tutor",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "availability",
+        "compound": []
+      },
+      "json": {
+        "number": 15,
+        "text": "As a tutor, I want to specify my availability, so that I can be matched to a student based on this.",
+        "iloc": [
+          3,
+          11
+        ],
+        "role": {
+          "text": "tutor",
+          "indicator": "As a"
+        },
+        "means": {
+          "text": "specify my availability",
+          "indicator": "I want to"
+        },
+        "ends": {
+          "text": "I can be matched to a student based on this",
+          "indicator": "So that"
+        }
+      }
+    },
+    {
+      "number": 16,
+      "text": "As a tutor, I want to update my availability dynamically in the app, so that I don't get matched for unavailable slots.",
+      "role": {
+        "name": "tutor",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "availability",
+        "compound": []
+      },
+      "json": {
+        "number": 16,
+        "text": "As a tutor, I want to update my availability dynamically in the app, so that I don't get matched for unavailable slots.",
+        "iloc": [
+          3,
+          15
+        ],
+        "role": {
+          "text": "tutor",
+          "indicator": "As a"
+        },
+        "means": {
+          "text": "update my availability dynamically in the app",
+          "indicator": "I want to"
+        },
+        "ends": {
+          "text": "I don't get matched for unavailable slots",
+          "indicator": "So that"
+        }
+      }
+    },
+    {
+      "number": 17,
+      "text": "As a tutor, I want to specify my location, so that I can be matched to a student based on this.",
+      "role": {
+        "name": "tutor",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "location",
+        "compound": []
+      },
+      "json": {
+        "number": 17,
+        "text": "As a tutor, I want to specify my location, so that I can be matched to a student based on this.",
+        "iloc": [
+          3,
+          11
+        ],
+        "role": {
+          "text": "tutor",
+          "indicator": "As a"
+        },
+        "means": {
+          "text": "specify my location",
+          "indicator": "I want to"
+        },
+        "ends": {
+          "text": "I can be matched to a student based on this",
+          "indicator": "So that"
+        }
+      }
+    },
+    {
+      "number": 18,
+      "text": "As a tutor, I want to be able to cancel a session.",
+      "role": {
+        "name": "tutor",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "session",
+        "compound": []
+      },
+      "json": {
+        "number": 18,
+        "text": "As a tutor, I want to be able to cancel a session.",
+        "iloc": [
+          3
+        ],
+        "role": {
+          "text": "tutor",
+          "indicator": "As a"
+        },
+        "means": {
+          "text": "cancel a session",
+          "indicator": "I want to be able to"
+        }
+      }
+    },
+    {
+      "number": 22,
+      "text": "As a student, I want to be matched with a tutor that teaches the subject I am interested in.",
+      "role": {
+        "name": "student",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "subject",
+        "compound": []
+      },
+      "json": {
+        "number": 22,
+        "text": "As a student, I want to be matched with a tutor that teaches the subject I am interested in.",
+        "iloc": [
+          3,
+          15
+        ],
+        "role": {
+          "text": "student",
+          "indicator": "As a"
+        },
+        "means": {
+          "text": "be matched with a tutor that teaches the subject I am interested in",
+          "indicator": "I want to"
+        }
+      }
+    },
+    {
+      "number": 23,
+      "text": "As a student, I want to be matched with a tutor that lives in the same area.",
+      "role": {
+        "name": "student",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "tutor",
+        "compound": []
+      },
+      "json": {
+        "number": 23,
+        "text": "As a student, I want to be matched with a tutor that lives in the same area.",
+        "iloc": [
+          3
+        ],
+        "role": {
+          "text": "student",
+          "indicator": "As a"
+        },
+        "means": {
+          "text": "be matched with a tutor that lives in the same area",
+          "indicator": "I want to"
+        }
+      }
+    },
+    {
+      "number": 24,
+      "text": "As a student, I want to be matched with a tutor that is available in the hours I have specified.",
+      "role": {
+        "name": "student",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "tutor",
+        "compound": []
+      },
+      "json": {
+        "number": 24,
+        "text": "As a student, I want to be matched with a tutor that is available in the hours I have specified.",
+        "iloc": [
+          3,
+          17
+        ],
+        "role": {
+          "text": "student",
+          "indicator": "As a"
+        },
+        "means": {
+          "text": "be matched with a tutor that is available in the hours I have specified",
+          "indicator": "I want to"
+        }
+      }
+    },
+    {
+      "number": 25,
+      "text": "As a student, I want to be matched with a tutor who, if located far away, can offer online sessions, so that I can still receive tutoring regardless of location.",
+      "role": {
+        "name": "student",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "sessions",
+        "compound": []
+      },
+      "json": {
+        "number": 25,
+        "text": "As a student, I want to be matched with a tutor who, if located far away, can offer online sessions, so that I can still receive tutoring regardless of location.",
+        "iloc": [
+          3,
+          22
+        ],
+        "role": {
+          "text": "student",
+          "indicator": "As a"
+        },
+        "means": {
+          "text": "be matched with a tutor who if located far away can offer online sessions",
+          "indicator": "I want to"
+        },
+        "ends": {
+          "text": "I can still receive tutoring regardless of location",
+          "indicator": "So that"
+        }
+      }
+    },
+    {
+      "number": 26,
+      "text": "As a tutor, I want to be matched with a student that is interested in the subject I teach.",
+      "role": {
+        "name": "tutor",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "student",
+        "compound": []
+      },
+      "json": {
+        "number": 26,
+        "text": "As a tutor, I want to be matched with a student that is interested in the subject I teach.",
+        "iloc": [
+          3,
+          17
+        ],
+        "role": {
+          "text": "tutor",
+          "indicator": "As a"
+        },
+        "means": {
+          "text": "be matched with a student that is interested in the subject I teach",
+          "indicator": "I want to"
+        }
+      }
+    },
+    {
+      "number": 27,
+      "text": "As a tutor, I want to be matched with a student that lives in the same area.",
+      "role": {
+        "name": "tutor",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "student",
+        "compound": []
+      },
+      "json": {
+        "number": 27,
+        "text": "As a tutor, I want to be matched with a student that lives in the same area.",
+        "iloc": [
+          3
+        ],
+        "role": {
+          "text": "tutor",
+          "indicator": "As a"
+        },
+        "means": {
+          "text": "be matched with a student that lives in the same area",
+          "indicator": "I want to"
+        }
+      }
+    },
+    {
+      "number": 28,
+      "text": "As a tutor, I want to be matched with a student that is available in the hours I have specified.",
+      "role": {
+        "name": "tutor",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "student",
+        "compound": []
+      },
+      "json": {
+        "number": 28,
+        "text": "As a tutor, I want to be matched with a student that is available in the hours I have specified.",
+        "iloc": [
+          3,
+          17
+        ],
+        "role": {
+          "text": "tutor",
+          "indicator": "As a"
+        },
+        "means": {
+          "text": "be matched with a student that is available in the hours I have specified",
+          "indicator": "I want to"
+        }
+      }
+    },
+    {
+      "number": 29,
+      "text": "As a tutor, I want to be matched with a student who, if located far away, can agree to online sessions, so that I can still provide my services regardless of location.",
+      "role": {
+        "name": "tutor",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "student",
+        "compound": []
+      },
+      "json": {
+        "number": 29,
+        "text": "As a tutor, I want to be matched with a student who, if located far away, can agree to online sessions, so that I can still provide my services regardless of location.",
+        "iloc": [
+          3,
+          23
+        ],
+        "role": {
+          "text": "tutor",
+          "indicator": "As a"
+        },
+        "means": {
+          "text": "be matched with a student who if located far away can agree to online sessions",
+          "indicator": "I want to"
+        },
+        "ends": {
+          "text": "I can still provide my services regardless of location",
+          "indicator": "So that"
+        }
+      }
+    },
+    {
+      "number": 34,
+      "text": "As a student, I want to receive email confirmation after payment, so that I have proof of transaction and assurance that my payment was successfully processed.",
+      "role": {
+        "name": "student",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "confirmation",
+        "compound": [
+          "email",
+          "confirmation"
+        ]
+      },
+      "json": {
+        "number": 34,
+        "text": "As a student, I want to receive email confirmation after payment, so that I have proof of transaction and assurance that my payment was successfully processed.",
+        "iloc": [
+          3,
+          13
+        ],
+        "role": {
+          "text": "student",
+          "indicator": "As a"
+        },
+        "means": {
+          "text": "receive email confirmation after payment",
+          "indicator": "I want to"
+        },
+        "ends": {
+          "text": "I have proof of transaction and assurance that my payment was successfully processed",
+          "indicator": "So that"
+        }
+      }
+    },
+    {
+      "number": 35,
+      "text": "As a student, I want to be notified if a session is cancelled by the tutor.",
+      "role": {
+        "name": "student",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "tutor",
+        "compound": []
+      },
+      "json": {
+        "number": 35,
+        "text": "As a student, I want to be notified if a session is cancelled by the tutor.",
+        "iloc": [
+          3
+        ],
+        "role": {
+          "text": "student",
+          "indicator": "As a"
+        },
+        "means": {
+          "text": "be notified if a session is cancelled by the tutor",
+          "indicator": "I want to"
+        }
+      }
+    },
+    {
+      "number": 36,
+      "text": "As a tutor, I want to receive notifications three and one day prior to the session date, so that I don't forget the session.",
+      "role": {
+        "name": "tutor",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "notifications",
+        "compound": []
+      },
+      "json": {
+        "number": 36,
+        "text": "As a tutor, I want to receive notifications three and one day prior to the session date, so that I don't forget the session.",
+        "iloc": [
+          3,
+          19
+        ],
+        "role": {
+          "text": "tutor",
+          "indicator": "As a"
+        },
+        "means": {
+          "text": "receive notifications three and one day prior to the session date",
+          "indicator": "I want to"
+        },
+        "ends": {
+          "text": "I don't forget the session",
+          "indicator": "So that"
+        }
+      }
+    },
+    {
+      "number": 37,
+      "text": "As a tutor, I want to be notified if a session is cancelled by the student.",
+      "role": {
+        "name": "tutor",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "student",
+        "compound": []
+      },
+      "json": {
+        "number": 37,
+        "text": "As a tutor, I want to be notified if a session is cancelled by the student.",
+        "iloc": [
+          3
+        ],
+        "role": {
+          "text": "tutor",
+          "indicator": "As a"
+        },
+        "means": {
+          "text": "be notified if a session is cancelled by the student",
+          "indicator": "I want to"
+        }
+      }
+    },
+    {
+      "number": 42,
+      "text": "As a tutor, I want to be able to view my ratings.",
+      "role": {
+        "name": "tutor",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "ratings",
+        "compound": []
+      },
+      "json": {
+        "number": 42,
+        "text": "As a tutor, I want to be able to view my ratings.",
+        "iloc": [
+          3
+        ],
+        "role": {
+          "text": "tutor",
+          "indicator": "As a"
+        },
+        "means": {
+          "text": "view my ratings",
+          "indicator": "I want to be able to"
+        }
+      }
+    },
+    {
+      "number": 43,
+      "text": "As a tutor, I want to see session-specific feedback, so that I can improve my performance based on student input.",
+      "role": {
+        "name": "tutor",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "feedback",
+        "compound": []
+      },
+      "json": {
+        "number": 43,
+        "text": "As a tutor, I want to see session-specific feedback, so that I can improve my performance based on student input.",
+        "iloc": [
+          3,
+          13
+        ],
+        "role": {
+          "text": "tutor",
+          "indicator": "As a"
+        },
+        "means": {
+          "text": "see session-specific feedback",
+          "indicator": "I want to"
+        },
+        "ends": {
+          "text": "I can improve my performance based on student input",
+          "indicator": "So that"
+        }
+      }
+    },
+    {
+      "number": 48,
+      "text": "As a tutor, I want to view a detailed breakdown of my earnings, including completed sessions and cancellations, so that I can track my income.",
+      "role": {
+        "name": "tutor",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "breakdown",
+        "compound": []
+      },
+      "json": {
+        "number": 48,
+        "text": "As a tutor, I want to view a detailed breakdown of my earnings, including completed sessions and cancellations, so that I can track my income.",
+        "iloc": [
+          3,
+          20
+        ],
+        "role": {
+          "text": "tutor",
+          "indicator": "As a"
+        },
+        "means": {
+          "text": "view a detailed breakdown of my earnings including completed sessions and cancellations",
+          "indicator": "I want to"
+        },
+        "ends": {
+          "text": "I can track my income",
+          "indicator": "So that"
+        }
+      }
+    },
+    {
+      "number": 49,
+      "text": "As a manager, I want to access information about shortages of students or tutors by neighborhoods, so that I can advertise the services in the given areas.",
+      "role": {
+        "name": "manager",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "information",
+        "compound": []
+      },
+      "json": {
+        "number": 49,
+        "text": "As a manager, I want to access information about shortages of students or tutors by neighborhoods, so that I can advertise the services in the given areas.",
+        "iloc": [
+          3,
+          18
+        ],
+        "role": {
+          "text": "manager",
+          "indicator": "As a"
+        },
+        "means": {
+          "text": "access information about shortages of students or tutors by neighborhoods",
+          "indicator": "I want to"
+        },
+        "ends": {
+          "text": "I can advertise the services in the given areas",
+          "indicator": "So that"
+        }
+      }
+    }
+  ],
+  "failedStories": [
+    [
+      2,
+      "As a manager, I want tutors to be able to upload their files (CV, and other documents), so that I can have them at hand to aid me in hiring.",
+      [
+        "Could not find a means indicator",
+        1
+      ]
+    ],
+    [
+      3,
+      "As a manager, I want students to be able to indicate their availability for the session, so that the matching can be made.",
+      [
+        "Could not find a means indicator",
+        1
+      ]
+    ],
+    [
+      4,
+      "As a manager, I want for tutors to be able to indicate their availability for sessions, so that the matching can be made.",
+      [
+        "Could not find a means indicator",
+        1
+      ]
+    ],
+    [
+      5,
+      "As a manager, I want for students to be able to state their address, so that the matching can be made.",
+      [
+        "Could not find a means indicator",
+        1
+      ]
+    ],
+    [
+      6,
+      "As a manager, I want for tutors to be able to state their address, so that the matching can be made.",
+      [
+        "Could not find a means indicator",
+        1
+      ]
+    ],
+    [
+      7,
+      "As a manager, I want the students to be able to choose between online and in-person session types, so that the number of potential matches can be increased.",
+      [
+        "Could not find a means indicator",
+        1
+      ]
+    ],
+    [
+      19,
+      "As a manager, I want students and tutors to be automatically matched based on address, subject, and availability, so that I do not have to do it manually.",
+      [
+        "Could not find a means indicator",
+        1
+      ]
+    ],
+    [
+      20,
+      "As a manager, I want the matching functionality to enforce strict criteria, so that partial matches do not have to be provided.",
+      [
+        "Could not find a means indicator",
+        1
+      ]
+    ],
+    [
+      21,
+      "As a manager, I want the system to search for a match until the tutor is found every hour.",
+      [
+        "Could not find a means indicator",
+        1
+      ]
+    ],
+    [
+      30,
+      "As a manager, I want students to receive notifications about an upcoming session on WhatsApp 1 and 3 days prior, so that the no-show rate decreases.",
+      [
+        "Could not find a means indicator",
+        1
+      ]
+    ],
+    [
+      31,
+      "As a manager, I want tutors to receive notifications about an upcoming session on WhatsApp, so that the no-show rate decreases.",
+      [
+        "Could not find a means indicator",
+        1
+      ]
+    ],
+    [
+      32,
+      "As a manager, I want the platform to have a chat function with restricted sharing of personal contact information, so that I can ensure tutors adhere to platform policies and do not exchange phone numbers directly.",
+      [
+        "Could not find a means indicator",
+        1
+      ]
+    ],
+    [
+      33,
+      "As a manager, I want the student to receive an email when the match is found.",
+      [
+        "Could not find a means indicator",
+        1
+      ]
+    ],
+    [
+      38,
+      "As a manager, I want students to be able to rate each session, so that the credit system can calculate the rating of the tutor.",
+      [
+        "Could not find a means indicator",
+        1
+      ]
+    ],
+    [
+      39,
+      "As a manager, I want a credit system for tutors to include the feedback from multiple sessions, no-show rate, and late count.",
+      [
+        "Could not find a means indicator",
+        1
+      ]
+    ],
+    [
+      40,
+      "As a manager, I want the credit system to reward tutors for regular students, so that the tutors have motivation to not arrange sessions outside the system.",
+      [
+        "Could not find a means indicator",
+        1
+      ]
+    ],
+    [
+      41,
+      "As a manager, I want the credit system to consider all available data.",
+      [
+        "Could not find a means indicator",
+        1
+      ]
+    ],
+    [
+      44,
+      "As a manager, I want the system to be integrated with the external accounting service that is already in place.",
+      [
+        "Could not find a means indicator",
+        1
+      ]
+    ],
+    [
+      45,
+      "As a manager, I want students to be billed by automatically transferring them to the paying system, so that the user experience is enhanced.",
+      [
+        "Could not find a means indicator",
+        1
+      ]
+    ],
+    [
+      46,
+      "As a manager, I want students to receive automated receipts after successful payments, so that the payment process feels transparent.",
+      [
+        "Could not find a means indicator",
+        1
+      ]
+    ],
+    [
+      47,
+      "As a manager, I want the session to be considered for the salary even if the student did not show up.",
+      [
+        "Could not find a means indicator",
+        1
+      ]
+    ]
+  ],
+  "classes": [
+    {
+      "name": "Manager",
+      "parent": "",
+      "isRole": true,
+      "stories": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        8,
+        8,
+        8,
+        8,
+        8,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ]
+    },
+    {
+      "name": "Functionality",
+      "parent": "",
+      "isRole": false,
+      "stories": [
+        1,
+        1
+      ]
+    },
+    {
+      "name": "Account",
+      "parent": "",
+      "isRole": false,
+      "stories": [
+        8,
+        8,
+        8,
+        8,
+        9,
+        9,
+        9,
+        9,
+        12,
+        12,
+        12,
+        12
+      ]
+    },
+    {
+      "name": "Student",
+      "parent": "",
+      "isRole": true,
+      "stories": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        34,
+        34,
+        34,
+        34,
+        34,
+        34,
+        34,
+        34,
+        34,
+        34,
+        34,
+        34,
+        34,
+        34,
+        34,
+        34,
+        34,
+        34,
+        34,
+        34,
+        34,
+        34,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ]
+    },
+    {
+      "name": "Platform",
+      "parent": "",
+      "isRole": false,
+      "stories": [
+        9,
+        9,
+        9,
+        12,
+        12,
+        12
+      ]
+    },
+    {
+      "name": "Subject",
+      "parent": "",
+      "isRole": false,
+      "stories": [
+        10,
+        10,
+        10,
+        10,
+        10,
+        14,
+        14,
+        14,
+        14,
+        14,
+        22,
+        22,
+        22,
+        22,
+        22,
+        26,
+        26,
+        26,
+        26
+      ]
+    },
+    {
+      "name": "Type",
+      "parent": "",
+      "isRole": false,
+      "stories": [
+        11,
+        11
+      ]
+    },
+    {
+      "name": "Tutor",
+      "parent": "",
+      "isRole": true,
+      "stories": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ]
+    },
+    {
+      "name": "File",
+      "parent": "",
+      "isRole": false,
+      "stories": [
+        13,
+        13
+      ]
+    },
+    {
+      "name": "Availability",
+      "parent": "",
+      "isRole": false,
+      "stories": [
+        15,
+        15,
+        15,
+        16,
+        16,
+        16
+      ]
+    },
+    {
+      "name": "Location",
+      "parent": "",
+      "isRole": false,
+      "stories": [
+        17,
+        17,
+        17,
+        17,
+        25,
+        25,
+        25,
+        29,
+        29,
+        29
+      ]
+    },
+    {
+      "name": "Session",
+      "parent": "",
+      "isRole": false,
+      "stories": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48
+      ]
+    },
+    {
+      "name": "Service",
+      "parent": "",
+      "isRole": false,
+      "stories": [
+        12,
+        12,
+        12,
+        29,
+        29,
+        29,
+        29,
+        49,
+        49,
+        49,
+        49
+      ]
+    },
+    {
+      "name": "Notification",
+      "parent": "",
+      "isRole": false,
+      "stories": [
+        36,
+        36
+      ]
+    },
+    {
+      "name": "Rating",
+      "parent": "",
+      "isRole": false,
+      "stories": [
+        42,
+        42
+      ]
+    },
+    {
+      "name": "Feedback",
+      "parent": "",
+      "isRole": false,
+      "stories": [
+        43,
+        43
+      ]
+    },
+    {
+      "name": "Breakdown",
+      "parent": "",
+      "isRole": false,
+      "stories": [
+        48,
+        48
+      ]
+    },
+    {
+      "name": "Information",
+      "parent": "",
+      "isRole": false,
+      "stories": [
+        12,
+        12,
+        49,
+        49,
+        49
+      ]
+    },
+    {
+      "name": "Confirmation",
+      "parent": "",
+      "isRole": false,
+      "stories": [
+        34
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "name": "canHave",
+      "domain": "Manager",
+      "range": "Functionality",
+      "stories": [
+        1
+      ]
+    },
+    {
+      "name": "canVerify",
+      "domain": "Manager",
+      "range": "Account",
+      "stories": [
+        8
+      ]
+    },
+    {
+      "name": "canMake",
+      "domain": "Student",
+      "range": "Account",
+      "stories": [
+        9
+      ]
+    },
+    {
+      "name": "canAccess",
+      "domain": "Student",
+      "range": "Platform",
+      "stories": [
+        9
+      ]
+    },
+    {
+      "name": "canSelect",
+      "domain": "Student",
+      "range": "Subject",
+      "stories": [
+        10
+      ]
+    },
+    {
+      "name": "canChoose",
+      "domain": "Student",
+      "range": "Type",
+      "stories": [
+        11
+      ]
+    },
+    {
+      "name": "canMake",
+      "domain": "Tutor",
+      "range": "Account",
+      "stories": [
+        12
+      ]
+    },
+    {
+      "name": "canAccess",
+      "domain": "Tutor",
+      "range": "Platform",
+      "stories": [
+        12
+      ]
+    },
+    {
+      "name": "canProvide",
+      "domain": "Tutor",
+      "range": "File",
+      "stories": [
+        13
+      ]
+    },
+    {
+      "name": "canSpecify",
+      "domain": "Tutor",
+      "range": "Subject",
+      "stories": [
+        14
+      ]
+    },
+    {
+      "name": "canMatch To",
+      "domain": "Tutor",
+      "range": "Student",
+      "stories": [
+        14,
+        15,
+        17
+      ]
+    },
+    {
+      "name": "canSpecify",
+      "domain": "Tutor",
+      "range": "Availability",
+      "stories": [
+        15
+      ]
+    },
+    {
+      "name": "canUpdate",
+      "domain": "Tutor",
+      "range": "Availability",
+      "stories": [
+        16
+      ]
+    },
+    {
+      "name": "canSpecify",
+      "domain": "Tutor",
+      "range": "Location",
+      "stories": [
+        17
+      ]
+    },
+    {
+      "name": "canCancel",
+      "domain": "Tutor",
+      "range": "Session",
+      "stories": [
+        18
+      ]
+    },
+    {
+      "name": "canMatch With",
+      "domain": "Student",
+      "range": "Subject",
+      "stories": [
+        22
+      ]
+    },
+    {
+      "name": "canMatch With",
+      "domain": "Student",
+      "range": "Tutor",
+      "stories": [
+        23,
+        24
+      ]
+    },
+    {
+      "name": "canMatch With",
+      "domain": "Student",
+      "range": "Session",
+      "stories": [
+        25
+      ]
+    },
+    {
+      "name": "canMatch With",
+      "domain": "Tutor",
+      "range": "Student",
+      "stories": [
+        26,
+        27,
+        28,
+        29
+      ]
+    },
+    {
+      "name": "canProvide",
+      "domain": "Tutor",
+      "range": "Service",
+      "stories": [
+        29
+      ]
+    },
+    {
+      "name": "canNotify",
+      "domain": "Student",
+      "range": "Tutor",
+      "stories": [
+        35
+      ]
+    },
+    {
+      "name": "canReceive",
+      "domain": "Tutor",
+      "range": "Notification",
+      "stories": [
+        36
+      ]
+    },
+    {
+      "name": "canForget",
+      "domain": "Tutor",
+      "range": "Session",
+      "stories": [
+        36
+      ]
+    },
+    {
+      "name": "canNotify",
+      "domain": "Tutor",
+      "range": "Student",
+      "stories": [
+        37
+      ]
+    },
+    {
+      "name": "canView",
+      "domain": "Tutor",
+      "range": "Rating",
+      "stories": [
+        42
+      ]
+    },
+    {
+      "name": "canSee",
+      "domain": "Tutor",
+      "range": "Feedback",
+      "stories": [
+        43
+      ]
+    },
+    {
+      "name": "canView",
+      "domain": "Tutor",
+      "range": "Breakdown",
+      "stories": [
+        48
+      ]
+    },
+    {
+      "name": "canAccess",
+      "domain": "Manager",
+      "range": "Information",
+      "stories": [
+        49
+      ]
+    },
+    {
+      "name": "canAdvertise",
+      "domain": "Manager",
+      "range": "Service",
+      "stories": [
+        49
+      ]
+    }
+  ],
+  "inferredRoles": [
+    "manager",
+    "student",
+    "tutor"
+  ],
+  "keyNouns": [
+    {
+      "term": "Tutor",
+      "weight": 19
+    },
+    {
+      "term": "Student",
+      "weight": 15.5
+    },
+    {
+      "term": "Account",
+      "weight": 3
+    },
+    {
+      "term": "Subject",
+      "weight": 3
+    },
+    {
+      "term": "Manager",
+      "weight": 3
+    },
+    {
+      "term": "Session",
+      "weight": 2.5
+    },
+    {
+      "term": "Availability",
+      "weight": 2
+    },
+    {
+      "term": "Service",
+      "weight": 1
+    },
+    {
+      "term": "Information",
+      "weight": 1
+    },
+    {
+      "term": "Confirmation",
+      "weight": 1
+    },
+    {
+      "term": "Platform",
+      "weight": 1
+    },
+    {
+      "term": "Functionality",
+      "weight": 1
+    },
+    {
+      "term": "Breakdown",
+      "weight": 1
+    },
+    {
+      "term": "Location",
+      "weight": 1
+    },
+    {
+      "term": "File",
+      "weight": 1
+    },
+    {
+      "term": "Type",
+      "weight": 1
+    },
+    {
+      "term": "Rating",
+      "weight": 1
+    },
+    {
+      "term": "Feedback",
+      "weight": 1
+    },
+    {
+      "term": "Notification",
+      "weight": 1
+    },
+    {
+      "term": "Email",
+      "weight": 0.66
+    }
+  ],
+  "stats": {
+    "successCount": 28,
+    "failedCount": 21
+  }
+}

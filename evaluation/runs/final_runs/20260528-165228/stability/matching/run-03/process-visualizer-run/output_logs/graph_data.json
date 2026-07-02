@@ -1,0 +1,169 @@
+{
+    "T0": {
+        "after": [
+            "T1"
+        ],
+        "before": [
+            "START_0"
+        ]
+    },
+    "T1": {
+        "after": [
+            "T2"
+        ],
+        "before": [
+            "T0"
+        ]
+    },
+    "T2": {
+        "after": [
+            "EG0_S"
+        ],
+        "before": [
+            "T1"
+        ]
+    },
+    "T3": {
+        "after": [
+            "T4"
+        ],
+        "before": [
+            "START_1"
+        ]
+    },
+    "T4": {
+        "after": [
+            "T5"
+        ],
+        "before": [
+            "T3"
+        ]
+    },
+    "T5": {
+        "after": [
+            "END_0"
+        ],
+        "before": [
+            "T4"
+        ]
+    },
+    "T6": {
+        "after": [
+            "T7"
+        ],
+        "before": [
+            "START_2"
+        ]
+    },
+    "T7": {
+        "after": [
+            "END_1"
+        ],
+        "before": [
+            "T6"
+        ]
+    },
+    "T8": {
+        "after": [
+            "END_2"
+        ],
+        "before": [
+            "EG0_S"
+        ]
+    },
+    "EG0_S": {
+        "after": [
+            "T8",
+            "END_3"
+        ],
+        "before": [
+            "T2"
+        ]
+    },
+    "T9": {
+        "after": [
+            "T10"
+        ],
+        "before": [
+            "START_3"
+        ]
+    },
+    "T10": {
+        "after": [
+            "T11"
+        ],
+        "before": [
+            "T9"
+        ]
+    },
+    "T11": {
+        "after": [
+            "T12"
+        ],
+        "before": [
+            "T10"
+        ]
+    },
+    "T12": {
+        "after": [
+            "END_4"
+        ],
+        "before": [
+            "T11"
+        ]
+    },
+    "START_0": {
+        "after": [
+            "T0"
+        ],
+        "before": []
+    },
+    "START_1": {
+        "after": [
+            "T3"
+        ],
+        "before": []
+    },
+    "END_0": {
+        "after": [],
+        "before": [
+            "T5"
+        ]
+    },
+    "START_2": {
+        "after": [
+            "T6"
+        ],
+        "before": []
+    },
+    "END_1": {
+        "after": [],
+        "before": [
+            "T7"
+        ]
+    },
+    "END_2": {
+        "after": [],
+        "before": [
+            "T8"
+        ]
+    },
+    "END_3": {
+        "after": [],
+        "before": [
+            "EG0_S"
+        ]
+    },
+    "START_3": {
+        "after": [
+            "T9"
+        ],
+        "before": []
+    },
+    "END_4": {
+        "after": [],
+        "before": [
+            "T12"
+        ]
+    }
+}

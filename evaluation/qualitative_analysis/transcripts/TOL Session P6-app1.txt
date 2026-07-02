@@ -1,0 +1,185 @@
+00:00:13 - 00:00:22
+P6: Oké, prima. Oké, dit is voor de freelancer, dus dat is die. Ja, oké, dus hier heb je die twee rollen.
+
+00:00:22 - 00:00:36
+P6: Je hebt freelance teacher en je hebt administrator. En KvK moest ingevuld worden. Teaching experience met een nummer. Ja. Op zich logisch. Nou, dit ziet er wel logisch uit met status en zo.
+
+00:00:36 - 00:00:41
+P6: Ook al is isActive en status is misschien een beetje dubbel. Ehm. Oké,
+
+00:00:42 - 00:01:04
+P6: AppAdministrator nou wat minder (attributes). Dat is denk ik ook prima. Ehm, een module? Ja. Oké. Ja dus. Deze app was bedoeld voor freelance teachers om zelf te leren. Want ik zat een beetje zo van is dit ook om te gebruiken tijdens lessen? Maar dat las ik niet helemaal terug. Dus inderdaad, alleen om zelf te leren.
+
+00:01:04 - 00:01:30
+P6: Modules dan? Uh, title, description, Learning objective? Ja, hier neem ik aan dat dan het onderwerp. En zo is het in de description. level inderdaad. Dat heeft ook een. Uhm. Ik ga kijken of ik iets onlogisch zie. Dat valt nog best mee. Uhm ja, voor al die relaties even kijken. Notification. Ja.
+
+00:01:32 - 00:01:49
+P6: Skill assessments. Ja. Skill assessment hoort lijkt mij gelinkt te zijn aan iets anders dan alleen de teacher. Want je zou toch een skill op een specifiek onderwerp moeten hebben? Dus die zou dan misschien aan module gelinkt moeten zijn.
+
+00:01:50 - 00:01:56
+Researcher: Uhm. Wat vind je van de multiplicities? Dus de één op één? En et cetera.
+
+00:01:56 - 00:02:22
+P6: Want elke teacher één skill? Dat lijkt me ook niet per se correct. Inderdaad, elke administrator, Ik zit hier een beetje allemaal op één. Dus alles is één op één? Ja. Oh, dat is uh oké. Ja. Ja. Nee. Ja. Nee. Ik zie het wel. Ja, maar zit een beetje erachter verstopt. Maar oké. Ja. Één op één is uhm onhandig. Ja. Om zacht uit te drukken. Oké. Uhm. Data. Usage zit nu vast aan.
+
+00:02:22 - 00:02:52
+P6: Ja, ik denk dat op zich de entiteiten zijn wel logisch. Ik denk alleen de verbindingen die. Ja, alles één op één klopt. Dat klopt sowieso niet. En ik zie een aantal dingen die wel aan één object juist gelinkt zijn, maar aan de andere weer niet. Dus die skills en data usage zit alleen aan de administrator vast terwijl die bij een freelance teacher hoort. Hier staan een hele hoop dingen met één veld. Ja, dat lijkt me niet heel nuttig. Dit zou dus eigenlijk overal onder moeten.
+
+00:02:52 - 00:03:03
+Researcher: Klopt, dat zijn die skills die. Waar waar ze het eerder over hadden? En hij heeft ervoor gekozen om die allemaal als losse entiteit te doen. Ja. Dus ook skills als entiteit.
+
+00:03:03 - 00:03:13
+P6: Ja, daar zijn betere oplossingen voor. Ik weet het niet. Ik kan wel wat bedenken, maar ik ben niet zeker. Dat is oké. Een beetje naar rechts. Hier staan een paar dingen.
+
+00:03:14 - 00:03:45
+P6: Uhm ja, dit zijn al die verschillende vormen waar ze naar kunnen kijken video's, flashcards, quotes, games en achievements. Uhm ja ja. Goed één op één relaties is matig, maar voor de rest? Ja, volgens mij. Er staan een. Er stonden in de user stories wat meer velden dan dit. Bij de meeste volgens mij. Ja dus daar missen we ook een paar dingen in. En dan slides. Inderdaad een research paper. Ja dus hij neemt eigenlijk ik zie wel.
+
+00:03:45 - 00:03:57
+P6: Hij neemt alle entiteiten wel goed mee. Ik heb niet echt iets wat ik mis. Ja, maar inderdaad, die relaties dan? Uh daar, uh, dat zou ie iets beter kunnen doen. Ja, oké. Uhm ja, ik denk dat dat op zich is.
+
+00:03:59 - 00:04:25
+Researcher: hm ja, dan zou je kunnen kijken naar de pagina's en dan kanttekening bij de pagina's is. Een groot gedeelte van de pagina's is deterministisch gemaakt, dus hij ziet een entiteit en hij maakt je een pagina eventueel. Dan maak je daar zo'n overview- en new/edit-pagina van. Oh ja, maar er zijn dus ook heel veel of relatief wat pagina's die dat niet volgen en die hebben dan meestal letterlijk een hele hoop pagina's. Ja, heel vaak. Dus je hoeft ze niet allemaal te bekijken.
+
+00:04:33 - 00:04:38
+P6: Ja precies. Dus het ziet er ongeveer zo uit. Gewoon de velden invullen. En dan save. Ja precies zoeken
+
+00:04:38 - 00:04:50
+Researcher: en vaak de pagina's die dan wel door de AI zijn gegenereerd. Die zijn leeg, dus zou je ook eventueel kunnen checken. Maar alle kleine letter dingen die zijn dus het zien van overview.
+
+00:04:50 - 00:05:04
+Researcher: Ja dus. Hij. Dus hij heeft wel het concept van dat dat nodig is heeft hij wel begrepen. Alleen hij kan niet vullen. Maar dat is ook de limitaties van de SDK en de bouwer zeg maar.
+
+00:05:04 - 00:05:09
+P6: Ja precies. Oke. Ja. makes sense. Uhm. Mooie sidebar.
+
+00:05:11 - 00:05:24
+Researcher: Ja. Dat komt omdat die icons. Ze zijn glyphicons. Ja. En die hebben een interne code die alleen Mendix weet. Oké, en behalve dan home, want die is wel openbaar of zo. En dus dat was het enige wat ik kon zien.
+
+00:05:25 - 00:05:32
+P6: Oké, dus dit linkt naar al die pagina's maar met een home icoontje. Mooi. Exact. Ja. Ja. Ja, deze is dan leeg.
+
+00:05:32 - 00:05:33
+Researcher: Niet eens alle pagina's overigens.
+
+00:05:33 - 00:05:35
+P6: Dit is een functie?
+
+00:05:35 - 00:05:38
+Researcher: Het is een microflow. En dat is een nanoflow.
+
+00:05:38 - 00:05:48
+P6: Ja, het is een tijdje geleden dat ik met Mendix heb gewerkt. Maar het is op zich. Vrij makkelijk. Te begrijpen gelukkig. Die is ook leeg.
+
+00:05:48 - 00:05:55
+Researcher: Hij is ook. Hij runt ook in de localhost, dus Jan heeft ze ook gewoon kunnen runnen. Je kan ook zien hoe die runt, zeg maar.
+
+00:05:59 - 00:06:05
+P6: Uhm. Oké, dus Module Overview is ook leeg. Is dit home?
+
+00:06:05 - 00:06:09
+Researcher: Nee, dit is die standaard Mendix-pagina.
+
+00:06:10 - 00:06:33
+P6: Uhm, weet jij waar wel wat op staat? Ja, ze zijn zo goed als leeg. Dus daar staan wel CRUD-dingen op. Maar dat zijn die new/edit-dingen. Ja. Oké. Ehm ja. Ja, ik weet niet heel veel goed hoe ik iets moet zeggen over de lege pagina.
+
+00:06:34 - 00:06:44
+Researcher: Ja. Nee. Ik denk dat dat wel duidelijk is inderdaad. Even kijken hoor. En qua microflows en nanoflows. Hij heeft ze wel gemaakt. Hij heeft wat dingen gemaakt. Ehm ja, ik denk vooral verbonden.
+
+00:06:44 - 00:07:06
+P6: Hij doet wel vrij veel. Hij maakt pagina's aan. Vrij. Volledig. Veel te veel, zou ik zelf zeggen. Ja, maar het is wel. Ik denk ook omdat het Mendix is, is dit wel een beetje de manier waarop je nieuwe objecten aanmaakt. Ja, er zijn andere manieren voor. Dat zou veel specifieker gedaan moeten worden. Ja, ik snap dat hij dat niet direct uit de user stories haalt.
+
+00:07:06 - 00:07:08
+Researcher: Ja dus om de database te vullen zeg maar.
+
+00:07:08 - 00:07:21
+P6: Ah, want nu is alles individuele new/create. Ja, dat wil je waarschijnlijk in een echte applicatie. Niet op die manier. Ja. Wil je iets kunnen uploaden aan files of zo? Ja. Ja. Ja. Dus dat.
+
+00:07:22 - 00:07:49
+P6: Ja. Als er geen pagina's zijn waar echt wat op staat, dan kan ik over wat hij designed niet heel veel zeggen. Ja maar ja, op zich. Ja, hij neemt. Ja, wat ik zei. De entiteiten neemt hij goed mee. Ook in die pagina's maakt alleen de. Ik denk De koppelingen zijn niet heel handig en hij ziet niet in hoe hij meerdere tegelijk kan uploaden om dingen te maken.
+
+00:07:49 - 00:08:01
+Researcher: Ja, dat vind ik ook wel een goed punt. En dat het. Hij maakt voor elke entiteit pagina aan, maar dat is niet per se de beste of snelste manier om dat te doen. Ja, dat is wel een goeie.
+
+00:08:02 - 00:08:31
+P6: En voor de pagina's waar dat juist wel bij zou moeten. Dus dat zijn bijvoorbeeld modules, die wil je misschien zelf wat uitgebreider kunnen of wat? Wat kun je eerder instellen? Ja, even kijken of ik een module kan vinden. Hier de pagina's module detail en hij maakt snel een module detailpagina en een module overview. Dus dat is wel logisch. Details zie ik niet overal staan, dus hij ziet wel iets van hier moet ik meer mee dan de meeste objecten. Ja, maar wat hij dan precies ermee wil, dat is niet helemaal duidelijk.
+
+00:08:32 - 00:08:47
+Researcher: Ja, ja ja. En de de microflows? De inhoud is niet per se heel. Uh, hij. Hij kon niet precies doen wat hij wilde, maar is het concept van de microflow zelf duidelijk nodig?
+
+00:08:47 - 00:08:58
+P6: Uhm. Retrieve from database I guess. Uhm, even kijken, wat staat hier? Kan ik dit helemaal lezen?
+
+00:08:58 - 00:08:59
+Researcher: Ja, even dubbelklikken.
+
+00:09:00 - 00:09:27
+P6: Oh ja. Maar wat was de tekst die hier stond? D9 Waar staat het? Ben ik blind? Ben jij hier? Oh gewoon zo. Oké. Ja precies. Oké. Dus ja, hij haalt zelfs niet eens iets op met de ID. Dan zet hij er een andere status in. I guess.
+
+00:09:30 - 00:09:33
+Researcher: En hij commit, maar hij verandert niks. Dus dat dat is.
+
+00:09:33 - 00:09:47
+P6: Ja, ik zie ook. Hij haalt hem op. En dan komt hij iets. Maar er staat niks bij. Dus dan doet ie inderdaad niks. En de filesizer? Maar het is een message. Ja. Dus hier stuurt hij een pop up. Oké. Dus hij doet niks eigenlijk?
+
+00:09:47 - 00:09:56
+Researcher: Nee, maar ja. Dus los van de inhoud, dat vind je van de Approve Freelance Teacher Profile microflow als concept, zeg maar. Is dat iets als concept?
+
+00:09:56 - 00:10:01
+P6: Is het wel? Ja. Je moet hem ophalen. Je moet de status veranderen en dan een message sturen. En dat klinkt logisch. Oké.
+
+00:10:01 - 00:10:03
+Researcher: En Check KvK-nummer?
+
+00:10:08 - 00:10:12
+P6: Even kijken. Ehm. Maar dit betekent dat hij deze checkt toch?
+
+00:10:13 - 00:10:16
+Researcher: Dit is een decision. Dus inderdaad, hij doet iets van een vergelijking.
+
+00:10:18 - 00:10:38
+P6: equals valid. Oké. Ja, oké. En dit is een merge node. Oh yeah right. Oké. Dus hij checkt of hij valide is en dan geeft hij een message met een spelletje. Ja, ik zou zeggen. Hoe bepaal je? Is het wel it? Want equals failed is een beetje.
+
+00:10:38 - 00:10:50
+Researcher: Inderdaad, in a real world is dit een API? Waarschijnlijk. Ja. Of een. Of een. Of een regex. Iets. Ja. Ehm. Dus dit is de workaround van de LLM. Inderdaad.
+
+00:10:50 - 00:11:02
+P6: Ja, oké, dat is op zich logisch. Ik zou dan wel zeggen, zodra hij heeft gecheckt of het valide is, geeft hij een message. Dat is leuk, maar moet er dan niet ook nog iets gebeuren aan de status van de freelance teacher?
+
+00:11:02 - 00:11:03
+Researcher: Valide Ja.
+
+00:11:04 - 00:11:15
+P6: Dus ja, het is wel. Hier mist het wat in, wat deels is omdat het buiten de applicatie zou vallen. Ja, maar ook deels wel ja.
+
+00:11:16 - 00:11:27
+Researcher: En als laatste hij heeft een workflow gemaakt helemaal onderaan. En er is een ja. Dat is met twee actoren. Maar volgens mij heeft hij, ja.
+
+00:11:27 - 00:11:29
+P6: Die kwam ook nog niet echt terug in de.
+
+00:11:31 - 00:11:35
+Researcher: Dus wat vind je van het bestaan van een workflow? Is het logisch dat er een workflow is voor deze user stories.
+
+00:11:41 - 00:11:45
+P6: Snap ik wat deze workflow hoort te doen? Er zit een approve/reject in.
+
+00:11:45 - 00:11:46
+Researcher: Dus ja, dit.
+
+00:11:46 - 00:11:49
+P6: Is meer een actie van een administrator.
+
+00:11:50 - 00:11:53
+Researcher: Ja, ja. Dus bij het aanmaken van een freelance teacher.
+
+00:11:54 - 00:12:04
+Researcher: Bij het aanmaken van een freelance teacher kan iemand hem approve or reject. En dat is het. Dat is wat hij heeft gemaakt. Ja. Is dat logisch? En volgens de user stories.
+
+00:12:05 - 00:12:32
+P6: Dat stond er wel expliciet in dat hij approval feedback moest kunnen geven. Volgens mij in ieder geval. Maar ja, het is het. Het staat er. Ja, het is weer een beetje basic, maar nice. Ik zou ook zeggen dat dit bij. Of omdat het hierbij staat en hij kan dit dan in principe. Dan mis ik eigenlijk iets vergelijkbaars bij anderen. Dit was wel. Deze stond het meest expliciet aan.
+
+00:12:32 - 00:12:44
+Researcher: Ja, dat zeker. Ja dus. Dus. Er zouden eventueel meer workflows in kunnen. Alleen omdat ze misschien niet expliciet beschreven stonden dan dat. Dan heeft ie dat niet overwogen.
+
+00:12:45 - 00:13:15
+P6: Ik zou wel zeggen vanuit de user stories. Die stonden vrij duidelijk en vrij goed gedefinieerd. En ook met vergelijkbare dingen is dat allemaal apart. Dus dat zou op zich genoeg functionaliteit moeten geven. Ja. Dus ja, ik zou niet zeggen dat er iets aan de kwaliteit van user stories kan liggen per se. Nice! Maar dan moet hij er beter mee om kunnen gaan. Ja. Oké. Nog meer iets over deze app? Of ben je klaar voor de survey voor einde van deze app? Ja. Nee. Ik denk dat dat het wel was inderdaad. Maar het is tijd dat jullie.

@@ -1,0 +1,216 @@
+{
+  "actors": [
+    "employee",
+    "manager",
+    "office employee",
+    "applicant"
+  ],
+  "tasks": [
+    {
+      "actor": "employee",
+      "action": "receive my salary statement",
+      "condition": "so that i have a clear overview",
+      "gatewayId": "",
+      "gatewayType": "",
+      "storyIndex": 0
+    },
+    {
+      "actor": "manager",
+      "action": "send salary statements",
+      "condition": "so that my employees have a clear overview",
+      "gatewayId": "EG0",
+      "gatewayType": "exclusive",
+      "storyIndex": 1
+    },
+    {
+      "actor": "manager",
+      "action": "express my preferred working hours",
+      "condition": "so that i am most likely to work on hours that best suit i",
+      "gatewayId": "EG0",
+      "gatewayType": "exclusive",
+      "storyIndex": 6
+    },
+    {
+      "actor": "manager",
+      "action": "semi-automate the scheduling process",
+      "condition": "so that i am most likely to work on hours that best suit i",
+      "gatewayId": "EG0",
+      "gatewayType": "exclusive",
+      "storyIndex": 6
+    },
+    {
+      "actor": "employee",
+      "action": "be notified as soon as manual adjustments need to be made",
+      "condition": "so that i am most likely to work on hours that best suit i",
+      "gatewayId": "EG0",
+      "gatewayType": "exclusive",
+      "storyIndex": 9
+    },
+    {
+      "actor": "office employee",
+      "action": "the system to automatically verify employees' work hours",
+      "condition": "so that i am most likely to work on hours that best suit i",
+      "gatewayId": "EG0",
+      "gatewayType": "exclusive",
+      "storyIndex": 14
+    },
+    {
+      "actor": "employee",
+      "action": "the system to automatically verify employees' work hours",
+      "condition": "so that i am most likely to work on hours that best suit i",
+      "gatewayId": "EG0",
+      "gatewayType": "exclusive",
+      "storyIndex": 14
+    },
+    {
+      "actor": "manager",
+      "action": "want to be able to file a complaint regarding my workplace",
+      "condition": "so that my problems can be solved",
+      "gatewayId": "EG0",
+      "gatewayType": "exclusive",
+      "storyIndex": 16
+    },
+    {
+      "actor": "office employee",
+      "action": "want to be able to categorize complaints",
+      "condition": "so that there is an overview of the extent of problem areas",
+      "gatewayId": "EG0",
+      "gatewayType": "exclusive",
+      "storyIndex": 22
+    },
+    {
+      "actor": "employee",
+      "action": "want to be able to categorize complaints",
+      "condition": "so that i can help the employees with their problems",
+      "gatewayId": "EG0",
+      "gatewayType": "exclusive",
+      "storyIndex": 22
+    },
+    {
+      "actor": "manager",
+      "action": "receive a notification",
+      "condition": "so that an employee can stay up to date with the status of my filed complaint",
+      "gatewayId": "EG0",
+      "gatewayType": "exclusive",
+      "storyIndex": 24
+    },
+    {
+      "actor": "applicant",
+      "action": "have an overview of all our absent employees",
+      "condition": "so that i can manually verify all our absent employees",
+      "gatewayId": "EG0",
+      "gatewayType": "exclusive",
+      "storyIndex": 28
+    },
+    {
+      "actor": "manager",
+      "action": "view my employee's contracts at any given time",
+      "condition": "so that i can manually verify all our absent employees",
+      "gatewayId": "EG0",
+      "gatewayType": "exclusive",
+      "storyIndex": 30
+    },
+    {
+      "actor": "employee",
+      "action": "view my employee's certificates at any given time",
+      "condition": "so that i can manually verify all our absent employees",
+      "gatewayId": "EG0",
+      "gatewayType": "exclusive",
+      "storyIndex": 31
+    },
+    {
+      "actor": "employee",
+      "action": "have a user-friendly application",
+      "condition": "so that i can manually verify all our absent employees",
+      "gatewayId": "EG0",
+      "gatewayType": "exclusive",
+      "storyIndex": 38
+    },
+    {
+      "actor": "employee",
+      "action": "want the application as secure as possible",
+      "condition": "so that i have a clear overview of important work-related information",
+      "gatewayId": "EG0",
+      "gatewayType": "exclusive",
+      "storyIndex": 46
+    }
+  ],
+  "gateways": [
+    {
+      "id": "EG0",
+      "type": "exclusive",
+      "conditions": [
+        "so that i have a clear overview",
+        "so that my employees have a clear overview",
+        "so that employee satisfaction rises",
+        "so that all payments are handled correctly and on time",
+        "so that i do not have to worry about local payment regulations for each country",
+        "so that i stay up to date with my financial status",
+        "so that i am most likely to work on hours that best suit i",
+        "so that i don't have to filter through my email for complaints anymore",
+        "so that my problems can be solved",
+        "so that i can have an overview of the problems other employees face",
+        "so that i can have an overview of the problems my employees face",
+        "so that i can help the employees with their problems",
+        "so that there is an overview of the extent of problem areas",
+        "so that important complaints will be solved swiftly",
+        "so that an employee can stay up to date with the status of my filed complaint",
+        "so that i can easily scale up our operations",
+        "so that i am up to date regarding the status of our new employees",
+        "so that i can easily evaluate all our active employees",
+        "so that i can manually verify all our absent employees",
+        "so that i can access all functionalities easily",
+        "so that i can quickly see my schedule while riding",
+        "so that i can adjust my administration in the way that i prefer",
+        "so that i can adjust my payment routine to my lifestyle",
+        "so that i can easily find my financial information for filing taxes, etc.",
+        "so that my privacy is ensured",
+        "so that the information my employer has is always up to date",
+        "so that i have a clear overview of important work-related information"
+      ]
+    }
+  ],
+  "processObjects": [
+    "My Salary Statement",
+    "Salary Statements",
+    "My Preferred Working Hours",
+    "Semi Automate The Scheduling Process",
+    "Need To Be Made",
+    "Verify Employees' Work Hours",
+    "Complaint Regarding My Workplace",
+    "Able To Categorize Complaints",
+    "Notification",
+    "All Our Absent Employees",
+    "At Any Given Time",
+    "Have A User Friendly Application",
+    "As Secure As Possible",
+    "Weekly And Monthly Payments",
+    "Automate The Payment System",
+    "Of The Payment Process",
+    "Salary Payment Is Handled",
+    "Edit The Automatically Generated Schedule",
+    "The Schedule Goes Live",
+    "New Schedule Is Available",
+    "Verify My Work Hours",
+    "Complaint System With Tickets",
+    "Complaints Regarding My Workplace",
+    "To View All Complaints",
+    "Respond To Unsolved Complaints",
+    "Prioritize Complaints",
+    "Effectively Hire New Employees",
+    "An Employee Is Finished",
+    "All Our Active Employees",
+    "Register An Account"
+  ],
+  "capabilityHints": {
+    "hasApproval": false,
+    "hasDecision": true,
+    "hasNotification": true,
+    "hasWorkflowLikeRouting": true
+  },
+  "stats": {
+    "taskCount": 16,
+    "gatewayCount": 1,
+    "rawEntityCount": 105
+  }
+}

@@ -1,0 +1,200 @@
+{
+  "meta": {
+    "planVersion": "1.1.0",
+    "name": "reference-01-role-separated-crud.json"
+  },
+  "app": {
+    "appId": "id",
+    "branch": "main",
+    "moduleName": "MyFirstModule",
+    "layoutQualifiedName": "Atlas_Core.Atlas_Default",
+    "homePageRef": "home",
+    "navigation": {
+      "homePageButtons": [
+        { "pageRef": "doctor_patients", "caption": "Doctor Patients", "icon": { "name": "home" }, "allowedRoles": ["Doctor"] },
+        { "pageRef": "nurse_patients", "caption": "Nurse Patients", "icon": { "name": "home" }, "allowedRoles": ["Nurse"] }
+      ],
+      "menuItems": [
+        { "pageRef": "home", "caption": "Home", "icon": { "name": "home" }, "allowedRoles": ["Doctor", "Nurse"] },
+        { "pageRef": "doctor_patients", "caption": "Doctor Workspace", "icon": { "name": "home" }, "allowedRoles": ["Doctor"] },
+        { "pageRef": "nurse_patients", "caption": "Nurse Workspace", "icon": { "name": "home" }, "allowedRoles": ["Nurse"] }
+      ]
+    }
+  },
+  "execution": {
+    "createApp": true,
+    "createAppNamePrefix": "Reference01",
+    "createAppRepositoryType": "git",
+    "commit": true,
+    "commitMessage": "Reference 01: hospital role-separated CRUD reference plan",
+    "deleteExistingDomainModel": true,
+    "deleteExistingPages": true,
+    "deleteExistingMicroflows": true,
+    "deleteExistingWorkflows": true,
+    "dg2Cleanup": true
+  },
+  "domainModel": {
+    "entities": [
+      {
+        "name": "Patient",
+        "attributes": [
+          { "name": "PatientNumber", "type": "String", "required": true },
+          { "name": "FullName", "type": "String", "required": true },
+          { "name": "DateOfBirth", "type": "DateTime", "required": true },
+          { "name": "RoomNumber", "type": "String", "required": false },
+          { "name": "CurrentStatus", "type": "String", "required": true },
+          { "name": "Allergies", "type": "String", "required": false },
+          { "name": "Diagnosis", "type": "String", "required": false },
+          { "name": "TreatmentPlan", "type": "String", "required": false },
+          { "name": "MedicationSchedule", "type": "String", "required": false },
+          { "name": "NursingNotes", "type": "String", "required": false }
+        ]
+      }
+    ],
+    "associations": [],
+    "enumerations": []
+  },
+  "security": {
+    "enabled": true,
+    "securityLevel": "prototype",
+    "moduleRoles": ["Doctor", "Nurse"],
+    "userRoles": [
+      { "name": "Doctor", "moduleRoles": ["Doctor"], "systemModuleRole": "System.User" },
+      { "name": "Nurse", "moduleRoles": ["Nurse"], "systemModuleRole": "System.User" }
+    ],
+    "demoUsers": [
+      { "userName": "demo_doctor", "password": "Doctor123!", "userRoles": ["Doctor"] },
+      { "userName": "demo_nurse", "password": "Nurse123!", "userRoles": ["Nurse"] }
+    ]
+  },
+  "pages": {
+    "specs": [
+      {
+        "ref": "home",
+        "name": "Home",
+        "title": "Hospital Home",
+        "allowedRoles": ["Doctor", "Nurse"],
+        "content": [
+          { "type": "dynamicText", "text": "Hospital patient workspace", "renderMode": "H2" },
+          { "type": "dynamicText", "text": "Doctors and nurses work with the same patient records through different role-specific pages.", "renderMode": "Paragraph" },
+          { "type": "buttonToPage", "caption": "Open Doctor Workspace", "targetPageRef": "doctor_patients", "allowedRoles": ["Doctor"] },
+          { "type": "buttonToPage", "caption": "Open Nurse Workspace", "targetPageRef": "nurse_patients", "allowedRoles": ["Nurse"] }
+        ]
+      },
+      {
+        "ref": "doctor_patients",
+        "name": "Patient_DoctorOverview",
+        "title": "Doctor Patient Overview",
+        "entityRef": "MyFirstModule.Patient",
+        "allowedRoles": ["Doctor"],
+        "content": [
+          { "type": "dynamicText", "text": "Doctor workspace", "renderMode": "H2" },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.Patient",
+            "rowClickTargetPageRef": "doctor_patient_detail",
+            "itemContent": [
+              { "type": "attributeInput", "attributeRef": "PatientNumber", "autoLabel": true },
+              { "type": "attributeInput", "attributeRef": "FullName", "autoLabel": false },
+              { "type": "attributeInput", "attributeRef": "CurrentStatus", "autoLabel": false },
+              { "type": "attributeInput", "attributeRef": "Diagnosis", "autoLabel": false }
+            ]
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Add Patient",
+            "entityRef": "MyFirstModule.Patient",
+            "targetPageRef": "doctor_patient_detail"
+          }
+        ]
+      },
+      {
+        "ref": "nurse_patients",
+        "name": "Patient_NurseOverview",
+        "title": "Nurse Patient Overview",
+        "entityRef": "MyFirstModule.Patient",
+        "allowedRoles": ["Nurse"],
+        "content": [
+          { "type": "dynamicText", "text": "Nurse workspace", "renderMode": "H2" },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.Patient",
+            "rowClickTargetPageRef": "nurse_patient_detail",
+            "itemContent": [
+              { "type": "attributeInput", "attributeRef": "PatientNumber", "autoLabel": true },
+              { "type": "attributeInput", "attributeRef": "FullName", "autoLabel": false },
+              { "type": "attributeInput", "attributeRef": "RoomNumber", "autoLabel": false },
+              { "type": "attributeInput", "attributeRef": "MedicationSchedule", "autoLabel": false }
+            ]
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Register Patient",
+            "entityRef": "MyFirstModule.Patient",
+            "targetPageRef": "nurse_patient_detail"
+          }
+        ]
+      },
+      {
+        "ref": "doctor_patient_detail",
+        "name": "Patient_DoctorDetail",
+        "title": "Doctor Patient Detail",
+        "entityRef": "MyFirstModule.Patient",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          { "name": "Patient", "entityRef": "MyFirstModule.Patient", "required": true }
+        ],
+        "allowedRoles": ["Doctor"],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "Patient",
+            "labelWidth": 3,
+            "content": [
+              { "type": "attributeInput", "attributeRef": "PatientNumber" },
+              { "type": "attributeInput", "attributeRef": "FullName" },
+              { "type": "attributeInput", "attributeRef": "DateOfBirth" },
+              { "type": "attributeInput", "attributeRef": "CurrentStatus" },
+              { "type": "attributeInput", "attributeRef": "Allergies" },
+              { "type": "attributeInput", "attributeRef": "Diagnosis" },
+              { "type": "attributeInput", "attributeRef": "TreatmentPlan" },
+              { "type": "saveChangesButton", "caption": "Save", "closePage": true },
+              { "type": "cancelChangesButton", "caption": "Cancel", "closePage": true }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "nurse_patient_detail",
+        "name": "Patient_NurseDetail",
+        "title": "Nurse Patient Detail",
+        "entityRef": "MyFirstModule.Patient",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          { "name": "Patient", "entityRef": "MyFirstModule.Patient", "required": true }
+        ],
+        "allowedRoles": ["Nurse"],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "Patient",
+            "labelWidth": 3,
+            "content": [
+              { "type": "attributeInput", "attributeRef": "PatientNumber" },
+              { "type": "attributeInput", "attributeRef": "FullName" },
+              { "type": "attributeInput", "attributeRef": "RoomNumber" },
+              { "type": "attributeInput", "attributeRef": "CurrentStatus" },
+              { "type": "attributeInput", "attributeRef": "MedicationSchedule" },
+              { "type": "attributeInput", "attributeRef": "NursingNotes" },
+              { "type": "saveChangesButton", "caption": "Save", "closePage": true },
+              { "type": "cancelChangesButton", "caption": "Cancel", "closePage": true }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "verification": {
+    "failOnMissing": true
+  }
+}

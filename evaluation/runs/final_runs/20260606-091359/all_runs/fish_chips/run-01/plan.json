@@ -1,0 +1,3472 @@
+{
+  "meta": {
+    "planVersion": "1.1.0",
+    "generatedAt": "2026-06-06T13:16:19.790Z",
+    "generatedBy": "pipeline.plan-generator"
+  },
+  "app": {
+    "appId": "",
+    "branch": "main",
+    "moduleName": "MyFirstModule",
+    "layoutQualifiedName": "Atlas_Core.Atlas_Default",
+    "homePageRef": "home",
+    "navigation": {
+      "homePageButtons": [
+        {
+          "pageRef": "cashier_overview",
+          "caption": "",
+          "allowedRoles": []
+        },
+        {
+          "pageRef": "customer_overview",
+          "caption": "",
+          "allowedRoles": []
+        },
+        {
+          "pageRef": "homedeliveryperson_overview",
+          "caption": "",
+          "allowedRoles": []
+        },
+        {
+          "pageRef": "kitchenemployee_overview",
+          "caption": "",
+          "allowedRoles": []
+        },
+        {
+          "pageRef": "admin_overview",
+          "caption": "",
+          "allowedRoles": []
+        },
+        {
+          "pageRef": "cashieraccount_overview",
+          "caption": "",
+          "allowedRoles": []
+        }
+      ],
+      "menuItems": [
+        {
+          "pageRef": "cashier_overview",
+          "caption": "",
+          "allowedRoles": []
+        },
+        {
+          "pageRef": "customer_overview",
+          "caption": "",
+          "allowedRoles": []
+        },
+        {
+          "pageRef": "homedeliveryperson_overview",
+          "caption": "",
+          "allowedRoles": []
+        },
+        {
+          "pageRef": "kitchenemployee_overview",
+          "caption": "",
+          "allowedRoles": []
+        },
+        {
+          "pageRef": "admin_overview",
+          "caption": "",
+          "allowedRoles": []
+        },
+        {
+          "pageRef": "cashieraccount_overview",
+          "caption": "",
+          "allowedRoles": []
+        }
+      ],
+      "homePageButtonRefs": [
+        "cashier_overview",
+        "customer_overview",
+        "homedeliveryperson_overview",
+        "kitchenemployee_overview",
+        "admin_overview",
+        "cashieraccount_overview"
+      ],
+      "navigationItemRefs": [
+        "cashier_overview",
+        "customer_overview",
+        "homedeliveryperson_overview",
+        "kitchenemployee_overview",
+        "admin_overview",
+        "cashieraccount_overview"
+      ],
+      "homePage": "home"
+    }
+  },
+  "execution": {
+    "commit": false,
+    "dg2Cleanup": true,
+    "forceLegacyWebClientForLookups": true,
+    "createApp": true,
+    "createAppName": "PracticalPerf_fish_chips_Stability"
+  },
+  "domainModel": {
+    "entities": [
+      {
+        "name": "Order",
+        "attributes": [
+          {
+            "name": "orderNumber",
+            "type": "Integer",
+            "required": false
+          },
+          {
+            "name": "Status",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "pickupTime",
+            "type": "DateTime",
+            "required": false
+          },
+          {
+            "name": "totalPrice",
+            "type": "Decimal",
+            "required": false
+          },
+          {
+            "name": "orderTime",
+            "type": "DateTime",
+            "required": false
+          },
+          {
+            "name": "PaymentMethod",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "DeliveryPerson",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "searchQuery",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "orderPrice",
+            "type": "Decimal",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "Product",
+        "attributes": [
+          {
+            "name": "productName",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "productPrice",
+            "type": "Decimal",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "Customer",
+        "attributes": [
+          {
+            "name": "customerName",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "phoneNumber",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "deliveryAddress",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "customerEmail",
+            "type": "String",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "Ticket",
+        "attributes": [
+          {
+            "name": "ticketNumber",
+            "type": "Integer",
+            "required": false
+          },
+          {
+            "name": "orderDetails",
+            "type": "String",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "KitchenEmployee",
+        "attributes": [
+          {
+            "name": "Name",
+            "type": "String",
+            "required": true
+          },
+          {
+            "name": "Email",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "IsActive",
+            "type": "Boolean",
+            "required": false,
+            "defaultValue": false
+          }
+        ]
+      },
+      {
+        "name": "TicketMaster",
+        "attributes": [
+          {
+            "name": "Name",
+            "type": "String",
+            "required": true
+          },
+          {
+            "name": "Email",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "IsActive",
+            "type": "Boolean",
+            "required": false,
+            "defaultValue": false
+          }
+        ]
+      },
+      {
+        "name": "Cashier",
+        "attributes": [
+          {
+            "name": "Name",
+            "type": "String",
+            "required": true
+          },
+          {
+            "name": "Email",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "IsActive",
+            "type": "Boolean",
+            "required": false,
+            "defaultValue": false
+          },
+          {
+            "name": "accountBalance",
+            "type": "Decimal",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "RestaurantOwner",
+        "attributes": [
+          {
+            "name": "Name",
+            "type": "String",
+            "required": true
+          },
+          {
+            "name": "Email",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "IsActive",
+            "type": "Boolean",
+            "required": false,
+            "defaultValue": false
+          }
+        ]
+      },
+      {
+        "name": "HomeDeliveryPerson",
+        "attributes": [
+          {
+            "name": "Name",
+            "type": "String",
+            "required": true
+          },
+          {
+            "name": "Email",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "IsActive",
+            "type": "Boolean",
+            "required": false,
+            "defaultValue": false
+          }
+        ]
+      },
+      {
+        "name": "SpecialRequest",
+        "attributes": [
+          {
+            "name": "Name",
+            "type": "String",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "NewOrderNotification",
+        "attributes": [
+          {
+            "name": "Name",
+            "type": "String",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "OrderChangeNotification",
+        "attributes": [
+          {
+            "name": "Name",
+            "type": "String",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "OrderLabel",
+        "attributes": [
+          {
+            "name": "Name",
+            "type": "String",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "ProductStatus",
+        "attributes": [
+          {
+            "name": "Name",
+            "type": "String",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "OrderOverview",
+        "attributes": [
+          {
+            "name": "Name",
+            "type": "String",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "OrderStatus",
+        "attributes": [
+          {
+            "name": "statusName",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "statusColor",
+            "type": "String",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "OrderType",
+        "attributes": [
+          {
+            "name": "typeName",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "typeDescription",
+            "type": "String",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "Notification",
+        "attributes": [
+          {
+            "name": "notificationMessage",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "notificationTime",
+            "type": "DateTime",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "PhysicalTicket",
+        "attributes": [
+          {
+            "name": "Name",
+            "type": "String",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "Changes",
+        "attributes": [
+          {
+            "name": "Name",
+            "type": "String",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "LastMinuteChanges",
+        "attributes": [
+          {
+            "name": "Name",
+            "type": "String",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "DigitalTicket",
+        "attributes": [
+          {
+            "name": "Name",
+            "type": "String",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "PaymentOption",
+        "attributes": [
+          {
+            "name": "Name",
+            "type": "String",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "SearchResult",
+        "attributes": [
+          {
+            "name": "Name",
+            "type": "String",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "CashierAccount",
+        "attributes": [
+          {
+            "name": "Name",
+            "type": "String",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "OrderItem",
+        "attributes": [
+          {
+            "name": "Name",
+            "type": "String",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "Delivery",
+        "attributes": [
+          {
+            "name": "Name",
+            "type": "String",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "Admin",
+        "attributes": [
+          {
+            "name": "Name",
+            "type": "String",
+            "required": true
+          },
+          {
+            "name": "Email",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "IsActive",
+            "type": "Boolean",
+            "required": false,
+            "defaultValue": false
+          }
+        ]
+      }
+    ],
+    "associations": [
+      {
+        "name": "Order_Product",
+        "parentEntity": "Order",
+        "childEntity": "Product",
+        "type": "Reference",
+        "owner": "Both"
+      },
+      {
+        "name": "Customer_Order",
+        "parentEntity": "Customer",
+        "childEntity": "Order",
+        "type": "Reference",
+        "owner": "Both"
+      },
+      {
+        "name": "Product_SpecialRequest",
+        "parentEntity": "Product",
+        "childEntity": "SpecialRequest",
+        "type": "Reference",
+        "owner": "Both"
+      },
+      {
+        "name": "Order_Delivery",
+        "parentEntity": "Order",
+        "childEntity": "Delivery",
+        "type": "Reference",
+        "owner": "Both"
+      },
+      {
+        "name": "Cashier_CashierAccount",
+        "parentEntity": "Cashier",
+        "childEntity": "CashierAccount",
+        "type": "Reference",
+        "owner": "Both"
+      },
+      {
+        "name": "Order_PaymentOption",
+        "parentEntity": "Order",
+        "childEntity": "PaymentOption",
+        "type": "Reference",
+        "owner": "Both"
+      },
+      {
+        "name": "KitchenEmployee_Order",
+        "parentEntity": "KitchenEmployee",
+        "childEntity": "Order",
+        "type": "Reference",
+        "owner": "Both"
+      },
+      {
+        "name": "TicketMaster_Order",
+        "parentEntity": "TicketMaster",
+        "childEntity": "Order",
+        "type": "Reference",
+        "owner": "Both"
+      },
+      {
+        "name": "HomeDeliveryPerson_Order",
+        "parentEntity": "HomeDeliveryPerson",
+        "childEntity": "Order",
+        "type": "Reference",
+        "owner": "Both"
+      },
+      {
+        "name": "Order_Notification",
+        "parentEntity": "Order",
+        "childEntity": "Notification",
+        "type": "Reference",
+        "owner": "Both"
+      },
+      {
+        "name": "Customer_Notification",
+        "parentEntity": "Customer",
+        "childEntity": "Notification",
+        "type": "Reference",
+        "owner": "Both"
+      },
+      {
+        "name": "Order_Ticket",
+        "parentEntity": "Order",
+        "childEntity": "Ticket",
+        "type": "Reference",
+        "owner": "Both"
+      }
+    ],
+    "enumerations": []
+  },
+  "security": {
+    "enabled": true,
+    "securityLevel": "prototype",
+    "moduleRoles": [
+      "KitchenEmployee",
+      "TicketMaster",
+      "Cashier",
+      "RestaurantOwner",
+      "HomeDeliveryPerson",
+      "Admin",
+      "Customer"
+    ],
+    "userRoles": [
+      {
+        "name": "KitchenEmployee",
+        "moduleRoles": [
+          "KitchenEmployee"
+        ],
+        "description": "User role for kitchen employees to view and manage orders.",
+        "systemModuleRole": "System.User"
+      },
+      {
+        "name": "TicketMaster",
+        "moduleRoles": [
+          "TicketMaster"
+        ],
+        "description": "User role for ticket masters to manage order status and labels.",
+        "systemModuleRole": "System.User"
+      },
+      {
+        "name": "Cashier",
+        "moduleRoles": [
+          "Cashier"
+        ],
+        "description": "User role for cashiers to manage orders, payments, and customer information.",
+        "systemModuleRole": "System.User"
+      },
+      {
+        "name": "RestaurantOwner",
+        "moduleRoles": [
+          "RestaurantOwner"
+        ],
+        "description": "User role for restaurant owners to view order overviews, sales reports, and manage cashier accounts.",
+        "systemModuleRole": "System.User"
+      },
+      {
+        "name": "HomeDeliveryPerson",
+        "moduleRoles": [
+          "HomeDeliveryPerson"
+        ],
+        "description": "User role for home delivery persons to view order details and delivery information.",
+        "systemModuleRole": "System.User"
+      },
+      {
+        "name": "Admin",
+        "moduleRoles": [
+          "Admin"
+        ],
+        "description": "User role for administrators to manage all aspects of the application.",
+        "systemModuleRole": "System.Administrator"
+      },
+      {
+        "name": "Customer",
+        "moduleRoles": [
+          "Customer"
+        ],
+        "systemModuleRole": "System.User"
+      }
+    ],
+    "demoUsers": []
+  },
+  "pages": {
+    "specs": [
+      {
+        "ref": "home",
+        "name": "home",
+        "title": "home",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "home",
+            "renderMode": "H2",
+            "content": [],
+            "itemContent": [],
+            "templateContent": []
+          },
+          {
+            "type": "buttonToPage",
+            "caption": "cashier overview",
+            "targetPageRef": "cashier_overview"
+          },
+          {
+            "type": "buttonToPage",
+            "caption": "customer overview",
+            "targetPageRef": "customer_overview"
+          },
+          {
+            "type": "buttonToPage",
+            "caption": "homedeliveryperson overview",
+            "targetPageRef": "homedeliveryperson_overview"
+          },
+          {
+            "type": "buttonToPage",
+            "caption": "kitchenemployee overview",
+            "targetPageRef": "kitchenemployee_overview"
+          },
+          {
+            "type": "buttonToPage",
+            "caption": "admin overview",
+            "targetPageRef": "admin_overview"
+          },
+          {
+            "type": "buttonToPage",
+            "caption": "cashieraccount overview",
+            "targetPageRef": "cashieraccount_overview"
+          }
+        ]
+      },
+      {
+        "ref": "order_dashboard",
+        "name": "Order_Dashboard",
+        "title": "Order Dashboard",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "Order Dashboard",
+            "renderMode": "H2",
+            "content": [],
+            "itemContent": [],
+            "templateContent": []
+          },
+          {
+            "type": "dynamicText",
+            "text": "Overview and data management for order.",
+            "renderMode": "Paragraph",
+            "content": [],
+            "itemContent": [],
+            "templateContent": []
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Add Order",
+            "entityRef": "MyFirstModule.Order",
+            "targetPageRef": "order_newedit",
+            "content": [],
+            "itemContent": [],
+            "templateContent": []
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.Order",
+            "rowClickTargetPageRef": "order_newedit",
+            "autoRowClickToDetail": true,
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Status",
+                "autoLabel": false,
+                "content": [],
+                "itemContent": [],
+                "templateContent": []
+              }
+            ],
+            "content": [],
+            "templateContent": []
+          }
+        ],
+        "entityRef": "MyFirstModule.Order"
+      },
+      {
+        "ref": "order_overview",
+        "name": "Order_Overview",
+        "title": "Order Overview",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "Order Overview",
+            "renderMode": "H2",
+            "content": [],
+            "itemContent": [],
+            "templateContent": []
+          },
+          {
+            "type": "dynamicText",
+            "text": "Manage order records and open the create dialog when new data is needed.",
+            "renderMode": "Paragraph",
+            "content": [],
+            "itemContent": [],
+            "templateContent": []
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Add Order",
+            "entityRef": "MyFirstModule.Order",
+            "targetPageRef": "order_newedit",
+            "content": [],
+            "itemContent": [],
+            "templateContent": []
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.Order",
+            "rowClickTargetPageRef": "order_newedit",
+            "autoRowClickToDetail": true,
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Status",
+                "autoLabel": false,
+                "content": [],
+                "itemContent": [],
+                "templateContent": []
+              }
+            ],
+            "content": [],
+            "templateContent": []
+          }
+        ],
+        "entityRef": "MyFirstModule.Order"
+      },
+      {
+        "ref": "order_newedit",
+        "name": "Order_NewEdit",
+        "title": "Order NewEdit",
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "Order",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "orderNumber"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Status"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "pickupTime"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "totalPrice"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "orderTime"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "PaymentMethod"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "DeliveryPerson"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "searchQuery"
+              },
+              {
+                "type": "associationInput",
+                "associationRef": "Order_Product",
+                "targetEntityRef": "MyFirstModule.Product",
+                "label": "Product"
+              },
+              {
+                "type": "associationInput",
+                "associationRef": "Customer_Order",
+                "targetEntityRef": "MyFirstModule.Customer",
+                "label": "Customer"
+              },
+              {
+                "type": "associationInput",
+                "associationRef": "Order_Delivery",
+                "targetEntityRef": "MyFirstModule.Delivery",
+                "label": "Delivery"
+              },
+              {
+                "type": "associationInput",
+                "associationRef": "Order_PaymentOption",
+                "targetEntityRef": "MyFirstModule.PaymentOption",
+                "label": "Payment Option"
+              },
+              {
+                "type": "associationInput",
+                "associationRef": "KitchenEmployee_Order",
+                "targetEntityRef": "MyFirstModule.KitchenEmployee",
+                "label": "Kitchen Employee"
+              },
+              {
+                "type": "associationInput",
+                "associationRef": "TicketMaster_Order",
+                "targetEntityRef": "MyFirstModule.TicketMaster",
+                "label": "Ticket Master"
+              },
+              {
+                "type": "associationInput",
+                "associationRef": "HomeDeliveryPerson_Order",
+                "targetEntityRef": "MyFirstModule.HomeDeliveryPerson",
+                "label": "Home Delivery Person"
+              },
+              {
+                "type": "associationInput",
+                "associationRef": "Order_Notification",
+                "targetEntityRef": "MyFirstModule.Notification",
+                "label": "Notification"
+              },
+              {
+                "type": "associationInput",
+                "associationRef": "Order_Ticket",
+                "targetEntityRef": "MyFirstModule.Ticket",
+                "label": "Ticket"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ],
+        "entityRef": "MyFirstModule.Order",
+        "pageParameters": [
+          {
+            "name": "Order",
+            "entityRef": "MyFirstModule.Order",
+            "required": true
+          }
+        ],
+        "layoutQualifiedName": "Atlas_Core.PopupLayout"
+      },
+      {
+        "ref": "product_overview",
+        "name": "Product_Overview",
+        "title": "Product Overview",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "Product Overview",
+            "renderMode": "H2",
+            "content": [],
+            "itemContent": [],
+            "templateContent": []
+          },
+          {
+            "type": "dynamicText",
+            "text": "Manage product records and open the create dialog when new data is needed.",
+            "renderMode": "Paragraph",
+            "content": [],
+            "itemContent": [],
+            "templateContent": []
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Add Product",
+            "entityRef": "MyFirstModule.Product",
+            "targetPageRef": "product_newedit",
+            "content": [],
+            "itemContent": [],
+            "templateContent": []
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.Product",
+            "rowClickTargetPageRef": "product_newedit",
+            "autoRowClickToDetail": true,
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "productName",
+                "autoLabel": true
+              }
+            ],
+            "content": [],
+            "templateContent": []
+          }
+        ],
+        "entityRef": "MyFirstModule.Product"
+      },
+      {
+        "ref": "product_newedit",
+        "name": "Product_NewEdit",
+        "title": "Product NewEdit",
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "Product",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "productName"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "productPrice"
+              },
+              {
+                "type": "associationInput",
+                "associationRef": "Order_Product",
+                "targetEntityRef": "MyFirstModule.Order",
+                "label": "Order"
+              },
+              {
+                "type": "associationInput",
+                "associationRef": "Product_SpecialRequest",
+                "targetEntityRef": "MyFirstModule.SpecialRequest",
+                "label": "Special Request"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ],
+        "entityRef": "MyFirstModule.Product",
+        "pageParameters": [
+          {
+            "name": "Product",
+            "entityRef": "MyFirstModule.Product",
+            "required": true
+          }
+        ],
+        "layoutQualifiedName": "Atlas_Core.PopupLayout"
+      },
+      {
+        "ref": "customer_overview",
+        "name": "Customer_Overview",
+        "title": "Customer Overview",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "Customer Overview",
+            "renderMode": "H2",
+            "content": [],
+            "itemContent": [],
+            "templateContent": []
+          },
+          {
+            "type": "dynamicText",
+            "text": "Manage customer records and open the create dialog when new data is needed.",
+            "renderMode": "Paragraph",
+            "content": [],
+            "itemContent": [],
+            "templateContent": []
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Add Customer",
+            "entityRef": "MyFirstModule.Customer",
+            "targetPageRef": "customer_newedit",
+            "content": [],
+            "itemContent": [],
+            "templateContent": []
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.Customer",
+            "rowClickTargetPageRef": "customer_newedit",
+            "autoRowClickToDetail": true,
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "customerName",
+                "autoLabel": true
+              }
+            ],
+            "content": [],
+            "templateContent": []
+          }
+        ],
+        "entityRef": "MyFirstModule.Customer"
+      },
+      {
+        "ref": "customer_newedit",
+        "name": "Customer_NewEdit",
+        "title": "Customer NewEdit",
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "Customer",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "customerName"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "phoneNumber"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "deliveryAddress"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "customerEmail"
+              },
+              {
+                "type": "associationInput",
+                "associationRef": "Customer_Order",
+                "targetEntityRef": "MyFirstModule.Order",
+                "label": "Order"
+              },
+              {
+                "type": "associationInput",
+                "associationRef": "Customer_Notification",
+                "targetEntityRef": "MyFirstModule.Notification",
+                "label": "Notification"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ],
+        "entityRef": "MyFirstModule.Customer",
+        "pageParameters": [
+          {
+            "name": "Customer",
+            "entityRef": "MyFirstModule.Customer",
+            "required": true
+          }
+        ],
+        "layoutQualifiedName": "Atlas_Core.PopupLayout"
+      },
+      {
+        "ref": "ticket_overview",
+        "name": "Ticket_Overview",
+        "title": "Ticket Overview",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "Ticket Overview",
+            "renderMode": "H2",
+            "content": [],
+            "itemContent": [],
+            "templateContent": []
+          },
+          {
+            "type": "dynamicText",
+            "text": "Manage ticket records and open the create dialog when new data is needed.",
+            "renderMode": "Paragraph",
+            "content": [],
+            "itemContent": [],
+            "templateContent": []
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Add Ticket",
+            "entityRef": "MyFirstModule.Ticket",
+            "targetPageRef": "ticket_newedit",
+            "content": [],
+            "itemContent": [],
+            "templateContent": []
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.Ticket",
+            "rowClickTargetPageRef": "ticket_newedit",
+            "autoRowClickToDetail": true,
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "ticketNumber",
+                "autoLabel": true
+              }
+            ],
+            "content": [],
+            "templateContent": []
+          }
+        ],
+        "entityRef": "MyFirstModule.Ticket"
+      },
+      {
+        "ref": "ticket_newedit",
+        "name": "Ticket_NewEdit",
+        "title": "Ticket NewEdit",
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "Ticket",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "ticketNumber"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "orderDetails"
+              },
+              {
+                "type": "associationInput",
+                "associationRef": "Order_Ticket",
+                "targetEntityRef": "MyFirstModule.Order",
+                "label": "Order"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ],
+        "entityRef": "MyFirstModule.Ticket",
+        "pageParameters": [
+          {
+            "name": "Ticket",
+            "entityRef": "MyFirstModule.Ticket",
+            "required": true
+          }
+        ],
+        "layoutQualifiedName": "Atlas_Core.PopupLayout"
+      },
+      {
+        "ref": "kitchenemployee_overview",
+        "name": "KitchenEmployee_Overview",
+        "title": "KitchenEmployee Overview",
+        "entityRef": "MyFirstModule.KitchenEmployee",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "KitchenEmployee Overview",
+            "renderMode": "H2",
+            "content": [],
+            "itemContent": [],
+            "templateContent": []
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Create KitchenEmployee",
+            "entityRef": "MyFirstModule.KitchenEmployee",
+            "targetPageRef": "kitchenemployee_newedit",
+            "content": [],
+            "itemContent": [],
+            "templateContent": []
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.KitchenEmployee",
+            "autoRowClickToDetail": true,
+            "rowClickTargetPageRef": "kitchenemployee_newedit",
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name",
+                "autoLabel": true,
+                "content": [],
+                "itemContent": [],
+                "templateContent": []
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Email",
+                "autoLabel": false,
+                "content": [],
+                "itemContent": [],
+                "templateContent": []
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "IsActive",
+                "autoLabel": false,
+                "content": [],
+                "itemContent": [],
+                "templateContent": []
+              }
+            ],
+            "content": [],
+            "templateContent": []
+          }
+        ]
+      },
+      {
+        "ref": "kitchenemployee_newedit",
+        "name": "KitchenEmployee_NewEdit",
+        "title": "KitchenEmployee NewEdit",
+        "entityRef": "MyFirstModule.KitchenEmployee",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          {
+            "name": "KitchenEmployee",
+            "entityRef": "MyFirstModule.KitchenEmployee",
+            "required": true
+          }
+        ],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "KitchenEmployee",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Email"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "IsActive"
+              },
+              {
+                "type": "associationInput",
+                "associationRef": "KitchenEmployee_Order",
+                "targetEntityRef": "MyFirstModule.Order",
+                "label": "Order"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "ticketmaster_overview",
+        "name": "TicketMaster_Overview",
+        "title": "TicketMaster Overview",
+        "entityRef": "MyFirstModule.TicketMaster",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "TicketMaster Overview",
+            "renderMode": "H2",
+            "content": [],
+            "itemContent": [],
+            "templateContent": []
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Create TicketMaster",
+            "entityRef": "MyFirstModule.TicketMaster",
+            "targetPageRef": "ticketmaster_newedit",
+            "content": [],
+            "itemContent": [],
+            "templateContent": []
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.TicketMaster",
+            "autoRowClickToDetail": true,
+            "rowClickTargetPageRef": "ticketmaster_newedit",
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name",
+                "autoLabel": true,
+                "content": [],
+                "itemContent": [],
+                "templateContent": []
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Email",
+                "autoLabel": false,
+                "content": [],
+                "itemContent": [],
+                "templateContent": []
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "IsActive",
+                "autoLabel": false,
+                "content": [],
+                "itemContent": [],
+                "templateContent": []
+              }
+            ],
+            "content": [],
+            "templateContent": []
+          }
+        ]
+      },
+      {
+        "ref": "ticketmaster_newedit",
+        "name": "TicketMaster_NewEdit",
+        "title": "TicketMaster NewEdit",
+        "entityRef": "MyFirstModule.TicketMaster",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          {
+            "name": "TicketMaster",
+            "entityRef": "MyFirstModule.TicketMaster",
+            "required": true
+          }
+        ],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "TicketMaster",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Email"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "IsActive"
+              },
+              {
+                "type": "associationInput",
+                "associationRef": "TicketMaster_Order",
+                "targetEntityRef": "MyFirstModule.Order",
+                "label": "Order"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "cashier_overview",
+        "name": "Cashier_Overview",
+        "title": "Cashier Overview",
+        "entityRef": "MyFirstModule.Cashier",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "Cashier Overview",
+            "renderMode": "H2",
+            "content": [],
+            "itemContent": [],
+            "templateContent": []
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Create Cashier",
+            "entityRef": "MyFirstModule.Cashier",
+            "targetPageRef": "cashier_newedit",
+            "content": [],
+            "itemContent": [],
+            "templateContent": []
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.Cashier",
+            "autoRowClickToDetail": true,
+            "rowClickTargetPageRef": "cashier_newedit",
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name",
+                "autoLabel": true,
+                "content": [],
+                "itemContent": [],
+                "templateContent": []
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Email",
+                "autoLabel": false,
+                "content": [],
+                "itemContent": [],
+                "templateContent": []
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "IsActive",
+                "autoLabel": false,
+                "content": [],
+                "itemContent": [],
+                "templateContent": []
+              }
+            ],
+            "content": [],
+            "templateContent": []
+          }
+        ]
+      },
+      {
+        "ref": "cashier_newedit",
+        "name": "Cashier_NewEdit",
+        "title": "Cashier NewEdit",
+        "entityRef": "MyFirstModule.Cashier",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          {
+            "name": "Cashier",
+            "entityRef": "MyFirstModule.Cashier",
+            "required": true
+          }
+        ],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "Cashier",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Email"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "IsActive"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "accountBalance"
+              },
+              {
+                "type": "associationInput",
+                "associationRef": "Cashier_CashierAccount",
+                "targetEntityRef": "MyFirstModule.CashierAccount",
+                "label": "Cashier Account"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "restaurantowner_overview",
+        "name": "RestaurantOwner_Overview",
+        "title": "RestaurantOwner Overview",
+        "entityRef": "MyFirstModule.RestaurantOwner",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "RestaurantOwner Overview",
+            "renderMode": "H2",
+            "content": [],
+            "itemContent": [],
+            "templateContent": []
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Create RestaurantOwner",
+            "entityRef": "MyFirstModule.RestaurantOwner",
+            "targetPageRef": "restaurantowner_newedit",
+            "content": [],
+            "itemContent": [],
+            "templateContent": []
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.RestaurantOwner",
+            "autoRowClickToDetail": true,
+            "rowClickTargetPageRef": "restaurantowner_newedit",
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name",
+                "autoLabel": true,
+                "content": [],
+                "itemContent": [],
+                "templateContent": []
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Email",
+                "autoLabel": false,
+                "content": [],
+                "itemContent": [],
+                "templateContent": []
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "IsActive",
+                "autoLabel": false,
+                "content": [],
+                "itemContent": [],
+                "templateContent": []
+              }
+            ],
+            "content": [],
+            "templateContent": []
+          }
+        ]
+      },
+      {
+        "ref": "restaurantowner_newedit",
+        "name": "RestaurantOwner_NewEdit",
+        "title": "RestaurantOwner NewEdit",
+        "entityRef": "MyFirstModule.RestaurantOwner",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          {
+            "name": "RestaurantOwner",
+            "entityRef": "MyFirstModule.RestaurantOwner",
+            "required": true
+          }
+        ],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "RestaurantOwner",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name",
+                "content": [],
+                "itemContent": [],
+                "templateContent": []
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Email",
+                "content": [],
+                "itemContent": [],
+                "templateContent": []
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "IsActive",
+                "content": [],
+                "itemContent": [],
+                "templateContent": []
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true,
+                "content": [],
+                "itemContent": [],
+                "templateContent": []
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true,
+                "content": [],
+                "itemContent": [],
+                "templateContent": []
+              }
+            ],
+            "itemContent": [],
+            "templateContent": []
+          }
+        ]
+      },
+      {
+        "ref": "homedeliveryperson_overview",
+        "name": "HomeDeliveryPerson_Overview",
+        "title": "HomeDeliveryPerson Overview",
+        "entityRef": "MyFirstModule.HomeDeliveryPerson",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "HomeDeliveryPerson Overview",
+            "renderMode": "H2",
+            "content": [],
+            "itemContent": [],
+            "templateContent": []
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Create HomeDeliveryPerson",
+            "entityRef": "MyFirstModule.HomeDeliveryPerson",
+            "targetPageRef": "homedeliveryperson_newedit",
+            "content": [],
+            "itemContent": [],
+            "templateContent": []
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.HomeDeliveryPerson",
+            "autoRowClickToDetail": true,
+            "rowClickTargetPageRef": "homedeliveryperson_newedit",
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name",
+                "autoLabel": true,
+                "content": [],
+                "itemContent": [],
+                "templateContent": []
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Email",
+                "autoLabel": false,
+                "content": [],
+                "itemContent": [],
+                "templateContent": []
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "IsActive",
+                "autoLabel": false,
+                "content": [],
+                "itemContent": [],
+                "templateContent": []
+              }
+            ],
+            "content": [],
+            "templateContent": []
+          }
+        ]
+      },
+      {
+        "ref": "homedeliveryperson_newedit",
+        "name": "HomeDeliveryPerson_NewEdit",
+        "title": "HomeDeliveryPerson NewEdit",
+        "entityRef": "MyFirstModule.HomeDeliveryPerson",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          {
+            "name": "HomeDeliveryPerson",
+            "entityRef": "MyFirstModule.HomeDeliveryPerson",
+            "required": true
+          }
+        ],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "HomeDeliveryPerson",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Email"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "IsActive"
+              },
+              {
+                "type": "associationInput",
+                "associationRef": "HomeDeliveryPerson_Order",
+                "targetEntityRef": "MyFirstModule.Order",
+                "label": "Order"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "orderoverview",
+        "name": "OrderOverview",
+        "title": "Order Overview",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "Order Overview",
+            "renderMode": "H2",
+            "content": [],
+            "itemContent": [],
+            "templateContent": []
+          }
+        ]
+      },
+      {
+        "ref": "orderdetail",
+        "name": "OrderDetail",
+        "title": "Order Detail",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "Order Detail",
+            "renderMode": "H2",
+            "content": [],
+            "itemContent": [],
+            "templateContent": []
+          }
+        ]
+      },
+      {
+        "ref": "neworder",
+        "name": "NewOrder",
+        "title": "New Order",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "New Order",
+            "renderMode": "H2",
+            "content": [],
+            "itemContent": [],
+            "templateContent": []
+          }
+        ]
+      },
+      {
+        "ref": "orderedit",
+        "name": "OrderEdit",
+        "title": "Order Edit",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "Order Edit",
+            "renderMode": "H2",
+            "content": [],
+            "itemContent": [],
+            "templateContent": []
+          }
+        ]
+      },
+      {
+        "ref": "productoverview",
+        "name": "ProductOverview",
+        "title": "Product Overview",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "Product Overview",
+            "renderMode": "H2",
+            "content": [],
+            "itemContent": [],
+            "templateContent": []
+          }
+        ]
+      },
+      {
+        "ref": "productdetail",
+        "name": "ProductDetail",
+        "title": "Product Detail",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "Product Detail",
+            "renderMode": "H2",
+            "content": [],
+            "itemContent": [],
+            "templateContent": []
+          }
+        ]
+      },
+      {
+        "ref": "newproduct",
+        "name": "NewProduct",
+        "title": "New Product",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "New Product",
+            "renderMode": "H2",
+            "content": [],
+            "itemContent": [],
+            "templateContent": []
+          }
+        ]
+      },
+      {
+        "ref": "productedit",
+        "name": "ProductEdit",
+        "title": "Product Edit",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "Product Edit",
+            "renderMode": "H2",
+            "content": [],
+            "itemContent": [],
+            "templateContent": []
+          }
+        ]
+      },
+      {
+        "ref": "specialrequest_overview",
+        "name": "SpecialRequest_Overview",
+        "title": "SpecialRequest Overview",
+        "entityRef": "MyFirstModule.SpecialRequest",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "SpecialRequest Overview",
+            "renderMode": "H2"
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Create SpecialRequest",
+            "entityRef": "MyFirstModule.SpecialRequest",
+            "targetPageRef": "specialrequest_newedit"
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.SpecialRequest",
+            "autoRowClickToDetail": true,
+            "rowClickTargetPageRef": "specialrequest_newedit",
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name",
+                "autoLabel": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "specialrequest_newedit",
+        "name": "SpecialRequest_NewEdit",
+        "title": "SpecialRequest NewEdit",
+        "entityRef": "MyFirstModule.SpecialRequest",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          {
+            "name": "SpecialRequest",
+            "entityRef": "MyFirstModule.SpecialRequest",
+            "required": true
+          }
+        ],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "SpecialRequest",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name"
+              },
+              {
+                "type": "associationInput",
+                "associationRef": "Product_SpecialRequest",
+                "targetEntityRef": "MyFirstModule.Product",
+                "label": "Product"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "newordernotification_overview",
+        "name": "NewOrderNotification_Overview",
+        "title": "NewOrderNotification Overview",
+        "entityRef": "MyFirstModule.NewOrderNotification",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "NewOrderNotification Overview",
+            "renderMode": "H2"
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Create NewOrderNotification",
+            "entityRef": "MyFirstModule.NewOrderNotification",
+            "targetPageRef": "newordernotification_newedit"
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.NewOrderNotification",
+            "autoRowClickToDetail": true,
+            "rowClickTargetPageRef": "newordernotification_newedit",
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name",
+                "autoLabel": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "newordernotification_newedit",
+        "name": "NewOrderNotification_NewEdit",
+        "title": "NewOrderNotification NewEdit",
+        "entityRef": "MyFirstModule.NewOrderNotification",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          {
+            "name": "NewOrderNotification",
+            "entityRef": "MyFirstModule.NewOrderNotification",
+            "required": true
+          }
+        ],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "NewOrderNotification",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "orderchangenotification_overview",
+        "name": "OrderChangeNotification_Overview",
+        "title": "OrderChangeNotification Overview",
+        "entityRef": "MyFirstModule.OrderChangeNotification",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "OrderChangeNotification Overview",
+            "renderMode": "H2"
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Create OrderChangeNotification",
+            "entityRef": "MyFirstModule.OrderChangeNotification",
+            "targetPageRef": "orderchangenotification_newedit"
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.OrderChangeNotification",
+            "autoRowClickToDetail": true,
+            "rowClickTargetPageRef": "orderchangenotification_newedit",
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name",
+                "autoLabel": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "orderchangenotification_newedit",
+        "name": "OrderChangeNotification_NewEdit",
+        "title": "OrderChangeNotification NewEdit",
+        "entityRef": "MyFirstModule.OrderChangeNotification",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          {
+            "name": "OrderChangeNotification",
+            "entityRef": "MyFirstModule.OrderChangeNotification",
+            "required": true
+          }
+        ],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "OrderChangeNotification",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "orderlabel_overview",
+        "name": "OrderLabel_Overview",
+        "title": "OrderLabel Overview",
+        "entityRef": "MyFirstModule.OrderLabel",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "OrderLabel Overview",
+            "renderMode": "H2"
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Create OrderLabel",
+            "entityRef": "MyFirstModule.OrderLabel",
+            "targetPageRef": "orderlabel_newedit"
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.OrderLabel",
+            "autoRowClickToDetail": true,
+            "rowClickTargetPageRef": "orderlabel_newedit",
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name",
+                "autoLabel": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "orderlabel_newedit",
+        "name": "OrderLabel_NewEdit",
+        "title": "OrderLabel NewEdit",
+        "entityRef": "MyFirstModule.OrderLabel",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          {
+            "name": "OrderLabel",
+            "entityRef": "MyFirstModule.OrderLabel",
+            "required": true
+          }
+        ],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "OrderLabel",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "productstatus_overview",
+        "name": "ProductStatus_Overview",
+        "title": "ProductStatus Overview",
+        "entityRef": "MyFirstModule.ProductStatus",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "ProductStatus Overview",
+            "renderMode": "H2"
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Create ProductStatus",
+            "entityRef": "MyFirstModule.ProductStatus",
+            "targetPageRef": "productstatus_newedit"
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.ProductStatus",
+            "autoRowClickToDetail": true,
+            "rowClickTargetPageRef": "productstatus_newedit",
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name",
+                "autoLabel": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "productstatus_newedit",
+        "name": "ProductStatus_NewEdit",
+        "title": "ProductStatus NewEdit",
+        "entityRef": "MyFirstModule.ProductStatus",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          {
+            "name": "ProductStatus",
+            "entityRef": "MyFirstModule.ProductStatus",
+            "required": true
+          }
+        ],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "ProductStatus",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "orderoverview_overview",
+        "name": "OrderOverview_Overview",
+        "title": "OrderOverview Overview",
+        "entityRef": "MyFirstModule.OrderOverview",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "OrderOverview Overview",
+            "renderMode": "H2"
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Create OrderOverview",
+            "entityRef": "MyFirstModule.OrderOverview",
+            "targetPageRef": "orderoverview_newedit"
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.OrderOverview",
+            "autoRowClickToDetail": true,
+            "rowClickTargetPageRef": "orderoverview_newedit",
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name",
+                "autoLabel": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "orderoverview_newedit",
+        "name": "OrderOverview_NewEdit",
+        "title": "OrderOverview NewEdit",
+        "entityRef": "MyFirstModule.OrderOverview",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          {
+            "name": "OrderOverview",
+            "entityRef": "MyFirstModule.OrderOverview",
+            "required": true
+          }
+        ],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "OrderOverview",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "orderstatus_overview",
+        "name": "OrderStatus_Overview",
+        "title": "OrderStatus Overview",
+        "entityRef": "MyFirstModule.OrderStatus",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "OrderStatus Overview",
+            "renderMode": "H2"
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Create OrderStatus",
+            "entityRef": "MyFirstModule.OrderStatus",
+            "targetPageRef": "orderstatus_newedit"
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.OrderStatus",
+            "autoRowClickToDetail": true,
+            "rowClickTargetPageRef": "orderstatus_newedit",
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "statusName",
+                "autoLabel": true
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "statusColor",
+                "autoLabel": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "orderstatus_newedit",
+        "name": "OrderStatus_NewEdit",
+        "title": "OrderStatus NewEdit",
+        "entityRef": "MyFirstModule.OrderStatus",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          {
+            "name": "OrderStatus",
+            "entityRef": "MyFirstModule.OrderStatus",
+            "required": true
+          }
+        ],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "OrderStatus",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "statusName"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "statusColor"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "ordertype_overview",
+        "name": "OrderType_Overview",
+        "title": "OrderType Overview",
+        "entityRef": "MyFirstModule.OrderType",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "OrderType Overview",
+            "renderMode": "H2"
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Create OrderType",
+            "entityRef": "MyFirstModule.OrderType",
+            "targetPageRef": "ordertype_newedit"
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.OrderType",
+            "autoRowClickToDetail": true,
+            "rowClickTargetPageRef": "ordertype_newedit",
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "typeName",
+                "autoLabel": true
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "typeDescription",
+                "autoLabel": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "ordertype_newedit",
+        "name": "OrderType_NewEdit",
+        "title": "OrderType NewEdit",
+        "entityRef": "MyFirstModule.OrderType",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          {
+            "name": "OrderType",
+            "entityRef": "MyFirstModule.OrderType",
+            "required": true
+          }
+        ],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "OrderType",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "typeName"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "typeDescription"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "notification_overview",
+        "name": "Notification_Overview",
+        "title": "Notification Overview",
+        "entityRef": "MyFirstModule.Notification",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "Notification Overview",
+            "renderMode": "H2"
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Create Notification",
+            "entityRef": "MyFirstModule.Notification",
+            "targetPageRef": "notification_newedit"
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.Notification",
+            "autoRowClickToDetail": true,
+            "rowClickTargetPageRef": "notification_newedit",
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "notificationMessage",
+                "autoLabel": true
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "notificationTime",
+                "autoLabel": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "notification_newedit",
+        "name": "Notification_NewEdit",
+        "title": "Notification NewEdit",
+        "entityRef": "MyFirstModule.Notification",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          {
+            "name": "Notification",
+            "entityRef": "MyFirstModule.Notification",
+            "required": true
+          }
+        ],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "Notification",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "notificationMessage"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "notificationTime"
+              },
+              {
+                "type": "associationInput",
+                "associationRef": "Order_Notification",
+                "targetEntityRef": "MyFirstModule.Order",
+                "label": "Order"
+              },
+              {
+                "type": "associationInput",
+                "associationRef": "Customer_Notification",
+                "targetEntityRef": "MyFirstModule.Customer",
+                "label": "Customer"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "physicalticket_overview",
+        "name": "PhysicalTicket_Overview",
+        "title": "PhysicalTicket Overview",
+        "entityRef": "MyFirstModule.PhysicalTicket",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "PhysicalTicket Overview",
+            "renderMode": "H2"
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Create PhysicalTicket",
+            "entityRef": "MyFirstModule.PhysicalTicket",
+            "targetPageRef": "physicalticket_newedit"
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.PhysicalTicket",
+            "autoRowClickToDetail": true,
+            "rowClickTargetPageRef": "physicalticket_newedit",
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name",
+                "autoLabel": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "physicalticket_newedit",
+        "name": "PhysicalTicket_NewEdit",
+        "title": "PhysicalTicket NewEdit",
+        "entityRef": "MyFirstModule.PhysicalTicket",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          {
+            "name": "PhysicalTicket",
+            "entityRef": "MyFirstModule.PhysicalTicket",
+            "required": true
+          }
+        ],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "PhysicalTicket",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "changes_overview",
+        "name": "Changes_Overview",
+        "title": "Changes Overview",
+        "entityRef": "MyFirstModule.Changes",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "Changes Overview",
+            "renderMode": "H2"
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Create Changes",
+            "entityRef": "MyFirstModule.Changes",
+            "targetPageRef": "changes_newedit"
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.Changes",
+            "autoRowClickToDetail": true,
+            "rowClickTargetPageRef": "changes_newedit",
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name",
+                "autoLabel": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "changes_newedit",
+        "name": "Changes_NewEdit",
+        "title": "Changes NewEdit",
+        "entityRef": "MyFirstModule.Changes",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          {
+            "name": "Changes",
+            "entityRef": "MyFirstModule.Changes",
+            "required": true
+          }
+        ],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "Changes",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "lastminutechanges_overview",
+        "name": "LastMinuteChanges_Overview",
+        "title": "LastMinuteChanges Overview",
+        "entityRef": "MyFirstModule.LastMinuteChanges",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "LastMinuteChanges Overview",
+            "renderMode": "H2"
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Create LastMinuteChanges",
+            "entityRef": "MyFirstModule.LastMinuteChanges",
+            "targetPageRef": "lastminutechanges_newedit"
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.LastMinuteChanges",
+            "autoRowClickToDetail": true,
+            "rowClickTargetPageRef": "lastminutechanges_newedit",
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name",
+                "autoLabel": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "lastminutechanges_newedit",
+        "name": "LastMinuteChanges_NewEdit",
+        "title": "LastMinuteChanges NewEdit",
+        "entityRef": "MyFirstModule.LastMinuteChanges",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          {
+            "name": "LastMinuteChanges",
+            "entityRef": "MyFirstModule.LastMinuteChanges",
+            "required": true
+          }
+        ],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "LastMinuteChanges",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "digitalticket_overview",
+        "name": "DigitalTicket_Overview",
+        "title": "DigitalTicket Overview",
+        "entityRef": "MyFirstModule.DigitalTicket",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "DigitalTicket Overview",
+            "renderMode": "H2"
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Create DigitalTicket",
+            "entityRef": "MyFirstModule.DigitalTicket",
+            "targetPageRef": "digitalticket_newedit"
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.DigitalTicket",
+            "autoRowClickToDetail": true,
+            "rowClickTargetPageRef": "digitalticket_newedit",
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name",
+                "autoLabel": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "digitalticket_newedit",
+        "name": "DigitalTicket_NewEdit",
+        "title": "DigitalTicket NewEdit",
+        "entityRef": "MyFirstModule.DigitalTicket",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          {
+            "name": "DigitalTicket",
+            "entityRef": "MyFirstModule.DigitalTicket",
+            "required": true
+          }
+        ],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "DigitalTicket",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "paymentoption_overview",
+        "name": "PaymentOption_Overview",
+        "title": "PaymentOption Overview",
+        "entityRef": "MyFirstModule.PaymentOption",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "PaymentOption Overview",
+            "renderMode": "H2"
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Create PaymentOption",
+            "entityRef": "MyFirstModule.PaymentOption",
+            "targetPageRef": "paymentoption_newedit"
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.PaymentOption",
+            "autoRowClickToDetail": true,
+            "rowClickTargetPageRef": "paymentoption_newedit",
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name",
+                "autoLabel": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "paymentoption_newedit",
+        "name": "PaymentOption_NewEdit",
+        "title": "PaymentOption NewEdit",
+        "entityRef": "MyFirstModule.PaymentOption",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          {
+            "name": "PaymentOption",
+            "entityRef": "MyFirstModule.PaymentOption",
+            "required": true
+          }
+        ],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "PaymentOption",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name"
+              },
+              {
+                "type": "associationInput",
+                "associationRef": "Order_PaymentOption",
+                "targetEntityRef": "MyFirstModule.Order",
+                "label": "Order"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "searchresult_overview",
+        "name": "SearchResult_Overview",
+        "title": "SearchResult Overview",
+        "entityRef": "MyFirstModule.SearchResult",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "SearchResult Overview",
+            "renderMode": "H2"
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Create SearchResult",
+            "entityRef": "MyFirstModule.SearchResult",
+            "targetPageRef": "searchresult_newedit"
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.SearchResult",
+            "autoRowClickToDetail": true,
+            "rowClickTargetPageRef": "searchresult_newedit",
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name",
+                "autoLabel": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "searchresult_newedit",
+        "name": "SearchResult_NewEdit",
+        "title": "SearchResult NewEdit",
+        "entityRef": "MyFirstModule.SearchResult",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          {
+            "name": "SearchResult",
+            "entityRef": "MyFirstModule.SearchResult",
+            "required": true
+          }
+        ],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "SearchResult",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "cashieraccount_overview",
+        "name": "CashierAccount_Overview",
+        "title": "CashierAccount Overview",
+        "entityRef": "MyFirstModule.CashierAccount",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "CashierAccount Overview",
+            "renderMode": "H2"
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Create CashierAccount",
+            "entityRef": "MyFirstModule.CashierAccount",
+            "targetPageRef": "cashieraccount_newedit"
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.CashierAccount",
+            "autoRowClickToDetail": true,
+            "rowClickTargetPageRef": "cashieraccount_newedit",
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name",
+                "autoLabel": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "cashieraccount_newedit",
+        "name": "CashierAccount_NewEdit",
+        "title": "CashierAccount NewEdit",
+        "entityRef": "MyFirstModule.CashierAccount",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          {
+            "name": "CashierAccount",
+            "entityRef": "MyFirstModule.CashierAccount",
+            "required": true
+          }
+        ],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "CashierAccount",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name"
+              },
+              {
+                "type": "associationInput",
+                "associationRef": "Cashier_CashierAccount",
+                "targetEntityRef": "MyFirstModule.Cashier",
+                "label": "Cashier"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "orderitem_overview",
+        "name": "OrderItem_Overview",
+        "title": "OrderItem Overview",
+        "entityRef": "MyFirstModule.OrderItem",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "OrderItem Overview",
+            "renderMode": "H2"
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Create OrderItem",
+            "entityRef": "MyFirstModule.OrderItem",
+            "targetPageRef": "orderitem_newedit"
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.OrderItem",
+            "autoRowClickToDetail": true,
+            "rowClickTargetPageRef": "orderitem_newedit",
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name",
+                "autoLabel": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "orderitem_newedit",
+        "name": "OrderItem_NewEdit",
+        "title": "OrderItem NewEdit",
+        "entityRef": "MyFirstModule.OrderItem",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          {
+            "name": "OrderItem",
+            "entityRef": "MyFirstModule.OrderItem",
+            "required": true
+          }
+        ],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "OrderItem",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "delivery_overview",
+        "name": "Delivery_Overview",
+        "title": "Delivery Overview",
+        "entityRef": "MyFirstModule.Delivery",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "Delivery Overview",
+            "renderMode": "H2"
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Create Delivery",
+            "entityRef": "MyFirstModule.Delivery",
+            "targetPageRef": "delivery_newedit"
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.Delivery",
+            "autoRowClickToDetail": true,
+            "rowClickTargetPageRef": "delivery_newedit",
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name",
+                "autoLabel": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "delivery_newedit",
+        "name": "Delivery_NewEdit",
+        "title": "Delivery NewEdit",
+        "entityRef": "MyFirstModule.Delivery",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          {
+            "name": "Delivery",
+            "entityRef": "MyFirstModule.Delivery",
+            "required": true
+          }
+        ],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "Delivery",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name"
+              },
+              {
+                "type": "associationInput",
+                "associationRef": "Order_Delivery",
+                "targetEntityRef": "MyFirstModule.Order",
+                "label": "Order"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "admin_overview",
+        "name": "Admin_Overview",
+        "title": "Admin Overview",
+        "entityRef": "MyFirstModule.Admin",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "Admin Overview",
+            "renderMode": "H2"
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Create Admin",
+            "entityRef": "MyFirstModule.Admin",
+            "targetPageRef": "admin_newedit"
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.Admin",
+            "autoRowClickToDetail": true,
+            "rowClickTargetPageRef": "admin_newedit",
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name",
+                "autoLabel": true
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Email",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "IsActive",
+                "autoLabel": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "admin_newedit",
+        "name": "Admin_NewEdit",
+        "title": "Admin NewEdit",
+        "entityRef": "MyFirstModule.Admin",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          {
+            "name": "Admin",
+            "entityRef": "MyFirstModule.Admin",
+            "required": true
+          }
+        ],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "Admin",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Email"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "IsActive"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "verification": {
+    "failOnMissing": true
+  },
+  "microflows": {
+    "specs": [
+      {
+        "name": "CreateNewOrderNotification",
+        "parameters": [
+          {
+            "name": "order",
+            "type": {
+              "kind": "Object",
+              "entityRef": "MyFirstModule.Order"
+            }
+          }
+        ],
+        "actions": [
+          {
+            "type": "createObject",
+            "entity": "NewOrderNotification",
+            "variableName": "newOrderNotification",
+            "outputVariableName": "newOrderNotification"
+          },
+          {
+            "type": "commitObject",
+            "variableName": "newOrderNotification"
+          },
+          {
+            "type": "showMessage",
+            "message": "New order received"
+          }
+        ]
+      },
+      {
+        "name": "UpdateOrderStatus",
+        "parameters": [
+          {
+            "name": "order",
+            "type": {
+              "kind": "Object",
+              "entityRef": "MyFirstModule.Order"
+            }
+          },
+          {
+            "name": "newStatus",
+            "type": "String"
+          }
+        ],
+        "actions": [
+          {
+            "type": "commitObject",
+            "variableName": "order"
+          }
+        ]
+      },
+      {
+        "name": "SendOrderChangeNotification",
+        "parameters": [
+          {
+            "name": "order",
+            "type": {
+              "kind": "Object",
+              "entityRef": "MyFirstModule.Order"
+            }
+          }
+        ],
+        "actions": [
+          {
+            "type": "createObject",
+            "entity": "OrderChangeNotification",
+            "variableName": "orderChangeNotification",
+            "outputVariableName": "orderChangeNotification"
+          },
+          {
+            "type": "commitObject",
+            "variableName": "orderChangeNotification"
+          },
+          {
+            "type": "showMessage",
+            "message": "Order changed"
+          }
+        ]
+      }
+    ]
+  },
+  "nanoflows": {
+    "specs": [
+      {
+        "name": "GetOrderProducts",
+        "parameters": [
+          {
+            "name": "order",
+            "type": {
+              "kind": "Object",
+              "entityRef": "MyFirstModule.Order"
+            }
+          }
+        ],
+        "actions": [
+          {
+            "type": "retrieveList",
+            "entity": "Product",
+            "variableName": "products",
+            "constraints": [
+              {
+                "member": "Order_Product",
+                "operator": "equals",
+                "value": "$order"
+              }
+            ],
+            "outputVariableName": "products"
+          },
+          {
+            "type": "returnValue",
+            "value": "products"
+          }
+        ]
+      }
+    ]
+  },
+  "workflows": {
+    "specs": []
+  }
+}

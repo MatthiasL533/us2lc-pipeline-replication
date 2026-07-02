@@ -1,0 +1,205 @@
+{
+  "pages": {
+    "specs": [
+      {
+        "name": "home",
+        "layout": "Blank",
+        "widgets": [
+          {
+            "type": "DataGrid",
+            "entity": "MyFirstModule.Order",
+            "columns": [
+              {
+                "attribute": "orderNumber"
+              },
+              {
+                "attribute": "Status"
+              }
+            ]
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "OrderOverview",
+        "layout": "FormHorizontal",
+        "widgets": [
+          {
+            "type": "DataGrid",
+            "entity": "MyFirstModule.Order",
+            "columns": [
+              {
+                "attribute": "orderNumber"
+              },
+              {
+                "attribute": "Status"
+              }
+            ]
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "OrderDetail",
+        "layout": "FormHorizontal",
+        "widgets": [
+          {
+            "type": "DataView",
+            "entity": "MyFirstModule.Order",
+            "attributes": [
+              {
+                "attribute": "orderNumber"
+              },
+              {
+                "attribute": "Status"
+              }
+            ]
+          },
+          {
+            "type": "DataGrid",
+            "entity": "MyFirstModule.Product",
+            "columns": [
+              {
+                "attribute": "productName"
+              },
+              {
+                "attribute": "productPrice"
+              }
+            ],
+            "dataSource": "GetOrderProducts"
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "NewOrder",
+        "layout": "FormHorizontal",
+        "widgets": [
+          {
+            "type": "DataView",
+            "entity": "MyFirstModule.Order",
+            "attributes": [
+              {
+                "attribute": "orderNumber"
+              },
+              {
+                "attribute": "Status"
+              }
+            ]
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "OrderEdit",
+        "layout": "FormHorizontal",
+        "widgets": [
+          {
+            "type": "DataView",
+            "entity": "MyFirstModule.Order",
+            "attributes": [
+              {
+                "attribute": "orderNumber"
+              },
+              {
+                "attribute": "Status"
+              }
+            ]
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "ProductOverview",
+        "layout": "FormHorizontal",
+        "widgets": [
+          {
+            "type": "DataGrid",
+            "entity": "MyFirstModule.Product",
+            "columns": [
+              {
+                "attribute": "productName"
+              },
+              {
+                "attribute": "productPrice"
+              }
+            ]
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "ProductDetail",
+        "layout": "FormHorizontal",
+        "widgets": [
+          {
+            "type": "DataView",
+            "entity": "MyFirstModule.Product",
+            "attributes": [
+              {
+                "attribute": "productName"
+              },
+              {
+                "attribute": "productPrice"
+              }
+            ]
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "NewProduct",
+        "layout": "FormHorizontal",
+        "widgets": [
+          {
+            "type": "DataView",
+            "entity": "MyFirstModule.Product",
+            "attributes": [
+              {
+                "attribute": "productName"
+              },
+              {
+                "attribute": "productPrice"
+              }
+            ]
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "ProductEdit",
+        "layout": "FormHorizontal",
+        "widgets": [
+          {
+            "type": "DataView",
+            "entity": "MyFirstModule.Product",
+            "attributes": [
+              {
+                "attribute": "productName"
+              },
+              {
+                "attribute": "productPrice"
+              }
+            ]
+          }
+        ],
+        "content": []
+      }
+    ]
+  },
+  "app": {
+    "navigation": {
+      "homePage": "home",
+      "menuItems": [
+        {
+          "name": "Orders",
+          "page": "OrderOverview"
+        },
+        {
+          "name": "Products",
+          "page": "ProductOverview"
+        }
+      ]
+    }
+  }
+}

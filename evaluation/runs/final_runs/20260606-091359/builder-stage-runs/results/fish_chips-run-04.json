@@ -1,0 +1,861 @@
+{
+  "dataset": "fish_chips",
+  "run": "run-04",
+  "planPath": "/Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/artifacts/practical-performance/20260606-091359/stability/fish_chips/run-04/plan.json",
+  "ok": true,
+  "startedAt": "2026-06-07T20:52:00.152Z",
+  "tempPlanPath": "/Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/artifacts/practical-performance/20260606-091359/builder-stage-runs/plans/fish_chips/run-04/plan.json",
+  "totalMs": 21486,
+  "result": {
+    "appId": "b27abd94-ce7f-4f6b-bb7b-85272b6e3865",
+    "appCreated": true,
+    "seedAppId": null,
+    "branch": "main",
+    "committed": true,
+    "commitRequested": true,
+    "workingCopyId": "6dedb1f2-55bc-48e6-8d3c-994364eb3107",
+    "personas": {
+      "enabled": false,
+      "generatedPageNames": [],
+      "personaNames": []
+    },
+    "stages": [
+      {
+        "stage": "domainModel",
+        "ok": true,
+        "summary": "entitiesCreated=26, associationsCreated=2, enumerationsCreated=0",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 52
+      },
+      {
+        "stage": "flush.afterDomainModel",
+        "ok": true,
+        "summary": "flush.afterDomainModel completed",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 117
+      },
+      {
+        "stage": "security",
+        "ok": true,
+        "summary": "moduleRolesCreated=6, userRolesCreated=6, demoUsersCreated=0",
+        "artifacts": [
+          {
+            "key": "moduleRoleNames",
+            "count": 7
+          },
+          {
+            "key": "userRoleNames",
+            "count": 8
+          },
+          {
+            "key": "demoUserNames",
+            "count": 2
+          }
+        ],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 311
+      },
+      {
+        "stage": "flush.afterSecurity",
+        "ok": true,
+        "summary": "flush.afterSecurity completed",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 374
+      },
+      {
+        "stage": "microflowsNanoflows",
+        "ok": true,
+        "summary": "microflowsCreated=5, nanoflowsCreated=0",
+        "artifacts": [
+          {
+            "key": "microflowNames",
+            "count": 5
+          },
+          {
+            "key": "nanoflowNames",
+            "count": 0
+          },
+          {
+            "key": "microflowRefsByRef",
+            "count": 0
+          },
+          {
+            "key": "nanoflowRefsByRef",
+            "count": 0
+          }
+        ],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 9
+      },
+      {
+        "stage": "flush.afterMicroflows",
+        "ok": true,
+        "summary": "flush.afterMicroflows completed",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 84
+      },
+      {
+        "stage": "workflows",
+        "ok": true,
+        "summary": "workflowsCreated=0",
+        "artifacts": [
+          {
+            "key": "workflowNames",
+            "count": 0
+          },
+          {
+            "key": "workflowRefsByRef",
+            "count": 0
+          }
+        ],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 3
+      },
+      {
+        "stage": "flush.afterWorkflows",
+        "ok": true,
+        "summary": "flush.afterWorkflows completed",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 33
+      },
+      {
+        "stage": "pageCapabilities",
+        "ok": true,
+        "summary": "pageCapabilities completed",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 1
+      },
+      {
+        "stage": "webClientCompatibility",
+        "ok": true,
+        "summary": "webClientCompatibility completed",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 2
+      },
+      {
+        "stage": "flush.afterWebClientCompatibility",
+        "ok": true,
+        "summary": "flush.afterWebClientCompatibility completed",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 30
+      },
+      {
+        "stage": "pages",
+        "ok": true,
+        "summary": "pages completed",
+        "artifacts": [
+          {
+            "key": "pageNames",
+            "count": 60
+          }
+        ],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 429
+      },
+      {
+        "stage": "navigationUI",
+        "ok": true,
+        "summary": "navigationUI completed",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 39
+      },
+      {
+        "stage": "homePage",
+        "ok": true,
+        "summary": "updatedProfiles=1",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 3
+      },
+      {
+        "stage": "flush.final",
+        "ok": true,
+        "summary": "flush.final completed",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 1649
+      },
+      {
+        "stage": "verification",
+        "ok": true,
+        "summary": "ok=true",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 89
+      },
+      {
+        "stage": "capabilities",
+        "ok": true,
+        "summary": "capabilities completed",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 1237
+      },
+      {
+        "stage": "commit",
+        "ok": true,
+        "summary": "commit completed",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 9507
+      }
+    ],
+    "createdApp": {
+      "appId": "b27abd94-ce7f-4f6b-bb7b-85272b6e3865",
+      "name": "rerun-fish_chips-run04",
+      "repositoryType": "git"
+    },
+    "beforeCounts": {
+      "pagesInModule": 1,
+      "entitiesInModule": 0,
+      "microflowsInModule": 1,
+      "nanoflowsInModule": 0,
+      "workflowsInModule": 0
+    },
+    "domainModel": {
+      "moduleName": "MyFirstModule",
+      "entitiesCreated": 26,
+      "associationsCreated": 2,
+      "enumerationsCreated": 0
+    },
+    "security": {
+      "moduleName": "MyFirstModule",
+      "securityLevel": "CheckFormsAndMicroflows",
+      "moduleRolesCreated": 6,
+      "userRolesCreated": 6,
+      "demoUsersRequested": 0,
+      "demoUsersCreated": 0,
+      "demoUsersApplied": 0,
+      "demoUserHandling": "notRequested",
+      "skippedDemoUsers": [],
+      "moduleRoleNames": [
+        "Cashier",
+        "Customer",
+        "HomeDeliveryPerson",
+        "KitchenEmployee",
+        "RestaurantOwner",
+        "TicketMaster",
+        "User"
+      ],
+      "userRoleNames": [
+        "Administrator",
+        "Cashier",
+        "Customer",
+        "HomeDeliveryPerson",
+        "KitchenEmployee",
+        "RestaurantOwner",
+        "TicketMaster",
+        "User"
+      ],
+      "demoUserNames": [
+        "demo_administrator",
+        "demo_user"
+      ]
+    },
+    "microflows": {
+      "moduleName": "MyFirstModule",
+      "microflowsCreated": 5,
+      "nanoflowsCreated": 0,
+      "microflowNames": [
+        "CreateOrderNotification",
+        "UpdateOrderStatus",
+        "SendOrderNotificationToKitchenEmployee",
+        "UpdateProductPreparationStatus",
+        "CreateDigitalTicket"
+      ],
+      "nanoflowNames": [],
+      "microflowRefsByRef": {},
+      "nanoflowRefsByRef": {}
+    },
+    "workflows": {
+      "moduleName": "MyFirstModule",
+      "workflowsCreated": 0,
+      "workflowNames": [],
+      "workflowRefsByRef": {}
+    },
+    "pageCapabilities": null,
+    "webClientCompatibility": {
+      "lookupRequested": true,
+      "classicGridRequested": false,
+      "updated": true,
+      "useOptimizedClient": "No",
+      "previousUseOptimizedClient": "Yes"
+    },
+    "pages": {
+      "moduleName": "MyFirstModule",
+      "layoutQualifiedName": "Atlas_Core.Atlas_Default",
+      "layoutParameterQname": "Atlas_Core.Atlas_Default.Main",
+      "pageNames": [
+        "home",
+        "Order_Dashboard",
+        "Order_Overview",
+        "Order_NewEdit",
+        "Product_Overview",
+        "Product_NewEdit",
+        "Customer_Overview",
+        "Customer_NewEdit",
+        "Ticket_Overview",
+        "Ticket_NewEdit",
+        "KitchenEmployee_Overview",
+        "KitchenEmployee_NewEdit",
+        "TicketMaster_Overview",
+        "TicketMaster_NewEdit",
+        "Cashier_Overview",
+        "Cashier_NewEdit",
+        "RestaurantOwner_Overview",
+        "RestaurantOwner_NewEdit",
+        "HomeDeliveryPerson_Overview",
+        "HomeDeliveryPerson_NewEdit",
+        "orderOverview",
+        "orderDetail",
+        "productOverview",
+        "productDetail",
+        "customerOverview",
+        "customerDetail",
+        "SpecialRequest_Overview",
+        "SpecialRequest_NewEdit",
+        "OrderNotification_Overview",
+        "OrderNotification_NewEdit",
+        "OrderStatusHistory_Overview",
+        "OrderStatusHistory_NewEdit",
+        "ProductStatusHistory_Overview",
+        "ProductStatusHistory_NewEdit",
+        "OrderProduct_Overview",
+        "OrderProduct_NewEdit",
+        "Payment_Overview",
+        "Payment_NewEdit",
+        "PhysicalTicket_Overview",
+        "PhysicalTicket_NewEdit",
+        "Changes_Overview",
+        "Changes_NewEdit",
+        "LastMinuteChanges_Overview",
+        "LastMinuteChanges_NewEdit",
+        "DigitalTicket_Overview",
+        "DigitalTicket_NewEdit",
+        "PaymentOption_Overview",
+        "PaymentOption_NewEdit",
+        "Discount_Overview",
+        "Discount_NewEdit",
+        "Inventory_Overview",
+        "Inventory_NewEdit",
+        "TipDistribution_Overview",
+        "TipDistribution_NewEdit",
+        "ExpectedRevenue_Overview",
+        "ExpectedRevenue_NewEdit",
+        "OrderItem_Overview",
+        "OrderItem_NewEdit",
+        "Delivery_Overview",
+        "Delivery_NewEdit"
+      ],
+      "dg2Cleanup": {
+        "enabled": true,
+        "targetedPageNames": [],
+        "deletedPageNames": [],
+        "failed": []
+      },
+      "dataGrid2": {
+        "enabled": false,
+        "widgetId": "",
+        "resolvedFrom": "",
+        "useFallbackSchema": false,
+        "probeVariant": null,
+        "configuredWidgets": 0,
+        "attempts": []
+      }
+    },
+    "dg2Cleanup": {
+      "enabled": true,
+      "targetedPageNames": [],
+      "deletedPageNames": [],
+      "failed": []
+    },
+    "navigationUI": {
+      "requested": true,
+      "homeButtonsAdded": 0,
+      "navItemsAdded": 6
+    },
+    "homePage": {
+      "requested": true,
+      "updatedProfiles": 1,
+      "targetPageQualifiedName": "MyFirstModule.home"
+    },
+    "afterCounts": {
+      "pagesInModule": 61,
+      "entitiesInModule": 26,
+      "microflowsInModule": 6,
+      "nanoflowsInModule": 0,
+      "workflowsInModule": 0
+    },
+    "beforeRefs": {
+      "pages": [
+        {
+          "name": "Home_Web",
+          "id": "5c6805fc-cadf-4d72-a5ef-f25da7cf4c97"
+        }
+      ],
+      "entities": [],
+      "microflows": [
+        {
+          "name": "MyFirstLogic",
+          "id": "4a8475b3-14cb-4100-8963-58f2fd3a0be8"
+        }
+      ],
+      "nanoflows": [],
+      "workflows": []
+    },
+    "afterRefs": {
+      "pages": [
+        {
+          "name": "Home_Web",
+          "id": "5c6805fc-cadf-4d72-a5ef-f25da7cf4c97"
+        },
+        {
+          "name": "home",
+          "id": "ea996b61-eded-4226-97e4-7644a8aa20d6"
+        },
+        {
+          "name": "Order_Dashboard",
+          "id": "7f9bad1d-125c-416f-85f3-8521f1ad950f"
+        },
+        {
+          "name": "Order_Overview",
+          "id": "6cad5a2b-4569-4779-b8c8-f2f07727123d"
+        },
+        {
+          "name": "Order_NewEdit",
+          "id": "eeff0e1f-fa1e-4437-bb56-261a117d533e"
+        },
+        {
+          "name": "Product_Overview",
+          "id": "08c13e51-fe15-4055-a37e-7bbd458120af"
+        },
+        {
+          "name": "Product_NewEdit",
+          "id": "65090a30-681a-41d2-b26d-3c84940995f8"
+        },
+        {
+          "name": "Customer_Overview",
+          "id": "29866b36-d2de-4d3a-a005-a027a80428a0"
+        },
+        {
+          "name": "Customer_NewEdit",
+          "id": "09e14d90-a4ed-49c7-b26a-ed75872475a2"
+        },
+        {
+          "name": "Ticket_Overview",
+          "id": "8b02f78a-4db3-4f45-9a61-d7f24bc48b20"
+        },
+        {
+          "name": "Ticket_NewEdit",
+          "id": "0cd95955-f1b2-45ee-8616-bd220cc304ee"
+        },
+        {
+          "name": "KitchenEmployee_Overview",
+          "id": "139ca4ce-53a1-4a62-8d55-0e3e89dfb47d"
+        },
+        {
+          "name": "KitchenEmployee_NewEdit",
+          "id": "ac497792-3125-42c8-9447-22afb44469b8"
+        },
+        {
+          "name": "TicketMaster_Overview",
+          "id": "e3c70177-5058-4e75-9593-9d822a98565f"
+        },
+        {
+          "name": "TicketMaster_NewEdit",
+          "id": "67a662ed-af9d-4e30-832d-c05b81e9d7dd"
+        },
+        {
+          "name": "Cashier_Overview",
+          "id": "0c7a872a-c198-443d-89bf-22e695a696bb"
+        },
+        {
+          "name": "Cashier_NewEdit",
+          "id": "c8286d47-fdbf-4c47-b0f0-10baf585bc7c"
+        },
+        {
+          "name": "RestaurantOwner_Overview",
+          "id": "9a26f581-73f3-491d-b257-26c6ea1d3a9d"
+        },
+        {
+          "name": "RestaurantOwner_NewEdit",
+          "id": "4ac38a55-b9dc-4883-9691-096304c72c9c"
+        },
+        {
+          "name": "HomeDeliveryPerson_Overview",
+          "id": "920010c0-7f7e-44fd-b930-7a5c5dca0ba8"
+        },
+        {
+          "name": "HomeDeliveryPerson_NewEdit",
+          "id": "2e03c562-4a53-40da-8b36-119fa5984734"
+        },
+        {
+          "name": "orderOverview",
+          "id": "8631daf0-784a-4b79-96db-90a523d3fda7"
+        },
+        {
+          "name": "orderDetail",
+          "id": "41ceae16-f3ab-425a-ab32-aff8cae6b03e"
+        },
+        {
+          "name": "productOverview",
+          "id": "64a2fd92-92dc-4c74-91a1-134539dfe99d"
+        },
+        {
+          "name": "productDetail",
+          "id": "3bde47b5-2beb-46d1-b443-b0d217671925"
+        },
+        {
+          "name": "customerOverview",
+          "id": "cc5237f4-fe4f-44fd-9996-b7629bab602f"
+        },
+        {
+          "name": "customerDetail",
+          "id": "9165359f-a828-4aa8-ab85-673962cb88d4"
+        },
+        {
+          "name": "SpecialRequest_Overview",
+          "id": "a8ff324f-458b-4abe-b9ae-98c1354a0848"
+        },
+        {
+          "name": "SpecialRequest_NewEdit",
+          "id": "98c4e18f-f352-4960-ad18-e75e3e45670a"
+        },
+        {
+          "name": "OrderNotification_Overview",
+          "id": "1a39634a-8811-4631-a265-141b5f8aea9c"
+        },
+        {
+          "name": "OrderNotification_NewEdit",
+          "id": "feddf3d3-e244-4f81-8b25-64513973c81d"
+        },
+        {
+          "name": "OrderStatusHistory_Overview",
+          "id": "42f11659-d8ec-49af-aab4-d39c026d23a9"
+        },
+        {
+          "name": "OrderStatusHistory_NewEdit",
+          "id": "80b8fdce-1d3e-4f5f-bd1e-4b013f71fc2c"
+        },
+        {
+          "name": "ProductStatusHistory_Overview",
+          "id": "57e0a408-6217-45be-9a43-1238debe11c6"
+        },
+        {
+          "name": "ProductStatusHistory_NewEdit",
+          "id": "22f72b65-4e14-4f14-adf4-484fcb72843d"
+        },
+        {
+          "name": "OrderProduct_Overview",
+          "id": "d1f07ae0-684c-45a9-bb3c-efa3db532566"
+        },
+        {
+          "name": "OrderProduct_NewEdit",
+          "id": "eae45e77-726f-4b55-9dc0-8801d6e24601"
+        },
+        {
+          "name": "Payment_Overview",
+          "id": "11191b69-708b-4753-afc6-e9acefc613bf"
+        },
+        {
+          "name": "Payment_NewEdit",
+          "id": "7dfd02c9-e5f1-4992-b62d-b045a88efa65"
+        },
+        {
+          "name": "PhysicalTicket_Overview",
+          "id": "27971446-c5a2-4cc3-87f9-9278b27d3fb9"
+        },
+        {
+          "name": "PhysicalTicket_NewEdit",
+          "id": "d9bfc163-66ae-4d99-aecc-49f261e1dc59"
+        },
+        {
+          "name": "Changes_Overview",
+          "id": "21d8a12d-d2c2-4a1c-a026-397536a46617"
+        },
+        {
+          "name": "Changes_NewEdit",
+          "id": "bb6797af-51a3-4aac-8e50-075871d0e267"
+        },
+        {
+          "name": "LastMinuteChanges_Overview",
+          "id": "486585c6-ea9e-4f56-b343-11ed902ab118"
+        },
+        {
+          "name": "LastMinuteChanges_NewEdit",
+          "id": "8749ed68-9585-4c06-819c-fac55371d9d8"
+        },
+        {
+          "name": "DigitalTicket_Overview",
+          "id": "9a4b7a3b-4235-4d8d-846d-8d8088573552"
+        },
+        {
+          "name": "DigitalTicket_NewEdit",
+          "id": "5f2cdf9c-e482-438a-8107-64a72c979b25"
+        },
+        {
+          "name": "PaymentOption_Overview",
+          "id": "feec8c13-791d-4140-a5a6-280526f36504"
+        },
+        {
+          "name": "PaymentOption_NewEdit",
+          "id": "d80c5b2b-c0bc-46ae-b86a-0bb649f97aa8"
+        },
+        {
+          "name": "Discount_Overview",
+          "id": "7845b8df-ecc8-447d-9012-a32099d91011"
+        },
+        {
+          "name": "Discount_NewEdit",
+          "id": "3e089f54-277d-43c2-89e7-d0d6b177ff95"
+        },
+        {
+          "name": "Inventory_Overview",
+          "id": "752ab277-1f73-4b26-8f32-17a0aa3792a5"
+        },
+        {
+          "name": "Inventory_NewEdit",
+          "id": "7c49fe4d-382a-479a-90f8-4212f3374df0"
+        },
+        {
+          "name": "TipDistribution_Overview",
+          "id": "1697b67c-f54f-4d25-af63-20ea95545f50"
+        },
+        {
+          "name": "TipDistribution_NewEdit",
+          "id": "5b351460-14c9-44dd-a49b-d8da947c956d"
+        },
+        {
+          "name": "ExpectedRevenue_Overview",
+          "id": "5b261876-53c9-47a3-b0b2-da5d191c678a"
+        },
+        {
+          "name": "ExpectedRevenue_NewEdit",
+          "id": "0f0b817f-b9ea-4b88-82e3-8f75f907cbda"
+        },
+        {
+          "name": "OrderItem_Overview",
+          "id": "29820293-5f6e-4147-942c-0eb17e0207a8"
+        },
+        {
+          "name": "OrderItem_NewEdit",
+          "id": "fb69844b-54b0-41da-bfb1-7948b6beb232"
+        },
+        {
+          "name": "Delivery_Overview",
+          "id": "9007ac97-142a-4553-a1dd-c76c8f3ad66d"
+        },
+        {
+          "name": "Delivery_NewEdit",
+          "id": "1b3548a3-53fe-4c82-94c6-c8510257bd49"
+        }
+      ],
+      "entities": [
+        {
+          "name": "Order",
+          "id": "d5b71e50-f257-42b5-904b-6409333ada91"
+        },
+        {
+          "name": "Product",
+          "id": "b63155b1-ef59-45d3-9da9-b877df6e238b"
+        },
+        {
+          "name": "Customer",
+          "id": "3159395e-5a38-4066-9b41-af19b3dbdbe7"
+        },
+        {
+          "name": "Ticket",
+          "id": "45e21db3-eaac-42cf-a67d-ce864fde94bb"
+        },
+        {
+          "name": "KitchenEmployee",
+          "id": "9223db79-5c15-44f2-abaa-4a54dc8f3492"
+        },
+        {
+          "name": "TicketMaster",
+          "id": "a4faf043-771d-4133-8051-f71fa467683b"
+        },
+        {
+          "name": "Cashier",
+          "id": "c3ee9fea-1345-4717-8799-899136de6bf0"
+        },
+        {
+          "name": "RestaurantOwner",
+          "id": "7448dc16-b67b-4eae-8d4e-2f91579d64da"
+        },
+        {
+          "name": "HomeDeliveryPerson",
+          "id": "1e79e3a2-b324-48d7-a922-c38e4e5bca7f"
+        },
+        {
+          "name": "SpecialRequest",
+          "id": "7640ec5d-5d53-42dd-a15b-1d8814270a1d"
+        },
+        {
+          "name": "OrderNotification",
+          "id": "39455541-5ba9-43e6-b698-b47679d09849"
+        },
+        {
+          "name": "OrderStatusHistory",
+          "id": "32a2f5e6-9dbb-4e79-a3db-73a6a35ebf5a"
+        },
+        {
+          "name": "ProductStatusHistory",
+          "id": "cd8415bd-17b6-4ccb-9f9f-d3563d03fdcd"
+        },
+        {
+          "name": "OrderProduct",
+          "id": "da8adea6-a038-4b71-942d-61b139ef3594"
+        },
+        {
+          "name": "Payment",
+          "id": "4547f60d-f04d-4152-bb40-5793ccfdef4a"
+        },
+        {
+          "name": "PhysicalTicket",
+          "id": "ab28ed49-0ffb-48d7-a2a5-9d704764214a"
+        },
+        {
+          "name": "Changes",
+          "id": "ac9917a7-a42e-49c0-94f2-e56d79eb89c6"
+        },
+        {
+          "name": "LastMinuteChanges",
+          "id": "3af1214d-da6d-49d7-889e-fe22d52e3dba"
+        },
+        {
+          "name": "DigitalTicket",
+          "id": "3092db23-785e-4f02-a74b-07b3e749e3df"
+        },
+        {
+          "name": "PaymentOption",
+          "id": "c57035bf-96e3-4291-b7b8-f1306cd538ce"
+        },
+        {
+          "name": "Discount",
+          "id": "26487adc-a518-4080-817b-72983c1d2c85"
+        },
+        {
+          "name": "Inventory",
+          "id": "bb3c8071-7d74-402a-b5f6-823f6c6f3d5d"
+        },
+        {
+          "name": "TipDistribution",
+          "id": "710db731-4a3e-4fb4-aeb6-17c59d076f6c"
+        },
+        {
+          "name": "ExpectedRevenue",
+          "id": "e4bbedc3-a0fc-4bf9-bfd9-a21721fbc844"
+        },
+        {
+          "name": "OrderItem",
+          "id": "99e2cc84-ff1c-46b7-aad6-a03ac6199b2a"
+        },
+        {
+          "name": "Delivery",
+          "id": "38c75eb0-5f65-4940-af0b-0cb02f44da84"
+        }
+      ],
+      "microflows": [
+        {
+          "name": "MyFirstLogic",
+          "id": "4a8475b3-14cb-4100-8963-58f2fd3a0be8"
+        },
+        {
+          "name": "CreateOrderNotification",
+          "id": "8d04d59c-c652-4e8b-b6be-2f5c1852303a"
+        },
+        {
+          "name": "UpdateOrderStatus",
+          "id": "b19a6335-afff-4c6d-a520-4d53970e144a"
+        },
+        {
+          "name": "SendOrderNotificationToKitchenEmployee",
+          "id": "02f85dff-2134-4603-91d2-1ba19ea9145c"
+        },
+        {
+          "name": "UpdateProductPreparationStatus",
+          "id": "125b86b7-ca38-46d1-9e0c-dfef54b6ca25"
+        },
+        {
+          "name": "CreateDigitalTicket",
+          "id": "647eb5f4-46ca-4bea-88a8-98945d99f786"
+        }
+      ],
+      "nanoflows": [],
+      "workflows": []
+    },
+    "verification": {
+      "missing": {
+        "pages": [],
+        "entities": [],
+        "microflows": [],
+        "nanoflows": [],
+        "workflows": []
+      },
+      "ok": true,
+      "artifacts": {
+        "ok": true,
+        "missing": {
+          "moduleRoles": [],
+          "userRoles": [],
+          "demoUsers": [],
+          "pageVisibility": [],
+          "homePageButtons": [],
+          "menuItems": [],
+          "widgets": []
+        }
+      },
+      "semantic": {
+        "enabled": false,
+        "ok": true,
+        "errors": []
+      }
+    },
+    "capabilities": {
+      "modules": [
+        "Administration",
+        "Atlas_Core",
+        "Atlas_Web_Content",
+        "DataWidgets",
+        "FeedbackModule",
+        "MyFirstModule",
+        "NanoflowCommons",
+        "WebActions"
+      ],
+      "widgetIds": [],
+      "widgetFamilies": [
+        "datawidgets_module"
+      ]
+    },
+    "commitMessage": "Rerun practical performance builder-stage run: fish_chips run-04",
+    "ok": true
+  }
+}

@@ -1,0 +1,332 @@
+{
+  "meta": {
+    "planVersion": "1.1.0",
+    "name": "reference-06-workflow-routing.json"
+  },
+  "app": {
+    "appId": "id",
+    "branch": "main",
+    "moduleName": "MyFirstModule",
+    "layoutQualifiedName": "Atlas_Core.Atlas_Default",
+    "homePageRef": "home",
+    "navigation": {
+      "homePageButtons": [
+        { "pageRef": "hr_cases", "caption": "HR Cases", "icon": { "name": "home" }, "allowedRoles": ["HRPartner", "HRManager"] },
+        { "pageRef": "hr_inbox", "caption": "My Tasks", "icon": { "name": "home" }, "allowedRoles": ["HRPartner", "HRManager"] }
+      ],
+      "menuItems": [
+        { "pageRef": "home", "caption": "Home", "icon": { "name": "home" }, "allowedRoles": ["HRPartner", "HRManager"] },
+        { "pageRef": "hr_cases", "caption": "Cases", "icon": { "name": "home" }, "allowedRoles": ["HRPartner", "HRManager"] },
+        { "pageRef": "hr_inbox", "caption": "Task Inbox", "icon": { "name": "home" }, "allowedRoles": ["HRPartner", "HRManager"] }
+      ]
+    }
+  },
+    "execution": {
+    "createApp": true,
+    "createAppNamePrefix": "Reference06Routing",
+    "createAppRepositoryType": "git",
+    "commit": true,
+    "commitMessage": "Reference 06: HR case workflow routing reference plan",
+    "deleteExistingDomainModel": true,
+    "deleteExistingPages": true,
+    "deleteExistingMicroflows": true,
+    "deleteExistingWorkflows": true,
+    "dg2Cleanup": true
+  },
+  "domainModel": {
+    "entities": [
+      {
+        "name": "HRCase",
+        "attributes": [
+          { "name": "EmployeeName", "type": "String", "required": true },
+          { "name": "CaseType", "type": "String", "required": true },
+          { "name": "Department", "type": "String", "required": true },
+          { "name": "Summary", "type": "String", "required": false },
+          { "name": "Status", "type": "String", "required": false }
+        ]
+      }
+    ],
+    "associations": [],
+    "enumerations": []
+  },
+  "security": {
+    "enabled": true,
+    "securityLevel": "prototype",
+    "moduleRoles": ["HRPartner", "HRManager"],
+    "userRoles": [
+      { "name": "HRPartner", "moduleRoles": ["HRPartner"], "systemModuleRole": "System.User" },
+      { "name": "HRManager", "moduleRoles": ["HRManager"], "systemModuleRole": "System.User" }
+    ],
+    "demoUsers": [
+      { "userName": "demo_hr_partner", "password": "HRPartner123!", "userRoles": ["HRPartner"] },
+      { "userName": "demo_hr_manager", "password": "HRManager123!", "userRoles": ["HRManager"] }
+    ]
+  },
+  "microflows": {
+    "specs": [
+      {
+        "ref": "mf_prepare_hr_case",
+        "name": "MF_PrepareHRCase",
+        "parameters": [
+          { "name": "WorkflowContext", "type": { "kind": "Object", "entityRef": "MyFirstModule.HRCase" } }
+        ],
+        "actions": [
+          {
+            "type": "changeObject",
+            "targetVariableName": "WorkflowContext",
+            "changes": [
+              { "attributeRef": "Status", "valueExpression": "'Pending HR review'" }
+            ],
+            "commit": "Yes",
+            "refreshInClient": true
+          }
+        ]
+      },
+      {
+        "ref": "mf_mark_manager_review",
+        "name": "MF_MarkManagerReview",
+        "parameters": [
+          { "name": "WorkflowContext", "type": { "kind": "Object", "entityRef": "MyFirstModule.HRCase" } }
+        ],
+        "actions": [
+          {
+            "type": "changeObject",
+            "targetVariableName": "WorkflowContext",
+            "changes": [
+              { "attributeRef": "Status", "valueExpression": "'Escalated to HR manager'" }
+            ],
+            "commit": "Yes",
+            "refreshInClient": true
+          }
+        ]
+      },
+      {
+        "ref": "mf_mark_approved",
+        "name": "MF_MarkApproved",
+        "parameters": [
+          { "name": "WorkflowContext", "type": { "kind": "Object", "entityRef": "MyFirstModule.HRCase" } }
+        ],
+        "actions": [
+          {
+            "type": "changeObject",
+            "targetVariableName": "WorkflowContext",
+            "changes": [
+              { "attributeRef": "Status", "valueExpression": "'Approved'" }
+            ],
+            "commit": "Yes",
+            "refreshInClient": true
+          }
+        ]
+      },
+      {
+        "ref": "mf_mark_rejected",
+        "name": "MF_MarkRejected",
+        "parameters": [
+          { "name": "WorkflowContext", "type": { "kind": "Object", "entityRef": "MyFirstModule.HRCase" } }
+        ],
+        "actions": [
+          {
+            "type": "changeObject",
+            "targetVariableName": "WorkflowContext",
+            "changes": [
+              { "attributeRef": "Status", "valueExpression": "'Rejected'" }
+            ],
+            "commit": "Yes",
+            "refreshInClient": true
+          }
+        ]
+      }
+    ]
+  },
+  "workflows": {
+    "specs": [
+      {
+        "ref": "wf_hr_case_routing",
+        "name": "WF_HRCaseRouting",
+        "bindings": { "contextEntityRef": "MyFirstModule.HRCase" },
+        "steps": [
+          { "type": "start", "name": "Start" },
+          { "type": "serviceTask", "name": "Prepare", "handlerMicroflowRef": "mf_prepare_hr_case" },
+          {
+            "type": "userTask",
+            "name": "HRPartnerTask",
+            "taskPageRef": "partner_task_page",
+            "userRoleRefs": ["HRPartner"],
+            "outcomes": [
+              {
+                "value": "Escalate",
+                "steps": [
+                  { "type": "serviceTask", "name": "MarkManagerReview", "handlerMicroflowRef": "mf_mark_manager_review" },
+                  {
+                    "type": "userTask",
+                    "name": "HRManagerTask",
+                    "taskPageRef": "manager_task_page",
+                    "userRoleRefs": ["HRManager"],
+                    "outcomes": [
+                      {
+                        "value": "Approve",
+                        "steps": [
+                          { "type": "serviceTask", "name": "MarkApprovedByManager", "handlerMicroflowRef": "mf_mark_approved" },
+                          { "type": "end", "name": "Approved" }
+                        ]
+                      },
+                      {
+                        "value": "Reject",
+                        "steps": [
+                          { "type": "serviceTask", "name": "MarkRejectedByManager", "handlerMicroflowRef": "mf_mark_rejected" },
+                          { "type": "end", "name": "Rejected" }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "value": "Approve",
+                "steps": [
+                  { "type": "serviceTask", "name": "MarkApprovedDirectly", "handlerMicroflowRef": "mf_mark_approved" },
+                  { "type": "end", "name": "ApprovedDirectly" }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "pages": {
+    "specs": [
+      {
+        "ref": "home",
+        "name": "Home",
+        "title": "HR Case Home",
+        "allowedRoles": ["HRPartner", "HRManager"],
+        "content": [
+          { "type": "dynamicText", "text": "HR case routing workspace", "renderMode": "H2" },
+          { "type": "dynamicText", "text": "HR partners review employee cases and either approve them directly or escalate them to an HR manager for a final decision.", "renderMode": "Paragraph" },
+          { "type": "buttonToPage", "caption": "Open HR Cases", "targetPageRef": "hr_cases" }
+        ]
+      },
+      {
+        "ref": "hr_cases",
+        "name": "HRCase_Overview",
+        "title": "HR Cases",
+        "entityRef": "MyFirstModule.HRCase",
+        "allowedRoles": ["HRPartner", "HRManager"],
+        "content": [
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.HRCase",
+            "rowClickTargetPageRef": "hr_case_detail",
+            "itemContent": [
+              { "type": "attributeInput", "attributeRef": "EmployeeName", "autoLabel": true },
+              { "type": "attributeInput", "attributeRef": "CaseType", "autoLabel": false },
+              { "type": "attributeInput", "attributeRef": "Department", "autoLabel": false },
+              { "type": "attributeInput", "attributeRef": "Status", "autoLabel": false }
+            ]
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Create HR Case",
+            "entityRef": "MyFirstModule.HRCase",
+            "targetPageRef": "hr_case_detail",
+            "allowedRoles": ["HRPartner"]
+          }
+        ]
+      },
+      {
+        "ref": "hr_inbox",
+        "name": "HRCase_TaskInbox",
+        "title": "HR Task Inbox",
+        "entityRef": "System.WorkflowUserTask",
+        "allowedRoles": ["HRPartner", "HRManager"],
+        "content": [
+          {
+            "type": "listView",
+            "entityRef": "System.WorkflowUserTask",
+            "itemContent": [
+              { "type": "attributeInput", "attributeRef": "Name", "autoLabel": false },
+              { "type": "attributeInput", "attributeRef": "Description", "autoLabel": false },
+              { "type": "showUserTaskPageButton", "caption": "Open HR Task", "assignOnOpen": true, "openWhenAssigned": true }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "hr_case_detail",
+        "name": "HRCase_Detail",
+        "title": "HR Case Detail",
+        "entityRef": "MyFirstModule.HRCase",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          { "name": "HRCase", "entityRef": "MyFirstModule.HRCase", "required": true }
+        ],
+        "allowedRoles": ["HRPartner", "HRManager"],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "HRCase",
+            "labelWidth": 3,
+            "content": [
+              { "type": "attributeInput", "attributeRef": "EmployeeName" },
+              { "type": "attributeInput", "attributeRef": "CaseType" },
+              { "type": "attributeInput", "attributeRef": "Department" },
+              { "type": "attributeInput", "attributeRef": "Summary" },
+              { "type": "cancelChangesButton", "caption": "Cancel", "closePage": true },
+              {
+                "type": "callWorkflowButton",
+                "caption": "Submit HR Case",
+                "workflowRef": "wf_hr_case_routing",
+                "closePage": true,
+                "allowedRoles": ["HRPartner"]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "partner_task_page",
+        "name": "HRPartner_TaskPage",
+        "title": "HR Partner Task",
+        "allowedRoles": ["HRPartner"],
+        "pageParameters": [
+          { "name": "WorkflowUserTask", "entityRef": "System.WorkflowUserTask", "required": true }
+        ],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "WorkflowUserTask",
+            "content": [
+              { "type": "dynamicText", "text": "Review the HR case and either approve it directly or escalate it to an HR manager.", "renderMode": "Paragraph" },
+              { "type": "setTaskOutcomeButton", "caption": "Approve", "outcomeValue": "Approve" },
+              { "type": "setTaskOutcomeButton", "caption": "Escalate", "outcomeValue": "Escalate" }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "manager_task_page",
+        "name": "HRManager_TaskPage",
+        "title": "HR Manager Task",
+        "allowedRoles": ["HRManager"],
+        "pageParameters": [
+          { "name": "WorkflowUserTask", "entityRef": "System.WorkflowUserTask", "required": true }
+        ],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "WorkflowUserTask",
+            "content": [
+              { "type": "dynamicText", "text": "Complete the final HR manager decision.", "renderMode": "Paragraph" },
+              { "type": "setTaskOutcomeButton", "caption": "Approve", "outcomeValue": "Approve" },
+              { "type": "setTaskOutcomeButton", "caption": "Reject", "outcomeValue": "Reject" }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "verification": {
+    "failOnMissing": true
+  }
+}

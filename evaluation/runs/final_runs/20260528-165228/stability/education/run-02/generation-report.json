@@ -1,0 +1,3328 @@
+{
+  "ok": true,
+  "generatedAt": "2026-05-30T12:03:36.762Z",
+  "inputDir": "/Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/artifacts/practical-performance/20260528-165228/inputs/education",
+  "outputPlanPath": "/Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/artifacts/practical-performance/20260528-165228/stability/education/run-02/plan.json",
+  "warnings": [
+    "No home page ref found; inserted Home page with ref \"home\".",
+    "Added missing overview page for entity \"User\".",
+    "Added missing NewEdit page for entity \"User\".",
+    "Added missing overview page for entity \"TeacherProfile\".",
+    "Added missing NewEdit page for entity \"TeacherProfile\".",
+    "Added missing overview page for entity \"LearningModule\".",
+    "Added missing NewEdit page for entity \"LearningModule\".",
+    "Added missing overview page for entity \"Level\".",
+    "Added missing NewEdit page for entity \"Level\".",
+    "Added missing overview page for entity \"LearningContent\".",
+    "Added missing NewEdit page for entity \"LearningContent\".",
+    "Added missing overview page for entity \"LearningMaterial\".",
+    "Added missing NewEdit page for entity \"LearningMaterial\".",
+    "Added missing overview page for entity \"Book\".",
+    "Added missing NewEdit page for entity \"Book\".",
+    "Added missing overview page for entity \"Video\".",
+    "Added missing NewEdit page for entity \"Video\".",
+    "Added missing overview page for entity \"ResearchPaper\".",
+    "Added missing NewEdit page for entity \"ResearchPaper\".",
+    "Added missing overview page for entity \"SlideDeck\".",
+    "Added missing NewEdit page for entity \"SlideDeck\".",
+    "Added missing overview page for entity \"FlashcardSet\".",
+    "Added missing NewEdit page for entity \"FlashcardSet\".",
+    "Added missing overview page for entity \"Quiz\".",
+    "Added missing NewEdit page for entity \"Quiz\".",
+    "Added missing overview page for entity \"QuizQuestion\".",
+    "Added missing NewEdit page for entity \"QuizQuestion\".",
+    "Added missing overview page for entity \"LearningProgress\".",
+    "Added missing NewEdit page for entity \"LearningProgress\".",
+    "Added missing overview page for entity \"Achievement\".",
+    "Added missing NewEdit page for entity \"Achievement\".",
+    "Added missing overview page for entity \"ChatMessage\".",
+    "Added missing NewEdit page for entity \"ChatMessage\".",
+    "Added missing overview page for entity \"Relationships\".",
+    "Added missing NewEdit page for entity \"Relationships\".",
+    "Added missing overview page for entity \"Constraints\".",
+    "Added missing NewEdit page for entity \"Constraints\".",
+    "Dropped placeholder page \"user_profile_setup\" because it had no useful steps.",
+    "Dropped placeholder page \"content_management\" because it had no useful steps.",
+    "Dropped placeholder page \"interaction_handling\" because it had no useful steps.",
+    "Dropped low-relevance LLM entity \"SlideDeck\".",
+    "Dropped low-relevance LLM entity \"FlashcardSet\".",
+    "Dropped low-relevance LLM entity \"Relationships\".",
+    "Dropped low-relevance LLM entity \"Constraints\".",
+    "Dropped low-relevance LLM page \"SlideDeck_NewEdit\".",
+    "Dropped low-relevance LLM page \"FlashcardSet_NewEdit\".",
+    "Dropped low-relevance LLM page \"Relationships_NewEdit\".",
+    "Dropped low-relevance LLM page \"Constraints_NewEdit\".",
+    "Added missing NewEdit page \"slidedeck_newedit\" referenced by generated page content.",
+    "Added missing NewEdit page \"flashcardset_newedit\" referenced by generated page content.",
+    "Added missing NewEdit page \"relationships_newedit\" referenced by generated page content.",
+    "Added missing NewEdit page \"constraints_newedit\" referenced by generated page content.",
+    "Added callWorkflowButton to TeacherProfile_NewEdit for generated workflow.",
+    "Synthesized reference-style workflow scaffold for TeacherProfile because workflow stories were detected but no usable workflow was generated.",
+    "Replaced unsupported navigation icon for \"teacherprofile_workflow_tasks\" with the only supported icon \"home\".",
+    "Added workflow task inbox \"teacherprofile_workflow_tasks\" to homepage navigation.",
+    "Replaced unsupported navigation icon for \"teacherprofile_workflow_tasks\" with the only supported icon \"home\".",
+    "Added workflow task inbox \"teacherprofile_workflow_tasks\" to menu navigation.",
+    "Domain review dropped duplicate generic entity \"Module\": Generic entity duplicates more specific story-backed entity \"LearningModule\".",
+    "Domain review dropped duplicate generic entity \"Content\": Generic entity duplicates more specific story-backed entity \"EducationalContent\".",
+    "Domain review dropped duplicate generic entity \"Learning\": Generic entity duplicates more specific story-backed entity \"LearningModule\".",
+    "Domain review dropped association \"Learning_AppropriateMaterial\" because it references a dropped entity.",
+    "Removed page \"module_overview\" for dropped entity \"Module\".",
+    "Removed page \"module_newedit\" for dropped entity \"Module\".",
+    "Removed page \"content_overview\" for dropped entity \"Content\".",
+    "Removed page \"content_newedit\" for dropped entity \"Content\".",
+    "Removed page \"learning_overview\" for dropped entity \"Learning\".",
+    "Removed page \"learning_newedit\" for dropped entity \"Learning\".",
+    "Added story-backed association \"Certain_Video\" from Certain to Video.",
+    "Added story-backed association \"Certain_Book\" from Certain to Book.",
+    "Added story-backed association \"Certain_ResearchPaper\" from Certain to ResearchPaper.",
+    "Repaired NewEdit page for entity \"AppropriateMaterial\" because its form inputs no longer matched current associations.",
+    "Repaired NewEdit page for entity \"Certain\" because its form inputs no longer matched current associations.",
+    "Repaired NewEdit page for entity \"Book\" because its form inputs no longer matched current associations.",
+    "Repaired NewEdit page for entity \"Video\" because its form inputs no longer matched current associations.",
+    "Repaired NewEdit page for entity \"ResearchPaper\" because its form inputs no longer matched current associations."
+  ],
+  "validation": {
+    "ok": true,
+    "errors": []
+  },
+  "model": "gemma4:e4b",
+  "coverage": {
+    "score": 0.6,
+    "covered": 27,
+    "total": 45,
+    "missingStoryIds": [
+      "US01",
+      "US02",
+      "US03",
+      "US04",
+      "US07",
+      "US09",
+      "US12",
+      "US13",
+      "US14",
+      "US21",
+      "US22",
+      "US23",
+      "US25",
+      "US26",
+      "US30",
+      "US31",
+      "US44",
+      "US45"
+    ],
+    "entries": [
+      {
+        "id": "US01",
+        "story": "As a freelance teacher, I want to communicate with other teachers using a chat function, so that I can learn from them and share experiences.",
+        "storyConcepts": [
+          "shareexperience",
+          "chat",
+          "communicate",
+          "experience",
+          "function",
+          "learn",
+          "other",
+          "share",
+          "teacher",
+          "them",
+          "freelance"
+        ],
+        "matchedConcepts": [
+          "chat",
+          "experience",
+          "teacher"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [],
+        "lexicalScore": 0.2727272727272727,
+        "covered": false
+      },
+      {
+        "id": "US02",
+        "story": "As a freelance teacher, I want to learn new teaching skills such as communication skills, presentation skills, and confidence, so that I am better prepared for teaching.",
+        "storyConcepts": [
+          "skill",
+          "teaching",
+          "betterprepared",
+          "presentationskill",
+          "skillsuch",
+          "better",
+          "communication",
+          "confidence",
+          "learn",
+          "prepared",
+          "presentation",
+          "freelance",
+          "teacher"
+        ],
+        "matchedConcepts": [
+          "skill",
+          "teaching",
+          "teacher"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [],
+        "lexicalScore": 0.23076923076923078,
+        "covered": false
+      },
+      {
+        "id": "US03",
+        "story": "As a freelance teacher, I want to learn pedagogical skills such as compassion, collaboration, and inclusiveness, so that I am better prepared for teaching.",
+        "storyConcepts": [
+          "betterprepared",
+          "pedagogicalskill",
+          "better",
+          "collaboration",
+          "compassion",
+          "inclusiveness",
+          "learn",
+          "pedagogical",
+          "prepared",
+          "skill",
+          "teaching",
+          "freelance",
+          "teacher"
+        ],
+        "matchedConcepts": [
+          "skill",
+          "teaching",
+          "teacher"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [],
+        "lexicalScore": 0.23076923076923078,
+        "covered": false
+      },
+      {
+        "id": "US04",
+        "story": "As a freelance teacher, I want to complete a skills assessment that tests my teaching/pedagogical/other skill levels, so that I can be placed at the right level without wasting time or feeling frustrated by levels that are too easy or difficult.",
+        "storyConcepts": [
+          "level",
+          "skill",
+          "feelingfrustrated",
+          "otherskill",
+          "rightlevel",
+          "tooeasy",
+          "withoutwasting",
+          "assessment",
+          "complete",
+          "difficult",
+          "easy",
+          "feeling",
+          "frustrated",
+          "other",
+          "pedagogical",
+          "placed",
+          "right",
+          "teaching",
+          "test",
+          "time",
+          "too",
+          "wasting",
+          "without",
+          "freelance",
+          "teacher"
+        ],
+        "matchedConcepts": [
+          "level",
+          "skill",
+          "teaching",
+          "teacher"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "level_overview"
+        ],
+        "lexicalScore": 0.16,
+        "covered": false
+      },
+      {
+        "id": "US05",
+        "story": "As a freelance teacher, I want to navigate through the modules using levels, so that I can track my learning progress.",
+        "storyConcepts": [
+          "learningprogress",
+          "learning",
+          "level",
+          "module",
+          "navigate",
+          "through",
+          "freelance",
+          "teacher",
+          "progress"
+        ],
+        "matchedConcepts": [
+          "learningprogress",
+          "learning",
+          "level",
+          "module",
+          "teacher",
+          "progress"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "learningprogress_overview",
+          "level_overview"
+        ],
+        "lexicalScore": 0.6666666666666666,
+        "covered": true
+      },
+      {
+        "id": "US06",
+        "story": "As a freelance teacher, I want to track my learning progress in a graphical overview such as a progress bar, so that I know what I have learned.",
+        "storyConcepts": [
+          "learningprogress",
+          "progressbar",
+          "bar",
+          "graphical",
+          "know",
+          "learned",
+          "learning",
+          "freelance",
+          "teacher",
+          "progress",
+          "what"
+        ],
+        "matchedConcepts": [
+          "learningprogress",
+          "learning",
+          "teacher",
+          "progress"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "learningprogress_overview"
+        ],
+        "lexicalScore": 0.36363636363636365,
+        "covered": true
+      },
+      {
+        "id": "US07",
+        "story": "As a freelance teacher, I want to achieve achievements rewarded for completing certain tasks, so that I get a sense of reward for completing something.",
+        "storyConcepts": [
+          "completing",
+          "achievementrewarded",
+          "certaintask",
+          "achieve",
+          "achievement",
+          "certain",
+          "get",
+          "reward",
+          "rewarded",
+          "sense",
+          "something",
+          "task",
+          "freelance",
+          "teacher"
+        ],
+        "matchedConcepts": [
+          "achievement",
+          "certain",
+          "task",
+          "teacher"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "achievement_overview",
+          "certain_overview"
+        ],
+        "lexicalScore": 0.2857142857142857,
+        "covered": false
+      },
+      {
+        "id": "US08",
+        "story": "As a freelance teacher, I want to do a quiz about a certain topic that is connected to a level or part of a level, so I can test my learning progress.",
+        "storyConcepts": [
+          "level",
+          "certaintopic",
+          "about",
+          "certain",
+          "connected",
+          "learning",
+          "part",
+          "quiz",
+          "test",
+          "topic",
+          "freelance",
+          "teacher",
+          "progress"
+        ],
+        "matchedConcepts": [
+          "level",
+          "certain",
+          "learning",
+          "quiz",
+          "topic",
+          "teacher",
+          "progress"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "level_overview",
+          "certain_overview",
+          "quiz_overview"
+        ],
+        "lexicalScore": 0.5384615384615384,
+        "covered": true
+      },
+      {
+        "id": "US09",
+        "story": "As a freelance teacher, I want to receive automated feedback on completed quizzes and exercises, so that I can understand what I did right or wrong.",
+        "storyConcepts": [
+          "automatedfeedback",
+          "understandwhat",
+          "automated",
+          "completed",
+          "did",
+          "exercise",
+          "feedback",
+          "quizze",
+          "right",
+          "understand",
+          "wrong",
+          "freelance",
+          "teacher",
+          "what"
+        ],
+        "matchedConcepts": [
+          "teacher"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [],
+        "lexicalScore": 0.07142857142857142,
+        "covered": false
+      },
+      {
+        "id": "US10",
+        "story": "As a freelance teacher, I want to be able to indicate my technical skill level in a small test, so that my profile can reflect my background.",
+        "storyConcepts": [
+          "technicalskill",
+          "background",
+          "indicate",
+          "level",
+          "profile",
+          "reflect",
+          "skill",
+          "small",
+          "technical",
+          "test",
+          "freelance",
+          "teacher"
+        ],
+        "matchedConcepts": [
+          "technicalskill",
+          "level",
+          "profile",
+          "skill",
+          "technical",
+          "teacher"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "level_overview"
+        ],
+        "lexicalScore": 0.5,
+        "covered": true
+      },
+      {
+        "id": "US11",
+        "story": "As a freelance teacher, I want to be able to indicate my teaching experience when creating a profile, so that my profile can reflect my background.",
+        "storyConcepts": [
+          "profile",
+          "teachingexperience",
+          "whencreating",
+          "background",
+          "creating",
+          "experience",
+          "indicate",
+          "reflect",
+          "teaching",
+          "when",
+          "freelance",
+          "teacher"
+        ],
+        "matchedConcepts": [
+          "profile",
+          "teachingexperience",
+          "experience",
+          "teaching",
+          "teacher"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [],
+        "lexicalScore": 0.4166666666666667,
+        "covered": true
+      },
+      {
+        "id": "US12",
+        "story": "As a freelance teacher, I want to be able to indicate my KvK number when creating a profile, so that I can verify that I am a freelance teacher.",
+        "storyConcepts": [
+          "kvknumber",
+          "whencreating",
+          "creating",
+          "freelance",
+          "indicate",
+          "kvk",
+          "number",
+          "profile",
+          "teacher",
+          "verify",
+          "when"
+        ],
+        "matchedConcepts": [
+          "kvknumber",
+          "profile",
+          "teacher"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [],
+        "lexicalScore": 0.2727272727272727,
+        "covered": false
+      },
+      {
+        "id": "US13",
+        "story": "As a freelance teacher, I want to have a place with all relevant knowledge for teaching as a knowledge hub, so I can refer back to this when teaching.",
+        "storyConcepts": [
+          "knowledge",
+          "teaching",
+          "knowledgehub",
+          "relevantknowledge",
+          "thiwhen",
+          "back",
+          "hub",
+          "refer",
+          "relevant",
+          "thi",
+          "when",
+          "freelance",
+          "teacher",
+          "place"
+        ],
+        "matchedConcepts": [
+          "teaching",
+          "teacher"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [],
+        "lexicalScore": 0.14285714285714285,
+        "covered": false
+      },
+      {
+        "id": "US14",
+        "story": "As a freelance teacher, I want learning materials to integrate with the subjects I already teach, so that I can incorporate it into my existing curriculum without disruption.",
+        "storyConcepts": [
+          "alreadyteach",
+          "learningmaterial",
+          "withoutdisruption",
+          "already",
+          "curriculum",
+          "disruption",
+          "existing",
+          "incorporate",
+          "integrate",
+          "learning",
+          "material",
+          "subject",
+          "teach",
+          "without",
+          "freelance",
+          "teacher"
+        ],
+        "matchedConcepts": [
+          "learningmaterial",
+          "learning",
+          "material",
+          "teacher"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "learningmaterial_overview"
+        ],
+        "lexicalScore": 0.25,
+        "covered": false
+      },
+      {
+        "id": "US15",
+        "story": "As a freelance teacher, I want to access a collection of study books categorized by ISBN, publisher, topic, and author, so that I can select the appropriate materials for my learning needs.",
+        "storyConcepts": [
+          "appropriatematerial",
+          "bookcategorized",
+          "learningneed",
+          "appropriate",
+          "author",
+          "book",
+          "categorized",
+          "collection",
+          "isbn",
+          "learning",
+          "material",
+          "need",
+          "publisher",
+          "study",
+          "topic",
+          "freelance",
+          "teacher"
+        ],
+        "matchedConcepts": [
+          "appropriatematerial",
+          "appropriate",
+          "author",
+          "book",
+          "isbn",
+          "learning",
+          "material",
+          "publisher",
+          "topic",
+          "teacher"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "appropriatematerial_overview",
+          "book_overview"
+        ],
+        "lexicalScore": 0.5882352941176471,
+        "covered": true
+      },
+      {
+        "id": "US16",
+        "story": "As a freelance teacher, I want to have flashcards available in a digital format, organized by topic and source, so that I can select the appropriate materials for my learning needs.",
+        "storyConcepts": [
+          "appropriatematerial",
+          "digitalformat",
+          "learningneed",
+          "appropriate",
+          "digital",
+          "flashcard",
+          "format",
+          "learning",
+          "material",
+          "need",
+          "organized",
+          "source",
+          "topic",
+          "freelance",
+          "teacher"
+        ],
+        "matchedConcepts": [
+          "appropriatematerial",
+          "appropriate",
+          "flashcard",
+          "learning",
+          "material",
+          "source",
+          "topic",
+          "teacher"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "appropriatematerial_overview"
+        ],
+        "lexicalScore": 0.5333333333333333,
+        "covered": true
+      },
+      {
+        "id": "US17",
+        "story": "As a freelance teacher, I want to find educational videos organized by platform, URL, topic, year, and author, so that I can select the appropriate materials for my learning needs.",
+        "storyConcepts": [
+          "appropriatematerial",
+          "educationalvideo",
+          "learningneed",
+          "appropriate",
+          "author",
+          "educational",
+          "find",
+          "learning",
+          "material",
+          "need",
+          "organized",
+          "platform",
+          "topic",
+          "url",
+          "video",
+          "year",
+          "freelance",
+          "teacher"
+        ],
+        "matchedConcepts": [
+          "appropriatematerial",
+          "appropriate",
+          "author",
+          "educational",
+          "learning",
+          "material",
+          "platform",
+          "topic",
+          "url",
+          "video",
+          "year",
+          "teacher"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "appropriatematerial_overview",
+          "video_overview"
+        ],
+        "lexicalScore": 0.6666666666666666,
+        "covered": true
+      },
+      {
+        "id": "US18",
+        "story": "As a freelance teacher, I want to have access to research papers with DOI's, journal information, publishing date, topic, and author outlined, so that I can select the appropriate materials for my learning needs.",
+        "storyConcepts": [
+          "appropriatematerial",
+          "journalinformation",
+          "learningneed",
+          "publishingdate",
+          "researchpaper",
+          "appropriate",
+          "author",
+          "date",
+          "doi",
+          "journal",
+          "learning",
+          "material",
+          "need",
+          "outlined",
+          "paper",
+          "publishing",
+          "research",
+          "topic",
+          "freelance",
+          "teacher"
+        ],
+        "matchedConcepts": [
+          "appropriatematerial",
+          "publishingdate",
+          "researchpaper",
+          "appropriate",
+          "author",
+          "date",
+          "doi",
+          "journal",
+          "learning",
+          "material",
+          "paper",
+          "publishing",
+          "research",
+          "topic",
+          "teacher"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "appropriatematerial_overview",
+          "researchpaper_overview"
+        ],
+        "lexicalScore": 0.75,
+        "covered": true
+      },
+      {
+        "id": "US19",
+        "story": "As a freelance teacher, I want to use slides specific to teaching topics, so that I can select the appropriate materials for my learning needs.",
+        "storyConcepts": [
+          "appropriatematerial",
+          "learningneed",
+          "appropriate",
+          "learning",
+          "material",
+          "need",
+          "slide",
+          "teaching",
+          "topic",
+          "freelance",
+          "teacher"
+        ],
+        "matchedConcepts": [
+          "appropriatematerial",
+          "appropriate",
+          "learning",
+          "material",
+          "slide",
+          "teaching",
+          "topic",
+          "teacher"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "appropriatematerial_overview"
+        ],
+        "lexicalScore": 0.7272727272727273,
+        "covered": true
+      },
+      {
+        "id": "US20",
+        "story": "As a freelance teacher, I want to play different games in different types with clear instructions and measurable learning outcomes, so that I can select the appropriate materials for my learning needs.",
+        "storyConcepts": [
+          "appropriatematerial",
+          "different",
+          "learning",
+          "clearinstruction",
+          "differentgame",
+          "learningneed",
+          "learningoutcome",
+          "appropriate",
+          "clear",
+          "game",
+          "instruction",
+          "material",
+          "measurable",
+          "need",
+          "outcome",
+          "play",
+          "type",
+          "freelance",
+          "teacher"
+        ],
+        "matchedConcepts": [
+          "appropriatematerial",
+          "learning",
+          "appropriate",
+          "material",
+          "type",
+          "teacher"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "appropriatematerial_overview"
+        ],
+        "lexicalScore": 0.3157894736842105,
+        "covered": true
+      },
+      {
+        "id": "US21",
+        "story": "As a freelance teacher, I want to access a help section or contact support via a button in the system, so that I can resolve technical issues or system questions I might have.",
+        "storyConcepts": [
+          "contactsupport",
+          "resolvetechnical",
+          "systemquestion",
+          "contact",
+          "help",
+          "issue",
+          "might",
+          "resolve",
+          "section",
+          "support",
+          "technical",
+          "via",
+          "freelance",
+          "teacher",
+          "button",
+          "system",
+          "question"
+        ],
+        "matchedConcepts": [
+          "technical",
+          "teacher",
+          "question"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [],
+        "lexicalScore": 0.17647058823529413,
+        "covered": false
+      },
+      {
+        "id": "US22",
+        "story": "As a freelance teacher, I want to reset my password securely, so that I can regain access to the system in case I forget it.",
+        "storyConcepts": [
+          "regainaccess",
+          "case",
+          "forget",
+          "password",
+          "regain",
+          "reset",
+          "securely",
+          "freelance",
+          "teacher",
+          "system"
+        ],
+        "matchedConcepts": [
+          "password",
+          "teacher"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [],
+        "lexicalScore": 0.2,
+        "covered": false
+      },
+      {
+        "id": "US23",
+        "story": "As a freelance teacher, I want to update my profile information, so that my details stay current and accurate.",
+        "storyConcepts": [
+          "profileinformation",
+          "accurate",
+          "current",
+          "profile",
+          "stay",
+          "freelance",
+          "teacher"
+        ],
+        "matchedConcepts": [
+          "profile",
+          "teacher"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [],
+        "lexicalScore": 0.2857142857142857,
+        "covered": false
+      },
+      {
+        "id": "US24",
+        "story": "As a freelance teacher, I want to receive email notifications about my progress and new learning opportunities, so that I am always updated.",
+        "storyConcepts": [
+          "alwayupdated",
+          "emailnotification",
+          "about",
+          "alway",
+          "email",
+          "learning",
+          "notification",
+          "opportunity",
+          "updated",
+          "freelance",
+          "teacher",
+          "progress"
+        ],
+        "matchedConcepts": [
+          "email",
+          "learning",
+          "teacher",
+          "progress"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [],
+        "lexicalScore": 0.3333333333333333,
+        "covered": true
+      },
+      {
+        "id": "US25",
+        "story": "As an administrator, I want to check if KvK numbers are real by checking the profiles, to verify the user as a freelance teacher.",
+        "storyConcepts": [
+          "freelanceteacher",
+          "ifkvk",
+          "check",
+          "checking",
+          "freelance",
+          "kvk",
+          "number",
+          "profile",
+          "real",
+          "teacher",
+          "user",
+          "verify",
+          "administrator"
+        ],
+        "matchedConcepts": [
+          "profile",
+          "teacher",
+          "user"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "user_overview"
+        ],
+        "lexicalScore": 0.23076923076923078,
+        "covered": false
+      },
+      {
+        "id": "US26",
+        "story": "As an administrator, I want to approve or reject freelance teacher profiles after reviewing their details and checking their KvK numbers, so that only verified freelance teachers can access the system.",
+        "storyConcepts": [
+          "freelanceteacher",
+          "freelance",
+          "teacher",
+          "kvknumber",
+          "onlyverified",
+          "profileafter",
+          "after",
+          "checking",
+          "kvk",
+          "number",
+          "only",
+          "profile",
+          "reviewing",
+          "verified",
+          "administrator",
+          "system"
+        ],
+        "matchedConcepts": [
+          "teacher",
+          "kvknumber",
+          "profile"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [],
+        "lexicalScore": 0.1875,
+        "covered": false
+      },
+      {
+        "id": "US27",
+        "story": "As an administrator, I want to create learning modules in the system, so that I can organize and manage content for freelance teachers.",
+        "storyConcepts": [
+          "learningmodule",
+          "content",
+          "freelance",
+          "learning",
+          "module",
+          "organize",
+          "teacher",
+          "administrator",
+          "system"
+        ],
+        "matchedConcepts": [
+          "learningmodule",
+          "content",
+          "learning",
+          "module",
+          "teacher"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "learningmodule_overview"
+        ],
+        "lexicalScore": 0.5555555555555556,
+        "covered": true
+      },
+      {
+        "id": "US28",
+        "story": "As an administrator, I want to create different levels within the modules in the system, so that I can define different tiers of difficulty for users.",
+        "storyConcepts": [
+          "different",
+          "definedifferent",
+          "differentlevel",
+          "define",
+          "difficulty",
+          "level",
+          "module",
+          "tier",
+          "user",
+          "within",
+          "administrator",
+          "system"
+        ],
+        "matchedConcepts": [
+          "difficulty",
+          "level",
+          "module",
+          "user"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "level_overview",
+          "user_overview"
+        ],
+        "lexicalScore": 0.3333333333333333,
+        "covered": true
+      },
+      {
+        "id": "US29",
+        "story": "As an administrator, I want to create quizzes in the system related to a certain module in the system, so that freelance teachers can track their learning progress.",
+        "storyConcepts": [
+          "irlearningprogress",
+          "freelanceteacher",
+          "certain",
+          "freelance",
+          "learning",
+          "module",
+          "quizze",
+          "related",
+          "teacher",
+          "administrator",
+          "system",
+          "progress"
+        ],
+        "matchedConcepts": [
+          "certain",
+          "learning",
+          "module",
+          "teacher",
+          "progress"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "certain_overview"
+        ],
+        "lexicalScore": 0.4166666666666667,
+        "covered": true
+      },
+      {
+        "id": "US30",
+        "story": "As an administrator, I want to remove inappropriate or outdated content, so that the system stays relevant and compliant.",
+        "storyConcepts": [
+          "outdatedcontent",
+          "stayrelevant",
+          "compliant",
+          "content",
+          "inappropriate",
+          "outdated",
+          "relevant",
+          "remove",
+          "stay",
+          "administrator",
+          "system"
+        ],
+        "matchedConcepts": [
+          "content"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [],
+        "lexicalScore": 0.09090909090909091,
+        "covered": false
+      },
+      {
+        "id": "US31",
+        "story": "As an administrator, I want to edit inappropriate or outdated content, so that the system stays relevant and compliant.",
+        "storyConcepts": [
+          "outdatedcontent",
+          "stayrelevant",
+          "compliant",
+          "content",
+          "inappropriate",
+          "outdated",
+          "relevant",
+          "stay",
+          "administrator",
+          "system"
+        ],
+        "matchedConcepts": [
+          "content"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [],
+        "lexicalScore": 0.1,
+        "covered": false
+      },
+      {
+        "id": "US32",
+        "story": "As an administrator, I want to be able to add videos related to a certain module in the system, so that I can provide users with relevant educational content.",
+        "storyConcepts": [
+          "videorelated",
+          "educationalcontent",
+          "provideuser",
+          "certain",
+          "content",
+          "educational",
+          "module",
+          "provide",
+          "related",
+          "relevant",
+          "user",
+          "video",
+          "administrator",
+          "system"
+        ],
+        "matchedConcepts": [
+          "educationalcontent",
+          "provideuser",
+          "certain",
+          "content",
+          "educational",
+          "module",
+          "provide",
+          "user",
+          "video"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "educationalcontent_overview",
+          "provideuser_overview",
+          "certain_overview",
+          "user_overview",
+          "video_overview"
+        ],
+        "lexicalScore": 0.6428571428571429,
+        "covered": true
+      },
+      {
+        "id": "US33",
+        "story": "As an administrator, I want to be able to manage videos related to a certain module in the system, so that I can provide users with relevant educational content.",
+        "storyConcepts": [
+          "videorelated",
+          "educationalcontent",
+          "provideuser",
+          "certain",
+          "content",
+          "educational",
+          "module",
+          "provide",
+          "related",
+          "relevant",
+          "user",
+          "video",
+          "administrator",
+          "system"
+        ],
+        "matchedConcepts": [
+          "educationalcontent",
+          "provideuser",
+          "certain",
+          "content",
+          "educational",
+          "module",
+          "provide",
+          "user",
+          "video"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "educationalcontent_overview",
+          "provideuser_overview",
+          "certain_overview",
+          "user_overview",
+          "video_overview"
+        ],
+        "lexicalScore": 0.6428571428571429,
+        "covered": true
+      },
+      {
+        "id": "US34",
+        "story": "As an administrator, I want to be able to add books related to a certain module in the system, so that I can provide users with relevant educational content.",
+        "storyConcepts": [
+          "bookrelated",
+          "educationalcontent",
+          "provideuser",
+          "book",
+          "certain",
+          "content",
+          "educational",
+          "module",
+          "provide",
+          "related",
+          "relevant",
+          "user",
+          "administrator",
+          "system"
+        ],
+        "matchedConcepts": [
+          "educationalcontent",
+          "provideuser",
+          "book",
+          "certain",
+          "content",
+          "educational",
+          "module",
+          "provide",
+          "user"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "educationalcontent_overview",
+          "provideuser_overview",
+          "book_overview",
+          "certain_overview",
+          "user_overview"
+        ],
+        "lexicalScore": 0.6428571428571429,
+        "covered": true
+      },
+      {
+        "id": "US35",
+        "story": "As an administrator, I want to be able to manage books related to a certain module in the system, so that I can provide users with relevant educational content.",
+        "storyConcepts": [
+          "bookrelated",
+          "educationalcontent",
+          "provideuser",
+          "book",
+          "certain",
+          "content",
+          "educational",
+          "module",
+          "provide",
+          "related",
+          "relevant",
+          "user",
+          "administrator",
+          "system"
+        ],
+        "matchedConcepts": [
+          "educationalcontent",
+          "provideuser",
+          "book",
+          "certain",
+          "content",
+          "educational",
+          "module",
+          "provide",
+          "user"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "educationalcontent_overview",
+          "provideuser_overview",
+          "book_overview",
+          "certain_overview",
+          "user_overview"
+        ],
+        "lexicalScore": 0.6428571428571429,
+        "covered": true
+      },
+      {
+        "id": "US36",
+        "story": "As an administrator, I want to be able to add research papers related to a certain module in the system, so that I can provide users with relevant educational content.",
+        "storyConcepts": [
+          "researchpaperrelated",
+          "certainmodule",
+          "educationalcontent",
+          "paperrelated",
+          "provideuser",
+          "certain",
+          "content",
+          "educational",
+          "module",
+          "paper",
+          "provide",
+          "related",
+          "relevant",
+          "research",
+          "user",
+          "administrator",
+          "system"
+        ],
+        "matchedConcepts": [
+          "educationalcontent",
+          "provideuser",
+          "certain",
+          "content",
+          "educational",
+          "module",
+          "paper",
+          "provide",
+          "research",
+          "user"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "educationalcontent_overview",
+          "provideuser_overview",
+          "certain_overview",
+          "user_overview"
+        ],
+        "lexicalScore": 0.5882352941176471,
+        "covered": true
+      },
+      {
+        "id": "US37",
+        "story": "As an administrator, I want to be able to manage research papers related to a certain module in the system, so that I can provide users with relevant educational content.",
+        "storyConcepts": [
+          "researchpaperrelated",
+          "certainmodule",
+          "educationalcontent",
+          "paperrelated",
+          "provideuser",
+          "certain",
+          "content",
+          "educational",
+          "module",
+          "paper",
+          "provide",
+          "related",
+          "relevant",
+          "research",
+          "user",
+          "administrator",
+          "system"
+        ],
+        "matchedConcepts": [
+          "educationalcontent",
+          "provideuser",
+          "certain",
+          "content",
+          "educational",
+          "module",
+          "paper",
+          "provide",
+          "research",
+          "user"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "educationalcontent_overview",
+          "provideuser_overview",
+          "certain_overview",
+          "user_overview"
+        ],
+        "lexicalScore": 0.5882352941176471,
+        "covered": true
+      },
+      {
+        "id": "US38",
+        "story": "As an administrator, I want to be able to add slides related to a certain module in the system, so that I can provide users with relevant educational content.",
+        "storyConcepts": [
+          "sliderelated",
+          "educationalcontent",
+          "provideuser",
+          "certain",
+          "content",
+          "educational",
+          "module",
+          "provide",
+          "related",
+          "relevant",
+          "slide",
+          "user",
+          "administrator",
+          "system"
+        ],
+        "matchedConcepts": [
+          "educationalcontent",
+          "provideuser",
+          "certain",
+          "content",
+          "educational",
+          "module",
+          "provide",
+          "slide",
+          "user"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "educationalcontent_overview",
+          "provideuser_overview",
+          "certain_overview",
+          "user_overview"
+        ],
+        "lexicalScore": 0.6428571428571429,
+        "covered": true
+      },
+      {
+        "id": "US39",
+        "story": "As an administrator, I want to be able to manage slides related to a certain module in the system, so that I can provide users with relevant educational content.",
+        "storyConcepts": [
+          "sliderelated",
+          "educationalcontent",
+          "provideuser",
+          "certain",
+          "content",
+          "educational",
+          "module",
+          "provide",
+          "related",
+          "relevant",
+          "slide",
+          "user",
+          "administrator",
+          "system"
+        ],
+        "matchedConcepts": [
+          "educationalcontent",
+          "provideuser",
+          "certain",
+          "content",
+          "educational",
+          "module",
+          "provide",
+          "slide",
+          "user"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "educationalcontent_overview",
+          "provideuser_overview",
+          "certain_overview",
+          "user_overview"
+        ],
+        "lexicalScore": 0.6428571428571429,
+        "covered": true
+      },
+      {
+        "id": "US40",
+        "story": "As an administrator, I want to be able to add flashcards related to a certain module in the system, so that I can provide users with relevant educational content.",
+        "storyConcepts": [
+          "flashcardrelated",
+          "educationalcontent",
+          "provideuser",
+          "certain",
+          "content",
+          "educational",
+          "flashcard",
+          "module",
+          "provide",
+          "related",
+          "relevant",
+          "user",
+          "administrator",
+          "system"
+        ],
+        "matchedConcepts": [
+          "educationalcontent",
+          "provideuser",
+          "certain",
+          "content",
+          "educational",
+          "flashcard",
+          "module",
+          "provide",
+          "user"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "educationalcontent_overview",
+          "provideuser_overview",
+          "certain_overview",
+          "user_overview"
+        ],
+        "lexicalScore": 0.6428571428571429,
+        "covered": true
+      },
+      {
+        "id": "US41",
+        "story": "As an administrator, I want to be able to manage flashcards related to a certain module in the system, so that I can provide users with relevant educational content.",
+        "storyConcepts": [
+          "flashcardrelated",
+          "educationalcontent",
+          "provideuser",
+          "certain",
+          "content",
+          "educational",
+          "flashcard",
+          "module",
+          "provide",
+          "related",
+          "relevant",
+          "user",
+          "administrator",
+          "system"
+        ],
+        "matchedConcepts": [
+          "educationalcontent",
+          "provideuser",
+          "certain",
+          "content",
+          "educational",
+          "flashcard",
+          "module",
+          "provide",
+          "user"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "educationalcontent_overview",
+          "provideuser_overview",
+          "certain_overview",
+          "user_overview"
+        ],
+        "lexicalScore": 0.6428571428571429,
+        "covered": true
+      },
+      {
+        "id": "US42",
+        "story": "As an administrator, I want to be able to add games related to a certain module in the system, so that I can provide users with relevant educational content.",
+        "storyConcepts": [
+          "gamerelated",
+          "educationalcontent",
+          "provideuser",
+          "certain",
+          "content",
+          "educational",
+          "game",
+          "module",
+          "provide",
+          "related",
+          "relevant",
+          "user",
+          "administrator",
+          "system"
+        ],
+        "matchedConcepts": [
+          "educationalcontent",
+          "provideuser",
+          "certain",
+          "content",
+          "educational",
+          "module",
+          "provide",
+          "user"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "educationalcontent_overview",
+          "provideuser_overview",
+          "certain_overview",
+          "user_overview"
+        ],
+        "lexicalScore": 0.5714285714285714,
+        "covered": true
+      },
+      {
+        "id": "US43",
+        "story": "As an administrator, I want to be able to manage games related to a certain module in the system, so that I can provide users with relevant educational content.",
+        "storyConcepts": [
+          "gamerelated",
+          "educationalcontent",
+          "provideuser",
+          "certain",
+          "content",
+          "educational",
+          "game",
+          "module",
+          "provide",
+          "related",
+          "relevant",
+          "user",
+          "administrator",
+          "system"
+        ],
+        "matchedConcepts": [
+          "educationalcontent",
+          "provideuser",
+          "certain",
+          "content",
+          "educational",
+          "module",
+          "provide",
+          "user"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "educationalcontent_overview",
+          "provideuser_overview",
+          "certain_overview",
+          "user_overview"
+        ],
+        "lexicalScore": 0.5714285714285714,
+        "covered": true
+      },
+      {
+        "id": "US44",
+        "story": "As an administrator, I want to have an overview of data usage of freelance teachers, so that I can manage the active users.",
+        "storyConcepts": [
+          "activeuser",
+          "freelanceteacher",
+          "active",
+          "freelance",
+          "teacher",
+          "usage",
+          "user",
+          "administrator"
+        ],
+        "matchedConcepts": [
+          "teacher",
+          "user"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "user_overview"
+        ],
+        "lexicalScore": 0.25,
+        "covered": false
+      },
+      {
+        "id": "US45",
+        "story": "As an administrator, I want to send system-wide announcements or updates about system-specific events, so that all users are informed of changes or news.",
+        "storyConcepts": [
+          "aboutsystem",
+          "wideannouncement",
+          "about",
+          "announcement",
+          "change",
+          "event",
+          "informed",
+          "user",
+          "wide",
+          "administrator",
+          "system"
+        ],
+        "matchedConcepts": [
+          "user"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "user_overview"
+        ],
+        "lexicalScore": 0.09090909090909091,
+        "covered": false
+      }
+    ]
+  },
+  "coverageGate": {
+    "enabled": false,
+    "minimum": null,
+    "score": 0.6,
+    "passed": true
+  },
+  "ollama": {
+    "model": "gemma4:e4b",
+    "totalDuration": 235977476833,
+    "loadDuration": 6727242667,
+    "promptEvalCount": 5823,
+    "evalCount": 2572,
+    "numCtx": 8192,
+    "numPredict": 6144,
+    "likelyPromptTruncated": false
+  },
+  "visualNarrator": {
+    "enabled": true,
+    "status": "completed",
+    "durationMs": 5574,
+    "command": "/Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/visual-narrator/.venv/bin/python /Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/pipeline/scripts/run_visual_narrator.py --input /Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/artifacts/practical-performance/20260528-165228/inputs/education/user-stories.txt --system-name PracticalPerf_education_Stability",
+    "artifacts": {
+      "ontologyPath": "/Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/artifacts/practical-performance/20260528-165228/stability/education/run-02/visual-narrator-ontology.omn",
+      "storiesPath": "/Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/artifacts/practical-performance/20260528-165228/stability/education/run-02/visual-narrator-stories.json",
+      "summaryPath": "/Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/artifacts/practical-performance/20260528-165228/stability/education/run-02/visual-narrator-summary.json",
+      "rawPath": "/Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/artifacts/practical-performance/20260528-165228/stability/education/run-02/visual-narrator-result.json"
+    },
+    "warnings": []
+  },
+  "processVisualizer": {
+    "enabled": true,
+    "status": "completed",
+    "durationMs": 348806,
+    "command": "/Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/process-visualizer/.venv/bin/python /Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/pipeline/scripts/run_process_visualizer.py --input /Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/artifacts/practical-performance/20260528-165228/inputs/education/user-stories.txt --output-dir /Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/artifacts/practical-performance/20260528-165228/stability/education/run-02 --model llama3 --ollama-url http://127.0.0.1:11434",
+    "artifacts": {
+      "summaryPath": "/Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/artifacts/practical-performance/20260528-165228/stability/education/run-02/process-visualizer-summary.json",
+      "rawPath": "/Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/artifacts/practical-performance/20260528-165228/stability/education/run-02/process-visualizer-result.json",
+      "graphSourcePath": "/Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/artifacts/practical-performance/20260528-165228/stability/education/run-02/process-visualizer-run/process-visualizer.gv",
+      "graphImagePath": "/Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/artifacts/practical-performance/20260528-165228/stability/education/run-02/process-visualizer-run/process-visualizer.png",
+      "logsDir": "/Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/artifacts/practical-performance/20260528-165228/stability/education/run-02/process-visualizer-run/output_logs"
+    },
+    "warnings": []
+  },
+  "domainModelReview": {
+    "enabled": true,
+    "status": "completed",
+    "droppedEntities": [
+      {
+        "name": "Module",
+        "reason": "Generic entity duplicates more specific story-backed entity \"LearningModule\"."
+      },
+      {
+        "name": "Content",
+        "reason": "Generic entity duplicates more specific story-backed entity \"EducationalContent\"."
+      },
+      {
+        "name": "Learning",
+        "reason": "Generic entity duplicates more specific story-backed entity \"LearningModule\"."
+      }
+    ],
+    "droppedAssociations": [
+      {
+        "name": "Learning_AppropriateMaterial",
+        "reason": "Association references a dropped entity."
+      }
+    ],
+    "repairedAssociations": [],
+    "addedAssociations": [
+      {
+        "name": "Certain_Video",
+        "parentEntity": "Certain",
+        "childEntity": "Video",
+        "reason": "Story US32 explicitly links Video to Certain."
+      },
+      {
+        "name": "Certain_Book",
+        "parentEntity": "Certain",
+        "childEntity": "Book",
+        "reason": "Story US34 explicitly links Book to Certain."
+      },
+      {
+        "name": "Certain_ResearchPaper",
+        "parentEntity": "Certain",
+        "childEntity": "ResearchPaper",
+        "reason": "Story US36 explicitly links ResearchPaper to Certain."
+      }
+    ],
+    "warnings": []
+  },
+  "planDiagnostics": {
+    "preprocessing": {
+      "visualNarratorEnabled": true,
+      "visualNarratorStatus": "completed",
+      "processVisualizerEnabled": true,
+      "processVisualizerStatus": "completed"
+    },
+    "domainModelReview": {
+      "enabled": true,
+      "status": "completed",
+      "droppedEntities": [
+        {
+          "name": "Module",
+          "reason": "Generic entity duplicates more specific story-backed entity \"LearningModule\"."
+        },
+        {
+          "name": "Content",
+          "reason": "Generic entity duplicates more specific story-backed entity \"EducationalContent\"."
+        },
+        {
+          "name": "Learning",
+          "reason": "Generic entity duplicates more specific story-backed entity \"LearningModule\"."
+        }
+      ],
+      "droppedAssociations": [
+        {
+          "name": "Learning_AppropriateMaterial",
+          "reason": "Association references a dropped entity."
+        }
+      ],
+      "repairedAssociations": [],
+      "addedAssociations": [
+        {
+          "name": "Certain_Video",
+          "parentEntity": "Certain",
+          "childEntity": "Video",
+          "reason": "Story US32 explicitly links Video to Certain."
+        },
+        {
+          "name": "Certain_Book",
+          "parentEntity": "Certain",
+          "childEntity": "Book",
+          "reason": "Story US34 explicitly links Book to Certain."
+        },
+        {
+          "name": "Certain_ResearchPaper",
+          "parentEntity": "Certain",
+          "childEntity": "ResearchPaper",
+          "reason": "Story US36 explicitly links ResearchPaper to Certain."
+        }
+      ],
+      "warnings": []
+    },
+    "referenceAppBaseline": {
+      "source": "reference-app-baseline",
+      "capabilities": [
+        "searchable_data_management",
+        "workflow_support",
+        "role_separated_views",
+        "file_handling"
+      ],
+      "archetypes": [
+        "management",
+        "tasks",
+        "role_separation"
+      ],
+      "recommendedWidgetFamilies": [
+        "data_grid",
+        "data_grid_filters",
+        "workflow_commons"
+      ]
+    },
+    "capabilityRequirements": [
+      "workflow_commons"
+    ],
+    "storyCoverage": {
+      "entries": [
+        {
+          "id": "US01",
+          "story": "As a freelance teacher, I want to communicate with other teachers using a chat function, so that I can learn from them and share experiences.",
+          "storyConcepts": [
+            "shareexperience",
+            "chat",
+            "communicate",
+            "experience",
+            "function",
+            "learn",
+            "other",
+            "share",
+            "teacher",
+            "them",
+            "freelance"
+          ],
+          "matchedConcepts": [
+            "chat",
+            "experience",
+            "teacher"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [],
+          "lexicalScore": 0.2727272727272727,
+          "covered": false
+        },
+        {
+          "id": "US02",
+          "story": "As a freelance teacher, I want to learn new teaching skills such as communication skills, presentation skills, and confidence, so that I am better prepared for teaching.",
+          "storyConcepts": [
+            "skill",
+            "teaching",
+            "betterprepared",
+            "presentationskill",
+            "skillsuch",
+            "better",
+            "communication",
+            "confidence",
+            "learn",
+            "prepared",
+            "presentation",
+            "freelance",
+            "teacher"
+          ],
+          "matchedConcepts": [
+            "skill",
+            "teaching",
+            "teacher"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [],
+          "lexicalScore": 0.23076923076923078,
+          "covered": false
+        },
+        {
+          "id": "US03",
+          "story": "As a freelance teacher, I want to learn pedagogical skills such as compassion, collaboration, and inclusiveness, so that I am better prepared for teaching.",
+          "storyConcepts": [
+            "betterprepared",
+            "pedagogicalskill",
+            "better",
+            "collaboration",
+            "compassion",
+            "inclusiveness",
+            "learn",
+            "pedagogical",
+            "prepared",
+            "skill",
+            "teaching",
+            "freelance",
+            "teacher"
+          ],
+          "matchedConcepts": [
+            "skill",
+            "teaching",
+            "teacher"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [],
+          "lexicalScore": 0.23076923076923078,
+          "covered": false
+        },
+        {
+          "id": "US04",
+          "story": "As a freelance teacher, I want to complete a skills assessment that tests my teaching/pedagogical/other skill levels, so that I can be placed at the right level without wasting time or feeling frustrated by levels that are too easy or difficult.",
+          "storyConcepts": [
+            "level",
+            "skill",
+            "feelingfrustrated",
+            "otherskill",
+            "rightlevel",
+            "tooeasy",
+            "withoutwasting",
+            "assessment",
+            "complete",
+            "difficult",
+            "easy",
+            "feeling",
+            "frustrated",
+            "other",
+            "pedagogical",
+            "placed",
+            "right",
+            "teaching",
+            "test",
+            "time",
+            "too",
+            "wasting",
+            "without",
+            "freelance",
+            "teacher"
+          ],
+          "matchedConcepts": [
+            "level",
+            "skill",
+            "teaching",
+            "teacher"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "level_overview"
+          ],
+          "lexicalScore": 0.16,
+          "covered": false
+        },
+        {
+          "id": "US05",
+          "story": "As a freelance teacher, I want to navigate through the modules using levels, so that I can track my learning progress.",
+          "storyConcepts": [
+            "learningprogress",
+            "learning",
+            "level",
+            "module",
+            "navigate",
+            "through",
+            "freelance",
+            "teacher",
+            "progress"
+          ],
+          "matchedConcepts": [
+            "learningprogress",
+            "learning",
+            "level",
+            "module",
+            "teacher",
+            "progress"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "learningprogress_overview",
+            "level_overview"
+          ],
+          "lexicalScore": 0.6666666666666666,
+          "covered": true
+        },
+        {
+          "id": "US06",
+          "story": "As a freelance teacher, I want to track my learning progress in a graphical overview such as a progress bar, so that I know what I have learned.",
+          "storyConcepts": [
+            "learningprogress",
+            "progressbar",
+            "bar",
+            "graphical",
+            "know",
+            "learned",
+            "learning",
+            "freelance",
+            "teacher",
+            "progress",
+            "what"
+          ],
+          "matchedConcepts": [
+            "learningprogress",
+            "learning",
+            "teacher",
+            "progress"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "learningprogress_overview"
+          ],
+          "lexicalScore": 0.36363636363636365,
+          "covered": true
+        },
+        {
+          "id": "US07",
+          "story": "As a freelance teacher, I want to achieve achievements rewarded for completing certain tasks, so that I get a sense of reward for completing something.",
+          "storyConcepts": [
+            "completing",
+            "achievementrewarded",
+            "certaintask",
+            "achieve",
+            "achievement",
+            "certain",
+            "get",
+            "reward",
+            "rewarded",
+            "sense",
+            "something",
+            "task",
+            "freelance",
+            "teacher"
+          ],
+          "matchedConcepts": [
+            "achievement",
+            "certain",
+            "task",
+            "teacher"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "achievement_overview",
+            "certain_overview"
+          ],
+          "lexicalScore": 0.2857142857142857,
+          "covered": false
+        },
+        {
+          "id": "US08",
+          "story": "As a freelance teacher, I want to do a quiz about a certain topic that is connected to a level or part of a level, so I can test my learning progress.",
+          "storyConcepts": [
+            "level",
+            "certaintopic",
+            "about",
+            "certain",
+            "connected",
+            "learning",
+            "part",
+            "quiz",
+            "test",
+            "topic",
+            "freelance",
+            "teacher",
+            "progress"
+          ],
+          "matchedConcepts": [
+            "level",
+            "certain",
+            "learning",
+            "quiz",
+            "topic",
+            "teacher",
+            "progress"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "level_overview",
+            "certain_overview",
+            "quiz_overview"
+          ],
+          "lexicalScore": 0.5384615384615384,
+          "covered": true
+        },
+        {
+          "id": "US09",
+          "story": "As a freelance teacher, I want to receive automated feedback on completed quizzes and exercises, so that I can understand what I did right or wrong.",
+          "storyConcepts": [
+            "automatedfeedback",
+            "understandwhat",
+            "automated",
+            "completed",
+            "did",
+            "exercise",
+            "feedback",
+            "quizze",
+            "right",
+            "understand",
+            "wrong",
+            "freelance",
+            "teacher",
+            "what"
+          ],
+          "matchedConcepts": [
+            "teacher"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [],
+          "lexicalScore": 0.07142857142857142,
+          "covered": false
+        },
+        {
+          "id": "US10",
+          "story": "As a freelance teacher, I want to be able to indicate my technical skill level in a small test, so that my profile can reflect my background.",
+          "storyConcepts": [
+            "technicalskill",
+            "background",
+            "indicate",
+            "level",
+            "profile",
+            "reflect",
+            "skill",
+            "small",
+            "technical",
+            "test",
+            "freelance",
+            "teacher"
+          ],
+          "matchedConcepts": [
+            "technicalskill",
+            "level",
+            "profile",
+            "skill",
+            "technical",
+            "teacher"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "level_overview"
+          ],
+          "lexicalScore": 0.5,
+          "covered": true
+        },
+        {
+          "id": "US11",
+          "story": "As a freelance teacher, I want to be able to indicate my teaching experience when creating a profile, so that my profile can reflect my background.",
+          "storyConcepts": [
+            "profile",
+            "teachingexperience",
+            "whencreating",
+            "background",
+            "creating",
+            "experience",
+            "indicate",
+            "reflect",
+            "teaching",
+            "when",
+            "freelance",
+            "teacher"
+          ],
+          "matchedConcepts": [
+            "profile",
+            "teachingexperience",
+            "experience",
+            "teaching",
+            "teacher"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [],
+          "lexicalScore": 0.4166666666666667,
+          "covered": true
+        },
+        {
+          "id": "US12",
+          "story": "As a freelance teacher, I want to be able to indicate my KvK number when creating a profile, so that I can verify that I am a freelance teacher.",
+          "storyConcepts": [
+            "kvknumber",
+            "whencreating",
+            "creating",
+            "freelance",
+            "indicate",
+            "kvk",
+            "number",
+            "profile",
+            "teacher",
+            "verify",
+            "when"
+          ],
+          "matchedConcepts": [
+            "kvknumber",
+            "profile",
+            "teacher"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [],
+          "lexicalScore": 0.2727272727272727,
+          "covered": false
+        },
+        {
+          "id": "US13",
+          "story": "As a freelance teacher, I want to have a place with all relevant knowledge for teaching as a knowledge hub, so I can refer back to this when teaching.",
+          "storyConcepts": [
+            "knowledge",
+            "teaching",
+            "knowledgehub",
+            "relevantknowledge",
+            "thiwhen",
+            "back",
+            "hub",
+            "refer",
+            "relevant",
+            "thi",
+            "when",
+            "freelance",
+            "teacher",
+            "place"
+          ],
+          "matchedConcepts": [
+            "teaching",
+            "teacher"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [],
+          "lexicalScore": 0.14285714285714285,
+          "covered": false
+        },
+        {
+          "id": "US14",
+          "story": "As a freelance teacher, I want learning materials to integrate with the subjects I already teach, so that I can incorporate it into my existing curriculum without disruption.",
+          "storyConcepts": [
+            "alreadyteach",
+            "learningmaterial",
+            "withoutdisruption",
+            "already",
+            "curriculum",
+            "disruption",
+            "existing",
+            "incorporate",
+            "integrate",
+            "learning",
+            "material",
+            "subject",
+            "teach",
+            "without",
+            "freelance",
+            "teacher"
+          ],
+          "matchedConcepts": [
+            "learningmaterial",
+            "learning",
+            "material",
+            "teacher"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "learningmaterial_overview"
+          ],
+          "lexicalScore": 0.25,
+          "covered": false
+        },
+        {
+          "id": "US15",
+          "story": "As a freelance teacher, I want to access a collection of study books categorized by ISBN, publisher, topic, and author, so that I can select the appropriate materials for my learning needs.",
+          "storyConcepts": [
+            "appropriatematerial",
+            "bookcategorized",
+            "learningneed",
+            "appropriate",
+            "author",
+            "book",
+            "categorized",
+            "collection",
+            "isbn",
+            "learning",
+            "material",
+            "need",
+            "publisher",
+            "study",
+            "topic",
+            "freelance",
+            "teacher"
+          ],
+          "matchedConcepts": [
+            "appropriatematerial",
+            "appropriate",
+            "author",
+            "book",
+            "isbn",
+            "learning",
+            "material",
+            "publisher",
+            "topic",
+            "teacher"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "appropriatematerial_overview",
+            "book_overview"
+          ],
+          "lexicalScore": 0.5882352941176471,
+          "covered": true
+        },
+        {
+          "id": "US16",
+          "story": "As a freelance teacher, I want to have flashcards available in a digital format, organized by topic and source, so that I can select the appropriate materials for my learning needs.",
+          "storyConcepts": [
+            "appropriatematerial",
+            "digitalformat",
+            "learningneed",
+            "appropriate",
+            "digital",
+            "flashcard",
+            "format",
+            "learning",
+            "material",
+            "need",
+            "organized",
+            "source",
+            "topic",
+            "freelance",
+            "teacher"
+          ],
+          "matchedConcepts": [
+            "appropriatematerial",
+            "appropriate",
+            "flashcard",
+            "learning",
+            "material",
+            "source",
+            "topic",
+            "teacher"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "appropriatematerial_overview"
+          ],
+          "lexicalScore": 0.5333333333333333,
+          "covered": true
+        },
+        {
+          "id": "US17",
+          "story": "As a freelance teacher, I want to find educational videos organized by platform, URL, topic, year, and author, so that I can select the appropriate materials for my learning needs.",
+          "storyConcepts": [
+            "appropriatematerial",
+            "educationalvideo",
+            "learningneed",
+            "appropriate",
+            "author",
+            "educational",
+            "find",
+            "learning",
+            "material",
+            "need",
+            "organized",
+            "platform",
+            "topic",
+            "url",
+            "video",
+            "year",
+            "freelance",
+            "teacher"
+          ],
+          "matchedConcepts": [
+            "appropriatematerial",
+            "appropriate",
+            "author",
+            "educational",
+            "learning",
+            "material",
+            "platform",
+            "topic",
+            "url",
+            "video",
+            "year",
+            "teacher"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "appropriatematerial_overview",
+            "video_overview"
+          ],
+          "lexicalScore": 0.6666666666666666,
+          "covered": true
+        },
+        {
+          "id": "US18",
+          "story": "As a freelance teacher, I want to have access to research papers with DOI's, journal information, publishing date, topic, and author outlined, so that I can select the appropriate materials for my learning needs.",
+          "storyConcepts": [
+            "appropriatematerial",
+            "journalinformation",
+            "learningneed",
+            "publishingdate",
+            "researchpaper",
+            "appropriate",
+            "author",
+            "date",
+            "doi",
+            "journal",
+            "learning",
+            "material",
+            "need",
+            "outlined",
+            "paper",
+            "publishing",
+            "research",
+            "topic",
+            "freelance",
+            "teacher"
+          ],
+          "matchedConcepts": [
+            "appropriatematerial",
+            "publishingdate",
+            "researchpaper",
+            "appropriate",
+            "author",
+            "date",
+            "doi",
+            "journal",
+            "learning",
+            "material",
+            "paper",
+            "publishing",
+            "research",
+            "topic",
+            "teacher"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "appropriatematerial_overview",
+            "researchpaper_overview"
+          ],
+          "lexicalScore": 0.75,
+          "covered": true
+        },
+        {
+          "id": "US19",
+          "story": "As a freelance teacher, I want to use slides specific to teaching topics, so that I can select the appropriate materials for my learning needs.",
+          "storyConcepts": [
+            "appropriatematerial",
+            "learningneed",
+            "appropriate",
+            "learning",
+            "material",
+            "need",
+            "slide",
+            "teaching",
+            "topic",
+            "freelance",
+            "teacher"
+          ],
+          "matchedConcepts": [
+            "appropriatematerial",
+            "appropriate",
+            "learning",
+            "material",
+            "slide",
+            "teaching",
+            "topic",
+            "teacher"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "appropriatematerial_overview"
+          ],
+          "lexicalScore": 0.7272727272727273,
+          "covered": true
+        },
+        {
+          "id": "US20",
+          "story": "As a freelance teacher, I want to play different games in different types with clear instructions and measurable learning outcomes, so that I can select the appropriate materials for my learning needs.",
+          "storyConcepts": [
+            "appropriatematerial",
+            "different",
+            "learning",
+            "clearinstruction",
+            "differentgame",
+            "learningneed",
+            "learningoutcome",
+            "appropriate",
+            "clear",
+            "game",
+            "instruction",
+            "material",
+            "measurable",
+            "need",
+            "outcome",
+            "play",
+            "type",
+            "freelance",
+            "teacher"
+          ],
+          "matchedConcepts": [
+            "appropriatematerial",
+            "learning",
+            "appropriate",
+            "material",
+            "type",
+            "teacher"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "appropriatematerial_overview"
+          ],
+          "lexicalScore": 0.3157894736842105,
+          "covered": true
+        },
+        {
+          "id": "US21",
+          "story": "As a freelance teacher, I want to access a help section or contact support via a button in the system, so that I can resolve technical issues or system questions I might have.",
+          "storyConcepts": [
+            "contactsupport",
+            "resolvetechnical",
+            "systemquestion",
+            "contact",
+            "help",
+            "issue",
+            "might",
+            "resolve",
+            "section",
+            "support",
+            "technical",
+            "via",
+            "freelance",
+            "teacher",
+            "button",
+            "system",
+            "question"
+          ],
+          "matchedConcepts": [
+            "technical",
+            "teacher",
+            "question"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [],
+          "lexicalScore": 0.17647058823529413,
+          "covered": false
+        },
+        {
+          "id": "US22",
+          "story": "As a freelance teacher, I want to reset my password securely, so that I can regain access to the system in case I forget it.",
+          "storyConcepts": [
+            "regainaccess",
+            "case",
+            "forget",
+            "password",
+            "regain",
+            "reset",
+            "securely",
+            "freelance",
+            "teacher",
+            "system"
+          ],
+          "matchedConcepts": [
+            "password",
+            "teacher"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [],
+          "lexicalScore": 0.2,
+          "covered": false
+        },
+        {
+          "id": "US23",
+          "story": "As a freelance teacher, I want to update my profile information, so that my details stay current and accurate.",
+          "storyConcepts": [
+            "profileinformation",
+            "accurate",
+            "current",
+            "profile",
+            "stay",
+            "freelance",
+            "teacher"
+          ],
+          "matchedConcepts": [
+            "profile",
+            "teacher"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [],
+          "lexicalScore": 0.2857142857142857,
+          "covered": false
+        },
+        {
+          "id": "US24",
+          "story": "As a freelance teacher, I want to receive email notifications about my progress and new learning opportunities, so that I am always updated.",
+          "storyConcepts": [
+            "alwayupdated",
+            "emailnotification",
+            "about",
+            "alway",
+            "email",
+            "learning",
+            "notification",
+            "opportunity",
+            "updated",
+            "freelance",
+            "teacher",
+            "progress"
+          ],
+          "matchedConcepts": [
+            "email",
+            "learning",
+            "teacher",
+            "progress"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [],
+          "lexicalScore": 0.3333333333333333,
+          "covered": true
+        },
+        {
+          "id": "US25",
+          "story": "As an administrator, I want to check if KvK numbers are real by checking the profiles, to verify the user as a freelance teacher.",
+          "storyConcepts": [
+            "freelanceteacher",
+            "ifkvk",
+            "check",
+            "checking",
+            "freelance",
+            "kvk",
+            "number",
+            "profile",
+            "real",
+            "teacher",
+            "user",
+            "verify",
+            "administrator"
+          ],
+          "matchedConcepts": [
+            "profile",
+            "teacher",
+            "user"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "user_overview"
+          ],
+          "lexicalScore": 0.23076923076923078,
+          "covered": false
+        },
+        {
+          "id": "US26",
+          "story": "As an administrator, I want to approve or reject freelance teacher profiles after reviewing their details and checking their KvK numbers, so that only verified freelance teachers can access the system.",
+          "storyConcepts": [
+            "freelanceteacher",
+            "freelance",
+            "teacher",
+            "kvknumber",
+            "onlyverified",
+            "profileafter",
+            "after",
+            "checking",
+            "kvk",
+            "number",
+            "only",
+            "profile",
+            "reviewing",
+            "verified",
+            "administrator",
+            "system"
+          ],
+          "matchedConcepts": [
+            "teacher",
+            "kvknumber",
+            "profile"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [],
+          "lexicalScore": 0.1875,
+          "covered": false
+        },
+        {
+          "id": "US27",
+          "story": "As an administrator, I want to create learning modules in the system, so that I can organize and manage content for freelance teachers.",
+          "storyConcepts": [
+            "learningmodule",
+            "content",
+            "freelance",
+            "learning",
+            "module",
+            "organize",
+            "teacher",
+            "administrator",
+            "system"
+          ],
+          "matchedConcepts": [
+            "learningmodule",
+            "content",
+            "learning",
+            "module",
+            "teacher"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "learningmodule_overview"
+          ],
+          "lexicalScore": 0.5555555555555556,
+          "covered": true
+        },
+        {
+          "id": "US28",
+          "story": "As an administrator, I want to create different levels within the modules in the system, so that I can define different tiers of difficulty for users.",
+          "storyConcepts": [
+            "different",
+            "definedifferent",
+            "differentlevel",
+            "define",
+            "difficulty",
+            "level",
+            "module",
+            "tier",
+            "user",
+            "within",
+            "administrator",
+            "system"
+          ],
+          "matchedConcepts": [
+            "difficulty",
+            "level",
+            "module",
+            "user"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "level_overview",
+            "user_overview"
+          ],
+          "lexicalScore": 0.3333333333333333,
+          "covered": true
+        },
+        {
+          "id": "US29",
+          "story": "As an administrator, I want to create quizzes in the system related to a certain module in the system, so that freelance teachers can track their learning progress.",
+          "storyConcepts": [
+            "irlearningprogress",
+            "freelanceteacher",
+            "certain",
+            "freelance",
+            "learning",
+            "module",
+            "quizze",
+            "related",
+            "teacher",
+            "administrator",
+            "system",
+            "progress"
+          ],
+          "matchedConcepts": [
+            "certain",
+            "learning",
+            "module",
+            "teacher",
+            "progress"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "certain_overview"
+          ],
+          "lexicalScore": 0.4166666666666667,
+          "covered": true
+        },
+        {
+          "id": "US30",
+          "story": "As an administrator, I want to remove inappropriate or outdated content, so that the system stays relevant and compliant.",
+          "storyConcepts": [
+            "outdatedcontent",
+            "stayrelevant",
+            "compliant",
+            "content",
+            "inappropriate",
+            "outdated",
+            "relevant",
+            "remove",
+            "stay",
+            "administrator",
+            "system"
+          ],
+          "matchedConcepts": [
+            "content"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [],
+          "lexicalScore": 0.09090909090909091,
+          "covered": false
+        },
+        {
+          "id": "US31",
+          "story": "As an administrator, I want to edit inappropriate or outdated content, so that the system stays relevant and compliant.",
+          "storyConcepts": [
+            "outdatedcontent",
+            "stayrelevant",
+            "compliant",
+            "content",
+            "inappropriate",
+            "outdated",
+            "relevant",
+            "stay",
+            "administrator",
+            "system"
+          ],
+          "matchedConcepts": [
+            "content"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [],
+          "lexicalScore": 0.1,
+          "covered": false
+        },
+        {
+          "id": "US32",
+          "story": "As an administrator, I want to be able to add videos related to a certain module in the system, so that I can provide users with relevant educational content.",
+          "storyConcepts": [
+            "videorelated",
+            "educationalcontent",
+            "provideuser",
+            "certain",
+            "content",
+            "educational",
+            "module",
+            "provide",
+            "related",
+            "relevant",
+            "user",
+            "video",
+            "administrator",
+            "system"
+          ],
+          "matchedConcepts": [
+            "educationalcontent",
+            "provideuser",
+            "certain",
+            "content",
+            "educational",
+            "module",
+            "provide",
+            "user",
+            "video"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "educationalcontent_overview",
+            "provideuser_overview",
+            "certain_overview",
+            "user_overview",
+            "video_overview"
+          ],
+          "lexicalScore": 0.6428571428571429,
+          "covered": true
+        },
+        {
+          "id": "US33",
+          "story": "As an administrator, I want to be able to manage videos related to a certain module in the system, so that I can provide users with relevant educational content.",
+          "storyConcepts": [
+            "videorelated",
+            "educationalcontent",
+            "provideuser",
+            "certain",
+            "content",
+            "educational",
+            "module",
+            "provide",
+            "related",
+            "relevant",
+            "user",
+            "video",
+            "administrator",
+            "system"
+          ],
+          "matchedConcepts": [
+            "educationalcontent",
+            "provideuser",
+            "certain",
+            "content",
+            "educational",
+            "module",
+            "provide",
+            "user",
+            "video"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "educationalcontent_overview",
+            "provideuser_overview",
+            "certain_overview",
+            "user_overview",
+            "video_overview"
+          ],
+          "lexicalScore": 0.6428571428571429,
+          "covered": true
+        },
+        {
+          "id": "US34",
+          "story": "As an administrator, I want to be able to add books related to a certain module in the system, so that I can provide users with relevant educational content.",
+          "storyConcepts": [
+            "bookrelated",
+            "educationalcontent",
+            "provideuser",
+            "book",
+            "certain",
+            "content",
+            "educational",
+            "module",
+            "provide",
+            "related",
+            "relevant",
+            "user",
+            "administrator",
+            "system"
+          ],
+          "matchedConcepts": [
+            "educationalcontent",
+            "provideuser",
+            "book",
+            "certain",
+            "content",
+            "educational",
+            "module",
+            "provide",
+            "user"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "educationalcontent_overview",
+            "provideuser_overview",
+            "book_overview",
+            "certain_overview",
+            "user_overview"
+          ],
+          "lexicalScore": 0.6428571428571429,
+          "covered": true
+        },
+        {
+          "id": "US35",
+          "story": "As an administrator, I want to be able to manage books related to a certain module in the system, so that I can provide users with relevant educational content.",
+          "storyConcepts": [
+            "bookrelated",
+            "educationalcontent",
+            "provideuser",
+            "book",
+            "certain",
+            "content",
+            "educational",
+            "module",
+            "provide",
+            "related",
+            "relevant",
+            "user",
+            "administrator",
+            "system"
+          ],
+          "matchedConcepts": [
+            "educationalcontent",
+            "provideuser",
+            "book",
+            "certain",
+            "content",
+            "educational",
+            "module",
+            "provide",
+            "user"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "educationalcontent_overview",
+            "provideuser_overview",
+            "book_overview",
+            "certain_overview",
+            "user_overview"
+          ],
+          "lexicalScore": 0.6428571428571429,
+          "covered": true
+        },
+        {
+          "id": "US36",
+          "story": "As an administrator, I want to be able to add research papers related to a certain module in the system, so that I can provide users with relevant educational content.",
+          "storyConcepts": [
+            "researchpaperrelated",
+            "certainmodule",
+            "educationalcontent",
+            "paperrelated",
+            "provideuser",
+            "certain",
+            "content",
+            "educational",
+            "module",
+            "paper",
+            "provide",
+            "related",
+            "relevant",
+            "research",
+            "user",
+            "administrator",
+            "system"
+          ],
+          "matchedConcepts": [
+            "educationalcontent",
+            "provideuser",
+            "certain",
+            "content",
+            "educational",
+            "module",
+            "paper",
+            "provide",
+            "research",
+            "user"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "educationalcontent_overview",
+            "provideuser_overview",
+            "certain_overview",
+            "user_overview"
+          ],
+          "lexicalScore": 0.5882352941176471,
+          "covered": true
+        },
+        {
+          "id": "US37",
+          "story": "As an administrator, I want to be able to manage research papers related to a certain module in the system, so that I can provide users with relevant educational content.",
+          "storyConcepts": [
+            "researchpaperrelated",
+            "certainmodule",
+            "educationalcontent",
+            "paperrelated",
+            "provideuser",
+            "certain",
+            "content",
+            "educational",
+            "module",
+            "paper",
+            "provide",
+            "related",
+            "relevant",
+            "research",
+            "user",
+            "administrator",
+            "system"
+          ],
+          "matchedConcepts": [
+            "educationalcontent",
+            "provideuser",
+            "certain",
+            "content",
+            "educational",
+            "module",
+            "paper",
+            "provide",
+            "research",
+            "user"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "educationalcontent_overview",
+            "provideuser_overview",
+            "certain_overview",
+            "user_overview"
+          ],
+          "lexicalScore": 0.5882352941176471,
+          "covered": true
+        },
+        {
+          "id": "US38",
+          "story": "As an administrator, I want to be able to add slides related to a certain module in the system, so that I can provide users with relevant educational content.",
+          "storyConcepts": [
+            "sliderelated",
+            "educationalcontent",
+            "provideuser",
+            "certain",
+            "content",
+            "educational",
+            "module",
+            "provide",
+            "related",
+            "relevant",
+            "slide",
+            "user",
+            "administrator",
+            "system"
+          ],
+          "matchedConcepts": [
+            "educationalcontent",
+            "provideuser",
+            "certain",
+            "content",
+            "educational",
+            "module",
+            "provide",
+            "slide",
+            "user"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "educationalcontent_overview",
+            "provideuser_overview",
+            "certain_overview",
+            "user_overview"
+          ],
+          "lexicalScore": 0.6428571428571429,
+          "covered": true
+        },
+        {
+          "id": "US39",
+          "story": "As an administrator, I want to be able to manage slides related to a certain module in the system, so that I can provide users with relevant educational content.",
+          "storyConcepts": [
+            "sliderelated",
+            "educationalcontent",
+            "provideuser",
+            "certain",
+            "content",
+            "educational",
+            "module",
+            "provide",
+            "related",
+            "relevant",
+            "slide",
+            "user",
+            "administrator",
+            "system"
+          ],
+          "matchedConcepts": [
+            "educationalcontent",
+            "provideuser",
+            "certain",
+            "content",
+            "educational",
+            "module",
+            "provide",
+            "slide",
+            "user"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "educationalcontent_overview",
+            "provideuser_overview",
+            "certain_overview",
+            "user_overview"
+          ],
+          "lexicalScore": 0.6428571428571429,
+          "covered": true
+        },
+        {
+          "id": "US40",
+          "story": "As an administrator, I want to be able to add flashcards related to a certain module in the system, so that I can provide users with relevant educational content.",
+          "storyConcepts": [
+            "flashcardrelated",
+            "educationalcontent",
+            "provideuser",
+            "certain",
+            "content",
+            "educational",
+            "flashcard",
+            "module",
+            "provide",
+            "related",
+            "relevant",
+            "user",
+            "administrator",
+            "system"
+          ],
+          "matchedConcepts": [
+            "educationalcontent",
+            "provideuser",
+            "certain",
+            "content",
+            "educational",
+            "flashcard",
+            "module",
+            "provide",
+            "user"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "educationalcontent_overview",
+            "provideuser_overview",
+            "certain_overview",
+            "user_overview"
+          ],
+          "lexicalScore": 0.6428571428571429,
+          "covered": true
+        },
+        {
+          "id": "US41",
+          "story": "As an administrator, I want to be able to manage flashcards related to a certain module in the system, so that I can provide users with relevant educational content.",
+          "storyConcepts": [
+            "flashcardrelated",
+            "educationalcontent",
+            "provideuser",
+            "certain",
+            "content",
+            "educational",
+            "flashcard",
+            "module",
+            "provide",
+            "related",
+            "relevant",
+            "user",
+            "administrator",
+            "system"
+          ],
+          "matchedConcepts": [
+            "educationalcontent",
+            "provideuser",
+            "certain",
+            "content",
+            "educational",
+            "flashcard",
+            "module",
+            "provide",
+            "user"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "educationalcontent_overview",
+            "provideuser_overview",
+            "certain_overview",
+            "user_overview"
+          ],
+          "lexicalScore": 0.6428571428571429,
+          "covered": true
+        },
+        {
+          "id": "US42",
+          "story": "As an administrator, I want to be able to add games related to a certain module in the system, so that I can provide users with relevant educational content.",
+          "storyConcepts": [
+            "gamerelated",
+            "educationalcontent",
+            "provideuser",
+            "certain",
+            "content",
+            "educational",
+            "game",
+            "module",
+            "provide",
+            "related",
+            "relevant",
+            "user",
+            "administrator",
+            "system"
+          ],
+          "matchedConcepts": [
+            "educationalcontent",
+            "provideuser",
+            "certain",
+            "content",
+            "educational",
+            "module",
+            "provide",
+            "user"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "educationalcontent_overview",
+            "provideuser_overview",
+            "certain_overview",
+            "user_overview"
+          ],
+          "lexicalScore": 0.5714285714285714,
+          "covered": true
+        },
+        {
+          "id": "US43",
+          "story": "As an administrator, I want to be able to manage games related to a certain module in the system, so that I can provide users with relevant educational content.",
+          "storyConcepts": [
+            "gamerelated",
+            "educationalcontent",
+            "provideuser",
+            "certain",
+            "content",
+            "educational",
+            "game",
+            "module",
+            "provide",
+            "related",
+            "relevant",
+            "user",
+            "administrator",
+            "system"
+          ],
+          "matchedConcepts": [
+            "educationalcontent",
+            "provideuser",
+            "certain",
+            "content",
+            "educational",
+            "module",
+            "provide",
+            "user"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "educationalcontent_overview",
+            "provideuser_overview",
+            "certain_overview",
+            "user_overview"
+          ],
+          "lexicalScore": 0.5714285714285714,
+          "covered": true
+        },
+        {
+          "id": "US44",
+          "story": "As an administrator, I want to have an overview of data usage of freelance teachers, so that I can manage the active users.",
+          "storyConcepts": [
+            "activeuser",
+            "freelanceteacher",
+            "active",
+            "freelance",
+            "teacher",
+            "usage",
+            "user",
+            "administrator"
+          ],
+          "matchedConcepts": [
+            "teacher",
+            "user"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "user_overview"
+          ],
+          "lexicalScore": 0.25,
+          "covered": false
+        },
+        {
+          "id": "US45",
+          "story": "As an administrator, I want to send system-wide announcements or updates about system-specific events, so that all users are informed of changes or news.",
+          "storyConcepts": [
+            "aboutsystem",
+            "wideannouncement",
+            "about",
+            "announcement",
+            "change",
+            "event",
+            "informed",
+            "user",
+            "wide",
+            "administrator",
+            "system"
+          ],
+          "matchedConcepts": [
+            "user"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "user_overview"
+          ],
+          "lexicalScore": 0.09090909090909091,
+          "covered": false
+        }
+      ],
+      "score": 0.6,
+      "covered": 27,
+      "total": 45
+    }
+  },
+  "generationStrategy": {
+    "llmPassCount": 1,
+    "repairPassEnabled": false
+  }
+}

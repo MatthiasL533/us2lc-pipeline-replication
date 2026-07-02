@@ -1,0 +1,276 @@
+{
+  "meta": {
+    "planVersion": "1.1.0",
+    "name": "reference-02-workflow-simple-approval.json"
+  },
+  "app": {
+    "appId": "id",
+    "branch": "main",
+    "moduleName": "MyFirstModule",
+    "layoutQualifiedName": "Atlas_Core.Atlas_Default",
+    "homePageRef": "home",
+    "navigation": {
+      "homePageButtons": [
+        { "pageRef": "approval_requests", "caption": "My Approval Requests", "icon": { "name": "home" }, "allowedRoles": ["Employee"] },
+        { "pageRef": "approval_manager", "caption": "Manager Review", "icon": { "name": "home" }, "allowedRoles": ["Manager"] }
+      ],
+      "menuItems": [
+        { "pageRef": "home", "caption": "Home", "icon": { "name": "home" }, "allowedRoles": ["Employee", "Manager"] },
+        { "pageRef": "approval_requests", "caption": "Requests", "icon": { "name": "home" }, "allowedRoles": ["Employee"] },
+        { "pageRef": "approval_manager", "caption": "Manager Review", "icon": { "name": "home" }, "allowedRoles": ["Manager"] }
+      ]
+    }
+  },
+  "execution": {
+    "createApp": true,
+    "createAppNamePrefix": "Reference02Approval",
+    "createAppRepositoryType": "git",
+    "commit": true,
+    "commitMessage": "Reference 02: simple approval workflow reference plan",
+    "deleteExistingDomainModel": true,
+    "deleteExistingPages": true,
+    "deleteExistingMicroflows": true,
+    "deleteExistingWorkflows": true,
+    "dg2Cleanup": true
+  },
+  "domainModel": {
+    "entities": [
+      {
+        "name": "ApprovalRequest",
+        "attributes": [
+          { "name": "Title", "type": "String", "required": true },
+          { "name": "Description", "type": "String", "required": false },
+          { "name": "Status", "type": "String", "required": false }
+        ]
+      }
+    ],
+    "associations": [],
+    "enumerations": []
+  },
+  "security": {
+    "enabled": true,
+    "enableDemoUsers": true,
+    "securityLevel": "prototype",
+    "moduleRoles": ["Employee", "Manager"],
+    "userRoles": [
+      { "name": "Employee", "moduleRoles": ["Employee"], "systemModuleRole": "System.User" },
+      { "name": "Manager", "moduleRoles": ["Manager"], "systemModuleRole": "System.User" }
+    ],
+    "demoUsers": [
+      { "userName": "demo_employee", "password": "Employee123!", "userRoles": ["Employee"] },
+      { "userName": "demo_manager", "password": "Manager123!", "userRoles": ["Manager"] }
+    ]
+  },
+  "microflows": {
+    "specs": [
+      {
+        "ref": "mf_prepare_approval",
+        "name": "MF_PrepareApproval",
+        "parameters": [
+          { "name": "WorkflowContext", "type": { "kind": "Object", "entityRef": "MyFirstModule.ApprovalRequest" } }
+        ],
+        "actions": [
+          {
+            "type": "changeObject",
+            "targetVariableName": "WorkflowContext",
+            "changes": [
+              { "attributeRef": "Status", "valueExpression": "'Awaiting approval'" }
+            ],
+            "commit": "Yes",
+            "refreshInClient": true
+          }
+        ]
+      },
+      {
+        "ref": "mf_mark_approved",
+        "name": "MF_MarkApproved",
+        "parameters": [
+          { "name": "WorkflowContext", "type": { "kind": "Object", "entityRef": "MyFirstModule.ApprovalRequest" } }
+        ],
+        "actions": [
+          {
+            "type": "changeObject",
+            "targetVariableName": "WorkflowContext",
+            "changes": [
+              { "attributeRef": "Status", "valueExpression": "'Approved'" }
+            ],
+            "commit": "Yes",
+            "refreshInClient": true
+          }
+        ]
+      },
+      {
+        "ref": "mf_mark_rejected",
+        "name": "MF_MarkRejected",
+        "parameters": [
+          { "name": "WorkflowContext", "type": { "kind": "Object", "entityRef": "MyFirstModule.ApprovalRequest" } }
+        ],
+        "actions": [
+          {
+            "type": "changeObject",
+            "targetVariableName": "WorkflowContext",
+            "changes": [
+              { "attributeRef": "Status", "valueExpression": "'Rejected'" }
+            ],
+            "commit": "Yes",
+            "refreshInClient": true
+          }
+        ]
+      }
+    ]
+  },
+  "workflows": {
+    "specs": [
+      {
+        "ref": "wf_approval",
+        "name": "WF_Approval",
+        "bindings": { "contextEntityRef": "MyFirstModule.ApprovalRequest" },
+        "steps": [
+          { "type": "start", "name": "Start" },
+          { "type": "serviceTask", "name": "Prepare", "handlerMicroflowRef": "mf_prepare_approval" },
+          {
+            "type": "userTask",
+            "name": "ManagerReview",
+            "taskName": "{1}",
+            "taskNameArgs": ["$WorkflowContext/Title"],
+            "taskDescription": "{1}",
+            "taskDescriptionArgs": ["$WorkflowContext/Description"],
+            "taskPageRef": "approval_task_page",
+            "userRoleRefs": ["Manager"],
+            "outcomes": [
+              {
+                "value": "Approve",
+                "steps": [
+                  { "type": "serviceTask", "name": "MarkApproved", "handlerMicroflowRef": "mf_mark_approved" },
+                  { "type": "end", "name": "Approved" }
+                ]
+              },
+              {
+                "value": "Reject",
+                "steps": [
+                  { "type": "serviceTask", "name": "MarkRejected", "handlerMicroflowRef": "mf_mark_rejected" },
+                  { "type": "end", "name": "Rejected" }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "pages": {
+    "specs": [
+      {
+        "ref": "home",
+        "name": "Home",
+        "title": "Approval Home",
+        "allowedRoles": ["Employee", "Manager"],
+        "content": [
+          { "type": "dynamicText", "text": "Approval workflow workspace", "renderMode": "H2" },
+          { "type": "dynamicText", "text": "Employees create and submit approval requests. Managers review requests and complete workflow tasks from the manager review page.", "renderMode": "Paragraph" },
+          { "type": "buttonToPage", "caption": "Open Requests", "targetPageRef": "approval_requests" }
+        ]
+      },
+      {
+        "ref": "approval_requests",
+        "name": "ApprovalRequest_Overview",
+        "title": "Approval Requests",
+        "entityRef": "MyFirstModule.ApprovalRequest",
+        "allowedRoles": ["Employee"],
+        "content": [
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.ApprovalRequest",
+            "rowClickTargetPageRef": "approval_request_detail",
+            "itemContent": [
+              { "type": "attributeInput", "attributeRef": "Title", "autoLabel": true },
+              { "type": "attributeInput", "attributeRef": "Description", "autoLabel": false },
+              { "type": "attributeInput", "attributeRef": "Status", "autoLabel": false }
+            ]
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Add Approval Request",
+            "entityRef": "MyFirstModule.ApprovalRequest",
+            "targetPageRef": "approval_request_detail"
+          }
+        ]
+      },
+      {
+        "ref": "approval_manager",
+        "name": "ApprovalRequest_ManagerReview",
+        "title": "Manager Review",
+        "entityRef": "System.WorkflowUserTask",
+        "allowedRoles": ["Manager"],
+        "content": [
+          { "type": "dynamicText", "text": "Manager review workspace", "renderMode": "H2" },
+          { "type": "dynamicText", "text": "Open assigned workflow tasks here to approve or reject requests.", "renderMode": "Paragraph" },
+          {
+            "type": "listView",
+            "entityRef": "System.WorkflowUserTask",
+            "itemContent": [
+              { "type": "attributeInput", "attributeRef": "Name", "autoLabel": false },
+              { "type": "attributeInput", "attributeRef": "Description", "autoLabel": false },
+              { "type": "showUserTaskPageButton", "caption": "Open Approval Task", "assignOnOpen": true, "openWhenAssigned": true }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "approval_request_detail",
+        "name": "ApprovalRequest_Detail",
+        "title": "Approval Request Detail",
+        "entityRef": "MyFirstModule.ApprovalRequest",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          { "name": "ApprovalRequest", "entityRef": "MyFirstModule.ApprovalRequest", "required": true }
+        ],
+        "allowedRoles": ["Employee", "Manager"],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "ApprovalRequest",
+            "labelWidth": 3,
+            "content": [
+              { "type": "attributeInput", "attributeRef": "Title" },
+              { "type": "attributeInput", "attributeRef": "Description" },
+              { "type": "cancelChangesButton", "caption": "Cancel", "closePage": true },
+              {
+                "type": "callWorkflowButton",
+                "caption": "Send Request",
+                "workflowRef": "wf_approval",
+                "closePage": true,
+                "allowedRoles": ["Employee"]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "approval_task_page",
+        "name": "Approval_TaskPage",
+        "title": "Approval Task",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "allowedRoles": ["Manager"],
+        "pageParameters": [
+          { "name": "WorkflowUserTask", "entityRef": "System.WorkflowUserTask", "required": true }
+        ],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "WorkflowUserTask",
+            "content": [
+              { "type": "attributeInput", "attributeRef": "Name", "autoLabel": true },
+              { "type": "attributeInput", "attributeRef": "Description", "autoLabel": true },
+              { "type": "setTaskOutcomeButton", "caption": "Approve", "outcomeValue": "Approve" },
+              { "type": "setTaskOutcomeButton", "caption": "Reject", "outcomeValue": "Reject" }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "verification": {
+    "failOnMissing": true
+  }
+}

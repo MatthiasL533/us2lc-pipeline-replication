@@ -1,0 +1,67 @@
+# OS and editor noise
+.DS_Store
+.idea/
+.vscode/
+
+# Environment and local config
+.env
+.envrc
+.python-version
+.venv/
+venv/
+env/
+ENV/
+
+# Python caches and reports
+__pycache__/
+*.py[codz]
+*$py.class
+.ipynb_checkpoints/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.pyre/
+.tox/
+.nox/
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+nosetests.xml
+.hypothesis/
+
+# Python packaging and build outputs
+build/
+dist/
+site/
+.eggs/
+*.egg-info/
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Node and JavaScript
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Documentation build outputs
+docs/_build/
+docs/site/
+
+# Pipeline working files
+pipeline/plans/_scratch/
+pipeline/src/plans/_scratch/
+* [WORKING].json
+
+# Tooling metadata
+.cache/
+.cursorignore
+.cursorindexingignore
+
+# Local AI/tooling state
+.gitnexus/
+.claude/
+.agents/
+AGENTS.md
+CLAUDE.md

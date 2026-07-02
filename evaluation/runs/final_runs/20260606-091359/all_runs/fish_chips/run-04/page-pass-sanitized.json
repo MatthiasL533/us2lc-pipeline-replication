@@ -1,0 +1,120 @@
+{
+  "pages": {
+    "specs": [
+      {
+        "name": "home",
+        "layout": "Blank",
+        "widgetIds": [
+          "orderOverview"
+        ],
+        "content": []
+      },
+      {
+        "name": "orderOverview",
+        "layout": "Table",
+        "entity": "Order",
+        "columns": [
+          {
+            "attribute": "orderNumber"
+          },
+          {
+            "attribute": "Status"
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "orderDetail",
+        "layout": "Form Horizontal",
+        "entity": "Order",
+        "attributes": [
+          {
+            "attribute": "orderNumber"
+          },
+          {
+            "attribute": "Status"
+          },
+          {
+            "attribute": "orderType"
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "productOverview",
+        "layout": "Table",
+        "entity": "Product",
+        "columns": [
+          {
+            "attribute": "productName"
+          },
+          {
+            "attribute": "preparationStatus"
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "productDetail",
+        "layout": "Form Horizontal",
+        "entity": "Product",
+        "attributes": [
+          {
+            "attribute": "productName"
+          },
+          {
+            "attribute": "preparationStatus"
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "customerOverview",
+        "layout": "Table",
+        "entity": "Customer",
+        "columns": [
+          {
+            "attribute": "customerName"
+          },
+          {
+            "attribute": "phoneNumber"
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "customerDetail",
+        "layout": "Form Horizontal",
+        "entity": "Customer",
+        "attributes": [
+          {
+            "attribute": "customerName"
+          },
+          {
+            "attribute": "phoneNumber"
+          }
+        ],
+        "content": []
+      }
+    ]
+  },
+  "app": {
+    "navigation": {
+      "homePage": "home",
+      "menuItems": [
+        {
+          "name": "Orders",
+          "page": "orderOverview"
+        },
+        {
+          "name": "Products",
+          "page": "productOverview"
+        },
+        {
+          "name": "Customers",
+          "page": "customerOverview"
+        }
+      ]
+    }
+  }
+}

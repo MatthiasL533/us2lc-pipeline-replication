@@ -1,0 +1,6998 @@
+{
+  "ok": true,
+  "inputPath": "/workspace/us2lc-pipeline/artifacts/practical-performance/20260528-165228/inputs/sports/user-stories.txt",
+  "systemName": "PracticalPerf_sports_Stability",
+  "ontology": "# Generated with Visual Narrator\nPrefix: : <http://fakesite.org/practicalperf_sports_stability.owl#>\nPrefix: owl: <http://www.w3.org/2002/07/owl#>\nPrefix: rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPrefix: rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPrefix: xsd: <http://www.w3.org/2001/XMLSchema#>\nPrefix: dc: <http://purl.org/dc/elements/1.1/>\nPrefix: onto: <http://fakesite.org/practicalperf_sports_stability.owl#>\n\nOntology: <:>\n\nAnnotations:\n\tdc:title \"PracticalPerf_sports_Stability\",\n\tdc:creator \"Visual Narrator\",\n\trdfs:comment \"Generated with Visual Narrator\"\n\nAnnotationProperty: dc:creator\n\nAnnotationProperty: dc:title\n\n\n# Relationships\nObjectProperty: :canLogTo\n\tDomain: :User\n\tRange: :System\n\nObjectProperty: :canChange1\n\tDomain: :Customer\n\tRange: :Detail\n\nObjectProperty: :canChange2\n\tDomain: :Trainer\n\tRange: :Room\n\nObjectProperty: :hasType\n\tDomain: :Membership\n\tRange: :MembershipType\n\nObjectProperty: :canUse\n\tDomain: :User\n\tRange: :System\n\nObjectProperty: :canOrganize\n\tDomain: :Trainer\n\tRange: :Lesson\n\nObjectProperty: :canAccess\n\tDomain: :They\n\tRange: :System\n\nObjectProperty: :canGoToFor\n\tDomain: :Customer\n\tRange: :DailySports\n\nObjectProperty: :canKnow1\n\tDomain: :Customer\n\tRange: :Practicalperf_sports_stability\n\nObjectProperty: :canKnow2\n\tDomain: :Customer\n\tRange: :It\n\nObjectProperty: :canKnow3\n\tDomain: :Customer\n\tRange: :DailySports\n\nObjectProperty: :canKnow4\n\tDomain: :Customer\n\tRange: :What\n\nObjectProperty: :canKnow5\n\tDomain: :Admin\n\tRange: :Which\n\nObjectProperty: :canHave1\n\tDomain: :Customer\n\tRange: :Application\n\nObjectProperty: :canHave2\n\tDomain: :Admin\n\tRange: :System\n\nObjectProperty: :canHave3\n\tDomain: :Admin\n\tRange: :Fine\n\nObjectProperty: :canHave4\n\tDomain: :Customer\n\tRange: :Method\n\nObjectProperty: :canCansee\n\tDomain: :Customer\n\tRange: :They\n\nObjectProperty: :canReset\n\tDomain: :Customer\n\tRange: :Password\n\nObjectProperty: :canEdit1\n\tDomain: :Admin\n\tRange: :TrainingSession\n\nObjectProperty: :canEdit2\n\tDomain: :Trainer\n\tRange: :Lesson\n\nObjectProperty: :canEdit3\n\tDomain: :Trainer\n\tRange: :Time\n\nObjectProperty: :canEdit4\n\tDomain: :Trainer\n\tRange: :Description\n\nObjectProperty: :canEdit5\n\tDomain: :Trainer\n\tRange: :Number\n\nObjectProperty: :canEdit6\n\tDomain: :Admin\n\tRange: :Lesson\n\nObjectProperty: :canCancel1\n\tDomain: :Trainer\n\tRange: :Lesson\n\nObjectProperty: :canCancel2\n\tDomain: :Admin\n\tRange: :Lesson\n\nObjectProperty: :canChoose1\n\tDomain: :Customer\n\tRange: :MembershipType\n\nObjectProperty: :canChoose2\n\tDomain: :Customer\n\tRange: :What\n\nObjectProperty: :canAdd1\n\tDomain: :Customer\n\tRange: :Information\n\nObjectProperty: :canAdd2\n\tDomain: :Trainer\n\tRange: :Lesson\n\nObjectProperty: :canAdd3\n\tDomain: :Admin\n\tRange: :Trainer\n\nObjectProperty: :canAdd4\n\tDomain: :Admin\n\tRange: :Admin\n\nObjectProperty: :canUnsubscribe\n\tDomain: :Customer\n\tRange: :Practicalperf_sports_stability\n\nObjectProperty: :canBook\n\tDomain: :Customer\n\tRange: :Spot\n\nObjectProperty: :canCorrectFor\n\tDomain: :It\n\tRange: :Lesson\n\nObjectProperty: :canMove\n\tDomain: :Trainer\n\tRange: :Lesson\n\nObjectProperty: :canRemove\n\tDomain: :Admin\n\tRange: :Trainer\n\nObjectProperty: :canExtend\n\tDomain: :Customer\n\tRange: :Subscription\n\nObjectProperty: :canShowIn\n\tDomain: :Customer\n\tRange: :It\n\nObjectProperty: :canCall1\n\tDomain: :Customer\n\tRange: :Gym\n\nObjectProperty: :canCall2\n\tDomain: :Admin\n\tRange: :They\n\nObjectProperty: :canSet1\n\tDomain: :Trainer\n\tRange: :Time\n\nObjectProperty: :canSet2\n\tDomain: :Trainer\n\tRange: :Description\n\nObjectProperty: :canSet3\n\tDomain: :Trainer\n\tRange: :Room\n\nObjectProperty: :canSet4\n\tDomain: :Trainer\n\tRange: :Type\n\nObjectProperty: :canSet5\n\tDomain: :Trainer\n\tRange: :Number\n\nObjectProperty: :canNotify\n\tDomain: :Customer\n\tRange: :Session\n\nObjectProperty: :canManage\n\tDomain: :Customer\n\tRange: :Time\n\nObjectProperty: :canPayFor\n\tDomain: :Customer\n\tRange: :Subscription\n\nObjectProperty: :hasSession\n\tDomain: :Training\n\tRange: :TrainingSession\n\nObjectProperty: :canReceive\n\tDomain: :Customer\n\tRange: :Notification\n\nObjectProperty: :canConfirm\n\tDomain: :Customer\n\tRange: :Practicalperf_sports_stability\n\nObjectProperty: :canSee1\n\tDomain: :Customer\n\tRange: :Overview\n\nObjectProperty: :canSee2\n\tDomain: :Customer\n\tRange: :Lesson\n\nObjectProperty: :canSee3\n\tDomain: :Customer\n\tRange: :Record\n\nObjectProperty: :canSee4\n\tDomain: :Customer\n\tRange: :Timeslot\n\nObjectProperty: :canSee5\n\tDomain: :Trainer\n\tRange: :Timeslot\n\nObjectProperty: :canSee6\n\tDomain: :Trainer\n\tRange: :Practicalperf_sports_stability\n\nObjectProperty: :canSee7\n\tDomain: :Admin\n\tRange: :Session\n\nObjectProperty: :canSee8\n\tDomain: :Admin\n\tRange: :Time\n\nObjectProperty: :canSee9\n\tDomain: :Customer\n\tRange: :Information\n\nObjectProperty: :canSee10\n\tDomain: :Trainer\n\tRange: :Information\n\nObjectProperty: :canSee11\n\tDomain: :Admin\n\tRange: :Subscription\n\nObjectProperty: :canSee12\n\tDomain: :Admin\n\tRange: :Booking\n\n# Classes\nClass: :Customer\n\tAnnotations:\n\t\trdfs:comment \"Functional Role\"\n\nClass: :Information\n\n\nClass: :Subscription\n\n\nClass: :MembershipType\n\tSubClassOf: :Type\n\tAnnotations:\n\t\trdfs:label \"Membership Type\"\n\nClass: :Type\n\n\nClass: :Membership\n\n\nClass: :Practicalperf_sports_stability\n\n\nClass: :It\n\n\nClass: :Password\n\n\nClass: :Detail\n\n\nClass: :Overview\n\n\nClass: :Lesson\n\n\nClass: :Time\n\n\nClass: :Record\n\n\nClass: :Gym\n\n\nClass: :Application\n\n\nClass: :TrainingSession\n\tSubClassOf: :Session\n\tAnnotations:\n\t\trdfs:label \"Training Session\"\n\nClass: :Session\n\n\nClass: :Training\n\n\nClass: :Admin\n\tAnnotations:\n\t\trdfs:comment \"Functional Role\"\n\nClass: :Spot\n\n\nClass: :Timeslot\n\n\nClass: :Trainer\n\tAnnotations:\n\t\trdfs:comment \"Functional Role\"\n\nClass: :DailySports\n\tAnnotations:\n\t\trdfs:label \"Daily Sports\"\n\nClass: :Description\n\n\nClass: :Room\n\n\nClass: :Number\n\n\nClass: :What\n\n\nClass: :Notification\n\n\nClass: :System\n\n\nClass: :Fine\n\n\nClass: :They\n\n\nClass: :User\n\tAnnotations:\n\t\trdfs:comment \"Functional Role\"\n\nClass: :Which\n\n\nClass: :Method\n\n\nClass: :Booking\n\n\nClass: :Account\n\n\nClass: :Daily\n\n\nClass: :Sports\n\n\nClass: :Person\n\n\nClass: :Show\n\n\nClass: :ReturnCustomer\n\tAnnotations:\n\t\trdfs:label \"Return Customer\",\n\t\trdfs:comment \"Functional Role\"\n\n",
+  "stories": [
+    {
+      "number": 1,
+      "text": "As a new Customer, I want to open an account in the system, so I can start training at Daily Sports.",
+      "role": {
+        "name": "",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "account",
+        "compound": []
+      },
+      "json": {
+        "number": 1,
+        "text": "As a new Customer, I want to open an account in the system, so I can start training at Daily Sports.",
+        "iloc": [
+          4,
+          14
+        ],
+        "role": {
+          "text": "new Customer",
+          "indicator": "As a"
+        },
+        "means": {
+          "text": "open an account in the system",
+          "indicator": "I want to"
+        },
+        "ends": {
+          "text": "I can start training at Daily Sports",
+          "indicator": "So"
+        }
+      }
+    },
+    {
+      "number": 2,
+      "text": "As a Customer, I want to add my personal information, so I meet the requirements of the gym for signing up.",
+      "role": {
+        "name": "Customer",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "information",
+        "compound": []
+      },
+      "json": {
+        "number": 2,
+        "text": "As a Customer, I want to add my personal information, so I meet the requirements of the gym for signing up.",
+        "iloc": [
+          3,
+          11
+        ],
+        "role": {
+          "text": "Customer",
+          "indicator": "As a"
+        },
+        "means": {
+          "text": "add my personal information",
+          "indicator": "I want to"
+        },
+        "ends": {
+          "text": "I meet the requirements of the gym for signing up",
+          "indicator": "So"
+        }
+      }
+    },
+    {
+      "number": 3,
+      "text": "As a Customer, I want to add my banking details, so I can pay for my subscription.",
+      "role": {
+        "name": "Customer",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "details",
+        "compound": [
+          "banking",
+          "details"
+        ]
+      },
+      "json": {
+        "number": 3,
+        "text": "As a Customer, I want to add my banking details, so I can pay for my subscription.",
+        "iloc": [
+          3,
+          11
+        ],
+        "role": {
+          "text": "Customer",
+          "indicator": "As a"
+        },
+        "means": {
+          "text": "add my banking details",
+          "indicator": "I want to"
+        },
+        "ends": {
+          "text": "I can pay for my subscription",
+          "indicator": "So"
+        }
+      }
+    },
+    {
+      "number": 4,
+      "text": "As a Customer, I want to be able to choose my membership type, so I can pay according to my wishes.",
+      "role": {
+        "name": "Customer",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "type",
+        "compound": [
+          "membership",
+          "type"
+        ]
+      },
+      "json": {
+        "number": 4,
+        "text": "As a Customer, I want to be able to choose my membership type, so I can pay according to my wishes.",
+        "iloc": [
+          3,
+          14
+        ],
+        "role": {
+          "text": "Customer",
+          "indicator": "As a"
+        },
+        "means": {
+          "text": "choose my membership type",
+          "indicator": "I want to be able to"
+        },
+        "ends": {
+          "text": "I can pay according to my wishes",
+          "indicator": "So"
+        }
+      }
+    },
+    {
+      "number": 5,
+      "text": "As a Customer, I want to be able to extend my subscription for Daily Sports, so I can continue working out.",
+      "role": {
+        "name": "Customer",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "subscription",
+        "compound": []
+      },
+      "json": {
+        "number": 5,
+        "text": "As a Customer, I want to be able to extend my subscription for Daily Sports, so I can continue working out.",
+        "iloc": [
+          3,
+          16
+        ],
+        "role": {
+          "text": "Customer",
+          "indicator": "As a"
+        },
+        "means": {
+          "text": "extend my subscription for Daily Sports",
+          "indicator": "I want to be able to"
+        },
+        "ends": {
+          "text": "I can continue working out",
+          "indicator": "So"
+        }
+      }
+    },
+    {
+      "number": 6,
+      "text": "As a Customer, I want to know how long my subscription lasts, so I know when I need to extend it.",
+      "role": {
+        "name": "Customer",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "PracticalPerf_sports_Stability",
+        "compound": []
+      },
+      "json": {
+        "number": 6,
+        "text": "As a Customer, I want to know how long my subscription lasts, so I know when I need to extend it.",
+        "iloc": [
+          3,
+          13,
+          16
+        ],
+        "role": {
+          "text": "Customer",
+          "indicator": "As a"
+        },
+        "means": {
+          "text": "know how long my subscription lasts",
+          "indicator": "I want to"
+        },
+        "ends": {
+          "text": "I know when I need to extend it",
+          "indicator": "So"
+        }
+      }
+    },
+    {
+      "number": 7,
+      "text": "As a Returning Customer, I want to be able to use my previous information, so that sign-up is easier.",
+      "role": {
+        "name": "Customer",
+        "compound": [
+          "Returning",
+          "Customer"
+        ]
+      },
+      "means": {
+        "mainObject": "information",
+        "compound": []
+      },
+      "json": {
+        "number": 7,
+        "text": "As a Returning Customer, I want to be able to use my previous information, so that sign-up is easier.",
+        "iloc": [
+          4
+        ],
+        "role": {
+          "text": "Returning Customer",
+          "indicator": "As a"
+        },
+        "means": {
+          "text": "use my previous information",
+          "indicator": "I want to be able to"
+        },
+        "ends": {
+          "text": "sign-up is easier",
+          "indicator": "So that"
+        }
+      }
+    },
+    {
+      "number": 8,
+      "text": "As a Customer, I want to be able to unsubscribe.",
+      "role": {
+        "name": "Customer",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "PracticalPerf_sports_Stability",
+        "compound": []
+      },
+      "json": {
+        "number": 8,
+        "text": "As a Customer, I want to be able to unsubscribe.",
+        "iloc": [
+          3
+        ],
+        "role": {
+          "text": "Customer",
+          "indicator": "As a"
+        },
+        "means": {
+          "text": "unsubscribe",
+          "indicator": "I want to be able to"
+        }
+      }
+    },
+    {
+      "number": 9,
+      "text": "As a Customer, I want to be able to reset my password.",
+      "role": {
+        "name": "Customer",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "password",
+        "compound": []
+      },
+      "json": {
+        "number": 9,
+        "text": "As a Customer, I want to be able to reset my password.",
+        "iloc": [
+          3
+        ],
+        "role": {
+          "text": "Customer",
+          "indicator": "As a"
+        },
+        "means": {
+          "text": "reset my password",
+          "indicator": "I want to be able to"
+        }
+      }
+    },
+    {
+      "number": 10,
+      "text": "As a Customer, I want to be able to change my personal details.",
+      "role": {
+        "name": "Customer",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "details",
+        "compound": []
+      },
+      "json": {
+        "number": 10,
+        "text": "As a Customer, I want to be able to change my personal details.",
+        "iloc": [
+          3
+        ],
+        "role": {
+          "text": "Customer",
+          "indicator": "As a"
+        },
+        "means": {
+          "text": "change my personal details",
+          "indicator": "I want to be able to"
+        }
+      }
+    },
+    {
+      "number": 11,
+      "text": "As a Customer, I want to be able to update my payment information.",
+      "role": {
+        "name": "Customer",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "information",
+        "compound": [
+          "payment",
+          "information"
+        ]
+      },
+      "json": {
+        "number": 11,
+        "text": "As a Customer, I want to be able to update my payment information.",
+        "iloc": [
+          3
+        ],
+        "role": {
+          "text": "Customer",
+          "indicator": "As a"
+        },
+        "means": {
+          "text": "update my payment information",
+          "indicator": "I want to be able to"
+        }
+      }
+    },
+    {
+      "number": 12,
+      "text": "As a Customer with a Family Membership, I want to see who is using my membership.",
+      "role": {
+        "name": "",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "membership",
+        "compound": []
+      },
+      "json": {
+        "number": 12,
+        "text": "As a Customer with a Family Membership, I want to see who is using my membership.",
+        "iloc": [
+          7
+        ],
+        "role": {
+          "text": "Customer with a Family Membership",
+          "indicator": "As a"
+        },
+        "means": {
+          "text": "see who is using my membership",
+          "indicator": "I want to"
+        }
+      }
+    },
+    {
+      "number": 13,
+      "text": "As a Customer with a Family Membership, I want to add a person to my membership, so that I can utilize it effectively.",
+      "role": {
+        "name": "",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "person",
+        "compound": []
+      },
+      "json": {
+        "number": 13,
+        "text": "As a Customer with a Family Membership, I want to add a person to my membership, so that I can utilize it effectively.",
+        "iloc": [
+          7,
+          18
+        ],
+        "role": {
+          "text": "Customer with a Family Membership",
+          "indicator": "As a"
+        },
+        "means": {
+          "text": "add a person to my membership",
+          "indicator": "I want to"
+        },
+        "ends": {
+          "text": "I can utilize it effectively",
+          "indicator": "So that"
+        }
+      }
+    },
+    {
+      "number": 14,
+      "text": "As a Customer with a Family Membership, I want to remove a person from my membership.",
+      "role": {
+        "name": "",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "person",
+        "compound": []
+      },
+      "json": {
+        "number": 14,
+        "text": "As a Customer with a Family Membership, I want to remove a person from my membership.",
+        "iloc": [
+          7
+        ],
+        "role": {
+          "text": "Customer with a Family Membership",
+          "indicator": "As a"
+        },
+        "means": {
+          "text": "remove a person from my membership",
+          "indicator": "I want to"
+        }
+      }
+    },
+    {
+      "number": 15,
+      "text": "As a Customer, I want to see an overview of all available lessons, so that I can choose which one to book.",
+      "role": {
+        "name": "Customer",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "overview",
+        "compound": []
+      },
+      "json": {
+        "number": 15,
+        "text": "As a Customer, I want to see an overview of all available lessons, so that I can choose which one to book.",
+        "iloc": [
+          3,
+          15
+        ],
+        "role": {
+          "text": "Customer",
+          "indicator": "As a"
+        },
+        "means": {
+          "text": "see an overview of all available lessons",
+          "indicator": "I want to"
+        },
+        "ends": {
+          "text": "I can choose which one to book",
+          "indicator": "So that"
+        }
+      }
+    },
+    {
+      "number": 16,
+      "text": "As a Customer, I want to see what future lessons I have booked, so that I can manage my time.",
+      "role": {
+        "name": "Customer",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "lessons",
+        "compound": []
+      },
+      "json": {
+        "number": 16,
+        "text": "As a Customer, I want to see what future lessons I have booked, so that I can manage my time.",
+        "iloc": [
+          3,
+          10,
+          15
+        ],
+        "role": {
+          "text": "Customer",
+          "indicator": "As a"
+        },
+        "means": {
+          "text": "see what future lessons I have booked",
+          "indicator": "I want to"
+        },
+        "ends": {
+          "text": "I can manage my time",
+          "indicator": "So that"
+        }
+      }
+    },
+    {
+      "number": 17,
+      "text": "As a Customer, I want to see a record of previous lessons I have booked, so I can track my progress.",
+      "role": {
+        "name": "Customer",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "record",
+        "compound": []
+      },
+      "json": {
+        "number": 17,
+        "text": "As a Customer, I want to see a record of previous lessons I have booked, so I can track my progress.",
+        "iloc": [
+          3,
+          12,
+          16
+        ],
+        "role": {
+          "text": "Customer",
+          "indicator": "As a"
+        },
+        "means": {
+          "text": "see a record of previous lessons I have booked",
+          "indicator": "I want to"
+        },
+        "ends": {
+          "text": "I can track my progress",
+          "indicator": "So"
+        }
+      }
+    },
+    {
+      "number": 18,
+      "text": "As a Customer, I want to be able to call the gym to book a lesson, so that I don't have to use the application.",
+      "role": {
+        "name": "Customer",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "gym",
+        "compound": []
+      },
+      "json": {
+        "number": 18,
+        "text": "As a Customer, I want to be able to call the gym to book a lesson, so that I don't have to use the application.",
+        "iloc": [
+          3,
+          18
+        ],
+        "role": {
+          "text": "Customer",
+          "indicator": "As a"
+        },
+        "means": {
+          "text": "call the gym to book a lesson",
+          "indicator": "I want to be able to"
+        },
+        "ends": {
+          "text": "I don't have to use the application",
+          "indicator": "So that"
+        }
+      }
+    },
+    {
+      "number": 19,
+      "text": "As a Customer, I want to be able to call the gym to cancel a lesson, so that I don't have to use the application.",
+      "role": {
+        "name": "Customer",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "gym",
+        "compound": []
+      },
+      "json": {
+        "number": 19,
+        "text": "As a Customer, I want to be able to call the gym to cancel a lesson, so that I don't have to use the application.",
+        "iloc": [
+          3,
+          18
+        ],
+        "role": {
+          "text": "Customer",
+          "indicator": "As a"
+        },
+        "means": {
+          "text": "call the gym to cancel a lesson",
+          "indicator": "I want to be able to"
+        },
+        "ends": {
+          "text": "I don't have to use the application",
+          "indicator": "So that"
+        }
+      }
+    },
+    {
+      "number": 20,
+      "text": "As an Admin, I want to be able to edit all personal training sessions.",
+      "role": {
+        "name": "Admin",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "sessions",
+        "compound": [
+          "training",
+          "sessions"
+        ]
+      },
+      "json": {
+        "number": 20,
+        "text": "As an Admin, I want to be able to edit all personal training sessions.",
+        "iloc": [
+          3
+        ],
+        "role": {
+          "text": "Admin",
+          "indicator": "As an"
+        },
+        "means": {
+          "text": "edit all personal training sessions",
+          "indicator": "I want to be able to"
+        }
+      }
+    },
+    {
+      "number": 21,
+      "text": "As a Customer, I want to call the gym to book a personal training session, so that I don't have to use the application.",
+      "role": {
+        "name": "Customer",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "gym",
+        "compound": []
+      },
+      "json": {
+        "number": 21,
+        "text": "As a Customer, I want to call the gym to book a personal training session, so that I don't have to use the application.",
+        "iloc": [
+          3,
+          17
+        ],
+        "role": {
+          "text": "Customer",
+          "indicator": "As a"
+        },
+        "means": {
+          "text": "call the gym to book a personal training session",
+          "indicator": "I want to"
+        },
+        "ends": {
+          "text": "I don't have to use the application",
+          "indicator": "So that"
+        }
+      }
+    },
+    {
+      "number": 22,
+      "text": "As a Customer, I want to call the gym to cancel a personal training session, so that I don't have to use the application.",
+      "role": {
+        "name": "Customer",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "gym",
+        "compound": []
+      },
+      "json": {
+        "number": 22,
+        "text": "As a Customer, I want to call the gym to cancel a personal training session, so that I don't have to use the application.",
+        "iloc": [
+          3,
+          17
+        ],
+        "role": {
+          "text": "Customer",
+          "indicator": "As a"
+        },
+        "means": {
+          "text": "call the gym to cancel a personal training session",
+          "indicator": "I want to"
+        },
+        "ends": {
+          "text": "I don't have to use the application",
+          "indicator": "So that"
+        }
+      }
+    },
+    {
+      "number": 23,
+      "text": "As a Customer, I want to be able to book a spot for the free practice area, so that I know it will have capacity for me when I arrive.",
+      "role": {
+        "name": "Customer",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "spot",
+        "compound": []
+      },
+      "json": {
+        "number": 23,
+        "text": "As a Customer, I want to be able to book a spot for the free practice area, so that I know it will have capacity for me when I arrive.",
+        "iloc": [
+          3,
+          19,
+          28
+        ],
+        "role": {
+          "text": "Customer",
+          "indicator": "As a"
+        },
+        "means": {
+          "text": "book a spot for the free practice area",
+          "indicator": "I want to be able to"
+        },
+        "ends": {
+          "text": "I know it will have capacity for me when I arrive",
+          "indicator": "So that"
+        }
+      }
+    },
+    {
+      "number": 24,
+      "text": "As a Customer, I want to see how many spots have been booked for a given timeslot.",
+      "role": {
+        "name": "Customer",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "timeslot",
+        "compound": []
+      },
+      "json": {
+        "number": 24,
+        "text": "As a Customer, I want to see how many spots have been booked for a given timeslot.",
+        "iloc": [
+          3
+        ],
+        "role": {
+          "text": "Customer",
+          "indicator": "As a"
+        },
+        "means": {
+          "text": "see how many spots have been booked for a given timeslot",
+          "indicator": "I want to"
+        }
+      }
+    },
+    {
+      "number": 25,
+      "text": "As a Trainer, I want to see which rooms are free at a given timeslot, so I can organize a lesson.",
+      "role": {
+        "name": "Trainer",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "timeslot",
+        "compound": []
+      },
+      "json": {
+        "number": 25,
+        "text": "As a Trainer, I want to see which rooms are free at a given timeslot, so I can organize a lesson.",
+        "iloc": [
+          3,
+          16
+        ],
+        "role": {
+          "text": "Trainer",
+          "indicator": "As a"
+        },
+        "means": {
+          "text": "see which rooms are free at a given timeslot",
+          "indicator": "I want to"
+        },
+        "ends": {
+          "text": "I can organize a lesson",
+          "indicator": "So"
+        }
+      }
+    },
+    {
+      "number": 26,
+      "text": "As a Trainer, I want to add a lesson to the schedule, so customers would be able to sign-up.",
+      "role": {
+        "name": "Trainer",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "lesson",
+        "compound": []
+      },
+      "json": {
+        "number": 26,
+        "text": "As a Trainer, I want to add a lesson to the schedule, so customers would be able to sign-up.",
+        "iloc": [
+          3
+        ],
+        "role": {
+          "text": "Trainer",
+          "indicator": "As a"
+        },
+        "means": {
+          "text": "add a lesson to the schedule",
+          "indicator": "I want to"
+        },
+        "ends": {
+          "text": "customers would be able to sign-up",
+          "indicator": "So"
+        }
+      }
+    },
+    {
+      "number": 27,
+      "text": "As a Trainer, I want to set the time of the lesson, so the customers know when they should be at Daily Sports.",
+      "role": {
+        "name": "Trainer",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "time",
+        "compound": []
+      },
+      "json": {
+        "number": 27,
+        "text": "As a Trainer, I want to set the time of the lesson, so the customers know when they should be at Daily Sports.",
+        "iloc": [
+          3
+        ],
+        "role": {
+          "text": "Trainer",
+          "indicator": "As a"
+        },
+        "means": {
+          "text": "set the time of the lesson",
+          "indicator": "I want to"
+        },
+        "ends": {
+          "text": "the customers know when they should be at Daily Sports",
+          "indicator": "So"
+        }
+      }
+    },
+    {
+      "number": 28,
+      "text": "As a Trainer, I want to set the description of the lesson, so the customers know what to expect from it.",
+      "role": {
+        "name": "Trainer",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "description",
+        "compound": []
+      },
+      "json": {
+        "number": 28,
+        "text": "As a Trainer, I want to set the description of the lesson, so the customers know what to expect from it.",
+        "iloc": [
+          3
+        ],
+        "role": {
+          "text": "Trainer",
+          "indicator": "As a"
+        },
+        "means": {
+          "text": "set the description of the lesson",
+          "indicator": "I want to"
+        },
+        "ends": {
+          "text": "the customers know what to expect from it",
+          "indicator": "So"
+        }
+      }
+    },
+    {
+      "number": 29,
+      "text": "As a Trainer, I want to set the room of the lesson, so the customers know where to go.",
+      "role": {
+        "name": "Trainer",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "room",
+        "compound": []
+      },
+      "json": {
+        "number": 29,
+        "text": "As a Trainer, I want to set the room of the lesson, so the customers know where to go.",
+        "iloc": [
+          3
+        ],
+        "role": {
+          "text": "Trainer",
+          "indicator": "As a"
+        },
+        "means": {
+          "text": "set the room of the lesson",
+          "indicator": "I want to"
+        },
+        "ends": {
+          "text": "the customers know where to go",
+          "indicator": "So"
+        }
+      }
+    },
+    {
+      "number": 30,
+      "text": "As a Trainer, I want to set the type of lesson.",
+      "role": {
+        "name": "Trainer",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "type",
+        "compound": []
+      },
+      "json": {
+        "number": 30,
+        "text": "As a Trainer, I want to set the type of lesson.",
+        "iloc": [
+          3
+        ],
+        "role": {
+          "text": "Trainer",
+          "indicator": "As a"
+        },
+        "means": {
+          "text": "set the type of lesson",
+          "indicator": "I want to"
+        }
+      }
+    },
+    {
+      "number": 31,
+      "text": "As a Trainer, I want to set the maximum number of people allowed in the lesson, so that we don't over-crowd a room.",
+      "role": {
+        "name": "Trainer",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "number",
+        "compound": []
+      },
+      "json": {
+        "number": 31,
+        "text": "As a Trainer, I want to set the maximum number of people allowed in the lesson, so that we don't over-crowd a room.",
+        "iloc": [
+          3
+        ],
+        "role": {
+          "text": "Trainer",
+          "indicator": "As a"
+        },
+        "means": {
+          "text": "set the maximum number of people allowed in the lesson",
+          "indicator": "I want to"
+        },
+        "ends": {
+          "text": "we don't over-crowd a room",
+          "indicator": "So that"
+        }
+      }
+    },
+    {
+      "number": 32,
+      "text": "As a Trainer, I want to be able to see what my schedule is.",
+      "role": {
+        "name": "Trainer",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "PracticalPerf_sports_Stability",
+        "compound": []
+      },
+      "json": {
+        "number": 32,
+        "text": "As a Trainer, I want to be able to see what my schedule is.",
+        "iloc": [
+          3
+        ],
+        "role": {
+          "text": "Trainer",
+          "indicator": "As a"
+        },
+        "means": {
+          "text": "see what my schedule is",
+          "indicator": "I want to be able to"
+        }
+      }
+    },
+    {
+      "number": 33,
+      "text": "As a Trainer, I want to be the only Trainer who can edit my lessons.",
+      "role": {
+        "name": "Trainer",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "lessons",
+        "compound": []
+      },
+      "json": {
+        "number": 33,
+        "text": "As a Trainer, I want to be the only Trainer who can edit my lessons.",
+        "iloc": [
+          3
+        ],
+        "role": {
+          "text": "Trainer",
+          "indicator": "As a"
+        },
+        "means": {
+          "text": "be the only Trainer who can edit my lessons",
+          "indicator": "I want to"
+        }
+      }
+    },
+    {
+      "number": 34,
+      "text": "As a Trainer, I want to edit the time of the lesson, so a more suitable time can be set.",
+      "role": {
+        "name": "Trainer",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "time",
+        "compound": []
+      },
+      "json": {
+        "number": 34,
+        "text": "As a Trainer, I want to edit the time of the lesson, so a more suitable time can be set.",
+        "iloc": [
+          3
+        ],
+        "role": {
+          "text": "Trainer",
+          "indicator": "As a"
+        },
+        "means": {
+          "text": "edit the time of the lesson",
+          "indicator": "I want to"
+        },
+        "ends": {
+          "text": "a more suitable time can be set",
+          "indicator": "So"
+        }
+      }
+    },
+    {
+      "number": 35,
+      "text": "As a Trainer, I want to change the room of the lesson, so I can move the lesson to another place.",
+      "role": {
+        "name": "Trainer",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "room",
+        "compound": []
+      },
+      "json": {
+        "number": 35,
+        "text": "As a Trainer, I want to change the room of the lesson, so I can move the lesson to another place.",
+        "iloc": [
+          3,
+          13
+        ],
+        "role": {
+          "text": "Trainer",
+          "indicator": "As a"
+        },
+        "means": {
+          "text": "change the room of the lesson",
+          "indicator": "I want to"
+        },
+        "ends": {
+          "text": "I can move the lesson to another place",
+          "indicator": "So"
+        }
+      }
+    },
+    {
+      "number": 36,
+      "text": "As a Trainer, I want to edit the description of the lesson, so the customers know what to expect.",
+      "role": {
+        "name": "Trainer",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "description",
+        "compound": []
+      },
+      "json": {
+        "number": 36,
+        "text": "As a Trainer, I want to edit the description of the lesson, so the customers know what to expect.",
+        "iloc": [
+          3
+        ],
+        "role": {
+          "text": "Trainer",
+          "indicator": "As a"
+        },
+        "means": {
+          "text": "edit the description of the lesson",
+          "indicator": "I want to"
+        },
+        "ends": {
+          "text": "the customers know what to expect",
+          "indicator": "So"
+        }
+      }
+    },
+    {
+      "number": 37,
+      "text": "As a Trainer, I want to edit the maximum number of people allowed in the lesson, so it is correct for this lesson.",
+      "role": {
+        "name": "Trainer",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "number",
+        "compound": []
+      },
+      "json": {
+        "number": 37,
+        "text": "As a Trainer, I want to edit the maximum number of people allowed in the lesson, so it is correct for this lesson.",
+        "iloc": [
+          3
+        ],
+        "role": {
+          "text": "Trainer",
+          "indicator": "As a"
+        },
+        "means": {
+          "text": "edit the maximum number of people allowed in the lesson",
+          "indicator": "I want to"
+        },
+        "ends": {
+          "text": "it is correct for this lesson",
+          "indicator": "So"
+        }
+      }
+    },
+    {
+      "number": 38,
+      "text": "As an Admin, I want to be able to edit any lesson.",
+      "role": {
+        "name": "Admin",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "lesson",
+        "compound": []
+      },
+      "json": {
+        "number": 38,
+        "text": "As an Admin, I want to be able to edit any lesson.",
+        "iloc": [
+          3
+        ],
+        "role": {
+          "text": "Admin",
+          "indicator": "As an"
+        },
+        "means": {
+          "text": "edit any lesson",
+          "indicator": "I want to be able to"
+        }
+      }
+    },
+    {
+      "number": 39,
+      "text": "As a Trainer, I want to cancel a lesson, so customers won't show up in an empty room when I can't make it.",
+      "role": {
+        "name": "Trainer",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "lesson",
+        "compound": []
+      },
+      "json": {
+        "number": 39,
+        "text": "As a Trainer, I want to cancel a lesson, so customers won't show up in an empty room when I can't make it.",
+        "iloc": [
+          3,
+          20
+        ],
+        "role": {
+          "text": "Trainer",
+          "indicator": "As a"
+        },
+        "means": {
+          "text": "cancel a lesson",
+          "indicator": "I want to"
+        },
+        "ends": {
+          "text": "customers won't show up in an empty room when I can't make it",
+          "indicator": "So"
+        }
+      }
+    },
+    {
+      "number": 40,
+      "text": "As an Admin, I want to cancel a lesson, so customers won't show up in an empty room when the Trainer can't make it.",
+      "role": {
+        "name": "Admin",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "lesson",
+        "compound": []
+      },
+      "json": {
+        "number": 40,
+        "text": "As an Admin, I want to cancel a lesson, so customers won't show up in an empty room when the Trainer can't make it.",
+        "iloc": [
+          3
+        ],
+        "role": {
+          "text": "Admin",
+          "indicator": "As an"
+        },
+        "means": {
+          "text": "cancel a lesson",
+          "indicator": "I want to"
+        },
+        "ends": {
+          "text": "customers won't show up in an empty room when the Trainer can't make it",
+          "indicator": "So"
+        }
+      }
+    },
+    {
+      "number": 41,
+      "text": "As a Customer, I want to receive a notification when my booked lesson is canceled, so I won't go to Daily Sports for a canceled lesson.",
+      "role": {
+        "name": "Customer",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "notification",
+        "compound": []
+      },
+      "json": {
+        "number": 41,
+        "text": "As a Customer, I want to receive a notification when my booked lesson is canceled, so I won't go to Daily Sports for a canceled lesson.",
+        "iloc": [
+          3,
+          16
+        ],
+        "role": {
+          "text": "Customer",
+          "indicator": "As a"
+        },
+        "means": {
+          "text": "receive a notification when my booked lesson is canceled",
+          "indicator": "I want to"
+        },
+        "ends": {
+          "text": "I won't go to Daily Sports for a canceled lesson",
+          "indicator": "So"
+        }
+      }
+    },
+    {
+      "number": 42,
+      "text": "As a Customer, I want to be notified if I didn't go to a session I had booked, so that I know it happened.",
+      "role": {
+        "name": "Customer",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "session",
+        "compound": []
+      },
+      "json": {
+        "number": 42,
+        "text": "As a Customer, I want to be notified if I didn't go to a session I had booked, so that I know it happened.",
+        "iloc": [
+          3,
+          9,
+          16,
+          21
+        ],
+        "role": {
+          "text": "Customer",
+          "indicator": "As a"
+        },
+        "means": {
+          "text": "be notified if I didn't go to a session I had booked",
+          "indicator": "I want to"
+        },
+        "ends": {
+          "text": "I know it happened",
+          "indicator": "So that"
+        }
+      }
+    },
+    {
+      "number": 43,
+      "text": "As an Admin, I want to see if a customer did not show up for a session they had booked, so that I can take further action.",
+      "role": {
+        "name": "Admin",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "session",
+        "compound": []
+      },
+      "json": {
+        "number": 43,
+        "text": "As an Admin, I want to see if a customer did not show up for a session they had booked, so that I can take further action.",
+        "iloc": [
+          3,
+          22
+        ],
+        "role": {
+          "text": "Admin",
+          "indicator": "As an"
+        },
+        "means": {
+          "text": "see if a customer did not show up for a session they had booked",
+          "indicator": "I want to"
+        },
+        "ends": {
+          "text": "I can take further action",
+          "indicator": "So that"
+        }
+      }
+    },
+    {
+      "number": 44,
+      "text": "As an Admin, I want to see how many times a customer did not show up for a session.",
+      "role": {
+        "name": "Admin",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "times",
+        "compound": []
+      },
+      "json": {
+        "number": 44,
+        "text": "As an Admin, I want to see how many times a customer did not show up for a session.",
+        "iloc": [
+          3
+        ],
+        "role": {
+          "text": "Admin",
+          "indicator": "As an"
+        },
+        "means": {
+          "text": "see how many times a customer did not show up for a session",
+          "indicator": "I want to"
+        }
+      }
+    },
+    {
+      "number": 45,
+      "text": "As an Admin, I want to have the system to issue a fine if a customer does not show up more than 2 times, so that we can deter no-shows.",
+      "role": {
+        "name": "Admin",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "system",
+        "compound": []
+      },
+      "json": {
+        "number": 45,
+        "text": "As an Admin, I want to have the system to issue a fine if a customer does not show up more than 2 times, so that we can deter no-shows.",
+        "iloc": [
+          3
+        ],
+        "role": {
+          "text": "Admin",
+          "indicator": "As an"
+        },
+        "means": {
+          "text": "have the system to issue a fine if a customer does not show up more than 2 times",
+          "indicator": "I want to"
+        },
+        "ends": {
+          "text": "we can deter no-shows",
+          "indicator": "So that"
+        }
+      }
+    },
+    {
+      "number": 46,
+      "text": "As an Admin, I want to have the fines for repeat offenders to increase exponentially for each subsequent offense, so we can deter no-shows.",
+      "role": {
+        "name": "Admin",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "fines",
+        "compound": []
+      },
+      "json": {
+        "number": 46,
+        "text": "As an Admin, I want to have the fines for repeat offenders to increase exponentially for each subsequent offense, so we can deter no-shows.",
+        "iloc": [
+          3
+        ],
+        "role": {
+          "text": "Admin",
+          "indicator": "As an"
+        },
+        "means": {
+          "text": "have the fines for repeat offenders to increase exponentially for each subsequent offense",
+          "indicator": "I want to"
+        },
+        "ends": {
+          "text": "we can deter no-shows",
+          "indicator": "So"
+        }
+      }
+    },
+    {
+      "number": 47,
+      "text": "As an Admin I want to add a new trainer to the system, so the new trainer can start working.",
+      "role": {
+        "name": "Admin",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "trainer",
+        "compound": []
+      },
+      "json": {
+        "number": 47,
+        "text": "As an Admin I want to add a new trainer to the system, so the new trainer can start working.",
+        "iloc": [
+          3
+        ],
+        "role": {
+          "text": "Admin",
+          "indicator": "As an"
+        },
+        "means": {
+          "text": "add a new trainer to the system",
+          "indicator": "I want to"
+        },
+        "ends": {
+          "text": "the new trainer can start working",
+          "indicator": "So"
+        }
+      }
+    },
+    {
+      "number": 48,
+      "text": "As an Admin I want to add a new admin to the system, so the new admin can start working.",
+      "role": {
+        "name": "Admin",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "admin",
+        "compound": []
+      },
+      "json": {
+        "number": 48,
+        "text": "As an Admin I want to add a new admin to the system, so the new admin can start working.",
+        "iloc": [
+          3
+        ],
+        "role": {
+          "text": "Admin",
+          "indicator": "As an"
+        },
+        "means": {
+          "text": "add a new admin to the system",
+          "indicator": "I want to"
+        },
+        "ends": {
+          "text": "the new admin can start working",
+          "indicator": "So"
+        }
+      }
+    },
+    {
+      "number": 49,
+      "text": "As an Admin I want to remove a trainer from the system, so they cannot access the system anymore.",
+      "role": {
+        "name": "Admin",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "trainer",
+        "compound": []
+      },
+      "json": {
+        "number": 49,
+        "text": "As an Admin I want to remove a trainer from the system, so they cannot access the system anymore.",
+        "iloc": [
+          3
+        ],
+        "role": {
+          "text": "Admin",
+          "indicator": "As an"
+        },
+        "means": {
+          "text": "remove a trainer from the system",
+          "indicator": "I want to"
+        },
+        "ends": {
+          "text": "they cannot access the system anymore",
+          "indicator": "So"
+        }
+      }
+    },
+    {
+      "number": 50,
+      "text": "As a User, I want to log in to the system, so that I can use the system.",
+      "role": {
+        "name": "User",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "system",
+        "compound": []
+      },
+      "json": {
+        "number": 50,
+        "text": "As a User, I want to log in to the system, so that I can use the system.",
+        "iloc": [
+          3,
+          13
+        ],
+        "role": {
+          "text": "User",
+          "indicator": "As a"
+        },
+        "means": {
+          "text": "log in to the system",
+          "indicator": "I want to"
+        },
+        "ends": {
+          "text": "I can use the system",
+          "indicator": "So that"
+        }
+      }
+    },
+    {
+      "number": 51,
+      "text": "As a Customer, I want to receive notifications by the method which I prefer, so that I am able to see them and not be annoyed by them.",
+      "role": {
+        "name": "Customer",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "notifications",
+        "compound": []
+      },
+      "json": {
+        "number": 51,
+        "text": "As a Customer, I want to receive notifications by the method which I prefer, so that I am able to see them and not be annoyed by them.",
+        "iloc": [
+          3,
+          12,
+          16
+        ],
+        "role": {
+          "text": "Customer",
+          "indicator": "As a"
+        },
+        "means": {
+          "text": "receive notifications by the method which I prefer",
+          "indicator": "I want to"
+        },
+        "ends": {
+          "text": "I cansee them and not be annoyed by them",
+          "indicator": "So that"
+        }
+      }
+    },
+    {
+      "number": 52,
+      "text": "As a Customer, I want to receive notifications by email.",
+      "role": {
+        "name": "Customer",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "notifications",
+        "compound": []
+      },
+      "json": {
+        "number": 52,
+        "text": "As a Customer, I want to receive notifications by email.",
+        "iloc": [
+          3
+        ],
+        "role": {
+          "text": "Customer",
+          "indicator": "As a"
+        },
+        "means": {
+          "text": "receive notifications by email",
+          "indicator": "I want to"
+        }
+      }
+    },
+    {
+      "number": 53,
+      "text": "As a Customer, I want to receive push notifications from the system.",
+      "role": {
+        "name": "Customer",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "notifications",
+        "compound": [
+          "push",
+          "notifications"
+        ]
+      },
+      "json": {
+        "number": 53,
+        "text": "As a Customer, I want to receive push notifications from the system.",
+        "iloc": [
+          3
+        ],
+        "role": {
+          "text": "Customer",
+          "indicator": "As a"
+        },
+        "means": {
+          "text": "receive push notifications from the system",
+          "indicator": "I want to"
+        }
+      }
+    },
+    {
+      "number": 54,
+      "text": "As a Customer, I want to choose what to receive notifications for.",
+      "role": {
+        "name": "Customer",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "what",
+        "compound": []
+      },
+      "json": {
+        "number": 54,
+        "text": "As a Customer, I want to choose what to receive notifications for.",
+        "iloc": [
+          3
+        ],
+        "role": {
+          "text": "Customer",
+          "indicator": "As a"
+        },
+        "means": {
+          "text": "choose what to receive notifications for",
+          "indicator": "I want to"
+        }
+      }
+    },
+    {
+      "number": 55,
+      "text": "As a Customer, I want to receive a notification when a training session is canceled.",
+      "role": {
+        "name": "Customer",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "notification",
+        "compound": []
+      },
+      "json": {
+        "number": 55,
+        "text": "As a Customer, I want to receive a notification when a training session is canceled.",
+        "iloc": [
+          3
+        ],
+        "role": {
+          "text": "Customer",
+          "indicator": "As a"
+        },
+        "means": {
+          "text": "receive a notification when a training session is canceled",
+          "indicator": "I want to"
+        }
+      }
+    },
+    {
+      "number": 56,
+      "text": "As a Customer, I want to confirm that I am aware that my booking has been canceled.",
+      "role": {
+        "name": "Customer",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "PracticalPerf_sports_Stability",
+        "compound": []
+      },
+      "json": {
+        "number": 56,
+        "text": "As a Customer, I want to confirm that I am aware that my booking has been canceled.",
+        "iloc": [
+          3,
+          8
+        ],
+        "role": {
+          "text": "Customer",
+          "indicator": "As a"
+        },
+        "means": {
+          "text": "confirm that I am aware that my booking has been canceled",
+          "indicator": "I want to"
+        }
+      }
+    },
+    {
+      "number": 57,
+      "text": "As an Admin, I want to know which customers are aware that their booking has been canceled, so that I can call them if they aren't.",
+      "role": {
+        "name": "Admin",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "which",
+        "compound": []
+      },
+      "json": {
+        "number": 57,
+        "text": "As an Admin, I want to know which customers are aware that their booking has been canceled, so that I can call them if they aren't.",
+        "iloc": [
+          3,
+          19
+        ],
+        "role": {
+          "text": "Admin",
+          "indicator": "As an"
+        },
+        "means": {
+          "text": "know which customers are aware that their booking has been canceled",
+          "indicator": "I want to"
+        },
+        "ends": {
+          "text": "I can call them if they aren't",
+          "indicator": "So that"
+        }
+      }
+    },
+    {
+      "number": 58,
+      "text": "As a Customer, I want to see an overview of my personal information.",
+      "role": {
+        "name": "Customer",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "overview",
+        "compound": []
+      },
+      "json": {
+        "number": 58,
+        "text": "As a Customer, I want to see an overview of my personal information.",
+        "iloc": [
+          3
+        ],
+        "role": {
+          "text": "Customer",
+          "indicator": "As a"
+        },
+        "means": {
+          "text": "see an overview of my personal information",
+          "indicator": "I want to"
+        }
+      }
+    },
+    {
+      "number": 59,
+      "text": "As a Customer, I want to see information about my membership.",
+      "role": {
+        "name": "Customer",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "information",
+        "compound": []
+      },
+      "json": {
+        "number": 59,
+        "text": "As a Customer, I want to see information about my membership.",
+        "iloc": [
+          3
+        ],
+        "role": {
+          "text": "Customer",
+          "indicator": "As a"
+        },
+        "means": {
+          "text": "see information about my membership",
+          "indicator": "I want to"
+        }
+      }
+    },
+    {
+      "number": 60,
+      "text": "As a Trainer, I want to see information about my past and future training sessions.",
+      "role": {
+        "name": "Trainer",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "information",
+        "compound": []
+      },
+      "json": {
+        "number": 60,
+        "text": "As a Trainer, I want to see information about my past and future training sessions.",
+        "iloc": [
+          3
+        ],
+        "role": {
+          "text": "Trainer",
+          "indicator": "As a"
+        },
+        "means": {
+          "text": "see information about my past and future training sessions",
+          "indicator": "I want to"
+        }
+      }
+    },
+    {
+      "number": 61,
+      "text": "As a Customer, I want to have a method by which I can check-in.",
+      "role": {
+        "name": "Customer",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "method",
+        "compound": []
+      },
+      "json": {
+        "number": 61,
+        "text": "As a Customer, I want to have a method by which I can check-in.",
+        "iloc": [
+          3,
+          11
+        ],
+        "role": {
+          "text": "Customer",
+          "indicator": "As a"
+        },
+        "means": {
+          "text": "have a method by which I can check-in",
+          "indicator": "I want to"
+        }
+      }
+    },
+    {
+      "number": 62,
+      "text": "As an Admin, I want to see if the Customer who is checking-in has a subscription.",
+      "role": {
+        "name": "Admin",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "subscription",
+        "compound": []
+      },
+      "json": {
+        "number": 62,
+        "text": "As an Admin, I want to see if the Customer who is checking-in has a subscription.",
+        "iloc": [
+          3
+        ],
+        "role": {
+          "text": "Admin",
+          "indicator": "As an"
+        },
+        "means": {
+          "text": "see if the Customer who is checking-in has a subscription",
+          "indicator": "I want to"
+        }
+      }
+    },
+    {
+      "number": 63,
+      "text": "As an Admin, I want to see if the Customer who is checking-in has any bookings.",
+      "role": {
+        "name": "Admin",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "bookings",
+        "compound": []
+      },
+      "json": {
+        "number": 63,
+        "text": "As an Admin, I want to see if the Customer who is checking-in has any bookings.",
+        "iloc": [
+          3
+        ],
+        "role": {
+          "text": "Admin",
+          "indicator": "As an"
+        },
+        "means": {
+          "text": "see if the Customer who is checking-in has any bookings",
+          "indicator": "I want to"
+        }
+      }
+    }
+  ],
+  "failedStories": [],
+  "classes": [
+    {
+      "name": "Customer",
+      "parent": "",
+      "isRole": true,
+      "stories": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45,
+        51,
+        51,
+        51,
+        51,
+        51,
+        51,
+        51,
+        51,
+        51,
+        51,
+        51,
+        51,
+        51,
+        51,
+        51,
+        51,
+        51,
+        51,
+        51,
+        51,
+        51,
+        51,
+        51,
+        51,
+        51,
+        51,
+        51,
+        51,
+        51,
+        51,
+        51,
+        51,
+        51,
+        51,
+        51,
+        51,
+        51,
+        51,
+        51,
+        51,
+        51,
+        51,
+        51,
+        51,
+        51,
+        51,
+        51,
+        51,
+        51,
+        51,
+        52,
+        52,
+        52,
+        52,
+        52,
+        52,
+        52,
+        52,
+        52,
+        52,
+        52,
+        52,
+        52,
+        52,
+        52,
+        52,
+        52,
+        52,
+        52,
+        52,
+        52,
+        52,
+        52,
+        52,
+        52,
+        52,
+        52,
+        52,
+        52,
+        52,
+        52,
+        52,
+        52,
+        52,
+        52,
+        52,
+        52,
+        52,
+        52,
+        52,
+        52,
+        52,
+        52,
+        52,
+        52,
+        52,
+        52,
+        52,
+        52,
+        53,
+        53,
+        53,
+        53,
+        53,
+        53,
+        53,
+        53,
+        53,
+        53,
+        53,
+        53,
+        53,
+        53,
+        53,
+        53,
+        53,
+        53,
+        53,
+        53,
+        53,
+        53,
+        53,
+        53,
+        53,
+        53,
+        53,
+        53,
+        53,
+        53,
+        53,
+        53,
+        53,
+        53,
+        53,
+        53,
+        53,
+        53,
+        53,
+        53,
+        53,
+        53,
+        53,
+        53,
+        53,
+        53,
+        53,
+        53,
+        54,
+        54,
+        54,
+        54,
+        54,
+        54,
+        54,
+        54,
+        54,
+        54,
+        54,
+        54,
+        54,
+        54,
+        54,
+        54,
+        54,
+        54,
+        54,
+        54,
+        54,
+        54,
+        54,
+        54,
+        54,
+        54,
+        54,
+        54,
+        54,
+        54,
+        54,
+        54,
+        54,
+        54,
+        54,
+        54,
+        54,
+        54,
+        54,
+        54,
+        54,
+        54,
+        54,
+        54,
+        54,
+        54,
+        54,
+        54,
+        54,
+        55,
+        55,
+        55,
+        55,
+        55,
+        55,
+        55,
+        55,
+        55,
+        55,
+        55,
+        55,
+        55,
+        55,
+        55,
+        55,
+        55,
+        55,
+        55,
+        55,
+        55,
+        55,
+        55,
+        55,
+        55,
+        55,
+        55,
+        55,
+        55,
+        55,
+        55,
+        55,
+        55,
+        55,
+        55,
+        55,
+        55,
+        55,
+        55,
+        55,
+        55,
+        55,
+        55,
+        55,
+        55,
+        55,
+        55,
+        55,
+        55,
+        56,
+        56,
+        56,
+        56,
+        56,
+        56,
+        56,
+        56,
+        56,
+        56,
+        56,
+        56,
+        56,
+        56,
+        56,
+        56,
+        56,
+        56,
+        56,
+        56,
+        56,
+        56,
+        56,
+        56,
+        56,
+        56,
+        56,
+        56,
+        56,
+        56,
+        56,
+        56,
+        56,
+        56,
+        56,
+        56,
+        56,
+        56,
+        56,
+        56,
+        56,
+        56,
+        56,
+        56,
+        56,
+        56,
+        56,
+        56,
+        56,
+        57,
+        57,
+        57,
+        57,
+        57,
+        57,
+        57,
+        57,
+        57,
+        57,
+        57,
+        57,
+        57,
+        57,
+        57,
+        57,
+        57,
+        57,
+        57,
+        57,
+        57,
+        57,
+        57,
+        57,
+        57,
+        57,
+        57,
+        57,
+        57,
+        57,
+        57,
+        57,
+        57,
+        57,
+        57,
+        57,
+        57,
+        57,
+        57,
+        57,
+        57,
+        57,
+        57,
+        57,
+        57,
+        57,
+        57,
+        58,
+        58,
+        58,
+        58,
+        58,
+        58,
+        58,
+        58,
+        58,
+        58,
+        58,
+        58,
+        58,
+        58,
+        58,
+        58,
+        58,
+        58,
+        58,
+        58,
+        58,
+        58,
+        58,
+        58,
+        58,
+        58,
+        58,
+        58,
+        58,
+        58,
+        58,
+        58,
+        58,
+        58,
+        58,
+        58,
+        58,
+        58,
+        58,
+        58,
+        58,
+        58,
+        58,
+        58,
+        58,
+        58,
+        58,
+        58,
+        58,
+        59,
+        59,
+        59,
+        59,
+        59,
+        59,
+        59,
+        59,
+        59,
+        59,
+        59,
+        59,
+        59,
+        59,
+        59,
+        59,
+        59,
+        59,
+        59,
+        59,
+        59,
+        59,
+        59,
+        59,
+        59,
+        59,
+        59,
+        59,
+        59,
+        59,
+        59,
+        59,
+        59,
+        59,
+        59,
+        59,
+        59,
+        59,
+        59,
+        59,
+        59,
+        59,
+        59,
+        59,
+        59,
+        59,
+        59,
+        59,
+        59,
+        61,
+        61,
+        61,
+        61,
+        61,
+        61,
+        61,
+        61,
+        61,
+        61,
+        61,
+        61,
+        61,
+        61,
+        61,
+        61,
+        61,
+        61,
+        61,
+        61,
+        61,
+        61,
+        61,
+        61,
+        61,
+        61,
+        61,
+        61,
+        61,
+        61,
+        61,
+        61,
+        61,
+        61,
+        61,
+        61,
+        61,
+        61,
+        61,
+        61,
+        61,
+        61,
+        61,
+        61,
+        61,
+        61,
+        61,
+        61,
+        61,
+        62,
+        62,
+        62,
+        62,
+        62,
+        62,
+        62,
+        62,
+        62,
+        62,
+        62,
+        62,
+        62,
+        62,
+        62,
+        62,
+        62,
+        62,
+        62,
+        62,
+        62,
+        62,
+        62,
+        62,
+        62,
+        62,
+        62,
+        62,
+        62,
+        62,
+        62,
+        62,
+        62,
+        62,
+        62,
+        62,
+        62,
+        62,
+        62,
+        62,
+        62,
+        62,
+        62,
+        62,
+        62,
+        62,
+        62,
+        63,
+        63,
+        63,
+        63,
+        63,
+        63,
+        63,
+        63,
+        63,
+        63,
+        63,
+        63,
+        63,
+        63,
+        63,
+        63,
+        63,
+        63,
+        63,
+        63,
+        63,
+        63,
+        63,
+        63,
+        63,
+        63,
+        63,
+        63,
+        63,
+        63,
+        63,
+        63,
+        63,
+        63,
+        63,
+        63,
+        63,
+        63,
+        63,
+        63,
+        63,
+        63,
+        63,
+        63,
+        63,
+        63,
+        63
+      ]
+    },
+    {
+      "name": "Information",
+      "parent": "",
+      "isRole": false,
+      "stories": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        58,
+        58,
+        58,
+        58,
+        58,
+        58,
+        59,
+        59,
+        59,
+        59,
+        59,
+        59,
+        59,
+        60,
+        60,
+        60,
+        60,
+        60,
+        60,
+        60
+      ]
+    },
+    {
+      "name": "Subscription",
+      "parent": "",
+      "isRole": false,
+      "stories": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        5,
+        5,
+        5,
+        5,
+        5,
+        6,
+        6,
+        6,
+        6,
+        62,
+        62,
+        62,
+        62,
+        62
+      ]
+    },
+    {
+      "name": "Membership Type",
+      "parent": "Type",
+      "isRole": false,
+      "stories": [
+        4,
+        4,
+        4
+      ]
+    },
+    {
+      "name": "Type",
+      "parent": "",
+      "isRole": false,
+      "stories": [
+        -1,
+        4,
+        4,
+        30,
+        30,
+        30
+      ]
+    },
+    {
+      "name": "Membership",
+      "parent": "",
+      "isRole": false,
+      "stories": [
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        59,
+        59,
+        59,
+        59,
+        59,
+        59,
+        59,
+        59
+      ]
+    },
+    {
+      "name": "Practicalperf_sports_stability",
+      "parent": "",
+      "isRole": false,
+      "stories": [
+        6,
+        8,
+        32,
+        56
+      ]
+    },
+    {
+      "name": "It",
+      "parent": "",
+      "isRole": false,
+      "stories": [
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42
+      ]
+    },
+    {
+      "name": "Password",
+      "parent": "",
+      "isRole": false,
+      "stories": [
+        9,
+        9
+      ]
+    },
+    {
+      "name": "Detail",
+      "parent": "",
+      "isRole": false,
+      "stories": [
+        3,
+        3,
+        10,
+        10,
+        10
+      ]
+    },
+    {
+      "name": "Overview",
+      "parent": "",
+      "isRole": false,
+      "stories": [
+        15,
+        15,
+        15,
+        58,
+        58,
+        58
+      ]
+    },
+    {
+      "name": "Lesson",
+      "parent": "",
+      "isRole": false,
+      "stories": [
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        31,
+        31,
+        31,
+        31,
+        31,
+        31,
+        31,
+        31,
+        31,
+        31,
+        31,
+        31,
+        31,
+        31,
+        31,
+        31,
+        31,
+        31,
+        31,
+        31,
+        31,
+        31,
+        31,
+        31,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        34,
+        34,
+        34,
+        34,
+        34,
+        34,
+        34,
+        34,
+        34,
+        34,
+        34,
+        34,
+        34,
+        34,
+        34,
+        34,
+        34,
+        34,
+        34,
+        34,
+        34,
+        34,
+        34,
+        34,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        38,
+        38,
+        38,
+        38,
+        38,
+        38,
+        38,
+        38,
+        38,
+        38,
+        38,
+        38,
+        38,
+        38,
+        38,
+        38,
+        38,
+        38,
+        38,
+        38,
+        38,
+        38,
+        38,
+        38,
+        38,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41
+      ]
+    },
+    {
+      "name": "Time",
+      "parent": "",
+      "isRole": false,
+      "stories": [
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        34,
+        34,
+        34,
+        34,
+        34,
+        34,
+        34,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45
+      ]
+    },
+    {
+      "name": "Record",
+      "parent": "",
+      "isRole": false,
+      "stories": [
+        17,
+        17
+      ]
+    },
+    {
+      "name": "Gym",
+      "parent": "",
+      "isRole": false,
+      "stories": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22
+      ]
+    },
+    {
+      "name": "Application",
+      "parent": "",
+      "isRole": false,
+      "stories": [
+        18,
+        18,
+        18,
+        18,
+        18,
+        19,
+        19,
+        19,
+        19,
+        19,
+        21,
+        21,
+        21,
+        21,
+        21,
+        22,
+        22,
+        22,
+        22,
+        22
+      ]
+    },
+    {
+      "name": "Training Session",
+      "parent": "Session",
+      "isRole": false,
+      "stories": [
+        20,
+        20,
+        20
+      ]
+    },
+    {
+      "name": "Session",
+      "parent": "",
+      "isRole": false,
+      "stories": [
+        -1,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        55,
+        55,
+        55,
+        55,
+        55,
+        55,
+        55,
+        55,
+        60,
+        60,
+        60,
+        60,
+        60,
+        60,
+        60,
+        60
+      ]
+    },
+    {
+      "name": "Training",
+      "parent": "",
+      "isRole": false,
+      "stories": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        55,
+        55,
+        55,
+        55,
+        55,
+        55,
+        60,
+        60,
+        60,
+        60,
+        60,
+        60
+      ]
+    },
+    {
+      "name": "Admin",
+      "parent": "",
+      "isRole": true,
+      "stories": [
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        38,
+        38,
+        38,
+        38,
+        38,
+        38,
+        38,
+        38,
+        38,
+        38,
+        38,
+        38,
+        38,
+        38,
+        38,
+        38,
+        38,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45,
+        46,
+        46,
+        46,
+        46,
+        46,
+        46,
+        46,
+        46,
+        46,
+        46,
+        46,
+        46,
+        46,
+        46,
+        46,
+        46,
+        46,
+        47,
+        47,
+        47,
+        47,
+        47,
+        47,
+        47,
+        47,
+        47,
+        47,
+        47,
+        47,
+        47,
+        47,
+        47,
+        47,
+        47,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        57,
+        57,
+        57,
+        57,
+        57,
+        57,
+        57,
+        57,
+        57,
+        57,
+        57,
+        57,
+        57,
+        57,
+        57,
+        57,
+        57,
+        57,
+        62,
+        62,
+        62,
+        62,
+        62,
+        62,
+        62,
+        62,
+        62,
+        62,
+        62,
+        62,
+        62,
+        62,
+        62,
+        62,
+        62,
+        63,
+        63,
+        63,
+        63,
+        63,
+        63,
+        63,
+        63,
+        63,
+        63,
+        63,
+        63,
+        63,
+        63,
+        63,
+        63,
+        63
+      ]
+    },
+    {
+      "name": "Spot",
+      "parent": "",
+      "isRole": false,
+      "stories": [
+        23,
+        23,
+        23,
+        24,
+        24
+      ]
+    },
+    {
+      "name": "Timeslot",
+      "parent": "",
+      "isRole": false,
+      "stories": [
+        24,
+        24,
+        24,
+        25,
+        25,
+        25
+      ]
+    },
+    {
+      "name": "Trainer",
+      "parent": "",
+      "isRole": true,
+      "stories": [
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        31,
+        31,
+        31,
+        31,
+        31,
+        31,
+        31,
+        31,
+        31,
+        31,
+        31,
+        31,
+        31,
+        31,
+        31,
+        31,
+        31,
+        31,
+        31,
+        31,
+        31,
+        31,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        34,
+        34,
+        34,
+        34,
+        34,
+        34,
+        34,
+        34,
+        34,
+        34,
+        34,
+        34,
+        34,
+        34,
+        34,
+        34,
+        34,
+        34,
+        34,
+        34,
+        34,
+        34,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        47,
+        47,
+        47,
+        47,
+        47,
+        47,
+        47,
+        47,
+        47,
+        47,
+        47,
+        47,
+        47,
+        47,
+        47,
+        47,
+        47,
+        47,
+        47,
+        47,
+        47,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        60,
+        60,
+        60,
+        60,
+        60,
+        60,
+        60,
+        60,
+        60,
+        60,
+        60,
+        60,
+        60,
+        60,
+        60,
+        60,
+        60,
+        60,
+        60,
+        60,
+        60,
+        60
+      ]
+    },
+    {
+      "name": "Daily Sports",
+      "parent": "",
+      "isRole": false,
+      "stories": [
+        27,
+        41
+      ]
+    },
+    {
+      "name": "Description",
+      "parent": "",
+      "isRole": false,
+      "stories": [
+        28,
+        28,
+        28,
+        36,
+        36,
+        36
+      ]
+    },
+    {
+      "name": "Room",
+      "parent": "",
+      "isRole": false,
+      "stories": [
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        31,
+        31,
+        31,
+        31,
+        31,
+        31,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40
+      ]
+    },
+    {
+      "name": "Number",
+      "parent": "",
+      "isRole": false,
+      "stories": [
+        31,
+        31,
+        31,
+        37,
+        37,
+        37
+      ]
+    },
+    {
+      "name": "What",
+      "parent": "",
+      "isRole": false,
+      "stories": [
+        16,
+        16,
+        16,
+        16,
+        16,
+        28,
+        28,
+        28,
+        28,
+        28,
+        32,
+        32,
+        32,
+        32,
+        32,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        54,
+        54,
+        54,
+        54,
+        54,
+        54
+      ]
+    },
+    {
+      "name": "Notification",
+      "parent": "",
+      "isRole": false,
+      "stories": [
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        51,
+        51,
+        51,
+        51,
+        51,
+        51,
+        51,
+        52,
+        52,
+        52,
+        52,
+        52,
+        52,
+        52,
+        53,
+        53,
+        53,
+        53,
+        53,
+        53,
+        54,
+        54,
+        54,
+        54,
+        54,
+        54,
+        55,
+        55,
+        55,
+        55,
+        55,
+        55,
+        55
+      ]
+    },
+    {
+      "name": "System",
+      "parent": "",
+      "isRole": false,
+      "stories": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45,
+        47,
+        47,
+        47,
+        47,
+        47,
+        47,
+        47,
+        47,
+        47,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        53,
+        53,
+        53,
+        53,
+        53,
+        53,
+        53,
+        53,
+        53
+      ]
+    },
+    {
+      "name": "Fine",
+      "parent": "",
+      "isRole": false,
+      "stories": [
+        45,
+        45,
+        46,
+        46,
+        46
+      ]
+    },
+    {
+      "name": "They",
+      "parent": "",
+      "isRole": false,
+      "stories": [
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        51,
+        51,
+        51,
+        51,
+        51,
+        51,
+        51,
+        51,
+        57,
+        57,
+        57,
+        57,
+        57,
+        57,
+        57,
+        57
+      ]
+    },
+    {
+      "name": "User",
+      "parent": "",
+      "isRole": true,
+      "stories": [
+        50,
+        50,
+        50,
+        50
+      ]
+    },
+    {
+      "name": "Which",
+      "parent": "",
+      "isRole": false,
+      "stories": [
+        15,
+        15,
+        15,
+        15,
+        15,
+        25,
+        25,
+        25,
+        25,
+        25,
+        51,
+        51,
+        51,
+        51,
+        51,
+        57,
+        57,
+        57,
+        57,
+        57,
+        57,
+        61,
+        61,
+        61,
+        61,
+        61
+      ]
+    },
+    {
+      "name": "Method",
+      "parent": "",
+      "isRole": false,
+      "stories": [
+        51,
+        51,
+        61,
+        61,
+        61
+      ]
+    },
+    {
+      "name": "Booking",
+      "parent": "",
+      "isRole": false,
+      "stories": [
+        56,
+        56,
+        56,
+        57,
+        57,
+        57,
+        63,
+        63,
+        63,
+        63
+      ]
+    },
+    {
+      "name": "Account",
+      "parent": "",
+      "isRole": false,
+      "stories": [
+        1
+      ]
+    },
+    {
+      "name": "Daily",
+      "parent": "",
+      "isRole": false,
+      "stories": [
+        1,
+        1,
+        1,
+        1,
+        5,
+        5,
+        5,
+        5,
+        27,
+        27,
+        27,
+        27,
+        41,
+        41,
+        41,
+        41
+      ]
+    },
+    {
+      "name": "Sports",
+      "parent": "",
+      "isRole": false,
+      "stories": [
+        1,
+        1,
+        1,
+        1,
+        5,
+        5,
+        5,
+        5,
+        27,
+        27,
+        27,
+        27,
+        41,
+        41,
+        41,
+        41
+      ]
+    },
+    {
+      "name": "Person",
+      "parent": "",
+      "isRole": false,
+      "stories": [
+        13,
+        13,
+        14,
+        14
+      ]
+    },
+    {
+      "name": "Show",
+      "parent": "",
+      "isRole": false,
+      "stories": [
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45,
+        46,
+        46,
+        46,
+        46,
+        46,
+        46,
+        46
+      ]
+    },
+    {
+      "name": "Return Customer",
+      "parent": "",
+      "isRole": true,
+      "stories": [
+        7
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "name": "canAdd",
+      "domain": "Customer",
+      "range": "Information",
+      "stories": [
+        2
+      ]
+    },
+    {
+      "name": "canPay For",
+      "domain": "Customer",
+      "range": "Subscription",
+      "stories": [
+        3
+      ]
+    },
+    {
+      "name": "hasType",
+      "domain": "Membership",
+      "range": "Membership Type",
+      "stories": [
+        4
+      ]
+    },
+    {
+      "name": "canChoose",
+      "domain": "Customer",
+      "range": "Membership Type",
+      "stories": [
+        4
+      ]
+    },
+    {
+      "name": "canExtend",
+      "domain": "Customer",
+      "range": "Subscription",
+      "stories": [
+        5
+      ]
+    },
+    {
+      "name": "canKnow",
+      "domain": "Customer",
+      "range": "Practicalperf_sports_stability",
+      "stories": [
+        6
+      ]
+    },
+    {
+      "name": "canKnow",
+      "domain": "Customer",
+      "range": "It",
+      "stories": [
+        6,
+        28
+      ]
+    },
+    {
+      "name": "canUnsubscribe",
+      "domain": "Customer",
+      "range": "Practicalperf_sports_stability",
+      "stories": [
+        8
+      ]
+    },
+    {
+      "name": "canReset",
+      "domain": "Customer",
+      "range": "Password",
+      "stories": [
+        9
+      ]
+    },
+    {
+      "name": "canChange",
+      "domain": "Customer",
+      "range": "Detail",
+      "stories": [
+        10
+      ]
+    },
+    {
+      "name": "canSee",
+      "domain": "Customer",
+      "range": "Overview",
+      "stories": [
+        15,
+        58
+      ]
+    },
+    {
+      "name": "canSee",
+      "domain": "Customer",
+      "range": "Lesson",
+      "stories": [
+        16
+      ]
+    },
+    {
+      "name": "canManage",
+      "domain": "Customer",
+      "range": "Time",
+      "stories": [
+        16
+      ]
+    },
+    {
+      "name": "canSee",
+      "domain": "Customer",
+      "range": "Record",
+      "stories": [
+        17
+      ]
+    },
+    {
+      "name": "canCall",
+      "domain": "Customer",
+      "range": "Gym",
+      "stories": [
+        18,
+        19,
+        21,
+        22
+      ]
+    },
+    {
+      "name": "canHave",
+      "domain": "Customer",
+      "range": "Application",
+      "stories": [
+        18,
+        19,
+        21,
+        22
+      ]
+    },
+    {
+      "name": "hasSession",
+      "domain": "Training",
+      "range": "Training Session",
+      "stories": [
+        20
+      ]
+    },
+    {
+      "name": "canEdit",
+      "domain": "Admin",
+      "range": "Training Session",
+      "stories": [
+        20
+      ]
+    },
+    {
+      "name": "canBook",
+      "domain": "Customer",
+      "range": "Spot",
+      "stories": [
+        23
+      ]
+    },
+    {
+      "name": "canSee",
+      "domain": "Customer",
+      "range": "Timeslot",
+      "stories": [
+        24
+      ]
+    },
+    {
+      "name": "canSee",
+      "domain": "Trainer",
+      "range": "Timeslot",
+      "stories": [
+        25
+      ]
+    },
+    {
+      "name": "canOrganize",
+      "domain": "Trainer",
+      "range": "Lesson",
+      "stories": [
+        25
+      ]
+    },
+    {
+      "name": "canAdd",
+      "domain": "Trainer",
+      "range": "Lesson",
+      "stories": [
+        26
+      ]
+    },
+    {
+      "name": "canSet",
+      "domain": "Trainer",
+      "range": "Time",
+      "stories": [
+        27
+      ]
+    },
+    {
+      "name": "canKnow",
+      "domain": "Customer",
+      "range": "Daily Sports",
+      "stories": [
+        27
+      ]
+    },
+    {
+      "name": "canSet",
+      "domain": "Trainer",
+      "range": "Description",
+      "stories": [
+        28
+      ]
+    },
+    {
+      "name": "canSet",
+      "domain": "Trainer",
+      "range": "Room",
+      "stories": [
+        29
+      ]
+    },
+    {
+      "name": "canSet",
+      "domain": "Trainer",
+      "range": "Type",
+      "stories": [
+        30
+      ]
+    },
+    {
+      "name": "canSet",
+      "domain": "Trainer",
+      "range": "Number",
+      "stories": [
+        31
+      ]
+    },
+    {
+      "name": "canSee",
+      "domain": "Trainer",
+      "range": "Practicalperf_sports_stability",
+      "stories": [
+        32
+      ]
+    },
+    {
+      "name": "canEdit",
+      "domain": "Trainer",
+      "range": "Lesson",
+      "stories": [
+        33
+      ]
+    },
+    {
+      "name": "canEdit",
+      "domain": "Trainer",
+      "range": "Time",
+      "stories": [
+        34
+      ]
+    },
+    {
+      "name": "canChange",
+      "domain": "Trainer",
+      "range": "Room",
+      "stories": [
+        35
+      ]
+    },
+    {
+      "name": "canMove",
+      "domain": "Trainer",
+      "range": "Lesson",
+      "stories": [
+        35
+      ]
+    },
+    {
+      "name": "canEdit",
+      "domain": "Trainer",
+      "range": "Description",
+      "stories": [
+        36
+      ]
+    },
+    {
+      "name": "canKnow",
+      "domain": "Customer",
+      "range": "What",
+      "stories": [
+        36
+      ]
+    },
+    {
+      "name": "canEdit",
+      "domain": "Trainer",
+      "range": "Number",
+      "stories": [
+        37
+      ]
+    },
+    {
+      "name": "canCorrect For",
+      "domain": "It",
+      "range": "Lesson",
+      "stories": [
+        37
+      ]
+    },
+    {
+      "name": "canEdit",
+      "domain": "Admin",
+      "range": "Lesson",
+      "stories": [
+        38
+      ]
+    },
+    {
+      "name": "canCancel",
+      "domain": "Trainer",
+      "range": "Lesson",
+      "stories": [
+        39
+      ]
+    },
+    {
+      "name": "canShow In",
+      "domain": "Customer",
+      "range": "It",
+      "stories": [
+        39,
+        40
+      ]
+    },
+    {
+      "name": "canCancel",
+      "domain": "Admin",
+      "range": "Lesson",
+      "stories": [
+        40
+      ]
+    },
+    {
+      "name": "canReceive",
+      "domain": "Customer",
+      "range": "Notification",
+      "stories": [
+        41,
+        51,
+        52,
+        55
+      ]
+    },
+    {
+      "name": "canGo To For",
+      "domain": "Customer",
+      "range": "Daily Sports",
+      "stories": [
+        41
+      ]
+    },
+    {
+      "name": "canNotify",
+      "domain": "Customer",
+      "range": "Session",
+      "stories": [
+        42
+      ]
+    },
+    {
+      "name": "canSee",
+      "domain": "Admin",
+      "range": "Session",
+      "stories": [
+        43
+      ]
+    },
+    {
+      "name": "canSee",
+      "domain": "Admin",
+      "range": "Time",
+      "stories": [
+        44
+      ]
+    },
+    {
+      "name": "canHave",
+      "domain": "Admin",
+      "range": "System",
+      "stories": [
+        45
+      ]
+    },
+    {
+      "name": "canHave",
+      "domain": "Admin",
+      "range": "Fine",
+      "stories": [
+        46
+      ]
+    },
+    {
+      "name": "canAdd",
+      "domain": "Admin",
+      "range": "Trainer",
+      "stories": [
+        47
+      ]
+    },
+    {
+      "name": "canAdd",
+      "domain": "Admin",
+      "range": "Admin",
+      "stories": [
+        48
+      ]
+    },
+    {
+      "name": "canRemove",
+      "domain": "Admin",
+      "range": "Trainer",
+      "stories": [
+        49
+      ]
+    },
+    {
+      "name": "canAccess",
+      "domain": "They",
+      "range": "System",
+      "stories": [
+        49
+      ]
+    },
+    {
+      "name": "canLog To",
+      "domain": "User",
+      "range": "System",
+      "stories": [
+        50
+      ]
+    },
+    {
+      "name": "canUse",
+      "domain": "User",
+      "range": "System",
+      "stories": [
+        50
+      ]
+    },
+    {
+      "name": "canCansee",
+      "domain": "Customer",
+      "range": "They",
+      "stories": [
+        51
+      ]
+    },
+    {
+      "name": "canChoose",
+      "domain": "Customer",
+      "range": "What",
+      "stories": [
+        54
+      ]
+    },
+    {
+      "name": "canConfirm",
+      "domain": "Customer",
+      "range": "Practicalperf_sports_stability",
+      "stories": [
+        56
+      ]
+    },
+    {
+      "name": "canKnow",
+      "domain": "Admin",
+      "range": "Which",
+      "stories": [
+        57
+      ]
+    },
+    {
+      "name": "canCall",
+      "domain": "Admin",
+      "range": "They",
+      "stories": [
+        57
+      ]
+    },
+    {
+      "name": "canSee",
+      "domain": "Customer",
+      "range": "Information",
+      "stories": [
+        59
+      ]
+    },
+    {
+      "name": "canSee",
+      "domain": "Trainer",
+      "range": "Information",
+      "stories": [
+        60
+      ]
+    },
+    {
+      "name": "canHave",
+      "domain": "Customer",
+      "range": "Method",
+      "stories": [
+        61
+      ]
+    },
+    {
+      "name": "canSee",
+      "domain": "Admin",
+      "range": "Subscription",
+      "stories": [
+        62
+      ]
+    },
+    {
+      "name": "canSee",
+      "domain": "Admin",
+      "range": "Booking",
+      "stories": [
+        63
+      ]
+    }
+  ],
+  "inferredRoles": [
+    "Admin",
+    "Customer",
+    "Trainer",
+    "User"
+  ],
+  "keyNouns": [
+    {
+      "term": "Customer",
+      "weight": 30
+    },
+    {
+      "term": "Trainer",
+      "weight": 17
+    },
+    {
+      "term": "Admin",
+      "weight": 14
+    },
+    {
+      "term": "Lesson",
+      "weight": 7.5
+    },
+    {
+      "term": "Information",
+      "weight": 5
+    },
+    {
+      "term": "Notification",
+      "weight": 5
+    },
+    {
+      "term": "Gym",
+      "weight": 4
+    },
+    {
+      "term": "Time",
+      "weight": 3.5
+    },
+    {
+      "term": "Session",
+      "weight": 3
+    },
+    {
+      "term": "System",
+      "weight": 3
+    },
+    {
+      "term": "Subscription",
+      "weight": 2.5
+    },
+    {
+      "term": "It",
+      "weight": 2.5
+    },
+    {
+      "term": "Room",
+      "weight": 2.5
+    },
+    {
+      "term": "Person",
+      "weight": 2
+    },
+    {
+      "term": "Overview",
+      "weight": 2
+    },
+    {
+      "term": "Timeslot",
+      "weight": 2
+    },
+    {
+      "term": "Type",
+      "weight": 2
+    },
+    {
+      "term": "Number",
+      "weight": 2
+    },
+    {
+      "term": "Detail",
+      "weight": 2
+    },
+    {
+      "term": "Description",
+      "weight": 2
+    }
+  ],
+  "stats": {
+    "successCount": 63,
+    "failedCount": 0
+  }
+}

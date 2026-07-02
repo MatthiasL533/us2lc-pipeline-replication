@@ -1,0 +1,309 @@
+{
+  "classNames": [
+    "Camp",
+    "Camper",
+    "Track",
+    "Camper Record",
+    "Consent Form",
+    "Form",
+    "Consent",
+    "Nametag",
+    "Reminder",
+    "Position",
+    "Schedule",
+    "Avenue",
+    "Feedback",
+    "Attendance",
+    "Group",
+    "Camp Group",
+    "Event",
+    "Page",
+    "Camper Activity",
+    "Peace",
+    "Type",
+    "Account",
+    "Kid",
+    "Which",
+    "Camper Counselor",
+    "Payment",
+    "Photo",
+    "Staff",
+    "Charge",
+    "Job",
+    "List",
+    "Repair",
+    "Report"
+  ],
+  "classes": [
+    {
+      "name": "Camp",
+      "parent": "",
+      "isRole": false
+    },
+    {
+      "name": "Camper",
+      "parent": "",
+      "isRole": false
+    },
+    {
+      "name": "Track",
+      "parent": "",
+      "isRole": false
+    },
+    {
+      "name": "Camper Record",
+      "parent": "Record",
+      "isRole": false
+    },
+    {
+      "name": "Consent Form",
+      "parent": "Form",
+      "isRole": false
+    },
+    {
+      "name": "Form",
+      "parent": "",
+      "isRole": false
+    },
+    {
+      "name": "Consent",
+      "parent": "",
+      "isRole": false
+    },
+    {
+      "name": "Nametag",
+      "parent": "",
+      "isRole": false
+    },
+    {
+      "name": "Reminder",
+      "parent": "",
+      "isRole": false
+    },
+    {
+      "name": "Position",
+      "parent": "",
+      "isRole": false
+    },
+    {
+      "name": "Schedule",
+      "parent": "",
+      "isRole": false
+    },
+    {
+      "name": "Avenue",
+      "parent": "",
+      "isRole": false
+    },
+    {
+      "name": "Feedback",
+      "parent": "",
+      "isRole": false
+    },
+    {
+      "name": "Attendance",
+      "parent": "",
+      "isRole": false
+    },
+    {
+      "name": "Group",
+      "parent": "",
+      "isRole": false
+    },
+    {
+      "name": "Camp Group",
+      "parent": "Group",
+      "isRole": false
+    },
+    {
+      "name": "Event",
+      "parent": "",
+      "isRole": false
+    },
+    {
+      "name": "Page",
+      "parent": "",
+      "isRole": false
+    },
+    {
+      "name": "Camper Activity",
+      "parent": "Activity",
+      "isRole": false
+    },
+    {
+      "name": "Peace",
+      "parent": "",
+      "isRole": false
+    },
+    {
+      "name": "Type",
+      "parent": "",
+      "isRole": false
+    },
+    {
+      "name": "Account",
+      "parent": "",
+      "isRole": false
+    },
+    {
+      "name": "Kid",
+      "parent": "",
+      "isRole": false
+    },
+    {
+      "name": "Which",
+      "parent": "",
+      "isRole": false
+    },
+    {
+      "name": "Camper Counselor",
+      "parent": "Counselor",
+      "isRole": false
+    },
+    {
+      "name": "Payment",
+      "parent": "",
+      "isRole": false
+    },
+    {
+      "name": "Photo",
+      "parent": "",
+      "isRole": false
+    },
+    {
+      "name": "Staff",
+      "parent": "",
+      "isRole": false
+    },
+    {
+      "name": "Charge",
+      "parent": "",
+      "isRole": false
+    },
+    {
+      "name": "Job",
+      "parent": "",
+      "isRole": false
+    },
+    {
+      "name": "List",
+      "parent": "",
+      "isRole": false
+    },
+    {
+      "name": "Repair",
+      "parent": "",
+      "isRole": false
+    },
+    {
+      "name": "Report",
+      "parent": "",
+      "isRole": false
+    }
+  ],
+  "relationships": [
+    {
+      "name": "hasRecord",
+      "domain": "Camper",
+      "range": "Camper Record"
+    },
+    {
+      "name": "hasForm",
+      "domain": "Consent",
+      "range": "Consent Form"
+    },
+    {
+      "name": "canAccess",
+      "domain": "Camper",
+      "range": "Form"
+    },
+    {
+      "name": "hasGroup",
+      "domain": "Camp",
+      "range": "Camp Group"
+    },
+    {
+      "name": "hasActivity",
+      "domain": "Camper",
+      "range": "Camper Activity"
+    },
+    {
+      "name": "hasCounselor",
+      "domain": "Camper",
+      "range": "Camper Counselor"
+    }
+  ],
+  "keyNouns": [
+    {
+      "term": "Camp",
+      "weight": 30.040000000000003
+    },
+    {
+      "term": "Camper",
+      "weight": 10.48
+    },
+    {
+      "term": "Form",
+      "weight": 6
+    },
+    {
+      "term": "Group",
+      "weight": 3
+    },
+    {
+      "term": "Track",
+      "weight": 3
+    },
+    {
+      "term": "Event",
+      "weight": 2.5
+    },
+    {
+      "term": "Schedule",
+      "weight": 2.5
+    },
+    {
+      "term": "Charge",
+      "weight": 2
+    },
+    {
+      "term": "Attendance",
+      "weight": 2
+    },
+    {
+      "term": "Nametag",
+      "weight": 2
+    },
+    {
+      "term": "Consent",
+      "weight": 1.8200000000000003
+    },
+    {
+      "term": "Feedback",
+      "weight": 1.5
+    },
+    {
+      "term": "Job",
+      "weight": 1
+    }
+  ],
+  "inferredRoles": [
+    "administrator",
+    "counselor",
+    "parent",
+    "worker"
+  ],
+  "discardedClassNames": [
+    "Camp Administrator",
+    "Administrator",
+    "Record",
+    "Activity",
+    "Camp Worker",
+    "Worker",
+    "Rule",
+    "Parent",
+    "Information",
+    "Counselor",
+    "Camp Counselor"
+  ]
+}

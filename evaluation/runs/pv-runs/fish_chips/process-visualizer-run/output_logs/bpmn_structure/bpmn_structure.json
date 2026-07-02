@@ -1,0 +1,355 @@
+[
+    {
+        "content": {
+            "agent": {
+                "entity_group": "AGENT",
+                "word": "Kitchen Employee",
+                "start": 5,
+                "end": 21,
+                "score": 0.99
+            },
+            "task": {
+                "entity_group": "TASK",
+                "word": "see the orders with their status",
+                "start": 33,
+                "end": 65,
+                "score": 0.99,
+                "task_id": "T0"
+            },
+            "sentence_idx": 0
+        },
+        "type": "task"
+    },
+    {
+        "content": {
+            "agent": {
+                "entity_group": "AGENT",
+                "word": "Ticket Master",
+                "start": 1022,
+                "end": 1035,
+                "score": 0.99
+            },
+            "task": {
+                "entity_group": "TASK",
+                "word": "receive a notification if the customer makes changes after a new order is already paid",
+                "start": 878,
+                "end": 964,
+                "score": 0.99,
+                "task_id": "T1"
+            },
+            "sentence_idx": 5
+        },
+        "type": "task"
+    },
+    {
+        "content": {
+            "agent": {
+                "entity_group": "AGENT",
+                "word": "Ticket Master",
+                "start": 1169,
+                "end": 1182,
+                "score": 0.99
+            },
+            "task": {
+                "entity_group": "TASK",
+                "word": "label new orders as 'incoming orders'",
+                "start": 1047,
+                "end": 1084,
+                "score": 0.99,
+                "task_id": "T2"
+            },
+            "sentence_idx": 6
+        },
+        "type": "task"
+    },
+    {
+        "id": "EG0",
+        "conditions": [
+            "at the moment the preparation of a product is started",
+            "after the preparation of a product is finished",
+            "if their requested time is not yet within ten minutes",
+            "so that i do not have to do that manually",
+            "so the customer has an insight into his order",
+            "so that a misunderstanding with the customer or a mistake from i can be resolved",
+            "so that the customer can make last-minute changes",
+            "so that the Ticket Master knows if the ticket master/she needs to hand the order directly to the customer or the delivery person",
+            "so that the kitchen knows when to start preparing a takeaway order",
+            "so that i do not have to walk physically to the kitchen",
+            "so that the delivery person knows where the delivery person needs to bring the order",
+            "so that the customer can be reached if there are problems with the order",
+            "so that i can customize the order for the customer."
+        ],
+        "start": 1230,
+        "end": 7368,
+        "paths": [
+            {
+                "start": 1230,
+                "end": 1428
+            },
+            {
+                "start": 1429,
+                "end": 1621
+            },
+            {
+                "start": 1622,
+                "end": 3689
+            },
+            {
+                "start": 3690,
+                "end": 3819
+            },
+            {
+                "start": 3820,
+                "end": 3998
+            },
+            {
+                "start": 3999,
+                "end": 4153
+            },
+            {
+                "start": 4154,
+                "end": 4251
+            },
+            {
+                "start": 4252,
+                "end": 4447
+            },
+            {
+                "start": 4448,
+                "end": 4584
+            },
+            {
+                "start": 4585,
+                "end": 4705
+            },
+            {
+                "start": 4706,
+                "end": 4852
+            },
+            {
+                "start": 4853,
+                "end": 5155
+            },
+            {
+                "start": 5156,
+                "end": 7368
+            }
+        ],
+        "type": "exclusive",
+        "children": [
+            [],
+            [],
+            [
+                {
+                    "content": {
+                        "agent": {
+                            "entity_group": "AGENT",
+                            "word": "kitchen",
+                            "start": 1980,
+                            "end": 1987,
+                            "score": 0.99
+                        },
+                        "task": {
+                            "entity_group": "TASK",
+                            "word": "have an overview of all orders that are currently made by the kitchen",
+                            "start": 1918,
+                            "end": 1987,
+                            "score": 0.99,
+                            "task_id": "T3"
+                        },
+                        "sentence_idx": 11
+                    },
+                    "type": "task"
+                },
+                {
+                    "content": {
+                        "agent": {
+                            "entity_group": "AGENT",
+                            "word": "Ticket Master",
+                            "start": 2494,
+                            "end": 2507,
+                            "score": 0.99
+                        },
+                        "task": {
+                            "entity_group": "TASK",
+                            "word": "separate all scheduled orders from the other statuses",
+                            "start": 2379,
+                            "end": 2432,
+                            "score": 0.99,
+                            "task_id": "T4"
+                        },
+                        "sentence_idx": 14
+                    },
+                    "type": "task"
+                },
+                {
+                    "content": {
+                        "agent": {
+                            "entity_group": "AGENT",
+                            "word": "customer",
+                            "start": 2871,
+                            "end": 2879,
+                            "score": 0.99
+                        },
+                        "task": {
+                            "entity_group": "TASK",
+                            "word": "see the order type",
+                            "start": 2800,
+                            "end": 2818,
+                            "score": 0.99,
+                            "task_id": "T5"
+                        },
+                        "sentence_idx": 17
+                    },
+                    "type": "task"
+                },
+                {
+                    "content": {
+                        "agent": {
+                            "entity_group": "AGENT",
+                            "word": "Cashier",
+                            "start": 3566,
+                            "end": 3573,
+                            "score": 0.99
+                        },
+                        "task": {
+                            "entity_group": "TASK",
+                            "word": "request a confirmation of payment",
+                            "start": 3427,
+                            "end": 3460,
+                            "score": 0.99,
+                            "task_id": "T6"
+                        },
+                        "sentence_idx": 22
+                    },
+                    "type": "task"
+                }
+            ],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [
+                {
+                    "content": {
+                        "agent": {
+                            "entity_group": "AGENT",
+                            "word": "Cashier",
+                            "start": 4798,
+                            "end": 4805,
+                            "score": 0.99
+                        },
+                        "task": {
+                            "entity_group": "TASK",
+                            "word": "add the phone number to the order",
+                            "start": 4817,
+                            "end": 4850,
+                            "score": 0.99,
+                            "task_id": "T7"
+                        },
+                        "sentence_idx": 30,
+                        "condition": {
+                            "entity_group": "CONDITION",
+                            "word": "so that the delivery person knows where the delivery person needs to bring the order",
+                            "start": 4706,
+                            "end": 4790,
+                            "score": 0.99,
+                            "condition_id": "C0"
+                        }
+                    },
+                    "type": "task"
+                }
+            ],
+            [],
+            [
+                {
+                    "content": {
+                        "agent": {
+                            "entity_group": "AGENT",
+                            "word": "Restaurant Owner",
+                            "start": 5605,
+                            "end": 5621,
+                            "score": 0.99
+                        },
+                        "task": {
+                            "entity_group": "TASK",
+                            "word": "see the VAT of each order, so that i have an overview of the taxes.",
+                            "start": 5633,
+                            "end": 5700,
+                            "score": 0.99,
+                            "task_id": "T8"
+                        },
+                        "sentence_idx": 36
+                    },
+                    "type": "task"
+                },
+                {
+                    "content": {
+                        "agent": {
+                            "entity_group": "AGENT",
+                            "word": "Restaurant Owner",
+                            "start": 5833,
+                            "end": 5849,
+                            "score": 0.99
+                        },
+                        "task": {
+                            "entity_group": "TASK",
+                            "word": "have an overview of the types of orders",
+                            "start": 5861,
+                            "end": 5900,
+                            "score": 0.99,
+                            "task_id": "T9"
+                        },
+                        "sentence_idx": 38
+                    },
+                    "type": "task"
+                },
+                {
+                    "content": {
+                        "agent": {
+                            "entity_group": "AGENT",
+                            "word": "Home Delivery Person",
+                            "start": 6740,
+                            "end": 6760,
+                            "score": 0.99
+                        },
+                        "task": {
+                            "entity_group": "TASK",
+                            "word": "have the address printed on the ticket",
+                            "start": 6772,
+                            "end": 6810,
+                            "score": 0.99,
+                            "task_id": "T10"
+                        },
+                        "sentence_idx": 44
+                    },
+                    "type": "task"
+                },
+                {
+                    "content": {
+                        "agent": {
+                            "entity_group": "AGENT",
+                            "word": "Home Delivery Person",
+                            "start": 7051,
+                            "end": 7071,
+                            "score": 0.99
+                        },
+                        "task": {
+                            "entity_group": "TASK",
+                            "word": "have the order price on a printed ticket",
+                            "start": 7083,
+                            "end": 7123,
+                            "score": 0.99,
+                            "task_id": "T11"
+                        },
+                        "sentence_idx": 46
+                    },
+                    "type": "task"
+                }
+            ]
+        ]
+    }
+]

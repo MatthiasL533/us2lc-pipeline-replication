@@ -1,0 +1,653 @@
+[
+    {
+        "entity_group": "AGENT",
+        "word": "Kitchen Employee",
+        "start": 5,
+        "end": 21,
+        "score": 0.99
+    },
+    {
+        "entity_group": "TASK",
+        "word": "see the orders with their status",
+        "start": 33,
+        "end": 65,
+        "score": 0.99
+    },
+    {
+        "entity_group": "PROCESS_INFO",
+        "word": "so that i am aware of the progress of each order",
+        "start": 67,
+        "end": 115,
+        "score": 0.99
+    },
+    {
+        "entity_group": "TASK",
+        "word": "have an overview of all orders at a glance",
+        "start": 150,
+        "end": 192,
+        "score": 0.99
+    },
+    {
+        "entity_group": "PROCESS_INFO",
+        "word": "so that i cannot miss any relevant orders",
+        "start": 194,
+        "end": 235,
+        "score": 0.99
+    },
+    {
+        "entity_group": "TASK",
+        "word": "receive only the products of an order",
+        "start": 270,
+        "end": 307,
+        "score": 0.99
+    },
+    {
+        "entity_group": "PROCESS_INFO",
+        "word": "so that i do not get confused by other irrelevant products",
+        "start": 309,
+        "end": 367,
+        "score": 0.99
+    },
+    {
+        "entity_group": "TASK",
+        "word": "see special requests to be shown together with the product special requests are concerned about",
+        "start": 402,
+        "end": 497,
+        "score": 0.99
+    },
+    {
+        "entity_group": "PROCESS_INFO",
+        "word": "so that i know if i have to prepare a product in a special way",
+        "start": 499,
+        "end": 561,
+        "score": 0.99
+    },
+    {
+        "entity_group": "TASK",
+        "word": "have the order number shown together with its related products",
+        "start": 595,
+        "end": 657,
+        "score": 0.99
+    },
+    {
+        "entity_group": "PROCESS_INFO",
+        "word": "so that i am aware of which order the products are coming from",
+        "start": 659,
+        "end": 721,
+        "score": 0.99
+    },
+    {
+        "entity_group": "TASK",
+        "word": "receive a notification when a new order is received",
+        "start": 756,
+        "end": 807,
+        "score": 0.99
+    },
+    {
+        "entity_group": "PROCESS_INFO",
+        "word": "so that i am aware of a new order",
+        "start": 809,
+        "end": 842,
+        "score": 0.99
+    },
+    {
+        "entity_group": "TASK",
+        "word": "receive a notification if the customer makes changes after a new order is already paid",
+        "start": 878,
+        "end": 964,
+        "score": 0.99
+    },
+    {
+        "entity_group": "PROCESS_INFO",
+        "word": "so that i know that there are changes to an order",
+        "start": 966,
+        "end": 1015,
+        "score": 0.99
+    },
+    {
+        "entity_group": "AGENT",
+        "word": "Ticket Master",
+        "start": 1022,
+        "end": 1035,
+        "score": 0.99
+    },
+    {
+        "entity_group": "TASK",
+        "word": "label new orders as 'incoming orders'",
+        "start": 1047,
+        "end": 1084,
+        "score": 0.99
+    },
+    {
+        "entity_group": "PROCESS_INFO",
+        "word": "so that incoming orders can be separated from orders with a different status",
+        "start": 1086,
+        "end": 1162,
+        "score": 0.99
+    },
+    {
+        "entity_group": "AGENT",
+        "word": "Ticket Master",
+        "start": 1169,
+        "end": 1182,
+        "score": 0.99
+    },
+    {
+        "entity_group": "TASK",
+        "word": "label a product as 'current orders'",
+        "start": 1194,
+        "end": 1229,
+        "score": 0.99
+    },
+    {
+        "entity_group": "CONDITION",
+        "word": "at the moment the preparation of a product is started",
+        "start": 1230,
+        "end": 1283,
+        "score": 0.99
+    },
+    {
+        "entity_group": "TASK",
+        "word": "label a product as 'finished orders'",
+        "start": 1392,
+        "end": 1428,
+        "score": 0.99
+    },
+    {
+        "entity_group": "CONDITION",
+        "word": "after the preparation of a product is finished",
+        "start": 1429,
+        "end": 1475,
+        "score": 0.99
+    },
+    {
+        "entity_group": "TASK",
+        "word": "label products as 'scheduled orders'",
+        "start": 1585,
+        "end": 1621,
+        "score": 0.99
+    },
+    {
+        "entity_group": "CONDITION",
+        "word": "if their requested time is not yet within ten minutes",
+        "start": 1622,
+        "end": 1675,
+        "score": 0.99
+    },
+    {
+        "entity_group": "TASK",
+        "word": "have an overview of all the incoming orders",
+        "start": 1786,
+        "end": 1829,
+        "score": 0.99
+    },
+    {
+        "entity_group": "TASK",
+        "word": "have an overview of all orders that are currently made by the kitchen",
+        "start": 1918,
+        "end": 1987,
+        "score": 0.99
+    },
+    {
+        "entity_group": "AGENT",
+        "word": "kitchen",
+        "start": 1980,
+        "end": 1987,
+        "score": 0.99
+    },
+    {
+        "entity_group": "TASK",
+        "word": "have an overview of all orders that are completed by the kitchen",
+        "start": 2067,
+        "end": 2131,
+        "score": 0.99
+    },
+    {
+        "entity_group": "TASK",
+        "word": "have an overview of all scheduled orders",
+        "start": 2217,
+        "end": 2257,
+        "score": 0.99
+    },
+    {
+        "entity_group": "TASK",
+        "word": "separate all scheduled orders from the other statuses",
+        "start": 2379,
+        "end": 2432,
+        "score": 0.99
+    },
+    {
+        "entity_group": "AGENT",
+        "word": "Ticket Master",
+        "start": 2494,
+        "end": 2507,
+        "score": 0.99
+    },
+    {
+        "entity_group": "TASK",
+        "word": "see the statuses of the products of an order",
+        "start": 2519,
+        "end": 2563,
+        "score": 0.99
+    },
+    {
+        "entity_group": "PROCESS_INFO",
+        "word": "so that i have a good insight into the progress of an order",
+        "start": 2565,
+        "end": 2624,
+        "score": 0.99
+    },
+    {
+        "entity_group": "TASK",
+        "word": "see matching colors with the status of each product",
+        "start": 2656,
+        "end": 2707,
+        "score": 0.99
+    },
+    {
+        "entity_group": "PROCESS_INFO",
+        "word": "so that the status of an order is easier to see at a glance",
+        "start": 2709,
+        "end": 2768,
+        "score": 0.99
+    },
+    {
+        "entity_group": "TASK",
+        "word": "see the order type",
+        "start": 2800,
+        "end": 2818,
+        "score": 0.99
+    },
+    {
+        "entity_group": "PROCESS_INFO",
+        "word": "so that i know if i need to bring the order to the customer or hand the order to our delivery person",
+        "start": 2820,
+        "end": 2920,
+        "score": 0.99
+    },
+    {
+        "entity_group": "AGENT",
+        "word": "customer",
+        "start": 2871,
+        "end": 2879,
+        "score": 0.99
+    },
+    {
+        "entity_group": "TASK",
+        "word": "operate the screen with a touchscreen",
+        "start": 2952,
+        "end": 2989,
+        "score": 0.99
+    },
+    {
+        "entity_group": "PROCESS_INFO",
+        "word": "so that the screen with a touchscreen is easy to use",
+        "start": 2991,
+        "end": 3043,
+        "score": 0.99
+    },
+    {
+        "entity_group": "TASK",
+        "word": "select orders",
+        "start": 3075,
+        "end": 3088,
+        "score": 0.99
+    },
+    {
+        "entity_group": "PROCESS_INFO",
+        "word": "so that i can make changes to their status",
+        "start": 3090,
+        "end": 3132,
+        "score": 0.99
+    },
+    {
+        "entity_group": "TASK",
+        "word": "delete an order",
+        "start": 3164,
+        "end": 3179,
+        "score": 0.99
+    },
+    {
+        "entity_group": "PROCESS_INFO",
+        "word": "so that no delivered orders are being shown and i can keep a better overview of the orders being in progress",
+        "start": 3181,
+        "end": 3289,
+        "score": 0.99
+    },
+    {
+        "entity_group": "TASK",
+        "word": "have a screen during the ordering process",
+        "start": 3316,
+        "end": 3357,
+        "score": 0.99
+    },
+    {
+        "entity_group": "PROCESS_INFO",
+        "word": "so that i can review the order",
+        "start": 3359,
+        "end": 3389,
+        "score": 0.99
+    },
+    {
+        "entity_group": "TASK",
+        "word": "request a confirmation of payment",
+        "start": 3427,
+        "end": 3460,
+        "score": 0.99
+    },
+    {
+        "entity_group": "AGENT",
+        "word": "Cashier",
+        "start": 3566,
+        "end": 3573,
+        "score": 0.99
+    },
+    {
+        "entity_group": "TASK",
+        "word": "have a physical ticket that shows the relevant information being printed automatically for the customer",
+        "start": 3585,
+        "end": 3688,
+        "score": 0.99
+    },
+    {
+        "entity_group": "CONDITION",
+        "word": "so that i do not have to do that manually",
+        "start": 3690,
+        "end": 3731,
+        "score": 0.99
+    },
+    {
+        "entity_group": "TASK",
+        "word": "print a physical ticket that shows the relevant order details",
+        "start": 3757,
+        "end": 3818,
+        "score": 0.99
+    },
+    {
+        "entity_group": "CONDITION",
+        "word": "so the customer has an insight into his order",
+        "start": 3820,
+        "end": 3865,
+        "score": 0.99
+    },
+    {
+        "entity_group": "PROCESS_INFO",
+        "word": "and there will be no misunderstanding when the customer receives his order",
+        "start": 3867,
+        "end": 3941,
+        "score": 0.99
+    },
+    {
+        "entity_group": "TASK",
+        "word": "make changes during the order",
+        "start": 3968,
+        "end": 3997,
+        "score": 0.99
+    },
+    {
+        "entity_group": "CONDITION",
+        "word": "so that a misunderstanding with the customer or a mistake from i can be resolved",
+        "start": 3999,
+        "end": 4079,
+        "score": 0.99
+    },
+    {
+        "entity_group": "TASK",
+        "word": "make changes after the order has been processed",
+        "start": 4105,
+        "end": 4152,
+        "score": 0.99
+    },
+    {
+        "entity_group": "CONDITION",
+        "word": "so that the customer can make last-minute changes",
+        "start": 4154,
+        "end": 4203,
+        "score": 0.99
+    },
+    {
+        "entity_group": "TASK",
+        "word": "add the type of order",
+        "start": 4229,
+        "end": 4250,
+        "score": 0.99
+    },
+    {
+        "entity_group": "CONDITION",
+        "word": "so that the Ticket Master knows if the ticket master/she needs to hand the order directly to the customer or the delivery person",
+        "start": 4252,
+        "end": 4380,
+        "score": 0.99
+    },
+    {
+        "entity_group": "TASK",
+        "word": "add the pickup time for a takeaway order",
+        "start": 4406,
+        "end": 4446,
+        "score": 0.99
+    },
+    {
+        "entity_group": "CONDITION",
+        "word": "so that the kitchen knows when to start preparing a takeaway order",
+        "start": 4448,
+        "end": 4514,
+        "score": 0.99
+    },
+    {
+        "entity_group": "TASK",
+        "word": "have a digital ticket sent to the kitchen",
+        "start": 4541,
+        "end": 4582,
+        "score": 0.99
+    },
+    {
+        "entity_group": "CONDITION",
+        "word": "so that i do not have to walk physically to the kitchen",
+        "start": 4585,
+        "end": 4640,
+        "score": 0.99
+    },
+    {
+        "entity_group": "TASK",
+        "word": "add the delivery address to the order",
+        "start": 4667,
+        "end": 4704,
+        "score": 0.99
+    },
+    {
+        "entity_group": "CONDITION",
+        "word": "so that the delivery person knows where the delivery person needs to bring the order",
+        "start": 4706,
+        "end": 4790,
+        "score": 0.99
+    },
+    {
+        "entity_group": "AGENT",
+        "word": "Cashier",
+        "start": 4798,
+        "end": 4805,
+        "score": 0.99
+    },
+    {
+        "entity_group": "TASK",
+        "word": "add the phone number to the order",
+        "start": 4817,
+        "end": 4850,
+        "score": 0.99
+    },
+    {
+        "entity_group": "CONDITION",
+        "word": "so that the customer can be reached if there are problems with the order",
+        "start": 4853,
+        "end": 4925,
+        "score": 0.99
+    },
+    {
+        "entity_group": "TASK",
+        "word": "add the customer's name to the order in the case of takeaway, so it is clear for the customer's for which order to pay.",
+        "start": 4952,
+        "end": 5071,
+        "score": 0.99
+    },
+    {
+        "entity_group": "CONDITION",
+        "word": "so that i can customize the order for the customer.",
+        "start": 5156,
+        "end": 5207,
+        "score": 0.99
+    },
+    {
+        "entity_group": "TASK",
+        "word": "offer different payment methods, so that a customer has multiple options to pay for their order.",
+        "start": 5232,
+        "end": 5328,
+        "score": 0.99
+    },
+    {
+        "entity_group": "TASK",
+        "word": "be able to add a tip to the price of the order with all possible payment options, so that there is no hassle for the customer to tip.",
+        "start": 5353,
+        "end": 5486,
+        "score": 0.99
+    },
+    {
+        "entity_group": "AGENT",
+        "word": "Restaurant Owner",
+        "start": 5605,
+        "end": 5621,
+        "score": 0.99
+    },
+    {
+        "entity_group": "TASK",
+        "word": "see the VAT of each order, so that i have an overview of the taxes.",
+        "start": 5633,
+        "end": 5700,
+        "score": 0.99
+    },
+    {
+        "entity_group": "TASK",
+        "word": "see the sold products, so that i know what products to purchase for restocking the inventory.",
+        "start": 5734,
+        "end": 5827,
+        "score": 0.99
+    },
+    {
+        "entity_group": "AGENT",
+        "word": "Restaurant Owner",
+        "start": 5833,
+        "end": 5849,
+        "score": 0.99
+    },
+    {
+        "entity_group": "TASK",
+        "word": "have an overview of the types of orders",
+        "start": 5861,
+        "end": 5900,
+        "score": 0.99
+    },
+    {
+        "entity_group": "TASK",
+        "word": "have an overview of prices per order",
+        "start": 5935,
+        "end": 5971,
+        "score": 0.99
+    },
+    {
+        "entity_group": "PROCESS_INFO",
+        "word": "so that",
+        "start": 5972,
+        "end": 5979,
+        "score": 0.99
+    },
+    {
+        "entity_group": "TASK",
+        "word": "search for specific orders",
+        "start": 6055,
+        "end": 6081,
+        "score": 0.99
+    },
+    {
+        "entity_group": "PROCESS_INFO",
+        "word": "if a customer has questions about an order",
+        "start": 6082,
+        "end": 6124,
+        "score": 0.99
+    },
+    {
+        "entity_group": "TASK",
+        "word": "fill in the number of tips received on a day by the restaurant and the delivery employees",
+        "start": 6159,
+        "end": 6248,
+        "score": 0.99
+    },
+    {
+        "entity_group": "TASK",
+        "word": "have cashier accounts",
+        "start": 6420,
+        "end": 6441,
+        "score": 0.99
+    },
+    {
+        "entity_group": "TASK",
+        "word": "fill in the amount of cash the delivery people receive per day",
+        "start": 6533,
+        "end": 6595,
+        "score": 0.99
+    },
+    {
+        "entity_group": "AGENT",
+        "word": "Home Delivery Person",
+        "start": 6740,
+        "end": 6760,
+        "score": 0.99
+    },
+    {
+        "entity_group": "TASK",
+        "word": "have the address printed on the ticket",
+        "start": 6772,
+        "end": 6810,
+        "score": 0.99
+    },
+    {
+        "entity_group": "TASK",
+        "word": "have the delivery address before the order is finished",
+        "start": 6917,
+        "end": 6971,
+        "score": 0.99
+    },
+    {
+        "entity_group": "AGENT",
+        "word": "Home Delivery Person",
+        "start": 7051,
+        "end": 7071,
+        "score": 0.99
+    },
+    {
+        "entity_group": "TASK",
+        "word": "have the order price on a printed ticket",
+        "start": 7083,
+        "end": 7123,
+        "score": 0.99
+    },
+    {
+        "entity_group": "PROCESS_INFO",
+        "word": "so that i know what the customers have to pay i",
+        "start": 7125,
+        "end": 7172,
+        "score": 0.99
+    },
+    {
+        "entity_group": "TASK",
+        "word": "know the phone number of the customer on a printed ticket",
+        "start": 7211,
+        "end": 7268,
+        "score": 0.99
+    },
+    {
+        "entity_group": "PROCESS_INFO",
+        "word": "so that i can call the customer if i have some problems delivering the food to a certain location",
+        "start": 7270,
+        "end": 7367,
+        "score": 0.99
+    }
+]

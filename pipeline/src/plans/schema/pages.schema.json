@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "pages.schema.json",
+  "title": "Pages section",
+  "type": "object",
+  "additionalProperties": true,
+  "properties": {
+    "clearExisting": { "type": "boolean" },
+    "layoutParameterQname": { "type": "string" },
+    "specs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": true,
+        "required": ["name"],
+        "properties": {
+          "ref": { "type": "string" },
+          "name": { "type": "string", "minLength": 1 },
+          "title": { "type": "string" },
+          "entityRef": { "type": "string" },
+          "layoutQualifiedName": { "type": "string" },
+          "layoutParameterQname": { "type": "string" },
+          "allowedRoles": {
+            "type": "array",
+            "items": { "type": "string", "minLength": 1 }
+          },
+          "content": { "type": "array" },
+          "pageParameters": { "type": "array" },
+          "parameters": { "type": "array" }
+        }
+      }
+    },
+    "pageSpecs": { "type": "array" }
+  }
+}

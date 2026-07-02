@@ -1,0 +1,169 @@
+{
+  "actors": [
+    "manager",
+    "student",
+    "tutor"
+  ],
+  "tasks": [
+    {
+      "actor": "manager",
+      "action": "have an overview and modification functionality",
+      "condition": "",
+      "gatewayId": "",
+      "gatewayType": "",
+      "storyIndex": 0
+    },
+    {
+      "actor": "student",
+      "action": "verify accounts of students and tutors",
+      "condition": "",
+      "gatewayId": "",
+      "gatewayType": "",
+      "storyIndex": 7
+    },
+    {
+      "actor": "tutor",
+      "action": "select one or multiple subjects i want to be tutored in",
+      "condition": "",
+      "gatewayId": "",
+      "gatewayType": "",
+      "storyIndex": 9
+    },
+    {
+      "actor": "tutor",
+      "action": "update my availability dynamically in the app",
+      "condition": "so that i can be matched to a student based on this",
+      "gatewayId": "EG0",
+      "gatewayType": "exclusive",
+      "storyIndex": 15
+    },
+    {
+      "actor": "student",
+      "action": "specify my location",
+      "condition": "so that i can be matched to a student based on this",
+      "gatewayId": "EG0",
+      "gatewayType": "exclusive",
+      "storyIndex": 16
+    },
+    {
+      "actor": "manager",
+      "action": "cancel a session",
+      "condition": "so that i can be matched to a student based on this",
+      "gatewayId": "EG0",
+      "gatewayType": "exclusive",
+      "storyIndex": 17
+    },
+    {
+      "actor": "student",
+      "action": "be matched with a tutor that is available in the hours i have specified",
+      "condition": "so that partial matches do not have to be provided",
+      "gatewayId": "EG0",
+      "gatewayType": "exclusive",
+      "storyIndex": 23
+    },
+    {
+      "actor": "tutor",
+      "action": "be matched with a tutor who",
+      "condition": "so that partial matches do not have to be provided",
+      "gatewayId": "EG0",
+      "gatewayType": "exclusive",
+      "storyIndex": 24
+    },
+    {
+      "actor": "tutor",
+      "action": "can offer online sessions",
+      "condition": "if located far away",
+      "gatewayId": "EG0",
+      "gatewayType": "exclusive",
+      "storyIndex": 24
+    },
+    {
+      "actor": "tutor",
+      "action": "receive notifications three and one day prior to the session date",
+      "condition": "when the match is found",
+      "gatewayId": "EG0",
+      "gatewayType": "exclusive",
+      "storyIndex": 34
+    },
+    {
+      "actor": "tutor",
+      "action": "consider all available data",
+      "condition": "when the match is found",
+      "gatewayId": "EG0",
+      "gatewayType": "exclusive",
+      "storyIndex": 40
+    },
+    {
+      "actor": "tutor",
+      "action": "view my ratings",
+      "condition": "when the match is found",
+      "gatewayId": "EG0",
+      "gatewayType": "exclusive",
+      "storyIndex": 40
+    },
+    {
+      "actor": "manager",
+      "action": "access information about shortages of students or tutors by neighborhoods",
+      "condition": "when the match is found",
+      "gatewayId": "EG0",
+      "gatewayType": "exclusive",
+      "storyIndex": 47
+    }
+  ],
+  "gateways": [
+    {
+      "id": "EG0",
+      "type": "exclusive",
+      "conditions": [
+        "so that i can be matched to a student based on this",
+        "so that i do not have to do it manually",
+        "so that partial matches do not have to be provided",
+        "if located far away",
+        "when the match is found"
+      ]
+    }
+  ],
+  "processObjects": [
+    "Overview And Modification Functionality",
+    "Of Students And Tutors",
+    "To Be Tutored In",
+    "Dynamically In The App",
+    "Specify My Location",
+    "Session",
+    "Hours I Have Specified",
+    "With A Tutor Who",
+    "Can Offer Online Sessions",
+    "To The Session Date",
+    "Consider All Available Data",
+    "My Ratings",
+    "Or Tutors By Neighborhoods",
+    "(cv, And Other Documents)",
+    "Availability For The Session",
+    "Their Availability For Sessions",
+    "State Their Address",
+    "And In Person Session Types",
+    "Make My Account",
+    "Session: Online Or In Person",
+    "With My Personal Information",
+    "Documents) In The System",
+    "Specify My Subjects",
+    "Specify My Availability",
+    "Address, Subject, And Availability",
+    "To Enforce Strict Criteria",
+    "Is Found Every Hour",
+    "I Am Interested In",
+    "In The Same Area",
+    "The Subject I Teach"
+  ],
+  "capabilityHints": {
+    "hasApproval": false,
+    "hasDecision": true,
+    "hasNotification": true,
+    "hasWorkflowLikeRouting": true
+  },
+  "stats": {
+    "taskCount": 13,
+    "gatewayCount": 1,
+    "rawEntityCount": 69
+  }
+}

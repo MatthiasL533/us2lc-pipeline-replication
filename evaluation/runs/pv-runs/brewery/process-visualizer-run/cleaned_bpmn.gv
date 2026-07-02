@@ -1,0 +1,36 @@
+digraph bpmn_diagram {
+	node [color=black fillcolor=bisque shape=box style=filled]
+	T0 [label="Brewery: log in"]
+	T1 [label="Brewery, Hospitality business, or Beer2Beer (B2B) management user: log in and be redirected to my personalized homepage so that i can access platform functionalities relevant to my role"]
+	T0 -> T1
+	T2 [label="Hospitality business: log in and be redirected to my personalized homepage so that i can access platform functionalities relevant to my role"]
+	T1 -> T2
+	T3 [label="Beer2Beer management user: create proposals for brewery requests so that i can send tailored offers to breweries"]
+	T2 -> T3
+	node [color=black fillcolor=azure shape=diamond style=filled]
+	EG0_S [label=X]
+	node [color=black fillcolor=bisque shape=box style=filled]
+	T4 [label="Brewery or Hospitality business: create an account so that i can access and use the Beer 2 Beer platform"]
+	T5 [label="Brewery: create a product so that i can offer a product for sale on the beer 2 beer platform"]
+	T4 -> T5
+	T6 [label="Hospitality business: request a sales proposal"]
+	T5 -> T6
+	T7 [label="beer2beer management user: browse within a catalogue of the beers"]
+	T6 -> T7
+	T8 [label="hospitality business: create recurring orders based on an order template so that i can schedule multiple deliveries automatically over a set period"]
+	T7 -> T8
+	T9 [label="Brewery: create order templates that allow i to reorder my product assortment with a single click"]
+	T8 -> T9
+	T10 [label="beer2beer management user: create a beer order at beer2beer so that i can receive the beers for my business from multiple breweries"]
+	T9 -> T10
+	T3 -> EG0_S
+	node [color=black fillcolor=lightpink shape=ellipse style=filled]
+	START_0 [label=START]
+	START_0 -> T0
+	START_1 [label=START]
+	START_1 -> T4
+	END_0 [label=END]
+	END_1 [label=END]
+	EG0_S -> END_1
+	T10 -> END_0
+}

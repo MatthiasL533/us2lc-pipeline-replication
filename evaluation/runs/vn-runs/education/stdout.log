@@ -1,0 +1,382 @@
+
+> us2lc-pipeline@1.0.0 generate:vn
+> node pipeline/generate-vn-cli.js --input-dir=artifacts/practical-performance/20260528-165228/inputs/education --output-dir=artifacts/vn-runs/education
+
+{
+  "ok": true,
+  "inputDir": "/workspace/us2lc-pipeline/artifacts/practical-performance/20260528-165228/inputs/education",
+  "artifacts": {
+    "ontologyPath": "/workspace/us2lc-pipeline/artifacts/vn-runs/education/visual-narrator-ontology.omn",
+    "storiesPath": "/workspace/us2lc-pipeline/artifacts/vn-runs/education/visual-narrator-stories.json",
+    "summaryPath": "/workspace/us2lc-pipeline/artifacts/vn-runs/education/visual-narrator-summary.json",
+    "rawPath": "/workspace/us2lc-pipeline/artifacts/vn-runs/education/visual-narrator-result.json"
+  },
+  "summary": {
+    "classNames": [
+      "Freelance",
+      "Teaching Skill",
+      "Skill",
+      "Teaching",
+      "Skill Assessment",
+      "Assessment",
+      "Level",
+      "Learning Progress",
+      "Achievement",
+      "Quiz",
+      "Feedback",
+      "Skill Level",
+      "Profile",
+      "Background",
+      "Teaching Experience",
+      "Experience",
+      "Collection",
+      "Material",
+      "Flashcard",
+      "Video",
+      "Research Paper",
+      "Paper",
+      "Research",
+      "Access",
+      "Slide",
+      "Game",
+      "Password",
+      "Profile Information",
+      "Teacher Profile",
+      "Module",
+      "Content",
+      "User",
+      "Book",
+      "Overview",
+      "Announcement",
+      "Function",
+      "Learning",
+      "Number",
+      "Section",
+      "Notification"
+    ],
+    "classes": [
+      {
+        "name": "Freelance",
+        "parent": "",
+        "isRole": false
+      },
+      {
+        "name": "Teaching Skill",
+        "parent": "Skill",
+        "isRole": false
+      },
+      {
+        "name": "Skill",
+        "parent": "",
+        "isRole": false
+      },
+      {
+        "name": "Teaching",
+        "parent": "",
+        "isRole": false
+      },
+      {
+        "name": "Skill Assessment",
+        "parent": "Assessment",
+        "isRole": false
+      },
+      {
+        "name": "Assessment",
+        "parent": "",
+        "isRole": false
+      },
+      {
+        "name": "Level",
+        "parent": "",
+        "isRole": false
+      },
+      {
+        "name": "Learning Progress",
+        "parent": "",
+        "isRole": false
+      },
+      {
+        "name": "Achievement",
+        "parent": "",
+        "isRole": false
+      },
+      {
+        "name": "Quiz",
+        "parent": "",
+        "isRole": false
+      },
+      {
+        "name": "Feedback",
+        "parent": "",
+        "isRole": false
+      },
+      {
+        "name": "Skill Level",
+        "parent": "Level",
+        "isRole": false
+      },
+      {
+        "name": "Profile",
+        "parent": "",
+        "isRole": false
+      },
+      {
+        "name": "Background",
+        "parent": "",
+        "isRole": false
+      },
+      {
+        "name": "Teaching Experience",
+        "parent": "Experience",
+        "isRole": false
+      },
+      {
+        "name": "Experience",
+        "parent": "",
+        "isRole": false
+      },
+      {
+        "name": "Collection",
+        "parent": "",
+        "isRole": false
+      },
+      {
+        "name": "Material",
+        "parent": "",
+        "isRole": false
+      },
+      {
+        "name": "Flashcard",
+        "parent": "",
+        "isRole": false
+      },
+      {
+        "name": "Video",
+        "parent": "",
+        "isRole": false
+      },
+      {
+        "name": "Research Paper",
+        "parent": "Paper",
+        "isRole": false
+      },
+      {
+        "name": "Paper",
+        "parent": "",
+        "isRole": false
+      },
+      {
+        "name": "Research",
+        "parent": "",
+        "isRole": false
+      },
+      {
+        "name": "Access",
+        "parent": "",
+        "isRole": false
+      },
+      {
+        "name": "Slide",
+        "parent": "",
+        "isRole": false
+      },
+      {
+        "name": "Game",
+        "parent": "",
+        "isRole": false
+      },
+      {
+        "name": "Password",
+        "parent": "",
+        "isRole": false
+      },
+      {
+        "name": "Profile Information",
+        "parent": "Information",
+        "isRole": false
+      },
+      {
+        "name": "Teacher Profile",
+        "parent": "Profile",
+        "isRole": false
+      },
+      {
+        "name": "Module",
+        "parent": "",
+        "isRole": false
+      },
+      {
+        "name": "Content",
+        "parent": "",
+        "isRole": false
+      },
+      {
+        "name": "User",
+        "parent": "",
+        "isRole": false
+      },
+      {
+        "name": "Book",
+        "parent": "",
+        "isRole": false
+      },
+      {
+        "name": "Overview",
+        "parent": "",
+        "isRole": false
+      },
+      {
+        "name": "Announcement",
+        "parent": "",
+        "isRole": false
+      },
+      {
+        "name": "Function",
+        "parent": "",
+        "isRole": false
+      },
+      {
+        "name": "Learning",
+        "parent": "",
+        "isRole": false
+      },
+      {
+        "name": "Number",
+        "parent": "",
+        "isRole": false
+      },
+      {
+        "name": "Section",
+        "parent": "",
+        "isRole": false
+      },
+      {
+        "name": "Notification",
+        "parent": "",
+        "isRole": false
+      }
+    ],
+    "relationships": [
+      {
+        "name": "hasSkill",
+        "domain": "Teaching",
+        "range": "Teaching Skill"
+      },
+      {
+        "name": "hasAssessment",
+        "domain": "Skill",
+        "range": "Skill Assessment"
+      },
+      {
+        "name": "hasLevel",
+        "domain": "Skill",
+        "range": "Skill Level"
+      },
+      {
+        "name": "canReflect",
+        "domain": "Profile",
+        "range": "Background"
+      },
+      {
+        "name": "hasExperience",
+        "domain": "Teaching",
+        "range": "Teaching Experience"
+      },
+      {
+        "name": "hasPaper",
+        "domain": "Research",
+        "range": "Research Paper"
+      },
+      {
+        "name": "hasInformation",
+        "domain": "Profile",
+        "range": "Profile Information"
+      }
+    ],
+    "keyNouns": [
+      {
+        "term": "Freelance",
+        "weight": 15.18
+      },
+      {
+        "term": "User",
+        "weight": 6.5
+      },
+      {
+        "term": "Skill",
+        "weight": 3.3200000000000003
+      },
+      {
+        "term": "Material",
+        "weight": 3
+      },
+      {
+        "term": "Level",
+        "weight": 3
+      },
+      {
+        "term": "Game",
+        "weight": 3
+      },
+      {
+        "term": "Flashcard",
+        "weight": 3
+      },
+      {
+        "term": "Slide",
+        "weight": 3
+      },
+      {
+        "term": "Video",
+        "weight": 3
+      },
+      {
+        "term": "Profile",
+        "weight": 2.66
+      },
+      {
+        "term": "Content",
+        "weight": 2.5
+      },
+      {
+        "term": "Book",
+        "weight": 2
+      },
+      {
+        "term": "Quiz",
+        "weight": 2
+      },
+      {
+        "term": "Paper",
+        "weight": 2
+      },
+      {
+        "term": "Learning",
+        "weight": 1.5
+      },
+      {
+        "term": "Access",
+        "weight": 1.5
+      },
+      {
+        "term": "Research",
+        "weight": 1.32
+      }
+    ],
+    "inferredRoles": [
+      "administrator",
+      "teacher"
+    ],
+    "discardedClassNames": [
+      "Freelance Teacher",
+      "Teacher",
+      "Progress",
+      "What",
+      "Place",
+      "Information",
+      "Administrator"
+    ]
+  },
+  "status": "completed",
+  "command": "/workspace/us2lc-pipeline/visual-narrator/.venv/bin/python /workspace/us2lc-pipeline/pipeline/scripts/run_visual_narrator.py --input /workspace/us2lc-pipeline/artifacts/practical-performance/20260528-165228/inputs/education/user-stories.txt --system-name PracticalPerf_education_Stability"
+}

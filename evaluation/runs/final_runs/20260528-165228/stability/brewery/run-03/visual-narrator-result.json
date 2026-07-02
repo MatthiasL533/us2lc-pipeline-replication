@@ -1,0 +1,2858 @@
+{
+  "ok": true,
+  "inputPath": "/Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/artifacts/practical-performance/20260528-165228/inputs/brewery/user-stories.txt",
+  "systemName": "PracticalPerf_brewery_Stability",
+  "ontology": "# Generated with Visual Narrator\nPrefix: : <http://fakesite.org/practicalperf_brewery_stability.owl#>\nPrefix: owl: <http://www.w3.org/2002/07/owl#>\nPrefix: rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPrefix: rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPrefix: xsd: <http://www.w3.org/2001/XMLSchema#>\nPrefix: dc: <http://purl.org/dc/elements/1.1/>\nPrefix: onto: <http://fakesite.org/practicalperf_bebrewerytability.owl#>\n\nOntology: <:>\n\nAnnotations:\n\tdc:title \"PracticalPerf_beerbrewerybility\",\n\tdc:creator \"Visual Narrator\",\n\trdfs:comment \"Generated with Visual Narrator\"\n\nAnnotationProperty: dc:creator\n\nAnnotationProperty: dc:title\n\n\n# Relationships\nObjectProperty: :canModify1\n\tDomain: :Brewery\n\tRange: :Product\n\nObjectProperty: :canModify2\n\tDomain: :HospitalityBusiness\n\tRange: :OrderTemplate\n\nObjectProperty: :canCreate1\n\tDomain: :ManagementUser\n\tRange: :Proposal\n\nObjectProperty: :canCreate2\n\tDomain: :Brewery\n\tRange: :Product\n\nObjectProperty: :canCreate3\n\tDomain: :ManagementUser\n\tRange: :Contract\n\nObjectProperty: :canCreate4\n\tDomain: :HospitalityBusiness\n\tRange: :Order\n\nObjectProperty: :canCreate5\n\tDomain: :HospitalityBusiness\n\tRange: :OrderTemplate\n\nObjectProperty: :canCreate6\n\tDomain: :HospitalityBusiness\n\tRange: :BeerOrder\n\nObjectProperty: :canSign\n\tDomain: :Brewery\n\tRange: :Contract\n\nObjectProperty: :canMonitor\n\tDomain: :Brewery\n\tRange: :Order\n\nObjectProperty: :canSee\n\tDomain: :HospitalityBusiness\n\tRange: :Platform\n\nObjectProperty: :hasUser\n\tDomain: :Management\n\tRange: :ManagementUser\n\nObjectProperty: :canAdjust\n\tDomain: :HospitalityBusiness\n\tRange: :Delivery\n\nObjectProperty: :canAdd\n\tDomain: :Brewery\n\tRange: :Brand\n\nObjectProperty: :canLog\n\tDomain: :ManagementUser\n\tRange: :Homepage\n\nObjectProperty: :canAccess\n\tDomain: :Brewery\n\tRange: :Contract\n\nObjectProperty: :canTailor\n\tDomain: :HospitalityBusiness\n\tRange: :ProductAssortment\n\nObjectProperty: :canView1\n\tDomain: :ManagementUser\n\tRange: :Overview\n\nObjectProperty: :canView2\n\tDomain: :Brewery\n\tRange: :Overview\n\nObjectProperty: :canView3\n\tDomain: :ManagementUser\n\tRange: :Performance\n\nObjectProperty: :canBrowseWithin\n\tDomain: :HospitalityBusiness\n\tRange: :Catalogue\n\nObjectProperty: :hasOrder\n\tDomain: :Beer\n\tRange: :BeerOrder\n\nObjectProperty: :canSchedule\n\tDomain: :HospitalityBusiness\n\tRange: :Delivery\n\nObjectProperty: :canReceive\n\tDomain: :HospitalityBusiness\n\tRange: :Beer\n\nObjectProperty: :hasBusiness\n\tDomain: :Hospitality\n\tRange: :HospitalityBusiness\n\nObjectProperty: :hasTemplate\n\tDomain: :Order\n\tRange: :OrderTemplate\n\nObjectProperty: :canReview\n\tDomain: :ManagementUser\n\tRange: :They\n\nObjectProperty: :canOffer1\n\tDomain: :Brewery\n\tRange: :Platform\n\nObjectProperty: :canOffer2\n\tDomain: :Brewery\n\tRange: :Product\n\nObjectProperty: :canPayFor\n\tDomain: :HospitalityBusiness\n\tRange: :Order\n\nObjectProperty: :canContinueWith\n\tDomain: :HospitalityBusiness\n\tRange: :Order\n\nObjectProperty: :canRenew\n\tDomain: :Brewery\n\tRange: :They\n\nObjectProperty: :canNotify\n\tDomain: :Brewery\n\tRange: :HospitalityBusiness\n\nObjectProperty: :hasAssortment\n\tDomain: :Product\n\tRange: :ProductAssortment\n\nObjectProperty: :canKeep\n\tDomain: :Brewery\n\tRange: :Assortment\n\nObjectProperty: :canManage1\n\tDomain: :HospitalityBusiness\n\tRange: :Order\n\nObjectProperty: :canManage2\n\tDomain: :Brewery\n\tRange: :Contract\n\nObjectProperty: :canManage3\n\tDomain: :Brewery\n\tRange: :Order\n\n# Classes\nClass: :ManagementUser\n\tSubClassOf: :User\n\tAnnotations:\n\t\trdfs:label \"Management User\",\n\t\trdfs:comment \"Functional Role\"\n\nClass: :User\n\n\nClass: :Management\n\n\nClass: :HospitalityBusiness\n\tSubClassOf: :Business\n\tAnnotations:\n\t\trdfs:label \"Hospitality Business\",\n\t\trdfs:comment \"Functional Role\"\n\nClass: :Business\n\n\nClass: :Hospitality\n\n\nClass: :Homepage\n\n\nClass: :Proposal\n\n\nClass: :Overview\n\n\nClass: :They\n\n\nClass: :Order\n\n\nClass: :Brewery\n\tAnnotations:\n\t\trdfs:comment \"Functional Role\"\n\nClass: :Brand\n\n\nClass: :Product\n\n\nClass: :Assortment\n\n\nClass: :Platform\n\n\nClass: :Catalogue\n\n\nClass: :Contract\n\n\nClass: :Delivery\n\n\nClass: :OrderTemplate\n\tSubClassOf: :Template\n\tAnnotations:\n\t\trdfs:label \"Order Template\"\n\nClass: :Template\n\n\nClass: :ProductAssortment\n\tSubClassOf: :Assortment\n\tAnnotations:\n\t\trdfs:label \"Product Assortment\"\n\nClass: :BeerOrder\n\tSubClassOf: :Order\n\tAnnotations:\n\t\trdfs:label \"Beer Order\"\n\nClass: :Beer\n\n\nClass: :Performance\n\n\nClass: :Account\n\n\nClass: :Cart\n\n\n",
+  "stories": [
+    {
+      "number": 1,
+      "text": "As a Brewery, Hospitality business, or Beer2Beer (B2B) management user, I want to log in and be redirected to my personalized homepage so that I can access platform functionalities relevant to my role.",
+      "role": {
+        "name": "user",
+        "compound": [
+          "management",
+          "user"
+        ]
+      },
+      "means": {
+        "mainObject": "homepage",
+        "compound": []
+      },
+      "json": {
+        "number": 1,
+        "text": "As a Brewery, Hospitality business, or Beer2Beer (B2B) management user, I want to log in and be redirected to my personalized homepage so that I can access platform functionalities relevant to my role.",
+        "iloc": [
+          12,
+          26
+        ],
+        "role": {
+          "text": "Brewery Hospitality business or Beer2Beer (B2B) management user",
+          "indicator": "As a"
+        },
+        "means": {
+          "text": "log in and be redirected to my personalized homepage",
+          "indicator": "I want to"
+        },
+        "ends": {
+          "text": "I can access platform functionalities relevant to my role",
+          "indicator": "So that"
+        }
+      }
+    },
+    {
+      "number": 2,
+      "text": "As a Beer2Beer management user, I want to create proposals for brewery requests so that I can send tailored offers to breweries.",
+      "role": {
+        "name": "user",
+        "compound": [
+          "management",
+          "user"
+        ]
+      },
+      "means": {
+        "mainObject": "proposals",
+        "compound": []
+      },
+      "json": {
+        "number": 2,
+        "text": "As a Beer2Beer management user, I want to create proposals for brewery requests so that I can send tailored offers to breweries.",
+        "iloc": [
+          5,
+          15
+        ],
+        "role": {
+          "text": "Beer2Beer management user",
+          "indicator": "As a"
+        },
+        "means": {
+          "text": "create proposals for brewery requests",
+          "indicator": "I want to"
+        },
+        "ends": {
+          "text": "I can send tailored offers to breweries",
+          "indicator": "So that"
+        }
+      }
+    },
+    {
+      "number": 3,
+      "text": "As a Beer2Beer management user, I want to view an overview of all brewery sign-up requests so that I can review and approve them.",
+      "role": {
+        "name": "user",
+        "compound": [
+          "management",
+          "user"
+        ]
+      },
+      "means": {
+        "mainObject": "overview",
+        "compound": []
+      },
+      "json": {
+        "number": 3,
+        "text": "As a Beer2Beer management user, I want to view an overview of all brewery sign-up requests so that I can review and approve them.",
+        "iloc": [
+          5,
+          20
+        ],
+        "role": {
+          "text": "Beer2Beer management user",
+          "indicator": "As a"
+        },
+        "means": {
+          "text": "view an overview of all brewery sign-up requests",
+          "indicator": "I want to"
+        },
+        "ends": {
+          "text": "I can review and approve them",
+          "indicator": "So that"
+        }
+      }
+    },
+    {
+      "number": 4,
+      "text": "As a Brewery or Hospitality business, I want to create an account so that I can access and use the Beer 2 Beer platform.",
+      "role": {
+        "name": "",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "account",
+        "compound": []
+      },
+      "json": {
+        "number": 4,
+        "text": "As a Brewery or Hospitality business, I want to create an account so that I can access and use the Beer 2 Beer platform.",
+        "iloc": [
+          6,
+          14
+        ],
+        "role": {
+          "text": "Brewery or Hospitality business",
+          "indicator": "As a"
+        },
+        "means": {
+          "text": "create an account",
+          "indicator": "I want to"
+        },
+        "ends": {
+          "text": "I can access and use the Beer 2 Beer platform",
+          "indicator": "So that"
+        }
+      }
+    },
+    {
+      "number": 5,
+      "text": "As a Hospitality business, I want to be able to use a shopping cart so that I can continue with my current selection before completing the order.",
+      "role": {
+        "name": "business",
+        "compound": [
+          "Hospitality",
+          "business"
+        ]
+      },
+      "means": {
+        "mainObject": "cart",
+        "compound": [
+          "shopping",
+          "cart"
+        ]
+      },
+      "json": {
+        "number": 5,
+        "text": "As a Hospitality business, I want to be able to use a shopping cart so that I can continue with my current selection before completing the order.",
+        "iloc": [
+          4,
+          16
+        ],
+        "role": {
+          "text": "Hospitality business",
+          "indicator": "As a"
+        },
+        "means": {
+          "text": "use a shopping cart",
+          "indicator": "I want to be able to"
+        },
+        "ends": {
+          "text": "I can continue with my current selection before completing the order",
+          "indicator": "So that"
+        }
+      }
+    },
+    {
+      "number": 6,
+      "text": "As a Brewery, I want to add new brands and update existing ones on the platform so that I can keep my product offerings current and relevant for customers.",
+      "role": {
+        "name": "Brewery",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "brands",
+        "compound": []
+      },
+      "json": {
+        "number": 6,
+        "text": "As a Brewery, I want to add new brands and update existing ones on the platform so that I can keep my product offerings current and relevant for customers.",
+        "iloc": [
+          3,
+          18
+        ],
+        "role": {
+          "text": "Brewery",
+          "indicator": "As a"
+        },
+        "means": {
+          "text": "add new brands and update existing ones on the platform",
+          "indicator": "I want to"
+        },
+        "ends": {
+          "text": "I can keep my product offerings current and relevant for customers",
+          "indicator": "So that"
+        }
+      }
+    },
+    {
+      "number": 7,
+      "text": "As a Brewery, I want to modify a product so that I can keep my assortment up to date.",
+      "role": {
+        "name": "Brewery",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "product",
+        "compound": []
+      },
+      "json": {
+        "number": 7,
+        "text": "As a Brewery, I want to modify a product so that I can keep my assortment up to date.",
+        "iloc": [
+          3,
+          11
+        ],
+        "role": {
+          "text": "Brewery",
+          "indicator": "As a"
+        },
+        "means": {
+          "text": "modify a product",
+          "indicator": "I want to"
+        },
+        "ends": {
+          "text": "I can keep my assortment up to date",
+          "indicator": "So that"
+        }
+      }
+    },
+    {
+      "number": 8,
+      "text": "As a Brewery, I want to create a product so that I can offer it for sale on the platform.",
+      "role": {
+        "name": "Brewery",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "product",
+        "compound": []
+      },
+      "json": {
+        "number": 8,
+        "text": "As a Brewery, I want to create a product so that I can offer it for sale on the platform.",
+        "iloc": [
+          3,
+          11
+        ],
+        "role": {
+          "text": "Brewery",
+          "indicator": "As a"
+        },
+        "means": {
+          "text": "create a product",
+          "indicator": "I want to"
+        },
+        "ends": {
+          "text": "I can offer it for sale on the platform",
+          "indicator": "So that"
+        }
+      }
+    },
+    {
+      "number": 9,
+      "text": "As a Brewery, I want to request a sales proposal so that I can offer my products on the Beer 2 Beer platform through order-based commissions.",
+      "role": {
+        "name": "Brewery",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "proposal",
+        "compound": [
+          "sales",
+          "proposal"
+        ]
+      },
+      "json": {
+        "number": 9,
+        "text": "As a Brewery, I want to request a sales proposal so that I can offer my products on the Beer 2 Beer platform through order-based commissions.",
+        "iloc": [
+          3,
+          12
+        ],
+        "role": {
+          "text": "Brewery",
+          "indicator": "As a"
+        },
+        "means": {
+          "text": "request a sales proposal",
+          "indicator": "I want to"
+        },
+        "ends": {
+          "text": "I can offer my products on the Beer 2 Beer platform through order-based commissions",
+          "indicator": "So that"
+        }
+      }
+    },
+    {
+      "number": 10,
+      "text": "As a Hospitality business, I want to browse within a catalogue of the beers so that I can see which beers are available on the platform.",
+      "role": {
+        "name": "business",
+        "compound": [
+          "Hospitality",
+          "business"
+        ]
+      },
+      "means": {
+        "mainObject": "catalogue",
+        "compound": []
+      },
+      "json": {
+        "number": 10,
+        "text": "As a Hospitality business, I want to browse within a catalogue of the beers so that I can see which beers are available on the platform.",
+        "iloc": [
+          4,
+          16
+        ],
+        "role": {
+          "text": "Hospitality business",
+          "indicator": "As a"
+        },
+        "means": {
+          "text": "browse within a catalogue of the beers",
+          "indicator": "I want to"
+        },
+        "ends": {
+          "text": "I can see which beers are available on the platform",
+          "indicator": "So that"
+        }
+      }
+    },
+    {
+      "number": 11,
+      "text": "As a Beer2Beer management user, I want to view an overview of all beers and breweries available on the platform so that I can monitor the current offerings.",
+      "role": {
+        "name": "user",
+        "compound": [
+          "management",
+          "user"
+        ]
+      },
+      "means": {
+        "mainObject": "overview",
+        "compound": []
+      },
+      "json": {
+        "number": 11,
+        "text": "As a Beer2Beer management user, I want to view an overview of all beers and breweries available on the platform so that I can monitor the current offerings.",
+        "iloc": [
+          5,
+          22
+        ],
+        "role": {
+          "text": "Beer2Beer management user",
+          "indicator": "As a"
+        },
+        "means": {
+          "text": "view an overview of all beers and breweries available on the platform",
+          "indicator": "I want to"
+        },
+        "ends": {
+          "text": "I can monitor the current offerings",
+          "indicator": "So that"
+        }
+      }
+    },
+    {
+      "number": 12,
+      "text": "As a Beer2Beer management user, I want to create contracts after a proposal is accepted so that we can formalize agreements with breweries.",
+      "role": {
+        "name": "user",
+        "compound": [
+          "management",
+          "user"
+        ]
+      },
+      "means": {
+        "mainObject": "contracts",
+        "compound": []
+      },
+      "json": {
+        "number": 12,
+        "text": "As a Beer2Beer management user, I want to create contracts after a proposal is accepted so that we can formalize agreements with breweries.",
+        "iloc": [
+          5
+        ],
+        "role": {
+          "text": "Beer2Beer management user",
+          "indicator": "As a"
+        },
+        "means": {
+          "text": "create contracts after a proposal is accepted",
+          "indicator": "I want to"
+        },
+        "ends": {
+          "text": "we can formalize agreements with breweries",
+          "indicator": "So that"
+        }
+      }
+    },
+    {
+      "number": 13,
+      "text": "As a Brewery, I want to sign a contract with Beer 2 Beer so that we can agree on order commissions and delivery capacity.",
+      "role": {
+        "name": "Brewery",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "contract",
+        "compound": []
+      },
+      "json": {
+        "number": 13,
+        "text": "As a Brewery, I want to sign a contract with Beer 2 Beer so that we can agree on order commissions and delivery capacity.",
+        "iloc": [
+          3
+        ],
+        "role": {
+          "text": "Brewery",
+          "indicator": "As a"
+        },
+        "means": {
+          "text": "sign a contract with Beer 2 Beer",
+          "indicator": "I want to"
+        },
+        "ends": {
+          "text": "we can agree on order commissions and delivery capacity",
+          "indicator": "So that"
+        }
+      }
+    },
+    {
+      "number": 14,
+      "text": "As a brewery I want to be able to access current and previous contracts in pdf format",
+      "role": {
+        "name": "brewery",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "contracts",
+        "compound": []
+      },
+      "json": {
+        "number": 14,
+        "text": "As a brewery I want to be able to access current and previous contracts in pdf format",
+        "iloc": [
+          3
+        ],
+        "role": {
+          "text": "brewery",
+          "indicator": "As a"
+        },
+        "means": {
+          "text": "access current and previous contracts in pdf format",
+          "indicator": "I want to be able to"
+        }
+      }
+    },
+    {
+      "number": 15,
+      "text": "As a hospitality business, I want to manage recurring orders created from order templates, including the ability to cancel them, so I can adjust or stop deliveries as needed.",
+      "role": {
+        "name": "business",
+        "compound": [
+          "hospitality",
+          "business"
+        ]
+      },
+      "means": {
+        "mainObject": "orders",
+        "compound": []
+      },
+      "json": {
+        "number": 15,
+        "text": "As a hospitality business, I want to manage recurring orders created from order templates, including the ability to cancel them, so I can adjust or stop deliveries as needed.",
+        "iloc": [
+          4,
+          21
+        ],
+        "role": {
+          "text": "hospitality business",
+          "indicator": "As a"
+        },
+        "means": {
+          "text": "manage recurring orders created from order templates including the ability to cancel them",
+          "indicator": "I want to"
+        },
+        "ends": {
+          "text": "I can adjust or stop deliveries as needed",
+          "indicator": "So"
+        }
+      }
+    },
+    {
+      "number": 16,
+      "text": "As a hospitality business, I want to create recurring orders based on an order template so that I can schedule multiple deliveries automatically over a set period.",
+      "role": {
+        "name": "business",
+        "compound": [
+          "hospitality",
+          "business"
+        ]
+      },
+      "means": {
+        "mainObject": "orders",
+        "compound": []
+      },
+      "json": {
+        "number": 16,
+        "text": "As a hospitality business, I want to create recurring orders based on an order template so that I can schedule multiple deliveries automatically over a set period.",
+        "iloc": [
+          4,
+          17
+        ],
+        "role": {
+          "text": "hospitality business",
+          "indicator": "As a"
+        },
+        "means": {
+          "text": "create recurring orders based on an order template",
+          "indicator": "I want to"
+        },
+        "ends": {
+          "text": "I can schedule multiple deliveries automatically over a set period",
+          "indicator": "So that"
+        }
+      }
+    },
+    {
+      "number": 17,
+      "text": "As a hospitality business, I want to modify existing order templates so that I can tailor my product assortment to changing needs over time.",
+      "role": {
+        "name": "business",
+        "compound": [
+          "hospitality",
+          "business"
+        ]
+      },
+      "means": {
+        "mainObject": "templates",
+        "compound": [
+          "order",
+          "templates"
+        ]
+      },
+      "json": {
+        "number": 17,
+        "text": "As a hospitality business, I want to modify existing order templates so that I can tailor my product assortment to changing needs over time.",
+        "iloc": [
+          4,
+          13
+        ],
+        "role": {
+          "text": "hospitality business",
+          "indicator": "As a"
+        },
+        "means": {
+          "text": "modify existing order templates",
+          "indicator": "I want to"
+        },
+        "ends": {
+          "text": "I can tailor my product assortment to changing needs over time",
+          "indicator": "So that"
+        }
+      }
+    },
+    {
+      "number": 18,
+      "text": "As a hospitality business, I want to create order templates that allow me to reorder my product assortment with a single click, saving time and reducing errors.",
+      "role": {
+        "name": "business",
+        "compound": [
+          "hospitality",
+          "business"
+        ]
+      },
+      "means": {
+        "mainObject": "templates",
+        "compound": [
+          "order",
+          "templates"
+        ]
+      },
+      "json": {
+        "number": 18,
+        "text": "As a hospitality business, I want to create order templates that allow me to reorder my product assortment with a single click, saving time and reducing errors.",
+        "iloc": [
+          4
+        ],
+        "role": {
+          "text": "hospitality business",
+          "indicator": "As a"
+        },
+        "means": {
+          "text": "create order templates that allow me to reorder my product assortment with a single click saving time and reducing errors",
+          "indicator": "I want to"
+        }
+      }
+    },
+    {
+      "number": 19,
+      "text": "As a Brewery, I want to manage my contracts with Beer2Beer so that I can renew them before they expire and avoid service interruptions.",
+      "role": {
+        "name": "Brewery",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "contracts",
+        "compound": []
+      },
+      "json": {
+        "number": 19,
+        "text": "As a Brewery, I want to manage my contracts with Beer2Beer so that I can renew them before they expire and avoid service interruptions.",
+        "iloc": [
+          3,
+          13
+        ],
+        "role": {
+          "text": "Brewery",
+          "indicator": "As a"
+        },
+        "means": {
+          "text": "manage my contracts with Beer2Beer",
+          "indicator": "I want to"
+        },
+        "ends": {
+          "text": "I can renew them before they expire and avoid service interruptions",
+          "indicator": "So that"
+        }
+      }
+    },
+    {
+      "number": 20,
+      "text": "As a Brewery, I want to manage individual orders so that I can notify Hospitality businesses about the order status and updates.",
+      "role": {
+        "name": "Brewery",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "orders",
+        "compound": []
+      },
+      "json": {
+        "number": 20,
+        "text": "As a Brewery, I want to manage individual orders so that I can notify Hospitality businesses about the order status and updates.",
+        "iloc": [
+          3,
+          11
+        ],
+        "role": {
+          "text": "Brewery",
+          "indicator": "As a"
+        },
+        "means": {
+          "text": "manage individual orders",
+          "indicator": "I want to"
+        },
+        "ends": {
+          "text": "I can notify Hospitality businesses about the order status and updates",
+          "indicator": "So that"
+        }
+      }
+    },
+    {
+      "number": 21,
+      "text": "As a Brewery, I want to view an overview of my orders so that I can monitor incoming orders and process them efficiently.",
+      "role": {
+        "name": "Brewery",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "overview",
+        "compound": []
+      },
+      "json": {
+        "number": 21,
+        "text": "As a Brewery, I want to view an overview of my orders so that I can monitor incoming orders and process them efficiently.",
+        "iloc": [
+          3,
+          14
+        ],
+        "role": {
+          "text": "Brewery",
+          "indicator": "As a"
+        },
+        "means": {
+          "text": "view an overview of my orders",
+          "indicator": "I want to"
+        },
+        "ends": {
+          "text": "I can monitor incoming orders and process them efficiently",
+          "indicator": "So that"
+        }
+      }
+    },
+    {
+      "number": 22,
+      "text": "As a Hospitality business, I want to manage my order templates so that I can quickly reorder the same selection at different times.",
+      "role": {
+        "name": "business",
+        "compound": [
+          "Hospitality",
+          "business"
+        ]
+      },
+      "means": {
+        "mainObject": "order",
+        "compound": []
+      },
+      "json": {
+        "number": 22,
+        "text": "As a Hospitality business, I want to manage my order templates so that I can quickly reorder the same selection at different times.",
+        "iloc": [
+          4,
+          13
+        ],
+        "role": {
+          "text": "Hospitality business",
+          "indicator": "As a"
+        },
+        "means": {
+          "text": "manage my order templates",
+          "indicator": "I want to"
+        },
+        "ends": {
+          "text": "I can quickly reorder the same selection at different times",
+          "indicator": "So that"
+        }
+      }
+    },
+    {
+      "number": 23,
+      "text": "As a Hospitality business, I want to pay for my order so that the order can be processed and delivered.",
+      "role": {
+        "name": "business",
+        "compound": [
+          "Hospitality",
+          "business"
+        ]
+      },
+      "means": {
+        "mainObject": "order",
+        "compound": []
+      },
+      "json": {
+        "number": 23,
+        "text": "As a Hospitality business, I want to pay for my order so that the order can be processed and delivered.",
+        "iloc": [
+          4
+        ],
+        "role": {
+          "text": "Hospitality business",
+          "indicator": "As a"
+        },
+        "means": {
+          "text": "pay for my order",
+          "indicator": "I want to"
+        },
+        "ends": {
+          "text": "the order can be processed and delivered",
+          "indicator": "So that"
+        }
+      }
+    },
+    {
+      "number": 24,
+      "text": "As a Hospitality business, I want to create a beer order at Beer2Beer so that I can receive the beers for my business from multiple breweries.",
+      "role": {
+        "name": "business",
+        "compound": [
+          "Hospitality",
+          "business"
+        ]
+      },
+      "means": {
+        "mainObject": "order",
+        "compound": [
+          "beer",
+          "order"
+        ]
+      },
+      "json": {
+        "number": 24,
+        "text": "As a Hospitality business, I want to create a beer order at Beer2Beer so that I can receive the beers for my business from multiple breweries.",
+        "iloc": [
+          4,
+          15
+        ],
+        "role": {
+          "text": "Hospitality business",
+          "indicator": "As a"
+        },
+        "means": {
+          "text": "create a beer order at Beer2Beer",
+          "indicator": "I want to"
+        },
+        "ends": {
+          "text": "I can receive the beers for my business from multiple breweries",
+          "indicator": "So that"
+        }
+      }
+    },
+    {
+      "number": 25,
+      "text": "As a Beer2Beer management user, I want to view an overview of all breweries with accounts on the platform so that I can see our current client base.",
+      "role": {
+        "name": "user",
+        "compound": [
+          "management",
+          "user"
+        ]
+      },
+      "means": {
+        "mainObject": "overview",
+        "compound": []
+      },
+      "json": {
+        "number": 25,
+        "text": "As a Beer2Beer management user, I want to view an overview of all breweries with accounts on the platform so that I can see our current client base.",
+        "iloc": [
+          5,
+          21
+        ],
+        "role": {
+          "text": "Beer2Beer management user",
+          "indicator": "As a"
+        },
+        "means": {
+          "text": "view an overview of all breweries with accounts on the platform",
+          "indicator": "I want to"
+        },
+        "ends": {
+          "text": "I can see our current client base",
+          "indicator": "So that"
+        }
+      }
+    },
+    {
+      "number": 26,
+      "text": "As a Beer2Beer management user, I want to view the logic operation's performance.",
+      "role": {
+        "name": "user",
+        "compound": [
+          "management",
+          "user"
+        ]
+      },
+      "means": {
+        "mainObject": "performance",
+        "compound": []
+      },
+      "json": {
+        "number": 26,
+        "text": "As a Beer2Beer management user, I want to view the logic operation's performance.",
+        "iloc": [
+          5
+        ],
+        "role": {
+          "text": "Beer2Beer management user",
+          "indicator": "As a"
+        },
+        "means": {
+          "text": "view the logic operation's performance",
+          "indicator": "I want to"
+        }
+      }
+    }
+  ],
+  "failedStories": [],
+  "classes": [
+    {
+      "name": "Management User",
+      "parent": "User",
+      "isRole": true,
+      "stories": [
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        3,
+        3,
+        3,
+        3,
+        3,
+        11,
+        11,
+        11,
+        11,
+        12,
+        12,
+        12,
+        12,
+        25,
+        25,
+        25,
+        25,
+        26,
+        26,
+        26,
+        26
+      ]
+    },
+    {
+      "name": "User",
+      "parent": "",
+      "isRole": false,
+      "stories": [
+        -1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26
+      ]
+    },
+    {
+      "name": "Management",
+      "parent": "",
+      "isRole": false,
+      "stories": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26
+      ]
+    },
+    {
+      "name": "Hospitality Business",
+      "parent": "Business",
+      "isRole": true,
+      "stories": [
+        1,
+        1,
+        5,
+        5,
+        5,
+        5,
+        10,
+        10,
+        10,
+        10,
+        10,
+        15,
+        15,
+        15,
+        15,
+        15,
+        16,
+        16,
+        16,
+        16,
+        16,
+        17,
+        17,
+        17,
+        17,
+        17,
+        18,
+        18,
+        18,
+        18,
+        20,
+        22,
+        22,
+        22,
+        22,
+        23,
+        23,
+        23,
+        23,
+        24,
+        24,
+        24,
+        24,
+        24
+      ]
+    },
+    {
+      "name": "Business",
+      "parent": "",
+      "isRole": false,
+      "stories": [
+        -1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24
+      ]
+    },
+    {
+      "name": "Hospitality",
+      "parent": "",
+      "isRole": false,
+      "stories": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24
+      ]
+    },
+    {
+      "name": "Homepage",
+      "parent": "",
+      "isRole": false,
+      "stories": [
+        1,
+        1
+      ]
+    },
+    {
+      "name": "Proposal",
+      "parent": "",
+      "isRole": false,
+      "stories": [
+        2,
+        2,
+        2,
+        2,
+        9,
+        9,
+        9,
+        12,
+        12,
+        12
+      ]
+    },
+    {
+      "name": "Overview",
+      "parent": "",
+      "isRole": false,
+      "stories": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        11,
+        11,
+        11,
+        11,
+        11,
+        21,
+        21,
+        21,
+        21,
+        21,
+        25,
+        25,
+        25,
+        25,
+        25
+      ]
+    },
+    {
+      "name": "They",
+      "parent": "",
+      "isRole": false,
+      "stories": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        15,
+        15,
+        15,
+        15,
+        15,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        21,
+        21,
+        21,
+        21,
+        21
+      ]
+    },
+    {
+      "name": "Order",
+      "parent": "",
+      "isRole": false,
+      "stories": [
+        -1,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24
+      ]
+    },
+    {
+      "name": "Brewery",
+      "parent": "",
+      "isRole": true,
+      "stories": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25
+      ]
+    },
+    {
+      "name": "Brand",
+      "parent": "",
+      "isRole": false,
+      "stories": [
+        6,
+        6
+      ]
+    },
+    {
+      "name": "Product",
+      "parent": "",
+      "isRole": false,
+      "stories": [
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18
+      ]
+    },
+    {
+      "name": "Assortment",
+      "parent": "",
+      "isRole": false,
+      "stories": [
+        -1,
+        7,
+        7,
+        7,
+        7,
+        17,
+        17,
+        17,
+        18,
+        18,
+        18
+      ]
+    },
+    {
+      "name": "Platform",
+      "parent": "",
+      "isRole": false,
+      "stories": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25
+      ]
+    },
+    {
+      "name": "Catalogue",
+      "parent": "",
+      "isRole": false,
+      "stories": [
+        10,
+        10
+      ]
+    },
+    {
+      "name": "Contract",
+      "parent": "",
+      "isRole": false,
+      "stories": [
+        12,
+        12,
+        12,
+        12,
+        12,
+        13,
+        13,
+        13,
+        13,
+        13,
+        14,
+        14,
+        14,
+        14,
+        14,
+        19,
+        19,
+        19,
+        19,
+        19
+      ]
+    },
+    {
+      "name": "Delivery",
+      "parent": "",
+      "isRole": false,
+      "stories": [
+        13,
+        13,
+        13,
+        15,
+        15,
+        15,
+        15,
+        16,
+        16,
+        16,
+        16
+      ]
+    },
+    {
+      "name": "Order Template",
+      "parent": "Template",
+      "isRole": false,
+      "stories": [
+        17,
+        17,
+        17,
+        17,
+        17,
+        18,
+        18,
+        18
+      ]
+    },
+    {
+      "name": "Template",
+      "parent": "",
+      "isRole": false,
+      "stories": [
+        -1,
+        15,
+        15,
+        15,
+        15,
+        15,
+        16,
+        16,
+        16,
+        16,
+        16,
+        17,
+        17,
+        17,
+        17,
+        17,
+        18,
+        18,
+        18,
+        18,
+        18,
+        22,
+        22,
+        22,
+        22,
+        22
+      ]
+    },
+    {
+      "name": "Product Assortment",
+      "parent": "Assortment",
+      "isRole": false,
+      "stories": [
+        17,
+        18,
+        18
+      ]
+    },
+    {
+      "name": "Beer Order",
+      "parent": "Order",
+      "isRole": false,
+      "stories": [
+        24,
+        24,
+        24,
+        24,
+        24
+      ]
+    },
+    {
+      "name": "Beer",
+      "parent": "",
+      "isRole": false,
+      "stories": [
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24
+      ]
+    },
+    {
+      "name": "Performance",
+      "parent": "",
+      "isRole": false,
+      "stories": [
+        26,
+        26
+      ]
+    },
+    {
+      "name": "Account",
+      "parent": "",
+      "isRole": false,
+      "stories": [
+        4,
+        4,
+        25,
+        25
+      ]
+    },
+    {
+      "name": "Cart",
+      "parent": "",
+      "isRole": false,
+      "stories": [
+        5
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "name": "hasUser",
+      "domain": "Management",
+      "range": "Management User",
+      "stories": [
+        1,
+        2,
+        2,
+        3,
+        11,
+        12,
+        25,
+        26
+      ]
+    },
+    {
+      "name": "hasBusiness",
+      "domain": "Hospitality",
+      "range": "Hospitality Business",
+      "stories": [
+        1,
+        5,
+        10,
+        15,
+        16,
+        17,
+        18,
+        22,
+        23,
+        24
+      ]
+    },
+    {
+      "name": "canLog",
+      "domain": "Management User",
+      "range": "Homepage",
+      "stories": [
+        1
+      ]
+    },
+    {
+      "name": "canCreate",
+      "domain": "Management User",
+      "range": "Proposal",
+      "stories": [
+        2
+      ]
+    },
+    {
+      "name": "canView",
+      "domain": "Management User",
+      "range": "Overview",
+      "stories": [
+        3,
+        11,
+        25
+      ]
+    },
+    {
+      "name": "canReview",
+      "domain": "Management User",
+      "range": "They",
+      "stories": [
+        3
+      ]
+    },
+    {
+      "name": "canContinue With",
+      "domain": "Hospitality Business",
+      "range": "Order",
+      "stories": [
+        5
+      ]
+    },
+    {
+      "name": "canAdd",
+      "domain": "Brewery",
+      "range": "Brand",
+      "stories": [
+        6
+      ]
+    },
+    {
+      "name": "canModify",
+      "domain": "Brewery",
+      "range": "Product",
+      "stories": [
+        7
+      ]
+    },
+    {
+      "name": "canKeep",
+      "domain": "Brewery",
+      "range": "Assortment",
+      "stories": [
+        7
+      ]
+    },
+    {
+      "name": "canCreate",
+      "domain": "Brewery",
+      "range": "Product",
+      "stories": [
+        8
+      ]
+    },
+    {
+      "name": "canOffer",
+      "domain": "Brewery",
+      "range": "Platform",
+      "stories": [
+        8
+      ]
+    },
+    {
+      "name": "canOffer",
+      "domain": "Brewery",
+      "range": "Product",
+      "stories": [
+        9
+      ]
+    },
+    {
+      "name": "canBrowse Within",
+      "domain": "Hospitality Business",
+      "range": "Catalogue",
+      "stories": [
+        10
+      ]
+    },
+    {
+      "name": "canSee",
+      "domain": "Hospitality Business",
+      "range": "Platform",
+      "stories": [
+        10
+      ]
+    },
+    {
+      "name": "canCreate",
+      "domain": "Management User",
+      "range": "Contract",
+      "stories": [
+        12
+      ]
+    },
+    {
+      "name": "canSign",
+      "domain": "Brewery",
+      "range": "Contract",
+      "stories": [
+        13
+      ]
+    },
+    {
+      "name": "canAccess",
+      "domain": "Brewery",
+      "range": "Contract",
+      "stories": [
+        14
+      ]
+    },
+    {
+      "name": "canManage",
+      "domain": "Hospitality Business",
+      "range": "Order",
+      "stories": [
+        15,
+        22
+      ]
+    },
+    {
+      "name": "canAdjust",
+      "domain": "Hospitality Business",
+      "range": "Delivery",
+      "stories": [
+        15
+      ]
+    },
+    {
+      "name": "canCreate",
+      "domain": "Hospitality Business",
+      "range": "Order",
+      "stories": [
+        16
+      ]
+    },
+    {
+      "name": "canSchedule",
+      "domain": "Hospitality Business",
+      "range": "Delivery",
+      "stories": [
+        16
+      ]
+    },
+    {
+      "name": "hasTemplate",
+      "domain": "Order",
+      "range": "Order Template",
+      "stories": [
+        17,
+        17,
+        18
+      ]
+    },
+    {
+      "name": "canModify",
+      "domain": "Hospitality Business",
+      "range": "Order Template",
+      "stories": [
+        17
+      ]
+    },
+    {
+      "name": "canTailor",
+      "domain": "Hospitality Business",
+      "range": "Product Assortment",
+      "stories": [
+        17
+      ]
+    },
+    {
+      "name": "hasAssortment",
+      "domain": "Product",
+      "range": "Product Assortment",
+      "stories": [
+        18
+      ]
+    },
+    {
+      "name": "canCreate",
+      "domain": "Hospitality Business",
+      "range": "Order Template",
+      "stories": [
+        18
+      ]
+    },
+    {
+      "name": "canManage",
+      "domain": "Brewery",
+      "range": "Contract",
+      "stories": [
+        19
+      ]
+    },
+    {
+      "name": "canRenew",
+      "domain": "Brewery",
+      "range": "They",
+      "stories": [
+        19
+      ]
+    },
+    {
+      "name": "canManage",
+      "domain": "Brewery",
+      "range": "Order",
+      "stories": [
+        20
+      ]
+    },
+    {
+      "name": "canNotify",
+      "domain": "Brewery",
+      "range": "Hospitality Business",
+      "stories": [
+        20
+      ]
+    },
+    {
+      "name": "canView",
+      "domain": "Brewery",
+      "range": "Overview",
+      "stories": [
+        21
+      ]
+    },
+    {
+      "name": "canMonitor",
+      "domain": "Brewery",
+      "range": "Order",
+      "stories": [
+        21
+      ]
+    },
+    {
+      "name": "canPay For",
+      "domain": "Hospitality Business",
+      "range": "Order",
+      "stories": [
+        23
+      ]
+    },
+    {
+      "name": "hasOrder",
+      "domain": "Beer",
+      "range": "Beer Order",
+      "stories": [
+        24,
+        24
+      ]
+    },
+    {
+      "name": "canCreate",
+      "domain": "Hospitality Business",
+      "range": "Beer Order",
+      "stories": [
+        24
+      ]
+    },
+    {
+      "name": "canReceive",
+      "domain": "Hospitality Business",
+      "range": "Beer",
+      "stories": [
+        24
+      ]
+    },
+    {
+      "name": "canView",
+      "domain": "Management User",
+      "range": "Performance",
+      "stories": [
+        26
+      ]
+    }
+  ],
+  "inferredRoles": [
+    "Brewery",
+    "brewery",
+    "business",
+    "user"
+  ],
+  "keyNouns": [
+    {
+      "term": "Business",
+      "weight": 9.5
+    },
+    {
+      "term": "Brewery",
+      "weight": 9
+    },
+    {
+      "term": "Order",
+      "weight": 8.82
+    },
+    {
+      "term": "User",
+      "weight": 7
+    },
+    {
+      "term": "Hospitality",
+      "weight": 6.4399999999999995
+    },
+    {
+      "term": "Management",
+      "weight": 4.62
+    },
+    {
+      "term": "Overview",
+      "weight": 4
+    },
+    {
+      "term": "Contract",
+      "weight": 4
+    },
+    {
+      "term": "Product",
+      "weight": 3
+    },
+    {
+      "term": "Platform",
+      "weight": 2
+    },
+    {
+      "term": "Proposal",
+      "weight": 2
+    },
+    {
+      "term": "Template",
+      "weight": 2
+    },
+    {
+      "term": "Beer",
+      "weight": 1.6600000000000001
+    },
+    {
+      "term": "Account",
+      "weight": 1
+    },
+    {
+      "term": "Homepage",
+      "weight": 1
+    },
+    {
+      "term": "Brand",
+      "weight": 1
+    },
+    {
+      "term": "Delivery",
+      "weight": 1
+    },
+    {
+      "term": "Catalogue",
+      "weight": 1
+    },
+    {
+      "term": "Cart",
+      "weight": 1
+    },
+    {
+      "term": "Assortment",
+      "weight": 1
+    }
+  ],
+  "stats": {
+    "successCount": 26,
+    "failedCount": 0
+  }
+}

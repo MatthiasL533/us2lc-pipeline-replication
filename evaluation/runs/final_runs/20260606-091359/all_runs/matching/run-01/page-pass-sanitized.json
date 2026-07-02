@@ -1,0 +1,179 @@
+{
+  "pages": {
+    "specs": [
+      {
+        "name": "home",
+        "layout": "Blank",
+        "widgets": [
+          {
+            "type": "Text",
+            "caption": "Welcome to the Tutoring Platform"
+          },
+          {
+            "type": "Button",
+            "caption": "Get Started",
+            "onClick": "MatchStudentsAndTutors"
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "studentOverview",
+        "layout": "Table",
+        "entity": "Student",
+        "widgets": [
+          {
+            "type": "DataGrid",
+            "columns": [
+              {
+                "attribute": "Name"
+              },
+              {
+                "attribute": "Email"
+              }
+            ]
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "studentDetail",
+        "layout": "FormHorizontal",
+        "entity": "Student",
+        "widgets": [
+          {
+            "type": "TextInput",
+            "attribute": "Name"
+          },
+          {
+            "type": "TextInput",
+            "attribute": "Email"
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "tutorOverview",
+        "layout": "Table",
+        "entity": "Tutor",
+        "widgets": [
+          {
+            "type": "DataGrid",
+            "columns": [
+              {
+                "attribute": "Name"
+              },
+              {
+                "attribute": "Email"
+              }
+            ]
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "tutorDetail",
+        "layout": "FormHorizontal",
+        "entity": "Tutor",
+        "widgets": [
+          {
+            "type": "TextInput",
+            "attribute": "Name"
+          },
+          {
+            "type": "TextInput",
+            "attribute": "Email"
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "sessionOverview",
+        "layout": "Table",
+        "entity": "Session",
+        "widgets": [
+          {
+            "type": "DataGrid",
+            "columns": [
+              {
+                "attribute": "Date"
+              },
+              {
+                "attribute": "Duration"
+              }
+            ]
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "sessionDetail",
+        "layout": "FormHorizontal",
+        "entity": "Session",
+        "widgets": [
+          {
+            "type": "DateTimeInput",
+            "attribute": "Date"
+          },
+          {
+            "type": "NumberInput",
+            "attribute": "Duration"
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "matchOverview",
+        "layout": "Table",
+        "entity": "Match",
+        "widgets": [
+          {
+            "type": "DataGrid",
+            "columns": [
+              {
+                "attribute": "Name"
+              }
+            ]
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "matchDetail",
+        "layout": "FormHorizontal",
+        "entity": "Match",
+        "widgets": [
+          {
+            "type": "TextInput",
+            "attribute": "Name"
+          }
+        ],
+        "content": []
+      }
+    ]
+  },
+  "app": {
+    "navigation": {
+      "home": {
+        "caption": "Home",
+        "page": "home"
+      },
+      "students": {
+        "caption": "Students",
+        "page": "studentOverview"
+      },
+      "tutors": {
+        "caption": "Tutors",
+        "page": "tutorOverview"
+      },
+      "sessions": {
+        "caption": "Sessions",
+        "page": "sessionOverview"
+      },
+      "matches": {
+        "caption": "Matches",
+        "page": "matchOverview"
+      }
+    }
+  }
+}

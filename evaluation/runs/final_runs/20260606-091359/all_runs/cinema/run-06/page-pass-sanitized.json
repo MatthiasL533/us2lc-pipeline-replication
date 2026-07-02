@@ -1,0 +1,286 @@
+{
+  "pages": {
+    "specs": [
+      {
+        "name": "Home",
+        "layout": "Blank",
+        "widgets": [
+          {
+            "type": "Text",
+            "caption": "Welcome to Cinema Premium"
+          },
+          {
+            "type": "Button",
+            "caption": "Subscribe to Cinema Premium",
+            "onClick": "SubscribeToPremium"
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "SubscriptionOverview",
+        "layout": "Table",
+        "entity": "Subscription",
+        "widgets": [
+          {
+            "type": "DataGrid",
+            "columns": [
+              {
+                "attribute": "startDate"
+              },
+              {
+                "attribute": "endDate"
+              },
+              {
+                "attribute": "Price"
+              }
+            ]
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "SubscriptionDetail",
+        "layout": "FormHorizontal",
+        "entity": "Subscription",
+        "widgets": [
+          {
+            "type": "TextInput",
+            "attribute": "startDate"
+          },
+          {
+            "type": "TextInput",
+            "attribute": "endDate"
+          },
+          {
+            "type": "NumberInput",
+            "attribute": "Price"
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "PaymentMethodOverview",
+        "layout": "Table",
+        "entity": "PaymentMethod",
+        "widgets": [
+          {
+            "type": "DataGrid",
+            "columns": [
+              {
+                "attribute": "paymentDetails"
+              }
+            ]
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "PaymentMethodDetail",
+        "layout": "FormHorizontal",
+        "entity": "PaymentMethod",
+        "widgets": [
+          {
+            "type": "TextInput",
+            "attribute": "paymentDetails"
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "MovieOverview",
+        "layout": "Table",
+        "entity": "Movie",
+        "widgets": [
+          {
+            "type": "DataGrid",
+            "columns": [
+              {
+                "attribute": "Title"
+              },
+              {
+                "attribute": "releaseDate"
+              }
+            ]
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "MovieDetail",
+        "layout": "FormHorizontal",
+        "entity": "Movie",
+        "widgets": [
+          {
+            "type": "TextInput",
+            "attribute": "Title"
+          },
+          {
+            "type": "DateInput",
+            "attribute": "releaseDate"
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "ShowingOverview",
+        "layout": "Table",
+        "entity": "Showing",
+        "widgets": [
+          {
+            "type": "DataGrid",
+            "columns": [
+              {
+                "attribute": "movieTitle"
+              },
+              {
+                "attribute": "cinemaRoom"
+              }
+            ]
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "ShowingDetail",
+        "layout": "FormHorizontal",
+        "entity": "Showing",
+        "widgets": [
+          {
+            "type": "TextInput",
+            "attribute": "movieTitle"
+          },
+          {
+            "type": "TextInput",
+            "attribute": "cinemaRoom"
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "CinemaOverview",
+        "layout": "Table",
+        "entity": "Cinema",
+        "widgets": [
+          {
+            "type": "DataGrid",
+            "columns": [
+              {
+                "attribute": "Name"
+              },
+              {
+                "attribute": "City"
+              }
+            ]
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "CinemaDetail",
+        "layout": "FormHorizontal",
+        "entity": "Cinema",
+        "widgets": [
+          {
+            "type": "TextInput",
+            "attribute": "Name"
+          },
+          {
+            "type": "TextInput",
+            "attribute": "City"
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "HistoricUserPaymentsOverview",
+        "layout": "Table",
+        "entity": "HistoricUserPayments",
+        "widgets": [
+          {
+            "type": "DataGrid",
+            "columns": [
+              {
+                "attribute": "paymentDate"
+              },
+              {
+                "attribute": "Amount"
+              }
+            ]
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "PremiumUserOverview",
+        "layout": "Table",
+        "entity": "PremiumUser",
+        "widgets": [
+          {
+            "type": "DataGrid",
+            "columns": [
+              {
+                "attribute": "Name"
+              },
+              {
+                "attribute": "Email"
+              }
+            ]
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "PremiumUserDetail",
+        "layout": "FormHorizontal",
+        "entity": "PremiumUser",
+        "widgets": [
+          {
+            "type": "TextInput",
+            "attribute": "Name"
+          },
+          {
+            "type": "EmailInput",
+            "attribute": "Email"
+          }
+        ],
+        "content": []
+      }
+    ]
+  },
+  "app": {
+    "navigation": {
+      "homePage": "Home",
+      "menuItems": [
+        {
+          "caption": "Subscription",
+          "page": "SubscriptionOverview"
+        },
+        {
+          "caption": "Payment Method",
+          "page": "PaymentMethodOverview"
+        },
+        {
+          "caption": "Movies",
+          "page": "MovieOverview"
+        },
+        {
+          "caption": "Showings",
+          "page": "ShowingOverview"
+        },
+        {
+          "caption": "Cinemas",
+          "page": "CinemaOverview"
+        },
+        {
+          "caption": "Historic User Payments",
+          "page": "HistoricUserPaymentsOverview"
+        },
+        {
+          "caption": "Premium Users",
+          "page": "PremiumUserOverview"
+        }
+      ]
+    }
+  }
+}

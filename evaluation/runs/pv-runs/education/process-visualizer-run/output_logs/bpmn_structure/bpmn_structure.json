@@ -1,0 +1,226 @@
+[
+    {
+        "content": {
+            "agent": {
+                "entity_group": "AGENT",
+                "word": "freelance teacher",
+                "start": 5,
+                "end": 22,
+                "score": 0.99
+            },
+            "task": {
+                "entity_group": "TASK",
+                "word": "communicate with other teachers using a chat function",
+                "start": 34,
+                "end": 87,
+                "score": 0.99,
+                "task_id": "T0"
+            },
+            "sentence_idx": 0,
+            "condition": {
+                "entity_group": "CONDITION",
+                "word": "so that i can learn from other teachers and share experiences",
+                "start": 89,
+                "end": 150,
+                "score": 0.99,
+                "condition_id": "C0"
+            }
+        },
+        "type": "task"
+    },
+    {
+        "id": "EG0",
+        "conditions": [
+            "so that i can learn from other teachers and share experiences",
+            "so that i am better prepared for teaching",
+            "so that i can be placed at the right level without wasting time or feeling frustrated by levels that are too easy or difficult",
+            "so that i can track my learning progress",
+            "so that i know what i have learned",
+            "so that i get a sense of reward for completing something",
+            "so that i can select the appropriate materials for my learning needs",
+            "so that i can resolve technical issues or system questions i might have",
+            "so that i can regain access to the system in case i forget my password",
+            "so that my details stay current and accurate",
+            "so that i am always updated"
+        ],
+        "start": 89,
+        "end": 7142,
+        "paths": [
+            {
+                "start": 89,
+                "end": 278
+            },
+            {
+                "start": 279,
+                "end": 595
+            },
+            {
+                "start": 596,
+                "end": 800
+            },
+            {
+                "start": 801,
+                "end": 951
+            },
+            {
+                "start": 952,
+                "end": 1081
+            },
+            {
+                "start": 1082,
+                "end": 2319
+            },
+            {
+                "start": 2320,
+                "end": 3415
+            },
+            {
+                "start": 3416,
+                "end": 3550
+            },
+            {
+                "start": 3551,
+                "end": 3687
+            },
+            {
+                "start": 3688,
+                "end": 3845
+            },
+            {
+                "start": 3846,
+                "end": 7142
+            }
+        ],
+        "type": "exclusive",
+        "children": [
+            [],
+            [],
+            [],
+            [],
+            [],
+            [
+                {
+                    "content": {
+                        "agent": {
+                            "entity_group": "AGENT",
+                            "word": "freelance teacher",
+                            "start": 1296,
+                            "end": 1313,
+                            "score": 0.99
+                        },
+                        "task": {
+                            "entity_group": "TASK",
+                            "word": "do a quiz about a certain topic that is connected to a level or part of a level",
+                            "start": 1174,
+                            "end": 1253,
+                            "score": 0.99,
+                            "task_id": "T1"
+                        },
+                        "sentence_idx": 7
+                    },
+                    "type": "task"
+                }
+            ],
+            [
+                {
+                    "content": {
+                        "agent": {
+                            "entity_group": "AGENT",
+                            "word": "freelance teacher",
+                            "start": 2577,
+                            "end": 2594,
+                            "score": 0.99
+                        },
+                        "task": {
+                            "entity_group": "TASK",
+                            "word": "have flashcards available in a digital format, organized by topic and source",
+                            "start": 2424,
+                            "end": 2500,
+                            "score": 0.99,
+                            "task_id": "T2"
+                        },
+                        "sentence_idx": 15
+                    },
+                    "type": "task"
+                }
+            ],
+            [],
+            [],
+            [
+                {
+                    "content": {
+                        "agent": {
+                            "entity_group": "AGENT",
+                            "word": "administrator",
+                            "start": 3881,
+                            "end": 3894,
+                            "score": 0.99
+                        },
+                        "task": {
+                            "entity_group": "TASK",
+                            "word": "receive email notifications about my progress and new learning opportunities",
+                            "start": 3768,
+                            "end": 3844,
+                            "score": 0.99,
+                            "task_id": "T3"
+                        },
+                        "sentence_idx": 23,
+                        "condition": {
+                            "entity_group": "CONDITION",
+                            "word": "so that i am always updated",
+                            "start": 3846,
+                            "end": 3873,
+                            "score": 0.99,
+                            "condition_id": "C1"
+                        }
+                    },
+                    "type": "task"
+                }
+            ],
+            [
+                {
+                    "content": {
+                        "agent": {
+                            "entity_group": "AGENT",
+                            "word": "administrator",
+                            "start": 5071,
+                            "end": 5084,
+                            "score": 0.99
+                        },
+                        "task": {
+                            "entity_group": "TASK",
+                            "word": "add videos related to a certain module in the system",
+                            "start": 4947,
+                            "end": 4999,
+                            "score": 0.99,
+                            "task_id": "T4"
+                        },
+                        "sentence_idx": 31
+                    },
+                    "type": "task"
+                },
+                {
+                    "content": {
+                        "agent": {
+                            "entity_group": "AGENT",
+                            "word": "administrator",
+                            "start": 6383,
+                            "end": 6396,
+                            "score": 0.99
+                        },
+                        "task": {
+                            "entity_group": "TASK",
+                            "word": "add flashcards related to a certain module in the system",
+                            "start": 6255,
+                            "end": 6311,
+                            "score": 0.99,
+                            "task_id": "T5"
+                        },
+                        "sentence_idx": 39
+                    },
+                    "type": "task"
+                }
+            ]
+        ]
+    }
+]

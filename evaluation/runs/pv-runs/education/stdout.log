@@ -1,0 +1,135 @@
+
+> us2lc-pipeline@1.0.0 generate:process-viz
+> node pipeline/generate-process-viz-cli.js --input-dir=artifacts/practical-performance/20260528-165228/inputs/education --output-dir=artifacts/pv-runs/llama3.1-8b/education --model=llama3.1:8b --ollama-url=http://127.0.0.1:11434
+
+{
+  "ok": true,
+  "inputDir": "/workspace/us2lc-pipeline/artifacts/practical-performance/20260528-165228/inputs/education",
+  "artifacts": {
+    "summaryPath": "/workspace/us2lc-pipeline/artifacts/pv-runs/llama3.1-8b/education/process-visualizer-summary.json",
+    "rawPath": "/workspace/us2lc-pipeline/artifacts/pv-runs/llama3.1-8b/education/process-visualizer-result.json",
+    "graphSourcePath": "/workspace/us2lc-pipeline/artifacts/pv-runs/llama3.1-8b/education/process-visualizer-run/process-visualizer.gv",
+    "graphImagePath": "/workspace/us2lc-pipeline/artifacts/pv-runs/llama3.1-8b/education/process-visualizer-run/process-visualizer.png",
+    "logsDir": "/workspace/us2lc-pipeline/artifacts/pv-runs/llama3.1-8b/education/process-visualizer-run/output_logs"
+  },
+  "summary": {
+    "actors": [
+      "freelance teacher",
+      "administrator"
+    ],
+    "tasks": [
+      {
+        "actor": "freelance teacher",
+        "action": "communicate with other teachers using a chat function",
+        "condition": "so that i can learn from other teachers and share experiences",
+        "gatewayId": "",
+        "gatewayType": "",
+        "storyIndex": 0
+      },
+      {
+        "actor": "freelance teacher",
+        "action": "do a quiz about a certain topic that is connected to a level or part of a level",
+        "condition": "so that i get a sense of reward for completing something",
+        "gatewayId": "EG0",
+        "gatewayType": "exclusive",
+        "storyIndex": 7
+      },
+      {
+        "actor": "freelance teacher",
+        "action": "have flashcards available in a digital format, organized by topic and source",
+        "condition": "so that i can select the appropriate materials for my learning needs",
+        "gatewayId": "EG0",
+        "gatewayType": "exclusive",
+        "storyIndex": 15
+      },
+      {
+        "actor": "administrator",
+        "action": "receive email notifications about my progress and new learning opportunities",
+        "condition": "so that i am always updated",
+        "gatewayId": "EG0",
+        "gatewayType": "exclusive",
+        "storyIndex": 23
+      },
+      {
+        "actor": "administrator",
+        "action": "add videos related to a certain module in the system",
+        "condition": "so that i am always updated",
+        "gatewayId": "EG0",
+        "gatewayType": "exclusive",
+        "storyIndex": 31
+      },
+      {
+        "actor": "administrator",
+        "action": "add flashcards related to a certain module in the system",
+        "condition": "so that i am always updated",
+        "gatewayId": "EG0",
+        "gatewayType": "exclusive",
+        "storyIndex": 39
+      }
+    ],
+    "gateways": [
+      {
+        "id": "EG0",
+        "type": "exclusive",
+        "conditions": [
+          "so that i can learn from other teachers and share experiences",
+          "so that i am better prepared for teaching",
+          "so that i can be placed at the right level without wasting time or feeling frustrated by levels that are too easy or difficult",
+          "so that i can track my learning progress",
+          "so that i know what i have learned",
+          "so that i get a sense of reward for completing something",
+          "so that i can select the appropriate materials for my learning needs",
+          "so that i can resolve technical issues or system questions i might have",
+          "so that i can regain access to the system in case i forget my password",
+          "so that my details stay current and accurate",
+          "so that i am always updated"
+        ]
+      }
+    ],
+    "processObjects": [
+      "Using A Chat Function",
+      "Part Of A Level",
+      "By Topic And Source",
+      "And New Learning Opportunities",
+      "Module In The System",
+      "Presentation Skills, And Confidence",
+      "Compassion, Collaboration, And Inclusiveness",
+      "My Teaching/pedagogical/other Skill Levels",
+      "The Modules Using Levels",
+      "As A Progress Bar",
+      "For Completing Certain Tasks",
+      "Completed Quizzes And Exercises",
+      "In A Small Test",
+      "When Creating A Profile",
+      "As A Knowledge Hub",
+      "Subjects I Already Teach",
+      "Publisher, Topic, And Author",
+      "Find Educational Videos",
+      "Access To Research Papers",
+      "Specific To Teaching Topics",
+      "And Measurable Learning Outcomes",
+      "Button In The System",
+      "Reset My Password Securely",
+      "My Profile Information",
+      "By Checking The Profiles",
+      "Checking Their Kvk Numbers",
+      "Modules In The System",
+      "Inappropriate Or Outdated Content",
+      "Usage Of Freelance Teachers",
+      "Updates About System Specific Events"
+    ],
+    "capabilityHints": {
+      "hasApproval": false,
+      "hasDecision": true,
+      "hasNotification": true,
+      "hasWorkflowLikeRouting": true
+    },
+    "stats": {
+      "taskCount": 6,
+      "gatewayCount": 1,
+      "rawEntityCount": 79
+    }
+  },
+  "status": "completed",
+  "command": "/workspace/us2lc-pipeline/process-visualizer/.venv/bin/python /workspace/us2lc-pipeline/pipeline/scripts/run_process_visualizer.py --input /workspace/us2lc-pipeline/artifacts/practical-performance/20260528-165228/inputs/education/user-stories.txt --output-dir /workspace/us2lc-pipeline/artifacts/pv-runs/llama3.1-8b/education --model llama3.1:8b --ollama-url http://127.0.0.1:11434"
+}

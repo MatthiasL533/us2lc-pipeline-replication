@@ -1,0 +1,890 @@
+{
+  "dataset": "grocery",
+  "run": "run-04",
+  "planPath": "/Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/artifacts/practical-performance/20260606-091359/stability/grocery/run-04/plan.json",
+  "ok": true,
+  "startedAt": "2026-06-07T20:52:52.344Z",
+  "tempPlanPath": "/Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/artifacts/practical-performance/20260606-091359/builder-stage-runs/plans/grocery/run-04/plan.json",
+  "totalMs": 21722,
+  "result": {
+    "appId": "18ac127a-c107-4505-8473-f0df0dc1fd82",
+    "appCreated": true,
+    "seedAppId": null,
+    "branch": "main",
+    "committed": true,
+    "commitRequested": true,
+    "workingCopyId": "c188cb8f-fee8-4c77-b939-f0dd6c45c4ca",
+    "personas": {
+      "enabled": false,
+      "generatedPageNames": [],
+      "personaNames": []
+    },
+    "stages": [
+      {
+        "stage": "domainModel",
+        "ok": true,
+        "summary": "entitiesCreated=30, associationsCreated=0, enumerationsCreated=2",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 74
+      },
+      {
+        "stage": "flush.afterDomainModel",
+        "ok": true,
+        "summary": "flush.afterDomainModel completed",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 179
+      },
+      {
+        "stage": "security",
+        "ok": true,
+        "summary": "moduleRolesCreated=4, userRolesCreated=4, demoUsersCreated=0",
+        "artifacts": [
+          {
+            "key": "moduleRoleNames",
+            "count": 5
+          },
+          {
+            "key": "userRoleNames",
+            "count": 6
+          },
+          {
+            "key": "demoUserNames",
+            "count": 2
+          }
+        ],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 180
+      },
+      {
+        "stage": "flush.afterSecurity",
+        "ok": true,
+        "summary": "flush.afterSecurity completed",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 200
+      },
+      {
+        "stage": "microflowsNanoflows",
+        "ok": true,
+        "summary": "microflowsCreated=3, nanoflowsCreated=1",
+        "artifacts": [
+          {
+            "key": "microflowNames",
+            "count": 3
+          },
+          {
+            "key": "nanoflowNames",
+            "count": 1
+          },
+          {
+            "key": "microflowRefsByRef",
+            "count": 0
+          },
+          {
+            "key": "nanoflowRefsByRef",
+            "count": 0
+          }
+        ],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 4
+      },
+      {
+        "stage": "flush.afterMicroflows",
+        "ok": true,
+        "summary": "flush.afterMicroflows completed",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 140
+      },
+      {
+        "stage": "workflows",
+        "ok": true,
+        "summary": "workflowsCreated=0",
+        "artifacts": [
+          {
+            "key": "workflowNames",
+            "count": 0
+          },
+          {
+            "key": "workflowRefsByRef",
+            "count": 0
+          }
+        ],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 3
+      },
+      {
+        "stage": "flush.afterWorkflows",
+        "ok": true,
+        "summary": "flush.afterWorkflows completed",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 31
+      },
+      {
+        "stage": "pageCapabilities",
+        "ok": true,
+        "summary": "pageCapabilities completed",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 0
+      },
+      {
+        "stage": "webClientCompatibility",
+        "ok": true,
+        "summary": "webClientCompatibility completed",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 1
+      },
+      {
+        "stage": "pages",
+        "ok": true,
+        "summary": "pages completed",
+        "artifacts": [
+          {
+            "key": "pageNames",
+            "count": 66
+          }
+        ],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 459
+      },
+      {
+        "stage": "navigationUI",
+        "ok": true,
+        "summary": "navigationUI completed",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 56
+      },
+      {
+        "stage": "homePage",
+        "ok": true,
+        "summary": "updatedProfiles=1",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 3
+      },
+      {
+        "stage": "flush.final",
+        "ok": true,
+        "summary": "flush.final completed",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 2194
+      },
+      {
+        "stage": "verification",
+        "ok": true,
+        "summary": "ok=true",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 101
+      },
+      {
+        "stage": "capabilities",
+        "ok": true,
+        "summary": "capabilities completed",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 808
+      },
+      {
+        "stage": "commit",
+        "ok": true,
+        "summary": "commit completed",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 9982
+      }
+    ],
+    "createdApp": {
+      "appId": "18ac127a-c107-4505-8473-f0df0dc1fd82",
+      "name": "rerun-grocery-run04",
+      "repositoryType": "git"
+    },
+    "beforeCounts": {
+      "pagesInModule": 1,
+      "entitiesInModule": 0,
+      "microflowsInModule": 1,
+      "nanoflowsInModule": 0,
+      "workflowsInModule": 0
+    },
+    "domainModel": {
+      "moduleName": "MyFirstModule",
+      "entitiesCreated": 30,
+      "associationsCreated": 0,
+      "enumerationsCreated": 2
+    },
+    "security": {
+      "moduleName": "MyFirstModule",
+      "securityLevel": "CheckFormsAndMicroflows",
+      "moduleRolesCreated": 4,
+      "userRolesCreated": 4,
+      "demoUsersRequested": 0,
+      "demoUsersCreated": 0,
+      "demoUsersApplied": 0,
+      "demoUserHandling": "notRequested",
+      "skippedDemoUsers": [],
+      "moduleRoleNames": [
+        "Applicant",
+        "Employee",
+        "Manager",
+        "OfficeEmployee",
+        "User"
+      ],
+      "userRoleNames": [
+        "Administrator",
+        "Applicant",
+        "Employee",
+        "Manager",
+        "OfficeEmployee",
+        "User"
+      ],
+      "demoUserNames": [
+        "demo_administrator",
+        "demo_user"
+      ]
+    },
+    "microflows": {
+      "moduleName": "MyFirstModule",
+      "microflowsCreated": 3,
+      "nanoflowsCreated": 1,
+      "microflowNames": [
+        "SendSalaryStatement",
+        "OutsourcePaymentProcess",
+        "NotifyEmployeeOfComplaintStatusUpdate"
+      ],
+      "nanoflowNames": [
+        "SendNotificationToEmployee"
+      ],
+      "microflowRefsByRef": {},
+      "nanoflowRefsByRef": {}
+    },
+    "workflows": {
+      "moduleName": "MyFirstModule",
+      "workflowsCreated": 0,
+      "workflowNames": [],
+      "workflowRefsByRef": {}
+    },
+    "pageCapabilities": null,
+    "webClientCompatibility": {
+      "lookupRequested": false,
+      "classicGridRequested": false,
+      "updated": false,
+      "useOptimizedClient": null
+    },
+    "pages": {
+      "moduleName": "MyFirstModule",
+      "layoutQualifiedName": "Atlas_Core.Atlas_Default",
+      "layoutParameterQname": "Atlas_Core.Atlas_Default.Main",
+      "pageNames": [
+        "Home",
+        "Employee_Dashboard",
+        "Employee_Overview",
+        "Employee_NewEdit",
+        "Complaint_Overview",
+        "Complaint_NewEdit",
+        "Payment_Overview",
+        "Payment_NewEdit",
+        "Manager_Overview",
+        "Manager_NewEdit",
+        "OfficeEmployee_Overview",
+        "OfficeEmployee_NewEdit",
+        "Employee_Detail",
+        "Complaint_Detail",
+        "Payment_Detail",
+        "SalaryStatement_Overview",
+        "SalaryStatement_Detail",
+        "SalaryStatement_NewEdit",
+        "OutsourcedPaymentProcess_Overview",
+        "OutsourcedPaymentProcess_NewEdit",
+        "PreferredWorkingHours_Overview",
+        "PreferredWorkingHours_NewEdit",
+        "ManualEditHistory_Overview",
+        "ManualEditHistory_NewEdit",
+        "AuthorizationStatus_Overview",
+        "AuthorizationStatus_NewEdit",
+        "AdjustmentNotification_Overview",
+        "AdjustmentNotification_NewEdit",
+        "ScheduleUpdateNotification_Overview",
+        "ScheduleUpdateNotification_NewEdit",
+        "WorkHours_Overview",
+        "WorkHours_NewEdit",
+        "ComplaintStatus_Overview",
+        "ComplaintStatus_NewEdit",
+        "EmployeePresence_Overview",
+        "EmployeePresence_NewEdit",
+        "ManagementIntervention_Overview",
+        "ManagementIntervention_NewEdit",
+        "JobOpening_Overview",
+        "JobOpening_NewEdit",
+        "OnboardingProcess_Overview",
+        "OnboardingProcess_NewEdit",
+        "EmployeeList_Overview",
+        "EmployeeList_NewEdit",
+        "AbsenceList_Overview",
+        "AbsenceList_NewEdit",
+        "RegistrationProcess_Overview",
+        "RegistrationProcess_NewEdit",
+        "ContractManagement_Overview",
+        "ContractManagement_NewEdit",
+        "CertificationManagement_Overview",
+        "CertificationManagement_NewEdit",
+        "MessagingSystem_Overview",
+        "MessagingSystem_NewEdit",
+        "ContactInformation_Overview",
+        "ContactInformation_NewEdit",
+        "Notification_Overview",
+        "Notification_NewEdit",
+        "Login_Overview",
+        "Login_NewEdit",
+        "Tax_Overview",
+        "Tax_NewEdit",
+        "NotificationLog_Overview",
+        "NotificationLog_NewEdit",
+        "Applicant_Overview",
+        "Applicant_NewEdit"
+      ],
+      "dg2Cleanup": {
+        "enabled": true,
+        "targetedPageNames": [],
+        "deletedPageNames": [],
+        "failed": []
+      },
+      "dataGrid2": {
+        "enabled": false,
+        "widgetId": "",
+        "resolvedFrom": "",
+        "useFallbackSchema": false,
+        "probeVariant": null,
+        "configuredWidgets": 0,
+        "attempts": []
+      }
+    },
+    "dg2Cleanup": {
+      "enabled": true,
+      "targetedPageNames": [],
+      "deletedPageNames": [],
+      "failed": []
+    },
+    "navigationUI": {
+      "requested": true,
+      "homeButtonsAdded": 0,
+      "navItemsAdded": 6
+    },
+    "homePage": {
+      "requested": true,
+      "updatedProfiles": 1,
+      "targetPageQualifiedName": "MyFirstModule.Home"
+    },
+    "afterCounts": {
+      "pagesInModule": 67,
+      "entitiesInModule": 30,
+      "microflowsInModule": 4,
+      "nanoflowsInModule": 1,
+      "workflowsInModule": 0
+    },
+    "beforeRefs": {
+      "pages": [
+        {
+          "name": "Home_Web",
+          "id": "5c6805fc-cadf-4d72-a5ef-f25da7cf4c97"
+        }
+      ],
+      "entities": [],
+      "microflows": [
+        {
+          "name": "MyFirstLogic",
+          "id": "4a8475b3-14cb-4100-8963-58f2fd3a0be8"
+        }
+      ],
+      "nanoflows": [],
+      "workflows": []
+    },
+    "afterRefs": {
+      "pages": [
+        {
+          "name": "Home_Web",
+          "id": "5c6805fc-cadf-4d72-a5ef-f25da7cf4c97"
+        },
+        {
+          "name": "Home",
+          "id": "e7932c87-8153-49eb-8f9e-b41adc592eca"
+        },
+        {
+          "name": "Employee_Dashboard",
+          "id": "3f60b4c3-47c6-46c5-88e9-d8782823384a"
+        },
+        {
+          "name": "Employee_Overview",
+          "id": "16300301-c4a4-4406-8ec7-7250d970eba4"
+        },
+        {
+          "name": "Employee_NewEdit",
+          "id": "d0c82ca2-eef7-41fb-87a5-d80657413f42"
+        },
+        {
+          "name": "Complaint_Overview",
+          "id": "ef13c8ad-4f8d-409e-ba26-6ae458693fce"
+        },
+        {
+          "name": "Complaint_NewEdit",
+          "id": "704b5f88-03b2-4159-ad8a-97c7983298c0"
+        },
+        {
+          "name": "Payment_Overview",
+          "id": "6d4df3ef-430b-4d75-880b-0de78f7b6af8"
+        },
+        {
+          "name": "Payment_NewEdit",
+          "id": "cb8c31d8-defb-4e2f-a0e2-f33bb77d4312"
+        },
+        {
+          "name": "Manager_Overview",
+          "id": "1838f76b-99a0-4555-b912-2dad1d7987e7"
+        },
+        {
+          "name": "Manager_NewEdit",
+          "id": "49ff812e-4415-4ad9-a53f-7d9ee28e0129"
+        },
+        {
+          "name": "OfficeEmployee_Overview",
+          "id": "ee281777-d0ac-42f3-b6cd-f78e04897b64"
+        },
+        {
+          "name": "OfficeEmployee_NewEdit",
+          "id": "d619b2c9-c8c1-4d5d-b146-c6ca024c475c"
+        },
+        {
+          "name": "Employee_Detail",
+          "id": "c3913984-0e2e-40dc-9f54-19a5b91d77aa"
+        },
+        {
+          "name": "Complaint_Detail",
+          "id": "73653bf4-261e-47e6-bbec-12ede5517031"
+        },
+        {
+          "name": "Payment_Detail",
+          "id": "068ab706-76bd-4101-9ec0-cb2fc5d3d90a"
+        },
+        {
+          "name": "SalaryStatement_Overview",
+          "id": "0bcf3b9b-c264-414b-a9c8-2ef528ca634d"
+        },
+        {
+          "name": "SalaryStatement_Detail",
+          "id": "fd284738-e8a4-4c5f-b7a5-d22c255ba6ea"
+        },
+        {
+          "name": "SalaryStatement_NewEdit",
+          "id": "5517f6a0-38dd-41dd-ae44-5c73b7df67c3"
+        },
+        {
+          "name": "OutsourcedPaymentProcess_Overview",
+          "id": "91269462-be51-4a8e-8ee9-e65e2c454acd"
+        },
+        {
+          "name": "OutsourcedPaymentProcess_NewEdit",
+          "id": "14e1eb35-3d3e-42f9-aa88-8607b9135ae5"
+        },
+        {
+          "name": "PreferredWorkingHours_Overview",
+          "id": "a20080e9-0a51-4a61-97b9-1df388279ff5"
+        },
+        {
+          "name": "PreferredWorkingHours_NewEdit",
+          "id": "71b77f48-7cd0-4955-91fe-c40ef44e71e6"
+        },
+        {
+          "name": "ManualEditHistory_Overview",
+          "id": "d9959d12-ae42-4f6d-a220-e757c43c002d"
+        },
+        {
+          "name": "ManualEditHistory_NewEdit",
+          "id": "ad72f100-7514-4ced-b710-511652cd41da"
+        },
+        {
+          "name": "AuthorizationStatus_Overview",
+          "id": "88d0372d-9646-48d7-8b2a-05b646932006"
+        },
+        {
+          "name": "AuthorizationStatus_NewEdit",
+          "id": "5dc282fd-c532-4ef1-948e-f1bcaa7e57b2"
+        },
+        {
+          "name": "AdjustmentNotification_Overview",
+          "id": "e0f6740d-9257-4e5b-a314-f8a404ab34d0"
+        },
+        {
+          "name": "AdjustmentNotification_NewEdit",
+          "id": "0bb78b61-5864-4d26-88c2-58b6c6be9148"
+        },
+        {
+          "name": "ScheduleUpdateNotification_Overview",
+          "id": "f1cbd1e5-634f-444e-9b35-31a07be1fc78"
+        },
+        {
+          "name": "ScheduleUpdateNotification_NewEdit",
+          "id": "f3f19ea3-5d8f-42ff-8353-b1c91b77bb18"
+        },
+        {
+          "name": "WorkHours_Overview",
+          "id": "c9aca4ec-5cdf-4b92-83c7-2f04f53db7ea"
+        },
+        {
+          "name": "WorkHours_NewEdit",
+          "id": "b9c7f11b-f500-442a-806a-1bc47cf28512"
+        },
+        {
+          "name": "ComplaintStatus_Overview",
+          "id": "cc5ec6a5-c5e9-429a-9ac0-3a149ef4e07a"
+        },
+        {
+          "name": "ComplaintStatus_NewEdit",
+          "id": "00a9fa66-c910-41e5-bd60-7d34b8ad9685"
+        },
+        {
+          "name": "EmployeePresence_Overview",
+          "id": "ead54652-2b98-4c61-b659-3d1a7e287b70"
+        },
+        {
+          "name": "EmployeePresence_NewEdit",
+          "id": "1e931e28-bed6-4254-a63b-fccdfbf9e84b"
+        },
+        {
+          "name": "ManagementIntervention_Overview",
+          "id": "8e87db0d-0c03-4b88-b7b6-fe570468dac0"
+        },
+        {
+          "name": "ManagementIntervention_NewEdit",
+          "id": "76504e67-4cf5-4729-9ed8-1829e0124ce0"
+        },
+        {
+          "name": "JobOpening_Overview",
+          "id": "95e956aa-78a3-412e-84d9-857b87f87e40"
+        },
+        {
+          "name": "JobOpening_NewEdit",
+          "id": "fbb59c4a-33db-4fa0-b90a-81db3b1d389f"
+        },
+        {
+          "name": "OnboardingProcess_Overview",
+          "id": "d8f859e0-de15-4243-9490-26be177224e2"
+        },
+        {
+          "name": "OnboardingProcess_NewEdit",
+          "id": "f3719267-2356-4908-b953-a88c1ada038d"
+        },
+        {
+          "name": "EmployeeList_Overview",
+          "id": "42ee8530-4407-4017-9da7-542eccd0636b"
+        },
+        {
+          "name": "EmployeeList_NewEdit",
+          "id": "98bc352f-09fc-480f-ad4b-1540f9c56bb1"
+        },
+        {
+          "name": "AbsenceList_Overview",
+          "id": "61302ff8-2e1e-40e4-989b-5ef69da03905"
+        },
+        {
+          "name": "AbsenceList_NewEdit",
+          "id": "cdfa70b3-f1ce-4499-94ba-2a4b8c16c007"
+        },
+        {
+          "name": "RegistrationProcess_Overview",
+          "id": "5ec8a026-ef8b-4e87-93ec-83232e297df8"
+        },
+        {
+          "name": "RegistrationProcess_NewEdit",
+          "id": "614de431-e670-4252-a79b-777491cdc319"
+        },
+        {
+          "name": "ContractManagement_Overview",
+          "id": "964c2455-a7cc-42e5-99b8-2c85885fe62f"
+        },
+        {
+          "name": "ContractManagement_NewEdit",
+          "id": "3f5192b8-301a-4037-ae89-ef4b11841d71"
+        },
+        {
+          "name": "CertificationManagement_Overview",
+          "id": "826a4153-d88f-4c44-8ca7-59e0238c2dab"
+        },
+        {
+          "name": "CertificationManagement_NewEdit",
+          "id": "e95dee1b-a984-4dfc-8782-931832632881"
+        },
+        {
+          "name": "MessagingSystem_Overview",
+          "id": "b08ee6f6-dcd9-405d-a9e0-5481758652c5"
+        },
+        {
+          "name": "MessagingSystem_NewEdit",
+          "id": "81acc338-eb6b-4b09-9de7-9f6e864686fe"
+        },
+        {
+          "name": "ContactInformation_Overview",
+          "id": "a455c93e-7c36-4575-9d26-550ec1327e28"
+        },
+        {
+          "name": "ContactInformation_NewEdit",
+          "id": "49136a1b-c83b-436a-b191-04d0620e8a8f"
+        },
+        {
+          "name": "Notification_Overview",
+          "id": "c762aea4-0724-4093-bfaf-ebb0100b5ff9"
+        },
+        {
+          "name": "Notification_NewEdit",
+          "id": "5f0248ed-b06a-4912-91fb-67257f4baa10"
+        },
+        {
+          "name": "Login_Overview",
+          "id": "7035490d-fd28-4ec0-977f-139ff3e92afc"
+        },
+        {
+          "name": "Login_NewEdit",
+          "id": "295ce33c-a17f-4674-8bea-ee58f921c02a"
+        },
+        {
+          "name": "Tax_Overview",
+          "id": "9033d870-81a5-4f35-ae73-1ba115426f9d"
+        },
+        {
+          "name": "Tax_NewEdit",
+          "id": "677f3ed9-8dcf-44a0-8629-a504604f14f0"
+        },
+        {
+          "name": "NotificationLog_Overview",
+          "id": "a4faae86-767e-44d1-8de2-9cdce1ee7117"
+        },
+        {
+          "name": "NotificationLog_NewEdit",
+          "id": "ae292e59-4daa-40d2-841d-61b52e188fcf"
+        },
+        {
+          "name": "Applicant_Overview",
+          "id": "784ff66d-97b7-4604-b4bc-5611d0e0dc52"
+        },
+        {
+          "name": "Applicant_NewEdit",
+          "id": "22c375f2-35b6-4862-99cf-78c758ebe082"
+        }
+      ],
+      "entities": [
+        {
+          "name": "Employee",
+          "id": "ab0ce34a-20ae-4c39-85c3-fd1d14835a01"
+        },
+        {
+          "name": "Complaint",
+          "id": "36e79193-9066-4c30-8f5a-1c80a19a927c"
+        },
+        {
+          "name": "Payment",
+          "id": "20a95245-22ad-43c2-8fc2-3d74dae664a6"
+        },
+        {
+          "name": "SalaryStatement",
+          "id": "3d006b42-d876-40ea-8c0e-e56f3eaa10b2"
+        },
+        {
+          "name": "Manager",
+          "id": "01dc4ee6-9416-4403-8f0e-f8ee23546be8"
+        },
+        {
+          "name": "OfficeEmployee",
+          "id": "f0f41650-f1dd-4db4-afa0-1a34f31f645f"
+        },
+        {
+          "name": "OutsourcedPaymentProcess",
+          "id": "10b72343-daec-49a7-95ba-d90b6efd1b0c"
+        },
+        {
+          "name": "PreferredWorkingHours",
+          "id": "979f25aa-6bc1-4df8-a301-5f1bf9578f49"
+        },
+        {
+          "name": "ManualEditHistory",
+          "id": "da243cca-5137-4363-b633-eb14362c0c01"
+        },
+        {
+          "name": "AuthorizationStatus",
+          "id": "306e7ad1-e075-436a-b670-d2137c9fef85"
+        },
+        {
+          "name": "AdjustmentNotification",
+          "id": "3c6f1e60-6c1b-4beb-926f-d9ac091f83b2"
+        },
+        {
+          "name": "ScheduleUpdateNotification",
+          "id": "1bc92e19-1599-439e-9531-ffb033bbaf13"
+        },
+        {
+          "name": "WorkHours",
+          "id": "bbf4523e-c355-4609-a37b-5dfd0b893f91"
+        },
+        {
+          "name": "ComplaintStatus",
+          "id": "a928eaf2-ed78-4929-95d6-31f17506ac3b"
+        },
+        {
+          "name": "EmployeePresence",
+          "id": "b9ee0037-7e6a-4197-95d3-ad762d7026ae"
+        },
+        {
+          "name": "ManagementIntervention",
+          "id": "47d2a93d-5721-47bc-9223-d9c6d885e206"
+        },
+        {
+          "name": "JobOpening",
+          "id": "cd5b6ffc-0439-4613-b370-9d9ebd299e4b"
+        },
+        {
+          "name": "OnboardingProcess",
+          "id": "4cae35a4-4bb0-455a-8344-a28a250f8b56"
+        },
+        {
+          "name": "EmployeeList",
+          "id": "5ce72bd2-78af-450d-9e5c-ff77fb38c0bb"
+        },
+        {
+          "name": "AbsenceList",
+          "id": "1caa4721-be87-4342-a166-a2cc508ceb63"
+        },
+        {
+          "name": "RegistrationProcess",
+          "id": "6f0d5dc5-cdba-4fc7-9675-e548c1dbd031"
+        },
+        {
+          "name": "ContractManagement",
+          "id": "48e4e678-f00a-41ed-8d49-9e3e4d1e4088"
+        },
+        {
+          "name": "CertificationManagement",
+          "id": "c71b3ea6-f5ba-47ab-aa30-bb883400f70c"
+        },
+        {
+          "name": "MessagingSystem",
+          "id": "221f64fd-d9a2-4b08-a8e1-7c80af3adf08"
+        },
+        {
+          "name": "ContactInformation",
+          "id": "5739a149-2bfb-4380-bc99-f19372af9ac6"
+        },
+        {
+          "name": "Notification",
+          "id": "f6d98541-7ef7-4e7f-b373-f6fb1ae8b143"
+        },
+        {
+          "name": "Login",
+          "id": "bfeb5596-d4b4-409f-a84d-77dd38830a6f"
+        },
+        {
+          "name": "Tax",
+          "id": "3bb58790-879f-4bb0-ba26-ba83244fc496"
+        },
+        {
+          "name": "NotificationLog",
+          "id": "2dc3d06f-7ed9-498e-80dc-ce7d786e7e98"
+        },
+        {
+          "name": "Applicant",
+          "id": "4bed062e-e4e3-4f87-b817-aaf22b673171"
+        }
+      ],
+      "microflows": [
+        {
+          "name": "MyFirstLogic",
+          "id": "4a8475b3-14cb-4100-8963-58f2fd3a0be8"
+        },
+        {
+          "name": "SendSalaryStatement",
+          "id": "6b4cd160-d5ce-4ad3-a961-9c5d13b4d6f8"
+        },
+        {
+          "name": "OutsourcePaymentProcess",
+          "id": "48dcacf2-d3a5-40bc-8829-b38e20e89190"
+        },
+        {
+          "name": "NotifyEmployeeOfComplaintStatusUpdate",
+          "id": "9b249395-6222-49ca-acf8-8c9be351e658"
+        }
+      ],
+      "nanoflows": [
+        {
+          "name": "SendNotificationToEmployee",
+          "id": "0425481b-4cf5-42fa-8aac-ea104b9e565c"
+        }
+      ],
+      "workflows": []
+    },
+    "verification": {
+      "missing": {
+        "pages": [],
+        "entities": [],
+        "microflows": [],
+        "nanoflows": [],
+        "workflows": []
+      },
+      "ok": true,
+      "artifacts": {
+        "ok": true,
+        "missing": {
+          "moduleRoles": [],
+          "userRoles": [],
+          "demoUsers": [],
+          "pageVisibility": [],
+          "homePageButtons": [],
+          "menuItems": [],
+          "widgets": []
+        }
+      },
+      "semantic": {
+        "enabled": false,
+        "ok": true,
+        "errors": []
+      }
+    },
+    "capabilities": {
+      "modules": [
+        "Administration",
+        "Atlas_Core",
+        "Atlas_Web_Content",
+        "DataWidgets",
+        "FeedbackModule",
+        "MyFirstModule",
+        "NanoflowCommons",
+        "WebActions"
+      ],
+      "widgetIds": [],
+      "widgetFamilies": [
+        "datawidgets_module"
+      ]
+    },
+    "commitMessage": "Rerun practical performance builder-stage run: grocery run-04",
+    "ok": true
+  }
+}

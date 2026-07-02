@@ -1,0 +1,805 @@
+Expectations
+00:00:04 - 00:00:16
+Researcher: Voordat we beginnen met de slides: wat verwacht jij van een tool die automatisch Mendix-apps kan genereren? Wat is jouw beeld daarbij?
+
+00:00:18 - 00:00:29
+Expert: Ik denk dat ik initieel wel iets van controle zou willen hebben over hoe die precies dingen gaat opstellen.
+
+00:00:29 - 00:00:30
+Researcher: Ja
+
+00:00:30 - 00:00:40
+Expert: En natuurlijk: het format waarmee je het invoert, daar zal je ook ergens een voorbeeld van moeten geven. Tenminste, je had volgens mij ook user stories die je erin zet.
+
+00:00:42 - 00:00:52
+Expert: Maar ik denk dat zeker ook tussen bedrijven heel erg kan verschillen hoe ze Mendix gebruiken of hoe ze bepaalde dingen opzetten.
+
+00:00:53 - 00:01:05
+Expert: Dus ik denk dat hoe je het eruit krijgt wat het is, maar als als het gewoon in in grote lijnen al niet echt overeenkomt met wat je hoe je dingen zou willen zien, dan denk ik dat het snel ophoudt zeg maar.
+
+00:01:05 - 00:01:05
+Researcher: Ja.
+
+00:01:06 - 00:01:19
+Expert: Dus ik weet niet precies hoe je dat zou zou kunnen doen. Misschien dat je iets van voorbeeldapps erin zou kunnen gooien waar hij iets van kan overnemen, maar in ieder geval dat je daar iets van context aan kan geven voor datgene wat hij gaat maken.
+
+00:01:19 - 00:01:34
+Researcher: Ja, ja. En dat sluit er een beetje op aan: wat zou voor jou dan een bruikbaar startpunt zijn? En dan heb je het wel meer over vanuit nul beginnen bij een nieuw bedrijf bijvoorbeeld, of een nieuwe app?
+
+00:01:35 - 00:01:40
+Expert: Ja. Hoe bedoel je dat?
+
+00:01:40 - 00:01:56
+Researcher: Een bruikbaar startpunt om vanuit te te starten met de verdere ontwikkeling. Dus voordat jij.. Dus je hebt wat werk gedaan om requirements te verzamelen, andere informatie te verzamelen en dan ga je beginnen met een app.
+
+00:01:57 - 00:02:05
+Researcher: Wat zou voor jou een fijn geautomatiseerd startpunt zijn voordat jij handmatig verder gaat met met een app?
+
+00:02:06 - 00:02:09
+Expert: Als in wat ik wil hebben staan, wat hij voor mij genereert?
+
+00:02:09 - 00:02:10
+Researcher: Ja. 
+
+00:02:11 - 00:02:33
+Expert: Uhm. Ik denk dat je met dingen als masterdata zou gaan beginnen. Alsin echt de de core van je, van je processen en je informatie. Ehm, ik denk dat dat je het waarschijnlijk stapsgewijs zou willen opbouwen. Dus inderdaad eerst nadenkt over echt de belangrijkste dingen die de basis vormen van je app.
+
+00:02:33 - 00:02:34
+Researcher: Ja
+
+00:02:34 - 00:02:41
+Expert: En dan daarna bijvoorbeeld nadenken over meer specifieke functionaliteiten die dan ondersteund worden daardoor.
+
+00:02:41 - 00:02:49
+Researcher: Ja, bedoel je daarmee het domeinmodel ook echt al met masterdata?
+
+00:02:51 - 00:03:05
+Expert: Nou, tenminste wat je vaak ziet in apps is dat je, je hebt data vaak nodig voor je processen, dus weet ik veel voor een...
+
+00:03:05 - 00:03:15
+Expert: Ik werk nu in een app, dus met financiële informatie en dat je, er staan leningen in en dat je bijvoorbeeld bepaalde leningtypes gaat definiëren en dat je dat dan zelf kan kan configureren als gebruiker.
+
+00:03:16 - 00:03:16
+Researcher: Ja
+
+00:03:16 - 00:03:41
+Expert: Een voorbeeld van masterdata, dat is gewoon data. Die is heel belangrijk en dat moet je zelf kunnen invoeren. En in die zin zeg maar dat zou ik zien als: dat vormt de basis van je, van de rest van je app, zeg maar. Dat ga je gewoon overal terugzien. Dus dat zou je eerst moeten hebben staan voordat je zomaar met de rest zou beginnen.
+
+00:03:41 - 00:03:43
+Researcher: Ja, ja, oké.
+
+00:03:44 - 00:03:52
+Expert: En dan zit er inderdaad ook een domeinmodel bij, ja, het is meer iets, iets minder echt logica, maar meer dat je inderdaad begint met de data en hoe dat zich tot elkaar verhoudt.
+
+00:03:52 - 00:04:16
+Researcher: Ja, dat is wel een goed inzicht inderdaad. Ja, ja, want ik heb zelf natuurlijk nooit echt een commerciële Mendix app gezien. Alleen maar uh binnen het onderwijs zeg maar. Ja, en dat zijn heel veel heel kleinere scopes natuurlijk. En wij zijn ook echt aangeleerd om binnen een domeinmodel te bedenken en dan in Mendix te zetten.
+
+00:04:16 - 00:04:29
+Expert: Nee, ik denk ook wel dat beginnen met domeinmodel is denk ik uh, de meest logische keuze, omdat je daarmee ben je genoodzaakt echt na te denken over alles wat je nodig hebt. En ook dan komt het proces ook, tenminste, dat vloeit logisch voort uit proces.
+
+00:04:29 - 00:04:45
+Expert: Maar je kan niet... als je eerst proces gaat bouwen en dan in het begin loopt het vaak een beetje gelijk hoor. Het is niet dat je dat je eerst alleen maar al het masterdata neerzet en dan pas begint. Maar het een is wel nodig voor het ander.
+
+00:04:45 - 00:05:05
+Expert: En ik denk dat het voor een AI misschien soms lastig is omdat... het lijkt makkelijker om het apart van elkaar op te zetten, maar dat je daarmee iets minder afhankelijkheden kan vermijden en dat je gewoon een aparte module houdt en dat je gewoon per module genereert bijvoorbeeld.
+
+Architecture walkthrough
+00:05:05 - 00:05:24
+Researcher: Ja, oké, dan zal ik nu even laten zien wat het het het ontwerp is. Nou, het komt eigenlijk allemaal.. het is redelijk versimpeld dit, maar het komt allemaal neer op twee belangrijke componenten. Het maken van een plan en het executeren van het plan, het uitvoeren van dat plan.
+
+00:05:27 - 00:06:04
+Researcher: Nou, bij het maken van het plan, daar komt echt de LLM aan, aan de pas. Hierbij zijn wat inputs belangrijk. User stories. Dit is een een voorbeeldje van een dataset die ik heb gebruikt bij het evalueren ook, een klein stukje daarvan. Dit is dan de enige input die hij krijgt. En deze input wordt in twee verschillende soort subtools gestopt, waarvan eentje ook een LLM gebruikt.
+
+00:06:04 - 00:06:26
+Researcher: Het is een tool die ik dan heb geadopteerd van een bestaand onderzoek en die kan een procesmodel genereren of in ieder geval actoren en taken er uit zien te halen. Dit is ook niet iets wat een soort gouden standaard is. Het is niet per se goed, hij heeft het meer gewoon gemaakt.
+
+00:06:26 - 00:06:46
+Researcher: En die andere, dat zijn classes en relaties die worden met NLP, dus dat is niet met een LLM, maar dat is met echt door een zin uit elkaar in stukjes te hakken en dan te kijken wat de classes zouden kunnen zijn?
+
+00:06:46 - 00:07:05
+Researcher: En die krijgt hij dan ook mee als input. En ja, in een ideaal scenario zitten hier ook andere inputs bij, bijvoorbeeld acceptance criteria die direct gekoppeld zijn aan de user story en eventuele extra domeininformatie.
+
+00:07:06 - 00:07:23
+Researcher: Dat is ook aanbevolen als als toekomstig werk. Omdat in de resultaten zijn we toch al tegengekomen dat er veel context mist. Want ja, je kan wel een attribute genereren, maar er staat niet gespecificeerd of die verplicht is of niet.
+
+00:07:24 - 00:07:38
+Expert: Ik denk inderdaad dat je.. tenminste wij werken natuurlijk altijd aan de hand van tickets binnen zo'n Scrum methodiek. Ja, en die zijn altijd meer en dat is ook denk ik goed, maar die zijn altijd meer dan een dan die ene zin dat het wat moet zijn.
+
+00:07:38 - 00:07:47
+Expert: En op zich is het prima voor zo'n model. Heel fijn dat je het een beetje openhoudt, maar soms is iets van inderdaad acceptatiecriteria ook fijn.
+
+00:07:48 - 00:07:55
+Expert: Zou ik nou zo zeker als ontwikkelaars kun je het anders kun je het ook niet testen, want dan weet je ook niet.... je kunt het heel breed interpreteren.
+
+00:07:55 - 00:08:11
+Expert: Ja, en bij de ene klant heb je daar iets meer vrijheid in dan dan bij de andere. Maar ja, de de de kwaliteit van de tickets is is ook gewoon wanneer je normaal developed, echt van heel groot belang voor de kwaliteit van de apps.
+
+00:08:11 - 00:08:27
+Researcher: Ja. Ja. Ja. Dus het is de input hoe die hier staat, dat is beperkt, maar hoe specifieker je dat maakt, hoe meer dat ook overeenkomt met hoe jullie in ieder geval over user stories en tickets denken.
+
+00:08:27 - 00:08:47
+Expert: Ja. Dit is gewoon wat ik al zei is, is wat vager en hoe duidelijker je bent, hoe groter de kans dat je ook echt datgene krijgt wat je wil. En daar ga je natuurlijk altijd voor. Maar ja, dan zit er minder interpretatie bij als je dat wat meer afbakent.
+
+00:08:48 - 00:09:15
+Researcher: En dan een vraagje over deze. Het is misschien wat vaag, want het zijn natuurlijk echt screenshots van iets wat in het echt is gegenereerd. Omdat deze outputs of omdat deze twee dingen omdat die niet door mensen gemaakt zijn. Zou je dit nuttig vinden? Of zou je zeggen dit creëert alleen maar noise of ruis, zeg maar in in het proces.
+
+00:09:16 - 00:09:17
+Expert: Als je hier inzicht in hebt of?
+
+00:09:17 - 00:09:34
+Researcher: Ja de generator, zeg maar de LLM die neemt dit ook mee in het in het proces. Zou je dat als nuttig beschouwen, of zou je denken dat het te veel ruis genereert omdat het niet door een mens gemaakt is, niet door mens geverifieerd is.
+
+00:09:38 - 00:09:44
+Expert: Heel even maar dat. Dat je dus dat je dit kan inzien en dan kan, daar nog comments op kan hebben. is dat het idee?
+
+00:09:45 - 00:09:47
+Researcher: In principe niet dus, zeg maar.
+
+00:09:47 - 00:09:51
+Expert: Ja, maar het idee is zeg maar of dat wel fijn zou zijn om te kunnen doen?
+
+00:09:51 - 00:10:18
+Researcher: Ja of dat jij als uh, als developer dit ziet, daar een mening over geeft en dat als input die mening als input geeft. Ja bijvoorbeeld of of Ja, hoe zou je dit überhaupt er in willen hebben? Of zou je zeggen ik maak het domeinmodel wel zelf gewoon of hoe heet het? Ik Ik praat liever met de LLM samen om vanuit de user stories en acceptance criteria et cetera, om vanuit daar een domeinmodel te genereren.
+
+00:10:19 - 00:10:48
+Expert: Ja, ik denk wel dat... Ik zou dit zelf denk ik niet... Ja, als ik dit zo zie heb ik niet meteen zoiets van oh, ik weet precies wat ik hiermee kan of moet doen. En ik denk de kracht van low code is ook dat het redelijk intuïtief is. Er zijn natuurlijk wel dingen die een beetje vaag werken, maar.... En ik denk ook dat AI daar juist heel goed bij kan helpen, maar dat je dat je eigenlijk met je die die code kan weghouden, maar dat je misschien wel op een andere manier kan valideren.
+
+00:10:50 - 00:11:05
+Expert: Ja, ik denk inderdaad dat ik het dat ik dit op zich niet zou hoeven zien. Ja, maar op zich is een controlestap om te verifiëren dat die inderdaad het goed gaat maken is waarschijnlijk heel handig, want ja, het zal niet even 2 seconden zijn dat hij dan maar wat neerzet.
+
+00:11:06 - 00:11:22
+Researcher: Dus als wij dit bijvoorbeeld in een in een interface hebben met met een mooie, met of met iets wat het mooi neerzet en dat jij dan als developer daar naar kan kijken en kan goedkeuren of of een soort van er mee kan praten, dat zou wel nuttig zijn?
+
+00:11:25 - 00:11:39
+Expert: Ik weet niet precies wat ik hierin zou kunnen aanpassen of wat ik... ja, wat mijn invloed hier zou kunnen zijn? Wat dus de de invloed kan zijn van mijn van het checken nog van van wat die dan genereert?
+
+00:11:40 - 00:11:52
+Expert: Maar even ervan uitgaan dat dat je een hoop richting kan geven, nog meer sturing bovenop wat hier staat denk ik dat het alleen maar handig is.
+
+00:11:52 - 00:11:58
+Researcher: Ja, het is ook erg vaag hoor om dit ook om dit en dit uit te leggen binnen één slide.
+
+00:11:59 - 00:12:30
+Researcher: Uhm ja, en dan de output van die generation stap is ook iets heel vaags, maar dat is een een hele grote JSON file met een plan. Ja, dit is metadata. Dat is niet per se relevant.
+
+00:12:30 - 00:13:03
+Researcher: Hierin wordt aangegeven welke app die heeft gemaakt of gaat maken en welke branch. En wat de homepagina bijvoorbeeld gaat zijn. Er zijn execution stappen. Bijvoorbeeld Ik heb dit plan gemaakt, moet ik hem gelijk committen of Of moet ik hem gewoon eerst behouden in de, hoe heet het ook weer in de repository zelf voor jezelf ergens. En hier kan je aangeven of je een bestaande app wilt gebruiken of een nieuwe app wilt genereren.
+
+00:13:04 - 00:13:07
+Expert: Oh je kan ook zomaar aanpassingen doen op een bestaande ja app?
+
+00:13:07 - 00:13:43
+Researcher: Ja. Ja. En dan Hier zijn de echte concrete stappen dus in het domeinmodel. Je gaat hier dan precies aangeven welke entiteiten je wilt hebben/moet hebben. Associaties. Enumerations. De security en de pages. Verificatie. Ik weet niet exact wat dit was. De microflow en de nanoflows in de workflows en in een echt plan zijn het dus echt 4000 regels met bijvoorbeeld met de specifieke dingen daarvan.
+
+00:13:44 - 00:14:02
+Researcher: Ja, en dit is dan wat je ook als input meegeeft aan dat. Dat hoort dus meer bij je. Dit. Dit bij de input. Dit geef je mee om te laten zien of je het wilt committen of niet. En dat komt dan hier in terug.
+
+00:14:02 - 00:14:25
+Researcher: Ja. Uhm, even kijken hoor, dit plan. Dat is eigenlijk een beetje het artefact wat ervoor zorgt dat je het als mens tussentijds kan reviewen. Dat je eventueel daar nog invloed op kan hebben en dat je het kan reproduceren eventueel. Ja.
+
+00:14:25 - 00:14:34
+Researcher: Ehm. Zie jij hier nut in? In in in zo'n tussenstap waarbij jij nog invloed hebt als als developer?
+
+00:14:35 - 00:14:49
+Expert: Ja, dat zeker. Wat ik hier zie, spreekt voor mij meer tot de verbeelding dan wat je eerder liet zien. Hoe je dat dan zou willen aanpassen is denk ik een volgende vraag, want dit is wel echt een berg aan informatie.
+
+00:14:49 - 00:15:03
+Researcher: Ja. Beeld je dan denk ik vooral in naar een toekomstige versie waarbij het niet een een platte JSON is, maar een mooie interface met ja, je hebt verschillende stappen van één pagina. Heeft bijvoorbeeld de entiteiten van deze. Wat wil je nog aan veranderen? Dat soort dingen.
+
+00:15:03 - 00:15:24
+Expert: Ja Nee, dat dat dat zal had ik inderdaad. Daar was ik eigenlijk ook vanuit gegaan. Maar dan nog steeds dat dat heel veel informatie is. Dat ja, en dat het bijna dat je een zin bijna een beetje Mendix aan het nabouwen bent. Ja, om het allemaal weer te geven. Want dat het wordt dan. Je gaat het natuurlijk een stuk simpeler maken.
+
+00:15:24 - 00:15:54
+Expert: Ja, maar stel ik ga. Weet ik veel, want ik zie inderdaad ook user roles staan en module roles. Ja weet je, stel wat dan? Dan ga ik dus ook eigenlijk voor uh. Voor die user roles bepaalde modules definiëren. Ja, als dat nou, dan moet ik dan ook dingen kunnen aanpassen? En als ik het zo zeg, dan valt misschien nog wel mee hoe complex het is. Maar ik denk als je apps groter worden, dan kan dat wel een hele lijst zijn. En dan ja, ziet het er eigenlijk hetzelfde uit als je gewoon security in je, in je in je app maakt?
+
+00:15:54 - 00:15:56
+Researcher: Ja, maar dat zijn ook gewoon vinkjes natuurlijk.
+
+00:15:56 - 00:16:23
+Expert: Uh ja, ja uh. En bijvoorbeeld entiteiten en je associaties. Als ik dat kan, kunnen d'r best wel veel zijn. Uh, maar ik denk dat dat daar wel uh uh daar dat je daar wel veel zou kunnen toevoegen. Dus dat je inderdaad ziet van nou, deze entiteit bevat deze informatie. Nou dat wil ik toch in andere entiteiten of ik weet t uh, de associatie toch net iets anders. Of nou ja, dat soort dingen. Dat uh ja, dat als je dat van tevoren kan aanpassen.
+
+00:16:23 - 00:16:39
+Expert: Het is wel, als ik er nu over nadenk, uh. Ik denk misschien dat het niet per se moet gaan om die kleine dingen, omdat je dat ook prima zou kunnen aanpassen in de. In de modeler zelf zeg maar. Ja.
+
+00:16:42 - 00:16:46
+Researcher: Dus met kleine dingen bedoel je dingen als de module roles bijvoorbeeld.
+
+00:16:46 - 00:17:17
+Expert: Uhm ja, zeg maar: ik denk dat je dit misschien eerder zou zien en dan bijvoorbeeld denkt: nou, hij heeft bepaalde entiteiten aangemaakt, maar dat is echt totaal niet hoe ik het in mijn hoofd heb. Hij legt heel veel nadruk hierop, of hij maakt het niet groot genoeg. Ik had het zelf uiteindelijk helemaal niet zo bij elkaar gezet. Dan zou je misschien eerder zeggen: ik doe het gewoon nog eens. Het gaat dan meer om het opnieuw prompten.
+
+00:17:17 - 00:17:40
+Expert: Ja, omdat ik denk als je dan. Als je dingen gaat aanpassen hierin, zeg maar dat ja, omdat het zoveel informatie is. Ja, je zult waarschijnlijk zien, maar de aanpassingen zullen heel klein zijn, dus dan kun je het bijna beter gewoon in de modeler zelf doen, zodat het allemaal wat wat meer intuïtief werkt. Scheelt ook voor jou als ontwikkelaar die dit ontwikkelt. Scheelt ook een hoop werk.
+
+00:17:41 - 00:18:15
+Researcher: Komt dat ook omdat jij als developer gewoon meer ervaring hebt met Mendix waardoor jij dingen sneller weet te vinden bijvoorbeeld? Want ter vergelijking ik heb ook met met bijvoorbeeld medestudenten gepraat die ook bijvoorbeeld één of twee vakken hebben gedaan met Mendix en die geven. Die geven waarschijnlijk sneller aan dat ze dit nuttig vinden dan iemand als jij. Want jij kan sneller een domeinmodel in elkaar klikken dan dan zij bijvoorbeeld. Denk je dat dat ook invloed heeft op hoe jij dit beschouwt?
+
+00:18:15 - 00:18:51
+Expert: Dat zou ook kunnen. Ik denk dat ze. Maar dit geeft wel in één keer natuurlijk. Ik weet niet hoeveel domeinmodellen hij in één keer zou kunnen aanmaken. Maar stel dat zijn er in zeg maar er zijn er tien, ik noem maar een getal. Dan is het natuurlijk wel heel veel informatie om om door te pluizen. Als je gewoon als je het in de app opent. Ja, ja, maar ik denk dat dat het uh. Ja, ik denk dat je dat de grote lijnen zo van kunnen volgen en zien. Dit is ongeveer wel wat ik wil. Dat is denk ik de kracht hiervan, maar ik denk niet dat de kracht per se zit in dit attribuut. Je verplaatst naar die entiteit zeg maar.
+
+00:18:51 - 00:19:06
+Expert: Ja, en als ik dan even door denk, dan vind ik het logischer als je dat je gewoon als die grote lijnen niet klopt, dat je dan opnieuw laat maken in plaats van dat je eigenlijk de hele JSON of via een interface, zeg maar alles gaat herschrijven.
+
+00:19:06 - 00:19:22
+Researcher: Ja, ja, eigenlijk als een soort. chat interface, vergelijkbaar met een ChatGPT of een of of iets anders waarmee je een soort ja misschien een agent kunt. Kan je dat ook noemen? Dat je dat. Dat je een soort mee heen en weer gaat?
+
+00:19:22 - 00:19:49
+Expert: Ja, ja ja, want ja, een zeg maar een vooraanzicht van wat ie gaat maken is denk ik wel heel handig omdat het je wel. Ik ga er even vanuit dat het minimaal minuten duurt voordat hij het heeft gegenereerd, dus nadat hij dat heeft gedaan kijken van oké, is dit wat ik wil? Ja, dat kan heel inefficiënt qua tijd zijn als je dat continu moet doen. Dus als als dit in 5 minuten telkens scheelt, dan ja, ja.
+
+00:19:49 - 00:20:03
+Researcher: Het genereren duurt lang en het bouwen en het executeren van een plan dus heel snel, gek genoeg. Omdat de ene werkt gewoon met JavaScript die je zegt wat ie moet doen en de datgene rede. Dat is gewoon een een LLM call.
+
+00:20:05 - 00:20:18
+Researcher: Voor mijn evaluatie heb ik bijvoorbeeld een heel groot model gebruikt. Heel grote open source wel, en dat duurde dan. Op een gehuurde GPU duurde dat 13 minuten ongeveer per per plan.
+
+00:20:20 - 00:20:21
+Expert: Maar dan krijg je dit eruit denk ik.
+
+00:20:21 - 00:20:27
+Researcher: Ja ja precies ja dus. Maar daar zit ook nog wel optimalisatie in. Euh natuurlijk
+
+00:20:27 - 00:20:55
+Expert: ja, als je dat zo zegt dan. Dan zou je er eigenlijk. Dan hoeft dit er niet in, maar dan heb je je. Eigenlijk denk ik minder aan dan eh ja, maar dan is het nog de vraag Kan ik ja, Heb ik er? Hoe krijg ik controle over datgene wat hij dan dus in één keer eigenlijk gaat genereren? Ja, dus ik denk dat je dat dat je dat misschien zou kunnen zien of enigszins zou kunnen zien met wat je hiervoor nog liet zien, maar dat was mij dan niet echt duidelijk. Wat die dan?
+
+00:20:55 - 00:21:07
+Researcher: Ja, ja ja, de de dus eigenlijk meer ook van dat heb ik ook iets meer te maken met omdat dat genereren zo lang duurt. Dan wil je eigenlijk die input nog beter hebben dan. Dan is dat nog belangrijker eigenlijk.
+
+00:21:07 - 00:21:09
+Expert: Ja ja ja. Uhm.
+
+00:21:09 - 00:21:21
+Researcher: En inderdaad ja, die die tussenstap. Uh, deze bedoelde ja, denk ik. Ja, ja ja, alleen dat ja, dat is natuurlijk niet echt een tussenstap. Dat is meer een uh ja, een soort hulpmiddel voor de voor de LLM.
+
+00:21:21 - 00:21:58
+Researcher: Ja, ja. Uhm. Oké. Ja. Dus dat dat plan, uhm, dat gaat dan in stap twee en dat wordt ingeladen en dat wordt gebouwd door verschillende bouwers. Dat zijn. Ook verschillende stappen. Die doen het eerst de entiteiten, dan de attributen en dan omdat het op op een bepaalde volgorde gaat. En die doet dan de de SDK aanroepen om een app te maken. En dan een working copy te maken en dan eentje te committen.
+
+00:21:59 - 00:22:29
+Researcher: Ja. En dan is de app gevuld en dan is je output aan het einde is. Dit is ook iets wat normaal veel langer is, maar dat heb ik ook iets ingekort. Uhm. Even kijken hoor. Het belangrijkste is welk model je hebt gebruikt, welke strategie die heeft gebruikt. Validatie is, is het plan. Uhm uh, was dat uhm goed genoeg om een om een Mendix app te maken? En. Is de Mendix app zelf goed genoeg gelukt of is die mislukt?
+
+00:22:30 - 00:22:50
+Researcher: Coverage: hoeveel user stories ziet die terug in de gemaakte app en welke heeft hij nog gemist? Dit is voor het geval dat je een bepaald minimumpercentage wilt hebben, dat hij dan helemaal moet stoppen. Wat is er nog meer belangrijk?
+
+00:22:50 - 00:23:35
+Researcher: Uhm ja. Er zijn een een aantal stappen ingebouwd om automatisch bepaalde pagina's te genereren. Bijvoorbeeld elke entiteit daar wordt gekeken is er. Heeft de LLM iets gemaakt van een een pagina? Zo niet, dan maken wij een in ieder geval een een overview, een new/edit page daarvan, vergelijkbaar met hoe je die. Die die automatisch gegenereerde pagina's binnen Mendix. Uhu. Uhm, die maakt hij aan. De associaties kijkt hij nog langs omdat dat een bottleneck bleek te zijn. Nog steeds bij het genereren van het domeinmodel en associaties vindt hij lastig.
+
+00:23:36 - 00:23:37
+Expert: Wat vindt hij er lastig aan?
+
+00:23:37 - 00:24:04
+Researcher: Het bestaan ervan. Hij. Hij. Het dat. Maar ja, mijn theorie is dat dat komt door de user stories. Die leggen niet goed genoeg de link tussen de verschillende dingen. En. Het is gebleken dat die LLM heel erg. Eigenlijk te logisch en te letterlijk kijkt naar de user stories. Het product staat er niet, dus dan zit er geen link tussen. Zo zo zo denkt hij vaak. Mmm. Uhm. Maar dat is in principe een theorie.
+
+00:24:04 - 00:24:23
+Researcher: En qua microflows? Die maakt hij ook aan. Daar is hij wel flink gelimiteerd in wat hij in die microflows kan doen, omdat dat meer een soort proof of concept was. Maar hij denkt wel na over wat zo'n microflow nodig zou hebben en. En met de tools die hij beschikbaar heeft, maakt hij er iets van.
+
+00:24:26 - 00:24:34
+Researcher: Workflow. Hij maakt workflows aan en eventuele errors, Die doet hij nog.
+
+00:24:36 - 00:24:56
+Expert: Ik denk wel bij veel dingen van hoe. Hoe evalueer je dit? Zeg bijvoorbeeld je Wat dacht ik nou bij die validation? Maar wat valt er precies onder? Ja. En uh. Nou ja. D Dat je je coverage. Maar hoe, hoe hoe beoordeel je dat iets daadwerkelijk d'rin zit dat
+
+00:24:56 - 00:25:25
+Researcher: Ja uh. Ja, voor coverage gebruikt hij ook uhm NLP. Dus hij haalt de zinnen. De user stories haalt hij uit elkaar en kijkt Welke concepten zitten er in En zitten die concepten in de in het domeinmodel? Zo wordt hun coverage berekend. Maar inderdaad het. Het zijn. Het zijn een soort tools die al die verschillende informatiestukjes, maar het. Het. Het meest nuttige is natuurlijk het domeinmodel zelf of de de Mendix app zelf.
+
+00:25:26 - 00:25:37
+Researcher: Daarom is het een een generation report noem ik het en en en. Niet iets. Iets wat je nog moet valideren, want de Mendix app is al gemaakt. Als dit er is.
+
+00:25:37 - 00:25:39
+Expert: ga je ook in een app de demo zo?
+
+00:25:39 - 00:25:41
+Researcher: yes yes, dat is de volgende slide.
+
+Application walkthrough
+00:25:42 - 00:26:08
+Researcher: Ja, de case is Education. Daar liet ik net ook een heel klein stukje van user stories van zien. Dat is een een platform waarin freelance teachers kunnen leren. Dat was een vraag vanuit een denkbeeldige klant bij een vak. En die hadden een platform nodig om skills te leren, hun certificaten te halen, et cetera.
+
+00:26:10 - 00:26:39
+Researcher: Twee actoren een freelance teacher en een administrator. De input Uhm was enkel de 45 user stories en niks anders omdat de. Er waren geen andere documenten beschikbaar waardoor de. De. De de scope toch gelimiteerd moest worden. Omdat we een eerlijke vergelijking wilden doen tussen de dus ook meerdere datasets. En als je één app meer informatie meegeeft, dan kan dat invloed hebben.
+
+00:26:40 - 00:26:48
+Researcher: Output over 165 artifacts en daarmee. Daar vallen dus entiteiten onder workflows, microflows et cetera.
+
+00:26:50 - 00:26:57
+Expert: En dat heb je vergeleken met met zeg maar mensen die de app gewoon zelf hebben gemaakt en de de.
+
+00:26:57 - 00:27:05
+Researcher: Ik heb onderling datasets vergeleken waarbij elke dataset een lijst met user stories is. Dus verschillende cases gedaan. Oké ja ja ja dus.
+
+00:27:05 - 00:27:16
+Researcher: Dus ja, het liefst had ik natuurlijk een soort optimal scenario willen doen. Alleen dat vond mijn begeleider niet eerlijk. Want dat dat introduceert natuurlijk heel veel bias tot je onderzoek.
+
+00:27:16 - 00:27:23
+Expert: Ja, als in dat je dat. Waar ligt dat dan? Aan je stories of aan de aan?
+
+00:27:23 - 00:27:38
+Researcher: Ik had dan de. In een optimaal scenario dat ik dan inderdaad de user stories willen meegeven, maar ook een stukje. domein informatie met eventueel. Let op dit, let op dat, acceptance criteria. Het liefst ook natuurlijk.
+
+00:27:38 - 00:27:47
+Researcher: Ja, maar ook de. De LLM zelf had dan waarschijnlijk een beetje een overload gekregen. Dus ja daar daar zit ook nog wel een een limitatie in.
+
+00:27:47 - 00:27:51
+Expert: Ja, het geeft natuurlijk wel aan wat je met met het minimale kan bereiken en alles daarbovenop.
+
+00:27:51 - 00:28:02
+Researcher: Ja klopt ja. En dat dat ga je ook wel terugzien. Het is echt de het minimale uh, de minimal uh stukje uhm Mendix.
+
+00:28:03 - 00:28:21
+Researcher: Ja en? Nou ik zou zeggen je mag er ook zelf lekker doorheen kijken. Ik heb weer een muis voor je als je wilt. Uhm. Ja, en dan? Denk vooral hardop na over wat je ziet. Uhm, Wat vind je van het domeinmodel van de entiteiten van de attributen?
+
+00:28:23 - 00:28:44
+Researcher: Hij ziet er zo uit omdat die. Als je. Als die gegenereerd wordt, dan doet de SDK. Die. Zet alles netjes op een rijtje met alle alle relaties er ook tussen. Alleen ja, dat is niet leesbaar natuurlijk. Dus het is handmatig een beetje uit elkaar gesleept. Ja, je hebt inderdaad.
+
+00:28:46 - 00:28:46
+Expert: Oh ja.
+
+00:28:50 - 00:29:23
+Expert: Nee. Een van de eerste dingen dat dat is, dat is een klein dingetje. Maar uh wat? En dat is op zich zegt niks over de kwaliteit van wat er staat, maar meer de leesbaarheid. Ja. Meestal letten we er altijd wel op dat dat dat associaties leesbaar blijven. Dus op zich heeft hij wel voor gezorgd dat dat deze zaken allemaal goed in beeld blijven, maar dat dit bijvoorbeeld. Waarschijnlijk is dit een één op één. Ja, dat kan ik niet echt zien, behalve als ik hem aanklik. Klopt dus dat je zeg maar dat je ervoor zorgt dat dat allemaal leesbaar blijft.
+
+00:29:25 - 00:29:42
+Expert: Ik zie hier ook heel veel. Losse entiteiten staan die niet echt netjes gelinkt zijn. En ik vraag me af of dit de meest efficiënte manier is om deze data op te slaan. Want je gaat natuurlijk voor elke entiteit. Ga je dan een tabel aanmaken?
+
+00:29:42 - 00:29:58
+Researcher: Ja ja, wat hij hier heeft gedaan. In de user stories hadden ze het over skills, en hij heeft ervoor gekozen om elke skill een aparte entiteit te geven, in plaats van iets van een inheritance of een of een generalization.
+
+00:29:59 - 00:30:25
+Expert: Ja, ik weet natuurlijk niet precies hoe het hier hoe het in de app gebruikt wordt, maar het is met het hele concept van hergebruik in Mendix natuurlijk heel belangrijk. Ja, ik zou denk ik zelf, tenzij er echt een hele goede reden voor is om het niet te doen, zou ik het gewoon in één entiteit gooien met iets van een enumwaarde waardoor je. Ja, waardoor je een stuk kleiner houdt.
+
+00:30:26 - 00:30:37
+Expert: Dit is waarschijnlijk ook als de app groter wordt en ik weet niet hoeveel dit er gaan worden, maar mogelijk een hoop. Ik kan dit best wel gaan groeien en En dan wordt het
+
+00:30:37 - 00:30:39
+Researcher: dus een enumeration zou hier veel slimmer zijn?
+
+00:30:39 - 00:30:48
+Expert: Denk ik wel ja. Ook omdat het dan het is met niks gekoppeld, dus het is gewoon het plat opslaan van informatie. Ja, ja, dat, dat kun je op die manier ook doen.
+
+00:30:48 - 00:30:50
+Researcher: Ja, ja, ik snap deze case ook niet helemaal inderdaad.
+
+00:31:11 - 00:31:40
+Expert: Ja, eh, even kijken als je. Dat. Waar zitten die ook alweer? Het zal een zo niet productie security zijn. Nee, nee, daar zou ik wel benieuwd naar zijn. Maar wat die daar precies mee doet?
+
+00:31:41 - 00:31:50
+Expert: Want rechten is natuurlijk best wel een groot ding. Ja, en dat uh ja, daar valt of staat een app mee. Maar het moet überhaupt natuurlijk gewoon goed ingericht zijn.
+
+00:31:50 - 00:32:05
+Expert: Maar uhm ja, ik uh, ik hanteer zelf eigenlijk al een beetje de regel als t uh. Als iets niet werkt zoals je denkt en je kan het niet verklaren, zal het wel iets van rechten zijn. Maar rechten zijn gewoon heel vaak het ding, omdat het gewoon.
+
+00:32:07 - 00:32:11
+Researcher: Als je een knop niet ziet of zo, dan is dat waarschijnlijk omdat de rechten niet goed staan.
+
+00:32:11 - 00:32:44
+Expert: Ja, bijvoorbeeld, Of je ziet bepaalde informatie niet, of hij zegt. Maar het kan zelfs zo zijn dat je. Ik heb het zo gehad dat je dan dus informatie ophaalt en commit, maar dan heb je een bepaald attribuut. Heb je geen rechten? En in dat geval maakt hij eigenlijk gewoon de data leeg. Als in je zag het niet en dan sloeg hij dus leeg op en dan was dat dataveld ineens leeg. Dat komt leeg als gevolg van het missen van rechten. Ja, dat kan een beetje gek lopen, maar dat is natuurlijk best een groot ding.
+
+00:32:52 - 00:33:12
+Expert: Meestal probeer ik het ook altijd een beetje te groeperen, dus dat heeft het hier wel in een soort van structuur opgezet. Uhm. Maar ja, waarschijnlijk kan dat nog wel net iets uh. ja, meer in in groepjes worden ingedeeld. Ja.
+
+00:33:15 - 00:33:30
+Expert: Maar het hangt heel vaak inderdaad aan één centrale entiteit vast. Maar daar tussen die entiteiten is eigenlijk nooit een uh, een verband waar? Ja dat kan hoor, maar dat dat dat valt me nu wel op dat het heel vaak aan één ding hangt.
+
+00:33:31 - 00:33:43
+Researcher: Uh ja, die die uh associaties. Zei je dat daar? Dat is wel echt uh de uh een bottleneck in de in het model dat uh. Uhm ja, heb ik veel terug horen komen inderdaad.
+
+00:33:43 - 00:33:47
+Researcher: Ja en, het domeinmodel ziet er gewoon een beetje raar uit ook. Uh.
+
+00:34:19 - 00:34:39
+Expert: Ja. Voor de rest. Ik denk het. Op zich is hij dan toch bezig. Ja, meestal is het wel fijn om hier iets in te voeren. Het wordt ook vaak niet gedaan hoor, maar het is op zich wel zeker als het allemaal ietsje onduidelijker is waar het voor dient, is het wel fijn om daar toch iets in te zetten.
+
+00:34:39 - 00:34:49
+Expert: Ik denk als je met zo'n LLM bezig bent en dan maakt het voor je aan is het denk ik een kleine moeite om er iets voor in te vullen. Of in ieder geval dat hij aangeeft wat zijn idee is van van deze entiteit. Ja.
+
+00:34:49 - 00:34:52
+Researcher: Dus documentatie per entiteit is dat.
+
+00:34:52 - 00:34:57
+Expert: Ja, ja ja ja. En je kan natuurlijk ook. Ik denk ook bij microflows. Ik kan er eentje aanklikken.
+
+00:34:59 - 00:35:08
+Researcher: Wat doen jullie allebei als als Emixa doen jullie? Doen jullie? Uh. Op welke plekken gebruiken jullie allemaal de annotaties en de documentatie binnen Mendix
+
+00:35:10 - 00:35:14
+Expert: als in domeinmodel. Het meest zijn we veruit het meest in microflows.
+
+00:35:14 - 00:35:17
+Researcher: Ja, en dan als. Als zo'n annotatie stukje zeg maar.
+
+00:35:17 - 00:35:36
+Expert: Ja ja, gewoon zo'n uh oh ja zo dingetje. Ja, en dat is nou gewoon uh, zo'n lijntje ergens aan uh, verbinden. Ja, precies. Ja ja ja, ik kan me voorstellen. Je mag wel verwijten hoor, maar uh dat uh, als je zelf aan het Mendixen bent, dan doe je dat niet als in. Als je gewoon beetje aan het rondklikken bent dan maakt het ook niet uit.
+
+00:35:36 - 00:36:13
+Expert: Maar dit is voor zeg maar de begrijpbaarheid door door anderen is dat echt superbelangrijk. En ja, hier kun je ook wel. Maar we doen ook interne QA feedback naar elkaar. Dus dan ga je dus andermans website doorklikken en een beetje feedback geven. Dat dingen niet helemaal duidelijk zijn, dat is gewoon iets wat Dat kon best. Dat blijft altijd terugkomen. Omdat je. Als je het zelf bouwt, is het heel logisch. En dan mis je misschien soms dingen die je eigenlijk uit had moeten leggen. En dat annotaties zijn dan eigenlijk de manier om dat te doen. Eens te bekijken.
+
+00:36:13 - 00:36:19
+Expert: Qua prefixes zie ik dat hij niet heeft hier.
+
+00:36:20 - 00:36:21
+Researcher: Ja, die heeft hij wel goed gedaan.
+
+00:36:22 - 00:36:26
+Expert: Dat is volgens hem volgens Mendix de best practice, dit/dat.
+
+00:36:26 - 00:36:48
+Researcher: Dat zijn de microflows die aan de workflow verbonden zijn, toevallig die drie. Ehm, nou ja, dat idee had hij. Dat is niet per se goed gelukt, maar daarom heeft hij ze daar met een FV prefix gedaan. Ik denk niet dat dat per se de juiste conventie was. Maar inderdaad, de rest van de microflows, die missen wel.
+
+00:36:48 - 00:37:04
+Researcher: Eh, ja, en dat is een ook een terugkerend probleem. De microflows zijn niet verbonden aan iets, dat heeft hij niet kunnen doen. Ja, er zijn wel voorbeeldapps geweest waarbij dat wel heeft kunnen doen, dus hij kan het wel. Alleen in zo'n heel grote context is hem dat niet niet gelukt.
+
+00:37:04 - 00:37:29
+Expert: Ja, ik zou hier ook verwachten dat die. Want dit is. Iets op te slaan denk ik. Als in hij doet een retrieve. Ja, ja, en ik zou verwachten dat het ergens vanuit een knop wordt aangeroepen. Ja en dan is het. Natuurlijk is het best raar dat hier gewoon een database retrieve gaat doen.
+
+00:37:31 - 00:37:49
+Expert: Als in op meerdere als in. Je hebt het object hier, dus waarom zou je het doen? En daarnaast als je het uit de database ophaalt en je hebt ze maar net in je geheugen iets aangepast, dan ga je dus datgene opslaan wat in je database staat. Dus dan ga je datgene wat je eigenlijk wil opslaan sla je niet op. Ja, ik denk dat deze flow wat dat betreft een beetje de plank misslaat.
+
+00:37:49 - 00:37:52
+Researcher: Ja dus. De inhoud van de flow is dat is gewoon totaal niet bruikbaar.
+
+00:37:53 - 00:38:00
+Expert: Ja, nou ja, en ik zou het ook zo maar. Euh. Dit zet je gewoon natuurlijk allemaal recht naast elkaar. Klopt t? Maar dit is ook uhm uh D
+
+00:38:00 - 00:38:07
+Researcher: Deze was nog erger dan het domeinmodel. Bij flows plakt ie ze allemaal op elkaar. Alle blokjes.
+
+00:38:07 - 00:38:08
+Expert: Oh, je hebt het zelf uit elkaar gezet.
+
+00:38:08 - 00:38:31
+Researcher: Dit. En hij, Hij doet het aan de hand van coördinaten. Dus hij pakt de de x en de y van het van het blokje en daar daar. Hij zegt oké, op deze x moet jij het pijltje zetten, maar hij snapt dan niet of. Ja, dat zijn natuurlijk veel te veel stappen om dat nog te doen. Hij snapte niet dat je dan de zijkant op moet pakken bijvoorbeeld. Ja ja ja. Dus dit is inderdaad zelf een beetje uit elkaar gesleept.
+
+00:38:32 - 00:38:44
+Expert: Meestal zie je ook dat dat de parameters eigenlijk altijd hier linksboven staan. Ja dus dat is goed. Dat is een klein dingetje, maar dat maakt het allemaal wel iets leesbaarder denk ik.
+
+00:38:44 - 00:38:48
+Researcher: Ja, ja, dat zijn ook gewoon belangrijke conventies om te om te volgen, denk ik.
+
+00:38:48 - 00:39:14
+Expert: Ja, ja, en meestal tenminste. Ik denk dat het algemeen ook een algemeen respect is, maar dat je gewoon dit soort microflows, dus dat je sub als de sub flow is, tenminste als uit een knop wordt aangeroepen. Ja dat maakt zijn ja. En dat je dan dus act underscore en dan de entiteit. Dus dat zal. ACT_FreelanceTeacher_Approval of zo. Ja, dat zou dan zeg maar de de de goede naamconventie zijn.
+
+00:39:14 - 00:39:34
+Researcher: Ja en stel je voor. Hij uhm de de dat systeem, die gaat niet zich bemoeien met de inhoud van een Microflow, maar die zet wel een voorzetje voor jou neer met de juiste naamconventie en het idee van de flow. Bijvoorbeeld in zo'n annotatie. En dat je hem dan alleen nog maar zelf hoeft te maken. Want wat zou je daarvan vinden?
+
+00:39:34 - 00:39:50
+Expert: Ik denk dat het wel een stap in de goede richting is, ja. Ik denk dat als in. Dat geeft er wel aan wat hij in ieder geval wil met die knop, want anders dan is het ook wel lastig te interpreteren denk ik. En op zich zeker dit soort kleine dingen, dat dat bepaal je zo zelf. Dus dat is op zich niet niet een groot probleem.
+
+00:39:50 - 00:39:51
+Researcher: Oké, Ja.
+
+00:39:51 - 00:39:59
+Expert: Ja, ik denk wel ik zat even in het algemeen te kijken naar zeg maar naar alle uh objecten hier of alle alle files zeg maar. Maar hij heeft niks in de map gestopt.
+
+00:40:00 - 00:40:08
+Researcher: Nee, nee, klopt. Dat is ook een terugkerend uh punt inderdaad. Ja, het is gewoon een lap uh ja, wat ik zeg, maar
+
+00:40:08 - 00:40:21
+Expert: nu is het een beetje onoverzichtelijk. Maar bij grotere apps, ze kunnen heel veel groter worden, weet ik uit ervaring. Dan uh, dan kom je er gauw. En dan? Dan gaat het helemaal mis. Dan uh, dan kun je niks meer vinden.
+
+00:40:21 - 00:40:57
+Expert: Uhm, ik denk ook wij doen zelf zeg maar, Zetten we dingen in een map, zeg maar per entiteit in een map waar we dan ook weer sub mapjes bij zetten voor vaak is het microflows, nanoflows. En dan pages en resources, en resources kunnen dan snippets zijn één enz. Uhm weet ik veel. Eventueel afbeeldingen of zo die je erin gebruikt. Uhm, maar dat soort dingen dat dat is de. Ik denk dat het per bedrijf ook kan verschillen hoe ze dat precies doen. Maar dat zou dus de dingen zijn die ik zou verwachten, die je kan aangeven hoe je dat bijvoorbeeld wil en gedeeld wil wil hebben.
+
+00:40:59 - 00:41:03
+Expert: Kijk nog even een andere microflow. Dit wordt aangevuld vanuit een workflow. Zei je
+
+00:41:03 - 00:41:18
+Researcher: Ja, alleen het koppelen van de Microflow aan de workflow. Dat is halverwege de. Het. Het ontwikkelen is dat niet meer ondersteund, dus ik heb ze handmatig toegevoegd. Dus dan. Dan weet je dat in ieder geval.
+
+00:41:18 - 00:41:18
+Expert: Halverwege was...?
+
+00:41:18 - 00:41:30
+Researcher: Halverwege dat ik bezig was met mijn scriptie zeg maar. Was de support gedropt voor dat specifieke SDK-actie. Dus ik heb hem voor nu even zelf.
+
+00:41:31 - 00:41:51
+Researcher: Ja ja ja en in de user stories voor jouw beeld stond als administrator wil ik uhm. Freelance teachers kunnen. Toevoegen in het systeem en ze kunnen goed- of afkeuren. Dus hij heeft het wel goed. Uhm. goed ontdekt, zeg maar dat dat het een workflow zou moeten zijn.
+
+00:41:53 - 00:41:56
+Expert: Ja, zoals ze kunnen iets afkeuren.
+
+00:41:56 - 00:42:19
+Researcher: Ja, ja. En helaas werkt het niet. In de lopende app zeg maar. Ik heb wel mijn best gedaan om dat nog. Om er nog iets aan te veranderen bijvoorbeeld. Maar. Ja, ik heb ook niet genoeg ervaring met workflows om dat helemaal te begrijpen.
+
+00:42:19 - 00:42:23
+Expert: Ja, als in de workflow werkt niet, zeg maar de workflow.
+
+00:42:23 - 00:42:28
+Researcher: Ja, dus als je ja, als je hem in de lopende app doet, dan werkt het niet.
+
+00:42:28 - 00:42:30
+Expert: Ja maar waar? Waar loopt ie op fout?
+
+00:42:31 - 00:42:39
+Researcher: Ja, ik denk dat het komt gewoon omdat de de rollen en dergelijke niet goed. Ingesteld zijn.
+
+00:42:41 - 00:42:57
+Expert: Ja, ik denk ik zat die laatst. Ik ben momenteel met een soort van showcase appje bezig over workflows omdat ik er best wel mee heb gewerkt, maar. Ik weet niet precies hoe je dat doet met userrollen, als je ze maar niet de security aan hebt staan.
+
+00:42:57 - 00:43:17
+Researcher: Ja, want hij heeft security op prototype, dus je moet dan wel user roles hebben en demo. Je kan demo users hebben. Die demo users heb ik zelf aangemaakt, maar ik weet nog niet of. Volgens mij heeft hij dit gewoon zelf gegenereerd door deze XPath. Ehm ja, ik weet ook niet of het dan System.User is of module roles of weet ik veel wat.
+
+00:43:17 - 00:43:33
+Expert: Dus nee, het ziet er op zich wel goed uit denk, want je doet het inderdaad altijd met met met de system, maar t is niet op module-niveau dat je m toe toekent, maar altijd op. Op app niveau heb je zeg maar heb je de uh de taken al terug kunnen vinden dat er iets
+
+00:43:34 - 00:43:43
+Researcher: niet bij deze app. Maar ik heb wel een andere app waarbij die dat. Waarbij die in ieder geval een run kon starten. Hij kon er niks mee doen, maar hij kon wel starten. De workflow.
+
+00:43:43 - 00:43:46
+Expert: Oké, Ja, want hoe open je de taak?
+
+00:43:47 - 00:43:52
+Researcher: Eh, nou dit is. Deze app stond daar een slecht voorbeeld van. Ik kan wel even.
+
+00:43:54 - 00:44:13
+Expert: Uhm. Deze. Ik zat nog te denken de. Want ik denk dat. Wat. Wat. Natuurlijk net zagen met zeg maar de. De coverage van. Van datgene wat je genereert. Ja, ik denk dat het heel handig zou zijn om door je app heen ook aan te geven waar iets voor dient als in wat? Wat iets precies.
+
+00:44:14 - 00:44:23
+Researcher: Ja, ja, dus je linkt eigenlijk dan ook echt de functionaliteiten. Terug naar de user stories? Ja. Ja. Of welke input dat dat ook mag zijn.
+
+00:44:23 - 00:44:58
+Researcher: Deze is nog meer een rommeltje. En deze is ook ook ietsje minder connected. De context van deze app is Beer2Beer dus dat is het. Het was voor een soort B2B, maar dan voor brouwerijen en cafés bijvoorbeeld. En zo. Onderaan staat die workflow. Volgens mij een beetje hetzelfde principe. Hij wilde iets. Ehm. Iets goedkeuren.
+
+00:44:58 - 00:45:00
+Expert: Hij is daar heel consistent in die pagina.
+
+00:45:00 - 00:45:13
+Researcher: Of zou je wat? Ja, daar, dat is een die dat start. Dus dat is. Bij het aanmaken van een user start ie de de flow. En dan. Dat lukt hem. En je ziet hem er ook echt wel tussen staan. Alleen het accepteren dat dat verdwijnt dan een beetje.
+
+00:45:13 - 00:45:29
+Expert: Helemaal niet gewend dat je dat wordt. Maar soms in Mendix gewoon out of the box bepaalde dingen gegeven bij bij buttons. Ja, in de praktijk gebruiken we eigenlijk altijd gewoon Call Microflow. We hebben het ook trouwens wel eens gewoon showpage, maar.
+
+00:45:29 - 00:45:34
+Researcher: Want vanuit de microflow kan je natuurlijk ook ook dingen doen als een workflow starten, toch?
+
+00:45:35 - 00:45:38
+Expert: Ja, ja, maar een workflow starten doen we eigenlijk altijd uit de microflow
+
+00:45:39 - 00:45:42
+Researcher: omdat je dan meer mee kan geven, Meer informatie hebt?
+
+00:45:42 - 00:46:21
+Expert: Je hebt meer controle in de Microflow. Bijvoorbeeld. Voor een workflow is het ook essentieel dat die dat object wat je meegeeft, de context dat die al gecommit is. En soms dan heb je ook. Want dit is natuurlijk een new/edit page. Stel dat je dit gaat aanmaken. Je komt op deze pagina om dus iets nieuws aan te maken en ik druk nu op workflow starten. Ik weet niet wat hij dan doet. Het zou kunnen dat hij hem opslaat. Ik heb nooit geprobeerd, maar als hij dat niet doet, dan heb je mogelijk een workflow zonder context en dat ja dat kan niet. Dan gaat hij fout. Ja ja.
+
+00:46:21 - 00:46:30
+Researcher: Dus dit is de executie van een workflow. Dat is nog niet echt. Dat is ook totaal niet nuttig dan en ook niet echt volgens de best practices.
+
+00:46:30 - 00:47:21
+Expert: Ja, ik weet niet wat wat daarvoor zijn. Het ding is ook bijvoorbeeld voor. Je hebt ook gewoon knoppen om dingen te deleten of dingen te createn. Ja, om die te kunnen gebruiken moet je in je domeinmodel wel specifiek direct toewijzen om create toe te laten. En eigenlijk is het best practice bij ons in ieder geval om dat niet zomaar te doen, omdat het best wel. Het geeft ineens heel veel mogelijkheden aan een user om bepaalde objecten te verwijderen. Terwijl. Het zijn eigenlijk vaak maar hele specifieke momenten waarop je dat wil aanmaken en verwijderen. Dus dan is het veel veiliger om het in de microflow te doen, waar je dan ook nog hele specifieke rechten aan kan toewijzen en en de plek dus heel, heel specifiek is. Dus dat, ja, dat is leuk dat Mendix het biedt, maar het is soms net iets te. Er hangen net wat te veel risico's aan om het gewoon zomaar erin te gooien.
+
+00:47:21 - 00:47:48
+Expert: Ja, en soms wil je ook nog meer dingen met die data doen voordat je het aanmaakt. Weet ik veel dat je ergens iets uit de database ophaalt en er toch al van te voren invult. Ik zeg maar iets om bij te laten kijken. Ja, je hebt natuurlijk wel ietsje, zeg maar een bepaald gedrag voor associaties dat je dan kijkt. Dan bestaat er nog dat andere object of eraan hangt en dan mag het niet. Dus dat biedt Mendix dan wel out of the box. Maar stel dat hij nog andere voorwaarden heeft die je niet zomaar kan checken vanuit je domeinmodel? Nou, dan doe je dat dus ook niet.
+
+00:47:50 - 00:48:20
+Expert: Even kijken en. Op zich ziet dit er niet verkeerd uit. Ja, het is gewoon heel, heel basic. Ik zou wel benieuwd zijn als inderdaad. Als je veel complexere workflows gaat opzetten, hoe ie dat dan doet zeg maar. Ja, want je hebt denk ik ja als in dat heeft waarschijnlijk iets zelf gedaan, maar door de workflow zijn de Workflow Commons denk ik Ja die heeft ie heeft ie.
+
+00:48:20 - 00:48:32
+Researcher: Die zit er volgens mij standaard bij. Maar ik heb ik heb niet iets meegegeven dat hier moet downloaden, dus uh effe kijken.
+
+00:48:32 - 00:49:18
+Expert: Nee, ik denk het niet. Nee, als hij zo bij de de Workflow Commons. Daar zit ook nog een standaard logica in voor bijvoorbeeld een takenoverzicht. En ja, en zo'n een Voor de administrator heb je een heel dashboard waar je waar je taken kan kan zien. En ook je zit echt super veel out of the box in workflows wat bijhoudt wie ze heeft gedaan, wanneer. En je kunt zeg maar binnen zo'n workflow. Stel hij hangt vast op deze microflow of laten we zeggen er komt hier nog een taak na, daar staat hij vast. Dan kun je als admin kun je zeggen ga terug naar deze taak. Dus je kunt echt. Zelf kun je gewoon volledig bepalen waar hij heen gaat. Tenminste niet als ie al klaar is natuurlijk
+
+00:49:18 - 00:49:21
+Researcher: en dat gebruiken jullie in principe altijd, zo'n Workflow Commons.
+
+00:49:21 - 00:49:41
+Expert: Ja ja, wel als je. Want dat is Het is zo waardevol dat. Zonder die module is het. Ja, haal je er gewoon bij lange na niet zoveel uit. Ja. Even kijken. Hier is gewoon de context. Oh ja.
+
+00:49:42 - 00:49:55
+Expert: Ja, en hier zou ik zeggen: maar dit is dan ook wel zo'n mooi voorbeeld van een flowtje, wat eigenlijk heel veel generieker opgezet zou kunnen zijn. Dus misschien dat je dat zelf ook wel bedacht, maar deze doet een approve en deze doet een reject.
+
+00:49:56 - 00:50:12
+Expert: Dus aan de hand van de van de taak zeg maar. Of zeg maar wat de persoon heeft gekozen. Dit zou je prima. Je zou zeg maar de de de status prima in een parameter kunnen zetten en mee kunnen geven. En dan heb je maar één flow, heb je maar één flow nodig. Ja.
+
+00:50:13 - 00:50:34
+Expert: En wat je ook wel vaker ziet, is dat je bijvoorbeeld hiervoor nog iets van de decision doet om te checken. Is de status waar ik naartoe ga zetten heeft niet al die status, want anders ga ik gewoon voor niks een commit uitvoeren. Ja, dat soort dingetjes, maar ik denk dat dat hij misschien dat niet zelf heeft bedacht of dat er maar dat. Je moet hem eigenlijk een beetje opleiden, maar ja, een beetje voeden om. Om die beslissingen te kunnen geven.
+
+00:50:34 - 00:50:52
+Expert: Dus ik denk het kunnen ja meegeven. Upload op de een of andere manier van al bestaande projecten kan denk ik heel veel waarde bieden op heel veel gebieden. Eigenlijk een hoop punten die we besproken hebben. Ja, ja, omdat dat gewoon inspiratie kan bieden. Uhm.
+
+00:50:56 - 00:50:59
+Expert: Wil je nog bepaalde dingen door bepaalde dingen heen klikken?
+
+00:50:59 - 00:51:08
+Researcher: Uhm, nou ja, ja. Ik ga in ieder geval vertellen dat bijna alle pagina's zijn of uh, deterministisch gegenereerd. Of ze zijn leeg gegenereerd of heel basaal.
+
+00:51:12 - 00:51:18
+Researcher: Ja, ja, ja, die waren ook wel beperkt want de Data Grid 2 die zit niet in de SDK.
+
+00:51:19 - 00:51:20
+Expert: Ah.
+
+00:51:20 - 00:51:48
+Researcher: Dus ik moest het via dit weer doen of hij moest het via list view doen. Ik heb dat hem wel meegegeven. Uhm. Ja, maar in principe aanmaken en zo. Dat werkt wel, Dus ik zou er dan. In theorie zou je dan een create beer kunnen doen en die zou dan in het leven komen. Dus als dat dat kan wel. Alleen dat is natuurlijk in principe niet anders. Of niet veel beter dan die automatische rechtermuisknop. Generate Overview Pages-functionaliteit.
+
+00:51:49 - 00:51:57
+Expert: Ja. Ja, het is. Op zich is het fijn als er al staat. Dat werkt wel. Ja, je hebt wel iets.
+
+00:51:57 - 00:51:57
+Researcher: Oké.
+
+00:51:59 - 00:52:29
+Expert: Maar inderdaad, het is vaak ook zo. Tenminste, ik heb zelf vaak dat ik het gebruik niet heel vaak zeg maar alvast nieuwe edit pages maken. Soms is het gewoon ja, weet je vaak door Door bijvoorbeeld een een data view toe te voegen op een pagina, vraag je eigenlijk ook altijd wel je man van te voren vullen met alles wat erin staat. Als je dat doet, heb je hetzelfde. En soms dan, ja, wil je dan nog wil je net wat anders inrichten En dan is het bijna makkelijker om gewoon zelf even wat in elkaar te klikken. Want ja, ja, ik sta er op uit.
+
+00:52:29 - 00:52:39
+Researcher: Heb je ook voor elke entiteit een uhm, zo'n new/edit page construct? Of hebben jullie meer? Dat je dingen genest hebben dus in een soort. Soort admin. Grote admin.
+
+00:52:40 - 00:52:51
+Expert: Uhm. Beetje bij de. Sowieso niet voor elke entiteit een new/edit page. Dat is natuurlijk alleen voor pagina's of entiteiten die je daadwerkelijk wil aanmaken/bewerken.
+
+00:52:54 - 00:53:14
+Expert: En ja, het hangt er echt een beetje van de van de van de data af waar je dat gaat weergeven. Sommige ja, ga je alleen in overview tonen, Sommige wil je ook echt meer details van tonen. Soms dan. Dan geef je een deel van informatie in een overzicht om je een beetje algemene informatie. En dan kun je dus in een detailscherm er meer van zien.
+
+00:53:14 - 00:53:18
+Expert: Zijn er nog andere pagina's dan de overview?
+
+00:53:18 - 00:53:24
+Researcher: Ja, de de de home die heeft gemaakt. Dat is een hele, hele basale homepagina.
+
+00:53:24 - 00:53:26
+Expert: Ik kijk vast overheen.
+
+00:53:26 - 00:53:45
+Researcher: Ja, hij is op alfabetische volgorde volgens mij gewoon. Dus nou ja, en dan Home_Web is die van Mendix zelf. En dan? Home is degene die zelf werkt. Maar ja. Dat is het. En hij doet ook niet elke pagina, dus hij maakt al een soort keuze volgens mij.
+
+00:53:47 - 00:54:11
+Researcher: Nou, dat is ook leuk. Uhm, die glyph icons van de navigatie, die hebben een soort code. En die code? Die is niet per se hetzelfde voor. Voor degene die die op het internet bekend is. Dus alleen home was ondersteund om zomaar via de SDK aan te maken Ja.
+
+00:54:11 - 00:54:16
+Expert: Op zich is dat natuurlijk ook. Ja, het is een kleine moeite om het even toe te voegen. Kan ik die niet naar beneden slepen?
+
+00:54:24 - 00:54:34
+Researcher: Ja, en hij heeft dus geen role-based access ingesteld zoals je kan zien dus. Dus alle rollen kunnen op alle pagina's en ook hebben ook allemaal dezelfde navigatie.
+
+00:54:34 - 00:54:39
+Expert: Dus kijk maar. Je hebt dus inderdaad een heel aantal rollen.
+
+00:54:41 - 00:54:49
+Researcher: En ja, deze heeft veel rollen, dus dat is wel een goed referentiepunt. Oh ja, waarbij user en administrator dus van Mendix zelf mag zijn.
+
+00:54:49 - 00:55:11
+Expert: Ja, want ze hebben bijvoorbeeld. Deze heeft. Een. Oh ja, twee. Nee, ik ga gewoon even kijken. Hoe komt dat overeen? Ja, dat kruist hij dan aan.
+
+00:55:16 - 00:55:21
+Researcher: Hij heeft dus bij de rollen wel een documentatie meegegeven. Dat vond ik wel belangrijk om te zien ook.
+
+00:55:21 - 00:55:26
+Researcher: Oh ja, niet een hele goeie, maar ja, dat is wel.
+
+00:55:26 - 00:55:32
+Expert: Spreekt voor zich op zich. Ja. Ja. Obvious. Maar uh, je kan hier dus wel. Ja.
+
+00:55:33 - 00:55:55
+Expert: Uhm. Ja. Cool. Ja, ik denk dat dat er maar drie entity access, zou wel gewoon. Dat zijn we echt nog een mooie stap erbovenop zijn. Ja, dat uh, dat kost wel veel tijd om in te richten
+
+00:55:55 - 00:56:13
+Expert: Als t ook wel iets. Meestal begin je gewoon. Meestal beginnen we gewoon meteen op zeg maar production. Uh uh, de production setting. En vanuit daar ga je gewoon datgene toevoegen wat alleen benodigd is, maar je wil eigenlijk gewoon nooit meer toevoegen dan dan noodzakelijk is.
+
+00:56:13 - 00:56:23
+Expert: En het is natuurlijk wel zeker als je hele grote apps gaat genereren, kan het wel. Kan het snel gebeuren dat je toch wel te veel toegang geeft? Uh ja.
+
+00:56:23 - 00:56:41
+Expert: Dus da's een beetje D. Op zich is t ook best nuttig om t gewoon helemaal zelf te doen, omdat je dan gewoon altijd bewuste keuze maakt om het toe te wijzen en niet na te denken oh, moet het toch niet als je t wel Een heel andere situatie waar je dan in zit? Uhm. Ja. Dus uh ja, dat is denk ik uh.
+
+00:56:41 - 00:57:08
+Expert: Maar t is sowieso wel een beetje te laat natuurlijk. En Mendix gaat veel meer toe naar een soort van agentic manier van werken. Ja, uh. En denken hoe je daarmee werkt, dat is nog niet per se heel duidelijk. Als ik denk daar daar kan een hoop mee. Maar ja, dat je d'r als mens over moet blijven nadenken is denk ik wel. Dat staat vast. Ja. Nou ja, wat je dan dan ook precies al laat doen en waar je over nadenkt en misschien ook zelf nog moet bijbouwen. Dat uh is dan een andere vraag.
+
+Final reflection
+00:57:08 - 00:57:14
+Researcher: Ja. Ja. Uhm ja, ik heb nog wat afsluitende vragen. Uh, als we daar nog tijd voor hebben.
+
+00:57:14 - 00:57:15
+Expert: Nee, sorry, ik was even aan het kijken of.
+
+00:57:15 - 00:57:50
+Researcher: Dus uhm, effe kijken hoor. Ja. Uhm Zou je. Hoe die. Hoe dat hele systeem er nu uitziet? Zou je dit gebruiken als startpunt? Of misschien als een manier om een proof of concept te maken hoe die nu is, maar ook vooral hoe die in de toekomst kan zijn. En dan kan je nadenken over dat die wel goede microflows kan maken, Dat hij wel beter kan nadenken over pagina's en dus meer kan. Werkt het concept voor jou als eventueel startpunt?
+
+00:57:51 - 00:57:58
+Expert: Het concept wel Oké, ik denk wel dat er veel moet gebeuren voordat het echt. Voordat het er is zeg maar.
+
+00:57:58 - 00:58:04
+Researcher: Ja, ja en ja, noem maar op. Noem maar wat. Uh, wat dingen die voor jou uhm.
+
+00:58:06 - 00:58:19
+Expert: Ik denk zodra je voorbij het punt bent waarbij het zeg maar minder moeite is om het zelf goed te zetten ten opzichte van het zeg maar gewoon meteen zelf bouwen.
+
+00:58:19 - 00:58:19
+Researcher: Zonder dat je te veel rework nodig hebt
+
+00:58:22 - 00:58:37
+Expert: Ja, dan denk ik dat je er voorbij bent. Ik denk ook dat ik vind. Zelf vind ik bouwen leuker dan dingen nakijken. Ja, het is ook wel een beetje zo'n vak erin van ja, misschien dat het ene kost 1,5 uur en het andere kost 2.00u. Maar misschien wil ik wel liever datgene 2.00u doen, want
+
+00:58:37 - 00:58:38
+Researcher: en dan weet je ook zeker dat het goed is misschien.
+
+00:58:38 - 00:58:58
+Expert: Ja, ja. Dus ja, dat mag, Maar ja, dat is wel uh. Ja, zeg maar, hier zou ik nog zoveel moeten doen. Weet ik veel, om het zeg maar volgens best practices erin te zetten. En überhaupt, dat zou wel best wel wat werk zijn, maar ook gewoon überhaupt. Kijk, ik heb natuurlijk niet helemaal de de case in mijn hoofd waar dit voor diende.
+
+00:59:01 - 00:59:10
+Expert: Ja, misschien dat dit dan wel snel goed is hoor. Wat je dan gaat voor wat je wilt genereren. Maar ik denk dat het als het op iets meer complexe dingen aankomt.
+
+00:59:10 - 00:59:35
+Expert: Bijvoorbeeld we hebben laatst een hackathon gehad en toen ook voor mijn klanten. Hebben we ook meteen. Met AI hebben we een soort integratie gemaakt met onze datatak zeg maar. En die ging dan vervolgens bepaalde. Ja, een hele hoop informatie samen gooien in een soort pitch die we. Die we eigenlijk teruggaven aan de user en dat. Nou ja, het is best wel wat. Niet extreem complex.
+
+00:59:35 - 00:59:57
+Expert: We hebben best wel snel gebouwd, maar toch een stuk complexer dan dit zeg maar, om dat gewoon mooi te laten werken. Ja dus. Ik Ik denk, ja echt. Meer nog een stuk meer inzicht in hoe dingen in je processen zouden moeten lopen. Dat is denk ik wel benodigd om het echt tot zijn recht te laten komen. Ja, omdat het wel.
+
+00:59:57 - 01:00:15
+Expert: Het zijn nu hele generieke dingen, maar ik heb ook niet het idee dat ik echt flow heb gezien wat ik denk. Oh, hij probeert echt wel. Ik probeer eigenlijk dingen helemaal uit te denken, of ze zijn redelijk zo, maar het is gewoon één soort nut wat het heeft. En het is niet ook dat hij nog validaties doet of zo. Of toch.
+
+01:00:15 - 01:00:28
+Researcher: Dus ja, er zitten in een paar apps zitten ook nanoflows die wel iets van een decision hadden gemodelleerd, niet deze. Misschien in die een of ander net.
+
+01:00:50 - 01:01:07
+Expert: Ja, ik denk dat ze. Maar uh. Als de processen gewoon iets complexer worden en het allemaal wat meer wat wat strakker moet samenwerken dan dan uh, dan wordt het denk ik lastiger. En op zich is het natuurlijk wel bedoeld als meer een opzet. Ja, maar als je opzet eigenlijk al benodigd? Ja, als daar meer complexiteit nodig is.
+
+01:01:07 - 01:01:12
+Researcher: Ja. Ja, deze heeft ook niet echt meerdere paden, dus deze is ook geen goed voorbeeld.
+
+01:01:12 - 01:01:14
+Expert: Waar gaat True heen als in?
+
+01:01:14 - 01:01:23
+Researcher: Ja, dat bedoel ik hier. Hij heeft dus ook geen. Bijvoorbeeld geen XPath, dus veel. Die expressies, dat kan hij nog wel. Een soort van.
+
+01:01:24 - 01:01:37
+Researcher: Maar het is gewoon. Ja. KvK nummer is een string-veldje. Ik denk de case uh hiervan was van als een als x administrator. Volgens mij wil ik kunnen controleren of het KvK nummer valid is.
+
+01:01:37 - 01:01:45
+Researcher: En hij heeft geen flauw idee hoe je dat zou moeten controleren. Hij weet niet of je daar een regex voor moet gebruiken of een API of weet ik veel wat. Dus hij deed dit er maar van gemaakt.
+
+01:01:45 - 01:01:48
+Expert: Ik vind het briljant en heel letterlijk dat dat dat is.
+
+01:01:48 - 01:01:52
+Researcher: Het is een ontzettend letterlijke tool. Hij heeft alles super letterlijk genomen.
+
+01:01:53 - 01:01:57
+Expert: Het is gewoon letterlijk is valid. Ja als string. Ja leuk?
+
+01:01:57 - 01:02:09
+Researcher: Eh ja, nee, dat soort dingen dus. Uh dus ik kan wel uh een beetje ook samenvatten van van het hele gesprek. Uhm.
+
+01:02:09 - 01:02:24
+Researcher: Best practices zijn belangrijk. Van zowel Mendix met die microflow-namen enzo, maar ook van bijvoorbeeld Emixa of gewoon een een commerciële partij. Ja, omdat er gewoon heel veel kennis over de jaren heen is verzameld lijkt mij.
+
+01:02:25 - 01:02:47
+Expert: Ja ja en ook. Je ziet ook wel dat het per klant is het soms net even anders hoe het gedaan wordt. Soms dan. We zitten nu ook bij een klant die ook zelf wel een developer heeft. Ja, en soms dan weet je soms dan kom je daarna een andere partij en dan staat er al heel veel en dan moet je eigenlijk daaraan gehoorzaam zijn. Dus dat het kan zijn dat het per project weer net anders is, Dus dat moet een beetje flexibel kunnen zijn.
+
+01:02:47 - 01:03:10
+Researcher: Ja, en dan wat nog meer? De ja, de complexiteit moet wat hoger denk ik. Vooral bij dingen als microflows. Ja, en jij zegt ook van de entiteiten denk gelijk na over de toegang, dus over de over productie. Wel nadenken ja, als maar
+
+01:03:10 - 01:03:35
+Expert: als dat zou kunnen. Ik denk dat het. Ik denk op zich dat het niet. Dat het misschien niet de eerste stap is waar ik zeg, maar die ik zou nemen. Ik zou denk ik eerder gewoon zorgen dat je wat complexere concepten kan uitwerken in een app. En dan. Want in principe is het niet erg om zelf de security in te regelen. Dat heeft ook wel voordelen ja. Maar het is denk ik wel Als dat goed kan is het super fijn. Ja
+
+01:03:35 - 01:03:46
+Researcher: en documentatie op veel meer plekken. Entiteiten, microflows met behulp van annotaties bij user roles ook iets beschrijvende rollen.
+
+01:03:47 - 01:03:54
+Researcher: Ehm, heb ik dan nog iets gemist qua wat er nog echt nodig is om iets bruikbaars te maken in de in de praktijk?
+
+01:03:57 - 01:04:17
+Expert: Ik denk het niet, maar ik vind het sowieso heel vet dat je het dat je het hebt opgezet en het zeg maar dat dat jou gewoon überhaupt iets werkbaars uitgooit is al gewoon. Is het denk al een hele prestatie en denk ik zeg maar kan. Ik heb wel die optie gezien in Mendix 11 zelf dat je inderdaad wat dat invoert en dat hij een app gaat maken. Is dat een beetje vergelijkbaar?
+
+01:04:17 - 01:05:08
+Researcher: Ik heb dat inderdaad geanalyseerd. Ik heb ook Education erin gegooid. Hij doet hele grote mooie planningstappen maakt ie en dat was deze dus. Hij pakt de user stories en hij maakt er inderdaad hele mooie project requirements van. Hij maakt er de de rollen en wat ze allemaal moeten doen. Hij verzint compleet onzin succescriteria, maar hij maakt ze wel lekker. Hallucineren hier. 88% completion rate. Ja, hij maakt epics, wat op zich ook echt super fijn is, maar hij verzint daar dan wel weer zijn eigen user stories bij, terwijl de input ook user stories was. Hij zat ook wel een laagje aan een hallucinatie bij.
+
+01:05:09 - 01:05:32
+Researcher: En dan ja, het belangrijkste is van hoe zet je dit om in een app? Nou ja, je moet hem eigenlijk per zo'n user story moet je hem instrueren van maak dit voor mij, dan maakt hij het wel met met een best wel mate van complexiteit ook. Dus hij kan echt wel goed nadenken over mapjes, over de naming convention.
+
+01:05:32 - 01:05:52
+Researcher: Hij maakt flows aan, maar bij User Story 31 zei hij: je limiet is op voor deze week. En kon ook niet echt iets terugvinden daarover. Maar ja, in de documentatie stond ergens iets van ja, we evalueren het on a weekly basis of je nog verder mag zeg maar. 
+
+01:05:52 - 01:05:53
+Researcher: Dus je had een deel van een app staan.
+
+01:05:53 - 01:06:00
+Researcher: Dus ja, het nuttigste daarvan is eigenlijk dit de de epics en zo.
+
+01:06:00 - 01:06:01
+Expert: Tenzij je weet ik veel, genoeg credits hebt.
+
+01:06:02 - 01:06:40
+Researcher: Ja als je als inderdaad een commerciële partij credits ofzo in kan kopen. Maar hij gebruikt Claude Opus 4.5 ofzo en dat is volgens mij echt een peperduur model. Ik snap het wel ja. Maar ja, die van mij is open source bijvoorbeeld, dus in de analyse hiervan is ook echt een enorme trade-off van oké, dit kan wel meer mature dingen genereren, alleen het stopt op een gegeven moment mee en je weet niet waarom die iets doet. Hallucinatie zit er in, dus wel heel interessant om die vergelijking ook te zien daar tussen.
+
+01:06:41 - 01:06:56
+Researcher: En ook ja. Nou, ze zijn dus best wel ver. En bij elke versie rollen ze weer nieuwe toevoegingen uit.
+
+01:06:56 - 01:07:01
+Expert: Ik denk een goeie samenvatting. En uh ja, echt leuk om te zien man.
+

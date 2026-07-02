@@ -1,0 +1,254 @@
+
+> us2lc-pipeline@1.0.0 generate:process-viz
+> node pipeline/generate-process-viz-cli.js --input-dir=artifacts/practical-performance/20260528-165228/inputs/cinema --output-dir=artifacts/pv-runs/llama3.1-8b/cinema --model=llama3.1:8b --ollama-url=http://127.0.0.1:11434
+
+{
+  "ok": true,
+  "inputDir": "/workspace/us2lc-pipeline/artifacts/practical-performance/20260528-165228/inputs/cinema",
+  "artifacts": {
+    "summaryPath": "/workspace/us2lc-pipeline/artifacts/pv-runs/llama3.1-8b/cinema/process-visualizer-summary.json",
+    "rawPath": "/workspace/us2lc-pipeline/artifacts/pv-runs/llama3.1-8b/cinema/process-visualizer-result.json",
+    "graphSourcePath": "/workspace/us2lc-pipeline/artifacts/pv-runs/llama3.1-8b/cinema/process-visualizer-run/process-visualizer.gv",
+    "graphImagePath": "/workspace/us2lc-pipeline/artifacts/pv-runs/llama3.1-8b/cinema/process-visualizer-run/process-visualizer.png",
+    "logsDir": "/workspace/us2lc-pipeline/artifacts/pv-runs/llama3.1-8b/cinema/process-visualizer-run/output_logs"
+  },
+  "summary": {
+    "actors": [
+      "registered user",
+      "administrator",
+      "premium user",
+      "user"
+    ],
+    "tasks": [
+      {
+        "actor": "registered user",
+        "action": "subscribe to Cinema premium",
+        "condition": "",
+        "gatewayId": "",
+        "gatewayType": "",
+        "storyIndex": 0
+      },
+      {
+        "actor": "administrator",
+        "action": "an overview of historic user payments",
+        "condition": "",
+        "gatewayId": "",
+        "gatewayType": "",
+        "storyIndex": 2
+      },
+      {
+        "actor": "premium user",
+        "action": "change my automated renew subscription status",
+        "condition": "",
+        "gatewayId": "",
+        "gatewayType": "",
+        "storyIndex": 3
+      },
+      {
+        "actor": "premium user",
+        "action": "view my subscription price",
+        "condition": "so that i am informed about my subscription",
+        "gatewayId": "EG0",
+        "gatewayType": "exclusive",
+        "storyIndex": 7
+      },
+      {
+        "actor": "administrator",
+        "action": "cancel my subscription",
+        "condition": "so that i can ensure i am not billed",
+        "gatewayId": "EG0",
+        "gatewayType": "exclusive",
+        "storyIndex": 11
+      },
+      {
+        "actor": "administrator",
+        "action": "change a premium user's subscription status",
+        "condition": "so that a premium user's subscription status aligns with their needs",
+        "gatewayId": "EG0",
+        "gatewayType": "exclusive",
+        "storyIndex": 15
+      },
+      {
+        "actor": "administrator",
+        "action": "change a premium user's subscription cancellation date",
+        "condition": "so that a premium user's subscription status aligns with their needs",
+        "gatewayId": "EG0",
+        "gatewayType": "exclusive",
+        "storyIndex": 23
+      },
+      {
+        "actor": "premium user",
+        "action": "update a premium user's payment method details",
+        "condition": "so that a premium user's subscription status aligns with their needs",
+        "gatewayId": "EG0",
+        "gatewayType": "exclusive",
+        "storyIndex": 24
+      },
+      {
+        "actor": "premium user",
+        "action": "access movie showing information",
+        "condition": "so that a premium user's subscription status aligns with their needs",
+        "gatewayId": "EG0",
+        "gatewayType": "exclusive",
+        "storyIndex": 31
+      },
+      {
+        "actor": "administrator",
+        "action": "add a movie manually",
+        "condition": "so that i can be informed about regional licensing restrictions",
+        "gatewayId": "EG0",
+        "gatewayType": "exclusive",
+        "storyIndex": 38
+      },
+      {
+        "actor": "administrator",
+        "action": "edit a movie manually",
+        "condition": "so that i can be informed about regional licensing restrictions",
+        "gatewayId": "EG0",
+        "gatewayType": "exclusive",
+        "storyIndex": 39
+      },
+      {
+        "actor": "administrator",
+        "action": "add a cinema manually",
+        "condition": "so that i can be informed about regional licensing restrictions",
+        "gatewayId": "EG0",
+        "gatewayType": "exclusive",
+        "storyIndex": 47
+      },
+      {
+        "actor": "administrator",
+        "action": "edit a specific movie showing manually",
+        "condition": "so that i can be informed about regional licensing restrictions",
+        "gatewayId": "EG0",
+        "gatewayType": "exclusive",
+        "storyIndex": 55
+      },
+      {
+        "actor": "premium user",
+        "action": "view the cinema city for a specific movie showing",
+        "condition": "so that i can be informed about regional licensing restrictions",
+        "gatewayId": "EG0",
+        "gatewayType": "exclusive",
+        "storyIndex": 59
+      },
+      {
+        "actor": "premium user",
+        "action": "have a standard range limit of 5km",
+        "condition": "so that i can be informed about regional licensing restrictions",
+        "gatewayId": "EG0",
+        "gatewayType": "exclusive",
+        "storyIndex": 63
+      },
+      {
+        "actor": "user",
+        "action": "have a standard range limit of 5km",
+        "condition": "so that i can be informed about regional licensing restrictions",
+        "gatewayId": "EG0",
+        "gatewayType": "exclusive",
+        "storyIndex": 63
+      },
+      {
+        "actor": "registered user",
+        "action": "recommend movies based on my meta-data",
+        "condition": "so that i can find specific movies",
+        "gatewayId": "EG0",
+        "gatewayType": "exclusive",
+        "storyIndex": 71
+      },
+      {
+        "actor": "user",
+        "action": "recommend movies based on my meta-data",
+        "condition": "so that i can find specific movies",
+        "gatewayId": "EG0",
+        "gatewayType": "exclusive",
+        "storyIndex": 71
+      },
+      {
+        "actor": "premium user",
+        "action": "share a specific movie showing on WhatsApp",
+        "condition": "so that i can find specific movies",
+        "gatewayId": "EG0",
+        "gatewayType": "exclusive",
+        "storyIndex": 73
+      },
+      {
+        "actor": "registered user",
+        "action": "set my lists to public",
+        "condition": "so that i can find specific movies",
+        "gatewayId": "EG0",
+        "gatewayType": "exclusive",
+        "storyIndex": 79
+      }
+    ],
+    "gateways": [
+      {
+        "id": "EG0",
+        "type": "exclusive",
+        "conditions": [
+          "so that i am informed about my subscription",
+          "so that i can ensure my Subscription stays active",
+          "so that i can ensure i am not billed",
+          "so that i can detect fraudulent behaviour",
+          "so that a premium user's automated renew subscription status aligns with their needs",
+          "so that i am informed about whether a premium user's subscription status's active",
+          "so that a premium user's subscription status aligns with their needs",
+          "for major cinema chains",
+          "for film houses",
+          "so that i know where to find a premium user's subscription price",
+          "so that i can view more information",
+          "so that i can be informed about regional licensing restrictions",
+          "so that i can view only relevant movie showing information",
+          "so that i can view only relevant movie showing information nearby",
+          "so that i can view only relevant movie showings nearby",
+          "so that i can find specific movies"
+        ]
+      }
+    ],
+    "processObjects": [
+      "Subscribe To Cinema Premium",
+      "Of Historic User Payments",
+      "Automated Renew Subscription Status",
+      "My Subscription Price",
+      "My Subscription",
+      "Premium User's Subscription Status",
+      "User's Subscription Cancellation Date",
+      "User's Payment Method Details",
+      "Access Movie Showing Information",
+      "Movie Manually",
+      "Cinema Manually",
+      "Specific Movie Showing Manually",
+      "A Specific Movie Showing",
+      "Range Limit Of 5km",
+      "Based On My Meta Data",
+      "Movie Showing On Whatsapp",
+      "My Lists To Public",
+      "My Payment Details",
+      "My Subscription Status",
+      "My Subscription Start Date",
+      "My Subscription End Date",
+      "My Subscription Cancellation Date",
+      "My Paymentmethod Details",
+      "On User Location History",
+      "User's Subscription Start Date",
+      "User's Subscription End Date",
+      "Premium User's Subscription Price",
+      "Premium User's Subscription",
+      "Movie Showtimes",
+      "Mark Favourite Movie Theatres"
+    ],
+    "capabilityHints": {
+      "hasApproval": false,
+      "hasDecision": true,
+      "hasNotification": true,
+      "hasWorkflowLikeRouting": true
+    },
+    "stats": {
+      "taskCount": 20,
+      "gatewayCount": 1,
+      "rawEntityCount": 147
+    }
+  },
+  "status": "completed",
+  "command": "/workspace/us2lc-pipeline/process-visualizer/.venv/bin/python /workspace/us2lc-pipeline/pipeline/scripts/run_process_visualizer.py --input /workspace/us2lc-pipeline/artifacts/practical-performance/20260528-165228/inputs/cinema/user-stories.txt --output-dir /workspace/us2lc-pipeline/artifacts/pv-runs/llama3.1-8b/cinema --model llama3.1:8b --ollama-url http://127.0.0.1:11434"
+}

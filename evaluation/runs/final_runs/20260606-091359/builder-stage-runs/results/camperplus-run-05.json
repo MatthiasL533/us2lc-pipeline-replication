@@ -1,0 +1,901 @@
+{
+  "dataset": "camperplus",
+  "run": "run-05",
+  "planPath": "/Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/artifacts/practical-performance/20260606-091359/stability/camperplus/run-05/plan.json",
+  "ok": true,
+  "startedAt": "2026-06-07T20:50:09.000Z",
+  "tempPlanPath": "/Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/artifacts/practical-performance/20260606-091359/builder-stage-runs/plans/camperplus/run-05/plan.json",
+  "totalMs": 23257,
+  "result": {
+    "appId": "6d1c84da-0d90-4786-940f-2821788a985e",
+    "appCreated": true,
+    "seedAppId": null,
+    "branch": "main",
+    "committed": true,
+    "commitRequested": true,
+    "workingCopyId": "38a5d68f-4de6-424a-859f-6cea6e962ec9",
+    "personas": {
+      "enabled": false,
+      "generatedPageNames": [],
+      "personaNames": []
+    },
+    "stages": [
+      {
+        "stage": "domainModel",
+        "ok": true,
+        "summary": "entitiesCreated=29, associationsCreated=13, enumerationsCreated=0",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 62
+      },
+      {
+        "stage": "flush.afterDomainModel",
+        "ok": true,
+        "summary": "flush.afterDomainModel completed",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 117
+      },
+      {
+        "stage": "security",
+        "ok": true,
+        "summary": "moduleRolesCreated=4, userRolesCreated=4, demoUsersCreated=0",
+        "artifacts": [
+          {
+            "key": "moduleRoleNames",
+            "count": 5
+          },
+          {
+            "key": "userRoleNames",
+            "count": 6
+          },
+          {
+            "key": "demoUserNames",
+            "count": 2
+          }
+        ],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 294
+      },
+      {
+        "stage": "flush.afterSecurity",
+        "ok": true,
+        "summary": "flush.afterSecurity completed",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 187
+      },
+      {
+        "stage": "microflowsNanoflows",
+        "ok": true,
+        "summary": "microflowsCreated=3, nanoflowsCreated=1",
+        "artifacts": [
+          {
+            "key": "microflowNames",
+            "count": 3
+          },
+          {
+            "key": "nanoflowNames",
+            "count": 1
+          },
+          {
+            "key": "microflowRefsByRef",
+            "count": 0
+          },
+          {
+            "key": "nanoflowRefsByRef",
+            "count": 0
+          }
+        ],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 14
+      },
+      {
+        "stage": "flush.afterMicroflows",
+        "ok": true,
+        "summary": "flush.afterMicroflows completed",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 60
+      },
+      {
+        "stage": "workflows",
+        "ok": true,
+        "summary": "workflowsCreated=0",
+        "artifacts": [
+          {
+            "key": "workflowNames",
+            "count": 0
+          },
+          {
+            "key": "workflowRefsByRef",
+            "count": 0
+          }
+        ],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 4
+      },
+      {
+        "stage": "flush.afterWorkflows",
+        "ok": true,
+        "summary": "flush.afterWorkflows completed",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 28
+      },
+      {
+        "stage": "pageCapabilities",
+        "ok": true,
+        "summary": "pageCapabilities completed",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 1
+      },
+      {
+        "stage": "webClientCompatibility",
+        "ok": true,
+        "summary": "webClientCompatibility completed",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 2
+      },
+      {
+        "stage": "flush.afterWebClientCompatibility",
+        "ok": true,
+        "summary": "flush.afterWebClientCompatibility completed",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 25
+      },
+      {
+        "stage": "pages",
+        "ok": true,
+        "summary": "pages completed",
+        "artifacts": [
+          {
+            "key": "pageNames",
+            "count": 67
+          }
+        ],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 578
+      },
+      {
+        "stage": "navigationUI",
+        "ok": true,
+        "summary": "navigationUI completed",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 78
+      },
+      {
+        "stage": "homePage",
+        "ok": true,
+        "summary": "updatedProfiles=1",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 3
+      },
+      {
+        "stage": "flush.final",
+        "ok": true,
+        "summary": "flush.final completed",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 1835
+      },
+      {
+        "stage": "verification",
+        "ok": true,
+        "summary": "ok=true",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 100
+      },
+      {
+        "stage": "capabilities",
+        "ok": true,
+        "summary": "capabilities completed",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 873
+      },
+      {
+        "stage": "commit",
+        "ok": true,
+        "summary": "commit completed",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 10994
+      }
+    ],
+    "createdApp": {
+      "appId": "6d1c84da-0d90-4786-940f-2821788a985e",
+      "name": "rerun-camperplus-run05",
+      "repositoryType": "git"
+    },
+    "beforeCounts": {
+      "pagesInModule": 1,
+      "entitiesInModule": 0,
+      "microflowsInModule": 1,
+      "nanoflowsInModule": 0,
+      "workflowsInModule": 0
+    },
+    "domainModel": {
+      "moduleName": "MyFirstModule",
+      "entitiesCreated": 29,
+      "associationsCreated": 13,
+      "enumerationsCreated": 0
+    },
+    "security": {
+      "moduleName": "MyFirstModule",
+      "securityLevel": "CheckFormsAndMicroflows",
+      "moduleRolesCreated": 4,
+      "userRolesCreated": 4,
+      "demoUsersRequested": 0,
+      "demoUsersCreated": 0,
+      "demoUsersApplied": 0,
+      "demoUserHandling": "notRequested",
+      "skippedDemoUsers": [],
+      "moduleRoleNames": [
+        "CampAdministrator",
+        "CampCounselor",
+        "CampWorker",
+        "Parent",
+        "User"
+      ],
+      "userRoleNames": [
+        "Administrator",
+        "CampAdministrator",
+        "CampCounselor",
+        "CampWorker",
+        "Parent",
+        "User"
+      ],
+      "demoUserNames": [
+        "demo_administrator",
+        "demo_user"
+      ]
+    },
+    "microflows": {
+      "moduleName": "MyFirstModule",
+      "microflowsCreated": 3,
+      "nanoflowsCreated": 1,
+      "microflowNames": [
+        "CreateNametagForCamper",
+        "SuspendCamper",
+        "SendReminderToParent"
+      ],
+      "nanoflowNames": [
+        "CheckCamperAttendance"
+      ],
+      "microflowRefsByRef": {},
+      "nanoflowRefsByRef": {}
+    },
+    "workflows": {
+      "moduleName": "MyFirstModule",
+      "workflowsCreated": 0,
+      "workflowNames": [],
+      "workflowRefsByRef": {}
+    },
+    "pageCapabilities": null,
+    "webClientCompatibility": {
+      "lookupRequested": true,
+      "classicGridRequested": false,
+      "updated": true,
+      "useOptimizedClient": "No",
+      "previousUseOptimizedClient": "Yes"
+    },
+    "pages": {
+      "moduleName": "MyFirstModule",
+      "layoutQualifiedName": "Atlas_Core.Atlas_Default",
+      "layoutParameterQname": "Atlas_Core.Atlas_Default.Main",
+      "pageNames": [
+        "Home",
+        "Group_Overview",
+        "Group_NewEdit",
+        "Event_Overview",
+        "Event_NewEdit",
+        "CampAdministrator_Overview",
+        "CampAdministrator_NewEdit",
+        "Parent_Overview",
+        "Parent_NewEdit",
+        "CampWorker_Overview",
+        "CampWorker_NewEdit",
+        "CampCounselor_Overview",
+        "CampCounselor_NewEdit",
+        "camperOverview",
+        "parentOverview",
+        "groupOverview",
+        "eventOverview",
+        "newCamper",
+        "newParent",
+        "newGroup",
+        "newEvent",
+        "Camper_Overview",
+        "Camper_NewEdit",
+        "Nametag_Overview",
+        "Nametag_NewEdit",
+        "Reminder_Overview",
+        "Reminder_NewEdit",
+        "Position_Overview",
+        "Position_NewEdit",
+        "ScheduleActivity_Overview",
+        "ScheduleActivity_NewEdit",
+        "Feedback_Overview",
+        "Feedback_NewEdit",
+        "Attendance_Overview",
+        "Attendance_NewEdit",
+        "Rule_Overview",
+        "Rule_NewEdit",
+        "ParentGuardian_Overview",
+        "ParentGuardian_NewEdit",
+        "FacilityUsage_Overview",
+        "FacilityUsage_NewEdit",
+        "FeedbackSubmission_Overview",
+        "FeedbackSubmission_NewEdit",
+        "BiWeeklyFeedback_Overview",
+        "BiWeeklyFeedback_NewEdit",
+        "MedicalForm_Overview",
+        "MedicalForm_NewEdit",
+        "CamperGroupAssignment_Overview",
+        "CamperGroupAssignment_NewEdit",
+        "EventSchedule_Overview",
+        "EventSchedule_NewEdit",
+        "ConsentFormSubmission_Overview",
+        "ConsentFormSubmission_NewEdit",
+        "Submission_Overview",
+        "Submission_NewEdit",
+        "Assignment_Overview",
+        "Assignment_NewEdit",
+        "PaymentStatus_Overview",
+        "PaymentStatus_NewEdit",
+        "BehavioralIncident_Overview",
+        "BehavioralIncident_NewEdit",
+        "InventoryManagement_Overview",
+        "InventoryManagement_NewEdit",
+        "FacilityManagement_Overview",
+        "FacilityManagement_NewEdit",
+        "AttendanceRecord_Overview",
+        "AttendanceRecord_NewEdit"
+      ],
+      "dg2Cleanup": {
+        "enabled": true,
+        "targetedPageNames": [],
+        "deletedPageNames": [],
+        "failed": []
+      },
+      "dataGrid2": {
+        "enabled": false,
+        "widgetId": "",
+        "resolvedFrom": "",
+        "useFallbackSchema": false,
+        "probeVariant": null,
+        "configuredWidgets": 0,
+        "attempts": []
+      }
+    },
+    "dg2Cleanup": {
+      "enabled": true,
+      "targetedPageNames": [],
+      "deletedPageNames": [],
+      "failed": []
+    },
+    "navigationUI": {
+      "requested": true,
+      "homeButtonsAdded": 0,
+      "navItemsAdded": 6
+    },
+    "homePage": {
+      "requested": true,
+      "updatedProfiles": 1,
+      "targetPageQualifiedName": "MyFirstModule.Home"
+    },
+    "afterCounts": {
+      "pagesInModule": 68,
+      "entitiesInModule": 29,
+      "microflowsInModule": 4,
+      "nanoflowsInModule": 1,
+      "workflowsInModule": 0
+    },
+    "beforeRefs": {
+      "pages": [
+        {
+          "name": "Home_Web",
+          "id": "5c6805fc-cadf-4d72-a5ef-f25da7cf4c97"
+        }
+      ],
+      "entities": [],
+      "microflows": [
+        {
+          "name": "MyFirstLogic",
+          "id": "4a8475b3-14cb-4100-8963-58f2fd3a0be8"
+        }
+      ],
+      "nanoflows": [],
+      "workflows": []
+    },
+    "afterRefs": {
+      "pages": [
+        {
+          "name": "Home_Web",
+          "id": "5c6805fc-cadf-4d72-a5ef-f25da7cf4c97"
+        },
+        {
+          "name": "Home",
+          "id": "fa67e552-dc4b-4e07-b59a-6947798af113"
+        },
+        {
+          "name": "Group_Overview",
+          "id": "f97467ca-b74f-4d68-bd38-bf4750b85912"
+        },
+        {
+          "name": "Group_NewEdit",
+          "id": "4e4dbb4d-6e31-4d4c-9104-dfdd20960219"
+        },
+        {
+          "name": "Event_Overview",
+          "id": "0546678f-8cc7-4a39-9ddb-2c44506c7597"
+        },
+        {
+          "name": "Event_NewEdit",
+          "id": "ddf4f7fd-6395-4eee-830d-fed633385055"
+        },
+        {
+          "name": "CampAdministrator_Overview",
+          "id": "9419b040-b2e7-4fac-b0b8-52d2d1e68cce"
+        },
+        {
+          "name": "CampAdministrator_NewEdit",
+          "id": "0ad18ca4-2812-490b-8b84-f2326aa69c06"
+        },
+        {
+          "name": "Parent_Overview",
+          "id": "aa554804-41a1-48a0-9e0b-b6f81e354dec"
+        },
+        {
+          "name": "Parent_NewEdit",
+          "id": "cd1b3215-9647-49c4-9896-452cfc76a572"
+        },
+        {
+          "name": "CampWorker_Overview",
+          "id": "e5321cee-70fc-4429-85ae-04bdef6cc7ae"
+        },
+        {
+          "name": "CampWorker_NewEdit",
+          "id": "33dafffc-a4ec-4a4c-8675-702fbcfc09d6"
+        },
+        {
+          "name": "CampCounselor_Overview",
+          "id": "6ec65dd9-39c8-4da2-8161-168044b0ce60"
+        },
+        {
+          "name": "CampCounselor_NewEdit",
+          "id": "74cb0707-59c5-4b7e-abe9-50e8271458c5"
+        },
+        {
+          "name": "camperOverview",
+          "id": "d0683d0b-8665-4eab-920a-5ddedfa6df7b"
+        },
+        {
+          "name": "parentOverview",
+          "id": "ebc54fd4-481f-4fd9-9b50-4144ccc3ccb4"
+        },
+        {
+          "name": "groupOverview",
+          "id": "e7813803-69f1-4e37-8a9d-f6ea9fd750aa"
+        },
+        {
+          "name": "eventOverview",
+          "id": "6c1dba10-6c3f-47ed-8029-c2a622da0fe1"
+        },
+        {
+          "name": "newCamper",
+          "id": "77920239-251e-44be-9e07-26a8ea8c90d9"
+        },
+        {
+          "name": "newParent",
+          "id": "8c3dab44-e9c8-48da-960d-d9d25044ef0f"
+        },
+        {
+          "name": "newGroup",
+          "id": "18d50409-d895-4870-9df7-c8ba501a42f9"
+        },
+        {
+          "name": "newEvent",
+          "id": "abba3b31-b535-4aa2-9141-301bfcd2d0fa"
+        },
+        {
+          "name": "Camper_Overview",
+          "id": "8619953c-0a53-4a58-95fa-0e9fd8ae4d7c"
+        },
+        {
+          "name": "Camper_NewEdit",
+          "id": "fa8c5730-d7de-4ebb-86a1-cbb7a86e1c2d"
+        },
+        {
+          "name": "Nametag_Overview",
+          "id": "e0f27bca-82d6-4a16-9ca1-ab584f524b93"
+        },
+        {
+          "name": "Nametag_NewEdit",
+          "id": "5e12f6a3-780a-456a-81ba-564f3707929d"
+        },
+        {
+          "name": "Reminder_Overview",
+          "id": "5b90541c-1197-4463-bd22-703e4c7fd347"
+        },
+        {
+          "name": "Reminder_NewEdit",
+          "id": "3715ec89-7f6b-4ea0-9796-db175179b9a6"
+        },
+        {
+          "name": "Position_Overview",
+          "id": "949ea131-48c9-4f22-a391-129ea9147663"
+        },
+        {
+          "name": "Position_NewEdit",
+          "id": "33eebc9c-07a9-4014-bc20-e836d80a9445"
+        },
+        {
+          "name": "ScheduleActivity_Overview",
+          "id": "fc2d0185-ff39-4952-9379-e0b070eb49f5"
+        },
+        {
+          "name": "ScheduleActivity_NewEdit",
+          "id": "697844b9-a261-42da-a2ce-e6e1eb1b076d"
+        },
+        {
+          "name": "Feedback_Overview",
+          "id": "b7d3d56e-64cd-47bd-ab86-73ddfe497295"
+        },
+        {
+          "name": "Feedback_NewEdit",
+          "id": "3a2dd123-f8dd-4780-9f5d-fdf092e2c915"
+        },
+        {
+          "name": "Attendance_Overview",
+          "id": "a66fcd63-c873-43e6-9438-c51d2a245a9e"
+        },
+        {
+          "name": "Attendance_NewEdit",
+          "id": "f5d7df5a-8693-4ff5-bee9-e380e9ccc488"
+        },
+        {
+          "name": "Rule_Overview",
+          "id": "67484a35-620e-4be7-b2ab-eeefb300a5b9"
+        },
+        {
+          "name": "Rule_NewEdit",
+          "id": "36f8057c-cdfb-490f-b5df-c412b2655141"
+        },
+        {
+          "name": "ParentGuardian_Overview",
+          "id": "284bf749-2bfa-47f3-aa5e-21c82a71de8f"
+        },
+        {
+          "name": "ParentGuardian_NewEdit",
+          "id": "b7e05a9f-e4ed-457b-8553-3b1fb7d8939f"
+        },
+        {
+          "name": "FacilityUsage_Overview",
+          "id": "589ef92c-2df9-4571-9581-91999368cc5a"
+        },
+        {
+          "name": "FacilityUsage_NewEdit",
+          "id": "b5eeeacb-5cf0-49b6-a7d1-c19f4bdceb8d"
+        },
+        {
+          "name": "FeedbackSubmission_Overview",
+          "id": "8efcf841-5f05-4cbb-9258-4a6b0933484d"
+        },
+        {
+          "name": "FeedbackSubmission_NewEdit",
+          "id": "16a54ad1-fe11-4456-9fb1-c7ea558d1450"
+        },
+        {
+          "name": "BiWeeklyFeedback_Overview",
+          "id": "c7215890-0098-49b5-aa53-174fd67748f5"
+        },
+        {
+          "name": "BiWeeklyFeedback_NewEdit",
+          "id": "08590f00-033e-4c3e-b437-3f819b07481f"
+        },
+        {
+          "name": "MedicalForm_Overview",
+          "id": "f08fa599-df80-4524-83a6-468bad4c3427"
+        },
+        {
+          "name": "MedicalForm_NewEdit",
+          "id": "580c2525-5957-4ecb-9bf7-3177eac52e0b"
+        },
+        {
+          "name": "CamperGroupAssignment_Overview",
+          "id": "611ce476-b7cf-4690-be9e-e57e08d74fa5"
+        },
+        {
+          "name": "CamperGroupAssignment_NewEdit",
+          "id": "ea7ea3f8-789b-400a-859d-f65bb742d776"
+        },
+        {
+          "name": "EventSchedule_Overview",
+          "id": "9f6674c7-71e1-4aa8-b4d1-5e564080c929"
+        },
+        {
+          "name": "EventSchedule_NewEdit",
+          "id": "d89414f5-746e-4101-ac53-c5da74d1ab09"
+        },
+        {
+          "name": "ConsentFormSubmission_Overview",
+          "id": "78737cf9-4cb0-41e6-96ae-e047e4794ba0"
+        },
+        {
+          "name": "ConsentFormSubmission_NewEdit",
+          "id": "9a84111a-ccc3-4300-ae3d-257717f607f6"
+        },
+        {
+          "name": "Submission_Overview",
+          "id": "585bfaa0-8a3e-4e35-8cf4-f86b39fa782a"
+        },
+        {
+          "name": "Submission_NewEdit",
+          "id": "0a5d2e5a-0d59-47f1-ae43-a3f9b05cd872"
+        },
+        {
+          "name": "Assignment_Overview",
+          "id": "6ab81e11-0a95-4070-8007-2794ac7e4eb1"
+        },
+        {
+          "name": "Assignment_NewEdit",
+          "id": "4425f788-f35b-4d69-8364-c1df110bf52a"
+        },
+        {
+          "name": "PaymentStatus_Overview",
+          "id": "3ffc0307-b2a6-4f97-9664-44a3beb6f8c7"
+        },
+        {
+          "name": "PaymentStatus_NewEdit",
+          "id": "32c5ac1f-ddb0-4155-8f43-9f4b015eab01"
+        },
+        {
+          "name": "BehavioralIncident_Overview",
+          "id": "1e6172fb-6203-4046-8064-f1b459466e15"
+        },
+        {
+          "name": "BehavioralIncident_NewEdit",
+          "id": "75f12153-42ab-493d-acf3-43e4d7b5378b"
+        },
+        {
+          "name": "InventoryManagement_Overview",
+          "id": "8c441477-b78a-4848-8a6c-65529620a1f5"
+        },
+        {
+          "name": "InventoryManagement_NewEdit",
+          "id": "6b3e6fc7-e97b-4f58-957b-718d0d8ce053"
+        },
+        {
+          "name": "FacilityManagement_Overview",
+          "id": "57ac91f6-4620-4214-bb7b-991148146b00"
+        },
+        {
+          "name": "FacilityManagement_NewEdit",
+          "id": "7f244fb1-0bfd-4923-bc38-c60a3aed6796"
+        },
+        {
+          "name": "AttendanceRecord_Overview",
+          "id": "b9b90a91-a5e4-450e-939f-efb0551ba835"
+        },
+        {
+          "name": "AttendanceRecord_NewEdit",
+          "id": "67d0c1cd-940d-48a5-962f-5c66f4b458c4"
+        }
+      ],
+      "entities": [
+        {
+          "name": "Camper",
+          "id": "814dcac5-77b9-40a1-ad65-bcb60e5b0404"
+        },
+        {
+          "name": "Parent",
+          "id": "a495531c-f3e4-465b-b210-5d94e084100f"
+        },
+        {
+          "name": "Group",
+          "id": "59b89643-1e3e-43a9-bfa7-0285b0f029db"
+        },
+        {
+          "name": "Event",
+          "id": "6c0a8b3d-53eb-494e-8677-fa38dfc43f09"
+        },
+        {
+          "name": "Nametag",
+          "id": "f7c5d040-3650-4903-b2d2-313fdc8b1197"
+        },
+        {
+          "name": "Reminder",
+          "id": "38739017-786b-454e-9a30-1fbf33d0c9ca"
+        },
+        {
+          "name": "Position",
+          "id": "3d97a89d-b865-4d55-bfe5-9c70ca404c65"
+        },
+        {
+          "name": "ScheduleActivity",
+          "id": "46223d6a-f306-4c89-a25a-e8194ddf8318"
+        },
+        {
+          "name": "Feedback",
+          "id": "fae4a7dc-8b84-4d3b-ac4f-0ca2180189ee"
+        },
+        {
+          "name": "Attendance",
+          "id": "cc5d1ea5-5c89-47be-871d-efbc2bf1f8c0"
+        },
+        {
+          "name": "CampAdministrator",
+          "id": "bfdca4c2-49f3-4693-be99-45f5ae1ba97a"
+        },
+        {
+          "name": "CampWorker",
+          "id": "ebdfe215-b73c-411b-be79-8b5601512e49"
+        },
+        {
+          "name": "CampCounselor",
+          "id": "8051c1b6-36b9-495b-8493-a201e7d27935"
+        },
+        {
+          "name": "Rule",
+          "id": "0d22550b-cbbd-4007-b9d6-fb1d86a3e8bc"
+        },
+        {
+          "name": "ParentGuardian",
+          "id": "c9de3605-5c25-4ba2-a19c-ac4d845a830c"
+        },
+        {
+          "name": "FacilityUsage",
+          "id": "8fa07755-65f5-4693-9a0f-825d8cee6610"
+        },
+        {
+          "name": "FeedbackSubmission",
+          "id": "8b0e48f3-0650-47b8-ba99-1262449c3d3e"
+        },
+        {
+          "name": "BiWeeklyFeedback",
+          "id": "ed4aff62-5d1f-4492-9857-3ab106bcd976"
+        },
+        {
+          "name": "MedicalForm",
+          "id": "e799cbca-22c8-4023-86b2-6408236c02b1"
+        },
+        {
+          "name": "CamperGroupAssignment",
+          "id": "e88b8767-c473-44e0-a370-e8fb4c5afca4"
+        },
+        {
+          "name": "EventSchedule",
+          "id": "aaea83dc-8d86-442e-a57c-66869c3eb412"
+        },
+        {
+          "name": "ConsentFormSubmission",
+          "id": "c003ea74-4b3e-4955-9c1a-6a41cd781a1d"
+        },
+        {
+          "name": "Submission",
+          "id": "10da7455-bea5-45d6-84a6-d1c1955a23dd"
+        },
+        {
+          "name": "Assignment",
+          "id": "238b82fe-30cc-4b92-a0b0-b22a33a7e982"
+        },
+        {
+          "name": "PaymentStatus",
+          "id": "f280e0cc-d845-481a-8583-1e08b2a4b157"
+        },
+        {
+          "name": "BehavioralIncident",
+          "id": "7db63568-88dc-44e2-b665-8ba97adae981"
+        },
+        {
+          "name": "InventoryManagement",
+          "id": "fea63a95-ef98-42a7-9344-d317e9cf5fe1"
+        },
+        {
+          "name": "FacilityManagement",
+          "id": "b3e795f5-06d7-4999-9532-d6fbc75e9a72"
+        },
+        {
+          "name": "AttendanceRecord",
+          "id": "f7f32cde-823d-433b-b4dd-f0cb6d85f2b7"
+        }
+      ],
+      "microflows": [
+        {
+          "name": "MyFirstLogic",
+          "id": "4a8475b3-14cb-4100-8963-58f2fd3a0be8"
+        },
+        {
+          "name": "CreateNametagForCamper",
+          "id": "f90c929a-9247-48a7-b885-733d0852c7e0"
+        },
+        {
+          "name": "SuspendCamper",
+          "id": "6a7013f4-7d5b-4f27-aa1d-9d7b51d0a57d"
+        },
+        {
+          "name": "SendReminderToParent",
+          "id": "14563b41-2bb1-4737-a125-2509bfb2c155"
+        }
+      ],
+      "nanoflows": [
+        {
+          "name": "CheckCamperAttendance",
+          "id": "9988bbeb-f6a8-44ab-804a-eb87b6247fd7"
+        }
+      ],
+      "workflows": []
+    },
+    "verification": {
+      "missing": {
+        "pages": [],
+        "entities": [],
+        "microflows": [],
+        "nanoflows": [],
+        "workflows": []
+      },
+      "ok": true,
+      "artifacts": {
+        "ok": true,
+        "missing": {
+          "moduleRoles": [],
+          "userRoles": [],
+          "demoUsers": [],
+          "pageVisibility": [],
+          "homePageButtons": [],
+          "menuItems": [],
+          "widgets": []
+        }
+      },
+      "semantic": {
+        "enabled": false,
+        "ok": true,
+        "errors": []
+      }
+    },
+    "capabilities": {
+      "modules": [
+        "Administration",
+        "Atlas_Core",
+        "Atlas_Web_Content",
+        "DataWidgets",
+        "FeedbackModule",
+        "MyFirstModule",
+        "NanoflowCommons",
+        "WebActions"
+      ],
+      "widgetIds": [],
+      "widgetFamilies": [
+        "datawidgets_module"
+      ]
+    },
+    "commitMessage": "Rerun practical performance builder-stage run: camperplus run-05",
+    "ok": true
+  }
+}

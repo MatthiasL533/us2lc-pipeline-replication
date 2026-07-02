@@ -1,0 +1,323 @@
+{
+  "meta": {
+    "planVersion": "1.1.0",
+    "name": "reference-05-analytics-filters.json"
+  },
+  "app": {
+    "appId": "id",
+    "branch": "main",
+    "moduleName": "MyFirstModule",
+    "layoutQualifiedName": "Atlas_Core.Atlas_Default",
+    "homePageRef": "home",
+    "navigation": {
+      "homePageButtons": [
+        { "pageRef": "operator_workitems", "caption": "Manage Work Items", "icon": { "name": "home" }, "allowedRoles": ["Operator"] },
+        { "pageRef": "operator_teams", "caption": "Manage Teams", "icon": { "name": "home" }, "allowedRoles": ["Operator"] },
+        { "pageRef": "analyst_board", "caption": "Operations Board", "icon": { "name": "home" }, "allowedRoles": ["Analyst"] }
+      ],
+      "menuItems": [
+        { "pageRef": "home", "caption": "Home", "icon": { "name": "home" }, "allowedRoles": ["Analyst", "Operator"] },
+        { "pageRef": "operator_workitems", "caption": "Work Items", "icon": { "name": "home" }, "allowedRoles": ["Operator"] },
+        { "pageRef": "operator_teams", "caption": "Teams", "icon": { "name": "home" }, "allowedRoles": ["Operator"] },
+        { "pageRef": "analyst_board", "caption": "Operations Board", "icon": { "name": "home" }, "allowedRoles": ["Analyst"] }
+      ]
+    }
+  },
+  "execution": {
+    "createApp": true,
+    "createAppNamePrefix": "Reference05Analytics",
+    "createAppRepositoryType": "git",
+    "commit": true,
+    "commitMessage": "Reference 05: analytics and filters reference plan",
+    "deleteExistingDomainModel": true,
+    "deleteExistingPages": true,
+    "deleteExistingMicroflows": true,
+    "deleteExistingWorkflows": true
+  },
+  "domainModel": {
+    "entities": [
+      {
+        "name": "Team",
+        "attributes": [
+          { "name": "Name", "type": "String", "required": true },
+          { "name": "Region", "type": "String", "required": true },
+          { "name": "LeadName", "type": "String", "required": false }
+        ]
+      },
+      {
+        "name": "WorkItem",
+        "attributes": [
+          { "name": "Title", "type": "String", "required": true },
+          { "name": "Category", "type": "String", "required": true },
+          { "name": "Status", "type": "Enum:WorkItemStatus", "required": true },
+          { "name": "Priority", "type": "Enum:PriorityLevel", "required": true },
+          { "name": "Score", "type": "Integer", "required": true, "defaultValue": 50 },
+          { "name": "SlaHours", "type": "Integer", "required": false },
+          { "name": "OwnerName", "type": "String", "required": false }
+        ]
+      }
+    ],
+    "associations": [
+      { "name": "Team_WorkItem", "parentEntity": "Team", "childEntity": "WorkItem", "type": "Reference" }
+    ],
+    "enumerations": [
+      {
+        "name": "WorkItemStatus",
+        "values": ["Open", "InReview", "Blocked", "Closed"]
+      },
+      {
+        "name": "PriorityLevel",
+        "values": ["Low", "Medium", "High", "Critical"]
+      }
+    ]
+  },
+  "security": {
+    "enabled": true,
+    "securityLevel": "prototype",
+    "moduleRoles": ["Analyst", "Operator"],
+    "userRoles": [
+      { "name": "Analyst", "moduleRoles": ["Analyst"], "systemModuleRole": "System.User" },
+      { "name": "Operator", "moduleRoles": ["Operator"], "systemModuleRole": "System.User" }
+    ],
+    "demoUsers": [
+      { "userName": "demo_analyst", "password": "Analyst123!", "userRoles": ["Analyst"] },
+      { "userName": "demo_operator", "password": "Operator123!", "userRoles": ["Operator"] }
+    ]
+  },
+  "pages": {
+    "specs": [
+      {
+        "ref": "home",
+        "name": "Home",
+        "title": "Support Operations Home",
+        "allowedRoles": ["Analyst", "Operator"],
+        "content": [
+          { "type": "dynamicText", "text": "Support operations workspace", "renderMode": "H2" },
+          { "type": "dynamicText", "text": "Operators maintain teams and work items. Analysts use a searchable operations board to review workload and status distribution.", "renderMode": "Paragraph" },
+          { "type": "buttonToPage", "caption": "Open Work Item Management", "targetPageRef": "operator_workitems", "allowedRoles": ["Operator"] },
+          { "type": "buttonToPage", "caption": "Open Team Management", "targetPageRef": "operator_teams", "allowedRoles": ["Operator"] },
+          { "type": "buttonToPage", "caption": "Open Analyst Board", "targetPageRef": "analyst_board", "allowedRoles": ["Analyst"] }
+        ]
+      },
+      {
+        "ref": "operator_workitems",
+        "name": "WorkItem_OperatorOverview",
+        "title": "Work Item Management",
+        "entityRef": "MyFirstModule.WorkItem",
+        "allowedRoles": ["Operator"],
+        "content": [
+          { "type": "dynamicText", "text": "Operator work item queue", "renderMode": "H2" },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.WorkItem",
+            "rowClickTargetPageRef": "workitem_detail",
+            "itemContent": [
+              { "type": "attributeInput", "attributeRef": "Title", "autoLabel": true },
+              { "type": "attributeInput", "attributeRef": "Status", "autoLabel": false },
+              { "type": "attributeInput", "attributeRef": "Priority", "autoLabel": false },
+              { "type": "attributeInput", "attributeRef": "OwnerName", "autoLabel": false }
+            ]
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Add Work Item",
+            "entityRef": "MyFirstModule.WorkItem",
+            "targetPageRef": "workitem_detail"
+          }
+        ]
+      },
+      {
+        "ref": "operator_teams",
+        "name": "Team_OperatorOverview",
+        "title": "Team Management",
+        "entityRef": "MyFirstModule.Team",
+        "allowedRoles": ["Operator"],
+        "content": [
+          { "type": "dynamicText", "text": "Operator team registry", "renderMode": "H2" },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.Team",
+            "rowClickTargetPageRef": "team_detail",
+            "itemContent": [
+              { "type": "attributeInput", "attributeRef": "Name", "autoLabel": true },
+              { "type": "attributeInput", "attributeRef": "Region", "autoLabel": false },
+              { "type": "attributeInput", "attributeRef": "LeadName", "autoLabel": false }
+            ]
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Add Team",
+            "entityRef": "MyFirstModule.Team",
+            "targetPageRef": "team_detail"
+          }
+        ]
+      },
+      {
+        "ref": "analyst_board",
+        "name": "Analyst_Board",
+        "title": "Operations Board",
+        "entityRef": "MyFirstModule.WorkItem",
+        "allowedRoles": ["Analyst"],
+        "content": [
+          { "type": "dynamicText", "text": "Operations board", "renderMode": "H2" },
+          { "type": "dynamicText", "text": "Analysts review the current queue through dedicated views for active, blocked, and completed work.", "renderMode": "Paragraph" },
+          { "type": "buttonToPage", "caption": "View Open Work", "targetPageRef": "analyst_open_work" },
+          { "type": "buttonToPage", "caption": "View Blocked Work", "targetPageRef": "analyst_blocked_work" },
+          { "type": "buttonToPage", "caption": "View Completed Work", "targetPageRef": "analyst_completed_work" },
+          { "type": "buttonToPage", "caption": "Review Teams", "targetPageRef": "analyst_teams" },
+          { "type": "dynamicText", "text": "Priority watchlist", "renderMode": "H3" },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.WorkItem",
+            "xPathConstraint": "[Priority = 'High' or Priority = 'Critical']",
+            "itemContent": [
+              { "type": "attributeInput", "attributeRef": "Title", "autoLabel": true },
+              { "type": "attributeInput", "attributeRef": "Status", "autoLabel": false },
+              { "type": "attributeInput", "attributeRef": "Priority", "autoLabel": false },
+              { "type": "attributeInput", "attributeRef": "OwnerName", "autoLabel": false }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "analyst_open_work",
+        "name": "Analyst_OpenWork",
+        "title": "Open Work",
+        "entityRef": "MyFirstModule.WorkItem",
+        "allowedRoles": ["Analyst"],
+        "content": [
+          { "type": "dynamicText", "text": "Open and in-review work items", "renderMode": "H2" },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.WorkItem",
+            "xPathConstraint": "[Status = 'Open' or Status = 'InReview']",
+            "itemContent": [
+              { "type": "attributeInput", "attributeRef": "Title", "autoLabel": true },
+              { "type": "attributeInput", "attributeRef": "Category", "autoLabel": false },
+              { "type": "attributeInput", "attributeRef": "Status", "autoLabel": false },
+              { "type": "attributeInput", "attributeRef": "Priority", "autoLabel": false }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "analyst_blocked_work",
+        "name": "Analyst_BlockedWork",
+        "title": "Blocked Work",
+        "entityRef": "MyFirstModule.WorkItem",
+        "allowedRoles": ["Analyst"],
+        "content": [
+          { "type": "dynamicText", "text": "Blocked work requiring attention", "renderMode": "H2" },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.WorkItem",
+            "xPathConstraint": "[Status = 'Blocked']",
+            "itemContent": [
+              { "type": "attributeInput", "attributeRef": "Title", "autoLabel": true },
+              { "type": "attributeInput", "attributeRef": "OwnerName", "autoLabel": false },
+              { "type": "attributeInput", "attributeRef": "SlaHours", "autoLabel": false },
+              { "type": "attributeInput", "attributeRef": "Priority", "autoLabel": false }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "analyst_completed_work",
+        "name": "Analyst_CompletedWork",
+        "title": "Completed Work",
+        "entityRef": "MyFirstModule.WorkItem",
+        "allowedRoles": ["Analyst"],
+        "content": [
+          { "type": "dynamicText", "text": "Recently completed work", "renderMode": "H2" },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.WorkItem",
+            "xPathConstraint": "[Status = 'Closed']",
+            "itemContent": [
+              { "type": "attributeInput", "attributeRef": "Title", "autoLabel": true },
+              { "type": "attributeInput", "attributeRef": "Category", "autoLabel": false },
+              { "type": "attributeInput", "attributeRef": "Score", "autoLabel": false }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "analyst_teams",
+        "name": "Analyst_Teams",
+        "title": "Team Overview",
+        "entityRef": "MyFirstModule.Team",
+        "allowedRoles": ["Analyst"],
+        "content": [
+          { "type": "dynamicText", "text": "Team coverage overview", "renderMode": "H2" },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.Team",
+            "itemContent": [
+              { "type": "attributeInput", "attributeRef": "Name", "autoLabel": true },
+              { "type": "attributeInput", "attributeRef": "Region", "autoLabel": false },
+              { "type": "attributeInput", "attributeRef": "LeadName", "autoLabel": false }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "workitem_detail",
+        "name": "WorkItem_Detail",
+        "title": "Work Item Detail",
+        "entityRef": "MyFirstModule.WorkItem",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          { "name": "WorkItem", "entityRef": "MyFirstModule.WorkItem", "required": true }
+        ],
+        "allowedRoles": ["Operator"],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "WorkItem",
+            "labelWidth": 3,
+            "content": [
+              { "type": "attributeInput", "attributeRef": "Title" },
+              { "type": "attributeInput", "attributeRef": "Category" },
+              { "type": "attributeInput", "attributeRef": "Status" },
+              { "type": "attributeInput", "attributeRef": "Priority" },
+              { "type": "attributeInput", "attributeRef": "Score" },
+              { "type": "attributeInput", "attributeRef": "SlaHours" },
+              { "type": "attributeInput", "attributeRef": "OwnerName" },
+              { "type": "associationInput", "associationRef": "Team_WorkItem", "targetEntityRef": "MyFirstModule.Team", "displayAttributeRef": "Name", "label": "Assigned Team" },
+              { "type": "saveChangesButton", "caption": "Save", "closePage": true },
+              { "type": "cancelChangesButton", "caption": "Cancel", "closePage": true }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "team_detail",
+        "name": "Team_Detail",
+        "title": "Team Detail",
+        "entityRef": "MyFirstModule.Team",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          { "name": "Team", "entityRef": "MyFirstModule.Team", "required": true }
+        ],
+        "allowedRoles": ["Operator"],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "Team",
+            "labelWidth": 3,
+            "content": [
+              { "type": "attributeInput", "attributeRef": "Name" },
+              { "type": "attributeInput", "attributeRef": "Region" },
+              { "type": "attributeInput", "attributeRef": "LeadName" },
+              { "type": "saveChangesButton", "caption": "Save", "closePage": true },
+              { "type": "cancelChangesButton", "caption": "Cancel", "closePage": true }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "verification": {
+    "failOnMissing": true
+  }
+}

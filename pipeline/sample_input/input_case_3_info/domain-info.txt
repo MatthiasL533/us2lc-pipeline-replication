@@ -1,0 +1,5 @@
+Business domain: Gym membership and workout planning app.
+Core concepts: Gym (location, address, name, rating), Exercise (muscle group, difficulty, equipment), Workout (duration, exercises included), Gym member, Gym admin.
+Roles: Gym members can browse gyms, view details, create workouts, and assemble workouts from exercises. Gym admins manage gyms and exercises. Members must not see admin-only management pages.
+Business rules: Workouts contain selected exercises and have a total duration. Exercises and gyms are managed by admins.
+Mendix guidance: Prefer overview/detail CRUD pages for gyms and exercises. Use admin-only navigation for management pages. Keep the model within supported Mendix patterns and only add workflows or microflows when the story truly requires extra business logic.

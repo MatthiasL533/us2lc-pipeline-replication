@@ -1,0 +1,218 @@
+{
+  "pages": {
+    "specs": [
+      {
+        "name": "home",
+        "layout": "Blank",
+        "widgets": [
+          {
+            "type": "Text",
+            "caption": "Welcome to MyFirstModule"
+          },
+          {
+            "type": "Button",
+            "caption": "View Employee Schedule",
+            "onClick": {
+              "type": "nanoflow",
+              "nanoflow": "GetEmployeeSchedule"
+            }
+          },
+          {
+            "type": "Button",
+            "caption": "File a Complaint",
+            "onClick": {
+              "type": "page",
+              "page": "complaintNewEdit"
+            }
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "employeeOverview",
+        "layout": "Table",
+        "entity": "Employee",
+        "widgets": [
+          {
+            "type": "DataGrid",
+            "columns": [
+              {
+                "attribute": "Contract"
+              },
+              {
+                "attribute": "Certificate"
+              }
+            ]
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "employeeDetail",
+        "layout": "FormHorizontal",
+        "entity": "Employee",
+        "widgets": [
+          {
+            "type": "TextInput",
+            "attribute": "Contract"
+          },
+          {
+            "type": "TextInput",
+            "attribute": "Certificate"
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "complaintOverview",
+        "layout": "Table",
+        "entity": "Complaint",
+        "widgets": [
+          {
+            "type": "DataGrid",
+            "columns": [
+              {
+                "attribute": "Description"
+              },
+              {
+                "attribute": "Category"
+              }
+            ]
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "complaintNewEdit",
+        "layout": "FormHorizontal",
+        "entity": "Complaint",
+        "widgets": [
+          {
+            "type": "TextInput",
+            "attribute": "Description"
+          },
+          {
+            "type": "Dropdown",
+            "attribute": "Category",
+            "options": [
+              {
+                "value": "Workplace"
+              },
+              {
+                "value": "Salary"
+              },
+              {
+                "value": "Schedule"
+              }
+            ]
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "paymentOverview",
+        "layout": "Table",
+        "entity": "Payment",
+        "widgets": [
+          {
+            "type": "DataGrid",
+            "columns": [
+              {
+                "attribute": "Amount"
+              },
+              {
+                "attribute": "Frequency"
+              }
+            ]
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "paymentNewEdit",
+        "layout": "FormHorizontal",
+        "entity": "Payment",
+        "widgets": [
+          {
+            "type": "NumberInput",
+            "attribute": "Amount"
+          },
+          {
+            "type": "Dropdown",
+            "attribute": "Frequency",
+            "options": [
+              {
+                "value": "Weekly"
+              },
+              {
+                "value": "Monthly"
+              }
+            ]
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "salaryStatementOverview",
+        "layout": "Table",
+        "entity": "SalaryStatement",
+        "widgets": [
+          {
+            "type": "DataGrid",
+            "columns": [
+              {
+                "attribute": "Salary"
+              },
+              {
+                "attribute": "paymentDate"
+              }
+            ]
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "salaryStatementNewEdit",
+        "layout": "FormHorizontal",
+        "entity": "SalaryStatement",
+        "widgets": [
+          {
+            "type": "NumberInput",
+            "attribute": "Salary"
+          },
+          {
+            "type": "DateInput",
+            "attribute": "paymentDate"
+          }
+        ],
+        "content": []
+      }
+    ]
+  },
+  "app": {
+    "navigation": {
+      "menuItems": [
+        {
+          "name": "Home",
+          "page": "home"
+        },
+        {
+          "name": "Employees",
+          "page": "employeeOverview"
+        },
+        {
+          "name": "Complaints",
+          "page": "complaintOverview"
+        },
+        {
+          "name": "Payments",
+          "page": "paymentOverview"
+        },
+        {
+          "name": "Salary Statements",
+          "page": "salaryStatementOverview"
+        }
+      ]
+    }
+  }
+}

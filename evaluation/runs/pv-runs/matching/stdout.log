@@ -1,0 +1,216 @@
+
+> us2lc-pipeline@1.0.0 generate:process-viz
+> node pipeline/generate-process-viz-cli.js --input-dir=artifacts/practical-performance/20260528-165228/inputs/matching --output-dir=artifacts/pv-runs/llama3.1-8b/matching --model=llama3.1:8b --ollama-url=http://127.0.0.1:11434
+
+{
+  "ok": true,
+  "inputDir": "/workspace/us2lc-pipeline/artifacts/practical-performance/20260528-165228/inputs/matching",
+  "artifacts": {
+    "summaryPath": "/workspace/us2lc-pipeline/artifacts/pv-runs/llama3.1-8b/matching/process-visualizer-summary.json",
+    "rawPath": "/workspace/us2lc-pipeline/artifacts/pv-runs/llama3.1-8b/matching/process-visualizer-result.json",
+    "graphSourcePath": "/workspace/us2lc-pipeline/artifacts/pv-runs/llama3.1-8b/matching/process-visualizer-run/process-visualizer.gv",
+    "graphImagePath": "/workspace/us2lc-pipeline/artifacts/pv-runs/llama3.1-8b/matching/process-visualizer-run/process-visualizer.png",
+    "logsDir": "/workspace/us2lc-pipeline/artifacts/pv-runs/llama3.1-8b/matching/process-visualizer-run/output_logs"
+  },
+  "summary": {
+    "actors": [
+      "manager",
+      "student",
+      "tutor"
+    ],
+    "tasks": [
+      {
+        "actor": "manager",
+        "action": "have an overview and modification functionality",
+        "condition": "so that i can address issues in real time",
+        "gatewayId": "",
+        "gatewayType": "",
+        "storyIndex": 0
+      },
+      {
+        "actor": "student",
+        "action": "verify accounts of students and tutors",
+        "condition": "so that the number of potential matches can be increased",
+        "gatewayId": "EG0",
+        "gatewayType": "exclusive",
+        "storyIndex": 7
+      },
+      {
+        "actor": "tutor",
+        "action": "select one or multiple subjects i want to be tutored in",
+        "condition": "so that the number of potential matches can be increased",
+        "gatewayId": "EG0",
+        "gatewayType": "exclusive",
+        "storyIndex": 9
+      },
+      {
+        "actor": "tutor",
+        "action": "update my availability dynamically in the app",
+        "condition": "so that the number of potential matches can be increased",
+        "gatewayId": "EG0",
+        "gatewayType": "exclusive",
+        "storyIndex": 15
+      },
+      {
+        "actor": "student",
+        "action": "specify my location",
+        "condition": "so that the number of potential matches can be increased",
+        "gatewayId": "EG0",
+        "gatewayType": "exclusive",
+        "storyIndex": 16
+      },
+      {
+        "actor": "manager",
+        "action": "cancel a session",
+        "condition": "so that the number of potential matches can be increased",
+        "gatewayId": "EG0",
+        "gatewayType": "exclusive",
+        "storyIndex": 17
+      },
+      {
+        "actor": "student",
+        "action": "be matched with a tutor that is available in the hours i have specified",
+        "condition": "so that the number of potential matches can be increased",
+        "gatewayId": "EG0",
+        "gatewayType": "exclusive",
+        "storyIndex": 23
+      },
+      {
+        "actor": "tutor",
+        "action": "be matched with a tutor who",
+        "condition": "so that the number of potential matches can be increased",
+        "gatewayId": "EG0",
+        "gatewayType": "exclusive",
+        "storyIndex": 24
+      },
+      {
+        "actor": "tutor",
+        "action": "be matched with a student that is interested in the subject i teach",
+        "condition": "if located far away",
+        "gatewayId": "EG0",
+        "gatewayType": "exclusive",
+        "storyIndex": 24
+      },
+      {
+        "actor": "manager",
+        "action": "agree to online sessions",
+        "condition": "if located far away",
+        "gatewayId": "EG0",
+        "gatewayType": "exclusive",
+        "storyIndex": 28
+      },
+      {
+        "actor": "manager",
+        "action": "students to receive notifications about an upcoming session on WhatsApp 1 and 3 days prior",
+        "condition": "if located far away",
+        "gatewayId": "EG0",
+        "gatewayType": "exclusive",
+        "storyIndex": 28
+      },
+      {
+        "actor": "manager",
+        "action": "want the student to receive an email when the match is found",
+        "condition": "if located far away",
+        "gatewayId": "EG0",
+        "gatewayType": "exclusive",
+        "storyIndex": 31
+      },
+      {
+        "actor": "student",
+        "action": "want the student to receive an email when the match is found",
+        "condition": "if located far away",
+        "gatewayId": "EG0",
+        "gatewayType": "exclusive",
+        "storyIndex": 31
+      },
+      {
+        "actor": "tutor",
+        "action": "receive notifications three and one day prior to the session date",
+        "condition": "so that i have proof of transaction and assurance that my payment was successfully processed",
+        "gatewayId": "EG0",
+        "gatewayType": "exclusive",
+        "storyIndex": 34
+      },
+      {
+        "actor": "tutor",
+        "action": "consider all available data",
+        "condition": "so that the credit system can calculate the rating of the tutor",
+        "gatewayId": "EG0",
+        "gatewayType": "exclusive",
+        "storyIndex": 40
+      },
+      {
+        "actor": "tutor",
+        "action": "view my ratings",
+        "condition": "so that the credit system can calculate the rating of the tutor",
+        "gatewayId": "EG0",
+        "gatewayType": "exclusive",
+        "storyIndex": 40
+      }
+    ],
+    "gateways": [
+      {
+        "id": "EG0",
+        "type": "exclusive",
+        "conditions": [
+          "so that i can address issues in real time",
+          "so that the matching can be made",
+          "so that the number of potential matches can be increased",
+          "if located far away",
+          "when the match is found",
+          "so that i have proof of transaction and assurance that my payment was successfully processed",
+          "so that i don't forget the session",
+          "so that the credit system can calculate the rating of the tutor",
+          "so that i can improve my performance based on student input",
+          "so that the user experience is enhanced",
+          "so that the payment process feels transparent"
+        ]
+      }
+    ],
+    "processObjects": [
+      "Overview And Modification Functionality",
+      "Of Students And Tutors",
+      "To Be Tutored In",
+      "Dynamically In The App",
+      "Specify My Location",
+      "Session",
+      "Hours I Have Specified",
+      "With A Tutor Who",
+      "The Subject I Teach",
+      "Agree To Online Sessions",
+      "And 3 Days Prior",
+      "The Match Is Found",
+      "To The Session Date",
+      "Consider All Available Data",
+      "My Ratings",
+      "Their Files",
+      "Availability For The Session",
+      "Their Availability For Sessions",
+      "State Their Address",
+      "And In Person Session Types",
+      "Make My Account",
+      "Session: Online Or In Person",
+      "With My Personal Information",
+      "Documents) In The System",
+      "Specify My Subjects",
+      "Specify My Availability",
+      "Address, Subject, And Availability",
+      "To Enforce Strict Criteria",
+      "Is Found Every Hour",
+      "I Am Interested In"
+    ],
+    "capabilityHints": {
+      "hasApproval": false,
+      "hasDecision": true,
+      "hasNotification": true,
+      "hasWorkflowLikeRouting": true
+    },
+    "stats": {
+      "taskCount": 16,
+      "gatewayCount": 1,
+      "rawEntityCount": 85
+    }
+  },
+  "status": "completed",
+  "command": "/workspace/us2lc-pipeline/process-visualizer/.venv/bin/python /workspace/us2lc-pipeline/pipeline/scripts/run_process_visualizer.py --input /workspace/us2lc-pipeline/artifacts/practical-performance/20260528-165228/inputs/matching/user-stories.txt --output-dir /workspace/us2lc-pipeline/artifacts/pv-runs/llama3.1-8b/matching --model llama3.1:8b --ollama-url http://127.0.0.1:11434"
+}

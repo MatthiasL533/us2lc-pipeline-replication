@@ -1,0 +1,168 @@
+[
+    {
+        "id": "EG0",
+        "conditions": [
+            "so that i can review and approve all brewery sign-up requests"
+        ],
+        "start": 422,
+        "end": 3615,
+        "paths": [
+            {
+                "start": 422,
+                "end": 3615
+            }
+        ],
+        "type": "exclusive",
+        "children": [
+            [
+                {
+                    "content": {
+                        "agent": {
+                            "entity_group": "AGENT",
+                            "word": "Brewery or Hospitality business",
+                            "start": 490,
+                            "end": 521,
+                            "score": 0.99
+                        },
+                        "task": {
+                            "entity_group": "TASK",
+                            "word": "create an account so that i can access and use the Beer 2 Beer platform",
+                            "start": 533,
+                            "end": 604,
+                            "score": 0.99,
+                            "task_id": "T4"
+                        },
+                        "sentence_idx": 3
+                    },
+                    "type": "task"
+                },
+                {
+                    "content": {
+                        "agent": {
+                            "entity_group": "AGENT",
+                            "word": "Brewery",
+                            "start": 1121,
+                            "end": 1128,
+                            "score": 0.99
+                        },
+                        "task": {
+                            "entity_group": "TASK",
+                            "word": "create a product so that i can offer a product for sale on the beer 2 beer platform",
+                            "start": 1030,
+                            "end": 1113,
+                            "score": 0.99,
+                            "task_id": "T5"
+                        },
+                        "sentence_idx": 7
+                    },
+                    "type": "task"
+                },
+                {
+                    "content": {
+                        "agent": {
+                            "entity_group": "AGENT",
+                            "word": "Hospitality business",
+                            "start": 1263,
+                            "end": 1283,
+                            "score": 0.99
+                        },
+                        "task": {
+                            "entity_group": "TASK",
+                            "word": "request a sales proposal",
+                            "start": 1140,
+                            "end": 1164,
+                            "score": 0.99,
+                            "task_id": "T6"
+                        },
+                        "sentence_idx": 8
+                    },
+                    "type": "task"
+                },
+                {
+                    "content": {
+                        "agent": {
+                            "entity_group": "AGENT",
+                            "word": "beer2beer management user",
+                            "start": 1413,
+                            "end": 1438,
+                            "score": 0.99
+                        },
+                        "task": {
+                            "entity_group": "TASK",
+                            "word": "browse within a catalogue of the beers",
+                            "start": 1295,
+                            "end": 1333,
+                            "score": 0.99,
+                            "task_id": "T7"
+                        },
+                        "sentence_idx": 9
+                    },
+                    "type": "task"
+                },
+                {
+                    "content": {
+                        "agent": {
+                            "entity_group": "AGENT",
+                            "word": "hospitality business",
+                            "start": 2267,
+                            "end": 2287,
+                            "score": 0.99
+                        },
+                        "task": {
+                            "entity_group": "TASK",
+                            "word": "create recurring orders based on an order template so that i can schedule multiple deliveries automatically over a set period",
+                            "start": 2135,
+                            "end": 2260,
+                            "score": 0.99,
+                            "task_id": "T8"
+                        },
+                        "sentence_idx": 14
+                    },
+                    "type": "task"
+                },
+                {
+                    "content": {
+                        "agent": {
+                            "entity_group": "AGENT",
+                            "word": "Brewery",
+                            "start": 2568,
+                            "end": 2575,
+                            "score": 0.99
+                        },
+                        "task": {
+                            "entity_group": "TASK",
+                            "word": "create order templates that allow i to reorder my product assortment with a single click",
+                            "start": 2440,
+                            "end": 2528,
+                            "score": 0.99,
+                            "task_id": "T9"
+                        },
+                        "sentence_idx": 16
+                    },
+                    "type": "task"
+                },
+                {
+                    "content": {
+                        "agent": {
+                            "entity_group": "AGENT",
+                            "word": "beer2beer management user",
+                            "start": 3390,
+                            "end": 3415,
+                            "score": 0.99
+                        },
+                        "task": {
+                            "entity_group": "TASK",
+                            "word": "create a beer order at beer2beer so that i can receive the beers for my business from multiple breweries",
+                            "start": 3279,
+                            "end": 3383,
+                            "score": 0.99,
+                            "task_id": "T10"
+                        },
+                        "sentence_idx": 22
+                    },
+                    "type": "task"
+                }
+            ]
+        ]
+    }
+]

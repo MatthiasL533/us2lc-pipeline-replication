@@ -1,0 +1,17 @@
+{
+  "workflows": {
+    "specs": [
+      {
+        "ref": "wf_sample",
+        "name": "WF_Sample",
+        "bindings": { "contextEntityRef": "MyFirstModule.Task" },
+        "steps": [
+          { "type": "start", "name": "Start" },
+          { "type": "serviceTask", "name": "Prepare", "handlerMicroflowRef": "mf_prepare" },
+          { "type": "userTask", "name": "Review", "taskPageRef": "task_detail" },
+          { "type": "end", "name": "Done" }
+        ]
+      }
+    ]
+  }
+}

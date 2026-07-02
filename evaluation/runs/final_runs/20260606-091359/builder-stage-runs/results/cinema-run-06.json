@@ -1,0 +1,894 @@
+{
+  "dataset": "cinema",
+  "run": "run-06",
+  "planPath": "/Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/artifacts/practical-performance/20260606-091359/stability/cinema/run-06/plan.json",
+  "ok": true,
+  "startedAt": "2026-06-07T20:53:59.171Z",
+  "tempPlanPath": "/Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/artifacts/practical-performance/20260606-091359/builder-stage-runs/plans/cinema/run-06/plan.json",
+  "totalMs": 20433,
+  "result": {
+    "appId": "ac6c82ea-c2fb-412a-9cdb-9090365a76b8",
+    "appCreated": true,
+    "seedAppId": null,
+    "branch": "main",
+    "committed": true,
+    "commitRequested": true,
+    "workingCopyId": "3308a861-e7cd-4f95-ac9a-9f95b6ee4d00",
+    "personas": {
+      "enabled": false,
+      "generatedPageNames": [],
+      "personaNames": []
+    },
+    "stages": [
+      {
+        "stage": "domainModel",
+        "ok": true,
+        "summary": "entitiesCreated=26, associationsCreated=1, enumerationsCreated=0",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 61
+      },
+      {
+        "stage": "flush.afterDomainModel",
+        "ok": true,
+        "summary": "flush.afterDomainModel completed",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 119
+      },
+      {
+        "stage": "security",
+        "ok": true,
+        "summary": "moduleRolesCreated=4, userRolesCreated=4, demoUsersCreated=0",
+        "artifacts": [
+          {
+            "key": "moduleRoleNames",
+            "count": 5
+          },
+          {
+            "key": "userRoleNames",
+            "count": 6
+          },
+          {
+            "key": "demoUserNames",
+            "count": 2
+          }
+        ],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 282
+      },
+      {
+        "stage": "flush.afterSecurity",
+        "ok": true,
+        "summary": "flush.afterSecurity completed",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 198
+      },
+      {
+        "stage": "microflowsNanoflows",
+        "ok": true,
+        "summary": "microflowsCreated=3, nanoflowsCreated=2",
+        "artifacts": [
+          {
+            "key": "microflowNames",
+            "count": 3
+          },
+          {
+            "key": "nanoflowNames",
+            "count": 2
+          },
+          {
+            "key": "microflowRefsByRef",
+            "count": 0
+          },
+          {
+            "key": "nanoflowRefsByRef",
+            "count": 0
+          }
+        ],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 14
+      },
+      {
+        "stage": "flush.afterMicroflows",
+        "ok": true,
+        "summary": "flush.afterMicroflows completed",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 70
+      },
+      {
+        "stage": "workflows",
+        "ok": true,
+        "summary": "workflowsCreated=0",
+        "artifacts": [
+          {
+            "key": "workflowNames",
+            "count": 0
+          },
+          {
+            "key": "workflowRefsByRef",
+            "count": 0
+          }
+        ],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 3
+      },
+      {
+        "stage": "flush.afterWorkflows",
+        "ok": true,
+        "summary": "flush.afterWorkflows completed",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 30
+      },
+      {
+        "stage": "pageCapabilities",
+        "ok": true,
+        "summary": "pageCapabilities completed",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 1
+      },
+      {
+        "stage": "webClientCompatibility",
+        "ok": true,
+        "summary": "webClientCompatibility completed",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 2
+      },
+      {
+        "stage": "flush.afterWebClientCompatibility",
+        "ok": true,
+        "summary": "flush.afterWebClientCompatibility completed",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 27
+      },
+      {
+        "stage": "pages",
+        "ok": true,
+        "summary": "pages completed",
+        "artifacts": [
+          {
+            "key": "pageNames",
+            "count": 67
+          }
+        ],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 480
+      },
+      {
+        "stage": "navigationUI",
+        "ok": true,
+        "summary": "navigationUI completed",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 37
+      },
+      {
+        "stage": "homePage",
+        "ok": true,
+        "summary": "updatedProfiles=1",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 3
+      },
+      {
+        "stage": "flush.final",
+        "ok": true,
+        "summary": "flush.final completed",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 1903
+      },
+      {
+        "stage": "verification",
+        "ok": true,
+        "summary": "ok=true",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 93
+      },
+      {
+        "stage": "capabilities",
+        "ok": true,
+        "summary": "capabilities completed",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 733
+      },
+      {
+        "stage": "commit",
+        "ok": true,
+        "summary": "commit completed",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 8923
+      }
+    ],
+    "createdApp": {
+      "appId": "ac6c82ea-c2fb-412a-9cdb-9090365a76b8",
+      "name": "rerun-cinema-run06",
+      "repositoryType": "git"
+    },
+    "beforeCounts": {
+      "pagesInModule": 1,
+      "entitiesInModule": 0,
+      "microflowsInModule": 1,
+      "nanoflowsInModule": 0,
+      "workflowsInModule": 0
+    },
+    "domainModel": {
+      "moduleName": "MyFirstModule",
+      "entitiesCreated": 26,
+      "associationsCreated": 1,
+      "enumerationsCreated": 0
+    },
+    "security": {
+      "moduleName": "MyFirstModule",
+      "securityLevel": "CheckFormsAndMicroflows",
+      "moduleRolesCreated": 4,
+      "userRolesCreated": 4,
+      "demoUsersRequested": 0,
+      "demoUsersCreated": 0,
+      "demoUsersApplied": 0,
+      "demoUserHandling": "notRequested",
+      "skippedDemoUsers": [],
+      "moduleRoleNames": [
+        "AppAdministrator",
+        "AppUser",
+        "PremiumUser",
+        "RegisteredUser",
+        "User"
+      ],
+      "userRoleNames": [
+        "Administrator",
+        "AppAdministrator",
+        "AppUser",
+        "PremiumUser",
+        "RegisteredUser",
+        "User"
+      ],
+      "demoUserNames": [
+        "demo_administrator",
+        "demo_user"
+      ]
+    },
+    "microflows": {
+      "moduleName": "MyFirstModule",
+      "microflowsCreated": 3,
+      "nanoflowsCreated": 2,
+      "microflowNames": [
+        "SubscribeToPremium",
+        "GetHistoricUserPayments",
+        "GetSubscriptionStatus"
+      ],
+      "nanoflowNames": [
+        "CheckAutomatedRenewalStatus",
+        "GetMovieShowtimes"
+      ],
+      "microflowRefsByRef": {},
+      "nanoflowRefsByRef": {}
+    },
+    "workflows": {
+      "moduleName": "MyFirstModule",
+      "workflowsCreated": 0,
+      "workflowNames": [],
+      "workflowRefsByRef": {}
+    },
+    "pageCapabilities": null,
+    "webClientCompatibility": {
+      "lookupRequested": true,
+      "classicGridRequested": false,
+      "updated": true,
+      "useOptimizedClient": "No",
+      "previousUseOptimizedClient": "Yes"
+    },
+    "pages": {
+      "moduleName": "MyFirstModule",
+      "layoutQualifiedName": "Atlas_Core.Atlas_Default",
+      "layoutParameterQname": "Atlas_Core.Atlas_Default.Main",
+      "pageNames": [
+        "Home",
+        "Movie_Dashboard",
+        "Movie_Overview",
+        "Movie_NewEdit",
+        "Showing_Overview",
+        "Showing_NewEdit",
+        "Subscription_Overview",
+        "Subscription_NewEdit",
+        "RegisteredUser_Overview",
+        "RegisteredUser_NewEdit",
+        "AppAdministrator_Overview",
+        "AppAdministrator_NewEdit",
+        "PremiumUser_Overview",
+        "PremiumUser_NewEdit",
+        "AppUser_Overview",
+        "AppUser_NewEdit",
+        "SubscriptionOverview",
+        "SubscriptionDetail",
+        "PaymentMethodOverview",
+        "PaymentMethodDetail",
+        "MovieOverview",
+        "MovieDetail",
+        "ShowingOverview",
+        "ShowingDetail",
+        "CinemaOverview",
+        "CinemaDetail",
+        "HistoricUserPaymentsOverview",
+        "PremiumUserOverview",
+        "PremiumUserDetail",
+        "PaymentMethod_Overview",
+        "PaymentMethod_NewEdit",
+        "Cinema_Overview",
+        "Cinema_NewEdit",
+        "MovieTheatre_Overview",
+        "MovieTheatre_NewEdit",
+        "StreamingPlatform_Overview",
+        "StreamingPlatform_NewEdit",
+        "Series_Overview",
+        "Series_NewEdit",
+        "Season_Overview",
+        "Season_NewEdit",
+        "HistoricUserPayments_Overview",
+        "HistoricUserPayments_NewEdit",
+        "UserLocationHistory_Overview",
+        "UserLocationHistory_NewEdit",
+        "SubscriptionStatusHistory_Overview",
+        "SubscriptionStatusHistory_NewEdit",
+        "PaymentMethodDetails_Overview",
+        "PaymentMethodDetails_NewEdit",
+        "FavouriteMovieTheatres_Overview",
+        "FavouriteMovieTheatres_NewEdit",
+        "StreamingPage_Overview",
+        "StreamingPage_NewEdit",
+        "RegionalLicensingRestriction_Overview",
+        "RegionalLicensingRestriction_NewEdit",
+        "FilmHouse_Overview",
+        "FilmHouse_NewEdit",
+        "Location_Overview",
+        "Location_NewEdit",
+        "RangeLimit_Overview",
+        "RangeLimit_NewEdit",
+        "MetaData_Overview",
+        "MetaData_NewEdit",
+        "Sharing_Overview",
+        "Sharing_NewEdit",
+        "Importing_Overview",
+        "Importing_NewEdit"
+      ],
+      "dg2Cleanup": {
+        "enabled": true,
+        "targetedPageNames": [],
+        "deletedPageNames": [],
+        "failed": []
+      },
+      "dataGrid2": {
+        "enabled": false,
+        "widgetId": "",
+        "resolvedFrom": "",
+        "useFallbackSchema": false,
+        "probeVariant": null,
+        "configuredWidgets": 0,
+        "attempts": []
+      }
+    },
+    "dg2Cleanup": {
+      "enabled": true,
+      "targetedPageNames": [],
+      "deletedPageNames": [],
+      "failed": []
+    },
+    "navigationUI": {
+      "requested": true,
+      "homeButtonsAdded": 0,
+      "navItemsAdded": 6
+    },
+    "homePage": {
+      "requested": true,
+      "updatedProfiles": 1,
+      "targetPageQualifiedName": "MyFirstModule.Home"
+    },
+    "afterCounts": {
+      "pagesInModule": 68,
+      "entitiesInModule": 26,
+      "microflowsInModule": 4,
+      "nanoflowsInModule": 2,
+      "workflowsInModule": 0
+    },
+    "beforeRefs": {
+      "pages": [
+        {
+          "name": "Home_Web",
+          "id": "5c6805fc-cadf-4d72-a5ef-f25da7cf4c97"
+        }
+      ],
+      "entities": [],
+      "microflows": [
+        {
+          "name": "MyFirstLogic",
+          "id": "4a8475b3-14cb-4100-8963-58f2fd3a0be8"
+        }
+      ],
+      "nanoflows": [],
+      "workflows": []
+    },
+    "afterRefs": {
+      "pages": [
+        {
+          "name": "Home_Web",
+          "id": "5c6805fc-cadf-4d72-a5ef-f25da7cf4c97"
+        },
+        {
+          "name": "Home",
+          "id": "2c3c7257-6fef-4162-a5d0-c15d113589f4"
+        },
+        {
+          "name": "Movie_Dashboard",
+          "id": "d7a4c177-6ce0-44be-9307-454225450891"
+        },
+        {
+          "name": "Movie_Overview",
+          "id": "6c9a5978-cfdd-4efe-92a6-8bf3fea0a563"
+        },
+        {
+          "name": "Movie_NewEdit",
+          "id": "24f3f80b-4a25-4df9-8583-cada40f5f622"
+        },
+        {
+          "name": "Showing_Overview",
+          "id": "60184e5a-e61c-41b9-a15d-f11f380d0319"
+        },
+        {
+          "name": "Showing_NewEdit",
+          "id": "53849c61-5e81-4897-8228-42a328e0c87b"
+        },
+        {
+          "name": "Subscription_Overview",
+          "id": "83306a61-e8c5-47d0-87b1-02ce4af98c2b"
+        },
+        {
+          "name": "Subscription_NewEdit",
+          "id": "7d2b04c6-6105-4c0e-9a18-96f936970d0f"
+        },
+        {
+          "name": "RegisteredUser_Overview",
+          "id": "9ba8632d-8df2-4e15-b11b-7bc1c8bb7190"
+        },
+        {
+          "name": "RegisteredUser_NewEdit",
+          "id": "03428952-be3c-4b48-a203-3ba73cd1b4d4"
+        },
+        {
+          "name": "AppAdministrator_Overview",
+          "id": "b0800b97-ff88-424c-8a77-31249ee58a7f"
+        },
+        {
+          "name": "AppAdministrator_NewEdit",
+          "id": "c3a53781-04ac-43ba-a4f2-8de1ddbb76f5"
+        },
+        {
+          "name": "PremiumUser_Overview",
+          "id": "c1f89c18-8717-4a00-9568-e8d42db5ecbe"
+        },
+        {
+          "name": "PremiumUser_NewEdit",
+          "id": "36306f3a-2e15-4f9d-983e-040b9d54c337"
+        },
+        {
+          "name": "AppUser_Overview",
+          "id": "8cfafc2e-daa0-4065-97f9-d5cec59fb405"
+        },
+        {
+          "name": "AppUser_NewEdit",
+          "id": "fbfc69f5-7fdc-4310-990c-80a431be0ef9"
+        },
+        {
+          "name": "SubscriptionOverview",
+          "id": "357469d4-f0b2-4386-a2f6-30eb3e2aec62"
+        },
+        {
+          "name": "SubscriptionDetail",
+          "id": "5492adf9-893a-4c6e-8bbc-1d41f6baf649"
+        },
+        {
+          "name": "PaymentMethodOverview",
+          "id": "534d5371-1f96-4332-9869-6649d9951f63"
+        },
+        {
+          "name": "PaymentMethodDetail",
+          "id": "9e14204d-91ba-4b71-9a59-a0b378c5cc28"
+        },
+        {
+          "name": "MovieOverview",
+          "id": "f82180b0-8f74-4e86-aff2-620aaed40224"
+        },
+        {
+          "name": "MovieDetail",
+          "id": "505670b3-9b02-406d-9c07-cd98e46cee0c"
+        },
+        {
+          "name": "ShowingOverview",
+          "id": "a8510ae0-fcc5-4980-a7ee-b81b4682172c"
+        },
+        {
+          "name": "ShowingDetail",
+          "id": "0d8e9909-7b6f-4cb1-9079-221938d367ce"
+        },
+        {
+          "name": "CinemaOverview",
+          "id": "ad5c0902-0935-4a9b-9b8b-f0e77107ee24"
+        },
+        {
+          "name": "CinemaDetail",
+          "id": "a4dd0a4b-ba61-4b5b-938f-caa45d577f23"
+        },
+        {
+          "name": "HistoricUserPaymentsOverview",
+          "id": "e7d383fd-98ca-46ca-82b6-c458ddcbeced"
+        },
+        {
+          "name": "PremiumUserOverview",
+          "id": "907e04de-5441-46dc-884f-b90022bca8be"
+        },
+        {
+          "name": "PremiumUserDetail",
+          "id": "af859f7e-8e3d-4a03-ba6f-f379d1732b56"
+        },
+        {
+          "name": "PaymentMethod_Overview",
+          "id": "6b0bf7fd-8c1e-45cd-8031-4acb5e39f0b5"
+        },
+        {
+          "name": "PaymentMethod_NewEdit",
+          "id": "f5deaf47-6641-443c-9730-4a4d4618768d"
+        },
+        {
+          "name": "Cinema_Overview",
+          "id": "7e100672-7e21-4644-aad1-7c708fd3c941"
+        },
+        {
+          "name": "Cinema_NewEdit",
+          "id": "e1cf944e-a61f-496f-9fea-72159e98c868"
+        },
+        {
+          "name": "MovieTheatre_Overview",
+          "id": "1a50f8aa-82d1-4bf0-859b-82999f030c0a"
+        },
+        {
+          "name": "MovieTheatre_NewEdit",
+          "id": "7c707074-5352-46c4-a8ba-c6274cb9fae4"
+        },
+        {
+          "name": "StreamingPlatform_Overview",
+          "id": "978cde41-044a-47d8-8af9-02befad564e9"
+        },
+        {
+          "name": "StreamingPlatform_NewEdit",
+          "id": "362f8288-a333-4140-85ec-4bff9a5194bd"
+        },
+        {
+          "name": "Series_Overview",
+          "id": "d2993acc-083d-49ac-8f03-88f1b8bf62d0"
+        },
+        {
+          "name": "Series_NewEdit",
+          "id": "ae8a7596-55f0-48f9-9a4a-e95ec928a310"
+        },
+        {
+          "name": "Season_Overview",
+          "id": "563c1a7d-3c83-45a3-9ee3-e2fa96dc15f6"
+        },
+        {
+          "name": "Season_NewEdit",
+          "id": "71fb6512-cce4-4052-b271-214606a3746d"
+        },
+        {
+          "name": "HistoricUserPayments_Overview",
+          "id": "fbf85319-cb91-465b-8453-68b7635a8606"
+        },
+        {
+          "name": "HistoricUserPayments_NewEdit",
+          "id": "dacb9e99-20ca-48d4-850f-01fb76003cbe"
+        },
+        {
+          "name": "UserLocationHistory_Overview",
+          "id": "99fa257a-9958-4ad6-90a7-d0ec6125826d"
+        },
+        {
+          "name": "UserLocationHistory_NewEdit",
+          "id": "7cd32192-5643-4d70-8063-8e3bc034d558"
+        },
+        {
+          "name": "SubscriptionStatusHistory_Overview",
+          "id": "95bbe781-6aba-4644-b51a-d0ee3c0e5084"
+        },
+        {
+          "name": "SubscriptionStatusHistory_NewEdit",
+          "id": "b71b6693-1bde-48d2-85cc-9f5523291029"
+        },
+        {
+          "name": "PaymentMethodDetails_Overview",
+          "id": "d0f30e09-3ddf-4798-942d-b5c6827ea78e"
+        },
+        {
+          "name": "PaymentMethodDetails_NewEdit",
+          "id": "59602c67-ad84-44fc-bf6c-7bf37299f5ad"
+        },
+        {
+          "name": "FavouriteMovieTheatres_Overview",
+          "id": "769af3c9-5dc3-4cc4-b34f-3c4bd409b6f2"
+        },
+        {
+          "name": "FavouriteMovieTheatres_NewEdit",
+          "id": "91cbbdde-6992-4299-809e-7e58dac2ae63"
+        },
+        {
+          "name": "StreamingPage_Overview",
+          "id": "39465b58-8127-4334-93d9-c4bb46a49662"
+        },
+        {
+          "name": "StreamingPage_NewEdit",
+          "id": "4857e5ca-d0ab-484d-8e5f-c3dc9e4c104e"
+        },
+        {
+          "name": "RegionalLicensingRestriction_Overview",
+          "id": "5121efdb-6746-4d84-9256-64aea9464b27"
+        },
+        {
+          "name": "RegionalLicensingRestriction_NewEdit",
+          "id": "7aff3060-68d9-4f72-b05b-3ad98e67eec3"
+        },
+        {
+          "name": "FilmHouse_Overview",
+          "id": "74ebbf28-67d4-4bfe-8c54-77f223430ff5"
+        },
+        {
+          "name": "FilmHouse_NewEdit",
+          "id": "6f523e66-04ae-4c7b-95ba-bd83ddc67d5a"
+        },
+        {
+          "name": "Location_Overview",
+          "id": "b8760c89-0b51-44fd-8a9f-54b78034d55d"
+        },
+        {
+          "name": "Location_NewEdit",
+          "id": "181c8653-00f9-4664-857b-7c21f1a9da78"
+        },
+        {
+          "name": "RangeLimit_Overview",
+          "id": "b3cac267-2315-469e-b05e-cc43d71e9c19"
+        },
+        {
+          "name": "RangeLimit_NewEdit",
+          "id": "80e1345b-35c4-44b0-bafb-3fef5547e16f"
+        },
+        {
+          "name": "MetaData_Overview",
+          "id": "08fe820b-0dc5-4c16-ab2a-dca74935dd70"
+        },
+        {
+          "name": "MetaData_NewEdit",
+          "id": "4cd89ddb-bf97-44a5-b18c-497bb489a5dc"
+        },
+        {
+          "name": "Sharing_Overview",
+          "id": "639a6403-47d8-47a7-b7fa-b25313e5d146"
+        },
+        {
+          "name": "Sharing_NewEdit",
+          "id": "8d24d7ac-da00-4cff-8105-66050cc561ea"
+        },
+        {
+          "name": "Importing_Overview",
+          "id": "d3a709ff-765d-488b-a697-d70169df3535"
+        },
+        {
+          "name": "Importing_NewEdit",
+          "id": "313e7a61-1a12-411f-8ef8-c823b36cc65c"
+        }
+      ],
+      "entities": [
+        {
+          "name": "Subscription",
+          "id": "99edf8c3-e5fb-423e-9aa8-779b7ce3a5d0"
+        },
+        {
+          "name": "PaymentMethod",
+          "id": "f6322815-faec-4859-9c6a-ce3c062b4852"
+        },
+        {
+          "name": "Movie",
+          "id": "4a8bb5b4-fdbd-470e-b3ad-81160173740a"
+        },
+        {
+          "name": "Showing",
+          "id": "0c7ce2da-aad0-441c-a76f-23427ff8bade"
+        },
+        {
+          "name": "Cinema",
+          "id": "85964276-df2f-4fb6-a75a-0d3fa80864bb"
+        },
+        {
+          "name": "MovieTheatre",
+          "id": "39a7ec3f-4cad-44d9-a2ea-b71cdc5e1ae9"
+        },
+        {
+          "name": "StreamingPlatform",
+          "id": "66df5bb9-ad62-43ba-a798-0ae31cfe7c83"
+        },
+        {
+          "name": "Series",
+          "id": "11c93bf0-881d-4228-ba81-f24d8dcf5b91"
+        },
+        {
+          "name": "Season",
+          "id": "adc051bc-f049-4796-8656-f46c32373628"
+        },
+        {
+          "name": "RegisteredUser",
+          "id": "3a2f6e83-f4ef-4f51-8ad9-60e91cc9f79c"
+        },
+        {
+          "name": "AppAdministrator",
+          "id": "85559626-ffb3-40cc-b123-e2aaef3ff947"
+        },
+        {
+          "name": "PremiumUser",
+          "id": "64cf223f-2ce8-4af5-b097-16a2ed2d62b3"
+        },
+        {
+          "name": "AppUser",
+          "id": "06648f6e-c134-47bf-bbfe-422eb9cb880c"
+        },
+        {
+          "name": "HistoricUserPayments",
+          "id": "3b53c9f9-e1a2-4d02-bccd-f2d0710b217b"
+        },
+        {
+          "name": "UserLocationHistory",
+          "id": "850c98a5-fcee-4f3c-b55d-03e58acc34de"
+        },
+        {
+          "name": "SubscriptionStatusHistory",
+          "id": "d15fb6a9-c383-4c8f-8bf0-4634df908014"
+        },
+        {
+          "name": "PaymentMethodDetails",
+          "id": "1841d27e-cd0f-4cfd-992b-1852d25dac3e"
+        },
+        {
+          "name": "FavouriteMovieTheatres",
+          "id": "32ffb4b6-baaf-42c1-9660-c87f6ddd767c"
+        },
+        {
+          "name": "StreamingPage",
+          "id": "828f11a5-e7ce-428c-8dce-513c7cffa932"
+        },
+        {
+          "name": "RegionalLicensingRestriction",
+          "id": "4ba7c8a1-79d7-4a4f-8666-79eeb701e4b5"
+        },
+        {
+          "name": "FilmHouse",
+          "id": "59f003d5-6e8f-470d-a0f2-f6c75f602e82"
+        },
+        {
+          "name": "Location",
+          "id": "9b7e3c2e-83d5-43c3-9ff6-99a07668c260"
+        },
+        {
+          "name": "RangeLimit",
+          "id": "0b8c09fd-f2c3-4707-abfa-2b08fd3ea920"
+        },
+        {
+          "name": "MetaData",
+          "id": "85d7c205-a7ff-4e59-b02a-08d9012250c9"
+        },
+        {
+          "name": "Sharing",
+          "id": "10e54fbf-35fa-4c23-bea3-866c082b662e"
+        },
+        {
+          "name": "Importing",
+          "id": "acf84534-efd5-4816-accf-46274865f15b"
+        }
+      ],
+      "microflows": [
+        {
+          "name": "MyFirstLogic",
+          "id": "4a8475b3-14cb-4100-8963-58f2fd3a0be8"
+        },
+        {
+          "name": "SubscribeToPremium",
+          "id": "2b4da977-995d-4422-bff4-453606f6c9f0"
+        },
+        {
+          "name": "GetHistoricUserPayments",
+          "id": "82215c36-3d63-4a7a-9244-14717f1c325e"
+        },
+        {
+          "name": "GetSubscriptionStatus",
+          "id": "ecdd0517-e228-4e2b-b061-70100623dd61"
+        }
+      ],
+      "nanoflows": [
+        {
+          "name": "CheckAutomatedRenewalStatus",
+          "id": "b975c0b6-b65d-4f6a-9fe1-2094fc959880"
+        },
+        {
+          "name": "GetMovieShowtimes",
+          "id": "09c88df6-13bb-4088-a0b4-ddd2e2fcd47c"
+        }
+      ],
+      "workflows": []
+    },
+    "verification": {
+      "missing": {
+        "pages": [],
+        "entities": [],
+        "microflows": [],
+        "nanoflows": [],
+        "workflows": []
+      },
+      "ok": true,
+      "artifacts": {
+        "ok": true,
+        "missing": {
+          "moduleRoles": [],
+          "userRoles": [],
+          "demoUsers": [],
+          "pageVisibility": [],
+          "homePageButtons": [],
+          "menuItems": [],
+          "widgets": []
+        }
+      },
+      "semantic": {
+        "enabled": false,
+        "ok": true,
+        "errors": []
+      }
+    },
+    "capabilities": {
+      "modules": [
+        "Administration",
+        "Atlas_Core",
+        "Atlas_Web_Content",
+        "DataWidgets",
+        "FeedbackModule",
+        "MyFirstModule",
+        "NanoflowCommons",
+        "WebActions"
+      ],
+      "widgetIds": [],
+      "widgetFamilies": [
+        "datawidgets_module"
+      ]
+    },
+    "commitMessage": "Rerun practical performance builder-stage run: cinema run-06",
+    "ok": true
+  }
+}

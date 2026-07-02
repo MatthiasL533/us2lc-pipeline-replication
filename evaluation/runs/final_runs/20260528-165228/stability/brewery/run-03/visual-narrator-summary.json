@@ -1,0 +1,238 @@
+{
+  "classNames": [
+    "Management",
+    "Hospitality",
+    "Homepage",
+    "Proposal",
+    "Overview",
+    "They",
+    "Order",
+    "Brand",
+    "Product",
+    "Assortment",
+    "Platform",
+    "Catalogue",
+    "Contract",
+    "Delivery",
+    "Order Template",
+    "Template",
+    "Product Assortment",
+    "Beer Order",
+    "Beer",
+    "Performance",
+    "Account",
+    "Cart"
+  ],
+  "classes": [
+    {
+      "name": "Management",
+      "parent": "",
+      "isRole": false
+    },
+    {
+      "name": "Hospitality",
+      "parent": "",
+      "isRole": false
+    },
+    {
+      "name": "Homepage",
+      "parent": "",
+      "isRole": false
+    },
+    {
+      "name": "Proposal",
+      "parent": "",
+      "isRole": false
+    },
+    {
+      "name": "Overview",
+      "parent": "",
+      "isRole": false
+    },
+    {
+      "name": "They",
+      "parent": "",
+      "isRole": false
+    },
+    {
+      "name": "Order",
+      "parent": "",
+      "isRole": false
+    },
+    {
+      "name": "Brand",
+      "parent": "",
+      "isRole": false
+    },
+    {
+      "name": "Product",
+      "parent": "",
+      "isRole": false
+    },
+    {
+      "name": "Assortment",
+      "parent": "",
+      "isRole": false
+    },
+    {
+      "name": "Platform",
+      "parent": "",
+      "isRole": false
+    },
+    {
+      "name": "Catalogue",
+      "parent": "",
+      "isRole": false
+    },
+    {
+      "name": "Contract",
+      "parent": "",
+      "isRole": false
+    },
+    {
+      "name": "Delivery",
+      "parent": "",
+      "isRole": false
+    },
+    {
+      "name": "Order Template",
+      "parent": "Template",
+      "isRole": false
+    },
+    {
+      "name": "Template",
+      "parent": "",
+      "isRole": false
+    },
+    {
+      "name": "Product Assortment",
+      "parent": "Assortment",
+      "isRole": false
+    },
+    {
+      "name": "Beer Order",
+      "parent": "Order",
+      "isRole": false
+    },
+    {
+      "name": "Beer",
+      "parent": "",
+      "isRole": false
+    },
+    {
+      "name": "Performance",
+      "parent": "",
+      "isRole": false
+    },
+    {
+      "name": "Account",
+      "parent": "",
+      "isRole": false
+    },
+    {
+      "name": "Cart",
+      "parent": "",
+      "isRole": false
+    }
+  ],
+  "relationships": [
+    {
+      "name": "hasTemplate",
+      "domain": "Order",
+      "range": "Order Template"
+    },
+    {
+      "name": "hasAssortment",
+      "domain": "Product",
+      "range": "Product Assortment"
+    },
+    {
+      "name": "hasOrder",
+      "domain": "Beer",
+      "range": "Beer Order"
+    }
+  ],
+  "keyNouns": [
+    {
+      "term": "Order",
+      "weight": 8.82
+    },
+    {
+      "term": "Hospitality",
+      "weight": 6.4399999999999995
+    },
+    {
+      "term": "Management",
+      "weight": 4.62
+    },
+    {
+      "term": "Overview",
+      "weight": 4
+    },
+    {
+      "term": "Contract",
+      "weight": 4
+    },
+    {
+      "term": "Product",
+      "weight": 3
+    },
+    {
+      "term": "Platform",
+      "weight": 2
+    },
+    {
+      "term": "Proposal",
+      "weight": 2
+    },
+    {
+      "term": "Template",
+      "weight": 2
+    },
+    {
+      "term": "Beer",
+      "weight": 1.6600000000000001
+    },
+    {
+      "term": "Account",
+      "weight": 1
+    },
+    {
+      "term": "Homepage",
+      "weight": 1
+    },
+    {
+      "term": "Brand",
+      "weight": 1
+    },
+    {
+      "term": "Delivery",
+      "weight": 1
+    },
+    {
+      "term": "Catalogue",
+      "weight": 1
+    },
+    {
+      "term": "Cart",
+      "weight": 1
+    },
+    {
+      "term": "Assortment",
+      "weight": 1
+    }
+  ],
+  "inferredRoles": [
+    "Brewery",
+    "brewery",
+    "business",
+    "user"
+  ],
+  "discardedClassNames": [
+    "Management User",
+    "User",
+    "Hospitality Business",
+    "Business",
+    "Brewery"
+  ]
+}

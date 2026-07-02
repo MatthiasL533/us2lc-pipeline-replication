@@ -1,0 +1,402 @@
+{
+  "pages": {
+    "specs": [
+      {
+        "name": "home",
+        "entityRef": null,
+        "layout": "Blank",
+        "widgets": [
+          {
+            "type": "Text",
+            "caption": "Welcome to MyFirstModule"
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "SubscriptionOverview",
+        "entityRef": "MyFirstModule.Subscription",
+        "layout": "Table",
+        "widgets": [
+          {
+            "type": "DataGrid",
+            "dataSource": "Subscription",
+            "columns": [
+              {
+                "attribute": "startDate"
+              },
+              {
+                "attribute": "endDate"
+              },
+              {
+                "attribute": "Price"
+              }
+            ]
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "SubscriptionDetail",
+        "entityRef": "MyFirstModule.Subscription",
+        "layout": "FormHorizontal",
+        "widgets": [
+          {
+            "type": "DataView",
+            "dataSource": "Subscription",
+            "attributes": [
+              {
+                "attribute": "startDate"
+              },
+              {
+                "attribute": "endDate"
+              },
+              {
+                "attribute": "Price"
+              }
+            ]
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "NewSubscription",
+        "entityRef": "MyFirstModule.Subscription",
+        "layout": "FormHorizontal",
+        "widgets": [
+          {
+            "type": "DataView",
+            "dataSource": "Subscription",
+            "attributes": [
+              {
+                "attribute": "startDate"
+              },
+              {
+                "attribute": "endDate"
+              },
+              {
+                "attribute": "Price"
+              }
+            ]
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "PaymentMethodOverview",
+        "entityRef": "MyFirstModule.PaymentMethod",
+        "layout": "Table",
+        "widgets": [
+          {
+            "type": "DataGrid",
+            "dataSource": "PaymentMethod",
+            "columns": [
+              {
+                "attribute": "paymentDetails"
+              },
+              {
+                "attribute": "PaymentType"
+              }
+            ]
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "PaymentMethodDetail",
+        "entityRef": "MyFirstModule.PaymentMethod",
+        "layout": "FormHorizontal",
+        "widgets": [
+          {
+            "type": "DataView",
+            "dataSource": "PaymentMethod",
+            "attributes": [
+              {
+                "attribute": "paymentDetails"
+              },
+              {
+                "attribute": "PaymentType"
+              }
+            ]
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "NewPaymentMethod",
+        "entityRef": "MyFirstModule.PaymentMethod",
+        "layout": "FormHorizontal",
+        "widgets": [
+          {
+            "type": "DataView",
+            "dataSource": "PaymentMethod",
+            "attributes": [
+              {
+                "attribute": "paymentDetails"
+              },
+              {
+                "attribute": "PaymentType"
+              }
+            ]
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "MovieOverview",
+        "entityRef": "MyFirstModule.Movie",
+        "layout": "Table",
+        "widgets": [
+          {
+            "type": "DataGrid",
+            "dataSource": "Movie",
+            "columns": [
+              {
+                "attribute": "Title"
+              },
+              {
+                "attribute": "releaseDate"
+              }
+            ]
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "MovieDetail",
+        "entityRef": "MyFirstModule.Movie",
+        "layout": "FormHorizontal",
+        "widgets": [
+          {
+            "type": "DataView",
+            "dataSource": "Movie",
+            "attributes": [
+              {
+                "attribute": "Title"
+              },
+              {
+                "attribute": "releaseDate"
+              }
+            ]
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "NewMovie",
+        "entityRef": "MyFirstModule.Movie",
+        "layout": "FormHorizontal",
+        "widgets": [
+          {
+            "type": "DataView",
+            "dataSource": "Movie",
+            "attributes": [
+              {
+                "attribute": "Title"
+              },
+              {
+                "attribute": "releaseDate"
+              }
+            ]
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "ShowingOverview",
+        "entityRef": "MyFirstModule.Showing",
+        "layout": "Table",
+        "widgets": [
+          {
+            "type": "DataGrid",
+            "dataSource": "Showing",
+            "columns": [
+              {
+                "attribute": "showTime"
+              },
+              {
+                "attribute": "cinemaRoom"
+              }
+            ]
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "ShowingDetail",
+        "entityRef": "MyFirstModule.Showing",
+        "layout": "FormHorizontal",
+        "widgets": [
+          {
+            "type": "DataView",
+            "dataSource": "Showing",
+            "attributes": [
+              {
+                "attribute": "showTime"
+              },
+              {
+                "attribute": "cinemaRoom"
+              }
+            ]
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "NewShowing",
+        "entityRef": "MyFirstModule.Showing",
+        "layout": "FormHorizontal",
+        "widgets": [
+          {
+            "type": "DataView",
+            "dataSource": "Showing",
+            "attributes": [
+              {
+                "attribute": "showTime"
+              },
+              {
+                "attribute": "cinemaRoom"
+              }
+            ]
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "CinemaOverview",
+        "entityRef": "MyFirstModule.Cinema",
+        "layout": "Table",
+        "widgets": [
+          {
+            "type": "DataGrid",
+            "dataSource": "Cinema",
+            "columns": [
+              {
+                "attribute": "Name"
+              },
+              {
+                "attribute": "City"
+              }
+            ]
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "CinemaDetail",
+        "entityRef": "MyFirstModule.Cinema",
+        "layout": "FormHorizontal",
+        "widgets": [
+          {
+            "type": "DataView",
+            "dataSource": "Cinema",
+            "attributes": [
+              {
+                "attribute": "Name"
+              },
+              {
+                "attribute": "City"
+              }
+            ]
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "NewCinema",
+        "entityRef": "MyFirstModule.Cinema",
+        "layout": "FormHorizontal",
+        "widgets": [
+          {
+            "type": "DataView",
+            "dataSource": "Cinema",
+            "attributes": [
+              {
+                "attribute": "Name"
+              },
+              {
+                "attribute": "City"
+              }
+            ]
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "HistoricUserPaymentsOverview",
+        "entityRef": "MyFirstModule.HistoricUserPayments",
+        "layout": "Table",
+        "widgets": [
+          {
+            "type": "DataGrid",
+            "dataSource": "HistoricUserPayments",
+            "columns": [
+              {
+                "attribute": "PaymentDate"
+              },
+              {
+                "attribute": "Amount"
+              }
+            ]
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "SubscriptionHistoryOverview",
+        "entityRef": "MyFirstModule.SubscriptionHistory",
+        "layout": "Table",
+        "widgets": [
+          {
+            "type": "DataGrid",
+            "dataSource": "SubscriptionHistory",
+            "columns": [
+              {
+                "attribute": "StartDate"
+              },
+              {
+                "attribute": "EndDate"
+              }
+            ]
+          }
+        ],
+        "content": []
+      }
+    ]
+  },
+  "app": {
+    "navigation": {
+      "homePage": "home",
+      "menuItems": [
+        {
+          "name": "Subscription",
+          "pageRef": "SubscriptionOverview"
+        },
+        {
+          "name": "PaymentMethod",
+          "pageRef": "PaymentMethodOverview"
+        },
+        {
+          "name": "Movie",
+          "pageRef": "MovieOverview"
+        },
+        {
+          "name": "Showing",
+          "pageRef": "ShowingOverview"
+        },
+        {
+          "name": "Cinema",
+          "pageRef": "CinemaOverview"
+        },
+        {
+          "name": "HistoricUserPayments",
+          "pageRef": "HistoricUserPaymentsOverview"
+        },
+        {
+          "name": "SubscriptionHistory",
+          "pageRef": "SubscriptionHistoryOverview"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,453 @@
+[
+    {
+        "id": "EG0",
+        "conditions": [
+            "so i meet the requirements of daily sports for signing up",
+            "so i can pay for my subscription",
+            "so i can pay according to my wishes",
+            "so i can continue working out",
+            "so i know when i need to extend my subscription for daily sports",
+            "so that sign-up is easier",
+            "when my booked lesson is canceled",
+            "so a trainer cannot access the system anymore",
+            "so that i can use the system",
+            "so that i am able to see notifications and not be annoyed by notifications"
+        ],
+        "start": 155,
+        "end": 6081,
+        "paths": [
+            {
+                "start": 155,
+                "end": 262
+            },
+            {
+                "start": 263,
+                "end": 359
+            },
+            {
+                "start": 360,
+                "end": 474
+            },
+            {
+                "start": 475,
+                "end": 584
+            },
+            {
+                "start": 585,
+                "end": 725
+            },
+            {
+                "start": 726,
+                "end": 3939
+            },
+            {
+                "start": 3940,
+                "end": 4860
+            },
+            {
+                "start": 4861,
+                "end": 4951
+            },
+            {
+                "start": 4952,
+                "end": 5059
+            },
+            {
+                "start": 5060,
+                "end": 6081
+            }
+        ],
+        "type": "exclusive",
+        "children": [
+            [],
+            [],
+            [],
+            [
+                {
+                    "content": {
+                        "agent": {
+                            "entity_group": "AGENT",
+                            "word": "Returning Customer",
+                            "start": 656,
+                            "end": 674,
+                            "score": 0.99
+                        },
+                        "task": {
+                            "entity_group": "TASK",
+                            "word": "know how long my subscription for daily sports lasts",
+                            "start": 531,
+                            "end": 583,
+                            "score": 0.99,
+                            "task_id": "T1"
+                        },
+                        "sentence_idx": 5,
+                        "condition": {
+                            "entity_group": "CONDITION",
+                            "word": "so i know when i need to extend my subscription for daily sports",
+                            "start": 585,
+                            "end": 649,
+                            "score": 0.99,
+                            "condition_id": "C0"
+                        }
+                    },
+                    "type": "task"
+                }
+            ],
+            [],
+            [
+                {
+                    "content": {
+                        "agent": {
+                            "entity_group": "AGENT",
+                            "word": "Customer",
+                            "start": 807,
+                            "end": 815,
+                            "score": 0.99
+                        },
+                        "task": {
+                            "entity_group": "TASK",
+                            "word": "unsubscribe",
+                            "start": 789,
+                            "end": 800,
+                            "score": 0.99,
+                            "task_id": "T2"
+                        },
+                        "sentence_idx": 7
+                    },
+                    "type": "task"
+                },
+                {
+                    "content": {
+                        "agent": {
+                            "entity_group": "AGENT",
+                            "word": "Customer with a Family Membership",
+                            "start": 993,
+                            "end": 1026,
+                            "score": 0.99
+                        },
+                        "task": {
+                            "entity_group": "TASK",
+                            "word": "update my payment information",
+                            "start": 957,
+                            "end": 986,
+                            "score": 0.99,
+                            "task_id": "T3"
+                        },
+                        "sentence_idx": 10
+                    },
+                    "type": "task"
+                },
+                {
+                    "content": {
+                        "agent": {
+                            "entity_group": "AGENT",
+                            "word": "Customer",
+                            "start": 1528,
+                            "end": 1536,
+                            "score": 0.99
+                        },
+                        "task": {
+                            "entity_group": "TASK",
+                            "word": "see what future lessons i have booked",
+                            "start": 1454,
+                            "end": 1491,
+                            "score": 0.99,
+                            "task_id": "T4"
+                        },
+                        "sentence_idx": 15
+                    },
+                    "type": "task"
+                },
+                {
+                    "content": {
+                        "agent": {
+                            "entity_group": "AGENT",
+                            "word": "Admin",
+                            "start": 1867,
+                            "end": 1872,
+                            "score": 0.99
+                        },
+                        "task": {
+                            "entity_group": "TASK",
+                            "word": "call daily sports to cancel a lesson",
+                            "start": 1777,
+                            "end": 1813,
+                            "score": 0.99,
+                            "task_id": "T5"
+                        },
+                        "sentence_idx": 18
+                    },
+                    "type": "task"
+                },
+                {
+                    "content": {
+                        "agent": {
+                            "entity_group": "AGENT",
+                            "word": "Trainer",
+                            "start": 2428,
+                            "end": 2435,
+                            "score": 0.99
+                        },
+                        "task": {
+                            "entity_group": "TASK",
+                            "word": "see how many spots have been booked for a given timeslot",
+                            "start": 2365,
+                            "end": 2421,
+                            "score": 0.99,
+                            "task_id": "T6"
+                        },
+                        "sentence_idx": 23
+                    },
+                    "type": "task"
+                },
+                {
+                    "content": {
+                        "agent": {
+                            "entity_group": "AGENT",
+                            "word": "Trainer",
+                            "start": 3164,
+                            "end": 3171,
+                            "score": 0.99
+                        },
+                        "task": {
+                            "entity_group": "TASK",
+                            "word": "be the only Trainer who can edit my lessons",
+                            "start": 3183,
+                            "end": 3226,
+                            "score": 0.99,
+                            "task_id": "T7"
+                        },
+                        "sentence_idx": 31
+                    },
+                    "type": "task"
+                },
+                {
+                    "content": {
+                        "agent": {
+                            "entity_group": "AGENT",
+                            "word": "Admin",
+                            "start": 3634,
+                            "end": 3639,
+                            "score": 0.99
+                        },
+                        "task": {
+                            "entity_group": "TASK",
+                            "word": "be able to edit any lesson",
+                            "start": 3651,
+                            "end": 3677,
+                            "score": 0.99,
+                            "task_id": "T8"
+                        },
+                        "sentence_idx": 36
+                    },
+                    "type": "task"
+                },
+                {
+                    "content": {
+                        "agent": {
+                            "entity_group": "AGENT",
+                            "word": "Customer",
+                            "start": 3897,
+                            "end": 3905,
+                            "score": 0.99
+                        },
+                        "task": {
+                            "entity_group": "TASK",
+                            "word": "receive a notification",
+                            "start": 3917,
+                            "end": 3939,
+                            "score": 0.99,
+                            "task_id": "T9"
+                        },
+                        "sentence_idx": 39
+                    },
+                    "type": "task"
+                }
+            ],
+            [
+                {
+                    "content": {
+                        "agent": {
+                            "entity_group": "AGENT",
+                            "word": "Admin",
+                            "start": 4141,
+                            "end": 4146,
+                            "score": 0.99
+                        },
+                        "task": {
+                            "entity_group": "TASK",
+                            "word": "see if a customer did not show up for a session a customer had booked",
+                            "start": 4158,
+                            "end": 4227,
+                            "score": 0.99,
+                            "task_id": "T10"
+                        },
+                        "sentence_idx": 41
+                    },
+                    "type": "task"
+                },
+                {
+                    "content": {
+                        "agent": {
+                            "entity_group": "AGENT",
+                            "word": "Admin",
+                            "start": 4810,
+                            "end": 4815,
+                            "score": 0.99
+                        },
+                        "task": {
+                            "entity_group": "TASK",
+                            "word": "remove a trainer from the system",
+                            "start": 4826,
+                            "end": 4858,
+                            "score": 0.99,
+                            "task_id": "T11"
+                        },
+                        "sentence_idx": 47
+                    },
+                    "type": "task"
+                }
+            ],
+            [
+                {
+                    "content": {
+                        "agent": {
+                            "entity_group": "AGENT",
+                            "word": "User",
+                            "start": 4913,
+                            "end": 4917,
+                            "score": 0.99
+                        },
+                        "task": {
+                            "entity_group": "TASK",
+                            "word": "log in to the system",
+                            "start": 4929,
+                            "end": 4949,
+                            "score": 0.99,
+                            "task_id": "T12"
+                        },
+                        "sentence_idx": 48,
+                        "condition": {
+                            "entity_group": "CONDITION",
+                            "word": "so a trainer cannot access the system anymore",
+                            "start": 4861,
+                            "end": 4906,
+                            "score": 0.99,
+                            "condition_id": "C1"
+                        }
+                    },
+                    "type": "task"
+                }
+            ],
+            [
+                {
+                    "content": {
+                        "agent": {
+                            "entity_group": "AGENT",
+                            "word": "Customer",
+                            "start": 4988,
+                            "end": 4996,
+                            "score": 0.99
+                        },
+                        "task": {
+                            "entity_group": "TASK",
+                            "word": "receive notifications by the method which i prefer",
+                            "start": 5008,
+                            "end": 5058,
+                            "score": 0.99,
+                            "task_id": "T13"
+                        },
+                        "sentence_idx": 49
+                    },
+                    "type": "task"
+                }
+            ],
+            [
+                {
+                    "content": {
+                        "agent": {
+                            "entity_group": "AGENT",
+                            "word": "Admin",
+                            "start": 5505,
+                            "end": 5510,
+                            "score": 0.99
+                        },
+                        "task": {
+                            "entity_group": "TASK",
+                            "word": "know which customers are aware that their booking has been canceled",
+                            "start": 5522,
+                            "end": 5589,
+                            "score": 0.99,
+                            "task_id": "T16"
+                        },
+                        "sentence_idx": 55
+                    },
+                    "type": "task"
+                },
+                {
+                    "content": {
+                        "agent": {
+                            "entity_group": "AGENT",
+                            "word": "customer",
+                            "start": 5533,
+                            "end": 5541,
+                            "score": 0.99
+                        },
+                        "task": {
+                            "entity_group": "TASK",
+                            "word": "know which customers are aware that their booking has been canceled",
+                            "start": 5522,
+                            "end": 5589,
+                            "score": 0.99,
+                            "task_id": "T16"
+                        },
+                        "sentence_idx": 55
+                    },
+                    "type": "task"
+                },
+                {
+                    "content": {
+                        "agent": {
+                            "entity_group": "AGENT",
+                            "word": "customers",
+                            "start": 5533,
+                            "end": 5542,
+                            "score": 0.99
+                        },
+                        "task": {
+                            "entity_group": "TASK",
+                            "word": "know which customers are aware that their booking has been canceled",
+                            "start": 5522,
+                            "end": 5589,
+                            "score": 0.99,
+                            "task_id": "T16"
+                        },
+                        "sentence_idx": 55
+                    },
+                    "type": "task"
+                },
+                {
+                    "content": {
+                        "agent": {
+                            "entity_group": "AGENT",
+                            "word": "Trainer",
+                            "start": 5777,
+                            "end": 5784,
+                            "score": 0.99
+                        },
+                        "task": {
+                            "entity_group": "TASK",
+                            "word": "see information about my past and future training sessions",
+                            "start": 5796,
+                            "end": 5854,
+                            "score": 0.99,
+                            "task_id": "T17"
+                        },
+                        "sentence_idx": 58
+                    },
+                    "type": "task"
+                }
+            ]
+        ]
+    }
+]

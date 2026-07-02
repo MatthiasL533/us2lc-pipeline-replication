@@ -1,0 +1,586 @@
+# Generated with Visual Narrator
+Prefix: : <http://fakesite.org/practicalperf_cinema_stability.owl#>
+Prefix: owl: <http://www.w3.org/2002/07/owl#>
+Prefix: rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+Prefix: rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>
+Prefix: dc: <http://purl.org/dc/elements/1.1/>
+Prefix: onto: <http://fakesite.org/practicalperf_cinema_stability.owl#>
+
+Ontology: <:>
+
+Annotations:
+	dc:title "PracticalPerf_cinema_Stability",
+	dc:creator "Visual Narrator",
+	rdfs:comment "Generated with Visual Narrator"
+
+AnnotationProperty: dc:creator
+
+AnnotationProperty: dc:title
+
+
+# Relationships
+ObjectProperty: :canGet
+	Domain: :PremiumUser
+	Range: :Movie
+
+ObjectProperty: :hasDate1
+	Domain: :End
+	Range: :EndDate
+
+ObjectProperty: :hasDate2
+	Domain: :Cancellation
+	Range: :CancellationDate
+
+ObjectProperty: :hasPlatform
+	Domain: :Streaming
+	Range: :StreamingPlatform
+
+ObjectProperty: :hasPage
+	Domain: :Streaming
+	Range: :StreamingPage
+
+ObjectProperty: :hasShowing
+	Domain: :Movie
+	Range: :MovieShowing
+
+ObjectProperty: :canCancel1
+	Domain: :PremiumUser
+	Range: :Subscription
+
+ObjectProperty: :canCancel2
+	Domain: :Administrator
+	Range: :Subscription
+
+ObjectProperty: :canAdd1
+	Domain: :Administrator
+	Range: :Movie
+
+ObjectProperty: :canAdd2
+	Domain: :Administrator
+	Range: :Episode
+
+ObjectProperty: :canAdd3
+	Domain: :Administrator
+	Range: :Season
+
+ObjectProperty: :canAdd4
+	Domain: :Administrator
+	Range: :Cinema
+
+ObjectProperty: :canAdd5
+	Domain: :Administrator
+	Range: :FilmHouse
+
+ObjectProperty: :canAdd6
+	Domain: :Administrator
+	Range: :StreamingPlatform
+
+ObjectProperty: :canSearchForBy
+	Domain: :User
+	Range: :Movie
+
+ObjectProperty: :hasDetail1
+	Domain: :Paymentmethod
+	Range: :PaymentmethodDetail
+
+ObjectProperty: :hasDetail2
+	Domain: :Method
+	Range: :MethodDetail
+
+ObjectProperty: :hasRoom
+	Domain: :Cinema
+	Range: :CinemaRoom
+
+ObjectProperty: :canUpdate1
+	Domain: :PremiumUser
+	Range: :PaymentmethodDetail
+
+ObjectProperty: :canUpdate2
+	Domain: :Administrator
+	Range: :MethodDetail
+
+ObjectProperty: :canChange1
+	Domain: :PremiumUser
+	Range: :SubscriptionStatus
+
+ObjectProperty: :canChange2
+	Domain: :Administrator
+	Range: :SubscriptionStatus
+
+ObjectProperty: :canChange3
+	Domain: :Administrator
+	Range: :Subscription
+
+ObjectProperty: :canChange4
+	Domain: :Administrator
+	Range: :EndDate
+
+ObjectProperty: :canChange5
+	Domain: :Administrator
+	Range: :SubscriptionPrice
+
+ObjectProperty: :canChange6
+	Domain: :Administrator
+	Range: :CancellationDate
+
+ObjectProperty: :canView1
+	Domain: :PremiumUser
+	Range: :SubscriptionStatus
+
+ObjectProperty: :canView2
+	Domain: :PremiumUser
+	Range: :Subscription
+
+ObjectProperty: :canView3
+	Domain: :PremiumUser
+	Range: :EndDate
+
+ObjectProperty: :canView4
+	Domain: :PremiumUser
+	Range: :SubscriptionPrice
+
+ObjectProperty: :canView5
+	Domain: :PremiumUser
+	Range: :CancellationDate
+
+ObjectProperty: :canView6
+	Domain: :Administrator
+	Range: :SubscriptionStatus
+
+ObjectProperty: :canView7
+	Domain: :Administrator
+	Range: :Date
+
+ObjectProperty: :canView8
+	Domain: :Administrator
+	Range: :EndDate
+
+ObjectProperty: :canView9
+	Domain: :Administrator
+	Range: :SubscriptionPrice
+
+ObjectProperty: :canView10
+	Domain: :Administrator
+	Range: :CancellationDate
+
+ObjectProperty: :canView11
+	Domain: :PremiumUser
+	Range: :MovieShowtime
+
+ObjectProperty: :canView12
+	Domain: :PremiumUser
+	Range: :CinemaRoom
+
+ObjectProperty: :canView13
+	Domain: :PremiumUser
+	Range: :Page
+
+ObjectProperty: :canView14
+	Domain: :PremiumUser
+	Range: :Information
+
+ObjectProperty: :canView15
+	Domain: :PremiumUser
+	Range: :StreamingPage
+
+ObjectProperty: :canView16
+	Domain: :PremiumUser
+	Range: :Practicalperf_cinema_stability
+
+ObjectProperty: :canView17
+	Domain: :PremiumUser
+	Range: :CinemaCity
+
+ObjectProperty: :canView18
+	Domain: :PremiumUser
+	Range: :MovieShowing
+
+ObjectProperty: :canView19
+	Domain: :PremiumUser
+	Range: :Showing
+
+ObjectProperty: :canView20
+	Domain: :PremiumUser
+	Range: :Movie
+
+ObjectProperty: :canEnsure
+	Domain: :Administrator
+	Range: :Date
+
+ObjectProperty: :canSeeOn
+	Domain: :PremiumUser
+	Range: :Practicalperf_cinema_stability
+
+ObjectProperty: :hasUser
+	Domain: :Premium
+	Range: :PremiumUser
+
+ObjectProperty: :canSee
+	Domain: :PremiumUser
+	Range: :Practicalperf_cinema_stability
+
+ObjectProperty: :canAccess
+	Domain: :PremiumUser
+	Range: :Movie
+
+ObjectProperty: :canInclude1
+	Domain: :Administrator
+	Range: :Movie
+
+ObjectProperty: :canInclude2
+	Domain: :Administrator
+	Range: :Episode
+
+ObjectProperty: :canInclude3
+	Domain: :Administrator
+	Range: :Season
+
+ObjectProperty: :canInclude4
+	Domain: :Administrator
+	Range: :Cinema
+
+ObjectProperty: :canInclude5
+	Domain: :Administrator
+	Range: :FilmHouse
+
+ObjectProperty: :canInclude6
+	Domain: :Administrator
+	Range: :MovieShowing
+
+ObjectProperty: :canInclude7
+	Domain: :Administrator
+	Range: :StreamingPlatform
+
+ObjectProperty: :canExplore
+	Domain: :PremiumUser
+	Range: :Range
+
+ObjectProperty: :canInformAbout1
+	Domain: :PremiumUser
+	Range: :Subscription
+
+ObjectProperty: :canInformAbout2
+	Domain: :Administrator
+	Range: :Subscription
+
+ObjectProperty: :hasPremium
+	Domain: :Cinema
+	Range: :CinemaPremium
+
+ObjectProperty: :hasHouse
+	Domain: :Film
+	Range: :FilmHouse
+
+ObjectProperty: :canSelect
+	Domain: :PremiumUser
+	Range: :MovieShowing
+
+ObjectProperty: :canImport
+	Domain: :PremiumUser
+	Range: :Movie
+
+ObjectProperty: :canAlignWith
+	Domain: :It
+	Range: :Need
+
+ObjectProperty: :hasShowtime
+	Domain: :Movie
+	Range: :MovieShowtime
+
+ObjectProperty: :hasCity
+	Domain: :Cinema
+	Range: :CinemaCity
+
+ObjectProperty: :canFind
+	Domain: :User
+	Range: :Movie
+
+ObjectProperty: :canMark
+	Domain: :PremiumUser
+	Range: :MovieTheatre
+
+ObjectProperty: :canShare
+	Domain: :PremiumUser
+	Range: :Movie
+
+ObjectProperty: :hasPrice
+	Domain: :Subscription
+	Range: :SubscriptionPrice
+
+ObjectProperty: :canEdit1
+	Domain: :Administrator
+	Range: :Movie
+
+ObjectProperty: :canEdit2
+	Domain: :Administrator
+	Range: :Episode
+
+ObjectProperty: :canEdit3
+	Domain: :Administrator
+	Range: :Season
+
+ObjectProperty: :canEdit4
+	Domain: :Administrator
+	Range: :Cinema
+
+ObjectProperty: :canEdit5
+	Domain: :Administrator
+	Range: :FilmHouse
+
+ObjectProperty: :canEdit6
+	Domain: :Administrator
+	Range: :StreamingPlatform
+
+ObjectProperty: :hasStatus
+	Domain: :Subscription
+	Range: :SubscriptionStatus
+
+ObjectProperty: :canSearchFor
+	Domain: :User
+	Range: :Movie
+
+ObjectProperty: :canFlag
+	Domain: :Administrator
+	Range: :Activity
+
+ObjectProperty: :canDelete1
+	Domain: :PremiumUser
+	Range: :PaymentmethodDetail
+
+ObjectProperty: :canDelete2
+	Domain: :Administrator
+	Range: :MethodDetail
+
+ObjectProperty: :canDelete3
+	Domain: :Administrator
+	Range: :Movie
+
+ObjectProperty: :canDelete4
+	Domain: :Administrator
+	Range: :Episode
+
+ObjectProperty: :canDelete5
+	Domain: :Administrator
+	Range: :Season
+
+ObjectProperty: :canDelete6
+	Domain: :Administrator
+	Range: :Cinema
+
+ObjectProperty: :canDelete7
+	Domain: :Administrator
+	Range: :FilmHouse
+
+ObjectProperty: :canDelete8
+	Domain: :Administrator
+	Range: :StreamingPlatform
+
+ObjectProperty: :hasTheatre
+	Domain: :Movie
+	Range: :MovieTheatre
+
+ObjectProperty: :canKnow
+	Domain: :PremiumUser
+	Range: :It
+
+ObjectProperty: :canMake
+	Domain: :PremiumUser
+	Range: :Decision
+
+ObjectProperty: :canSearchForFor
+	Domain: :PremiumUser
+	Range: :MovieShowing
+
+# Classes
+Class: :CinemaPremium
+	SubClassOf: :Premium
+	Annotations:
+		rdfs:label "Cinema Premium"
+
+Class: :Premium
+
+
+Class: :Cinema
+
+
+Class: :PremiumUser
+	SubClassOf: :User
+	Annotations:
+		rdfs:label "Premium User",
+		rdfs:comment "Functional Role"
+
+Class: :User
+	Annotations:
+		rdfs:comment "Functional Role"
+
+Class: :SubscriptionStatus
+	SubClassOf: :Status
+	Annotations:
+		rdfs:label "Subscription Status"
+
+Class: :Status
+
+
+Class: :Subscription
+
+
+Class: :It
+
+
+Class: :Need
+
+
+Class: :EndDate
+	SubClassOf: :Date
+	Annotations:
+		rdfs:label "End Date"
+
+Class: :Date
+
+
+Class: :End
+
+
+Class: :SubscriptionPrice
+	SubClassOf: :Price
+	Annotations:
+		rdfs:label "Subscription Price"
+
+Class: :Price
+
+
+Class: :CancellationDate
+	SubClassOf: :Date
+	Annotations:
+		rdfs:label "Cancellation Date"
+
+Class: :Cancellation
+
+
+Class: :PaymentmethodDetail
+	SubClassOf: :Detail
+	Annotations:
+		rdfs:label "Paymentmethod Detail"
+
+Class: :Detail
+
+
+Class: :Paymentmethod
+
+
+Class: :Administrator
+	Annotations:
+		rdfs:comment "Functional Role"
+
+Class: :Activity
+
+
+Class: :MethodDetail
+	SubClassOf: :Detail
+	Annotations:
+		rdfs:label "Method Detail"
+
+Class: :Method
+
+
+Class: :MovieShowtime
+	SubClassOf: :Showtime
+	Annotations:
+		rdfs:label "Movie Showtime"
+
+Class: :Showtime
+
+
+Class: :Movie
+
+
+Class: :CinemaRoom
+	SubClassOf: :Room
+	Annotations:
+		rdfs:label "Cinema Room"
+
+Class: :Room
+
+
+Class: :Cinema
+
+
+Class: :Decision
+
+
+Class: :Page
+
+
+Class: :Information
+
+
+Class: :MovieTheatre
+	SubClassOf: :Theatre
+	Annotations:
+		rdfs:label "Movie Theatre"
+
+Class: :Theatre
+
+
+Class: :Range
+
+
+Class: :Practicalperf_cinema_stability
+
+
+Class: :StreamingPage
+	SubClassOf: :Page
+	Annotations:
+		rdfs:label "Streaming Page"
+
+Class: :Streaming
+
+
+Class: :Episode
+
+
+Class: :Season
+
+
+Class: :FilmHouse
+	SubClassOf: :House
+	Annotations:
+		rdfs:label "Film House"
+
+Class: :House
+
+
+Class: :Film
+
+
+Class: :StreamingPlatform
+	SubClassOf: :Platform
+	Annotations:
+		rdfs:label "Streaming Platform"
+
+Class: :Platform
+
+
+Class: :CinemaCity
+	SubClassOf: :City
+	Annotations:
+		rdfs:label "Cinema City"
+
+Class: :City
+
+
+Class: :MovieShowing
+	SubClassOf: :Showing
+	Annotations:
+		rdfs:label "Movie Showing"
+
+Class: :Showing
+
+
+Class: :List
+
+
+Class: :Privacy
+
+

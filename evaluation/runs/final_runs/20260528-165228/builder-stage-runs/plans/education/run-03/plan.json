@@ -1,0 +1,2913 @@
+{
+  "meta": {
+    "planVersion": "1.1.0",
+    "generatedAt": "2026-05-29T15:37:07.341Z",
+    "generatedBy": "pipeline.plan-generator",
+    "mergedWithLlm": true
+  },
+  "app": {
+    "appId": "",
+    "branch": "main",
+    "moduleName": "MyFirstModule",
+    "layoutQualifiedName": "Atlas_Core.Atlas_Default",
+    "homePageRef": "home",
+    "navigation": {
+      "homePageButtons": [
+        {
+          "pageRef": "achievement_overview",
+          "caption": "",
+          "allowedRoles": []
+        },
+        {
+          "pageRef": "appropriatematerial_overview",
+          "caption": "",
+          "allowedRoles": []
+        },
+        {
+          "pageRef": "bookmaterial_overview",
+          "caption": "",
+          "allowedRoles": []
+        },
+        {
+          "pageRef": "certain_overview",
+          "caption": "",
+          "allowedRoles": []
+        },
+        {
+          "pageRef": "chatmessage_overview",
+          "caption": "",
+          "allowedRoles": []
+        },
+        {
+          "pageRef": "teacherprofile_workflow_tasks",
+          "caption": "Teacher Profile Workflow Tasks",
+          "allowedRoles": [
+            "FreelanceTeacher"
+          ],
+          "icon": {
+            "name": "home"
+          }
+        }
+      ],
+      "menuItems": [
+        {
+          "pageRef": "achievement_overview",
+          "caption": "",
+          "allowedRoles": []
+        },
+        {
+          "pageRef": "appropriatematerial_overview",
+          "caption": "",
+          "allowedRoles": []
+        },
+        {
+          "pageRef": "bookmaterial_overview",
+          "caption": "",
+          "allowedRoles": []
+        },
+        {
+          "pageRef": "certain_overview",
+          "caption": "",
+          "allowedRoles": []
+        },
+        {
+          "pageRef": "chatmessage_overview",
+          "caption": "",
+          "allowedRoles": []
+        },
+        {
+          "pageRef": "teacherprofile_workflow_tasks",
+          "caption": "Teacher Profile Workflow Tasks",
+          "allowedRoles": [
+            "FreelanceTeacher"
+          ],
+          "icon": {
+            "name": "home"
+          }
+        }
+      ],
+      "homePageButtonRefs": [
+        "achievement_overview",
+        "appropriatematerial_overview",
+        "bookmaterial_overview",
+        "certain_overview",
+        "chatmessage_overview",
+        "teacherprofile_workflow_tasks"
+      ],
+      "navigationItemRefs": [
+        "achievement_overview",
+        "appropriatematerial_overview",
+        "bookmaterial_overview",
+        "certain_overview",
+        "chatmessage_overview",
+        "teacherprofile_workflow_tasks"
+      ]
+    }
+  },
+  "execution": {
+    "commit": true,
+    "dg2Cleanup": true,
+    "forceLegacyWebClientForLookups": true,
+    "createApp": true,
+    "createAppName": "education-run03",
+    "commitMessage": "Practical performance builder-stage run: education run-03"
+  },
+  "domainModel": {
+    "entities": [
+      {
+        "name": "AppropriateMaterial",
+        "attributes": [
+          {
+            "name": "Title",
+            "type": "String",
+            "required": true
+          },
+          {
+            "name": "Description",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "Status",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "CreatedAt",
+            "type": "DateTime",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "User",
+        "attributes": [
+          {
+            "name": "Title",
+            "type": "String",
+            "required": true
+          },
+          {
+            "name": "Description",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "Status",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "CreatedAt",
+            "type": "DateTime",
+            "required": false
+          },
+          {
+            "name": "Email",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "FirstName",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "LastName",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "ProfilePicture",
+            "type": "String",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "Certain",
+        "attributes": [
+          {
+            "name": "Title",
+            "type": "String",
+            "required": true
+          },
+          {
+            "name": "Description",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "Status",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "CreatedAt",
+            "type": "DateTime",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "EducationalContent",
+        "attributes": [
+          {
+            "name": "Title",
+            "type": "String",
+            "required": true
+          },
+          {
+            "name": "Description",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "Status",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "CreatedAt",
+            "type": "DateTime",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "ProvideUser",
+        "attributes": [
+          {
+            "name": "Title",
+            "type": "String",
+            "required": true
+          },
+          {
+            "name": "Description",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "Status",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "CreatedAt",
+            "type": "DateTime",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "TeacherProfile",
+        "attributes": [
+          {
+            "name": "TeachingExperienceYears",
+            "type": "Integer",
+            "required": false
+          },
+          {
+            "name": "TechnicalSkillLevel",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "KvKNumber",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "Bio",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "IsApproved",
+            "type": "Boolean",
+            "required": false
+          },
+          {
+            "name": "ApprovalDate",
+            "type": "DateTime",
+            "required": false
+          },
+          {
+            "name": "Title",
+            "type": "String",
+            "required": true
+          },
+          {
+            "name": "Description",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "Status",
+            "type": "String",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "LearningModule",
+        "attributes": [
+          {
+            "name": "Title",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "Description",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "IsActive",
+            "type": "Boolean",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "LearningLevel",
+        "attributes": [
+          {
+            "name": "LevelName",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "DifficultyRating",
+            "type": "Integer",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "LearningContent",
+        "attributes": [
+          {
+            "name": "Title",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "ContentType",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "Module",
+            "type": "String",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "Quiz",
+        "attributes": [
+          {
+            "name": "Topic",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "MaxScore",
+            "type": "Integer",
+            "required": false
+          },
+          {
+            "name": "IsPublished",
+            "type": "Boolean",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "QuizAttempt",
+        "attributes": [
+          {
+            "name": "ScoreAchieved",
+            "type": "Integer",
+            "required": false
+          },
+          {
+            "name": "AttemptDate",
+            "type": "DateTime",
+            "required": false
+          },
+          {
+            "name": "Feedback",
+            "type": "String",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "LearningProgress",
+        "attributes": [
+          {
+            "name": "ProgressPercentage",
+            "type": "Decimal",
+            "required": false
+          },
+          {
+            "name": "LastUpdated",
+            "type": "DateTime",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "Achievement",
+        "attributes": [
+          {
+            "name": "Name",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "Description",
+            "type": "String",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "ChatMessage",
+        "attributes": [
+          {
+            "name": "Sender",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "Recipient",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "MessageText",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "Timestamp",
+            "type": "DateTime",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "KnowledgeMaterial",
+        "attributes": [
+          {
+            "name": "Title",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "Topic",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "ContentBody",
+            "type": "String",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "ResearchPaper",
+        "attributes": [
+          {
+            "name": "DOI",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "Title",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "JournalName",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "PublishingDate",
+            "type": "DateTime",
+            "required": false
+          },
+          {
+            "name": "Topic",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "Author",
+            "type": "String",
+            "required": false
+          }
+        ]
+      }
+    ],
+    "associations": [
+      {
+        "name": "Certain_ResearchPaper",
+        "parentEntity": "Certain",
+        "childEntity": "ResearchPaper",
+        "type": "Reference",
+        "owner": "Both"
+      }
+    ],
+    "enumerations": []
+  },
+  "security": {
+    "enabled": true,
+    "securityLevel": "prototype",
+    "moduleRoles": [
+      "FreelanceTeacher",
+      "MyFirstModuleRoleAdministrator"
+    ],
+    "userRoles": [
+      {
+        "name": "FreelanceTeacher",
+        "moduleRoles": [
+          "FreelanceTeacher"
+        ],
+        "systemModuleRole": "System.User"
+      },
+      {
+        "name": "MyFirstModuleRoleAdministrator",
+        "moduleRoles": [
+          "MyFirstModuleRoleAdministrator"
+        ],
+        "systemModuleRole": "System.User"
+      }
+    ],
+    "demoUsers": []
+  },
+  "pages": {
+    "specs": [
+      {
+        "ref": "home",
+        "name": "Home",
+        "title": "Home",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "AppropriateMaterial Workspace",
+            "renderMode": "H2"
+          },
+          {
+            "type": "dynamicText",
+            "text": "Generated from user stories",
+            "renderMode": "Paragraph"
+          },
+          {
+            "type": "buttonToPage",
+            "caption": "AppropriateMaterial Dashboard",
+            "targetPageRef": "appropriatematerial_dashboard"
+          },
+          {
+            "type": "buttonToPage",
+            "caption": "AppropriateMaterial Overview",
+            "targetPageRef": "appropriatematerial_overview"
+          },
+          {
+            "type": "buttonToPage",
+            "caption": "User Overview",
+            "targetPageRef": "user_overview"
+          },
+          {
+            "type": "buttonToPage",
+            "caption": "Certain Overview",
+            "targetPageRef": "certain_overview"
+          },
+          {
+            "type": "buttonToPage",
+            "caption": "EducationalContent Overview",
+            "targetPageRef": "educationalcontent_overview"
+          },
+          {
+            "type": "buttonToPage",
+            "caption": "ProvideUser Overview",
+            "targetPageRef": "provideuser_overview"
+          },
+          {
+            "type": "buttonToPage",
+            "caption": "achievement overview",
+            "targetPageRef": "achievement_overview"
+          },
+          {
+            "type": "buttonToPage",
+            "caption": "bookmaterial overview",
+            "targetPageRef": "bookmaterial_overview"
+          },
+          {
+            "type": "buttonToPage",
+            "caption": "chatmessage overview",
+            "targetPageRef": "chatmessage_overview"
+          },
+          {
+            "type": "buttonToPage",
+            "caption": "Teacher Profile Workflow Tasks",
+            "targetPageRef": "teacherprofile_workflow_tasks"
+          }
+        ]
+      },
+      {
+        "ref": "appropriatematerial_dashboard",
+        "name": "AppropriateMaterial_Dashboard",
+        "title": "AppropriateMaterial Dashboard",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "AppropriateMaterial Dashboard",
+            "renderMode": "H2"
+          },
+          {
+            "type": "dynamicText",
+            "text": "Overview and data management for appropriate material.",
+            "renderMode": "Paragraph"
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Add AppropriateMaterial",
+            "entityRef": "MyFirstModule.AppropriateMaterial",
+            "targetPageRef": "appropriatematerial_newedit"
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.AppropriateMaterial",
+            "rowClickTargetPageRef": "appropriatematerial_newedit",
+            "autoRowClickToDetail": true,
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Title",
+                "autoLabel": true
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Description",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Status",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "CreatedAt",
+                "autoLabel": false
+              }
+            ]
+          }
+        ],
+        "entityRef": "MyFirstModule.AppropriateMaterial"
+      },
+      {
+        "ref": "appropriatematerial_overview",
+        "name": "AppropriateMaterial_Overview",
+        "title": "AppropriateMaterial Overview",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "AppropriateMaterial Overview",
+            "renderMode": "H2"
+          },
+          {
+            "type": "dynamicText",
+            "text": "Manage appropriate material records and open the create dialog when new data is needed.",
+            "renderMode": "Paragraph"
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Add AppropriateMaterial",
+            "entityRef": "MyFirstModule.AppropriateMaterial",
+            "targetPageRef": "appropriatematerial_newedit"
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.AppropriateMaterial",
+            "rowClickTargetPageRef": "appropriatematerial_newedit",
+            "autoRowClickToDetail": true,
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Title",
+                "autoLabel": true
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Description",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Status",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "CreatedAt",
+                "autoLabel": false
+              }
+            ]
+          }
+        ],
+        "entityRef": "MyFirstModule.AppropriateMaterial"
+      },
+      {
+        "ref": "appropriatematerial_newedit",
+        "name": "AppropriateMaterial_NewEdit",
+        "title": "AppropriateMaterial NewEdit",
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "AppropriateMaterial",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Title"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Description"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Status"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "CreatedAt"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ],
+        "entityRef": "MyFirstModule.AppropriateMaterial",
+        "pageParameters": [
+          {
+            "name": "AppropriateMaterial",
+            "entityRef": "MyFirstModule.AppropriateMaterial",
+            "required": true
+          }
+        ],
+        "layoutQualifiedName": "Atlas_Core.PopupLayout"
+      },
+      {
+        "ref": "user_overview",
+        "name": "User_Overview",
+        "title": "User Overview",
+        "entityRef": "MyFirstModule.User",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "User Overview",
+            "renderMode": "H2"
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Create User",
+            "entityRef": "MyFirstModule.User",
+            "targetPageRef": "user_newedit"
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.User",
+            "autoRowClickToDetail": true,
+            "rowClickTargetPageRef": "user_newedit",
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Email",
+                "autoLabel": true
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "FirstName",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "LastName",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "ProfilePicture",
+                "autoLabel": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "user_newedit",
+        "name": "User_NewEdit",
+        "title": "User NewEdit",
+        "entityRef": "MyFirstModule.User",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          {
+            "name": "User",
+            "entityRef": "MyFirstModule.User",
+            "required": true
+          }
+        ],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "User",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Email"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "FirstName"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "LastName"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "ProfilePicture"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "certain_overview",
+        "name": "Certain_Overview",
+        "title": "Certain Overview",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "Certain Overview",
+            "renderMode": "H2"
+          },
+          {
+            "type": "dynamicText",
+            "text": "Manage certain records and open the create dialog when new data is needed.",
+            "renderMode": "Paragraph"
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Add Certain",
+            "entityRef": "MyFirstModule.Certain",
+            "targetPageRef": "certain_newedit"
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.Certain",
+            "rowClickTargetPageRef": "certain_newedit",
+            "autoRowClickToDetail": true,
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Title",
+                "autoLabel": true
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Description",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Status",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "CreatedAt",
+                "autoLabel": false
+              }
+            ]
+          }
+        ],
+        "entityRef": "MyFirstModule.Certain"
+      },
+      {
+        "ref": "certain_newedit",
+        "name": "Certain_NewEdit",
+        "title": "Certain NewEdit",
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "Certain",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Title"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Description"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Status"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "CreatedAt"
+              },
+              {
+                "type": "associationInput",
+                "associationRef": "Certain_ResearchPaper",
+                "targetEntityRef": "MyFirstModule.ResearchPaper",
+                "label": "Research Paper"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ],
+        "entityRef": "MyFirstModule.Certain",
+        "pageParameters": [
+          {
+            "name": "Certain",
+            "entityRef": "MyFirstModule.Certain",
+            "required": true
+          }
+        ],
+        "layoutQualifiedName": "Atlas_Core.PopupLayout"
+      },
+      {
+        "ref": "educationalcontent_overview",
+        "name": "EducationalContent_Overview",
+        "title": "EducationalContent Overview",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "EducationalContent Overview",
+            "renderMode": "H2"
+          },
+          {
+            "type": "dynamicText",
+            "text": "Manage educational content records and open the create dialog when new data is needed.",
+            "renderMode": "Paragraph"
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Add EducationalContent",
+            "entityRef": "MyFirstModule.EducationalContent",
+            "targetPageRef": "educationalcontent_newedit"
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.EducationalContent",
+            "rowClickTargetPageRef": "educationalcontent_newedit",
+            "autoRowClickToDetail": true,
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Title",
+                "autoLabel": true
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Description",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Status",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "CreatedAt",
+                "autoLabel": false
+              }
+            ]
+          }
+        ],
+        "entityRef": "MyFirstModule.EducationalContent"
+      },
+      {
+        "ref": "educationalcontent_newedit",
+        "name": "EducationalContent_NewEdit",
+        "title": "EducationalContent NewEdit",
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "EducationalContent",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Title"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Description"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Status"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "CreatedAt"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ],
+        "entityRef": "MyFirstModule.EducationalContent",
+        "pageParameters": [
+          {
+            "name": "EducationalContent",
+            "entityRef": "MyFirstModule.EducationalContent",
+            "required": true
+          }
+        ]
+      },
+      {
+        "ref": "provideuser_overview",
+        "name": "ProvideUser_Overview",
+        "title": "ProvideUser Overview",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "ProvideUser Overview",
+            "renderMode": "H2"
+          },
+          {
+            "type": "dynamicText",
+            "text": "Manage provide user records and open the create dialog when new data is needed.",
+            "renderMode": "Paragraph"
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Add ProvideUser",
+            "entityRef": "MyFirstModule.ProvideUser",
+            "targetPageRef": "provideuser_newedit"
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.ProvideUser",
+            "rowClickTargetPageRef": "provideuser_newedit",
+            "autoRowClickToDetail": true,
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Title",
+                "autoLabel": true
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Description",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Status",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "CreatedAt",
+                "autoLabel": false
+              }
+            ]
+          }
+        ],
+        "entityRef": "MyFirstModule.ProvideUser"
+      },
+      {
+        "ref": "provideuser_newedit",
+        "name": "ProvideUser_NewEdit",
+        "title": "ProvideUser NewEdit",
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "ProvideUser",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Title"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Description"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Status"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "CreatedAt"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ],
+        "entityRef": "MyFirstModule.ProvideUser",
+        "pageParameters": [
+          {
+            "name": "ProvideUser",
+            "entityRef": "MyFirstModule.ProvideUser",
+            "required": true
+          }
+        ]
+      },
+      {
+        "ref": "teacherprofile_overview",
+        "name": "TeacherProfile_Overview",
+        "title": "TeacherProfile Overview",
+        "entityRef": "MyFirstModule.TeacherProfile",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "TeacherProfile Overview",
+            "renderMode": "H2"
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Create TeacherProfile",
+            "entityRef": "MyFirstModule.TeacherProfile",
+            "targetPageRef": "teacherprofile_newedit"
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.TeacherProfile",
+            "autoRowClickToDetail": true,
+            "rowClickTargetPageRef": "teacherprofile_newedit",
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "TeachingExperienceYears",
+                "autoLabel": true
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "TechnicalSkillLevel",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "KvKNumber",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Bio",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "IsApproved",
+                "autoLabel": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "teacherprofile_newedit",
+        "name": "TeacherProfile_NewEdit",
+        "title": "TeacherProfile NewEdit",
+        "entityRef": "MyFirstModule.TeacherProfile",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          {
+            "name": "TeacherProfile",
+            "entityRef": "MyFirstModule.TeacherProfile",
+            "required": true
+          }
+        ],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "TeacherProfile",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "TeachingExperienceYears"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "TechnicalSkillLevel"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "KvKNumber"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Bio"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "IsApproved"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "ApprovalDate"
+              },
+              {
+                "type": "callWorkflowButton",
+                "caption": "Start Teacher Profile Workflow",
+                "workflowRef": "wf_teacherprofile",
+                "closePage": true
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "learningmodule_overview",
+        "name": "LearningModule_Overview",
+        "title": "LearningModule Overview",
+        "entityRef": "MyFirstModule.LearningModule",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "LearningModule Overview",
+            "renderMode": "H2"
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Create LearningModule",
+            "entityRef": "MyFirstModule.LearningModule",
+            "targetPageRef": "learningmodule_newedit"
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.LearningModule",
+            "autoRowClickToDetail": true,
+            "rowClickTargetPageRef": "learningmodule_newedit",
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Title",
+                "autoLabel": true
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Description",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "IsActive",
+                "autoLabel": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "learningmodule_newedit",
+        "name": "LearningModule_NewEdit",
+        "title": "LearningModule NewEdit",
+        "entityRef": "MyFirstModule.LearningModule",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          {
+            "name": "LearningModule",
+            "entityRef": "MyFirstModule.LearningModule",
+            "required": true
+          }
+        ],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "LearningModule",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Title"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Description"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "IsActive"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "learninglevel_overview",
+        "name": "LearningLevel_Overview",
+        "title": "LearningLevel Overview",
+        "entityRef": "MyFirstModule.LearningLevel",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "LearningLevel Overview",
+            "renderMode": "H2"
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Create LearningLevel",
+            "entityRef": "MyFirstModule.LearningLevel",
+            "targetPageRef": "learninglevel_newedit"
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.LearningLevel",
+            "autoRowClickToDetail": true,
+            "rowClickTargetPageRef": "learninglevel_newedit",
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "LevelName",
+                "autoLabel": true
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "DifficultyRating",
+                "autoLabel": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "learninglevel_newedit",
+        "name": "LearningLevel_NewEdit",
+        "title": "LearningLevel NewEdit",
+        "entityRef": "MyFirstModule.LearningLevel",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          {
+            "name": "LearningLevel",
+            "entityRef": "MyFirstModule.LearningLevel",
+            "required": true
+          }
+        ],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "LearningLevel",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "LevelName"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "DifficultyRating"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "learningcontent_overview",
+        "name": "LearningContent_Overview",
+        "title": "LearningContent Overview",
+        "entityRef": "MyFirstModule.LearningContent",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "LearningContent Overview",
+            "renderMode": "H2"
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Create LearningContent",
+            "entityRef": "MyFirstModule.LearningContent",
+            "targetPageRef": "learningcontent_newedit"
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.LearningContent",
+            "autoRowClickToDetail": true,
+            "rowClickTargetPageRef": "learningcontent_newedit",
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Title",
+                "autoLabel": true
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "ContentType",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Module",
+                "autoLabel": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "learningcontent_newedit",
+        "name": "LearningContent_NewEdit",
+        "title": "LearningContent NewEdit",
+        "entityRef": "MyFirstModule.LearningContent",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          {
+            "name": "LearningContent",
+            "entityRef": "MyFirstModule.LearningContent",
+            "required": true
+          }
+        ],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "LearningContent",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Title"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "ContentType"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Module"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "quiz_overview",
+        "name": "Quiz_Overview",
+        "title": "Quiz Overview",
+        "entityRef": "MyFirstModule.Quiz",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "Quiz Overview",
+            "renderMode": "H2"
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Create Quiz",
+            "entityRef": "MyFirstModule.Quiz",
+            "targetPageRef": "quiz_newedit"
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.Quiz",
+            "autoRowClickToDetail": true,
+            "rowClickTargetPageRef": "quiz_newedit",
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Topic",
+                "autoLabel": true
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "MaxScore",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "IsPublished",
+                "autoLabel": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "quiz_newedit",
+        "name": "Quiz_NewEdit",
+        "title": "Quiz NewEdit",
+        "entityRef": "MyFirstModule.Quiz",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          {
+            "name": "Quiz",
+            "entityRef": "MyFirstModule.Quiz",
+            "required": true
+          }
+        ],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "Quiz",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Topic"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "MaxScore"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "IsPublished"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "quizattempt_overview",
+        "name": "QuizAttempt_Overview",
+        "title": "QuizAttempt Overview",
+        "entityRef": "MyFirstModule.QuizAttempt",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "QuizAttempt Overview",
+            "renderMode": "H2"
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Create QuizAttempt",
+            "entityRef": "MyFirstModule.QuizAttempt",
+            "targetPageRef": "quizattempt_newedit"
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.QuizAttempt",
+            "autoRowClickToDetail": true,
+            "rowClickTargetPageRef": "quizattempt_newedit",
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "ScoreAchieved",
+                "autoLabel": true
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "AttemptDate",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Feedback",
+                "autoLabel": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "quizattempt_newedit",
+        "name": "QuizAttempt_NewEdit",
+        "title": "QuizAttempt NewEdit",
+        "entityRef": "MyFirstModule.QuizAttempt",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          {
+            "name": "QuizAttempt",
+            "entityRef": "MyFirstModule.QuizAttempt",
+            "required": true
+          }
+        ],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "QuizAttempt",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "ScoreAchieved"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "AttemptDate"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Feedback"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "learningprogress_overview",
+        "name": "LearningProgress_Overview",
+        "title": "LearningProgress Overview",
+        "entityRef": "MyFirstModule.LearningProgress",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "LearningProgress Overview",
+            "renderMode": "H2"
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Create LearningProgress",
+            "entityRef": "MyFirstModule.LearningProgress",
+            "targetPageRef": "learningprogress_newedit"
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.LearningProgress",
+            "autoRowClickToDetail": true,
+            "rowClickTargetPageRef": "learningprogress_newedit",
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "ProgressPercentage",
+                "autoLabel": true
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "LastUpdated",
+                "autoLabel": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "learningprogress_newedit",
+        "name": "LearningProgress_NewEdit",
+        "title": "LearningProgress NewEdit",
+        "entityRef": "MyFirstModule.LearningProgress",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          {
+            "name": "LearningProgress",
+            "entityRef": "MyFirstModule.LearningProgress",
+            "required": true
+          }
+        ],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "LearningProgress",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "ProgressPercentage"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "LastUpdated"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "achievement_overview",
+        "name": "Achievement_Overview",
+        "title": "Achievement Overview",
+        "entityRef": "MyFirstModule.Achievement",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "Achievement Overview",
+            "renderMode": "H2"
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Create Achievement",
+            "entityRef": "MyFirstModule.Achievement",
+            "targetPageRef": "achievement_newedit"
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.Achievement",
+            "autoRowClickToDetail": true,
+            "rowClickTargetPageRef": "achievement_newedit",
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name",
+                "autoLabel": true
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Description",
+                "autoLabel": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "achievement_newedit",
+        "name": "Achievement_NewEdit",
+        "title": "Achievement NewEdit",
+        "entityRef": "MyFirstModule.Achievement",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          {
+            "name": "Achievement",
+            "entityRef": "MyFirstModule.Achievement",
+            "required": true
+          }
+        ],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "Achievement",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Description"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "chatmessage_overview",
+        "name": "ChatMessage_Overview",
+        "title": "ChatMessage Overview",
+        "entityRef": "MyFirstModule.ChatMessage",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "ChatMessage Overview",
+            "renderMode": "H2"
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Create ChatMessage",
+            "entityRef": "MyFirstModule.ChatMessage",
+            "targetPageRef": "chatmessage_newedit"
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.ChatMessage",
+            "autoRowClickToDetail": true,
+            "rowClickTargetPageRef": "chatmessage_newedit",
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Sender",
+                "autoLabel": true
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Recipient",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "MessageText",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Timestamp",
+                "autoLabel": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "chatmessage_newedit",
+        "name": "ChatMessage_NewEdit",
+        "title": "ChatMessage NewEdit",
+        "entityRef": "MyFirstModule.ChatMessage",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          {
+            "name": "ChatMessage",
+            "entityRef": "MyFirstModule.ChatMessage",
+            "required": true
+          }
+        ],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "ChatMessage",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Sender"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Recipient"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "MessageText"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Timestamp"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "knowledgematerial_overview",
+        "name": "KnowledgeMaterial_Overview",
+        "title": "KnowledgeMaterial Overview",
+        "entityRef": "MyFirstModule.KnowledgeMaterial",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "KnowledgeMaterial Overview",
+            "renderMode": "H2"
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Create KnowledgeMaterial",
+            "entityRef": "MyFirstModule.KnowledgeMaterial",
+            "targetPageRef": "knowledgematerial_newedit"
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.KnowledgeMaterial",
+            "autoRowClickToDetail": true,
+            "rowClickTargetPageRef": "knowledgematerial_newedit",
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Title",
+                "autoLabel": true
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Topic",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "ContentBody",
+                "autoLabel": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "knowledgematerial_newedit",
+        "name": "KnowledgeMaterial_NewEdit",
+        "title": "KnowledgeMaterial NewEdit",
+        "entityRef": "MyFirstModule.KnowledgeMaterial",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          {
+            "name": "KnowledgeMaterial",
+            "entityRef": "MyFirstModule.KnowledgeMaterial",
+            "required": true
+          }
+        ],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "KnowledgeMaterial",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Title"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Topic"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "ContentBody"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "bookmaterial_overview",
+        "name": "BookMaterial_Overview",
+        "title": "BookMaterial Overview",
+        "entityRef": "MyFirstModule.BookMaterial",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "BookMaterial Overview",
+            "renderMode": "H2"
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Create BookMaterial",
+            "entityRef": "MyFirstModule.BookMaterial",
+            "targetPageRef": "bookmaterial_newedit"
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.BookMaterial",
+            "autoRowClickToDetail": true,
+            "rowClickTargetPageRef": "bookmaterial_newedit",
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "ISBN",
+                "autoLabel": true
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Title",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Publisher",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Topic",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Author",
+                "autoLabel": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "flashcardset_overview",
+        "name": "FlashcardSet_Overview",
+        "title": "FlashcardSet Overview",
+        "entityRef": "MyFirstModule.FlashcardSet",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "FlashcardSet Overview",
+            "renderMode": "H2"
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Create FlashcardSet",
+            "entityRef": "MyFirstModule.FlashcardSet",
+            "targetPageRef": "flashcardset_newedit"
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.FlashcardSet",
+            "autoRowClickToDetail": true,
+            "rowClickTargetPageRef": "flashcardset_newedit",
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Topic",
+                "autoLabel": true
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Source",
+                "autoLabel": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "videomaterial_overview",
+        "name": "VideoMaterial_Overview",
+        "title": "VideoMaterial Overview",
+        "entityRef": "MyFirstModule.VideoMaterial",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "VideoMaterial Overview",
+            "renderMode": "H2"
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Create VideoMaterial",
+            "entityRef": "MyFirstModule.VideoMaterial",
+            "targetPageRef": "videomaterial_newedit"
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.VideoMaterial",
+            "autoRowClickToDetail": true,
+            "rowClickTargetPageRef": "videomaterial_newedit",
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Title",
+                "autoLabel": true
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "URL",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Platform",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Topic",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Year",
+                "autoLabel": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "researchpaper_overview",
+        "name": "ResearchPaper_Overview",
+        "title": "ResearchPaper Overview",
+        "entityRef": "MyFirstModule.ResearchPaper",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "ResearchPaper Overview",
+            "renderMode": "H2"
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Create ResearchPaper",
+            "entityRef": "MyFirstModule.ResearchPaper",
+            "targetPageRef": "researchpaper_newedit"
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.ResearchPaper",
+            "autoRowClickToDetail": true,
+            "rowClickTargetPageRef": "researchpaper_newedit",
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "DOI",
+                "autoLabel": true
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Title",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "JournalName",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "PublishingDate",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Topic",
+                "autoLabel": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "researchpaper_newedit",
+        "name": "ResearchPaper_NewEdit",
+        "title": "ResearchPaper NewEdit",
+        "entityRef": "MyFirstModule.ResearchPaper",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          {
+            "name": "ResearchPaper",
+            "entityRef": "MyFirstModule.ResearchPaper",
+            "required": true
+          }
+        ],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "ResearchPaper",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "DOI"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Title"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "JournalName"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "PublishingDate"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Topic"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Author"
+              },
+              {
+                "type": "associationInput",
+                "associationRef": "Certain_ResearchPaper",
+                "targetEntityRef": "MyFirstModule.Certain",
+                "label": "Certain"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "slidematerial_overview",
+        "name": "SlideMaterial_Overview",
+        "title": "SlideMaterial Overview",
+        "entityRef": "MyFirstModule.SlideMaterial",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "SlideMaterial Overview",
+            "renderMode": "H2"
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Create SlideMaterial",
+            "entityRef": "MyFirstModule.SlideMaterial",
+            "targetPageRef": "slidematerial_newedit"
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.SlideMaterial",
+            "autoRowClickToDetail": true,
+            "rowClickTargetPageRef": "slidematerial_newedit",
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Title",
+                "autoLabel": true
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Topic",
+                "autoLabel": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "gamematerial_overview",
+        "name": "GameMaterial_Overview",
+        "title": "GameMaterial Overview",
+        "entityRef": "MyFirstModule.GameMaterial",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "GameMaterial Overview",
+            "renderMode": "H2"
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Create GameMaterial",
+            "entityRef": "MyFirstModule.GameMaterial",
+            "targetPageRef": "gamematerial_newedit"
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.GameMaterial",
+            "autoRowClickToDetail": true,
+            "rowClickTargetPageRef": "gamematerial_newedit",
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Title",
+                "autoLabel": true
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "GameType",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Instructions",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Score",
+                "autoLabel": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "relationships_overview",
+        "name": "Relationships_Overview",
+        "title": "Relationships Overview",
+        "entityRef": "MyFirstModule.Relationships",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "Relationships Overview",
+            "renderMode": "H2"
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Create Relationships",
+            "entityRef": "MyFirstModule.Relationships",
+            "targetPageRef": "relationships_newedit"
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.Relationships",
+            "autoRowClickToDetail": true,
+            "rowClickTargetPageRef": "relationships_newedit",
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name",
+                "autoLabel": true
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Title",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Description",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Status",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "CreatedAt",
+                "autoLabel": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "bookmaterial_newedit",
+        "name": "BookMaterial_NewEdit",
+        "title": "Book Material NewEdit",
+        "entityRef": "MyFirstModule.BookMaterial",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          {
+            "name": "BookMaterial",
+            "entityRef": "MyFirstModule.BookMaterial",
+            "required": true
+          }
+        ],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "BookMaterial",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "flashcardset_newedit",
+        "name": "FlashcardSet_NewEdit",
+        "title": "Flashcard Set NewEdit",
+        "entityRef": "MyFirstModule.FlashcardSet",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          {
+            "name": "FlashcardSet",
+            "entityRef": "MyFirstModule.FlashcardSet",
+            "required": true
+          }
+        ],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "FlashcardSet",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "videomaterial_newedit",
+        "name": "VideoMaterial_NewEdit",
+        "title": "Video Material NewEdit",
+        "entityRef": "MyFirstModule.VideoMaterial",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          {
+            "name": "VideoMaterial",
+            "entityRef": "MyFirstModule.VideoMaterial",
+            "required": true
+          }
+        ],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "VideoMaterial",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "slidematerial_newedit",
+        "name": "SlideMaterial_NewEdit",
+        "title": "Slide Material NewEdit",
+        "entityRef": "MyFirstModule.SlideMaterial",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          {
+            "name": "SlideMaterial",
+            "entityRef": "MyFirstModule.SlideMaterial",
+            "required": true
+          }
+        ],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "SlideMaterial",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "gamematerial_newedit",
+        "name": "GameMaterial_NewEdit",
+        "title": "Game Material NewEdit",
+        "entityRef": "MyFirstModule.GameMaterial",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          {
+            "name": "GameMaterial",
+            "entityRef": "MyFirstModule.GameMaterial",
+            "required": true
+          }
+        ],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "GameMaterial",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "relationships_newedit",
+        "name": "Relationships_NewEdit",
+        "title": "Relationships NewEdit",
+        "entityRef": "MyFirstModule.Relationships",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          {
+            "name": "Relationships",
+            "entityRef": "MyFirstModule.Relationships",
+            "required": true
+          }
+        ],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "Relationships",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "teacherprofile_workflow_tasks",
+        "name": "TeacherProfile_WorkflowTasks",
+        "title": "Teacher Profile Workflow Tasks",
+        "entityRef": "System.WorkflowUserTask",
+        "allowedRoles": [
+          "FreelanceTeacher"
+        ],
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "Teacher Profile Workflow Tasks",
+            "renderMode": "H2"
+          },
+          {
+            "type": "listView",
+            "entityRef": "System.WorkflowUserTask",
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Description",
+                "autoLabel": false
+              },
+              {
+                "type": "showUserTaskPageButton",
+                "caption": "Open Task",
+                "assignOnOpen": true,
+                "openWhenAssigned": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "teacherprofile_workflow_task",
+        "name": "TeacherProfile_WorkflowTask",
+        "title": "Teacher Profile Workflow Task",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "allowedRoles": [
+          "FreelanceTeacher"
+        ],
+        "pageParameters": [
+          {
+            "name": "WorkflowUserTask",
+            "entityRef": "System.WorkflowUserTask",
+            "required": true
+          }
+        ],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "WorkflowUserTask",
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name",
+                "autoLabel": true
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Description",
+                "autoLabel": true
+              },
+              {
+                "type": "setTaskOutcomeButton",
+                "caption": "Approve",
+                "outcomeValue": "Approve"
+              },
+              {
+                "type": "setTaskOutcomeButton",
+                "caption": "Reject",
+                "outcomeValue": "Reject"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "verification": {
+    "failOnMissing": true
+  },
+  "microflows": {
+    "specs": [
+      {
+        "ref": "mf_teacherprofile_prepare",
+        "name": "MF_TeacherProfile_Prepare",
+        "parameters": [
+          {
+            "name": "WorkflowContext",
+            "type": {
+              "kind": "Object",
+              "entityRef": "MyFirstModule.TeacherProfile"
+            },
+            "required": true
+          }
+        ],
+        "actions": [
+          {
+            "type": "changeObject",
+            "targetVariableName": "WorkflowContext",
+            "commit": "yes",
+            "changes": [
+              {
+                "attributeRef": "Status",
+                "valueExpression": "'In review'"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "mf_teacherprofile_approve",
+        "name": "MF_TeacherProfile_Approve",
+        "parameters": [
+          {
+            "name": "WorkflowContext",
+            "type": {
+              "kind": "Object",
+              "entityRef": "MyFirstModule.TeacherProfile"
+            },
+            "required": true
+          }
+        ],
+        "actions": [
+          {
+            "type": "changeObject",
+            "targetVariableName": "WorkflowContext",
+            "commit": "yes",
+            "changes": [
+              {
+                "attributeRef": "Status",
+                "valueExpression": "'Approved'"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "mf_teacherprofile_reject",
+        "name": "MF_TeacherProfile_Reject",
+        "parameters": [
+          {
+            "name": "WorkflowContext",
+            "type": {
+              "kind": "Object",
+              "entityRef": "MyFirstModule.TeacherProfile"
+            },
+            "required": true
+          }
+        ],
+        "actions": [
+          {
+            "type": "changeObject",
+            "targetVariableName": "WorkflowContext",
+            "commit": "yes",
+            "changes": [
+              {
+                "attributeRef": "Status",
+                "valueExpression": "'Rejected'"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "workflows": {
+    "specs": [
+      {
+        "ref": "wf_teacherprofile",
+        "name": "WF_TeacherProfile",
+        "bindings": {
+          "contextEntityRef": "MyFirstModule.TeacherProfile"
+        },
+        "steps": [
+          {
+            "type": "start",
+            "name": "Start"
+          },
+          {
+            "type": "serviceTask",
+            "name": "TeacherProfilePrepare",
+            "handlerMicroflowRef": "mf_teacherprofile_prepare"
+          },
+          {
+            "type": "userTask",
+            "name": "TeacherProfileReview",
+            "taskName": "{1}",
+            "taskNameArgs": [
+              "$WorkflowContext/Title"
+            ],
+            "taskDescription": "{1}",
+            "taskDescriptionArgs": [
+              "$WorkflowContext/Description"
+            ],
+            "taskPageRef": "teacherprofile_workflow_task",
+            "userRoleRefs": [
+              "FreelanceTeacher"
+            ],
+            "outcomes": [
+              {
+                "value": "Approve",
+                "steps": [
+                  {
+                    "type": "serviceTask",
+                    "name": "Approved",
+                    "handlerMicroflowRef": "mf_teacherprofile_approve"
+                  },
+                  {
+                    "type": "end",
+                    "name": "Approved"
+                  }
+                ]
+              },
+              {
+                "value": "Reject",
+                "steps": [
+                  {
+                    "type": "serviceTask",
+                    "name": "Rejected",
+                    "handlerMicroflowRef": "mf_teacherprofile_reject"
+                  },
+                  {
+                    "type": "end",
+                    "name": "Rejected"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

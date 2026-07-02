@@ -1,0 +1,191 @@
+00:00:00 - 00:00:01
+Researcher: Hij staat op.
+
+00:00:04 - 00:00:27
+P3: Oké, dan kijk ik allereerst even naar het domein model. Het lijkt er wel op dat ik de. Entiteiten. Noem je dat zo? Ja, entiteiten zie die ik in de user stories heb gezien, zoals complaint payment Salary Statements.
+
+00:00:28 - 00:01:19
+P3: Ook de roles zijn hier als entiteiten aangemaakt, dus dat is goed. Ik kijk nu naar Outsource Payment Process. Preferred Working is dan ook in de user stories Manual Edit. Ja, als je dat zo wil bijhouden, dan kan dat ook. Ja, oké. Uhm ja, d'r zijn inderdaad wel. Het lijkt erop alsof ik in ieder geval alle user stories die ik heb gezien in de entiteiten terugzie.
+
+00:01:19 - 00:01:30
+P3: Ik zie alleen geen verbinding tussen de entiteiten, dus daarin zie ik niet hoe ze tot elkaar zich tot elkaar verhouden. Ja.
+
+00:01:30 - 00:01:34
+Researcher: Dus er zitten nul associaties in de gehele model.
+
+00:01:34 - 00:02:12
+P3: Geen associaties inderdaad. Verder zie ik wel dat die ook de attributen van de entiteiten heeft die goed. Tenminste, dat lijkt goed ingedeeld. Dus dat de naam een string is en een ja of die actief is. Een boolean. Een date is een datum, dus dat leek inderdaad goed. Ja, ik zie, ik kom nu naar beneden.
+
+00:02:12 - 00:02:35
+P3: Ik zie dat hij ook veel andere entiteiten heeft al aangemaakt. Dat zijn. Inderdaad gewoon de entiteiten die ik zie ze. Die lijken inderdaad goed overeen te komen met user stories. Alleen ze hebben dus geen verbinding. En. Ik zie inderdaad ook de nieuwe edit pagina's.
+
+00:02:36 - 00:02:43
+Researcher: Ja, in principe is dit inderdaad de deterministische regel dat als ie in het model staat, dan zijn er ook new/edit- en overviewpagina's voor gegenereerd.
+
+00:02:43 - 00:02:48
+P3: Ja en de nieuwe edit pagina's zijn wel gegenereerd dus ja klopt.
+
+00:02:48 - 00:02:50
+Researcher: Die zijn dat zijn ook echt pop ups inderdaad.
+
+00:02:50 - 00:02:55
+P3: Oké. Top. Uhm.
+
+00:02:55 - 00:03:10
+Researcher: Zitten er entiteiten tussen waarvan je denkt van die zijn echt overbodig of overgespecificeerd bijvoorbeeld of die juist een uh, attribuut had moeten zijn of kunnen zijn.
+
+00:03:11 - 00:03:29
+P3: Ja, dan zie ik een Manual Edit History. Ik ben nu even door de user stories aan het zoeken om te kijken of ik die terug kan vinden.
+
+00:03:31 - 00:03:43
+P3: Ja, er staat inderdaad wel iets over. Je bent uh Manual Edits, alleen er staat niet echt iets over historie, dus in die zin zou je manual edit ook in een relatie kunnen uitdrukken.
+
+00:03:43 - 00:04:02
+P3: Ja. Dan? Ja, Employee Presence zou misschien nog een boolean kunnen zijn die je die je aanmaakt. Het is op zich wel goed om een entiteit ervan te maken. Kan je wel wat voor zeggen, want dan kan je het bijhouden.
+
+00:04:02 - 00:04:09
+Researcher: Alleen heel erg lastig om om te kijken omdat het natuurlijk niet verbonden is. Ja, dan weet je niet wat de intentie was.
+
+00:04:09 - 00:04:37
+P3: Nee en. Nee. Voor de rest. Ja. Notification log zou je kunnen vragen of afvragen of dat nodig is. Maar als. Ja, in principe is het wel goed als je daar een historie van bij wil houden om die als entiteit aan te maken.
+
+00:04:39 - 00:05:24
+P3: Dan kijk ik nu even naar de attributen van de entiteiten. Ja, verder hebben we al veel entiteiten. Weinig attributen dus in die zin bijvoorbeeld een absence list of zo dan. Daar staan alleen de namen bij. Je zou meer attributen verwachten, maar ook dat kan misschien door relaties hier nog wel opgelost worden. Alleen dat is hier nu niet. Ja en ja, dat hebben we er dus wel meer. Deze onder dit onderste stuk. Eigenlijk zijn er dus wel meer die dus maar één attribuut hebben, terwijl ze er meer zouden kunnen krijgen.
+
+00:05:25 - 00:05:37
+P3: Ja, en dan zou ik nu wel naar de user roles willen gaan. Ja. Ik zet je daar langs en dubbelklik.
+
+00:05:37 - 00:05:38
+Researcher: Ja, ja ja.
+
+00:05:40 - 00:05:44
+P3: Hij heeft de user roles administrator, applicant, employee, manager (...).
+
+00:05:45 - 00:05:50
+Researcher: Een user waarbij dus administrator en user zijn hier de standaard, dus die kan je voor nu negeren.
+
+00:05:56 - 00:06:25
+P3: Ik kijk even naar de bronnen die het heeft gekregen. Hij heeft verder niks gedaan met user management, dus ik zie niks over dat dat een manager en employee kan managen. Daar staat niks over.
+
+00:06:25 - 00:06:58
+P3: Ja verder, de rollen lijken wel goed, maar er zijn ook niet super veel rollen in de in de user stories, dus in die zin lijkt me wel dat hij deze goed heeft gedaan. Hij heeft wel modules goed toegewezen, want die zijn wel allemaal anders. Alleen de user management staat er niks bij. misschien is dat gewoon een open vraag. Misschien omdat het is dat iets wat ergens anders nog gedefinieerd staat, want dat kan hier ook bij.
+
+00:06:59 - 00:07:05
+Researcher: Nee, dit is inderdaad gewoon oké. Er zijn geen module level of entity level dingen.
+
+00:07:06 - 00:07:06
+P3: Oké. Top.
+
+00:07:08 - 00:07:19
+Researcher: En oh ja, en er zijn ook nog flows gemaakt trouwens. Was ik vergeten te zeggen, Er zitten ook flows tussen. Die zitten dan ook daar ergens en die die kan je ook bekijken of dat zo logisch is.
+
+00:07:19 - 00:07:45
+P3: Ik zie er zo. En ja, ik ga maar gewoon één. Oh ja, daarom wil ik die wel zien. Ik ga naar de Payment overview pagina. Is er nu iets wat ik niet zie?
+
+00:07:46 - 00:07:46
+Researcher: Ja.
+
+00:07:46 - 00:08:18
+P3: Nee. Ja. Ja. Leeg. Ja. Oké. Nee. Dan. Uh. Ja. En de navigation bars ook. Die kan je hele kaarten op standaardiseren. Terwijl, die is ook niet helemaal gelukt. Dus nee, die is leeg daar dan. Klik ik nu op een registration process? Nou. Edit. Oh ja, hier kan je dus wel een naam bij aan toevoegen. Dus je kan wel inderdaad je registreren, maar dan doe je dat alleen op naam dus daar. Dat is dan ook weer een attribute, die is.
+
+00:08:18 - 00:08:21
+Researcher: Inderdaad overgenomen één of één van die entiteit. Ja klopt.
+
+00:08:22 - 00:08:32
+P3: Maar goed, dan kijk ik nu even. Oh nee, dat komt niet uit. Wacht, ik ga even terug naar een domein model om een entiteit op te zoeken die veel attributen heeft. En we kijken of ik op die pagina iets zie.
+
+00:08:36 - 00:09:23
+P3: De complaint, die is die. Ja, die is wel goed. Oh. Ja. Ja, de complaint overview pagina heeft dus ook niet. Uhm nee, er staat ook niks op. Ja. Even kijken bij de nieuwe en misschien. Description en status. Ja. Je hebt. Bij de nieuwe edit pagina heeft hij ook maar twee van de van de vijf. Nou ja, laten we zeggen vier belangrijke attributen gezien. Dus die. Die nieuwe edit pagina heeft ze in ieder geval niet allemaal meegenomen. Ja. En als je nu kijkt naar.
+
+00:09:25 - 00:09:43
+P3: Bijvoorbeeld Salary Statements. Die heeft weinig attributen. Nee. Salary Statement heeft ook niks.
+
+00:09:45 - 00:09:48
+Researcher: Het lijkt alsof alle overview pages eigenlijk leeg zijn.
+
+00:09:48 - 00:09:49
+P3: De overview pages zijn leeg.
+
+00:09:49 - 00:09:54
+Researcher: Ik heb nieuw. Editpagina's komen niet per se overeen met de attributen met de attributen. Ja.
+
+00:09:54 - 00:10:12
+P3: Maar ja, dat kan ook zijn omdat ie natuurlijk die relaties niet heeft gelegd. Omdat ie dan. Anders zou ie als een soort quality gate misschien doorhebben dat hij het wel nodig had. Ja dan. Ik heb nog niet naar een detailpagina gekeken. Daar klik ik nu een aantal van aan.
+
+00:10:17 - 00:10:17
+Researcher: Die is ook leeg.
+
+00:10:17 - 00:10:21
+P3: Ja, De details. Lege employee details.
+
+00:10:21 - 00:10:23
+Researcher: Leeg de homepagina.
+
+00:10:27 - 00:10:43
+P3: De homepagina. Klik nu op. Oh ja, die geeft wel de de de dashboards aan als buttons. Ja, en die verwijzen dus wel naar al die overview pagina's en ik betwijfel of je dit kan klikken omdat hij geen relatie heeft in het domeinmodel.
+
+00:10:45 - 00:10:45
+Researcher: In het in het lopende. Dus deze hier. Hier heb je een reden, dus dan kan je alles klikken wat je wilt.
+
+00:10:56 - 00:11:01
+P3: Alleen de buttons en de buttons linken inderdaad goed, maar de pagina's zijn leeg.
+
+00:11:03 - 00:11:04
+Researcher: Dus probeer iets aan te maken.
+
+00:11:05 - 00:11:38
+P3: De ik klik door het menu heen en de achterkant overview is niet leeg. Daarin ga ik nu proberen mijzelf. Als account aan te maken. En ik kan mezelf ook aanvinken als actieve. Dus dat zou ook wel betekenen dat hij. Dat hij iets zou moeten doen. Nou, hij maakt me wel aan. Dus dat is. Dat heeft ie wel goed gedaan.
+
+00:11:39 - 00:11:43
+Researcher: Ja, dat is de Mendix hoofdpagina. Daar is die automatisch naartoe gelinkt.
+
+00:12:05 - 00:12:21
+P3: Uhm. Oké, dan ga ik nu naar een flow kijken.
+
+00:12:22 - 00:12:46
+Researcher: Ja, hij heeft microflows en nanoflows maakt hij. Ja. En dan bij deze eigenlijk allemaal de vraag van is het concept van de flow logisch? Dus dat wordt meestal in de naam aangegeven en is de inhoud logisch in de zin van. Doet het iets? Ja. En is die verbonden met iets? En dat kan je checken door rechtermuisknop en dan find usages.
+
+00:12:57 - 00:13:18
+P3: En nou hier bij deze heeft hij geen usages. Verder vind ik de naam van de flow wel goed, want je hebt sowieso een proces of een flow nodig voor het de outsourced use user story. Dus die heeft ie wel goed.
+
+00:13:18 - 00:13:44
+P3: Hij heeft ook alleen een entity toegevoegd. Ja, alleen een entity toegevoegd met een begin en eindpunt, maar verder geen acties. Dus daarin is de flow redelijk leeg. Misschien staat hier nog iets. Ja, nee. Hij heeft hem dus wel alleen gelinkt aan een entity en gezegd dat hij required is, terwijl ik nu niet direct zie waar die begint en eindigt en wat voor acties zijn.
+
+00:13:44 - 00:13:46
+Researcher: En hij wordt dus niet gebruikt inderdaad. Dus.
+
+00:13:50 - 00:14:25
+P3: Dan neem ik de volgende. Dat is notify employee of complaint status update. Dat is wel een lange naam die op zich wel klopt met wat hij doet. En ja. Ook hier ga ik dan even kijken wat de find usages is. En ook deze lijkt helaas leeg. Dus dan begint mijn vermoeden dat alle dat ze allemaal leeg zijn. Ja.
+
+00:14:28 - 00:14:29
+Researcher: Volgens mij ook ja.
+
+00:14:30 - 00:14:39
+P3: Oh, dus zijn Salary Statement heeft inderdaad wel ook employee gelinkt want het is wel goed is dus. Er staat inderdaad zo'n gele pijl. Ik ben heel veel vergeten hoe dat heet.
+
+00:14:39 - 00:14:41
+Researcher: De parameter, de parameter.
+
+00:14:41 - 00:15:09
+P3: Die heeft als parameter wel employee en Salary Statement inderdaad doorgegeven. Dat is wel een goede stap, alleen die heeft ook geen. Begin of acties. Ook daar ga ik nog heel even de. Find usages opzoeken. Maar die zijn ook leeg, dus dan ga ik er vanaf hier vanuit dat de processen ook leeg zijn.
+
+00:15:15 - 00:15:23
+P3: Verder heb ik dus ook wel de dingen die ik goed heb goed vond. Die zeg ik ook tussendoor, dus die moet je maar even op een rijtje zetten. Ja.
+
+00:15:24 - 00:15:30
+Researcher: Ja, dat system, daar is niks. Uhm. Dat zijn alle standaard dingen nog. En dan nog één nanoflow misschien.
+
+00:15:34 - 00:16:09
+P3: Ja, ik zie hem. Hij heeft één en ander gemaakt send notification to employee. Nee, die heeft geen usages. Maar die heeft wel een message inderdaad. Met als template notification center, employee en als type heeft hij information ingevuld.
+
+00:16:13 - 00:16:21
+P3: Dus ja, hij is anders dan dat hij een entity heeft ingeroepen in the process. Maar verder doet hij ook nog niks omdat hij geen start en end heeft.
+
+00:16:21 - 00:16:24
+Researcher: Ja oké.
+
+00:16:24 - 00:16:26
+P3: Dan denk ik dat ik eigenlijk alles wel heb gezien.
+
+00:16:26 - 00:16:27
+Researcher: Oké. Mooi.

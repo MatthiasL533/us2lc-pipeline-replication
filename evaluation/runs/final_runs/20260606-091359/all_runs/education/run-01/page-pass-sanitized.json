@@ -1,0 +1,297 @@
+{
+  "pages": {
+    "specs": [
+      {
+        "name": "home",
+        "title": "Home Page",
+        "layout": "Blank",
+        "widgets": [
+          {
+            "type": "Text",
+            "text": "Welcome to the Freelance Teacher Platform"
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "freelanceteacher_overview",
+        "title": "Freelance Teachers Overview",
+        "layout": "Table",
+        "entity": "FreelanceTeacher",
+        "columns": [
+          {
+            "attribute": "Title"
+          },
+          {
+            "attribute": "Description"
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "freelanceteacher_detail",
+        "title": "Freelance Teacher Details",
+        "layout": "Form Horizontal",
+        "entity": "FreelanceTeacher",
+        "attributes": [
+          {
+            "attribute": "Title"
+          },
+          {
+            "attribute": "Description"
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "freelanceteacher_new",
+        "title": "Create New Freelance Teacher",
+        "layout": "Form Horizontal",
+        "entity": "FreelanceTeacher",
+        "attributes": [
+          {
+            "attribute": "Title"
+          },
+          {
+            "attribute": "Description"
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "freelanceteacher_edit",
+        "title": "Edit Freelance Teacher",
+        "layout": "Form Horizontal",
+        "entity": "FreelanceTeacher",
+        "attributes": [
+          {
+            "attribute": "Title"
+          },
+          {
+            "attribute": "Description"
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "module_overview",
+        "title": "Modules Overview",
+        "layout": "Table",
+        "entity": "Module",
+        "columns": [
+          {
+            "attribute": "Title"
+          },
+          {
+            "attribute": "Description"
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "module_detail",
+        "title": "Module Details",
+        "layout": "Form Horizontal",
+        "entity": "Module",
+        "attributes": [
+          {
+            "attribute": "Title"
+          },
+          {
+            "attribute": "Description"
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "level_overview",
+        "title": "Levels Overview",
+        "layout": "Table",
+        "entity": "Level",
+        "columns": [
+          {
+            "attribute": "Number"
+          },
+          {
+            "attribute": "Description"
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "quiz_overview",
+        "title": "Quizzes Overview",
+        "layout": "Table",
+        "entity": "Quiz",
+        "columns": [
+          {
+            "attribute": "Title"
+          },
+          {
+            "attribute": "Description"
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "flashcard_overview",
+        "title": "Flashcards Overview",
+        "layout": "Table",
+        "entity": "Flashcard",
+        "columns": [
+          {
+            "attribute": "Question"
+          },
+          {
+            "attribute": "Answer"
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "video_overview",
+        "title": "Videos Overview",
+        "layout": "Table",
+        "entity": "Video",
+        "columns": [
+          {
+            "attribute": "Title"
+          },
+          {
+            "attribute": "Url"
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "researchpaper_overview",
+        "title": "Research Papers Overview",
+        "layout": "Table",
+        "entity": "ResearchPaper",
+        "columns": [
+          {
+            "attribute": "Title"
+          },
+          {
+            "attribute": "Doi"
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "slide_overview",
+        "title": "Slides Overview",
+        "layout": "Table",
+        "entity": "Slide",
+        "columns": [
+          {
+            "attribute": "Title"
+          },
+          {
+            "attribute": "Content"
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "game_overview",
+        "title": "Games Overview",
+        "layout": "Table",
+        "entity": "Game",
+        "columns": [
+          {
+            "attribute": "Title"
+          },
+          {
+            "attribute": "Description"
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "achievement_overview",
+        "title": "Achievements Overview",
+        "layout": "Table",
+        "entity": "Achievement",
+        "columns": [
+          {
+            "attribute": "Title"
+          },
+          {
+            "attribute": "Description"
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "skillassessment_overview",
+        "title": "Skill Assessments Overview",
+        "layout": "Table",
+        "entity": "SkillAssessment",
+        "columns": [
+          {
+            "attribute": "Title"
+          },
+          {
+            "attribute": "Description"
+          }
+        ],
+        "content": []
+      }
+    ]
+  },
+  "app": {
+    "navigation": {
+      "menuItems": [
+        {
+          "name": "Home",
+          "pageRef": "home"
+        },
+        {
+          "name": "Freelance Teachers",
+          "pageRef": "freelanceteacher_overview"
+        },
+        {
+          "name": "Modules",
+          "pageRef": "module_overview"
+        },
+        {
+          "name": "Levels",
+          "pageRef": "level_overview"
+        },
+        {
+          "name": "Quizzes",
+          "pageRef": "quiz_overview"
+        },
+        {
+          "name": "Flashcards",
+          "pageRef": "flashcard_overview"
+        },
+        {
+          "name": "Videos",
+          "pageRef": "video_overview"
+        },
+        {
+          "name": "Research Papers",
+          "pageRef": "researchpaper_overview"
+        },
+        {
+          "name": "Slides",
+          "pageRef": "slide_overview"
+        },
+        {
+          "name": "Games",
+          "pageRef": "game_overview"
+        },
+        {
+          "name": "Achievements",
+          "pageRef": "achievement_overview"
+        },
+        {
+          "name": "Skill Assessments",
+          "pageRef": "skillassessment_overview"
+        }
+      ]
+    }
+  }
+}

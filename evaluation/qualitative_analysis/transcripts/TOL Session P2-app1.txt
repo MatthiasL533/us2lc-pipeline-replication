@@ -1,0 +1,320 @@
+00:00:43 - 00:01:13
+P2: Eens even kijken. We hebben een order, dat is natuurlijk het belangrijkst. Product, customer. Customer zit er in. Ticket.
+
+00:01:27 - 00:01:50
+P2: Is een ticket hetzelfde als een order? Maar goed, dat misschien valt al op. Oh, wacht even. Ticket is gewoon letterlijk een ticket. Ja. Oké.
+
+00:01:54 - 00:01:56
+Researcher: Is die wel correct verbonden met de order?
+
+00:01:59 - 00:02:01
+P2: Nee, hij is niet verbonden met een order.
+
+00:02:01 - 00:02:02
+Researcher: Oké.
+
+00:02:03 - 00:02:13
+P2: Maar. Hij is verbonden met niks. Dat is wel opvallend. Dat is niet goed.
+
+00:02:13 - 00:02:14
+Researcher: Ja.
+
+00:02:16 - 00:02:20
+P2: Ja, die. Die lijntjes zijn wel onduidelijk, hè?
+
+00:02:21 - 00:02:24
+Researcher: Je mag hem ook helemaal uit elkaar slepen en. En kijken wat er achter zit.
+
+00:02:24 - 00:02:53
+P2: Oké. Oké. Nou, dat valt dus op. Die. restaurant owner is ook niet verbonden. Oké, ja, die moet natuurlijk wel. Die moeten allebei. Restaurant Owner is ook weer verbonden aan een restaurant. Maar zien we een restaurant of is dat niet echt aan de orde?
+
+00:03:22 - 00:03:43
+P2: Ik zie er heel veel die niet verbonden zijn. Volgens mij is dat niet echt de bedoeling, dacht ik. Dat is een flaw. I would say. Oké, en nu moeten we dus ook kijken naar de verschillende Hoe heten die dingetjes ook alweer, entiteiten.
+
+00:03:51 - 00:04:04
+P2: Special requests. Oké. Ik vind het op zich gek dat er wat restaurants er niet bij staat. Want die heeft ook wel attributen, heeft een adres die heeft...
+
+00:04:05 - 00:04:05
+Researcher: Ja.
+
+00:04:06 - 00:04:20
+P2: Dat is wel important hè? Ja, gewoon al die dingetjes. Moet ik dan nu benoemen waar ik ze aan zou koppelen?
+
+00:04:20 - 00:04:24
+Researcher: Algemene opmerkingen zijn gewoon prima. Ja.
+
+00:04:24 - 00:04:25
+P2: Oké.
+
+00:04:25 - 00:04:28
+Researcher: Ja. Zijn er bijvoorbeeld entiteiten die eigenlijk nergens op slaan?
+
+00:04:29 - 00:04:39
+P2: Oké, dat is wel een goede. Ja, het order item. Ik weet, ik kan me herinneren van Mendix dat dit een ding is.
+
+00:04:39 - 00:04:41
+Researcher: Ja. Dat je een instance moet hebben van een...
+
+00:04:41 - 00:04:47
+P2: Ja, Alleen ik zou zelf nu denken van oké, dit is redundant. Maar ja goed.
+
+00:04:47 - 00:04:49
+Researcher: En anders zou die verbonden moeten zijn. Ja.
+
+00:04:49 - 00:05:09
+P2: Ja, dat in ieder geval wel. Ehm. Maar goed, dat hebben we al besproken. Ja, je hebt changes, je hebt last minute changes en je had er nog een. Hm. Misschien zou ik dan doen Changes en dan time of zo als attribuut.
+
+00:05:09 - 00:05:10
+Researcher: Ja.
+
+00:05:12 - 00:06:10
+P2: Gewoon om je model een beetje schoon te houden. Goed, dat zijn wel wat details. Dat is het, lijkt me nog steeds. Ik weet niet of dat terugkomt. Vast wel. Ja. Tip. Ja. Ja. Delivery. Maar die moet natuurlijk ook worden verbonden aan een heleboel. Die is wel vrij belangrijk, zou ik zeggen. Dus die moet. Nou ja, zowel de delivery persoon als de customer. Als restaurant. Als order.
+
+00:06:26 - 00:06:31
+Researcher: Zijn er bepaalde attributen die je niet logisch vindt of juist wel heel logisch vindt?
+
+00:06:50 - 00:06:55
+P2: (naming attributes) Misschien Tip als attribuut van order ook nog ja.
+
+00:06:57 - 00:06:59
+Researcher: Er zijn ook echt wel missende attributen. Ja.
+
+00:07:07 - 00:07:29
+P2: Ja, ik zou het niet zeggen per se dat er ergens teveel staan per type. Ja hier bij producten, dat er nog Type of zo dat je ontbijt, diner, lunch of zo specificeert. Ja.
+
+00:07:32 - 00:07:36
+Researcher: Dus er zijn niet per se attributen te veel, maar wel.
+
+00:07:36 - 00:07:36
+P2: Wel te weinig.
+
+00:07:36 - 00:07:37
+Researcher: Te weinig zijn.
+
+00:07:38 - 00:07:50
+P2: Ja, dat zou ik wel zeggen. En. Dan hebben we nu de relaties gehad. We hebben de entities gehad, hebben attribuut gehad. Ja, wat missen we dan nog?
+
+00:07:51 - 00:07:59
+Researcher: In het domein model denk ik niet heel veel meer. Je kan bijvoorbeeld nu bij de user roles gaan kijken, maar bij security daarboven is dat.
+
+00:08:20 - 00:08:26
+P2: Even kijken, dan hebben we een cashier. Ja. Check. Customer check.
+
+00:08:39 - 00:08:58
+P2: Die klopt. Home Delivery person. Ja. Kitchen Employee. Hebben we iemand voor een. User. Ja. Die user.
+
+00:08:58 - 00:09:00
+Researcher: Ja. Ja.
+
+00:09:01 - 00:09:07
+P2: Zou ik zeggen. Hetzelfde als de customer? Ja. Of gewoon. Of is dat ook zo'n automatisch gegenereerde.
+
+00:09:07 - 00:09:11
+Researcher: De user is ook automatisch gegenereerd. Customer. Niet dus. Inderdaad. Ja.
+
+00:09:12 - 00:09:35
+P2: Oké. Nee. Als user een standaardonderdeel van Mendix is. Ja. Oké. Nee, Dan denk ik dat dit wel klopt. Het is ook wel heel basaal zijn als hij dit al niet goed had gedaan. Maar goed, dat is een een waardeoordeel natuurlijk. Ja, nee, dit geloof ik wel. Oké, wat nu? Waar gaan we nu naar kijken?
+
+00:09:36 - 00:09:59
+Researcher: Je kan nu bijvoorbeeld pagina's bekijken en de microflow/nanoflow zit volgens mij ook bij.
+
+00:10:00 - 00:10:06
+Researcher: Ja. En er zitten geloof ik wel een paar pagina's tussen die dan wel echt volledig zelf door de LLM zijn gegenereerd.
+
+00:10:06 - 00:10:07
+P2: Oh echt? Oké.
+
+00:10:07 - 00:10:10
+Researcher: En dat zie je dan ook wel weer aan de inhoud daarvan.
+
+00:10:11 - 00:10:12
+P2: Ik zelf wel even kijken.
+
+00:10:16 - 00:10:20
+Researcher: Die Home_Web. Dat is degene die automatisch gegenereerd door. Als je de app opstart zeg maar.
+
+00:10:20 - 00:10:27
+P2: Oké, ja, want dit klinkt wel als logisch op zich. Ja, gewoon die standaard knoppen. Home web.
+
+00:10:28 - 00:10:31
+Researcher: En die is dan precies die ene standaard pagina.
+
+00:10:35 - 00:10:37
+P2: Oh wat grappig, dat heeft hij zelf gemaakt.
+
+00:10:37 - 00:10:40
+Researcher: Dus als je Mendix opstart een nieuwe app aanmaken.
+
+00:10:41 - 00:10:41
+P2: Dit is gewoon de stand.
+
+00:10:42 - 00:10:50
+Researcher: Vergelijkbaar met die. Hij kan het niet weghalen als je een nieuwe app aanmaakt. Dus hij. Hij houdt het er gewoon in.
+
+00:10:51 - 00:10:52
+P2: Ja, oké.
+
+00:10:52 - 00:10:54
+Researcher: Hij zet wel die homepagina als homepagina.
+
+00:10:54 - 00:11:01
+P2: Ja, daar had hij eigenlijk wat mee moeten doen. Is die homepagina deze moeten maken in deze. Hij heeft gewoon een andere weg.
+
+00:11:01 - 00:11:12
+Researcher: Weghalen of zo. Inderdaad ja. Wat hij wel doet is dus als je straks zo. Als je op play zou klikken, dan gaat hij wel naar die homepagina toe als als homepagina. Oke, dus dat doet dat doet dat hij dat doet.
+
+00:11:12 - 00:11:17
+P2: Hij dan wel. Dan gaat hij naar deze. Ja, oké, dat is fijn. Wel nul errors. Dat is wel vrij sick.
+
+00:11:17 - 00:11:17
+P2: Ja.
+
+00:11:19 - 00:11:31
+Researcher: Ja, sommige apps, uh, sommige datasets hadden wel errors, alleen dat waren dan bijvoorbeeld in een alleen in een microflow, omdat hij dan bepaalde dingetjes niet helemaal begreep.
+
+00:11:32 - 00:11:38
+P2: Makes sense op zich. Inventory hadden we die in het domein model staan. Waar staat ie ook alweer?
+
+00:11:43 - 00:11:47
+Researcher: Een stukje naar beneden. Hier, ja daar, daar naar beneden en beneden naar beneden.
+
+00:11:48 - 00:11:58
+P2: Oh ja. Check. Inventory? Hadden we die hiertussen staan?
+
+00:12:01 - 00:12:10
+P2: Nee. Oh. Wel hier. Oké. Discount. Ja.
+
+00:12:14 - 00:12:17
+Researcher: Ja, dat is eigenlijk al die overview/new edit pages, die zijn inderdaad allemaal standaard gemapt.
+
+00:12:19 - 00:12:43
+P2: Oké, dus dat is allemaal niet boeiend. Dus dat is ook al standaard. Ja, hij heeft niet. Jammer dat hij niet zelf iets leuks ervan heeft gemaakt. Edit Overview Mistakes. Ja, die hebben we gezien. New Order order dashboard. Oké. Cute. Is hij dat bedacht of staat het ook in mijn model?
+
+00:12:45 - 00:12:58
+P2: Lijkt er niet tussen te staan hè? Dat heeft ie bedacht. Nou vind ik op zich een leuke.
+
+00:12:59 - 00:13:01
+Researcher: Ja dus die Dat order dashboard is dat.
+
+00:13:01 - 00:13:04
+P2: Ja, ja, ja, dat vind ik een leuke suggestie.
+
+00:13:05 - 00:13:13
+Researcher: Ja, dat is de. Ja, dat heeft hij volgens mij bedoeld als een soort user facing dashboardpagina, bedoeld voor de voor de.
+
+00:13:13 - 00:13:14
+P2: Status van je delivery.
+
+00:13:14 - 00:13:15
+Researcher: Ja.
+
+00:13:15 - 00:13:18
+P2: Oké. Nou, best leuk. Ook handig voor de restaurant owner.
+
+00:13:18 - 00:13:19
+Researcher: Ja.
+
+00:13:24 - 00:13:30
+P2: Ja, dit vind ik allemaal niet zo heel gek uitzien. Physical tickets dat hij hier in.
+
+00:13:35 - 00:13:41
+P2: Ja. Ticket en Physical ticket. Daar heeft hij wel een andere naam voor gebruikt. Dat is wel een beetje gek.
+
+00:13:47 - 00:13:47
+Researcher: Oh ja.
+
+00:13:47 - 00:13:56
+P2: Oh, hier wacht. Nee, dat zijn twee verschillende entiteiten. Maar dat klopt ook niet trouwens. Nee, want waarvoor er twee verschillende entiteiten zouden zijn.
+
+00:13:56 - 00:14:23
+P2: Nee, dat zou een attribuut attribuut maken bij Ticket voor Physical en dan zo'n. Hoe heet het? Boolean. Ja.
+
+00:14:26 - 00:14:32
+P2: Ja, oké, nu gaan we kijken naar de flows of de microflows.
+
+00:14:32 - 00:14:34
+Researcher: Die [MyFirstLogic] kun je ook negeren, want dat is ook die ene standaard.
+
+00:14:35 - 00:14:36
+P2: Oh oke, het is allemaal die basic.
+
+00:14:36 - 00:14:44
+P2: Ja, oké. Dus het voornaamste wat we nu hebben gezien is het domein model. Dat is het belangrijkst. Of dat een beetje overeenkomt met ja.
+
+00:14:44 - 00:14:50
+Researcher: O ja, en die. Die dus. Er zitten wel microflows in.
+
+00:14:50 - 00:14:52
+P2: Dus het is nog wel even goed om naar de microflows te kijken.
+
+00:14:52 - 00:14:53
+Researcher: Ja.
+
+00:14:55 - 00:14:59
+Researcher: En hier ook. Ze stonden allemaal op elkaar gestapeld. Al die blokjes zeg maar. Dus ik heb ze uit elkaar moeten slepen.
+
+00:14:59 - 00:15:06
+Researcher: Maar die punten heeft hij nog wel gehouden. Daarom ziet het er zo uit alsof het een soort boogje is, zeg maar. Dus het is niet de de formatting die die je gewend bent.
+
+00:15:07 - 00:15:13
+P2: Oké, het is eigenlijk is het gewoon een een rechte. Dus die gaat naar die. En dan dat gaat ie zo via het einde.
+
+00:15:13 - 00:15:40
+Researcher: Want de andere aan de achterkant doet hij om het coördinaat te pakken. Hij zegt Oké, doe. Doe op de X van deze. Doe dan daar de de de pijltje naar toe. Dus als je dan gaat slepen, dan bleef hij daar vastzitten.
+
+00:15:43 - 00:15:58
+P2: Ja, oké. Alleen eerlijkheid gebiedt te zeggen dat die microflows niet echt mijn sterke punt zijn, dus ik zou hier eigenlijk niet veel over kunnen zeggen.
+
+00:16:00 - 00:16:02
+Researcher: Dat is in principe ook prima hoor.
+
+00:16:02 - 00:16:06
+P2: Oh ja, echt mooi.
+
+00:16:06 - 00:16:15
+P2: Oh kijk, dit is funny. Create or. Order change notification. Ja. Oké. Nou.
+
+00:16:16 - 00:16:37
+Researcher: Misschien kan je ook kijken naar. Is de naam van de flow, komt hij dan overeen met iets wat gevraagd wordt in de user stories? Dus niet per se wat er in de flow staat, maar de soort van het concept van de flow. Het concept hier is send order change notification. Komt dat dan overeen met met de idee in de user stories?
+
+00:16:37 - 00:17:04
+P2: Wie zou dat doen dan Zou de de admin of zo doen? Ticketmaster. Change. Notification. As I want to receive notification when new order is received. Dit is order change.
+
+00:17:08 - 00:17:38
+P2: Dan hebben we weer nieuwe notification changes. Oh ja, dat is de volgende. Eventually order is already paid. Dat zien we hier volgens mij. Sent order not order changes occasion. So I know there's changes tomorrow. Oké. Nou, ik zal je misschien nog iets. Nee, dit is wel prima eigenlijk. Update Orderstatus.
+
+00:17:54 - 00:17:55
+P2: Die is op zich ook wel accuraat.
+
+00:18:02 - 00:18:13
+P2: Ja, prima. Ik heb wel het idee dat er te weinig flows zijn.
+
+00:18:13 - 00:18:14
+Researcher: Ja.
+
+00:18:15 - 00:18:22
+P2: Dus dit zijn voorgevoelens. Ik heb ze. Ik heb niet alle user stories gelezen, maar ik kan me voorstellen dat er veel meer flows zijn.
+
+00:18:22 - 00:18:25
+Researcher: Ja ja dus de flows die er zijn zijn misschien logisch.
+
+00:18:25 - 00:18:27
+P2: Ja, die kloppen wel, heb ik het idee.
+
+00:18:27 - 00:18:27
+Researcher: Ja.
+
+00:18:29 - 00:18:38
+P2: Op zich vind ik de benaming ook niet slecht. Alleen zijn lang niet alle processen beschreven in flows.
+
+00:18:38 - 00:18:50
+P2: Ja uhm ja. Dan ga je. Bijvoorbeeld naar tip Hoe? Hoe gaat dat proces? Werkt dat dus niet? Ja, oké.
+
+00:18:50 - 00:18:51
+P2: Andere dingen?
+
+00:18:52 - 00:18:56
+Researcher: Ja, je kan hem bekijken in de localhost.
+
+00:18:57 - 00:18:59
+P2: Ja.

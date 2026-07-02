@@ -1,0 +1,196 @@
+[
+    {
+        "id": "EG0",
+        "conditions": [
+            "so that camper's parents can be aware of their camper behavior and performance at camp",
+            "so that i don't have to spend two hours making 200+ nametags",
+            "so that i can keep organized",
+            "so that the admins next year can improve on the previous years",
+            "so that we can be prepared for an allergy attack",
+            "so that parents can be notified of any upcoming events",
+            "so that i can track which kids are coming in",
+            "so that i can voice my concerns or check on my camper progress",
+            "so that i don't have to deal with my camper losing a consent form"
+        ],
+        "start": 2365,
+        "end": 7202,
+        "paths": [
+            {
+                "start": 2365,
+                "end": 2520
+            },
+            {
+                "start": 2521,
+                "end": 2679
+            },
+            {
+                "start": 2680,
+                "end": 2789
+            },
+            {
+                "start": 2790,
+                "end": 2918
+            },
+            {
+                "start": 2919,
+                "end": 3041
+            },
+            {
+                "start": 3042,
+                "end": 3168
+            },
+            {
+                "start": 3169,
+                "end": 5549
+            },
+            {
+                "start": 5550,
+                "end": 5685
+            },
+            {
+                "start": 5686,
+                "end": 7202
+            }
+        ],
+        "type": "exclusive",
+        "children": [
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [
+                {
+                    "content": {
+                        "agent": {
+                            "entity_group": "AGENT",
+                            "word": "camp administrator",
+                            "start": 3326,
+                            "end": 3344,
+                            "score": 0.99
+                        },
+                        "task": {
+                            "entity_group": "TASK",
+                            "word": "add parents",
+                            "start": 3261,
+                            "end": 3272,
+                            "score": 0.99,
+                            "task_id": "T3"
+                        },
+                        "sentence_idx": 21
+                    },
+                    "type": "task"
+                },
+                {
+                    "content": {
+                        "agent": {
+                            "entity_group": "AGENT",
+                            "word": "camp administrator",
+                            "start": 4524,
+                            "end": 4542,
+                            "score": 0.99
+                        },
+                        "task": {
+                            "entity_group": "TASK",
+                            "word": "modify the information of added parents",
+                            "start": 4426,
+                            "end": 4465,
+                            "score": 0.99,
+                            "task_id": "T4"
+                        },
+                        "sentence_idx": 29
+                    },
+                    "type": "task"
+                },
+                {
+                    "content": {
+                        "agent": {
+                            "entity_group": "AGENT",
+                            "word": "parent",
+                            "start": 4572,
+                            "end": 4578,
+                            "score": 0.99
+                        },
+                        "task": {
+                            "entity_group": "TASK",
+                            "word": "delete parents from the database",
+                            "start": 4565,
+                            "end": 4597,
+                            "score": 0.99,
+                            "task_id": "T5"
+                        },
+                        "sentence_idx": 30
+                    },
+                    "type": "task"
+                },
+                {
+                    "content": {
+                        "agent": {
+                            "entity_group": "AGENT",
+                            "word": "parent",
+                            "start": 5491,
+                            "end": 5497,
+                            "score": 0.99
+                        },
+                        "task": {
+                            "entity_group": "TASK",
+                            "word": "message my camper counselors",
+                            "start": 5520,
+                            "end": 5548,
+                            "score": 0.99,
+                            "task_id": "T6"
+                        },
+                        "sentence_idx": 37
+                    },
+                    "type": "task"
+                }
+            ],
+            [],
+            [
+                {
+                    "content": {
+                        "agent": {
+                            "entity_group": "AGENT",
+                            "word": "camp worker",
+                            "start": 6444,
+                            "end": 6455,
+                            "score": 0.99
+                        },
+                        "task": {
+                            "entity_group": "TASK",
+                            "word": "see which campers i am in charge of and where",
+                            "start": 6478,
+                            "end": 6523,
+                            "score": 0.99,
+                            "task_id": "T7"
+                        },
+                        "sentence_idx": 45
+                    },
+                    "type": "task"
+                },
+                {
+                    "content": {
+                        "agent": {
+                            "entity_group": "AGENT",
+                            "word": "camp counselor",
+                            "start": 7086,
+                            "end": 7100,
+                            "score": 0.99
+                        },
+                        "task": {
+                            "entity_group": "TASK",
+                            "word": "take attendance of my assigned kids",
+                            "start": 7112,
+                            "end": 7147,
+                            "score": 0.99,
+                            "task_id": "T8"
+                        },
+                        "sentence_idx": 50
+                    },
+                    "type": "task"
+                }
+            ]
+        ]
+    }
+]

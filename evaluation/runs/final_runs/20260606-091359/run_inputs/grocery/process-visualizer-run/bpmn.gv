@@ -1,0 +1,54 @@
+digraph bpmn_diagram {
+	node [color=black fillcolor=bisque shape=box style=filled]
+	T0 [label="employee: receive my salary statement"]
+	node [color=black fillcolor=azure shape=diamond style=filled]
+	EG0_S [label=X]
+	EG0_E [label=X]
+	node [color=black fillcolor=bisque shape=box style=filled]
+	T1 [label="manager: send salary statements"]
+	EG0_S -> T1 [label="so that my employees have a clear overview"]
+	T1 -> EG0_E
+	T2 [label="manager: express my preferred working hours"]
+	EG0_S -> T2 [label="so that i am most likely to work on hours that best suit i"]
+	T2 -> EG0_E
+	T3 [label="manager: semi-automate the scheduling process"]
+	EG0_S -> T3 [label="so that i am most likely to work on hours that best suit i"]
+	T4 [label="employee: be notified as soon as manual adjustments need to be made"]
+	T3 -> T4
+	T5 [label="office employee: the system to automatically verify employees' work hours"]
+	T4 -> T5
+	T6 [label="employee: the system to automatically verify employees' work hours"]
+	T5 -> T6
+	T6 -> EG0_E
+	T7 [label="manager: want to be able to file a complaint regarding my workplace"]
+	EG0_S -> T7 [label="so that my problems can be solved"]
+	T7 -> EG0_E
+	T8 [label="office employee: want to be able to categorize complaints"]
+	EG0_S -> T8 [label="so that there is an overview of the extent of problem areas"]
+	T9 [label="employee: want to be able to categorize complaints"]
+	T8 -> T9
+	T9 -> EG0_E
+	T10 [label="manager: receive a notification"]
+	EG0_S -> T10 [label="so that an employee can stay up to date with the status of my filed complaint"]
+	T10 -> EG0_E
+	T11 [label="applicant: have an overview of all our absent employees"]
+	EG0_S -> T11 [label="so that i can manually verify all our absent employees"]
+	T11 -> EG0_E
+	T12 [label="manager: view my employee's contracts at any given time"]
+	T13 [label="employee: view my employee's certificates at any given time"]
+	T12 -> T13
+	T14 [label="employee: have a user-friendly application"]
+	T13 -> T14
+	T14 -> EG0_E
+	T15 [label="employee: want the application as secure as possible"]
+	EG0_S -> T15 [label="so that i have a clear overview of important work-related information"]
+	T15 -> EG0_E
+	T0 -> EG0_S
+	node [color=black fillcolor=lightpink shape=ellipse style=filled]
+	START_0 [label=START]
+	START_0 -> T0
+	END_0 [label=END]
+	EG0_E -> END_0
+	START_1 [label=START]
+	START_1 -> T12
+}

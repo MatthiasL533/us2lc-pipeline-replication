@@ -1,0 +1,138 @@
+{
+  "meta": {
+    "planVersion": "1.1.0",
+    "name": "reference-07-client-actions-create-app.json"
+  },
+  "app": {
+    "branch": "main",
+    "moduleName": "MyFirstModule",
+    "layoutQualifiedName": "Atlas_Core.Atlas_Default",
+    "homePageRef": "home",
+    "navigation": {
+      "homePageButtons": [
+        { "pageRef": "resource_links", "caption": "Resource Links", "icon": { "name": "home" }, "allowedRoles": ["SupportAgent"] }
+      ],
+      "menuItems": [
+        { "pageRef": "home", "caption": "Home", "icon": { "name": "home" }, "allowedRoles": ["SupportAgent"] },
+        { "pageRef": "resource_links", "caption": "Resource Links", "icon": { "name": "home" }, "allowedRoles": ["SupportAgent"] }
+      ]
+    }
+  },
+  "execution": {
+    "createApp": true,
+    "createAppNamePrefix": "Reference07ClientActions",
+    "createAppRepositoryType": "git",
+    "commit": true,
+    "commitMessage": "Reference 07: client actions and create-app reference plan",
+    "deleteExistingDomainModel": true,
+    "deleteExistingPages": true,
+    "deleteExistingMicroflows": true,
+    "deleteExistingWorkflows": true
+  },
+  "domainModel": {
+    "entities": [
+      {
+        "name": "ResourceLink",
+        "attributes": [
+          { "name": "Title", "type": "String", "required": true },
+          { "name": "Category", "type": "String", "required": true },
+          { "name": "DestinationUrl", "type": "String", "required": true }
+        ]
+      }
+    ],
+    "associations": [],
+    "enumerations": []
+  },
+  "security": {
+    "enabled": true,
+    "securityLevel": "prototype",
+    "moduleRoles": ["SupportAgent"],
+    "userRoles": [
+      { "name": "SupportAgent", "moduleRoles": ["SupportAgent"], "systemModuleRole": "System.User" }
+    ],
+    "demoUsers": [
+      { "userName": "demo_support_agent", "password": "Support123!", "userRoles": ["SupportAgent"] }
+    ]
+  },
+  "nanoflows": {
+    "specs": [
+      {
+        "ref": "nf_quick_help",
+        "name": "NF_QuickHelp",
+        "allowedRoles": ["SupportAgent"],
+        "actions": [
+          { "type": "showMessage", "message": "Client-side help opened from the reference plan." }
+        ]
+      }
+    ]
+  },
+  "pages": {
+    "specs": [
+      {
+        "ref": "home",
+        "name": "Home",
+        "title": "Client Actions Home",
+        "allowedRoles": ["SupportAgent"],
+        "content": [
+          { "type": "dynamicText", "text": "Client action showcase", "renderMode": "H2" },
+          { "type": "buttonToPage", "caption": "Browse Resource Links", "targetPageRef": "resource_links" },
+          { "type": "callNanoflowButton", "caption": "Show Quick Help", "nanoflowRef": "nf_quick_help" },
+          { "type": "openLinkButton", "caption": "Open Mendix Documentation", "url": "https://docs.mendix.com" }
+        ]
+      },
+      {
+        "ref": "resource_links",
+        "name": "ResourceLink_Overview",
+        "title": "Resource Links",
+        "entityRef": "MyFirstModule.ResourceLink",
+        "allowedRoles": ["SupportAgent"],
+        "content": [
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.ResourceLink",
+            "rowClickTargetPageRef": "resource_link_detail",
+            "itemContent": [
+              { "type": "attributeInput", "attributeRef": "Title", "autoLabel": true },
+              { "type": "attributeInput", "attributeRef": "Category", "autoLabel": false },
+              { "type": "attributeInput", "attributeRef": "DestinationUrl", "autoLabel": false }
+            ]
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Add Resource Link",
+            "entityRef": "MyFirstModule.ResourceLink",
+            "targetPageRef": "resource_link_detail"
+          }
+        ]
+      },
+      {
+        "ref": "resource_link_detail",
+        "name": "ResourceLink_Detail",
+        "title": "Resource Link Detail",
+        "entityRef": "MyFirstModule.ResourceLink",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          { "name": "ResourceLink", "entityRef": "MyFirstModule.ResourceLink", "required": true }
+        ],
+        "allowedRoles": ["SupportAgent"],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "ResourceLink",
+            "labelWidth": 3,
+            "content": [
+              { "type": "attributeInput", "attributeRef": "Title" },
+              { "type": "attributeInput", "attributeRef": "Category" },
+              { "type": "attributeInput", "attributeRef": "DestinationUrl" },
+              { "type": "saveChangesButton", "caption": "Save", "closePage": true },
+              { "type": "cancelChangesButton", "caption": "Cancel", "closePage": true }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "verification": {
+    "failOnMissing": true
+  }
+}

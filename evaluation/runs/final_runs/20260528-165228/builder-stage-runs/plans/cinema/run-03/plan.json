@@ -1,0 +1,2200 @@
+{
+  "meta": {
+    "planVersion": "1.1.0",
+    "generatedAt": "2026-05-29T21:39:37.101Z",
+    "generatedBy": "pipeline.plan-generator",
+    "mergedWithLlm": true
+  },
+  "app": {
+    "appId": "",
+    "branch": "main",
+    "moduleName": "MyFirstModule",
+    "layoutQualifiedName": "Atlas_Core.Atlas_Default",
+    "homePageRef": "home",
+    "navigation": {
+      "homePageButtons": [
+        {
+          "pageRef": "cinema_overview",
+          "caption": "",
+          "allowedRoles": []
+        },
+        {
+          "pageRef": "date_overview",
+          "caption": "",
+          "allowedRoles": []
+        },
+        {
+          "pageRef": "ensure_overview",
+          "caption": "",
+          "allowedRoles": []
+        },
+        {
+          "pageRef": "episode_overview",
+          "caption": "",
+          "allowedRoles": []
+        },
+        {
+          "pageRef": "filmhouse_overview",
+          "caption": "",
+          "allowedRoles": []
+        },
+        {
+          "pageRef": "manually_overview",
+          "caption": "",
+          "allowedRoles": []
+        }
+      ],
+      "menuItems": [
+        {
+          "pageRef": "cinema_overview",
+          "caption": "",
+          "allowedRoles": []
+        },
+        {
+          "pageRef": "date_overview",
+          "caption": "",
+          "allowedRoles": []
+        },
+        {
+          "pageRef": "ensure_overview",
+          "caption": "",
+          "allowedRoles": []
+        },
+        {
+          "pageRef": "episode_overview",
+          "caption": "",
+          "allowedRoles": []
+        },
+        {
+          "pageRef": "filmhouse_overview",
+          "caption": "",
+          "allowedRoles": []
+        },
+        {
+          "pageRef": "manually_overview",
+          "caption": "",
+          "allowedRoles": []
+        }
+      ],
+      "homePageButtonRefs": [
+        "cinema_overview",
+        "date_overview",
+        "ensure_overview",
+        "episode_overview",
+        "filmhouse_overview",
+        "manually_overview"
+      ],
+      "navigationItemRefs": [
+        "cinema_overview",
+        "date_overview",
+        "ensure_overview",
+        "episode_overview",
+        "filmhouse_overview",
+        "manually_overview"
+      ]
+    }
+  },
+  "execution": {
+    "commit": true,
+    "dg2Cleanup": true,
+    "forceLegacyWebClientForLookups": true,
+    "createApp": true,
+    "createAppName": "cinema-run03",
+    "commitMessage": "Practical performance builder-stage run: cinema run-03"
+  },
+  "domainModel": {
+    "entities": [
+      {
+        "name": "Movie",
+        "attributes": [
+          {
+            "name": "Title",
+            "type": "String",
+            "required": true
+          },
+          {
+            "name": "Description",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "Status",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "CreatedAt",
+            "type": "DateTime",
+            "required": false
+          },
+          {
+            "name": "MovieID",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "Genre",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "Synopsis",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "ReleaseYear",
+            "type": "Integer",
+            "required": false
+          },
+          {
+            "name": "Director",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "ProductionCompany",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "ExternalMovieLink",
+            "type": "String",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "Subscription",
+        "attributes": [
+          {
+            "name": "Title",
+            "type": "String",
+            "required": true
+          },
+          {
+            "name": "Description",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "Status",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "CreatedAt",
+            "type": "DateTime",
+            "required": false
+          },
+          {
+            "name": "SubscriptionID",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "StartDate",
+            "type": "DateTime",
+            "required": false
+          },
+          {
+            "name": "EndDate",
+            "type": "DateTime",
+            "required": false
+          },
+          {
+            "name": "Price",
+            "type": "Decimal",
+            "required": false
+          },
+          {
+            "name": "CancellationDate",
+            "type": "Boolean",
+            "required": false
+          },
+          {
+            "name": "AutoRenewEnabled",
+            "type": "Boolean",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "Date",
+        "attributes": [
+          {
+            "name": "Title",
+            "type": "String",
+            "required": true
+          },
+          {
+            "name": "Description",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "Status",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "CreatedAt",
+            "type": "DateTime",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "MovieShowing",
+        "attributes": [
+          {
+            "name": "Title",
+            "type": "String",
+            "required": true
+          },
+          {
+            "name": "Description",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "Status",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "CreatedAt",
+            "type": "DateTime",
+            "required": false
+          },
+          {
+            "name": "ShowingID",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "StartTime",
+            "type": "DateTime",
+            "required": false
+          },
+          {
+            "name": "DurationMinutes",
+            "type": "Integer",
+            "required": false
+          },
+          {
+            "name": "TicketPrice",
+            "type": "Decimal",
+            "required": false
+          },
+          {
+            "name": "CinemaCity",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "Latitude",
+            "type": "Decimal",
+            "required": false
+          },
+          {
+            "name": "Longitude",
+            "type": "Decimal",
+            "required": false
+          },
+          {
+            "name": "DistanceKm",
+            "type": "Decimal",
+            "required": false
+          },
+          {
+            "name": "IsFavorite",
+            "type": "Boolean",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "Ensure",
+        "attributes": [
+          {
+            "name": "Title",
+            "type": "String",
+            "required": true
+          },
+          {
+            "name": "Description",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "Status",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "CreatedAt",
+            "type": "DateTime",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "Premium",
+        "attributes": [
+          {
+            "name": "Title",
+            "type": "String",
+            "required": true
+          },
+          {
+            "name": "Description",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "Status",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "CreatedAt",
+            "type": "DateTime",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "Manually",
+        "attributes": [
+          {
+            "name": "Title",
+            "type": "String",
+            "required": true
+          },
+          {
+            "name": "Description",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "Status",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "CreatedAt",
+            "type": "DateTime",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "User",
+        "attributes": [
+          {
+            "name": "Email",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "FirstName",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "LastName",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "IsPremium",
+            "type": "Boolean",
+            "required": false
+          },
+          {
+            "name": "Location",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "PreferredLanguage",
+            "type": "String",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "PaymentMethod",
+        "attributes": [
+          {
+            "name": "PaymentMethodID",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "CardType",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "CardNumber",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "ExpiryDate",
+            "type": "DateTime",
+            "required": false
+          },
+          {
+            "name": "BillingZipCode",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "IsActive",
+            "type": "Boolean",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "PaymentTransaction",
+        "attributes": [
+          {
+            "name": "TransactionID",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "TransactionDate",
+            "type": "DateTime",
+            "required": false
+          },
+          {
+            "name": "Amount",
+            "type": "Decimal",
+            "required": false
+          },
+          {
+            "name": "IsSuccessful",
+            "type": "Boolean",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "Cinema",
+        "attributes": [
+          {
+            "name": "CinemaID",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "Name",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "City",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "Address",
+            "type": "String",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "FilmHouse",
+        "attributes": [
+          {
+            "name": "FilmHouseID",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "Name",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "City",
+            "type": "String",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "Season",
+        "attributes": [
+          {
+            "name": "SeasonID",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "SeasonName",
+            "type": "String",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "Episode",
+        "attributes": [
+          {
+            "name": "Name",
+            "type": "String",
+            "required": true
+          },
+          {
+            "name": "Title",
+            "type": "String",
+            "required": true
+          },
+          {
+            "name": "Description",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "Status",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "CreatedAt",
+            "type": "DateTime",
+            "required": false
+          }
+        ]
+      }
+    ],
+    "associations": [
+      {
+        "name": "hasShowing",
+        "parentEntity": "Movie",
+        "childEntity": "MovieShowing",
+        "type": "Reference",
+        "owner": "Both"
+      }
+    ],
+    "enumerations": []
+  },
+  "security": {
+    "enabled": true,
+    "securityLevel": "prototype",
+    "moduleRoles": [
+      "RegisteredUser",
+      "MyFirstModuleRoleAdministrator",
+      "PremiumUser",
+      "MyFirstModuleRoleUser"
+    ],
+    "userRoles": [
+      {
+        "name": "RegisteredUser",
+        "moduleRoles": [
+          "RegisteredUser"
+        ],
+        "systemModuleRole": "System.User"
+      },
+      {
+        "name": "MyFirstModuleRoleAdministrator",
+        "moduleRoles": [
+          "MyFirstModuleRoleAdministrator"
+        ],
+        "systemModuleRole": "System.User"
+      },
+      {
+        "name": "PremiumUser",
+        "moduleRoles": [
+          "PremiumUser"
+        ],
+        "systemModuleRole": "System.User"
+      },
+      {
+        "name": "MyFirstModuleRoleUser",
+        "moduleRoles": [
+          "MyFirstModuleRoleUser"
+        ],
+        "systemModuleRole": "System.User"
+      }
+    ],
+    "demoUsers": []
+  },
+  "pages": {
+    "specs": [
+      {
+        "ref": "home",
+        "name": "Home",
+        "title": "Home",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "Movie Workspace",
+            "renderMode": "H2"
+          },
+          {
+            "type": "dynamicText",
+            "text": "Generated from user stories",
+            "renderMode": "Paragraph"
+          },
+          {
+            "type": "buttonToPage",
+            "caption": "Movie Dashboard",
+            "targetPageRef": "movie_dashboard"
+          },
+          {
+            "type": "buttonToPage",
+            "caption": "Movie Overview",
+            "targetPageRef": "movie_overview"
+          },
+          {
+            "type": "buttonToPage",
+            "caption": "Subscription Overview",
+            "targetPageRef": "subscription_overview"
+          },
+          {
+            "type": "buttonToPage",
+            "caption": "Date Overview",
+            "targetPageRef": "date_overview"
+          },
+          {
+            "type": "buttonToPage",
+            "caption": "MovieShowing Overview",
+            "targetPageRef": "movieshowing_overview"
+          },
+          {
+            "type": "buttonToPage",
+            "caption": "Ensure Overview",
+            "targetPageRef": "ensure_overview"
+          },
+          {
+            "type": "buttonToPage",
+            "caption": "Premium Overview",
+            "targetPageRef": "premium_overview"
+          },
+          {
+            "type": "buttonToPage",
+            "caption": "Manually Overview",
+            "targetPageRef": "manually_overview"
+          },
+          {
+            "type": "buttonToPage",
+            "caption": "cinema overview",
+            "targetPageRef": "cinema_overview"
+          },
+          {
+            "type": "buttonToPage",
+            "caption": "episode overview",
+            "targetPageRef": "episode_overview"
+          },
+          {
+            "type": "buttonToPage",
+            "caption": "filmhouse overview",
+            "targetPageRef": "filmhouse_overview"
+          }
+        ]
+      },
+      {
+        "ref": "movie_dashboard",
+        "name": "Movie_Dashboard",
+        "title": "Movie Dashboard",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "Movie Dashboard",
+            "renderMode": "H2"
+          },
+          {
+            "type": "dynamicText",
+            "text": "Overview and data management for movie.",
+            "renderMode": "Paragraph"
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Add Movie",
+            "entityRef": "MyFirstModule.Movie",
+            "targetPageRef": "movie_newedit"
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.Movie",
+            "rowClickTargetPageRef": "movie_newedit",
+            "autoRowClickToDetail": true,
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Title",
+                "autoLabel": true
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Description",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Status",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "CreatedAt",
+                "autoLabel": false
+              }
+            ]
+          }
+        ],
+        "entityRef": "MyFirstModule.Movie"
+      },
+      {
+        "ref": "movie_overview",
+        "name": "Movie_Overview",
+        "title": "Movie Overview",
+        "entityRef": "MyFirstModule.Movie",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "Movie Overview",
+            "renderMode": "H2"
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Create Movie",
+            "entityRef": "MyFirstModule.Movie",
+            "targetPageRef": "movie_newedit"
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.Movie",
+            "autoRowClickToDetail": true,
+            "rowClickTargetPageRef": "movie_newedit",
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "MovieID",
+                "autoLabel": true
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Title",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Genre",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Synopsis",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "ReleaseYear",
+                "autoLabel": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "movie_newedit",
+        "name": "Movie_NewEdit",
+        "title": "Movie NewEdit",
+        "entityRef": "MyFirstModule.Movie",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          {
+            "name": "Movie",
+            "entityRef": "MyFirstModule.Movie",
+            "required": true
+          }
+        ],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "Movie",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Title"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Description"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Status"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "CreatedAt"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "MovieID"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Genre"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Synopsis"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "ReleaseYear"
+              },
+              {
+                "type": "associationInput",
+                "associationRef": "hasShowing",
+                "targetEntityRef": "MyFirstModule.MovieShowing",
+                "label": "Movie Showing"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "subscription_overview",
+        "name": "Subscription_Overview",
+        "title": "Subscription Overview",
+        "entityRef": "MyFirstModule.Subscription",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "Subscription Overview",
+            "renderMode": "H2"
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Create Subscription",
+            "entityRef": "MyFirstModule.Subscription",
+            "targetPageRef": "subscription_newedit"
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.Subscription",
+            "autoRowClickToDetail": true,
+            "rowClickTargetPageRef": "subscription_newedit",
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "SubscriptionID",
+                "autoLabel": true
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Status",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "StartDate",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "EndDate",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Price",
+                "autoLabel": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "subscription_newedit",
+        "name": "Subscription_NewEdit",
+        "title": "Subscription NewEdit",
+        "entityRef": "MyFirstModule.Subscription",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          {
+            "name": "Subscription",
+            "entityRef": "MyFirstModule.Subscription",
+            "required": true
+          }
+        ],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "Subscription",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "SubscriptionID"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Status"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "StartDate"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "EndDate"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Price"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "CancellationDate"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "AutoRenewEnabled"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "date_overview",
+        "name": "Date_Overview",
+        "title": "Date Overview",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "Date Overview",
+            "renderMode": "H2"
+          },
+          {
+            "type": "dynamicText",
+            "text": "Manage date records and open the create dialog when new data is needed.",
+            "renderMode": "Paragraph"
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Add Date",
+            "entityRef": "MyFirstModule.Date",
+            "targetPageRef": "date_newedit"
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.Date",
+            "rowClickTargetPageRef": "date_newedit",
+            "autoRowClickToDetail": true,
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Title",
+                "autoLabel": true
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Description",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Status",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "CreatedAt",
+                "autoLabel": false
+              }
+            ]
+          }
+        ],
+        "entityRef": "MyFirstModule.Date"
+      },
+      {
+        "ref": "date_newedit",
+        "name": "Date_NewEdit",
+        "title": "Date NewEdit",
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "Date",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Title"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Description"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Status"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "CreatedAt"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ],
+        "entityRef": "MyFirstModule.Date",
+        "pageParameters": [
+          {
+            "name": "Date",
+            "entityRef": "MyFirstModule.Date",
+            "required": true
+          }
+        ]
+      },
+      {
+        "ref": "movieshowing_overview",
+        "name": "MovieShowing_Overview",
+        "title": "MovieShowing Overview",
+        "entityRef": "MyFirstModule.MovieShowing",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "MovieShowing Overview",
+            "renderMode": "H2"
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Create MovieShowing",
+            "entityRef": "MyFirstModule.MovieShowing",
+            "targetPageRef": "movieshowing_newedit"
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.MovieShowing",
+            "autoRowClickToDetail": true,
+            "rowClickTargetPageRef": "movieshowing_newedit",
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "ShowingID",
+                "autoLabel": true
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "StartTime",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "DurationMinutes",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "TicketPrice",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "CinemaCity",
+                "autoLabel": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "movieshowing_newedit",
+        "name": "MovieShowing_NewEdit",
+        "title": "MovieShowing NewEdit",
+        "entityRef": "MyFirstModule.MovieShowing",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          {
+            "name": "MovieShowing",
+            "entityRef": "MyFirstModule.MovieShowing",
+            "required": true
+          }
+        ],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "MovieShowing",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Title"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Description"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Status"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "CreatedAt"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "ShowingID"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "StartTime"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "DurationMinutes"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "TicketPrice"
+              },
+              {
+                "type": "associationInput",
+                "associationRef": "hasShowing",
+                "targetEntityRef": "MyFirstModule.Movie",
+                "label": "Movie"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "ensure_overview",
+        "name": "Ensure_Overview",
+        "title": "Ensure Overview",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "Ensure Overview",
+            "renderMode": "H2"
+          },
+          {
+            "type": "dynamicText",
+            "text": "Manage ensure records and open the create dialog when new data is needed.",
+            "renderMode": "Paragraph"
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Add Ensure",
+            "entityRef": "MyFirstModule.Ensure",
+            "targetPageRef": "ensure_newedit"
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.Ensure",
+            "rowClickTargetPageRef": "ensure_newedit",
+            "autoRowClickToDetail": true,
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Title",
+                "autoLabel": true
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Description",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Status",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "CreatedAt",
+                "autoLabel": false
+              }
+            ]
+          }
+        ],
+        "entityRef": "MyFirstModule.Ensure"
+      },
+      {
+        "ref": "ensure_newedit",
+        "name": "Ensure_NewEdit",
+        "title": "Ensure NewEdit",
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "Ensure",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Title"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Description"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Status"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "CreatedAt"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ],
+        "entityRef": "MyFirstModule.Ensure",
+        "pageParameters": [
+          {
+            "name": "Ensure",
+            "entityRef": "MyFirstModule.Ensure",
+            "required": true
+          }
+        ]
+      },
+      {
+        "ref": "premium_overview",
+        "name": "Premium_Overview",
+        "title": "Premium Overview",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "Premium Overview",
+            "renderMode": "H2"
+          },
+          {
+            "type": "dynamicText",
+            "text": "Manage premium records and open the create dialog when new data is needed.",
+            "renderMode": "Paragraph"
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Add Premium",
+            "entityRef": "MyFirstModule.Premium",
+            "targetPageRef": "premium_newedit"
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.Premium",
+            "rowClickTargetPageRef": "premium_newedit",
+            "autoRowClickToDetail": true,
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Title",
+                "autoLabel": true
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Description",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Status",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "CreatedAt",
+                "autoLabel": false
+              }
+            ]
+          }
+        ],
+        "entityRef": "MyFirstModule.Premium"
+      },
+      {
+        "ref": "premium_newedit",
+        "name": "Premium_NewEdit",
+        "title": "Premium NewEdit",
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "Premium",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Title"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Description"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Status"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "CreatedAt"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ],
+        "entityRef": "MyFirstModule.Premium",
+        "pageParameters": [
+          {
+            "name": "Premium",
+            "entityRef": "MyFirstModule.Premium",
+            "required": true
+          }
+        ]
+      },
+      {
+        "ref": "manually_overview",
+        "name": "Manually_Overview",
+        "title": "Manually Overview",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "Manually Overview",
+            "renderMode": "H2"
+          },
+          {
+            "type": "dynamicText",
+            "text": "Manage manually records and open the create dialog when new data is needed.",
+            "renderMode": "Paragraph"
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Add Manually",
+            "entityRef": "MyFirstModule.Manually",
+            "targetPageRef": "manually_newedit"
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.Manually",
+            "rowClickTargetPageRef": "manually_newedit",
+            "autoRowClickToDetail": true,
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Title",
+                "autoLabel": true
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Description",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Status",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "CreatedAt",
+                "autoLabel": false
+              }
+            ]
+          }
+        ],
+        "entityRef": "MyFirstModule.Manually"
+      },
+      {
+        "ref": "manually_newedit",
+        "name": "Manually_NewEdit",
+        "title": "Manually NewEdit",
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "Manually",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Title"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Description"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Status"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "CreatedAt"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ],
+        "entityRef": "MyFirstModule.Manually",
+        "pageParameters": [
+          {
+            "name": "Manually",
+            "entityRef": "MyFirstModule.Manually",
+            "required": true
+          }
+        ]
+      },
+      {
+        "ref": "user_overview",
+        "name": "User_Overview",
+        "title": "User Overview",
+        "entityRef": "MyFirstModule.User",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "User Overview",
+            "renderMode": "H2"
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Create User",
+            "entityRef": "MyFirstModule.User",
+            "targetPageRef": "user_newedit"
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.User",
+            "autoRowClickToDetail": true,
+            "rowClickTargetPageRef": "user_newedit",
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Email",
+                "autoLabel": true
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "FirstName",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "LastName",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "IsPremium",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Location",
+                "autoLabel": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "user_newedit",
+        "name": "User_NewEdit",
+        "title": "User NewEdit",
+        "entityRef": "MyFirstModule.User",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          {
+            "name": "User",
+            "entityRef": "MyFirstModule.User",
+            "required": true
+          }
+        ],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "User",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Email"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "FirstName"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "LastName"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "IsPremium"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Location"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "PreferredLanguage"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "paymentmethod_overview",
+        "name": "PaymentMethod_Overview",
+        "title": "PaymentMethod Overview",
+        "entityRef": "MyFirstModule.PaymentMethod",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "PaymentMethod Overview",
+            "renderMode": "H2"
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Create PaymentMethod",
+            "entityRef": "MyFirstModule.PaymentMethod",
+            "targetPageRef": "paymentmethod_newedit"
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.PaymentMethod",
+            "autoRowClickToDetail": true,
+            "rowClickTargetPageRef": "paymentmethod_newedit",
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "PaymentMethodID",
+                "autoLabel": true
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "CardType",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "CardNumber",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "ExpiryDate",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "BillingZipCode",
+                "autoLabel": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "paymentmethod_newedit",
+        "name": "PaymentMethod_NewEdit",
+        "title": "PaymentMethod NewEdit",
+        "entityRef": "MyFirstModule.PaymentMethod",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          {
+            "name": "PaymentMethod",
+            "entityRef": "MyFirstModule.PaymentMethod",
+            "required": true
+          }
+        ],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "PaymentMethod",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "PaymentMethodID"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "CardType"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "CardNumber"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "ExpiryDate"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "BillingZipCode"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "IsActive"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "paymenttransaction_overview",
+        "name": "PaymentTransaction_Overview",
+        "title": "PaymentTransaction Overview",
+        "entityRef": "MyFirstModule.PaymentTransaction",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "PaymentTransaction Overview",
+            "renderMode": "H2"
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Create PaymentTransaction",
+            "entityRef": "MyFirstModule.PaymentTransaction",
+            "targetPageRef": "paymenttransaction_newedit"
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.PaymentTransaction",
+            "autoRowClickToDetail": true,
+            "rowClickTargetPageRef": "paymenttransaction_newedit",
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "TransactionID",
+                "autoLabel": true
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "TransactionDate",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Amount",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "IsSuccessful",
+                "autoLabel": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "paymenttransaction_newedit",
+        "name": "PaymentTransaction_NewEdit",
+        "title": "PaymentTransaction NewEdit",
+        "entityRef": "MyFirstModule.PaymentTransaction",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          {
+            "name": "PaymentTransaction",
+            "entityRef": "MyFirstModule.PaymentTransaction",
+            "required": true
+          }
+        ],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "PaymentTransaction",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "TransactionID"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "TransactionDate"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Amount"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "IsSuccessful"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "cinema_overview",
+        "name": "Cinema_Overview",
+        "title": "Cinema Overview",
+        "entityRef": "MyFirstModule.Cinema",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "Cinema Overview",
+            "renderMode": "H2"
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Create Cinema",
+            "entityRef": "MyFirstModule.Cinema",
+            "targetPageRef": "cinema_newedit"
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.Cinema",
+            "autoRowClickToDetail": true,
+            "rowClickTargetPageRef": "cinema_newedit",
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "CinemaID",
+                "autoLabel": true
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "City",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Address",
+                "autoLabel": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "cinema_newedit",
+        "name": "Cinema_NewEdit",
+        "title": "Cinema NewEdit",
+        "entityRef": "MyFirstModule.Cinema",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          {
+            "name": "Cinema",
+            "entityRef": "MyFirstModule.Cinema",
+            "required": true
+          }
+        ],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "Cinema",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "CinemaID"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "City"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Address"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "filmhouse_overview",
+        "name": "FilmHouse_Overview",
+        "title": "FilmHouse Overview",
+        "entityRef": "MyFirstModule.FilmHouse",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "FilmHouse Overview",
+            "renderMode": "H2"
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Create FilmHouse",
+            "entityRef": "MyFirstModule.FilmHouse",
+            "targetPageRef": "filmhouse_newedit"
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.FilmHouse",
+            "autoRowClickToDetail": true,
+            "rowClickTargetPageRef": "filmhouse_newedit",
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "FilmHouseID",
+                "autoLabel": true
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "City",
+                "autoLabel": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "filmhouse_newedit",
+        "name": "FilmHouse_NewEdit",
+        "title": "FilmHouse NewEdit",
+        "entityRef": "MyFirstModule.FilmHouse",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          {
+            "name": "FilmHouse",
+            "entityRef": "MyFirstModule.FilmHouse",
+            "required": true
+          }
+        ],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "FilmHouse",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "FilmHouseID"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "City"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "season_overview",
+        "name": "Season_Overview",
+        "title": "Season Overview",
+        "entityRef": "MyFirstModule.Season",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "Season Overview",
+            "renderMode": "H2"
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Create Season",
+            "entityRef": "MyFirstModule.Season",
+            "targetPageRef": "season_newedit"
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.Season",
+            "autoRowClickToDetail": true,
+            "rowClickTargetPageRef": "season_newedit",
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "SeasonID",
+                "autoLabel": true
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "SeasonName",
+                "autoLabel": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "season_newedit",
+        "name": "Season_NewEdit",
+        "title": "Season NewEdit",
+        "entityRef": "MyFirstModule.Season",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          {
+            "name": "Season",
+            "entityRef": "MyFirstModule.Season",
+            "required": true
+          }
+        ],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "Season",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "SeasonID"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "SeasonName"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "episode_overview",
+        "name": "Episode_Overview",
+        "title": "Episode Overview",
+        "entityRef": "MyFirstModule.Episode",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "Episode Overview",
+            "renderMode": "H2"
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Create Episode",
+            "entityRef": "MyFirstModule.Episode",
+            "targetPageRef": "episode_newedit"
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.Episode",
+            "autoRowClickToDetail": true,
+            "rowClickTargetPageRef": "episode_newedit",
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name",
+                "autoLabel": true
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Title",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Description",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Status",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "CreatedAt",
+                "autoLabel": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "episode_newedit",
+        "name": "Episode_NewEdit",
+        "title": "Episode NewEdit",
+        "entityRef": "MyFirstModule.Episode",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          {
+            "name": "Episode",
+            "entityRef": "MyFirstModule.Episode",
+            "required": true
+          }
+        ],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "Episode",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Title"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Description"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Status"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "CreatedAt"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "verification": {
+    "failOnMissing": true
+  }
+}

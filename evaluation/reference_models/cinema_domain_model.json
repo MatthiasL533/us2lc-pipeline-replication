@@ -1,0 +1,474 @@
+{
+  "appId": "cinema-domain-model-from-final-report",
+  "branch": null,
+  "exportedAt": "2026-05-25",
+  "repository": {
+    "type": "pdf extraction",
+    "url": "/Users/matthiaslouws/Downloads/6. Final report (2).pdf"
+  },
+  "summary": {
+    "domainModels": 1,
+    "modules": [
+      "Cinema"
+    ],
+    "entities": 18,
+    "associations": 21,
+    "attributes": 51,
+    "enumerations": 0
+  },
+  "source": {
+    "reportTitle": "6. Final report",
+    "domainModelFigure": "Appendix C, Figure 3: Domain model of the Cinema platform (including the to-be features)",
+    "domainModelTables": "Section 3.3 Domain model",
+    "note": "Entities and associations were extracted from the final domain-model figure and checked against the accompanying textual domain-model tables. Generalizations are recorded on entities but are not included in the association count."
+  },
+  "domainModels": [
+    {
+      "module": "Cinema",
+      "documentation": "Final Cinema domain model extracted from the report.",
+      "entities": [
+        {
+          "name": "Genre",
+          "qualifiedName": "Cinema.Genre",
+          "attributes": [
+            {
+              "name": "Name",
+              "type": "String"
+            }
+          ]
+        },
+        {
+          "name": "Director",
+          "qualifiedName": "Cinema.Director",
+          "attributes": [
+            {
+              "name": "Name",
+              "type": "String"
+            }
+          ]
+        },
+        {
+          "name": "CastMember",
+          "qualifiedName": "Cinema.CastMember",
+          "attributes": [
+            {
+              "name": "Name",
+              "type": "String"
+            }
+          ]
+        },
+        {
+          "name": "CrewMember",
+          "qualifiedName": "Cinema.CrewMember",
+          "attributes": [
+            {
+              "name": "Name",
+              "type": "String"
+            }
+          ]
+        },
+        {
+          "name": "ProductionCompany",
+          "qualifiedName": "Cinema.ProductionCompany",
+          "attributes": [
+            {
+              "name": "Name",
+              "type": "String"
+            }
+          ]
+        },
+        {
+          "name": "Content",
+          "qualifiedName": "Cinema.Content",
+          "attributes": [
+            {
+              "name": "Title",
+              "type": "String"
+            },
+            {
+              "name": "Synopsis",
+              "type": "String"
+            },
+            {
+              "name": "TrailerUrl",
+              "type": "String"
+            },
+            {
+              "name": "CountriesFilmedIn",
+              "type": "String"
+            },
+            {
+              "name": "SpokenLanguages",
+              "type": "String"
+            },
+            {
+              "name": "PosterUrl",
+              "type": "String"
+            }
+          ]
+        },
+        {
+          "name": "SavedList",
+          "qualifiedName": "Cinema.SavedList",
+          "attributes": [
+            {
+              "name": "Title",
+              "type": "String"
+            },
+            {
+              "name": "Description",
+              "type": "String"
+            }
+          ]
+        },
+        {
+          "name": "User",
+          "qualifiedName": "Cinema.User",
+          "attributes": [
+            {
+              "name": "Address",
+              "type": "String"
+            },
+            {
+              "name": "Email",
+              "type": "String"
+            },
+            {
+              "name": "PhoneNumber",
+              "type": "Integer"
+            },
+            {
+              "name": "FirstName",
+              "type": "String"
+            },
+            {
+              "name": "LastName",
+              "type": "String"
+            },
+            {
+              "name": "LatLive",
+              "type": "Decimal"
+            },
+            {
+              "name": "LongLive",
+              "type": "Decimal"
+            }
+          ]
+        },
+        {
+          "name": "Review",
+          "qualifiedName": "Cinema.Review",
+          "attributes": [
+            {
+              "name": "Title",
+              "type": "String"
+            },
+            {
+              "name": "Description",
+              "type": "String"
+            },
+            {
+              "name": "Rating",
+              "type": "Decimal"
+            }
+          ]
+        },
+        {
+          "name": "Subscription",
+          "qualifiedName": "Cinema.Subscription",
+          "attributes": [
+            {
+              "name": "StartDate",
+              "type": "DateTime"
+            },
+            {
+              "name": "EndDate",
+              "type": "DateTime"
+            },
+            {
+              "name": "IsActive",
+              "type": "Boolean"
+            },
+            {
+              "name": "Price",
+              "type": "Decimal"
+            },
+            {
+              "name": "PaymentMethod",
+              "type": "String"
+            },
+            {
+              "name": "AutoRenew",
+              "type": "Boolean"
+            },
+            {
+              "name": "CancellationDate",
+              "type": "DateTime"
+            }
+          ]
+        },
+        {
+          "name": "Cinema",
+          "qualifiedName": "Cinema.Cinema",
+          "attributes": [
+            {
+              "name": "Name",
+              "type": "String"
+            },
+            {
+              "name": "Latitude",
+              "type": "Decimal"
+            },
+            {
+              "name": "Longitude",
+              "type": "Decimal"
+            },
+            {
+              "name": "Url",
+              "type": "String"
+            },
+            {
+              "name": "City",
+              "type": "String"
+            }
+          ]
+        },
+        {
+          "name": "CinemaMovieAvailability",
+          "qualifiedName": "Cinema.CinemaMovieAvailability",
+          "attributes": [
+            {
+              "name": "StartTime",
+              "type": "DateTime"
+            },
+            {
+              "name": "EndTime",
+              "type": "DateTime"
+            },
+            {
+              "name": "CinemaRoom",
+              "type": "String"
+            },
+            {
+              "name": "TicketPrice",
+              "type": "Decimal"
+            },
+            {
+              "name": "SpecificShowingUrl",
+              "type": "String"
+            }
+          ]
+        },
+        {
+          "name": "Movie",
+          "qualifiedName": "Cinema.Movie",
+          "generalization": "Cinema.Content",
+          "attributes": []
+        },
+        {
+          "name": "Episode",
+          "qualifiedName": "Cinema.Episode",
+          "generalization": "Cinema.Content",
+          "attributes": [
+            {
+              "name": "Number",
+              "type": "Integer"
+            }
+          ]
+        },
+        {
+          "name": "Season",
+          "qualifiedName": "Cinema.Season",
+          "attributes": [
+            {
+              "name": "Title",
+              "type": "String"
+            },
+            {
+              "name": "Number",
+              "type": "Integer"
+            }
+          ]
+        },
+        {
+          "name": "Series",
+          "qualifiedName": "Cinema.Series",
+          "attributes": [
+            {
+              "name": "Title",
+              "type": "String"
+            },
+            {
+              "name": "Synopsis",
+              "type": "String"
+            }
+          ]
+        },
+        {
+          "name": "StreamingSeriesSeasonAvailability",
+          "qualifiedName": "Cinema.StreamingSeriesSeasonAvailability",
+          "attributes": [
+            {
+              "name": "AvailableFrom",
+              "type": "DateTime"
+            },
+            {
+              "name": "AvailableTo",
+              "type": "DateTime"
+            },
+            {
+              "name": "SpecificStreamingUrl",
+              "type": "String"
+            },
+            {
+              "name": "CountryName",
+              "type": "String"
+            }
+          ]
+        },
+        {
+          "name": "StreamingService",
+          "qualifiedName": "Cinema.StreamingService",
+          "attributes": [
+            {
+              "name": "StreamingServiceName",
+              "type": "String"
+            },
+            {
+              "name": "StreamingServiceUrl",
+              "type": "String"
+            }
+          ]
+        }
+      ],
+      "associations": [
+        {
+          "name": "Content_Genre",
+          "source": "Cinema.Content",
+          "target": "Cinema.Genre",
+          "cardinality": "many-to-many"
+        },
+        {
+          "name": "Director_Content",
+          "source": "Cinema.Director",
+          "target": "Cinema.Content",
+          "cardinality": "many-to-many"
+        },
+        {
+          "name": "CastMember_Content",
+          "source": "Cinema.CastMember",
+          "target": "Cinema.Content",
+          "cardinality": "many-to-many"
+        },
+        {
+          "name": "CrewMember_Content",
+          "source": "Cinema.CrewMember",
+          "target": "Cinema.Content",
+          "cardinality": "many-to-many"
+        },
+        {
+          "name": "Content_ProductionCompany",
+          "source": "Cinema.Content",
+          "target": "Cinema.ProductionCompany",
+          "cardinality": "many-to-many"
+        },
+        {
+          "name": "Content_SavedList",
+          "source": "Cinema.Content",
+          "target": "Cinema.SavedList",
+          "cardinality": "many-to-many"
+        },
+        {
+          "name": "User_Creates",
+          "source": "Cinema.User",
+          "target": "Cinema.SavedList",
+          "cardinality": "one-to-many"
+        },
+        {
+          "name": "Follows",
+          "source": "Cinema.User",
+          "target": "Cinema.User",
+          "cardinality": "many-to-many"
+        },
+        {
+          "name": "User_Subscription",
+          "source": "Cinema.User",
+          "target": "Cinema.Subscription",
+          "cardinality": "one-to-one"
+        },
+        {
+          "name": "Favourite_Cinema",
+          "source": "Cinema.User",
+          "target": "Cinema.Cinema",
+          "cardinality": "many-to-many"
+        },
+        {
+          "name": "User_Likes",
+          "source": "Cinema.User",
+          "target": "Cinema.Review",
+          "cardinality": "many-to-many"
+        },
+        {
+          "name": "User_Writes",
+          "source": "Cinema.User",
+          "target": "Cinema.Review",
+          "cardinality": "one-to-many"
+        },
+        {
+          "name": "Review_Content",
+          "source": "Cinema.Review",
+          "target": "Cinema.Content",
+          "cardinality": "many-to-one"
+        },
+        {
+          "name": "CinemaAvailability_Cinema",
+          "source": "Cinema.CinemaMovieAvailability",
+          "target": "Cinema.Cinema",
+          "cardinality": "many-to-one"
+        },
+        {
+          "name": "CinemaAvailability_Movie",
+          "source": "Cinema.CinemaMovieAvailability",
+          "target": "Cinema.Movie",
+          "cardinality": "many-to-one"
+        },
+        {
+          "name": "Episode_Season",
+          "source": "Cinema.Episode",
+          "target": "Cinema.Season",
+          "cardinality": "many-to-one"
+        },
+        {
+          "name": "Review_Season",
+          "source": "Cinema.Review",
+          "target": "Cinema.Season",
+          "cardinality": "many-to-one"
+        },
+        {
+          "name": "Season_Series",
+          "source": "Cinema.Season",
+          "target": "Cinema.Series",
+          "cardinality": "many-to-one"
+        },
+        {
+          "name": "Review_Series",
+          "source": "Cinema.Review",
+          "target": "Cinema.Series",
+          "cardinality": "many-to-one"
+        },
+        {
+          "name": "StreamingSeriesSeasonAvailability_Season",
+          "source": "Cinema.StreamingSeriesSeasonAvailability",
+          "target": "Cinema.Season",
+          "cardinality": "many-to-one"
+        },
+        {
+          "name": "StreamingAvailability_StreamingService",
+          "source": "Cinema.StreamingSeriesSeasonAvailability",
+          "target": "Cinema.StreamingService",
+          "cardinality": "many-to-one"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,272 @@
+
+> us2lc-pipeline@1.0.0 generate:vn
+> node pipeline/generate-vn-cli.js --input-dir=artifacts/practical-performance/20260528-165228/inputs/grocery --output-dir=artifacts/vn-runs/grocery
+
+{
+  "ok": true,
+  "inputDir": "/workspace/us2lc-pipeline/artifacts/practical-performance/20260528-165228/inputs/grocery",
+  "artifacts": {
+    "ontologyPath": "/workspace/us2lc-pipeline/artifacts/vn-runs/grocery/visual-narrator-ontology.omn",
+    "storiesPath": "/workspace/us2lc-pipeline/artifacts/vn-runs/grocery/visual-narrator-stories.json",
+    "summaryPath": "/workspace/us2lc-pipeline/artifacts/vn-runs/grocery/visual-narrator-summary.json",
+    "rawPath": "/workspace/us2lc-pipeline/artifacts/vn-runs/grocery/visual-narrator-result.json"
+  },
+  "summary": {
+    "classNames": [
+      "Salary Statement",
+      "Statement",
+      "Salary",
+      "Overview",
+      "Option",
+      "Payment System",
+      "Payment",
+      "Part",
+      "Notification",
+      "Date",
+      "Ability",
+      "Operation",
+      "Schedule",
+      "Practicalperf_grocery_stability",
+      "Hour",
+      "Track",
+      "Complaint",
+      "Office",
+      "Account",
+      "Contract",
+      "Certificate",
+      "Management",
+      "Message",
+      "Inbox",
+      "Password",
+      "Application",
+      "Email"
+    ],
+    "classes": [
+      {
+        "name": "Salary Statement",
+        "parent": "Statement",
+        "isRole": false
+      },
+      {
+        "name": "Statement",
+        "parent": "",
+        "isRole": false
+      },
+      {
+        "name": "Salary",
+        "parent": "",
+        "isRole": false
+      },
+      {
+        "name": "Overview",
+        "parent": "",
+        "isRole": false
+      },
+      {
+        "name": "Option",
+        "parent": "",
+        "isRole": false
+      },
+      {
+        "name": "Payment System",
+        "parent": "System",
+        "isRole": false
+      },
+      {
+        "name": "Payment",
+        "parent": "",
+        "isRole": false
+      },
+      {
+        "name": "Part",
+        "parent": "",
+        "isRole": false
+      },
+      {
+        "name": "Notification",
+        "parent": "",
+        "isRole": false
+      },
+      {
+        "name": "Date",
+        "parent": "",
+        "isRole": false
+      },
+      {
+        "name": "Ability",
+        "parent": "",
+        "isRole": false
+      },
+      {
+        "name": "Operation",
+        "parent": "",
+        "isRole": false
+      },
+      {
+        "name": "Schedule",
+        "parent": "",
+        "isRole": false
+      },
+      {
+        "name": "Practicalperf_grocery_stability",
+        "parent": "",
+        "isRole": false
+      },
+      {
+        "name": "Hour",
+        "parent": "",
+        "isRole": false
+      },
+      {
+        "name": "Track",
+        "parent": "",
+        "isRole": false
+      },
+      {
+        "name": "Complaint",
+        "parent": "",
+        "isRole": false
+      },
+      {
+        "name": "Office",
+        "parent": "",
+        "isRole": false
+      },
+      {
+        "name": "Account",
+        "parent": "",
+        "isRole": false
+      },
+      {
+        "name": "Contract",
+        "parent": "",
+        "isRole": false
+      },
+      {
+        "name": "Certificate",
+        "parent": "",
+        "isRole": false
+      },
+      {
+        "name": "Management",
+        "parent": "",
+        "isRole": false
+      },
+      {
+        "name": "Message",
+        "parent": "",
+        "isRole": false
+      },
+      {
+        "name": "Inbox",
+        "parent": "",
+        "isRole": false
+      },
+      {
+        "name": "Password",
+        "parent": "",
+        "isRole": false
+      },
+      {
+        "name": "Application",
+        "parent": "",
+        "isRole": false
+      },
+      {
+        "name": "Email",
+        "parent": "",
+        "isRole": false
+      }
+    ],
+    "relationships": [
+      {
+        "name": "hasStatement",
+        "domain": "Salary",
+        "range": "Salary Statement"
+      },
+      {
+        "name": "hasSystem",
+        "domain": "Payment",
+        "range": "Payment System"
+      }
+    ],
+    "keyNouns": [
+      {
+        "term": "Complaint",
+        "weight": 7
+      },
+      {
+        "term": "Overview",
+        "weight": 6
+      },
+      {
+        "term": "Schedule",
+        "weight": 3.5
+      },
+      {
+        "term": "Statement",
+        "weight": 3
+      },
+      {
+        "term": "Notification",
+        "weight": 3
+      },
+      {
+        "term": "Payment",
+        "weight": 2.66
+      },
+      {
+        "term": "Office",
+        "weight": 2.64
+      },
+      {
+        "term": "Application",
+        "weight": 2
+      },
+      {
+        "term": "Date",
+        "weight": 2
+      },
+      {
+        "term": "Contract",
+        "weight": 2
+      },
+      {
+        "term": "Account",
+        "weight": 1.5
+      },
+      {
+        "term": "Hour",
+        "weight": 1.5
+      },
+      {
+        "term": "Salary",
+        "weight": 1.32
+      },
+      {
+        "term": "Email",
+        "weight": 1
+      },
+      {
+        "term": "Management",
+        "weight": 1
+      }
+    ],
+    "inferredRoles": [
+      "applicant",
+      "employee",
+      "manager"
+    ],
+    "discardedClassNames": [
+      "Employee",
+      "Manager",
+      "System",
+      "Office Employee",
+      "Applicant",
+      "Information",
+      "Process"
+    ]
+  },
+  "status": "completed",
+  "command": "/workspace/us2lc-pipeline/visual-narrator/.venv/bin/python /workspace/us2lc-pipeline/pipeline/scripts/run_visual_narrator.py --input /workspace/us2lc-pipeline/artifacts/practical-performance/20260528-165228/inputs/grocery/user-stories.txt --system-name PracticalPerf_grocery_Stability"
+}

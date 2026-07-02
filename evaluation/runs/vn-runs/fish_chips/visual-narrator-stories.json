@@ -1,0 +1,1705 @@
+[
+  {
+    "number": 1,
+    "text": "As a Kitchen Employee, I want to see the orders with their status, so that I am aware of the progress of each order.",
+    "role": {
+      "name": "Employee",
+      "compound": [
+        "Kitchen",
+        "Employee"
+      ]
+    },
+    "means": {
+      "mainObject": "orders",
+      "compound": []
+    },
+    "json": {
+      "number": 1,
+      "text": "As a Kitchen Employee, I want to see the orders with their status, so that I am aware of the progress of each order.",
+      "iloc": [
+        4,
+        15
+      ],
+      "role": {
+        "text": "Kitchen Employee",
+        "indicator": "As a"
+      },
+      "means": {
+        "text": "see the orders with their status",
+        "indicator": "I want to"
+      },
+      "ends": {
+        "text": "I am aware of the progress of each order",
+        "indicator": "So that"
+      }
+    }
+  },
+  {
+    "number": 2,
+    "text": "As a Kitchen Employee, I want to have an overview of all orders at a glance, so that I cannot miss any relevant orders.",
+    "role": {
+      "name": "Employee",
+      "compound": [
+        "Kitchen",
+        "Employee"
+      ]
+    },
+    "means": {
+      "mainObject": "overview",
+      "compound": []
+    },
+    "json": {
+      "number": 2,
+      "text": "As a Kitchen Employee, I want to have an overview of all orders at a glance, so that I cannot miss any relevant orders.",
+      "iloc": [
+        4,
+        18
+      ],
+      "role": {
+        "text": "Kitchen Employee",
+        "indicator": "As a"
+      },
+      "means": {
+        "text": "have an overview of all orders at a glance",
+        "indicator": "I want to"
+      },
+      "ends": {
+        "text": "I cannot miss any relevant orders",
+        "indicator": "So that"
+      }
+    }
+  },
+  {
+    "number": 3,
+    "text": "As a Kitchen Employee, I want to receive only the products of an order, so that I do not get confused by other irrelevant products.",
+    "role": {
+      "name": "Employee",
+      "compound": [
+        "Kitchen",
+        "Employee"
+      ]
+    },
+    "means": {
+      "mainObject": "products",
+      "compound": []
+    },
+    "json": {
+      "number": 3,
+      "text": "As a Kitchen Employee, I want to receive only the products of an order, so that I do not get confused by other irrelevant products.",
+      "iloc": [
+        4,
+        16
+      ],
+      "role": {
+        "text": "Kitchen Employee",
+        "indicator": "As a"
+      },
+      "means": {
+        "text": "receive only the products of an order",
+        "indicator": "I want to"
+      },
+      "ends": {
+        "text": "I do not get confused by other irrelevant products",
+        "indicator": "So that"
+      }
+    }
+  },
+  {
+    "number": 4,
+    "text": "As a Kitchen Employee, I want to see special requests to be shown together with the product they are concerned about, so that I know if I have to prepare a product in a special way",
+    "role": {
+      "name": "Employee",
+      "compound": [
+        "Kitchen",
+        "Employee"
+      ]
+    },
+    "means": {
+      "mainObject": "requests",
+      "compound": []
+    },
+    "json": {
+      "number": 4,
+      "text": "As a Kitchen Employee, I want to see special requests to be shown together with the product they are concerned about, so that I know if I have to prepare a product in a special way",
+      "iloc": [
+        4,
+        23,
+        26
+      ],
+      "role": {
+        "text": "Kitchen Employee",
+        "indicator": "As a"
+      },
+      "means": {
+        "text": "see special requests to be shown together with the product they are concerned about",
+        "indicator": "I want to"
+      },
+      "ends": {
+        "text": "I know if I have to prepare a product in a special way",
+        "indicator": "So that"
+      }
+    }
+  },
+  {
+    "number": 5,
+    "text": "As a Kitchen Employee, I want to have the order number shown together with its related products, so that I am aware of which order the products are coming from.",
+    "role": {
+      "name": "Employee",
+      "compound": [
+        "Kitchen",
+        "Employee"
+      ]
+    },
+    "means": {
+      "mainObject": "number",
+      "compound": [
+        "order",
+        "number"
+      ]
+    },
+    "json": {
+      "number": 5,
+      "text": "As a Kitchen Employee, I want to have the order number shown together with its related products, so that I am aware of which order the products are coming from.",
+      "iloc": [
+        4,
+        19
+      ],
+      "role": {
+        "text": "Kitchen Employee",
+        "indicator": "As a"
+      },
+      "means": {
+        "text": "have the order number shown together with its related products",
+        "indicator": "I want to"
+      },
+      "ends": {
+        "text": "I am aware of which order the products are coming from",
+        "indicator": "So that"
+      }
+    }
+  },
+  {
+    "number": 6,
+    "text": "As a Kitchen Employee, I want to receive a notification when a new order is received, so that I am aware of the new order.",
+    "role": {
+      "name": "Employee",
+      "compound": [
+        "Kitchen",
+        "Employee"
+      ]
+    },
+    "means": {
+      "mainObject": "notification",
+      "compound": []
+    },
+    "json": {
+      "number": 6,
+      "text": "As a Kitchen Employee, I want to receive a notification when a new order is received, so that I am aware of the new order.",
+      "iloc": [
+        4,
+        18
+      ],
+      "role": {
+        "text": "Kitchen Employee",
+        "indicator": "As a"
+      },
+      "means": {
+        "text": "receive a notification when a new order is received",
+        "indicator": "I want to"
+      },
+      "ends": {
+        "text": "I am aware of the new order",
+        "indicator": "So that"
+      }
+    }
+  },
+  {
+    "number": 7,
+    "text": "As a Kitchen Employee, I want to receive a notification if the customer makes changes after the order is already paid, so that I know that there are changes to an order.",
+    "role": {
+      "name": "Employee",
+      "compound": [
+        "Kitchen",
+        "Employee"
+      ]
+    },
+    "means": {
+      "mainObject": "notification",
+      "compound": []
+    },
+    "json": {
+      "number": 7,
+      "text": "As a Kitchen Employee, I want to receive a notification if the customer makes changes after the order is already paid, so that I know that there are changes to an order.",
+      "iloc": [
+        4,
+        23
+      ],
+      "role": {
+        "text": "Kitchen Employee",
+        "indicator": "As a"
+      },
+      "means": {
+        "text": "receive a notification if the customer makes changes after the order is already paid",
+        "indicator": "I want to"
+      },
+      "ends": {
+        "text": "I know that there are changes to an order",
+        "indicator": "So that"
+      }
+    }
+  },
+  {
+    "number": 8,
+    "text": "As a Ticket Master, I want to label new orders as 'incoming orders', so that incoming orders can be separated from orders with a different status.",
+    "role": {
+      "name": "Master",
+      "compound": [
+        "Ticket",
+        "Master"
+      ]
+    },
+    "means": {
+      "mainObject": "orders",
+      "compound": []
+    },
+    "json": {
+      "number": 8,
+      "text": "As a Ticket Master, I want to label new orders as 'incoming orders', so that incoming orders can be separated from orders with a different status.",
+      "iloc": [
+        4
+      ],
+      "role": {
+        "text": "Ticket Master",
+        "indicator": "As a"
+      },
+      "means": {
+        "text": "label new orders as 'incoming orders'",
+        "indicator": "I want to"
+      },
+      "ends": {
+        "text": "incoming orders can be separated from orders with a different status",
+        "indicator": "So that"
+      }
+    }
+  },
+  {
+    "number": 9,
+    "text": "As a Ticket Master, I want to label a product as 'current orders' at the moment the preparation of the products is started, so that current orders can be separated from orders with a different status.",
+    "role": {
+      "name": "Master",
+      "compound": [
+        "Ticket",
+        "Master"
+      ]
+    },
+    "means": {
+      "mainObject": "product",
+      "compound": []
+    },
+    "json": {
+      "number": 9,
+      "text": "As a Ticket Master, I want to label a product as 'current orders' at the moment the preparation of the products is started, so that current orders can be separated from orders with a different status.",
+      "iloc": [
+        4
+      ],
+      "role": {
+        "text": "Ticket Master",
+        "indicator": "As a"
+      },
+      "means": {
+        "text": "label a product as 'current orders' at the moment the preparation of the products is started",
+        "indicator": "I want to"
+      },
+      "ends": {
+        "text": "current orders can be separated from orders with a different status",
+        "indicator": "So that"
+      }
+    }
+  },
+  {
+    "number": 10,
+    "text": "As a Ticket Master, I want to label a product as 'finished orders' after the preparation of the products is finished, so that finished orders can be separated from orders with a different status.",
+    "role": {
+      "name": "Master",
+      "compound": [
+        "Ticket",
+        "Master"
+      ]
+    },
+    "means": {
+      "mainObject": "product",
+      "compound": []
+    },
+    "json": {
+      "number": 10,
+      "text": "As a Ticket Master, I want to label a product as 'finished orders' after the preparation of the products is finished, so that finished orders can be separated from orders with a different status.",
+      "iloc": [
+        4
+      ],
+      "role": {
+        "text": "Ticket Master",
+        "indicator": "As a"
+      },
+      "means": {
+        "text": "label a product as 'finished orders' after the preparation of the products is finished",
+        "indicator": "I want to"
+      },
+      "ends": {
+        "text": "finished orders can be separated from orders with a different status",
+        "indicator": "So that"
+      }
+    }
+  },
+  {
+    "number": 11,
+    "text": "As a Ticket Master, I want to label products as 'scheduled orders' if their requested time is not yet within ten minutes, so that scheduled orders can be separated from orders with a different status.",
+    "role": {
+      "name": "Master",
+      "compound": [
+        "Ticket",
+        "Master"
+      ]
+    },
+    "means": {
+      "mainObject": "products",
+      "compound": []
+    },
+    "json": {
+      "number": 11,
+      "text": "As a Ticket Master, I want to label products as 'scheduled orders' if their requested time is not yet within ten minutes, so that scheduled orders can be separated from orders with a different status.",
+      "iloc": [
+        4
+      ],
+      "role": {
+        "text": "Ticket Master",
+        "indicator": "As a"
+      },
+      "means": {
+        "text": "label products as 'scheduled orders' if their requested time is not yet within ten minutes",
+        "indicator": "I want to"
+      },
+      "ends": {
+        "text": "scheduled orders can be separated from orders with a different status",
+        "indicator": "So that"
+      }
+    }
+  },
+  {
+    "number": 12,
+    "text": "As a Ticket Master, I want to have an overview of all the incoming orders, so that I know how many orders should still be prepared.",
+    "role": {
+      "name": "Master",
+      "compound": [
+        "Ticket",
+        "Master"
+      ]
+    },
+    "means": {
+      "mainObject": "overview",
+      "compound": []
+    },
+    "json": {
+      "number": 12,
+      "text": "As a Ticket Master, I want to have an overview of all the incoming orders, so that I know how many orders should still be prepared.",
+      "iloc": [
+        4,
+        17
+      ],
+      "role": {
+        "text": "Ticket Master",
+        "indicator": "As a"
+      },
+      "means": {
+        "text": "have an overview of all the incoming orders",
+        "indicator": "I want to"
+      },
+      "ends": {
+        "text": "I know how many orders should still be prepared",
+        "indicator": "So that"
+      }
+    }
+  },
+  {
+    "number": 13,
+    "text": "As a Ticket Master, I want to have an overview of all orders that are currently made by the kitchen, so that I know how many orders are in progress.",
+    "role": {
+      "name": "Master",
+      "compound": [
+        "Ticket",
+        "Master"
+      ]
+    },
+    "means": {
+      "mainObject": "overview",
+      "compound": []
+    },
+    "json": {
+      "number": 13,
+      "text": "As a Ticket Master, I want to have an overview of all orders that are currently made by the kitchen, so that I know how many orders are in progress.",
+      "iloc": [
+        4,
+        22
+      ],
+      "role": {
+        "text": "Ticket Master",
+        "indicator": "As a"
+      },
+      "means": {
+        "text": "have an overview of all orders that are currently made by the kitchen",
+        "indicator": "I want to"
+      },
+      "ends": {
+        "text": "I know how many orders are in progress",
+        "indicator": "So that"
+      }
+    }
+  },
+  {
+    "number": 14,
+    "text": "As a Ticket Master, I want to have an overview of all orders that are completed by the kitchen, so that I know when I should start packing an order.",
+    "role": {
+      "name": "Master",
+      "compound": [
+        "Ticket",
+        "Master"
+      ]
+    },
+    "means": {
+      "mainObject": "overview",
+      "compound": []
+    },
+    "json": {
+      "number": 14,
+      "text": "As a Ticket Master, I want to have an overview of all orders that are completed by the kitchen, so that I know when I should start packing an order.",
+      "iloc": [
+        4,
+        21,
+        24
+      ],
+      "role": {
+        "text": "Ticket Master",
+        "indicator": "As a"
+      },
+      "means": {
+        "text": "have an overview of all orders that are completed by the kitchen",
+        "indicator": "I want to"
+      },
+      "ends": {
+        "text": "I know when I should start packing an order",
+        "indicator": "So that"
+      }
+    }
+  },
+  {
+    "number": 15,
+    "text": "As a Ticket Master, I want to have an overview of all scheduled orders, so that I have an insight into the orders that are scheduled for a later time in the day.",
+    "role": {
+      "name": "Master",
+      "compound": [
+        "Ticket",
+        "Master"
+      ]
+    },
+    "means": {
+      "mainObject": "overview",
+      "compound": []
+    },
+    "json": {
+      "number": 15,
+      "text": "As a Ticket Master, I want to have an overview of all scheduled orders, so that I have an insight into the orders that are scheduled for a later time in the day.",
+      "iloc": [
+        4,
+        16
+      ],
+      "role": {
+        "text": "Ticket Master",
+        "indicator": "As a"
+      },
+      "means": {
+        "text": "have an overview of all scheduled orders",
+        "indicator": "I want to"
+      },
+      "ends": {
+        "text": "I have an insight into the orders that are scheduled for a later time in the day",
+        "indicator": "So that"
+      }
+    }
+  },
+  {
+    "number": 16,
+    "text": "As a Ticket Master, I want to separate the scheduled orders from the other statuses, so that the focus will be on the most relevant orders.",
+    "role": {
+      "name": "Master",
+      "compound": [
+        "Ticket",
+        "Master"
+      ]
+    },
+    "means": {
+      "mainObject": "orders",
+      "compound": []
+    },
+    "json": {
+      "number": 16,
+      "text": "As a Ticket Master, I want to separate the scheduled orders from the other statuses, so that the focus will be on the most relevant orders.",
+      "iloc": [
+        4
+      ],
+      "role": {
+        "text": "Ticket Master",
+        "indicator": "As a"
+      },
+      "means": {
+        "text": "separate the scheduled orders from the other statuses",
+        "indicator": "I want to"
+      },
+      "ends": {
+        "text": "the focus will be on the most relevant orders",
+        "indicator": "So that"
+      }
+    }
+  },
+  {
+    "number": 17,
+    "text": "As a Ticket Master, I want to see the statuses of the products of an order, so that I have a good insight into the progress of an order.",
+    "role": {
+      "name": "Master",
+      "compound": [
+        "Ticket",
+        "Master"
+      ]
+    },
+    "means": {
+      "mainObject": "statuses",
+      "compound": []
+    },
+    "json": {
+      "number": 17,
+      "text": "As a Ticket Master, I want to see the statuses of the products of an order, so that I have a good insight into the progress of an order.",
+      "iloc": [
+        4,
+        18
+      ],
+      "role": {
+        "text": "Ticket Master",
+        "indicator": "As a"
+      },
+      "means": {
+        "text": "see the statuses of the products of an order",
+        "indicator": "I want to"
+      },
+      "ends": {
+        "text": "I have a good insight into the progress of an order",
+        "indicator": "So that"
+      }
+    }
+  },
+  {
+    "number": 18,
+    "text": "As a Ticket Master, I want to see matching colors with the status of each product, so that the status of an order is easier to see at a glance.",
+    "role": {
+      "name": "Master",
+      "compound": [
+        "Ticket",
+        "Master"
+      ]
+    },
+    "means": {
+      "mainObject": "colors",
+      "compound": []
+    },
+    "json": {
+      "number": 18,
+      "text": "As a Ticket Master, I want to see matching colors with the status of each product, so that the status of an order is easier to see at a glance.",
+      "iloc": [
+        4
+      ],
+      "role": {
+        "text": "Ticket Master",
+        "indicator": "As a"
+      },
+      "means": {
+        "text": "see matching colors with the status of each product",
+        "indicator": "I want to"
+      },
+      "ends": {
+        "text": "the status of an order is easier to see at a glance",
+        "indicator": "So that"
+      }
+    }
+  },
+  {
+    "number": 19,
+    "text": "As a Ticket Master, I want to see the order type, so that I know if I need to bring the order to the customer or hand it to our delivery person.",
+    "role": {
+      "name": "Master",
+      "compound": [
+        "Ticket",
+        "Master"
+      ]
+    },
+    "means": {
+      "mainObject": "type",
+      "compound": [
+        "order",
+        "type"
+      ]
+    },
+    "json": {
+      "number": 19,
+      "text": "As a Ticket Master, I want to see the order type, so that I know if I need to bring the order to the customer or hand it to our delivery person.",
+      "iloc": [
+        4,
+        13,
+        16
+      ],
+      "role": {
+        "text": "Ticket Master",
+        "indicator": "As a"
+      },
+      "means": {
+        "text": "see the order type",
+        "indicator": "I want to"
+      },
+      "ends": {
+        "text": "I know if I need to bring the order to the customer or hand it to our delivery person",
+        "indicator": "So that"
+      }
+    }
+  },
+  {
+    "number": 20,
+    "text": "As a Ticket Master, I want to operate the screen with a touchscreen, so that it is easy to use.",
+    "role": {
+      "name": "Master",
+      "compound": [
+        "Ticket",
+        "Master"
+      ]
+    },
+    "means": {
+      "mainObject": "screen",
+      "compound": []
+    },
+    "json": {
+      "number": 20,
+      "text": "As a Ticket Master, I want to operate the screen with a touchscreen, so that it is easy to use.",
+      "iloc": [
+        4
+      ],
+      "role": {
+        "text": "Ticket Master",
+        "indicator": "As a"
+      },
+      "means": {
+        "text": "operate the screen with a touchscreen",
+        "indicator": "I want to"
+      },
+      "ends": {
+        "text": "it is easy to use",
+        "indicator": "So that"
+      }
+    }
+  },
+  {
+    "number": 21,
+    "text": "As a Ticket Master, I want to select orders, so that I can make changes to their status.",
+    "role": {
+      "name": "Master",
+      "compound": [
+        "Ticket",
+        "Master"
+      ]
+    },
+    "means": {
+      "mainObject": "orders",
+      "compound": []
+    },
+    "json": {
+      "number": 21,
+      "text": "As a Ticket Master, I want to select orders, so that I can make changes to their status.",
+      "iloc": [
+        4,
+        11
+      ],
+      "role": {
+        "text": "Ticket Master",
+        "indicator": "As a"
+      },
+      "means": {
+        "text": "select orders",
+        "indicator": "I want to"
+      },
+      "ends": {
+        "text": "I can make changes to their status",
+        "indicator": "So that"
+      }
+    }
+  },
+  {
+    "number": 22,
+    "text": "As a Ticket Master, I want to delete an order, so that no delivered orders are being shown and I can keep a better overview of the orders being in progress.",
+    "role": {
+      "name": "Master",
+      "compound": [
+        "Ticket",
+        "Master"
+      ]
+    },
+    "means": {
+      "mainObject": "order",
+      "compound": []
+    },
+    "json": {
+      "number": 22,
+      "text": "As a Ticket Master, I want to delete an order, so that no delivered orders are being shown and I can keep a better overview of the orders being in progress.",
+      "iloc": [
+        4,
+        19
+      ],
+      "role": {
+        "text": "Ticket Master",
+        "indicator": "As a"
+      },
+      "means": {
+        "text": "delete an order",
+        "indicator": "I want to"
+      },
+      "ends": {
+        "text": "no delivered orders are being shown and I can keep a better overview of the orders being in progress",
+        "indicator": "So that"
+      }
+    }
+  },
+  {
+    "number": 23,
+    "text": "As a Customer, I want to have a screen during the ordering process, so that I can review the order.",
+    "role": {
+      "name": "Customer",
+      "compound": []
+    },
+    "means": {
+      "mainObject": "screen",
+      "compound": []
+    },
+    "json": {
+      "number": 23,
+      "text": "As a Customer, I want to have a screen during the ordering process, so that I can review the order.",
+      "iloc": [
+        3,
+        15
+      ],
+      "role": {
+        "text": "Customer",
+        "indicator": "As a"
+      },
+      "means": {
+        "text": "have a screen during the ordering process",
+        "indicator": "I want to"
+      },
+      "ends": {
+        "text": "I can review the order",
+        "indicator": "So that"
+      }
+    }
+  },
+  {
+    "number": 24,
+    "text": "As a Customer, I want to be able to request a confirmation of payment, so that I am able to declare the costs or use it for my own administration.",
+    "role": {
+      "name": "Customer",
+      "compound": []
+    },
+    "means": {
+      "mainObject": "confirmation",
+      "compound": []
+    },
+    "json": {
+      "number": 24,
+      "text": "As a Customer, I want to be able to request a confirmation of payment, so that I am able to declare the costs or use it for my own administration.",
+      "iloc": [
+        3,
+        16
+      ],
+      "role": {
+        "text": "Customer",
+        "indicator": "As a"
+      },
+      "means": {
+        "text": "request a confirmation of payment",
+        "indicator": "I want to be able to"
+      },
+      "ends": {
+        "text": "I candeclare the costs or use it for my own administration",
+        "indicator": "So that"
+      }
+    }
+  },
+  {
+    "number": 25,
+    "text": "As a Cashier, I want to have a physical ticket that shows the relevant information being printed automatically for the customer, so that I do not have to do that manually.",
+    "role": {
+      "name": "Cashier",
+      "compound": []
+    },
+    "means": {
+      "mainObject": "ticket",
+      "compound": []
+    },
+    "json": {
+      "number": 25,
+      "text": "As a Cashier, I want to have a physical ticket that shows the relevant information being printed automatically for the customer, so that I do not have to do that manually.",
+      "iloc": [
+        3,
+        23
+      ],
+      "role": {
+        "text": "Cashier",
+        "indicator": "As a"
+      },
+      "means": {
+        "text": "have a physical ticket that shows the relevant information being printed automatically for the customer",
+        "indicator": "I want to"
+      },
+      "ends": {
+        "text": "I do not have to do that manually",
+        "indicator": "So that"
+      }
+    }
+  },
+  {
+    "number": 26,
+    "text": "As a Cashier, I want to print a physical ticket that shows the relevant order details, so the customer has an insight into his order, and there will be no misunderstanding when the customer receives his order.",
+    "role": {
+      "name": "Cashier",
+      "compound": []
+    },
+    "means": {
+      "mainObject": "ticket",
+      "compound": []
+    },
+    "json": {
+      "number": 26,
+      "text": "As a Cashier, I want to print a physical ticket that shows the relevant order details, so the customer has an insight into his order, and there will be no misunderstanding when the customer receives his order.",
+      "iloc": [
+        3
+      ],
+      "role": {
+        "text": "Cashier",
+        "indicator": "As a"
+      },
+      "means": {
+        "text": "print a physical ticket that shows the relevant order details",
+        "indicator": "I want to"
+      },
+      "ends": {
+        "text": "the customer has an insight into his order and there will be no misunderstanding when the customer receives his order",
+        "indicator": "So"
+      }
+    }
+  },
+  {
+    "number": 27,
+    "text": "As a Cashier, I want to make changes during the order, so that a misunderstanding with the customer or a mistake from me can be resolved.",
+    "role": {
+      "name": "Cashier",
+      "compound": []
+    },
+    "means": {
+      "mainObject": "changes",
+      "compound": []
+    },
+    "json": {
+      "number": 27,
+      "text": "As a Cashier, I want to make changes during the order, so that a misunderstanding with the customer or a mistake from me can be resolved.",
+      "iloc": [
+        3
+      ],
+      "role": {
+        "text": "Cashier",
+        "indicator": "As a"
+      },
+      "means": {
+        "text": "make changes during the order",
+        "indicator": "I want to"
+      },
+      "ends": {
+        "text": "a misunderstanding with the customer or a mistake from me can be resolved",
+        "indicator": "So that"
+      }
+    }
+  },
+  {
+    "number": 28,
+    "text": "As a Cashier, I want to make changes after the order has been processed, so that the customer can make last-minute changes.",
+    "role": {
+      "name": "Cashier",
+      "compound": []
+    },
+    "means": {
+      "mainObject": "changes",
+      "compound": []
+    },
+    "json": {
+      "number": 28,
+      "text": "As a Cashier, I want to make changes after the order has been processed, so that the customer can make last-minute changes.",
+      "iloc": [
+        3
+      ],
+      "role": {
+        "text": "Cashier",
+        "indicator": "As a"
+      },
+      "means": {
+        "text": "make changes after the order has been processed",
+        "indicator": "I want to"
+      },
+      "ends": {
+        "text": "the customer can make last-minute changes",
+        "indicator": "So that"
+      }
+    }
+  },
+  {
+    "number": 29,
+    "text": "As a Cashier, I want to add the type of order, so that the Ticket Master knows if he/she needs to hand the order directly to the customer or the delivery person.",
+    "role": {
+      "name": "Cashier",
+      "compound": []
+    },
+    "means": {
+      "mainObject": "type",
+      "compound": []
+    },
+    "json": {
+      "number": 29,
+      "text": "As a Cashier, I want to add the type of order, so that the Ticket Master knows if he/she needs to hand the order directly to the customer or the delivery person.",
+      "iloc": [
+        3
+      ],
+      "role": {
+        "text": "Cashier",
+        "indicator": "As a"
+      },
+      "means": {
+        "text": "add the type of order",
+        "indicator": "I want to"
+      },
+      "ends": {
+        "text": "the Ticket Master knows if he/she needs to hand the order directly to the customer or the delivery person",
+        "indicator": "So that"
+      }
+    }
+  },
+  {
+    "number": 30,
+    "text": "As a Cashier, I want to add the pickup time for a takeaway order, so that the kitchen knows when to start preparing the order.",
+    "role": {
+      "name": "Cashier",
+      "compound": []
+    },
+    "means": {
+      "mainObject": "time",
+      "compound": [
+        "pickup",
+        "time"
+      ]
+    },
+    "json": {
+      "number": 30,
+      "text": "As a Cashier, I want to add the pickup time for a takeaway order, so that the kitchen knows when to start preparing the order.",
+      "iloc": [
+        3
+      ],
+      "role": {
+        "text": "Cashier",
+        "indicator": "As a"
+      },
+      "means": {
+        "text": "add the pickup time for a takeaway order",
+        "indicator": "I want to"
+      },
+      "ends": {
+        "text": "the kitchen knows when to start preparing the order",
+        "indicator": "So that"
+      }
+    }
+  },
+  {
+    "number": 31,
+    "text": "As a Cashier, I want to have a digital ticket sent to the kitchen, so that I do not have to walk physically to the kitchen.",
+    "role": {
+      "name": "Cashier",
+      "compound": []
+    },
+    "means": {
+      "mainObject": "ticket",
+      "compound": []
+    },
+    "json": {
+      "number": 31,
+      "text": "As a Cashier, I want to have a digital ticket sent to the kitchen, so that I do not have to walk physically to the kitchen.",
+      "iloc": [
+        3,
+        16
+      ],
+      "role": {
+        "text": "Cashier",
+        "indicator": "As a"
+      },
+      "means": {
+        "text": "have a digital ticket sent to the kitchen",
+        "indicator": "I want to"
+      },
+      "ends": {
+        "text": "I do not have to walk physically to the kitchen",
+        "indicator": "So that"
+      }
+    }
+  },
+  {
+    "number": 32,
+    "text": "As a Cashier, I want to add the delivery address to the order, so that the delivery person knows where he needs to bring the order.",
+    "role": {
+      "name": "Cashier",
+      "compound": []
+    },
+    "means": {
+      "mainObject": "address",
+      "compound": [
+        "delivery",
+        "address"
+      ]
+    },
+    "json": {
+      "number": 32,
+      "text": "As a Cashier, I want to add the delivery address to the order, so that the delivery person knows where he needs to bring the order.",
+      "iloc": [
+        3
+      ],
+      "role": {
+        "text": "Cashier",
+        "indicator": "As a"
+      },
+      "means": {
+        "text": "add the delivery address to the order",
+        "indicator": "I want to"
+      },
+      "ends": {
+        "text": "the delivery person knows where he needs to bring the order",
+        "indicator": "So that"
+      }
+    }
+  },
+  {
+    "number": 33,
+    "text": "As a Cashier, I want to add the phone number to the order, so that the customer can be reached if there are problems with their order.",
+    "role": {
+      "name": "Cashier",
+      "compound": []
+    },
+    "means": {
+      "mainObject": "number",
+      "compound": [
+        "phone",
+        "number"
+      ]
+    },
+    "json": {
+      "number": 33,
+      "text": "As a Cashier, I want to add the phone number to the order, so that the customer can be reached if there are problems with their order.",
+      "iloc": [
+        3
+      ],
+      "role": {
+        "text": "Cashier",
+        "indicator": "As a"
+      },
+      "means": {
+        "text": "add the phone number to the order",
+        "indicator": "I want to"
+      },
+      "ends": {
+        "text": "the customer can be reached if there are problems with their order",
+        "indicator": "So that"
+      }
+    }
+  },
+  {
+    "number": 34,
+    "text": "As a Cashier, I want to add the customer's name to the order in the case of takeaway, so it is clear for the customer for which order to pay.",
+    "role": {
+      "name": "Cashier",
+      "compound": []
+    },
+    "means": {
+      "mainObject": "name",
+      "compound": []
+    },
+    "json": {
+      "number": 34,
+      "text": "As a Cashier, I want to add the customer's name to the order in the case of takeaway, so it is clear for the customer for which order to pay.",
+      "iloc": [
+        3
+      ],
+      "role": {
+        "text": "Cashier",
+        "indicator": "As a"
+      },
+      "means": {
+        "text": "add the customer's name to the order in the case of takeaway",
+        "indicator": "I want to"
+      },
+      "ends": {
+        "text": "it is clear for the customer for which order to pay",
+        "indicator": "So"
+      }
+    }
+  },
+  {
+    "number": 35,
+    "text": "As a Cashier, I want to add special requests to a product they are concerned about, so that I can customize the order for the customer.",
+    "role": {
+      "name": "Cashier",
+      "compound": []
+    },
+    "means": {
+      "mainObject": "requests",
+      "compound": []
+    },
+    "json": {
+      "number": 35,
+      "text": "As a Cashier, I want to add special requests to a product they are concerned about, so that I can customize the order for the customer.",
+      "iloc": [
+        3,
+        18
+      ],
+      "role": {
+        "text": "Cashier",
+        "indicator": "As a"
+      },
+      "means": {
+        "text": "add special requests to a product they are concerned about",
+        "indicator": "I want to"
+      },
+      "ends": {
+        "text": "I can customize the order for the customer",
+        "indicator": "So that"
+      }
+    }
+  },
+  {
+    "number": 36,
+    "text": "As a Cashier, I want to offer different payment methods, so that a customer has multiple options to pay for their order.",
+    "role": {
+      "name": "Cashier",
+      "compound": []
+    },
+    "means": {
+      "mainObject": "methods",
+      "compound": [
+        "payment",
+        "methods"
+      ]
+    },
+    "json": {
+      "number": 36,
+      "text": "As a Cashier, I want to offer different payment methods, so that a customer has multiple options to pay for their order.",
+      "iloc": [
+        3
+      ],
+      "role": {
+        "text": "Cashier",
+        "indicator": "As a"
+      },
+      "means": {
+        "text": "offer different payment methods",
+        "indicator": "I want to"
+      },
+      "ends": {
+        "text": "a customer has multiple options to pay for their order",
+        "indicator": "So that"
+      }
+    }
+  },
+  {
+    "number": 37,
+    "text": "As a Cashier, I want to be able to add a tip to the price of the order with all possible payment options, so that there is no hassle for the customer to tip.",
+    "role": {
+      "name": "Cashier",
+      "compound": []
+    },
+    "means": {
+      "mainObject": "tip",
+      "compound": []
+    },
+    "json": {
+      "number": 37,
+      "text": "As a Cashier, I want to be able to add a tip to the price of the order with all possible payment options, so that there is no hassle for the customer to tip.",
+      "iloc": [
+        3
+      ],
+      "role": {
+        "text": "Cashier",
+        "indicator": "As a"
+      },
+      "means": {
+        "text": "add a tip to the price of the order with all possible payment options",
+        "indicator": "I want to be able to"
+      },
+      "ends": {
+        "text": "there is no hassle for the customer to tip",
+        "indicator": "So that"
+      }
+    }
+  },
+  {
+    "number": 38,
+    "text": "As a Cashier, I want to activate coupons during the order process, so that discounts can be added to the order.",
+    "role": {
+      "name": "Cashier",
+      "compound": []
+    },
+    "means": {
+      "mainObject": "coupons",
+      "compound": []
+    },
+    "json": {
+      "number": 38,
+      "text": "As a Cashier, I want to activate coupons during the order process, so that discounts can be added to the order.",
+      "iloc": [
+        3
+      ],
+      "role": {
+        "text": "Cashier",
+        "indicator": "As a"
+      },
+      "means": {
+        "text": "activate coupons during the order process",
+        "indicator": "I want to"
+      },
+      "ends": {
+        "text": "discounts can be added to the order",
+        "indicator": "So that"
+      }
+    }
+  },
+  {
+    "number": 39,
+    "text": "As a Restaurant Owner, I want to see the VAT of each order, so that I have an overview of the taxes.",
+    "role": {
+      "name": "Owner",
+      "compound": [
+        "Restaurant",
+        "Owner"
+      ]
+    },
+    "means": {
+      "mainObject": "VAT",
+      "compound": []
+    },
+    "json": {
+      "number": 39,
+      "text": "As a Restaurant Owner, I want to see the VAT of each order, so that I have an overview of the taxes.",
+      "iloc": [
+        4,
+        15
+      ],
+      "role": {
+        "text": "Restaurant Owner",
+        "indicator": "As a"
+      },
+      "means": {
+        "text": "see the VAT of each order",
+        "indicator": "I want to"
+      },
+      "ends": {
+        "text": "I have an overview of the taxes",
+        "indicator": "So that"
+      }
+    }
+  },
+  {
+    "number": 40,
+    "text": "As a Restaurant Owner, I want to see the sold products, so that I know what products to purchase for restocking the inventory.",
+    "role": {
+      "name": "Owner",
+      "compound": [
+        "Restaurant",
+        "Owner"
+      ]
+    },
+    "means": {
+      "mainObject": "products",
+      "compound": []
+    },
+    "json": {
+      "number": 40,
+      "text": "As a Restaurant Owner, I want to see the sold products, so that I know what products to purchase for restocking the inventory.",
+      "iloc": [
+        4,
+        13
+      ],
+      "role": {
+        "text": "Restaurant Owner",
+        "indicator": "As a"
+      },
+      "means": {
+        "text": "see the sold products",
+        "indicator": "I want to"
+      },
+      "ends": {
+        "text": "I know what products to purchase for restocking the inventory",
+        "indicator": "So that"
+      }
+    }
+  },
+  {
+    "number": 41,
+    "text": "As a Restaurant Owner, I want to have an overview of the types of orders.",
+    "role": {
+      "name": "Owner",
+      "compound": [
+        "Restaurant",
+        "Owner"
+      ]
+    },
+    "means": {
+      "mainObject": "overview",
+      "compound": []
+    },
+    "json": {
+      "number": 41,
+      "text": "As a Restaurant Owner, I want to have an overview of the types of orders.",
+      "iloc": [
+        4
+      ],
+      "role": {
+        "text": "Restaurant Owner",
+        "indicator": "As a"
+      },
+      "means": {
+        "text": "have an overview of the types of orders",
+        "indicator": "I want to"
+      }
+    }
+  },
+  {
+    "number": 42,
+    "text": "As a Restaurant Owner, I want to have an overview of prices per order so that I have an insight into the daily revenue.",
+    "role": {
+      "name": "Owner",
+      "compound": [
+        "Restaurant",
+        "Owner"
+      ]
+    },
+    "means": {
+      "mainObject": "overview",
+      "compound": []
+    },
+    "json": {
+      "number": 42,
+      "text": "As a Restaurant Owner, I want to have an overview of prices per order so that I have an insight into the daily revenue.",
+      "iloc": [
+        4,
+        16
+      ],
+      "role": {
+        "text": "Restaurant Owner",
+        "indicator": "As a"
+      },
+      "means": {
+        "text": "have an overview of prices per order",
+        "indicator": "I want to"
+      },
+      "ends": {
+        "text": "I have an insight into the daily revenue",
+        "indicator": "So that"
+      }
+    }
+  },
+  {
+    "number": 43,
+    "text": "As a Restaurant Owner, I want to search for specific orders if a customer has questions about an order.",
+    "role": {
+      "name": "Owner",
+      "compound": [
+        "Restaurant",
+        "Owner"
+      ]
+    },
+    "means": {
+      "mainObject": "questions",
+      "compound": []
+    },
+    "json": {
+      "number": 43,
+      "text": "As a Restaurant Owner, I want to search for specific orders if a customer has questions about an order.",
+      "iloc": [
+        4
+      ],
+      "role": {
+        "text": "Restaurant Owner",
+        "indicator": "As a"
+      },
+      "means": {
+        "text": "search for specific orders if a customer has questions about an order",
+        "indicator": "I want to"
+      }
+    }
+  },
+  {
+    "number": 44,
+    "text": "As a Restaurant Owner, I want to fill in the number of tips received on a day by the restaurant and the delivery employees, so that this amount can be fairly distributed among all employees.",
+    "role": {
+      "name": "Owner",
+      "compound": [
+        "Restaurant",
+        "Owner"
+      ]
+    },
+    "means": {
+      "mainObject": "number",
+      "compound": []
+    },
+    "json": {
+      "number": 44,
+      "text": "As a Restaurant Owner, I want to fill in the number of tips received on a day by the restaurant and the delivery employees, so that this amount can be fairly distributed among all employees.",
+      "iloc": [
+        4
+      ],
+      "role": {
+        "text": "Restaurant Owner",
+        "indicator": "As a"
+      },
+      "means": {
+        "text": "fill in the number of tips received on a day by the restaurant and the delivery employees",
+        "indicator": "I want to"
+      },
+      "ends": {
+        "text": "this amount can be fairly distributed among all employees",
+        "indicator": "So that"
+      }
+    }
+  },
+  {
+    "number": 45,
+    "text": "As a Restaurant Owner, I want to have cashier accounts, so that I can check their balance at the end of a shift.",
+    "role": {
+      "name": "Owner",
+      "compound": [
+        "Restaurant",
+        "Owner"
+      ]
+    },
+    "means": {
+      "mainObject": "accounts",
+      "compound": []
+    },
+    "json": {
+      "number": 45,
+      "text": "As a Restaurant Owner, I want to have cashier accounts, so that I can check their balance at the end of a shift.",
+      "iloc": [
+        4,
+        12
+      ],
+      "role": {
+        "text": "Restaurant Owner",
+        "indicator": "As a"
+      },
+      "means": {
+        "text": "have cashier accounts",
+        "indicator": "I want to"
+      },
+      "ends": {
+        "text": "I can check their balance at the end of a shift",
+        "indicator": "So that"
+      }
+    }
+  },
+  {
+    "number": 46,
+    "text": "As a Restaurant Owner, I want to fill in the amount of cash the delivery people receive per day, so that this value can be compared with the expected revenue of home delivery orders per day.",
+    "role": {
+      "name": "Owner",
+      "compound": [
+        "Restaurant",
+        "Owner"
+      ]
+    },
+    "means": {
+      "mainObject": "amount",
+      "compound": []
+    },
+    "json": {
+      "number": 46,
+      "text": "As a Restaurant Owner, I want to fill in the amount of cash the delivery people receive per day, so that this value can be compared with the expected revenue of home delivery orders per day.",
+      "iloc": [
+        4
+      ],
+      "role": {
+        "text": "Restaurant Owner",
+        "indicator": "As a"
+      },
+      "means": {
+        "text": "fill in the amount of cash the delivery people receive per day",
+        "indicator": "I want to"
+      },
+      "ends": {
+        "text": "this value can be compared with the expected revenue of home delivery orders per day",
+        "indicator": "So that"
+      }
+    }
+  },
+  {
+    "number": 47,
+    "text": "As a Home Delivery Person, I want to have the address printed on the ticket, so that I can directly type the address into the navigation system.",
+    "role": {
+      "name": "Person",
+      "compound": [
+        "Delivery",
+        "Person"
+      ]
+    },
+    "means": {
+      "mainObject": "address",
+      "compound": []
+    },
+    "json": {
+      "number": 47,
+      "text": "As a Home Delivery Person, I want to have the address printed on the ticket, so that I can directly type the address into the navigation system.",
+      "iloc": [
+        5,
+        17
+      ],
+      "role": {
+        "text": "Home Delivery Person",
+        "indicator": "As a"
+      },
+      "means": {
+        "text": "have the address printed on the ticket",
+        "indicator": "I want to"
+      },
+      "ends": {
+        "text": "I can directly type the address into the navigation system",
+        "indicator": "So that"
+      }
+    }
+  },
+  {
+    "number": 48,
+    "text": "As a Home Delivery Person, I want to have the delivery address before the order is finished, so that I can combine orders that need to be delivered in the same area.",
+    "role": {
+      "name": "Person",
+      "compound": [
+        "Delivery",
+        "Person"
+      ]
+    },
+    "means": {
+      "mainObject": "address",
+      "compound": [
+        "delivery",
+        "address"
+      ]
+    },
+    "json": {
+      "number": 48,
+      "text": "As a Home Delivery Person, I want to have the delivery address before the order is finished, so that I can combine orders that need to be delivered in the same area.",
+      "iloc": [
+        5,
+        19
+      ],
+      "role": {
+        "text": "Home Delivery Person",
+        "indicator": "As a"
+      },
+      "means": {
+        "text": "have the delivery address before the order is finished",
+        "indicator": "I want to"
+      },
+      "ends": {
+        "text": "I can combine orders that need to be delivered in the same area",
+        "indicator": "So that"
+      }
+    }
+  },
+  {
+    "number": 49,
+    "text": "As a Home Delivery Person, I want to have the order price on a printed ticket, so that I know what the customers have to pay me.",
+    "role": {
+      "name": "Person",
+      "compound": [
+        "Delivery",
+        "Person"
+      ]
+    },
+    "means": {
+      "mainObject": "price",
+      "compound": [
+        "order",
+        "price"
+      ]
+    },
+    "json": {
+      "number": 49,
+      "text": "As a Home Delivery Person, I want to have the order price on a printed ticket, so that I know what the customers have to pay me.",
+      "iloc": [
+        5,
+        18
+      ],
+      "role": {
+        "text": "Home Delivery Person",
+        "indicator": "As a"
+      },
+      "means": {
+        "text": "have the order price on a printed ticket",
+        "indicator": "I want to"
+      },
+      "ends": {
+        "text": "I know what the customers have to pay me",
+        "indicator": "So that"
+      }
+    }
+  },
+  {
+    "number": 50,
+    "text": "As a Home Delivery Person, I want to know the phone number of the customer on a printed ticket, so that I can call the customer if I have some problems delivering the food to a certain location.",
+    "role": {
+      "name": "Person",
+      "compound": [
+        "Delivery",
+        "Person"
+      ]
+    },
+    "means": {
+      "mainObject": "number",
+      "compound": [
+        "phone",
+        "number"
+      ]
+    },
+    "json": {
+      "number": 50,
+      "text": "As a Home Delivery Person, I want to know the phone number of the customer on a printed ticket, so that I can call the customer if I have some problems delivering the food to a certain location.",
+      "iloc": [
+        5,
+        21,
+        27
+      ],
+      "role": {
+        "text": "Home Delivery Person",
+        "indicator": "As a"
+      },
+      "means": {
+        "text": "know the phone number of the customer on a printed ticket",
+        "indicator": "I want to"
+      },
+      "ends": {
+        "text": "I can call the customer if I have some problems delivering the food to a certain location",
+        "indicator": "So that"
+      }
+    }
+  }
+]

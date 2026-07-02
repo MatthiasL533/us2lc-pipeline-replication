@@ -1,0 +1,1395 @@
+{
+  "meta": {
+    "planVersion": "1.1.0",
+    "generatedAt": "2026-06-06T11:47:36.509Z",
+    "generatedBy": "pipeline.plan-generator"
+  },
+  "app": {
+    "appId": "",
+    "branch": "main",
+    "moduleName": "MyFirstModule",
+    "layoutQualifiedName": "Atlas_Core.Atlas_Default",
+    "homePageRef": "home",
+    "navigation": {
+      "homePageButtons": [
+        {
+          "pageRef": "manager_overview",
+          "caption": "",
+          "icon": null,
+          "allowedRoles": []
+        }
+      ],
+      "menuItems": [
+        {
+          "pageRef": "manager_overview",
+          "caption": "",
+          "icon": null,
+          "allowedRoles": []
+        }
+      ],
+      "homePageButtonRefs": [
+        "manager_overview"
+      ],
+      "navigationItemRefs": [
+        "manager_overview"
+      ],
+      "home": {
+        "caption": "Home",
+        "page": "home"
+      },
+      "students": {
+        "caption": "Students",
+        "page": "studentOverview"
+      },
+      "tutors": {
+        "caption": "Tutors",
+        "page": "tutorOverview"
+      },
+      "sessions": {
+        "caption": "Sessions",
+        "page": "sessionOverview"
+      },
+      "matches": {
+        "caption": "Matches",
+        "page": "matchOverview"
+      }
+    }
+  },
+  "execution": {
+    "commit": false,
+    "dg2Cleanup": true,
+    "forceLegacyWebClientForLookups": true,
+    "createApp": true,
+    "createAppName": "PracticalPerf_tutor_Stability"
+  },
+  "domainModel": {
+    "entities": [
+      {
+        "name": "Student",
+        "attributes": [
+          {
+            "name": "Name",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "Email",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "Address",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "PhoneNumber",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "RegularTutorId",
+            "type": "Integer",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "Tutor",
+        "attributes": [
+          {
+            "name": "Name",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "Email",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "Address",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "CV",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "Qualification",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "PhoneNumber",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "NoShowRateValue",
+            "type": "Decimal",
+            "required": false
+          },
+          {
+            "name": "LateCountValue",
+            "type": "Integer",
+            "required": false
+          },
+          {
+            "name": "BreakdownEarnings",
+            "type": "Decimal",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "Subject",
+        "attributes": [
+          {
+            "name": "Name",
+            "type": "String",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "Session",
+        "attributes": [
+          {
+            "name": "Date",
+            "type": "DateTime",
+            "required": false
+          },
+          {
+            "name": "Duration",
+            "type": "Integer",
+            "required": false
+          },
+          {
+            "name": "OnlineSession",
+            "type": "Boolean",
+            "required": false
+          },
+          {
+            "name": "CancellationReason",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "FeedbackComment",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "NoShowReason",
+            "type": "String",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "Match",
+        "attributes": [
+          {
+            "name": "Name",
+            "type": "String",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "Rating",
+        "attributes": [
+          {
+            "name": "Value",
+            "type": "Integer",
+            "required": false
+          },
+          {
+            "name": "Comment",
+            "type": "String",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "Payment",
+        "attributes": [
+          {
+            "name": "Amount",
+            "type": "Decimal",
+            "required": false
+          },
+          {
+            "name": "Date",
+            "type": "DateTime",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "Manager",
+        "attributes": [
+          {
+            "name": "Name",
+            "type": "String",
+            "required": true
+          },
+          {
+            "name": "Email",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "IsActive",
+            "type": "Boolean",
+            "required": false,
+            "defaultValue": false
+          }
+        ]
+      },
+      {
+        "name": "Notification",
+        "attributes": [
+          {
+            "name": "Message",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "Date",
+            "type": "DateTime",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "MatchHistory",
+        "attributes": [
+          {
+            "name": "Name",
+            "type": "String",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "AvailabilitySchedule",
+        "attributes": [
+          {
+            "name": "DayOfWeek",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "StartTime",
+            "type": "DateTime",
+            "required": false
+          },
+          {
+            "name": "EndTime",
+            "type": "DateTime",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "Location",
+        "attributes": [
+          {
+            "name": "Name",
+            "type": "String",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "Availability",
+        "attributes": [
+          {
+            "name": "Name",
+            "type": "String",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "ChatFunction",
+        "attributes": [
+          {
+            "name": "Name",
+            "type": "String",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "Cancellation",
+        "attributes": [
+          {
+            "name": "SessionId",
+            "type": "Integer",
+            "required": false
+          },
+          {
+            "name": "Reason",
+            "type": "String",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "Feedback",
+        "attributes": [
+          {
+            "name": "SessionId",
+            "type": "Integer",
+            "required": false
+          },
+          {
+            "name": "Comment",
+            "type": "String",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "NoShowRate",
+        "attributes": [
+          {
+            "name": "TutorId",
+            "type": "Integer",
+            "required": false
+          },
+          {
+            "name": "Rate",
+            "type": "Decimal",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "LateCount",
+        "attributes": [
+          {
+            "name": "TutorId",
+            "type": "Integer",
+            "required": false
+          },
+          {
+            "name": "Count",
+            "type": "Integer",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "RegularStudent",
+        "attributes": [
+          {
+            "name": "StudentId",
+            "type": "Integer",
+            "required": false
+          },
+          {
+            "name": "TutorId",
+            "type": "Integer",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "AvailableData",
+        "attributes": [
+          {
+            "name": "CreditSystemId",
+            "type": "Integer",
+            "required": false
+          },
+          {
+            "name": "Data",
+            "type": "String",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "Integration",
+        "attributes": [
+          {
+            "name": "ExternalAccountingServiceId",
+            "type": "Integer",
+            "required": false
+          },
+          {
+            "name": "Status",
+            "type": "String",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "AutomatedTransfer",
+        "attributes": [
+          {
+            "name": "PayingSystemId",
+            "type": "Integer",
+            "required": false
+          },
+          {
+            "name": "Status",
+            "type": "String",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "NoShow",
+        "attributes": [
+          {
+            "name": "SessionId",
+            "type": "Integer",
+            "required": false
+          },
+          {
+            "name": "Reason",
+            "type": "String",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "Breakdown",
+        "attributes": [
+          {
+            "name": "TutorId",
+            "type": "Integer",
+            "required": false
+          },
+          {
+            "name": "Earnings",
+            "type": "Decimal",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "Neighborhood",
+        "attributes": [
+          {
+            "name": "Name",
+            "type": "String",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "Advertisement",
+        "attributes": [
+          {
+            "name": "Content",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "TargetAudience",
+            "type": "String",
+            "required": false
+          }
+        ]
+      }
+    ],
+    "associations": [
+      {
+        "name": "StudentSession",
+        "parentEntity": "Student",
+        "childEntity": "Session",
+        "type": "Reference",
+        "owner": "Both"
+      },
+      {
+        "name": "TutorSession",
+        "parentEntity": "Tutor",
+        "childEntity": "Session",
+        "type": "Reference",
+        "owner": "Both"
+      },
+      {
+        "name": "StudentSubject",
+        "parentEntity": "Student",
+        "childEntity": "Subject",
+        "type": "ReferenceSet",
+        "owner": "Both"
+      },
+      {
+        "name": "TutorSubject",
+        "parentEntity": "Tutor",
+        "childEntity": "Subject",
+        "type": "ReferenceSet",
+        "owner": "Both"
+      },
+      {
+        "name": "SessionCancellation",
+        "parentEntity": "Session",
+        "childEntity": "Cancellation",
+        "type": "Reference",
+        "owner": "Both"
+      },
+      {
+        "name": "TutorNoShowRate",
+        "parentEntity": "Tutor",
+        "childEntity": "NoShowRate",
+        "type": "Reference",
+        "owner": "Both"
+      },
+      {
+        "name": "TutorLateCount",
+        "parentEntity": "Tutor",
+        "childEntity": "LateCount",
+        "type": "Reference",
+        "owner": "Both"
+      },
+      {
+        "name": "StudentRegularTutor",
+        "parentEntity": "Student",
+        "childEntity": "Tutor",
+        "type": "Reference",
+        "owner": "Both"
+      },
+      {
+        "name": "SessionNotification",
+        "parentEntity": "Session",
+        "childEntity": "Notification",
+        "type": "Reference",
+        "owner": "Both"
+      },
+      {
+        "name": "TutorBreakdown",
+        "parentEntity": "Tutor",
+        "childEntity": "Breakdown",
+        "type": "Reference",
+        "owner": "Both"
+      },
+      {
+        "name": "StudentNeighborhood",
+        "parentEntity": "Student",
+        "childEntity": "Neighborhood",
+        "type": "Reference",
+        "owner": "Both"
+      },
+      {
+        "name": "TutorNeighborhood",
+        "parentEntity": "Tutor",
+        "childEntity": "Neighborhood",
+        "type": "Reference",
+        "owner": "Both"
+      }
+    ],
+    "enumerations": [
+      {
+        "name": "SessionType",
+        "values": [
+          {
+            "name": "Online",
+            "caption": "Online"
+          },
+          {
+            "name": "InPerson",
+            "caption": "InPerson"
+          }
+        ]
+      }
+    ],
+    "_associationDiagnostics": {
+      "rawAssociationCount": 0,
+      "normalizedAssociationCount": 0,
+      "malformedAssociationCandidates": []
+    }
+  },
+  "security": {
+    "enabled": true,
+    "securityLevel": "prototype",
+    "moduleRoles": [
+      "Student",
+      "Tutor",
+      "Manager"
+    ],
+    "userRoles": [
+      {
+        "name": "Student",
+        "moduleRoles": [
+          "Student"
+        ],
+        "description": "Role for students to access student functionality",
+        "systemModuleRole": "System.User"
+      },
+      {
+        "name": "Tutor",
+        "moduleRoles": [
+          "Tutor"
+        ],
+        "description": "Role for tutors to access tutor functionality",
+        "systemModuleRole": "System.User"
+      },
+      {
+        "name": "Manager",
+        "moduleRoles": [
+          "Manager"
+        ],
+        "description": "Role for managers to access manager and admin functionality",
+        "systemModuleRole": "System.User"
+      }
+    ],
+    "demoUsers": []
+  },
+  "pages": {
+    "specs": [
+      {
+        "ref": "home",
+        "name": "Home",
+        "title": "Home",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "Session Workspace",
+            "renderMode": "H2"
+          },
+          {
+            "type": "dynamicText",
+            "text": "Generated from user stories",
+            "renderMode": "Paragraph"
+          },
+          {
+            "type": "buttonToPage",
+            "caption": "Session Dashboard",
+            "targetPageRef": "session_dashboard"
+          },
+          {
+            "type": "buttonToPage",
+            "caption": "Session Overview",
+            "targetPageRef": "session_overview"
+          },
+          {
+            "type": "buttonToPage",
+            "caption": "Subject Overview",
+            "targetPageRef": "subject_overview"
+          },
+          {
+            "type": "buttonToPage",
+            "caption": "manager overview",
+            "targetPageRef": "manager_overview"
+          }
+        ]
+      },
+      {
+        "ref": "session_dashboard",
+        "name": "Session_Dashboard",
+        "title": "Session Dashboard",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "Session Dashboard",
+            "renderMode": "H2"
+          },
+          {
+            "type": "dynamicText",
+            "text": "Overview and data management for session.",
+            "renderMode": "Paragraph"
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Add Session",
+            "entityRef": "MyFirstModule.Session",
+            "targetPageRef": "session_newedit"
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.Session",
+            "rowClickTargetPageRef": "session_newedit",
+            "autoRowClickToDetail": true,
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Title",
+                "autoLabel": true
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Description",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Status",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "CreatedAt",
+                "autoLabel": false
+              }
+            ]
+          }
+        ],
+        "entityRef": "MyFirstModule.Session"
+      },
+      {
+        "ref": "session_overview",
+        "name": "Session_Overview",
+        "title": "Session Overview",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "Session Overview",
+            "renderMode": "H2"
+          },
+          {
+            "type": "dynamicText",
+            "text": "Manage session records and open the create dialog when new data is needed.",
+            "renderMode": "Paragraph"
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Add Session",
+            "entityRef": "MyFirstModule.Session",
+            "targetPageRef": "session_newedit"
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.Session",
+            "rowClickTargetPageRef": "session_newedit",
+            "autoRowClickToDetail": true,
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Title",
+                "autoLabel": true
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Description",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Status",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "CreatedAt",
+                "autoLabel": false
+              }
+            ]
+          }
+        ],
+        "entityRef": "MyFirstModule.Session"
+      },
+      {
+        "ref": "session_newedit",
+        "name": "Session_NewEdit",
+        "title": "Session NewEdit",
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "Session",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Title"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Description"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Status"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "CreatedAt"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ],
+        "entityRef": "MyFirstModule.Session",
+        "pageParameters": [
+          {
+            "name": "Session",
+            "entityRef": "MyFirstModule.Session",
+            "required": true
+          }
+        ]
+      },
+      {
+        "ref": "subject_overview",
+        "name": "Subject_Overview",
+        "title": "Subject Overview",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "Subject Overview",
+            "renderMode": "H2"
+          },
+          {
+            "type": "dynamicText",
+            "text": "Manage subject records and open the create dialog when new data is needed.",
+            "renderMode": "Paragraph"
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Add Subject",
+            "entityRef": "MyFirstModule.Subject",
+            "targetPageRef": "subject_newedit"
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.Subject",
+            "rowClickTargetPageRef": "subject_newedit",
+            "autoRowClickToDetail": true,
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Title",
+                "autoLabel": true
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Description",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Status",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "CreatedAt",
+                "autoLabel": false
+              }
+            ]
+          }
+        ],
+        "entityRef": "MyFirstModule.Subject"
+      },
+      {
+        "ref": "subject_newedit",
+        "name": "Subject_NewEdit",
+        "title": "Subject NewEdit",
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "Subject",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Title"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Description"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Status"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "CreatedAt"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ],
+        "entityRef": "MyFirstModule.Subject",
+        "pageParameters": [
+          {
+            "name": "Subject",
+            "entityRef": "MyFirstModule.Subject",
+            "required": true
+          }
+        ]
+      },
+      {
+        "ref": "manager_overview",
+        "name": "Manager_Overview",
+        "title": "Manager Overview",
+        "entityRef": "MyFirstModule.Manager",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "Manager Overview",
+            "renderMode": "H2"
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Create Manager",
+            "entityRef": "MyFirstModule.Manager",
+            "targetPageRef": "manager_newedit"
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.Manager",
+            "autoRowClickToDetail": true,
+            "rowClickTargetPageRef": "manager_newedit",
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name",
+                "autoLabel": true
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Email",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "IsActive",
+                "autoLabel": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "manager_newedit",
+        "name": "Manager_NewEdit",
+        "title": "Manager NewEdit",
+        "entityRef": "MyFirstModule.Manager",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          {
+            "name": "Manager",
+            "entityRef": "MyFirstModule.Manager",
+            "required": true
+          }
+        ],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "Manager",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Email"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "IsActive"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "student_overview",
+        "name": "Student_Overview",
+        "title": "Student Overview",
+        "entityRef": "MyFirstModule.Student",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "Student Overview",
+            "renderMode": "H2"
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Create Student",
+            "entityRef": "MyFirstModule.Student",
+            "targetPageRef": "student_newedit"
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.Student",
+            "autoRowClickToDetail": true,
+            "rowClickTargetPageRef": "student_newedit",
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name",
+                "autoLabel": true
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Email",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "IsActive",
+                "autoLabel": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "student_newedit",
+        "name": "Student_NewEdit",
+        "title": "Student NewEdit",
+        "entityRef": "MyFirstModule.Student",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          {
+            "name": "Student",
+            "entityRef": "MyFirstModule.Student",
+            "required": true
+          }
+        ],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "Student",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Email"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "IsActive"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "tutor_overview",
+        "name": "Tutor_Overview",
+        "title": "Tutor Overview",
+        "entityRef": "MyFirstModule.Tutor",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "Tutor Overview",
+            "renderMode": "H2"
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Create Tutor",
+            "entityRef": "MyFirstModule.Tutor",
+            "targetPageRef": "tutor_newedit"
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.Tutor",
+            "autoRowClickToDetail": true,
+            "rowClickTargetPageRef": "tutor_newedit",
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name",
+                "autoLabel": true
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Email",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "IsActive",
+                "autoLabel": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "tutor_newedit",
+        "name": "Tutor_NewEdit",
+        "title": "Tutor NewEdit",
+        "entityRef": "MyFirstModule.Tutor",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          {
+            "name": "Tutor",
+            "entityRef": "MyFirstModule.Tutor",
+            "required": true
+          }
+        ],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "Tutor",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Email"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "IsActive"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "studentoverview",
+        "name": "studentOverview",
+        "title": "student Overview",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "student Overview",
+            "renderMode": "H2"
+          }
+        ],
+        "entityRef": "MyFirstModule.Student"
+      },
+      {
+        "ref": "studentdetail",
+        "name": "studentDetail",
+        "title": "student Detail",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "student Detail",
+            "renderMode": "H2"
+          }
+        ],
+        "entityRef": "MyFirstModule.Student"
+      },
+      {
+        "ref": "tutoroverview",
+        "name": "tutorOverview",
+        "title": "tutor Overview",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "tutor Overview",
+            "renderMode": "H2"
+          }
+        ],
+        "entityRef": "MyFirstModule.Tutor"
+      },
+      {
+        "ref": "tutordetail",
+        "name": "tutorDetail",
+        "title": "tutor Detail",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "tutor Detail",
+            "renderMode": "H2"
+          }
+        ],
+        "entityRef": "MyFirstModule.Tutor"
+      },
+      {
+        "ref": "sessionoverview",
+        "name": "sessionOverview",
+        "title": "session Overview",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "session Overview",
+            "renderMode": "H2"
+          }
+        ],
+        "entityRef": "MyFirstModule.Session"
+      },
+      {
+        "ref": "sessiondetail",
+        "name": "sessionDetail",
+        "title": "session Detail",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "session Detail",
+            "renderMode": "H2"
+          }
+        ],
+        "entityRef": "MyFirstModule.Session"
+      },
+      {
+        "ref": "matchoverview",
+        "name": "matchOverview",
+        "title": "match Overview",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "match Overview",
+            "renderMode": "H2"
+          }
+        ],
+        "entityRef": "MyFirstModule.Match"
+      },
+      {
+        "ref": "matchdetail",
+        "name": "matchDetail",
+        "title": "match Detail",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "match Detail",
+            "renderMode": "H2"
+          }
+        ],
+        "entityRef": "MyFirstModule.Match"
+      }
+    ]
+  },
+  "verification": {
+    "failOnMissing": true
+  },
+  "microflows": {
+    "specs": [
+      {
+        "name": "MatchStudentsAndTutors",
+        "parameters": [],
+        "actions": [
+          {
+            "type": "retrieveList",
+            "entity": "Student",
+            "constraints": [],
+            "outputVariableName": "Student_List"
+          },
+          {
+            "type": "retrieveList",
+            "entity": "Tutor",
+            "constraints": [],
+            "outputVariableName": "Tutor_List"
+          },
+          {
+            "type": "createObject",
+            "entity": "Match",
+            "outputVariableName": "Match_New"
+          }
+        ]
+      },
+      {
+        "name": "SendSessionNotifications",
+        "parameters": [],
+        "actions": [
+          {
+            "type": "retrieveList",
+            "entity": "Session",
+            "constraints": [],
+            "outputVariableName": "Session_List"
+          },
+          {
+            "type": "createObject",
+            "entity": "Notification",
+            "outputVariableName": "Notification_New"
+          }
+        ]
+      },
+      {
+        "name": "UpdateTutorCreditSystem",
+        "parameters": [],
+        "actions": [
+          {
+            "type": "retrieveList",
+            "entity": "Session",
+            "constraints": [],
+            "outputVariableName": "Session_List"
+          }
+        ]
+      }
+    ]
+  },
+  "nanoflows": {
+    "specs": [
+      {
+        "name": "StudentSessionSelection",
+        "parameters": [],
+        "actions": [
+          {
+            "type": "retrieveObject",
+            "entity": "Student",
+            "constraints": [],
+            "outputVariableName": "Student_Object"
+          }
+        ]
+      },
+      {
+        "name": "TutorAvailabilityUpdate",
+        "parameters": [],
+        "actions": [
+          {
+            "type": "retrieveObject",
+            "entity": "Tutor",
+            "constraints": [],
+            "outputVariableName": "Tutor_Object"
+          }
+        ]
+      }
+    ]
+  },
+  "workflows": {
+    "specs": []
+  }
+}

@@ -1,0 +1,6073 @@
+{
+  "ok": true,
+  "inputPath": "/workspace/us2lc-pipeline/artifacts/practical-performance/20260528-165228/inputs/education/user-stories.txt",
+  "systemName": "PracticalPerf_education_Stability",
+  "ontology": "# Generated with Visual Narrator\nPrefix: : <http://fakesite.org/practicalperf_education_stability.owl#>\nPrefix: owl: <http://www.w3.org/2002/07/owl#>\nPrefix: rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPrefix: rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPrefix: xsd: <http://www.w3.org/2001/XMLSchema#>\nPrefix: dc: <http://purl.org/dc/elements/1.1/>\nPrefix: onto: <http://fakesite.org/practicalperf_education_stability.owl#>\n\nOntology: <:>\n\nAnnotations:\n\tdc:title \"PracticalPerf_education_Stability\",\n\tdc:creator \"Visual Narrator\",\n\trdfs:comment \"Generated with Visual Narrator\"\n\nAnnotationProperty: dc:creator\n\nAnnotationProperty: dc:title\n\n\n# Relationships\nObjectProperty: :canRegain\n\tDomain: :FreelanceTeacher\n\tRange: :Access\n\nObjectProperty: :canIndicate1\n\tDomain: :FreelanceTeacher\n\tRange: :SkillLevel\n\nObjectProperty: :canIndicate2\n\tDomain: :FreelanceTeacher\n\tRange: :TeachingExperience\n\nObjectProperty: :canUse\n\tDomain: :FreelanceTeacher\n\tRange: :Slide\n\nObjectProperty: :canManage1\n\tDomain: :Administrator\n\tRange: :Video\n\nObjectProperty: :canManage2\n\tDomain: :Administrator\n\tRange: :Book\n\nObjectProperty: :canManage3\n\tDomain: :Administrator\n\tRange: :ResearchPaper\n\nObjectProperty: :canManage4\n\tDomain: :Administrator\n\tRange: :Slide\n\nObjectProperty: :canManage5\n\tDomain: :Administrator\n\tRange: :Flashcard\n\nObjectProperty: :canManage6\n\tDomain: :Administrator\n\tRange: :Game\n\nObjectProperty: :canManage7\n\tDomain: :Administrator\n\tRange: :User\n\nObjectProperty: :hasInformation\n\tDomain: :Profile\n\tRange: :ProfileInformation\n\nObjectProperty: :canApprove\n\tDomain: :Administrator\n\tRange: :TeacherProfile\n\nObjectProperty: :hasProfile\n\tDomain: :Teacher\n\tRange: :TeacherProfile\n\nObjectProperty: :hasAssessment\n\tDomain: :Skill\n\tRange: :SkillAssessment\n\nObjectProperty: :canCreate1\n\tDomain: :Administrator\n\tRange: :Module\n\nObjectProperty: :canCreate2\n\tDomain: :Administrator\n\tRange: :Level\n\nObjectProperty: :canCreate3\n\tDomain: :Administrator\n\tRange: :Quiz\n\nObjectProperty: :canProvide\n\tDomain: :Administrator\n\tRange: :User\n\nObjectProperty: :canDo\n\tDomain: :FreelanceTeacher\n\tRange: :Quiz\n\nObjectProperty: :canAchieve\n\tDomain: :FreelanceTeacher\n\tRange: :Achievement\n\nObjectProperty: :canAccess\n\tDomain: :FreelanceTeacher\n\tRange: :Collection\n\nObjectProperty: :hasSkill\n\tDomain: :Teaching\n\tRange: :TeachingSkill\n\nObjectProperty: :canNavigateThrough\n\tDomain: :FreelanceTeacher\n\tRange: :Level\n\nObjectProperty: :canReset\n\tDomain: :FreelanceTeacher\n\tRange: :Password\n\nObjectProperty: :hasLevel\n\tDomain: :Skill\n\tRange: :SkillLevel\n\nObjectProperty: :canTrack1\n\tDomain: :FreelanceTeacher\n\tRange: :LearningProgress\n\nObjectProperty: :canTrack2\n\tDomain: :FreelanceTeacher\n\tRange: :Progress\n\nObjectProperty: :canHave1\n\tDomain: :FreelanceTeacher\n\tRange: :Place\n\nObjectProperty: :canHave2\n\tDomain: :FreelanceTeacher\n\tRange: :Flashcard\n\nObjectProperty: :canHave3\n\tDomain: :FreelanceTeacher\n\tRange: :Access\n\nObjectProperty: :canHave4\n\tDomain: :Administrator\n\tRange: :Overview\n\nObjectProperty: :canFind\n\tDomain: :FreelanceTeacher\n\tRange: :Video\n\nObjectProperty: :canReceive\n\tDomain: :FreelanceTeacher\n\tRange: :Feedback\n\nObjectProperty: :hasPaper\n\tDomain: :Research\n\tRange: :ResearchPaper\n\nObjectProperty: :canUpdate\n\tDomain: :FreelanceTeacher\n\tRange: :ProfileInformation\n\nObjectProperty: :canAdd1\n\tDomain: :Administrator\n\tRange: :Video\n\nObjectProperty: :canAdd2\n\tDomain: :Administrator\n\tRange: :Book\n\nObjectProperty: :canAdd3\n\tDomain: :Administrator\n\tRange: :ResearchPaper\n\nObjectProperty: :canAdd4\n\tDomain: :Administrator\n\tRange: :Slide\n\nObjectProperty: :canAdd5\n\tDomain: :Administrator\n\tRange: :Flashcard\n\nObjectProperty: :canAdd6\n\tDomain: :Administrator\n\tRange: :Game\n\nObjectProperty: :canSelect\n\tDomain: :FreelanceTeacher\n\tRange: :Material\n\nObjectProperty: :canUnderstand\n\tDomain: :FreelanceTeacher\n\tRange: :What\n\nObjectProperty: :hasTeacher\n\tDomain: :Freelance\n\tRange: :FreelanceTeacher\n\nObjectProperty: :canLearn1\n\tDomain: :FreelanceTeacher\n\tRange: :TeachingSkill\n\nObjectProperty: :canLearn2\n\tDomain: :FreelanceTeacher\n\tRange: :Skill\n\nObjectProperty: :canCheck\n\tDomain: :Administrator\n\tRange: :Profile\n\nObjectProperty: :canSend\n\tDomain: :Administrator\n\tRange: :Announcement\n\nObjectProperty: :canRemove\n\tDomain: :Administrator\n\tRange: :Content\n\nObjectProperty: :canPlay\n\tDomain: :FreelanceTeacher\n\tRange: :Game\n\nObjectProperty: :canKnow\n\tDomain: :FreelanceTeacher\n\tRange: :What\n\nObjectProperty: :hasExperience\n\tDomain: :Teaching\n\tRange: :TeachingExperience\n\nObjectProperty: :canReflect\n\tDomain: :Profile\n\tRange: :Background\n\nObjectProperty: :canTest\n\tDomain: :FreelanceTeacher\n\tRange: :LearningProgress\n\nObjectProperty: :canOrganize\n\tDomain: :Administrator\n\tRange: :Content\n\nObjectProperty: :canEdit\n\tDomain: :Administrator\n\tRange: :Content\n\nObjectProperty: :canComplete\n\tDomain: :FreelanceTeacher\n\tRange: :SkillAssessment\n\n# Classes\nClass: :FreelanceTeacher\n\tSubClassOf: :Teacher\n\tAnnotations:\n\t\trdfs:label \"Freelance Teacher\",\n\t\trdfs:comment \"Functional Role\"\n\nClass: :Teacher\n\n\nClass: :Freelance\n\n\nClass: :TeachingSkill\n\tSubClassOf: :Skill\n\tAnnotations:\n\t\trdfs:label \"Teaching Skill\"\n\nClass: :Skill\n\n\nClass: :Teaching\n\n\nClass: :SkillAssessment\n\tSubClassOf: :Assessment\n\tAnnotations:\n\t\trdfs:label \"Skill Assessment\"\n\nClass: :Assessment\n\n\nClass: :Level\n\n\nClass: :LearningProgress\n\tAnnotations:\n\t\trdfs:label \"Learning Progress\"\n\nClass: :Progress\n\n\nClass: :What\n\n\nClass: :Achievement\n\n\nClass: :Quiz\n\n\nClass: :Feedback\n\n\nClass: :SkillLevel\n\tSubClassOf: :Level\n\tAnnotations:\n\t\trdfs:label \"Skill Level\"\n\nClass: :Profile\n\n\nClass: :Background\n\n\nClass: :TeachingExperience\n\tSubClassOf: :Experience\n\tAnnotations:\n\t\trdfs:label \"Teaching Experience\"\n\nClass: :Experience\n\n\nClass: :Place\n\n\nClass: :Collection\n\n\nClass: :Material\n\n\nClass: :Flashcard\n\n\nClass: :Video\n\n\nClass: :ResearchPaper\n\tSubClassOf: :Paper\n\tAnnotations:\n\t\trdfs:label \"Research Paper\"\n\nClass: :Paper\n\n\nClass: :Research\n\n\nClass: :Access\n\n\nClass: :Slide\n\n\nClass: :Game\n\n\nClass: :Password\n\n\nClass: :ProfileInformation\n\tSubClassOf: :Information\n\tAnnotations:\n\t\trdfs:label \"Profile Information\"\n\nClass: :Information\n\n\nClass: :Administrator\n\tAnnotations:\n\t\trdfs:comment \"Functional Role\"\n\nClass: :TeacherProfile\n\tSubClassOf: :Profile\n\tAnnotations:\n\t\trdfs:label \"Teacher Profile\"\n\nClass: :Module\n\n\nClass: :Content\n\n\nClass: :User\n\n\nClass: :Book\n\n\nClass: :Overview\n\n\nClass: :Announcement\n\n\nClass: :Function\n\n\nClass: :Learning\n\n\nClass: :Number\n\n\nClass: :Section\n\n\nClass: :Notification\n\n\n",
+  "stories": [
+    {
+      "number": 1,
+      "text": "As a freelance teacher, I want to communicate with other teachers using a chat function, so that I can learn from them and share experiences.",
+      "role": {
+        "name": "teacher",
+        "compound": [
+          "freelance",
+          "teacher"
+        ]
+      },
+      "means": {
+        "mainObject": "function",
+        "compound": [
+          "chat",
+          "function"
+        ]
+      },
+      "json": {
+        "number": 1,
+        "text": "As a freelance teacher, I want to communicate with other teachers using a chat function, so that I can learn from them and share experiences.",
+        "iloc": [
+          4,
+          17
+        ],
+        "role": {
+          "text": "freelance teacher",
+          "indicator": "As a"
+        },
+        "means": {
+          "text": "communicate with other teachers using a chat function",
+          "indicator": "I want to"
+        },
+        "ends": {
+          "text": "I can learn from them and share experiences",
+          "indicator": "So that"
+        }
+      }
+    },
+    {
+      "number": 2,
+      "text": "As a freelance teacher, I want to learn new teaching skills such as communication skills, presentation skills, and confidence, so that I am better prepared for teaching.",
+      "role": {
+        "name": "teacher",
+        "compound": [
+          "freelance",
+          "teacher"
+        ]
+      },
+      "means": {
+        "mainObject": "skills",
+        "compound": [
+          "teaching",
+          "skills"
+        ]
+      },
+      "json": {
+        "number": 2,
+        "text": "As a freelance teacher, I want to learn new teaching skills such as communication skills, presentation skills, and confidence, so that I am better prepared for teaching.",
+        "iloc": [
+          4,
+          21
+        ],
+        "role": {
+          "text": "freelance teacher",
+          "indicator": "As a"
+        },
+        "means": {
+          "text": "learn new teaching skills such as communication skills presentation skills and confidence",
+          "indicator": "I want to"
+        },
+        "ends": {
+          "text": "I am better prepared for teaching",
+          "indicator": "So that"
+        }
+      }
+    },
+    {
+      "number": 3,
+      "text": "As a freelance teacher, I want to learn pedagogical skills such as compassion, collaboration, and inclusiveness, so that I am better prepared for teaching.",
+      "role": {
+        "name": "teacher",
+        "compound": [
+          "freelance",
+          "teacher"
+        ]
+      },
+      "means": {
+        "mainObject": "skills",
+        "compound": []
+      },
+      "json": {
+        "number": 3,
+        "text": "As a freelance teacher, I want to learn pedagogical skills such as compassion, collaboration, and inclusiveness, so that I am better prepared for teaching.",
+        "iloc": [
+          4,
+          18
+        ],
+        "role": {
+          "text": "freelance teacher",
+          "indicator": "As a"
+        },
+        "means": {
+          "text": "learn pedagogical skills such as compassion collaboration and inclusiveness",
+          "indicator": "I want to"
+        },
+        "ends": {
+          "text": "I am better prepared for teaching",
+          "indicator": "So that"
+        }
+      }
+    },
+    {
+      "number": 4,
+      "text": "As a freelance teacher, I want to complete a skills assessment that tests my teaching/pedagogical/other skill levels, so that I can be placed at the right level without wasting time or feeling frustrated by levels that are too easy or difficult.",
+      "role": {
+        "name": "teacher",
+        "compound": [
+          "freelance",
+          "teacher"
+        ]
+      },
+      "means": {
+        "mainObject": "assessment",
+        "compound": [
+          "skills",
+          "assessment"
+        ]
+      },
+      "json": {
+        "number": 4,
+        "text": "As a freelance teacher, I want to complete a skills assessment that tests my teaching/pedagogical/other skill levels, so that I can be placed at the right level without wasting time or feeling frustrated by levels that are too easy or difficult.",
+        "iloc": [
+          4,
+          23
+        ],
+        "role": {
+          "text": "freelance teacher",
+          "indicator": "As a"
+        },
+        "means": {
+          "text": "complete a skills assessment that tests my teaching/pedagogical/other skill levels",
+          "indicator": "I want to"
+        },
+        "ends": {
+          "text": "I can be placed at the right level without wasting time or feeling frustrated by levels that are too easy or difficult",
+          "indicator": "So that"
+        }
+      }
+    },
+    {
+      "number": 5,
+      "text": "As a freelance teacher, I want to navigate through the modules using levels, so that I can track my learning progress.",
+      "role": {
+        "name": "teacher",
+        "compound": [
+          "freelance",
+          "teacher"
+        ]
+      },
+      "means": {
+        "mainObject": "levels",
+        "compound": []
+      },
+      "json": {
+        "number": 5,
+        "text": "As a freelance teacher, I want to navigate through the modules using levels, so that I can track my learning progress.",
+        "iloc": [
+          4,
+          15
+        ],
+        "role": {
+          "text": "freelance teacher",
+          "indicator": "As a"
+        },
+        "means": {
+          "text": "navigate through the modules using levels",
+          "indicator": "I want to"
+        },
+        "ends": {
+          "text": "I can track my learning progress",
+          "indicator": "So that"
+        }
+      }
+    },
+    {
+      "number": 6,
+      "text": "As a freelance teacher, I want to track my learning progress in a graphical overview such as a progress bar, so that I know what I have learned.",
+      "role": {
+        "name": "teacher",
+        "compound": [
+          "freelance",
+          "teacher"
+        ]
+      },
+      "means": {
+        "mainObject": "progress",
+        "compound": []
+      },
+      "json": {
+        "number": 6,
+        "text": "As a freelance teacher, I want to track my learning progress in a graphical overview such as a progress bar, so that I know what I have learned.",
+        "iloc": [
+          4,
+          22,
+          25
+        ],
+        "role": {
+          "text": "freelance teacher",
+          "indicator": "As a"
+        },
+        "means": {
+          "text": "track my learning progress in a graphical overview such as a progress bar",
+          "indicator": "I want to"
+        },
+        "ends": {
+          "text": "I know what I have learned",
+          "indicator": "So that"
+        }
+      }
+    },
+    {
+      "number": 7,
+      "text": "As a freelance teacher, I want to achieve achievements rewarded for completing certain tasks, so that I get a sense of reward for completing something.",
+      "role": {
+        "name": "teacher",
+        "compound": [
+          "freelance",
+          "teacher"
+        ]
+      },
+      "means": {
+        "mainObject": "achievements",
+        "compound": []
+      },
+      "json": {
+        "number": 7,
+        "text": "As a freelance teacher, I want to achieve achievements rewarded for completing certain tasks, so that I get a sense of reward for completing something.",
+        "iloc": [
+          4,
+          16
+        ],
+        "role": {
+          "text": "freelance teacher",
+          "indicator": "As a"
+        },
+        "means": {
+          "text": "achieve achievements rewarded for completing certain tasks",
+          "indicator": "I want to"
+        },
+        "ends": {
+          "text": "I get a sense of reward for completing something",
+          "indicator": "So that"
+        }
+      }
+    },
+    {
+      "number": 8,
+      "text": "As a freelance teacher, I want to do a quiz about a certain topic that is connected to a level or part of a level, so I can test my learning progress.",
+      "role": {
+        "name": "teacher",
+        "compound": [
+          "freelance",
+          "teacher"
+        ]
+      },
+      "means": {
+        "mainObject": "quiz",
+        "compound": []
+      },
+      "json": {
+        "number": 8,
+        "text": "As a freelance teacher, I want to do a quiz about a certain topic that is connected to a level or part of a level, so I can test my learning progress.",
+        "iloc": [
+          4,
+          26
+        ],
+        "role": {
+          "text": "freelance teacher",
+          "indicator": "As a"
+        },
+        "means": {
+          "text": "do a quiz about a certain topic that is connected to a level or part of a level",
+          "indicator": "I want to"
+        },
+        "ends": {
+          "text": "I can test my learning progress",
+          "indicator": "So"
+        }
+      }
+    },
+    {
+      "number": 9,
+      "text": "As a freelance teacher, I want to receive automated feedback on completed quizzes and exercises, so that I can understand what I did right or wrong.",
+      "role": {
+        "name": "teacher",
+        "compound": [
+          "freelance",
+          "teacher"
+        ]
+      },
+      "means": {
+        "mainObject": "feedback",
+        "compound": []
+      },
+      "json": {
+        "number": 9,
+        "text": "As a freelance teacher, I want to receive automated feedback on completed quizzes and exercises, so that I can understand what I did right or wrong.",
+        "iloc": [
+          4,
+          17,
+          21
+        ],
+        "role": {
+          "text": "freelance teacher",
+          "indicator": "As a"
+        },
+        "means": {
+          "text": "receive automated feedback on completed quizzes and exercises",
+          "indicator": "I want to"
+        },
+        "ends": {
+          "text": "I can understand what I did right or wrong",
+          "indicator": "So that"
+        }
+      }
+    },
+    {
+      "number": 10,
+      "text": "As a freelance teacher, I want to be able to indicate my technical skill level in a small test, so that my profile can reflect my background.",
+      "role": {
+        "name": "teacher",
+        "compound": [
+          "freelance",
+          "teacher"
+        ]
+      },
+      "means": {
+        "mainObject": "level",
+        "compound": [
+          "skill",
+          "level"
+        ]
+      },
+      "json": {
+        "number": 10,
+        "text": "As a freelance teacher, I want to be able to indicate my technical skill level in a small test, so that my profile can reflect my background.",
+        "iloc": [
+          4
+        ],
+        "role": {
+          "text": "freelance teacher",
+          "indicator": "As a"
+        },
+        "means": {
+          "text": "indicate my technical skill level in a small test",
+          "indicator": "I want to be able to"
+        },
+        "ends": {
+          "text": "my profile can reflect my background",
+          "indicator": "So that"
+        }
+      }
+    },
+    {
+      "number": 11,
+      "text": "As a freelance teacher, I want to be able to indicate my teaching experience when creating a profile, so that my profile can reflect my background.",
+      "role": {
+        "name": "teacher",
+        "compound": [
+          "freelance",
+          "teacher"
+        ]
+      },
+      "means": {
+        "mainObject": "experience",
+        "compound": [
+          "teaching",
+          "experience"
+        ]
+      },
+      "json": {
+        "number": 11,
+        "text": "As a freelance teacher, I want to be able to indicate my teaching experience when creating a profile, so that my profile can reflect my background.",
+        "iloc": [
+          4
+        ],
+        "role": {
+          "text": "freelance teacher",
+          "indicator": "As a"
+        },
+        "means": {
+          "text": "indicate my teaching experience when creating a profile",
+          "indicator": "I want to be able to"
+        },
+        "ends": {
+          "text": "my profile can reflect my background",
+          "indicator": "So that"
+        }
+      }
+    },
+    {
+      "number": 12,
+      "text": "As a freelance teacher, I want to be able to indicate my KvK number when creating a profile, so that I can verify that I am a freelance teacher.",
+      "role": {
+        "name": "teacher",
+        "compound": [
+          "freelance",
+          "teacher"
+        ]
+      },
+      "means": {
+        "mainObject": "number",
+        "compound": [
+          "KvK",
+          "number"
+        ]
+      },
+      "json": {
+        "number": 12,
+        "text": "As a freelance teacher, I want to be able to indicate my KvK number when creating a profile, so that I can verify that I am a freelance teacher.",
+        "iloc": [
+          4,
+          20,
+          24
+        ],
+        "role": {
+          "text": "freelance teacher",
+          "indicator": "As a"
+        },
+        "means": {
+          "text": "indicate my KvK number when creating a profile",
+          "indicator": "I want to be able to"
+        },
+        "ends": {
+          "text": "I can verify that I am a freelance teacher",
+          "indicator": "So that"
+        }
+      }
+    },
+    {
+      "number": 13,
+      "text": "As a freelance teacher, I want to have a place with all relevant knowledge for teaching as a knowledge hub, so I can refer back to this when teaching.",
+      "role": {
+        "name": "teacher",
+        "compound": [
+          "freelance",
+          "teacher"
+        ]
+      },
+      "means": {
+        "mainObject": "place",
+        "compound": []
+      },
+      "json": {
+        "number": 13,
+        "text": "As a freelance teacher, I want to have a place with all relevant knowledge for teaching as a knowledge hub, so I can refer back to this when teaching.",
+        "iloc": [
+          4,
+          21
+        ],
+        "role": {
+          "text": "freelance teacher",
+          "indicator": "As a"
+        },
+        "means": {
+          "text": "have a place with all relevant knowledge for teaching as a knowledge hub",
+          "indicator": "I want to"
+        },
+        "ends": {
+          "text": "I can refer back to this when teaching",
+          "indicator": "So"
+        }
+      }
+    },
+    {
+      "number": 15,
+      "text": "As a freelance teacher, I want to access a collection of study books categorized by ISBN, publisher, topic, and author, so that I can select the appropriate materials for my learning needs.",
+      "role": {
+        "name": "teacher",
+        "compound": [
+          "freelance",
+          "teacher"
+        ]
+      },
+      "means": {
+        "mainObject": "collection",
+        "compound": []
+      },
+      "json": {
+        "number": 15,
+        "text": "As a freelance teacher, I want to access a collection of study books categorized by ISBN, publisher, topic, and author, so that I can select the appropriate materials for my learning needs.",
+        "iloc": [
+          4,
+          22
+        ],
+        "role": {
+          "text": "freelance teacher",
+          "indicator": "As a"
+        },
+        "means": {
+          "text": "access a collection of study books categorized by ISBN publisher topic and author",
+          "indicator": "I want to"
+        },
+        "ends": {
+          "text": "I can select the appropriate materials for my learning needs",
+          "indicator": "So that"
+        }
+      }
+    },
+    {
+      "number": 16,
+      "text": "As a freelance teacher, I want to have flashcards available in a digital format, organized by topic and source, so that I can select the appropriate materials for my learning needs.",
+      "role": {
+        "name": "teacher",
+        "compound": [
+          "freelance",
+          "teacher"
+        ]
+      },
+      "means": {
+        "mainObject": "flashcards",
+        "compound": []
+      },
+      "json": {
+        "number": 16,
+        "text": "As a freelance teacher, I want to have flashcards available in a digital format, organized by topic and source, so that I can select the appropriate materials for my learning needs.",
+        "iloc": [
+          4,
+          21
+        ],
+        "role": {
+          "text": "freelance teacher",
+          "indicator": "As a"
+        },
+        "means": {
+          "text": "have flashcards available in a digital format organized by topic and source",
+          "indicator": "I want to"
+        },
+        "ends": {
+          "text": "I can select the appropriate materials for my learning needs",
+          "indicator": "So that"
+        }
+      }
+    },
+    {
+      "number": 17,
+      "text": "As a freelance teacher, I want to find educational videos organized by platform, URL, topic, year, and author, so that I can select the appropriate materials for my learning needs.",
+      "role": {
+        "name": "teacher",
+        "compound": [
+          "freelance",
+          "teacher"
+        ]
+      },
+      "means": {
+        "mainObject": "videos",
+        "compound": []
+      },
+      "json": {
+        "number": 17,
+        "text": "As a freelance teacher, I want to find educational videos organized by platform, URL, topic, year, and author, so that I can select the appropriate materials for my learning needs.",
+        "iloc": [
+          4,
+          20
+        ],
+        "role": {
+          "text": "freelance teacher",
+          "indicator": "As a"
+        },
+        "means": {
+          "text": "find educational videos organized by platform URL topic year and author",
+          "indicator": "I want to"
+        },
+        "ends": {
+          "text": "I can select the appropriate materials for my learning needs",
+          "indicator": "So that"
+        }
+      }
+    },
+    {
+      "number": 18,
+      "text": "As a freelance teacher, I want to have access to research papers with DOI's, journal information, publishing date, topic, and author outlined, so that I can select the appropriate materials for my learning needs.",
+      "role": {
+        "name": "teacher",
+        "compound": [
+          "freelance",
+          "teacher"
+        ]
+      },
+      "means": {
+        "mainObject": "access",
+        "compound": []
+      },
+      "json": {
+        "number": 18,
+        "text": "As a freelance teacher, I want to have access to research papers with DOI's, journal information, publishing date, topic, and author outlined, so that I can select the appropriate materials for my learning needs.",
+        "iloc": [
+          4,
+          25
+        ],
+        "role": {
+          "text": "freelance teacher",
+          "indicator": "As a"
+        },
+        "means": {
+          "text": "have access to research papers with DOI's journal information publishing date topic and author outlined",
+          "indicator": "I want to"
+        },
+        "ends": {
+          "text": "I can select the appropriate materials for my learning needs",
+          "indicator": "So that"
+        }
+      }
+    },
+    {
+      "number": 19,
+      "text": "As a freelance teacher, I want to use slides specific to teaching topics, so that I can select the appropriate materials for my learning needs.",
+      "role": {
+        "name": "teacher",
+        "compound": [
+          "freelance",
+          "teacher"
+        ]
+      },
+      "means": {
+        "mainObject": "slides",
+        "compound": []
+      },
+      "json": {
+        "number": 19,
+        "text": "As a freelance teacher, I want to use slides specific to teaching topics, so that I can select the appropriate materials for my learning needs.",
+        "iloc": [
+          4,
+          15
+        ],
+        "role": {
+          "text": "freelance teacher",
+          "indicator": "As a"
+        },
+        "means": {
+          "text": "use slides specific to teaching topics",
+          "indicator": "I want to"
+        },
+        "ends": {
+          "text": "I can select the appropriate materials for my learning needs",
+          "indicator": "So that"
+        }
+      }
+    },
+    {
+      "number": 20,
+      "text": "As a freelance teacher, I want to play different games in different types with clear instructions and measurable learning outcomes, so that I can select the appropriate materials for my learning needs.",
+      "role": {
+        "name": "teacher",
+        "compound": [
+          "freelance",
+          "teacher"
+        ]
+      },
+      "means": {
+        "mainObject": "games",
+        "compound": []
+      },
+      "json": {
+        "number": 20,
+        "text": "As a freelance teacher, I want to play different games in different types with clear instructions and measurable learning outcomes, so that I can select the appropriate materials for my learning needs.",
+        "iloc": [
+          4,
+          22
+        ],
+        "role": {
+          "text": "freelance teacher",
+          "indicator": "As a"
+        },
+        "means": {
+          "text": "play different games in different types with clear instructions and measurable learning outcomes",
+          "indicator": "I want to"
+        },
+        "ends": {
+          "text": "I can select the appropriate materials for my learning needs",
+          "indicator": "So that"
+        }
+      }
+    },
+    {
+      "number": 21,
+      "text": "As a freelance teacher, I want to access a help section or contact support via a button in the system, so that I can resolve technical issues or system questions I might have.",
+      "role": {
+        "name": "teacher",
+        "compound": [
+          "freelance",
+          "teacher"
+        ]
+      },
+      "means": {
+        "mainObject": "section",
+        "compound": [
+          "help",
+          "section"
+        ]
+      },
+      "json": {
+        "number": 21,
+        "text": "As a freelance teacher, I want to access a help section or contact support via a button in the system, so that I can resolve technical issues or system questions I might have.",
+        "iloc": [
+          4,
+          22,
+          30
+        ],
+        "role": {
+          "text": "freelance teacher",
+          "indicator": "As a"
+        },
+        "means": {
+          "text": "access a help section or contact support via a button in the system",
+          "indicator": "I want to"
+        },
+        "ends": {
+          "text": "I can resolve technical issues or system questions I might have",
+          "indicator": "So that"
+        }
+      }
+    },
+    {
+      "number": 22,
+      "text": "As a freelance teacher, I want to reset my password securely, so that I can regain access to the system in case I forget it.",
+      "role": {
+        "name": "teacher",
+        "compound": [
+          "freelance",
+          "teacher"
+        ]
+      },
+      "means": {
+        "mainObject": "password",
+        "compound": []
+      },
+      "json": {
+        "number": 22,
+        "text": "As a freelance teacher, I want to reset my password securely, so that I can regain access to the system in case I forget it.",
+        "iloc": [
+          4,
+          13,
+          22
+        ],
+        "role": {
+          "text": "freelance teacher",
+          "indicator": "As a"
+        },
+        "means": {
+          "text": "reset my password securely",
+          "indicator": "I want to"
+        },
+        "ends": {
+          "text": "I can regain access to the system in case I forget it",
+          "indicator": "So that"
+        }
+      }
+    },
+    {
+      "number": 23,
+      "text": "As a freelance teacher, I want to update my profile information, so that my details stay current and accurate.",
+      "role": {
+        "name": "teacher",
+        "compound": [
+          "freelance",
+          "teacher"
+        ]
+      },
+      "means": {
+        "mainObject": "information",
+        "compound": [
+          "profile",
+          "information"
+        ]
+      },
+      "json": {
+        "number": 23,
+        "text": "As a freelance teacher, I want to update my profile information, so that my details stay current and accurate.",
+        "iloc": [
+          4
+        ],
+        "role": {
+          "text": "freelance teacher",
+          "indicator": "As a"
+        },
+        "means": {
+          "text": "update my profile information",
+          "indicator": "I want to"
+        },
+        "ends": {
+          "text": "my details stay current and accurate",
+          "indicator": "So that"
+        }
+      }
+    },
+    {
+      "number": 24,
+      "text": "As a freelance teacher, I want to receive email notifications about my progress and new learning opportunities, so that I am always updated.",
+      "role": {
+        "name": "teacher",
+        "compound": [
+          "freelance",
+          "teacher"
+        ]
+      },
+      "means": {
+        "mainObject": "notifications",
+        "compound": [
+          "email",
+          "notifications"
+        ]
+      },
+      "json": {
+        "number": 24,
+        "text": "As a freelance teacher, I want to receive email notifications about my progress and new learning opportunities, so that I am always updated.",
+        "iloc": [
+          4,
+          19
+        ],
+        "role": {
+          "text": "freelance teacher",
+          "indicator": "As a"
+        },
+        "means": {
+          "text": "receive email notifications about my progress and new learning opportunities",
+          "indicator": "I want to"
+        },
+        "ends": {
+          "text": "I am always updated",
+          "indicator": "So that"
+        }
+      }
+    },
+    {
+      "number": 25,
+      "text": "As an administrator, I want to check if KvK numbers are real by checking the profiles, to verify the user as a freelance teacher.",
+      "role": {
+        "name": "administrator",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "profiles",
+        "compound": []
+      },
+      "json": {
+        "number": 25,
+        "text": "As an administrator, I want to check if KvK numbers are real by checking the profiles, to verify the user as a freelance teacher.",
+        "iloc": [
+          3
+        ],
+        "role": {
+          "text": "administrator",
+          "indicator": "As an"
+        },
+        "means": {
+          "text": "check if KvK numbers are real by checking the profiles to verify the user as a freelance teacher",
+          "indicator": "I want to"
+        }
+      }
+    },
+    {
+      "number": 26,
+      "text": "As an administrator, I want to approve or reject freelance teacher profiles after reviewing their details and checking their KvK numbers, so that only verified freelance teachers can access the system.",
+      "role": {
+        "name": "administrator",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "profiles",
+        "compound": [
+          "teacher",
+          "profiles"
+        ]
+      },
+      "json": {
+        "number": 26,
+        "text": "As an administrator, I want to approve or reject freelance teacher profiles after reviewing their details and checking their KvK numbers, so that only verified freelance teachers can access the system.",
+        "iloc": [
+          3
+        ],
+        "role": {
+          "text": "administrator",
+          "indicator": "As an"
+        },
+        "means": {
+          "text": "approve or reject freelance teacher profiles after reviewing their details and checking their KvK numbers",
+          "indicator": "I want to"
+        },
+        "ends": {
+          "text": "only verified freelance teachers can access the system",
+          "indicator": "So that"
+        }
+      }
+    },
+    {
+      "number": 27,
+      "text": "As an administrator, I want to create learning modules in the system, so that I can organize and manage content for freelance teachers.",
+      "role": {
+        "name": "administrator",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "modules",
+        "compound": []
+      },
+      "json": {
+        "number": 27,
+        "text": "As an administrator, I want to create learning modules in the system, so that I can organize and manage content for freelance teachers.",
+        "iloc": [
+          3,
+          14
+        ],
+        "role": {
+          "text": "administrator",
+          "indicator": "As an"
+        },
+        "means": {
+          "text": "create learning modules in the system",
+          "indicator": "I want to"
+        },
+        "ends": {
+          "text": "I can organize and manage content for freelance teachers",
+          "indicator": "So that"
+        }
+      }
+    },
+    {
+      "number": 28,
+      "text": "As an administrator, I want to create different levels within the modules in the system, so that I can define different tiers of difficulty for users.",
+      "role": {
+        "name": "administrator",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "levels",
+        "compound": []
+      },
+      "json": {
+        "number": 28,
+        "text": "As an administrator, I want to create different levels within the modules in the system, so that I can define different tiers of difficulty for users.",
+        "iloc": [
+          3,
+          17
+        ],
+        "role": {
+          "text": "administrator",
+          "indicator": "As an"
+        },
+        "means": {
+          "text": "create different levels within the modules in the system",
+          "indicator": "I want to"
+        },
+        "ends": {
+          "text": "I can define different tiers of difficulty for users",
+          "indicator": "So that"
+        }
+      }
+    },
+    {
+      "number": 29,
+      "text": "As an administrator, I want to create quizzes in the system related to a certain module in the system, so that freelance teachers can track their learning progress.",
+      "role": {
+        "name": "administrator",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "quizzes",
+        "compound": []
+      },
+      "json": {
+        "number": 29,
+        "text": "As an administrator, I want to create quizzes in the system related to a certain module in the system, so that freelance teachers can track their learning progress.",
+        "iloc": [
+          3
+        ],
+        "role": {
+          "text": "administrator",
+          "indicator": "As an"
+        },
+        "means": {
+          "text": "create quizzes in the system related to a certain module in the system",
+          "indicator": "I want to"
+        },
+        "ends": {
+          "text": "freelance teachers can track their learning progress",
+          "indicator": "So that"
+        }
+      }
+    },
+    {
+      "number": 30,
+      "text": "As an administrator, I want to remove inappropriate or outdated content, so that the system stays relevant and compliant.",
+      "role": {
+        "name": "administrator",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "content",
+        "compound": []
+      },
+      "json": {
+        "number": 30,
+        "text": "As an administrator, I want to remove inappropriate or outdated content, so that the system stays relevant and compliant.",
+        "iloc": [
+          3
+        ],
+        "role": {
+          "text": "administrator",
+          "indicator": "As an"
+        },
+        "means": {
+          "text": "remove inappropriate or outdated content",
+          "indicator": "I want to"
+        },
+        "ends": {
+          "text": "the system stays relevant and compliant",
+          "indicator": "So that"
+        }
+      }
+    },
+    {
+      "number": 31,
+      "text": "As an administrator, I want to edit inappropriate or outdated content, so that the system stays relevant and compliant.",
+      "role": {
+        "name": "administrator",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "content",
+        "compound": []
+      },
+      "json": {
+        "number": 31,
+        "text": "As an administrator, I want to edit inappropriate or outdated content, so that the system stays relevant and compliant.",
+        "iloc": [
+          3
+        ],
+        "role": {
+          "text": "administrator",
+          "indicator": "As an"
+        },
+        "means": {
+          "text": "edit inappropriate or outdated content",
+          "indicator": "I want to"
+        },
+        "ends": {
+          "text": "the system stays relevant and compliant",
+          "indicator": "So that"
+        }
+      }
+    },
+    {
+      "number": 32,
+      "text": "As an administrator, I want to be able to add videos related to a certain module in the system, so that I can provide users with relevant educational content.",
+      "role": {
+        "name": "administrator",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "videos",
+        "compound": []
+      },
+      "json": {
+        "number": 32,
+        "text": "As an administrator, I want to be able to add videos related to a certain module in the system, so that I can provide users with relevant educational content.",
+        "iloc": [
+          3,
+          21
+        ],
+        "role": {
+          "text": "administrator",
+          "indicator": "As an"
+        },
+        "means": {
+          "text": "add videos related to a certain module in the system",
+          "indicator": "I want to be able to"
+        },
+        "ends": {
+          "text": "I can provide users with relevant educational content",
+          "indicator": "So that"
+        }
+      }
+    },
+    {
+      "number": 33,
+      "text": "As an administrator, I want to be able to manage videos related to a certain module in the system, so that I can provide users with relevant educational content.",
+      "role": {
+        "name": "administrator",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "videos",
+        "compound": []
+      },
+      "json": {
+        "number": 33,
+        "text": "As an administrator, I want to be able to manage videos related to a certain module in the system, so that I can provide users with relevant educational content.",
+        "iloc": [
+          3,
+          21
+        ],
+        "role": {
+          "text": "administrator",
+          "indicator": "As an"
+        },
+        "means": {
+          "text": "manage videos related to a certain module in the system",
+          "indicator": "I want to be able to"
+        },
+        "ends": {
+          "text": "I can provide users with relevant educational content",
+          "indicator": "So that"
+        }
+      }
+    },
+    {
+      "number": 34,
+      "text": "As an administrator, I want to be able to add books related to a certain module in the system, so that I can provide users with relevant educational content.",
+      "role": {
+        "name": "administrator",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "books",
+        "compound": []
+      },
+      "json": {
+        "number": 34,
+        "text": "As an administrator, I want to be able to add books related to a certain module in the system, so that I can provide users with relevant educational content.",
+        "iloc": [
+          3,
+          21
+        ],
+        "role": {
+          "text": "administrator",
+          "indicator": "As an"
+        },
+        "means": {
+          "text": "add books related to a certain module in the system",
+          "indicator": "I want to be able to"
+        },
+        "ends": {
+          "text": "I can provide users with relevant educational content",
+          "indicator": "So that"
+        }
+      }
+    },
+    {
+      "number": 35,
+      "text": "As an administrator, I want to be able to manage books related to a certain module in the system, so that I can provide users with relevant educational content.",
+      "role": {
+        "name": "administrator",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "books",
+        "compound": []
+      },
+      "json": {
+        "number": 35,
+        "text": "As an administrator, I want to be able to manage books related to a certain module in the system, so that I can provide users with relevant educational content.",
+        "iloc": [
+          3,
+          21
+        ],
+        "role": {
+          "text": "administrator",
+          "indicator": "As an"
+        },
+        "means": {
+          "text": "manage books related to a certain module in the system",
+          "indicator": "I want to be able to"
+        },
+        "ends": {
+          "text": "I can provide users with relevant educational content",
+          "indicator": "So that"
+        }
+      }
+    },
+    {
+      "number": 36,
+      "text": "As an administrator, I want to be able to add research papers related to a certain module in the system, so that I can provide users with relevant educational content.",
+      "role": {
+        "name": "administrator",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "papers",
+        "compound": [
+          "research",
+          "papers"
+        ]
+      },
+      "json": {
+        "number": 36,
+        "text": "As an administrator, I want to be able to add research papers related to a certain module in the system, so that I can provide users with relevant educational content.",
+        "iloc": [
+          3,
+          22
+        ],
+        "role": {
+          "text": "administrator",
+          "indicator": "As an"
+        },
+        "means": {
+          "text": "add research papers related to a certain module in the system",
+          "indicator": "I want to be able to"
+        },
+        "ends": {
+          "text": "I can provide users with relevant educational content",
+          "indicator": "So that"
+        }
+      }
+    },
+    {
+      "number": 37,
+      "text": "As an administrator, I want to be able to manage research papers related to a certain module in the system, so that I can provide users with relevant educational content.",
+      "role": {
+        "name": "administrator",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "papers",
+        "compound": [
+          "research",
+          "papers"
+        ]
+      },
+      "json": {
+        "number": 37,
+        "text": "As an administrator, I want to be able to manage research papers related to a certain module in the system, so that I can provide users with relevant educational content.",
+        "iloc": [
+          3,
+          22
+        ],
+        "role": {
+          "text": "administrator",
+          "indicator": "As an"
+        },
+        "means": {
+          "text": "manage research papers related to a certain module in the system",
+          "indicator": "I want to be able to"
+        },
+        "ends": {
+          "text": "I can provide users with relevant educational content",
+          "indicator": "So that"
+        }
+      }
+    },
+    {
+      "number": 38,
+      "text": "As an administrator, I want to be able to add slides related to a certain module in the system, so that I can provide users with relevant educational content.",
+      "role": {
+        "name": "administrator",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "slides",
+        "compound": []
+      },
+      "json": {
+        "number": 38,
+        "text": "As an administrator, I want to be able to add slides related to a certain module in the system, so that I can provide users with relevant educational content.",
+        "iloc": [
+          3,
+          21
+        ],
+        "role": {
+          "text": "administrator",
+          "indicator": "As an"
+        },
+        "means": {
+          "text": "add slides related to a certain module in the system",
+          "indicator": "I want to be able to"
+        },
+        "ends": {
+          "text": "I can provide users with relevant educational content",
+          "indicator": "So that"
+        }
+      }
+    },
+    {
+      "number": 39,
+      "text": "As an administrator, I want to be able to manage slides related to a certain module in the system, so that I can provide users with relevant educational content.",
+      "role": {
+        "name": "administrator",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "slides",
+        "compound": []
+      },
+      "json": {
+        "number": 39,
+        "text": "As an administrator, I want to be able to manage slides related to a certain module in the system, so that I can provide users with relevant educational content.",
+        "iloc": [
+          3,
+          21
+        ],
+        "role": {
+          "text": "administrator",
+          "indicator": "As an"
+        },
+        "means": {
+          "text": "manage slides related to a certain module in the system",
+          "indicator": "I want to be able to"
+        },
+        "ends": {
+          "text": "I can provide users with relevant educational content",
+          "indicator": "So that"
+        }
+      }
+    },
+    {
+      "number": 40,
+      "text": "As an administrator, I want to be able to add flashcards related to a certain module in the system, so that I can provide users with relevant educational content.",
+      "role": {
+        "name": "administrator",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "flashcards",
+        "compound": []
+      },
+      "json": {
+        "number": 40,
+        "text": "As an administrator, I want to be able to add flashcards related to a certain module in the system, so that I can provide users with relevant educational content.",
+        "iloc": [
+          3,
+          21
+        ],
+        "role": {
+          "text": "administrator",
+          "indicator": "As an"
+        },
+        "means": {
+          "text": "add flashcards related to a certain module in the system",
+          "indicator": "I want to be able to"
+        },
+        "ends": {
+          "text": "I can provide users with relevant educational content",
+          "indicator": "So that"
+        }
+      }
+    },
+    {
+      "number": 41,
+      "text": "As an administrator, I want to be able to manage flashcards related to a certain module in the system, so that I can provide users with relevant educational content.",
+      "role": {
+        "name": "administrator",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "flashcards",
+        "compound": []
+      },
+      "json": {
+        "number": 41,
+        "text": "As an administrator, I want to be able to manage flashcards related to a certain module in the system, so that I can provide users with relevant educational content.",
+        "iloc": [
+          3,
+          21
+        ],
+        "role": {
+          "text": "administrator",
+          "indicator": "As an"
+        },
+        "means": {
+          "text": "manage flashcards related to a certain module in the system",
+          "indicator": "I want to be able to"
+        },
+        "ends": {
+          "text": "I can provide users with relevant educational content",
+          "indicator": "So that"
+        }
+      }
+    },
+    {
+      "number": 42,
+      "text": "As an administrator, I want to be able to add games related to a certain module in the system, so that I can provide users with relevant educational content.",
+      "role": {
+        "name": "administrator",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "games",
+        "compound": []
+      },
+      "json": {
+        "number": 42,
+        "text": "As an administrator, I want to be able to add games related to a certain module in the system, so that I can provide users with relevant educational content.",
+        "iloc": [
+          3,
+          21
+        ],
+        "role": {
+          "text": "administrator",
+          "indicator": "As an"
+        },
+        "means": {
+          "text": "add games related to a certain module in the system",
+          "indicator": "I want to be able to"
+        },
+        "ends": {
+          "text": "I can provide users with relevant educational content",
+          "indicator": "So that"
+        }
+      }
+    },
+    {
+      "number": 43,
+      "text": "As an administrator, I want to be able to manage games related to a certain module in the system, so that I can provide users with relevant educational content.",
+      "role": {
+        "name": "administrator",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "games",
+        "compound": []
+      },
+      "json": {
+        "number": 43,
+        "text": "As an administrator, I want to be able to manage games related to a certain module in the system, so that I can provide users with relevant educational content.",
+        "iloc": [
+          3,
+          21
+        ],
+        "role": {
+          "text": "administrator",
+          "indicator": "As an"
+        },
+        "means": {
+          "text": "manage games related to a certain module in the system",
+          "indicator": "I want to be able to"
+        },
+        "ends": {
+          "text": "I can provide users with relevant educational content",
+          "indicator": "So that"
+        }
+      }
+    },
+    {
+      "number": 44,
+      "text": "As an administrator, I want to have an overview of data usage of freelance teachers, so that I can manage the active users.",
+      "role": {
+        "name": "administrator",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "overview",
+        "compound": []
+      },
+      "json": {
+        "number": 44,
+        "text": "As an administrator, I want to have an overview of data usage of freelance teachers, so that I can manage the active users.",
+        "iloc": [
+          3,
+          17
+        ],
+        "role": {
+          "text": "administrator",
+          "indicator": "As an"
+        },
+        "means": {
+          "text": "have an overview of data usage of freelance teachers",
+          "indicator": "I want to"
+        },
+        "ends": {
+          "text": "I can manage the active users",
+          "indicator": "So that"
+        }
+      }
+    },
+    {
+      "number": 45,
+      "text": "As an administrator, I want to send system-wide announcements or updates about system-specific events, so that all users are informed of changes or news.",
+      "role": {
+        "name": "administrator",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "announcements",
+        "compound": []
+      },
+      "json": {
+        "number": 45,
+        "text": "As an administrator, I want to send system-wide announcements or updates about system-specific events, so that all users are informed of changes or news.",
+        "iloc": [
+          3
+        ],
+        "role": {
+          "text": "administrator",
+          "indicator": "As an"
+        },
+        "means": {
+          "text": "send system-wide announcements or updates about system-specific events",
+          "indicator": "I want to"
+        },
+        "ends": {
+          "text": "all users are informed of changes or news",
+          "indicator": "So that"
+        }
+      }
+    }
+  ],
+  "failedStories": [
+    [
+      14,
+      "As a freelance teacher, I want learning materials to integrate with the subjects I already teach, so that I can incorporate it into my existing curriculum without disruption.",
+      [
+        "Could not find a means indicator",
+        1
+      ]
+    ]
+  ],
+  "classes": [
+    {
+      "name": "Freelance Teacher",
+      "parent": "Teacher",
+      "isRole": true,
+      "stories": [
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        2,
+        3,
+        3,
+        3,
+        3,
+        4,
+        4,
+        4,
+        4,
+        5,
+        5,
+        5,
+        5,
+        5,
+        6,
+        6,
+        6,
+        6,
+        6,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        8,
+        8,
+        8,
+        8,
+        8,
+        9,
+        9,
+        9,
+        9,
+        9,
+        10,
+        10,
+        10,
+        10,
+        11,
+        11,
+        11,
+        11,
+        12,
+        12,
+        12,
+        13,
+        13,
+        13,
+        13,
+        15,
+        15,
+        15,
+        15,
+        15,
+        16,
+        16,
+        16,
+        16,
+        16,
+        17,
+        17,
+        17,
+        17,
+        17,
+        18,
+        18,
+        18,
+        18,
+        18,
+        19,
+        19,
+        19,
+        19,
+        19,
+        20,
+        20,
+        20,
+        20,
+        20,
+        21,
+        21,
+        21,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        23,
+        23,
+        23,
+        23,
+        24,
+        24,
+        24,
+        29
+      ]
+    },
+    {
+      "name": "Teacher",
+      "parent": "",
+      "isRole": false,
+      "stories": [
+        -1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44
+      ]
+    },
+    {
+      "name": "Freelance",
+      "parent": "",
+      "isRole": false,
+      "stories": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44
+      ]
+    },
+    {
+      "name": "Teaching Skill",
+      "parent": "Skill",
+      "isRole": false,
+      "stories": [
+        2,
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "name": "Skill",
+      "parent": "",
+      "isRole": false,
+      "stories": [
+        -1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10
+      ]
+    },
+    {
+      "name": "Teaching",
+      "parent": "",
+      "isRole": false,
+      "stories": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        4,
+        4,
+        4,
+        4,
+        11,
+        11,
+        11,
+        11,
+        11,
+        13,
+        13,
+        13,
+        13
+      ]
+    },
+    {
+      "name": "Skill Assessment",
+      "parent": "Assessment",
+      "isRole": false,
+      "stories": [
+        4,
+        4,
+        4,
+        4,
+        4
+      ]
+    },
+    {
+      "name": "Assessment",
+      "parent": "",
+      "isRole": false,
+      "stories": [
+        -1,
+        4
+      ]
+    },
+    {
+      "name": "Level",
+      "parent": "",
+      "isRole": false,
+      "stories": [
+        -1,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28
+      ]
+    },
+    {
+      "name": "Learning Progress",
+      "parent": "",
+      "isRole": false,
+      "stories": [
+        5,
+        8,
+        29
+      ]
+    },
+    {
+      "name": "Progress",
+      "parent": "",
+      "isRole": false,
+      "stories": [
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29
+      ]
+    },
+    {
+      "name": "What",
+      "parent": "",
+      "isRole": false,
+      "stories": [
+        6,
+        6,
+        6,
+        9,
+        9,
+        9
+      ]
+    },
+    {
+      "name": "Achievement",
+      "parent": "",
+      "isRole": false,
+      "stories": [
+        7,
+        7
+      ]
+    },
+    {
+      "name": "Quiz",
+      "parent": "",
+      "isRole": false,
+      "stories": [
+        8,
+        8,
+        8,
+        8,
+        9,
+        9,
+        9,
+        29,
+        29,
+        29,
+        29
+      ]
+    },
+    {
+      "name": "Feedback",
+      "parent": "",
+      "isRole": false,
+      "stories": [
+        9,
+        9
+      ]
+    },
+    {
+      "name": "Skill Level",
+      "parent": "Level",
+      "isRole": false,
+      "stories": [
+        10,
+        10,
+        10
+      ]
+    },
+    {
+      "name": "Profile",
+      "parent": "",
+      "isRole": false,
+      "stories": [
+        -1,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26
+      ]
+    },
+    {
+      "name": "Background",
+      "parent": "",
+      "isRole": false,
+      "stories": [
+        10,
+        10,
+        10,
+        11,
+        11,
+        11
+      ]
+    },
+    {
+      "name": "Teaching Experience",
+      "parent": "Experience",
+      "isRole": false,
+      "stories": [
+        11,
+        11,
+        11
+      ]
+    },
+    {
+      "name": "Experience",
+      "parent": "",
+      "isRole": false,
+      "stories": [
+        -1,
+        1,
+        1,
+        11,
+        11
+      ]
+    },
+    {
+      "name": "Place",
+      "parent": "",
+      "isRole": false,
+      "stories": [
+        4,
+        4,
+        13,
+        13,
+        13
+      ]
+    },
+    {
+      "name": "Collection",
+      "parent": "",
+      "isRole": false,
+      "stories": [
+        15,
+        15
+      ]
+    },
+    {
+      "name": "Material",
+      "parent": "",
+      "isRole": false,
+      "stories": [
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20
+      ]
+    },
+    {
+      "name": "Flashcard",
+      "parent": "",
+      "isRole": false,
+      "stories": [
+        16,
+        16,
+        16,
+        16,
+        40,
+        40,
+        40,
+        40,
+        41,
+        41,
+        41,
+        41
+      ]
+    },
+    {
+      "name": "Video",
+      "parent": "",
+      "isRole": false,
+      "stories": [
+        17,
+        17,
+        17,
+        17,
+        32,
+        32,
+        32,
+        32,
+        33,
+        33,
+        33,
+        33
+      ]
+    },
+    {
+      "name": "Research Paper",
+      "parent": "Paper",
+      "isRole": false,
+      "stories": [
+        18,
+        18,
+        36,
+        36,
+        36,
+        37,
+        37,
+        37
+      ]
+    },
+    {
+      "name": "Paper",
+      "parent": "",
+      "isRole": false,
+      "stories": [
+        -1,
+        18,
+        18,
+        18,
+        36,
+        36,
+        36,
+        37,
+        37,
+        37
+      ]
+    },
+    {
+      "name": "Research",
+      "parent": "",
+      "isRole": false,
+      "stories": [
+        18,
+        18,
+        18,
+        18,
+        36,
+        36,
+        36,
+        36,
+        37,
+        37,
+        37,
+        37
+      ]
+    },
+    {
+      "name": "Access",
+      "parent": "",
+      "isRole": false,
+      "stories": [
+        15,
+        15,
+        15,
+        15,
+        15,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        21,
+        21,
+        21,
+        21,
+        21,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        26,
+        26,
+        26,
+        26,
+        26
+      ]
+    },
+    {
+      "name": "Slide",
+      "parent": "",
+      "isRole": false,
+      "stories": [
+        19,
+        19,
+        19,
+        19,
+        38,
+        38,
+        38,
+        38,
+        39,
+        39,
+        39,
+        39
+      ]
+    },
+    {
+      "name": "Game",
+      "parent": "",
+      "isRole": false,
+      "stories": [
+        20,
+        20,
+        20,
+        20,
+        42,
+        42,
+        42,
+        42,
+        43,
+        43,
+        43,
+        43
+      ]
+    },
+    {
+      "name": "Password",
+      "parent": "",
+      "isRole": false,
+      "stories": [
+        22,
+        22
+      ]
+    },
+    {
+      "name": "Profile Information",
+      "parent": "Information",
+      "isRole": false,
+      "stories": [
+        23,
+        23,
+        23
+      ]
+    },
+    {
+      "name": "Information",
+      "parent": "",
+      "isRole": false,
+      "stories": [
+        -1,
+        18,
+        18,
+        23,
+        23
+      ]
+    },
+    {
+      "name": "Administrator",
+      "parent": "",
+      "isRole": true,
+      "stories": [
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        31,
+        31,
+        31,
+        31,
+        31,
+        31,
+        31,
+        31,
+        31,
+        31,
+        31,
+        31,
+        31,
+        31,
+        31,
+        31,
+        31,
+        31,
+        31,
+        31,
+        31,
+        31,
+        31,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        34,
+        34,
+        34,
+        34,
+        34,
+        34,
+        34,
+        34,
+        34,
+        34,
+        34,
+        34,
+        34,
+        34,
+        34,
+        34,
+        34,
+        34,
+        34,
+        34,
+        34,
+        34,
+        34,
+        34,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        38,
+        38,
+        38,
+        38,
+        38,
+        38,
+        38,
+        38,
+        38,
+        38,
+        38,
+        38,
+        38,
+        38,
+        38,
+        38,
+        38,
+        38,
+        38,
+        38,
+        38,
+        38,
+        38,
+        38,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45
+      ]
+    },
+    {
+      "name": "Teacher Profile",
+      "parent": "Profile",
+      "isRole": false,
+      "stories": [
+        26,
+        26,
+        26,
+        26,
+        26
+      ]
+    },
+    {
+      "name": "Module",
+      "parent": "",
+      "isRole": false,
+      "stories": [
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        34,
+        34,
+        34,
+        34,
+        34,
+        34,
+        34,
+        34,
+        34,
+        34,
+        34,
+        34,
+        34,
+        34,
+        34,
+        34,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        38,
+        38,
+        38,
+        38,
+        38,
+        38,
+        38,
+        38,
+        38,
+        38,
+        38,
+        38,
+        38,
+        38,
+        38,
+        38,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43
+      ]
+    },
+    {
+      "name": "Content",
+      "parent": "",
+      "isRole": false,
+      "stories": [
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        31,
+        31,
+        31,
+        31,
+        31,
+        31,
+        31,
+        31,
+        31,
+        31,
+        31,
+        31,
+        31,
+        31,
+        31,
+        31,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        34,
+        34,
+        34,
+        34,
+        34,
+        34,
+        34,
+        34,
+        34,
+        34,
+        34,
+        34,
+        34,
+        34,
+        34,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        38,
+        38,
+        38,
+        38,
+        38,
+        38,
+        38,
+        38,
+        38,
+        38,
+        38,
+        38,
+        38,
+        38,
+        38,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43
+      ]
+    },
+    {
+      "name": "User",
+      "parent": "",
+      "isRole": false,
+      "stories": [
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        34,
+        34,
+        34,
+        34,
+        34,
+        34,
+        34,
+        34,
+        34,
+        34,
+        34,
+        34,
+        34,
+        34,
+        34,
+        34,
+        34,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        38,
+        38,
+        38,
+        38,
+        38,
+        38,
+        38,
+        38,
+        38,
+        38,
+        38,
+        38,
+        38,
+        38,
+        38,
+        38,
+        38,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45
+      ]
+    },
+    {
+      "name": "Book",
+      "parent": "",
+      "isRole": false,
+      "stories": [
+        15,
+        15,
+        15,
+        34,
+        34,
+        34,
+        34,
+        35,
+        35,
+        35,
+        35
+      ]
+    },
+    {
+      "name": "Overview",
+      "parent": "",
+      "isRole": false,
+      "stories": [
+        6,
+        6,
+        44,
+        44,
+        44
+      ]
+    },
+    {
+      "name": "Announcement",
+      "parent": "",
+      "isRole": false,
+      "stories": [
+        45,
+        45
+      ]
+    },
+    {
+      "name": "Function",
+      "parent": "",
+      "isRole": false,
+      "stories": [
+        1
+      ]
+    },
+    {
+      "name": "Learning",
+      "parent": "",
+      "isRole": false,
+      "stories": [
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29
+      ]
+    },
+    {
+      "name": "Number",
+      "parent": "",
+      "isRole": false,
+      "stories": [
+        12,
+        12,
+        12,
+        25,
+        25,
+        25,
+        26,
+        26,
+        26
+      ]
+    },
+    {
+      "name": "Section",
+      "parent": "",
+      "isRole": false,
+      "stories": [
+        21
+      ]
+    },
+    {
+      "name": "Notification",
+      "parent": "",
+      "isRole": false,
+      "stories": [
+        24
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "name": "hasTeacher",
+      "domain": "Freelance",
+      "range": "Freelance Teacher",
+      "stories": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        22,
+        23,
+        24
+      ]
+    },
+    {
+      "name": "hasSkill",
+      "domain": "Teaching",
+      "range": "Teaching Skill",
+      "stories": [
+        2,
+        2
+      ]
+    },
+    {
+      "name": "canLearn",
+      "domain": "Freelance Teacher",
+      "range": "Teaching Skill",
+      "stories": [
+        2
+      ]
+    },
+    {
+      "name": "canLearn",
+      "domain": "Freelance Teacher",
+      "range": "Skill",
+      "stories": [
+        3
+      ]
+    },
+    {
+      "name": "hasAssessment",
+      "domain": "Skill",
+      "range": "Skill Assessment",
+      "stories": [
+        4,
+        4
+      ]
+    },
+    {
+      "name": "canComplete",
+      "domain": "Freelance Teacher",
+      "range": "Skill Assessment",
+      "stories": [
+        4
+      ]
+    },
+    {
+      "name": "canNavigate Through",
+      "domain": "Freelance Teacher",
+      "range": "Level",
+      "stories": [
+        5
+      ]
+    },
+    {
+      "name": "canTrack",
+      "domain": "Freelance Teacher",
+      "range": "Learning Progress",
+      "stories": [
+        5,
+        29
+      ]
+    },
+    {
+      "name": "canTrack",
+      "domain": "Freelance Teacher",
+      "range": "Progress",
+      "stories": [
+        6
+      ]
+    },
+    {
+      "name": "canKnow",
+      "domain": "Freelance Teacher",
+      "range": "What",
+      "stories": [
+        6
+      ]
+    },
+    {
+      "name": "canAchieve",
+      "domain": "Freelance Teacher",
+      "range": "Achievement",
+      "stories": [
+        7
+      ]
+    },
+    {
+      "name": "canDo",
+      "domain": "Freelance Teacher",
+      "range": "Quiz",
+      "stories": [
+        8
+      ]
+    },
+    {
+      "name": "canTest",
+      "domain": "Freelance Teacher",
+      "range": "Learning Progress",
+      "stories": [
+        8
+      ]
+    },
+    {
+      "name": "canReceive",
+      "domain": "Freelance Teacher",
+      "range": "Feedback",
+      "stories": [
+        9
+      ]
+    },
+    {
+      "name": "canUnderstand",
+      "domain": "Freelance Teacher",
+      "range": "What",
+      "stories": [
+        9
+      ]
+    },
+    {
+      "name": "hasLevel",
+      "domain": "Skill",
+      "range": "Skill Level",
+      "stories": [
+        10
+      ]
+    },
+    {
+      "name": "canIndicate",
+      "domain": "Freelance Teacher",
+      "range": "Skill Level",
+      "stories": [
+        10
+      ]
+    },
+    {
+      "name": "canReflect",
+      "domain": "Profile",
+      "range": "Background",
+      "stories": [
+        10,
+        11
+      ]
+    },
+    {
+      "name": "hasExperience",
+      "domain": "Teaching",
+      "range": "Teaching Experience",
+      "stories": [
+        11
+      ]
+    },
+    {
+      "name": "canIndicate",
+      "domain": "Freelance Teacher",
+      "range": "Teaching Experience",
+      "stories": [
+        11
+      ]
+    },
+    {
+      "name": "canHave",
+      "domain": "Freelance Teacher",
+      "range": "Place",
+      "stories": [
+        13
+      ]
+    },
+    {
+      "name": "canAccess",
+      "domain": "Freelance Teacher",
+      "range": "Collection",
+      "stories": [
+        15
+      ]
+    },
+    {
+      "name": "canSelect",
+      "domain": "Freelance Teacher",
+      "range": "Material",
+      "stories": [
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ]
+    },
+    {
+      "name": "canHave",
+      "domain": "Freelance Teacher",
+      "range": "Flashcard",
+      "stories": [
+        16
+      ]
+    },
+    {
+      "name": "canFind",
+      "domain": "Freelance Teacher",
+      "range": "Video",
+      "stories": [
+        17
+      ]
+    },
+    {
+      "name": "hasPaper",
+      "domain": "Research",
+      "range": "Research Paper",
+      "stories": [
+        18,
+        36,
+        37
+      ]
+    },
+    {
+      "name": "canHave",
+      "domain": "Freelance Teacher",
+      "range": "Access",
+      "stories": [
+        18
+      ]
+    },
+    {
+      "name": "canUse",
+      "domain": "Freelance Teacher",
+      "range": "Slide",
+      "stories": [
+        19
+      ]
+    },
+    {
+      "name": "canPlay",
+      "domain": "Freelance Teacher",
+      "range": "Game",
+      "stories": [
+        20
+      ]
+    },
+    {
+      "name": "canReset",
+      "domain": "Freelance Teacher",
+      "range": "Password",
+      "stories": [
+        22
+      ]
+    },
+    {
+      "name": "canRegain",
+      "domain": "Freelance Teacher",
+      "range": "Access",
+      "stories": [
+        22
+      ]
+    },
+    {
+      "name": "hasInformation",
+      "domain": "Profile",
+      "range": "Profile Information",
+      "stories": [
+        23
+      ]
+    },
+    {
+      "name": "canUpdate",
+      "domain": "Freelance Teacher",
+      "range": "Profile Information",
+      "stories": [
+        23
+      ]
+    },
+    {
+      "name": "canCheck",
+      "domain": "Administrator",
+      "range": "Profile",
+      "stories": [
+        25
+      ]
+    },
+    {
+      "name": "hasProfile",
+      "domain": "Teacher",
+      "range": "Teacher Profile",
+      "stories": [
+        26,
+        26
+      ]
+    },
+    {
+      "name": "canApprove",
+      "domain": "Administrator",
+      "range": "Teacher Profile",
+      "stories": [
+        26
+      ]
+    },
+    {
+      "name": "canCreate",
+      "domain": "Administrator",
+      "range": "Module",
+      "stories": [
+        27
+      ]
+    },
+    {
+      "name": "canOrganize",
+      "domain": "Administrator",
+      "range": "Content",
+      "stories": [
+        27
+      ]
+    },
+    {
+      "name": "canCreate",
+      "domain": "Administrator",
+      "range": "Level",
+      "stories": [
+        28
+      ]
+    },
+    {
+      "name": "canCreate",
+      "domain": "Administrator",
+      "range": "Quiz",
+      "stories": [
+        29
+      ]
+    },
+    {
+      "name": "canRemove",
+      "domain": "Administrator",
+      "range": "Content",
+      "stories": [
+        30
+      ]
+    },
+    {
+      "name": "canEdit",
+      "domain": "Administrator",
+      "range": "Content",
+      "stories": [
+        31
+      ]
+    },
+    {
+      "name": "canAdd",
+      "domain": "Administrator",
+      "range": "Video",
+      "stories": [
+        32
+      ]
+    },
+    {
+      "name": "canProvide",
+      "domain": "Administrator",
+      "range": "User",
+      "stories": [
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43
+      ]
+    },
+    {
+      "name": "canManage",
+      "domain": "Administrator",
+      "range": "Video",
+      "stories": [
+        33
+      ]
+    },
+    {
+      "name": "canAdd",
+      "domain": "Administrator",
+      "range": "Book",
+      "stories": [
+        34
+      ]
+    },
+    {
+      "name": "canManage",
+      "domain": "Administrator",
+      "range": "Book",
+      "stories": [
+        35
+      ]
+    },
+    {
+      "name": "canAdd",
+      "domain": "Administrator",
+      "range": "Research Paper",
+      "stories": [
+        36
+      ]
+    },
+    {
+      "name": "canManage",
+      "domain": "Administrator",
+      "range": "Research Paper",
+      "stories": [
+        37
+      ]
+    },
+    {
+      "name": "canAdd",
+      "domain": "Administrator",
+      "range": "Slide",
+      "stories": [
+        38
+      ]
+    },
+    {
+      "name": "canManage",
+      "domain": "Administrator",
+      "range": "Slide",
+      "stories": [
+        39
+      ]
+    },
+    {
+      "name": "canAdd",
+      "domain": "Administrator",
+      "range": "Flashcard",
+      "stories": [
+        40
+      ]
+    },
+    {
+      "name": "canManage",
+      "domain": "Administrator",
+      "range": "Flashcard",
+      "stories": [
+        41
+      ]
+    },
+    {
+      "name": "canAdd",
+      "domain": "Administrator",
+      "range": "Game",
+      "stories": [
+        42
+      ]
+    },
+    {
+      "name": "canManage",
+      "domain": "Administrator",
+      "range": "Game",
+      "stories": [
+        43
+      ]
+    },
+    {
+      "name": "canHave",
+      "domain": "Administrator",
+      "range": "Overview",
+      "stories": [
+        44
+      ]
+    },
+    {
+      "name": "canManage",
+      "domain": "Administrator",
+      "range": "User",
+      "stories": [
+        44
+      ]
+    },
+    {
+      "name": "canSend",
+      "domain": "Administrator",
+      "range": "Announcement",
+      "stories": [
+        45
+      ]
+    }
+  ],
+  "inferredRoles": [
+    "administrator",
+    "teacher"
+  ],
+  "keyNouns": [
+    {
+      "term": "Teacher",
+      "weight": 23.66
+    },
+    {
+      "term": "Administrator",
+      "weight": 21
+    },
+    {
+      "term": "Freelance",
+      "weight": 15.18
+    },
+    {
+      "term": "User",
+      "weight": 6.5
+    },
+    {
+      "term": "Skill",
+      "weight": 3.3200000000000003
+    },
+    {
+      "term": "Material",
+      "weight": 3
+    },
+    {
+      "term": "Level",
+      "weight": 3
+    },
+    {
+      "term": "Game",
+      "weight": 3
+    },
+    {
+      "term": "Flashcard",
+      "weight": 3
+    },
+    {
+      "term": "Slide",
+      "weight": 3
+    },
+    {
+      "term": "Video",
+      "weight": 3
+    },
+    {
+      "term": "Profile",
+      "weight": 2.66
+    },
+    {
+      "term": "Progress",
+      "weight": 2.5
+    },
+    {
+      "term": "Content",
+      "weight": 2.5
+    },
+    {
+      "term": "Book",
+      "weight": 2
+    },
+    {
+      "term": "Quiz",
+      "weight": 2
+    },
+    {
+      "term": "Paper",
+      "weight": 2
+    },
+    {
+      "term": "Learning",
+      "weight": 1.5
+    },
+    {
+      "term": "Access",
+      "weight": 1.5
+    },
+    {
+      "term": "Research",
+      "weight": 1.32
+    }
+  ],
+  "stats": {
+    "successCount": 44,
+    "failedCount": 1
+  }
+}

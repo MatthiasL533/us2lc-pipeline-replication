@@ -1,0 +1,142 @@
+{
+  "actors": [
+    "camp administrator",
+    "parent",
+    "camp worker",
+    "camp counselor"
+  ],
+  "tasks": [
+    {
+      "actor": "camp administrator",
+      "action": "add campers",
+      "condition": "",
+      "gatewayId": "",
+      "gatewayType": "",
+      "storyIndex": 0
+    },
+    {
+      "actor": "camp administrator",
+      "action": "suspend a camper who had behavioral problems",
+      "condition": "",
+      "gatewayId": "",
+      "gatewayType": "",
+      "storyIndex": 7
+    },
+    {
+      "actor": "camp administrator",
+      "action": "store camper's immediate parent/guardian's information, so that i can easily call to notify camper's immediate parent/guardian's in case a grossly unacceptable behavior",
+      "condition": "",
+      "gatewayId": "",
+      "gatewayType": "",
+      "storyIndex": 15
+    },
+    {
+      "actor": "camp administrator",
+      "action": "add parents",
+      "condition": "so that i can track which kids are coming in",
+      "gatewayId": "EG0",
+      "gatewayType": "exclusive",
+      "storyIndex": 21
+    },
+    {
+      "actor": "camp administrator",
+      "action": "modify the information of added parents",
+      "condition": "so that i can track which kids are coming in",
+      "gatewayId": "EG0",
+      "gatewayType": "exclusive",
+      "storyIndex": 29
+    },
+    {
+      "actor": "parent",
+      "action": "delete parents from the database",
+      "condition": "so that i can track which kids are coming in",
+      "gatewayId": "EG0",
+      "gatewayType": "exclusive",
+      "storyIndex": 30
+    },
+    {
+      "actor": "parent",
+      "action": "message my camper counselors",
+      "condition": "so that i can track which kids are coming in",
+      "gatewayId": "EG0",
+      "gatewayType": "exclusive",
+      "storyIndex": 37
+    },
+    {
+      "actor": "camp worker",
+      "action": "see which campers i am in charge of and where",
+      "condition": "so that i don't have to deal with my camper losing a consent form",
+      "gatewayId": "EG0",
+      "gatewayType": "exclusive",
+      "storyIndex": 45
+    },
+    {
+      "actor": "camp counselor",
+      "action": "take attendance of my assigned kids",
+      "condition": "so that i don't have to deal with my camper losing a consent form",
+      "gatewayId": "EG0",
+      "gatewayType": "exclusive",
+      "storyIndex": 50
+    }
+  ],
+  "gateways": [
+    {
+      "id": "EG0",
+      "type": "exclusive",
+      "conditions": [
+        "so that camper's parents can be aware of their camper behavior and performance at camp",
+        "so that i don't have to spend two hours making 200+ nametags",
+        "so that i can keep organized",
+        "so that the admins next year can improve on the previous years",
+        "so that we can be prepared for an allergy attack",
+        "so that parents can be notified of any upcoming events",
+        "so that i can track which kids are coming in",
+        "so that i can voice my concerns or check on my camper progress",
+        "so that i don't have to deal with my camper losing a consent form"
+      ]
+    }
+  ],
+  "processObjects": [
+    "Campers",
+    "Who Had Behavioral Problems",
+    "A Grossly Unacceptable Behavior",
+    "Parents",
+    "Information Of Added Parents",
+    "Parents From The Database",
+    "Message My Camper Counselors",
+    "Charge Of And Where",
+    "Of My Assigned Kids",
+    "Attend The Camp Anymore",
+    "Records From Previous Years",
+    "Consent Forms",
+    "Camper Submitted Which Forms",
+    "Schedule Activities For Campers",
+    "Create Nametags For Campers",
+    "In Terms Of Responsibilities",
+    "Workers Has To Follow",
+    "The Different Camp Groups",
+    "The Services I Provide",
+    "Case Of An Emergency",
+    "Feedback To Camper's Parents",
+    "Make Nametags Faster",
+    "Both Staff And Kids",
+    "Information In One Place",
+    "See Medical Forms",
+    "Parents All At Once",
+    "Log Attendance Everyday",
+    "Add Campers To Groups",
+    "For Each Camp Group",
+    "A Specific Camp Group"
+  ],
+  "capabilityHints": {
+    "hasApproval": false,
+    "hasDecision": true,
+    "hasNotification": true,
+    "hasWorkflowLikeRouting": true
+  },
+  "stats": {
+    "taskCount": 9,
+    "gatewayCount": 1,
+    "rawEntityCount": 99
+  }
+}

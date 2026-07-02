@@ -1,0 +1,869 @@
+{
+  "dataset": "education",
+  "run": "run-02",
+  "planPath": "/Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/artifacts/practical-performance/20260606-091359/stability/education/run-02/plan.json",
+  "ok": true,
+  "startedAt": "2026-06-07T20:50:54.258Z",
+  "tempPlanPath": "/Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/artifacts/practical-performance/20260606-091359/builder-stage-runs/plans/education/run-02/plan.json",
+  "totalMs": 22099,
+  "result": {
+    "appId": "e655c1d2-dac5-43f2-96f4-c3fdbd7a74da",
+    "appCreated": true,
+    "seedAppId": null,
+    "branch": "main",
+    "committed": true,
+    "commitRequested": true,
+    "workingCopyId": "f601c448-3618-4003-900f-dadd7ca8c8f8",
+    "personas": {
+      "enabled": false,
+      "generatedPageNames": [],
+      "personaNames": []
+    },
+    "stages": [
+      {
+        "stage": "domainModel",
+        "ok": true,
+        "summary": "entitiesCreated=27, associationsCreated=5, enumerationsCreated=0",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 157
+      },
+      {
+        "stage": "flush.afterDomainModel",
+        "ok": true,
+        "summary": "flush.afterDomainModel completed",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 147
+      },
+      {
+        "stage": "security",
+        "ok": true,
+        "summary": "moduleRolesCreated=3, userRolesCreated=3, demoUsersCreated=0",
+        "artifacts": [
+          {
+            "key": "moduleRoleNames",
+            "count": 4
+          },
+          {
+            "key": "userRoleNames",
+            "count": 5
+          },
+          {
+            "key": "demoUserNames",
+            "count": 2
+          }
+        ],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 185
+      },
+      {
+        "stage": "flush.afterSecurity",
+        "ok": true,
+        "summary": "flush.afterSecurity completed",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 241
+      },
+      {
+        "stage": "microflowsNanoflows",
+        "ok": true,
+        "summary": "microflowsCreated=6, nanoflowsCreated=1",
+        "artifacts": [
+          {
+            "key": "microflowNames",
+            "count": 6
+          },
+          {
+            "key": "nanoflowNames",
+            "count": 1
+          },
+          {
+            "key": "microflowRefsByRef",
+            "count": 3
+          },
+          {
+            "key": "nanoflowRefsByRef",
+            "count": 0
+          }
+        ],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 15
+      },
+      {
+        "stage": "flush.afterMicroflows",
+        "ok": true,
+        "summary": "flush.afterMicroflows completed",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 90
+      },
+      {
+        "stage": "workflows",
+        "ok": true,
+        "summary": "workflowsCreated=1",
+        "artifacts": [
+          {
+            "key": "workflowNames",
+            "count": 1
+          },
+          {
+            "key": "workflowRefsByRef",
+            "count": 1
+          }
+        ],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 11
+      },
+      {
+        "stage": "flush.afterWorkflows",
+        "ok": true,
+        "summary": "flush.afterWorkflows completed",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 34
+      },
+      {
+        "stage": "pageCapabilities",
+        "ok": true,
+        "summary": "pageCapabilities completed",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 1
+      },
+      {
+        "stage": "webClientCompatibility",
+        "ok": true,
+        "summary": "webClientCompatibility completed",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 2
+      },
+      {
+        "stage": "flush.afterWebClientCompatibility",
+        "ok": true,
+        "summary": "flush.afterWebClientCompatibility completed",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 29
+      },
+      {
+        "stage": "pages",
+        "ok": true,
+        "summary": "pages completed",
+        "artifacts": [
+          {
+            "key": "pageNames",
+            "count": 57
+          }
+        ],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 563
+      },
+      {
+        "stage": "navigationUI",
+        "ok": true,
+        "summary": "navigationUI completed",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 39
+      },
+      {
+        "stage": "homePage",
+        "ok": true,
+        "summary": "updatedProfiles=1",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 2
+      },
+      {
+        "stage": "flush.final",
+        "ok": true,
+        "summary": "flush.final completed",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 1720
+      },
+      {
+        "stage": "verification",
+        "ok": true,
+        "summary": "ok=true",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 84
+      },
+      {
+        "stage": "capabilities",
+        "ok": true,
+        "summary": "capabilities completed",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 766
+      },
+      {
+        "stage": "commit",
+        "ok": true,
+        "summary": "commit completed",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 10421
+      }
+    ],
+    "createdApp": {
+      "appId": "e655c1d2-dac5-43f2-96f4-c3fdbd7a74da",
+      "name": "rerun-education-run02",
+      "repositoryType": "git"
+    },
+    "beforeCounts": {
+      "pagesInModule": 1,
+      "entitiesInModule": 0,
+      "microflowsInModule": 1,
+      "nanoflowsInModule": 0,
+      "workflowsInModule": 0
+    },
+    "domainModel": {
+      "moduleName": "MyFirstModule",
+      "entitiesCreated": 27,
+      "associationsCreated": 5,
+      "enumerationsCreated": 0
+    },
+    "security": {
+      "moduleName": "MyFirstModule",
+      "securityLevel": "CheckFormsAndMicroflows",
+      "moduleRolesCreated": 3,
+      "userRolesCreated": 3,
+      "demoUsersRequested": 0,
+      "demoUsersCreated": 0,
+      "demoUsersApplied": 0,
+      "demoUserHandling": "notRequested",
+      "skippedDemoUsers": [],
+      "moduleRoleNames": [
+        "AppAdministrator",
+        "AppUser",
+        "FreelanceTeacher",
+        "User"
+      ],
+      "userRoleNames": [
+        "Administrator",
+        "AppAdministrator",
+        "AppUser",
+        "FreelanceTeacher",
+        "User"
+      ],
+      "demoUserNames": [
+        "demo_administrator",
+        "demo_user"
+      ]
+    },
+    "microflows": {
+      "moduleName": "MyFirstModule",
+      "microflowsCreated": 6,
+      "nanoflowsCreated": 1,
+      "microflowNames": [
+        "ApproveFreelanceTeacherProfile",
+        "RejectFreelanceTeacherProfile",
+        "SendNotificationToFreelanceTeacher",
+        "MF_FreelanceTeacher_Prepare",
+        "MF_FreelanceTeacher_Approve",
+        "MF_FreelanceTeacher_Reject"
+      ],
+      "nanoflowNames": [
+        "CheckKvKNumber"
+      ],
+      "microflowRefsByRef": {
+        "mf_freelanceteacher_prepare": "MyFirstModule.MF_FreelanceTeacher_Prepare",
+        "mf_freelanceteacher_approve": "MyFirstModule.MF_FreelanceTeacher_Approve",
+        "mf_freelanceteacher_reject": "MyFirstModule.MF_FreelanceTeacher_Reject"
+      },
+      "nanoflowRefsByRef": {}
+    },
+    "workflows": {
+      "moduleName": "MyFirstModule",
+      "workflowsCreated": 1,
+      "workflowNames": [
+        "WF_FreelanceTeacher"
+      ],
+      "workflowRefsByRef": {
+        "wf_freelanceteacher": "MyFirstModule.WF_FreelanceTeacher"
+      }
+    },
+    "pageCapabilities": null,
+    "webClientCompatibility": {
+      "lookupRequested": true,
+      "classicGridRequested": false,
+      "updated": true,
+      "useOptimizedClient": "No",
+      "previousUseOptimizedClient": "Yes"
+    },
+    "pages": {
+      "moduleName": "MyFirstModule",
+      "layoutQualifiedName": "Atlas_Core.Atlas_Default",
+      "layoutParameterQname": "Atlas_Core.Atlas_Default.Main",
+      "pageNames": [
+        "Home",
+        "Module_Overview",
+        "Module_NewEdit",
+        "FreelanceTeacher_Overview",
+        "FreelanceTeacher_NewEdit",
+        "AppAdministrator_Overview",
+        "AppAdministrator_NewEdit",
+        "FreelanceTeacher_WorkflowTasks",
+        "FreelanceTeacher_WorkflowTask",
+        "Level_Overview",
+        "Level_NewEdit",
+        "Quiz_Overview",
+        "Quiz_NewEdit",
+        "Flashcard_Overview",
+        "Flashcard_NewEdit",
+        "Video_Overview",
+        "Video_NewEdit",
+        "ResearchPaper_Overview",
+        "ResearchPaper_NewEdit",
+        "Slide_Overview",
+        "Slide_NewEdit",
+        "Game_Overview",
+        "Game_NewEdit",
+        "Achievement_Overview",
+        "Achievement_NewEdit",
+        "SkillAssessment_Overview",
+        "SkillAssessment_NewEdit",
+        "ChatFunction_Overview",
+        "ChatFunction_NewEdit",
+        "CommunicationSkills_Overview",
+        "CommunicationSkills_NewEdit",
+        "PresentationSkills_Overview",
+        "PresentationSkills_NewEdit",
+        "Confidence_Overview",
+        "Confidence_NewEdit",
+        "Compassion_Overview",
+        "Compassion_NewEdit",
+        "Collaboration_Overview",
+        "Collaboration_NewEdit",
+        "Inclusiveness_Overview",
+        "Inclusiveness_NewEdit",
+        "GraphicalOverview_Overview",
+        "GraphicalOverview_NewEdit",
+        "LearningOpportunity_Overview",
+        "LearningOpportunity_NewEdit",
+        "Notification_Overview",
+        "Notification_NewEdit",
+        "ApprovalStatus_Overview",
+        "ApprovalStatus_NewEdit",
+        "RemovalReason_Overview",
+        "RemovalReason_NewEdit",
+        "EditHistory_Overview",
+        "EditHistory_NewEdit",
+        "DataUsage_Overview",
+        "DataUsage_NewEdit",
+        "AppUser_Overview",
+        "AppUser_NewEdit"
+      ],
+      "dg2Cleanup": {
+        "enabled": true,
+        "targetedPageNames": [],
+        "deletedPageNames": [],
+        "failed": []
+      },
+      "dataGrid2": {
+        "enabled": false,
+        "widgetId": "",
+        "resolvedFrom": "",
+        "useFallbackSchema": false,
+        "probeVariant": null,
+        "configuredWidgets": 0,
+        "attempts": []
+      }
+    },
+    "dg2Cleanup": {
+      "enabled": true,
+      "targetedPageNames": [],
+      "deletedPageNames": [],
+      "failed": []
+    },
+    "navigationUI": {
+      "requested": true,
+      "homeButtonsAdded": 0,
+      "navItemsAdded": 6
+    },
+    "homePage": {
+      "requested": true,
+      "updatedProfiles": 1,
+      "targetPageQualifiedName": "MyFirstModule.Home"
+    },
+    "afterCounts": {
+      "pagesInModule": 58,
+      "entitiesInModule": 27,
+      "microflowsInModule": 7,
+      "nanoflowsInModule": 1,
+      "workflowsInModule": 1
+    },
+    "beforeRefs": {
+      "pages": [
+        {
+          "name": "Home_Web",
+          "id": "5c6805fc-cadf-4d72-a5ef-f25da7cf4c97"
+        }
+      ],
+      "entities": [],
+      "microflows": [
+        {
+          "name": "MyFirstLogic",
+          "id": "4a8475b3-14cb-4100-8963-58f2fd3a0be8"
+        }
+      ],
+      "nanoflows": [],
+      "workflows": []
+    },
+    "afterRefs": {
+      "pages": [
+        {
+          "name": "Home_Web",
+          "id": "5c6805fc-cadf-4d72-a5ef-f25da7cf4c97"
+        },
+        {
+          "name": "Home",
+          "id": "e08fec70-2c48-485a-88fd-d39fdb737955"
+        },
+        {
+          "name": "Module_Overview",
+          "id": "e5cbbf62-b415-41e4-b7a6-d207e8aef802"
+        },
+        {
+          "name": "Module_NewEdit",
+          "id": "c59ef29e-3c51-475a-b0b6-b2777340ad6b"
+        },
+        {
+          "name": "FreelanceTeacher_Overview",
+          "id": "ff5d0118-026b-4c21-bbd6-124235f0160d"
+        },
+        {
+          "name": "FreelanceTeacher_NewEdit",
+          "id": "7670d504-63a4-4154-bc27-2bedc82ff67e"
+        },
+        {
+          "name": "AppAdministrator_Overview",
+          "id": "461a099e-63ff-4782-82f8-f74076ab57c8"
+        },
+        {
+          "name": "AppAdministrator_NewEdit",
+          "id": "629fbc4e-e07f-447e-b495-88b8e20449c6"
+        },
+        {
+          "name": "FreelanceTeacher_WorkflowTasks",
+          "id": "18a91ebc-7e37-49bc-81b1-adf22d97543d"
+        },
+        {
+          "name": "FreelanceTeacher_WorkflowTask",
+          "id": "78885cad-fa0c-4b8a-98db-df44889e254d"
+        },
+        {
+          "name": "Level_Overview",
+          "id": "60d68603-26e6-4b9f-b753-02ef8ffedfb8"
+        },
+        {
+          "name": "Level_NewEdit",
+          "id": "d51b9f91-5dd1-4349-bab5-66b2eda26e4a"
+        },
+        {
+          "name": "Quiz_Overview",
+          "id": "322f890c-f701-40ec-bfec-dfdcb16a65ed"
+        },
+        {
+          "name": "Quiz_NewEdit",
+          "id": "7c964319-765c-4249-8489-f9eca92d839e"
+        },
+        {
+          "name": "Flashcard_Overview",
+          "id": "ff44e828-0b85-4703-8228-abf0569baea7"
+        },
+        {
+          "name": "Flashcard_NewEdit",
+          "id": "627a1eb8-1129-453d-aaf0-2a6d0d43cedd"
+        },
+        {
+          "name": "Video_Overview",
+          "id": "9dd9e8c1-571c-4200-ab2d-d389ac8c8113"
+        },
+        {
+          "name": "Video_NewEdit",
+          "id": "ef62dca8-ebb9-4ccb-9117-b4398c669ea3"
+        },
+        {
+          "name": "ResearchPaper_Overview",
+          "id": "57a9ca05-ffdf-4ea7-8a70-771f46934994"
+        },
+        {
+          "name": "ResearchPaper_NewEdit",
+          "id": "ed7e42b0-23c9-40e2-a6b1-1068fd37f4f5"
+        },
+        {
+          "name": "Slide_Overview",
+          "id": "c7b791c4-6fdf-4d85-95a4-d07bfcc712b7"
+        },
+        {
+          "name": "Slide_NewEdit",
+          "id": "42782fdf-901e-402f-8b2d-435ac128f333"
+        },
+        {
+          "name": "Game_Overview",
+          "id": "c58311d0-1fdd-4e6d-85a3-4f9d6e5be28f"
+        },
+        {
+          "name": "Game_NewEdit",
+          "id": "dc94d5a6-94ba-4dce-a3b7-53ee8d229f34"
+        },
+        {
+          "name": "Achievement_Overview",
+          "id": "edd5268f-e15a-43b7-9602-fa53ec457217"
+        },
+        {
+          "name": "Achievement_NewEdit",
+          "id": "dea1680c-ef3a-49a5-bd81-e349e659e8ae"
+        },
+        {
+          "name": "SkillAssessment_Overview",
+          "id": "cbc80ccf-dd6d-4d9a-949a-0bcccd45020a"
+        },
+        {
+          "name": "SkillAssessment_NewEdit",
+          "id": "9a3a3998-b320-4efe-9938-7ae642660df6"
+        },
+        {
+          "name": "ChatFunction_Overview",
+          "id": "bb0cef45-cf88-4e28-82f3-8f66f7dad206"
+        },
+        {
+          "name": "ChatFunction_NewEdit",
+          "id": "8ed40d8a-261a-465f-a070-ac13b7746ca4"
+        },
+        {
+          "name": "CommunicationSkills_Overview",
+          "id": "5b97db3c-5f22-4c26-bd4f-eedaeb8637b5"
+        },
+        {
+          "name": "CommunicationSkills_NewEdit",
+          "id": "046e0eaf-8f39-42f6-828c-373c8eddb79b"
+        },
+        {
+          "name": "PresentationSkills_Overview",
+          "id": "1e3c2bbf-7efe-4295-95a1-bdfef4a73e47"
+        },
+        {
+          "name": "PresentationSkills_NewEdit",
+          "id": "9a641100-05a2-4e29-9dde-fcffb9a1b01d"
+        },
+        {
+          "name": "Confidence_Overview",
+          "id": "30fc7969-d942-45dc-a780-56d003cf235b"
+        },
+        {
+          "name": "Confidence_NewEdit",
+          "id": "9f87ff9a-1832-4d3d-999c-358c54520b68"
+        },
+        {
+          "name": "Compassion_Overview",
+          "id": "f04e89ee-8d04-4c92-9ebc-ede4236a9d57"
+        },
+        {
+          "name": "Compassion_NewEdit",
+          "id": "7733170a-686b-43d6-906f-8185eb21459b"
+        },
+        {
+          "name": "Collaboration_Overview",
+          "id": "c3eb2987-ae0f-4600-bfc7-6b5910a9ac6e"
+        },
+        {
+          "name": "Collaboration_NewEdit",
+          "id": "f55f131b-7c60-42b3-9e9a-31602a511313"
+        },
+        {
+          "name": "Inclusiveness_Overview",
+          "id": "822c9c9f-ac1d-4392-9507-933fc4d5357f"
+        },
+        {
+          "name": "Inclusiveness_NewEdit",
+          "id": "3d6e7423-7450-4e56-8c2e-7e7f321b55de"
+        },
+        {
+          "name": "GraphicalOverview_Overview",
+          "id": "6d3df556-24f5-456f-8989-ad6625fedc4b"
+        },
+        {
+          "name": "GraphicalOverview_NewEdit",
+          "id": "a6d588fc-0671-4ee0-be44-1600d3db97cd"
+        },
+        {
+          "name": "LearningOpportunity_Overview",
+          "id": "e0e8c08c-6aae-4daa-853a-40dda3ee8f95"
+        },
+        {
+          "name": "LearningOpportunity_NewEdit",
+          "id": "c0f820a1-72f9-45e0-81d1-56e56d461ffc"
+        },
+        {
+          "name": "Notification_Overview",
+          "id": "24771936-9b0e-43b4-9892-ec7b9d5ab77e"
+        },
+        {
+          "name": "Notification_NewEdit",
+          "id": "41e8df0d-7cda-45a4-baec-b9aa829e0e3d"
+        },
+        {
+          "name": "ApprovalStatus_Overview",
+          "id": "03a2b8f5-fed9-45ed-a2e5-bcdaa75d0cd4"
+        },
+        {
+          "name": "ApprovalStatus_NewEdit",
+          "id": "a39c179e-687a-45ae-9d95-cc90b376dcce"
+        },
+        {
+          "name": "RemovalReason_Overview",
+          "id": "bdc062e3-691b-43f6-aceb-e8d3bcf00c4e"
+        },
+        {
+          "name": "RemovalReason_NewEdit",
+          "id": "29098610-aaa9-4772-9157-f5fbfc1c9cec"
+        },
+        {
+          "name": "EditHistory_Overview",
+          "id": "ee5bbd5f-e0b6-4aac-8e15-abf3c50ecaef"
+        },
+        {
+          "name": "EditHistory_NewEdit",
+          "id": "7876991e-e647-4a8a-ab6e-7458dee19dbd"
+        },
+        {
+          "name": "DataUsage_Overview",
+          "id": "0710e9d6-a6d8-4888-af8c-b0b45b1c403f"
+        },
+        {
+          "name": "DataUsage_NewEdit",
+          "id": "37d2b8c0-06ef-4194-a8d1-5a78eefbd930"
+        },
+        {
+          "name": "AppUser_Overview",
+          "id": "5337cccd-289a-4fd4-a792-01efd834a730"
+        },
+        {
+          "name": "AppUser_NewEdit",
+          "id": "c3f27097-0760-4a4f-aac5-f63664e4d47c"
+        }
+      ],
+      "entities": [
+        {
+          "name": "FreelanceTeacher",
+          "id": "ce5e8f8c-bddf-4a30-85e5-b8e7a232ea9c"
+        },
+        {
+          "name": "Module",
+          "id": "38e14c8d-aeae-4b08-bbc2-5c060884ab10"
+        },
+        {
+          "name": "Level",
+          "id": "326fee7e-e33d-49e6-96a7-99b1348b051f"
+        },
+        {
+          "name": "Quiz",
+          "id": "af6cdeae-dedd-4e0d-b823-960a8f18f249"
+        },
+        {
+          "name": "Flashcard",
+          "id": "3e46f210-cde3-4f92-801f-38511b37f690"
+        },
+        {
+          "name": "Video",
+          "id": "a35b63f8-4284-4c54-945a-6eb1439c4cff"
+        },
+        {
+          "name": "ResearchPaper",
+          "id": "19428730-4325-4e69-945f-ece8e3298d8b"
+        },
+        {
+          "name": "Slide",
+          "id": "69e25c82-c1bd-481f-8c67-d4d6b7d80c4c"
+        },
+        {
+          "name": "Game",
+          "id": "b2837676-294d-42ac-93b9-053d9e05bd24"
+        },
+        {
+          "name": "Achievement",
+          "id": "b5e42e13-190a-4641-933f-0758f565b7d3"
+        },
+        {
+          "name": "SkillAssessment",
+          "id": "4679545f-0509-456f-8853-35429ffba9eb"
+        },
+        {
+          "name": "AppAdministrator",
+          "id": "61d3e919-1129-4f47-9cc9-d01abc8ddd88"
+        },
+        {
+          "name": "ChatFunction",
+          "id": "f409d137-8fe3-4605-84d5-ae9a5f4d57e4"
+        },
+        {
+          "name": "CommunicationSkills",
+          "id": "118ef6b2-af9b-4afb-8306-81d8c997e55a"
+        },
+        {
+          "name": "PresentationSkills",
+          "id": "2e6cd44f-06c0-4842-bfa8-da480c887798"
+        },
+        {
+          "name": "Confidence",
+          "id": "9ca55059-326b-4ba2-be3d-7610feb6b279"
+        },
+        {
+          "name": "Compassion",
+          "id": "acb5fd0f-4673-409a-a551-a29de1ebb4d3"
+        },
+        {
+          "name": "Collaboration",
+          "id": "2339ac83-4800-4006-8cc1-1854dd66b58b"
+        },
+        {
+          "name": "Inclusiveness",
+          "id": "8f06aa9c-daec-46cd-a871-9544f4a0ef07"
+        },
+        {
+          "name": "GraphicalOverview",
+          "id": "c3d7df77-55f6-497e-af3c-2f866d27d012"
+        },
+        {
+          "name": "LearningOpportunity",
+          "id": "b4bb9188-cb23-44b5-9ab2-599d5225a488"
+        },
+        {
+          "name": "Notification",
+          "id": "01df79d6-8fed-4768-b5e6-9207075861a0"
+        },
+        {
+          "name": "ApprovalStatus",
+          "id": "dc9013db-ba1b-41a0-94b3-4ef849365480"
+        },
+        {
+          "name": "RemovalReason",
+          "id": "0c60610b-55ae-4449-ad2e-218003165288"
+        },
+        {
+          "name": "EditHistory",
+          "id": "288317cb-6ff8-4adb-9671-cef3cab1e566"
+        },
+        {
+          "name": "DataUsage",
+          "id": "e66d6dca-2af4-474e-869f-b8c585695203"
+        },
+        {
+          "name": "AppUser",
+          "id": "307832bd-3cca-4117-9d87-c84754f6132d"
+        }
+      ],
+      "microflows": [
+        {
+          "name": "MyFirstLogic",
+          "id": "4a8475b3-14cb-4100-8963-58f2fd3a0be8"
+        },
+        {
+          "name": "ApproveFreelanceTeacherProfile",
+          "id": "2b210339-5a46-44d8-b096-45b901606916"
+        },
+        {
+          "name": "RejectFreelanceTeacherProfile",
+          "id": "a53b8dcd-de9b-40e4-8555-d5f0ecdf12e7"
+        },
+        {
+          "name": "SendNotificationToFreelanceTeacher",
+          "id": "4bca2ccb-4e95-4f84-bc44-745f368020c8"
+        },
+        {
+          "name": "MF_FreelanceTeacher_Prepare",
+          "id": "3cb7b364-33b1-4c94-afce-bcc811ec9c27"
+        },
+        {
+          "name": "MF_FreelanceTeacher_Approve",
+          "id": "303aabc3-ed8a-44af-9324-615feb21d4a8"
+        },
+        {
+          "name": "MF_FreelanceTeacher_Reject",
+          "id": "99769f41-6c41-4284-ba44-b755e3e4813e"
+        }
+      ],
+      "nanoflows": [
+        {
+          "name": "CheckKvKNumber",
+          "id": "dac6ade4-62f8-422d-8eaa-b2ba138b0ee8"
+        }
+      ],
+      "workflows": [
+        {
+          "name": "WF_FreelanceTeacher",
+          "id": "ca293c41-a730-47db-a284-099439f10920"
+        }
+      ]
+    },
+    "verification": {
+      "missing": {
+        "pages": [],
+        "entities": [],
+        "microflows": [],
+        "nanoflows": [],
+        "workflows": []
+      },
+      "ok": true,
+      "artifacts": {
+        "ok": true,
+        "missing": {
+          "moduleRoles": [],
+          "userRoles": [],
+          "demoUsers": [],
+          "pageVisibility": [],
+          "homePageButtons": [],
+          "menuItems": [],
+          "widgets": []
+        }
+      },
+      "semantic": {
+        "enabled": false,
+        "ok": true,
+        "errors": []
+      }
+    },
+    "capabilities": {
+      "modules": [
+        "Administration",
+        "Atlas_Core",
+        "Atlas_Web_Content",
+        "DataWidgets",
+        "FeedbackModule",
+        "MyFirstModule",
+        "NanoflowCommons",
+        "WebActions"
+      ],
+      "widgetIds": [],
+      "widgetFamilies": [
+        "datawidgets_module"
+      ]
+    },
+    "commitMessage": "Rerun practical performance builder-stage run: education run-02",
+    "ok": true
+  }
+}

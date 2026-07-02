@@ -1,0 +1,190 @@
+
+> us2lc-pipeline@1.0.0 generate:process-viz
+> node pipeline/generate-process-viz-cli.js --input-dir=artifacts/practical-performance/20260528-165228/inputs/fish_chips --output-dir=artifacts/pv-runs/llama3.1-8b/fish_chips --model=llama3.1:8b --ollama-url=http://127.0.0.1:11434
+
+{
+  "ok": true,
+  "inputDir": "/workspace/us2lc-pipeline/artifacts/practical-performance/20260528-165228/inputs/fish_chips",
+  "artifacts": {
+    "summaryPath": "/workspace/us2lc-pipeline/artifacts/pv-runs/llama3.1-8b/fish_chips/process-visualizer-summary.json",
+    "rawPath": "/workspace/us2lc-pipeline/artifacts/pv-runs/llama3.1-8b/fish_chips/process-visualizer-result.json",
+    "graphSourcePath": "/workspace/us2lc-pipeline/artifacts/pv-runs/llama3.1-8b/fish_chips/process-visualizer-run/process-visualizer.gv",
+    "graphImagePath": "/workspace/us2lc-pipeline/artifacts/pv-runs/llama3.1-8b/fish_chips/process-visualizer-run/process-visualizer.png",
+    "logsDir": "/workspace/us2lc-pipeline/artifacts/pv-runs/llama3.1-8b/fish_chips/process-visualizer-run/output_logs"
+  },
+  "summary": {
+    "actors": [
+      "Kitchen Employee",
+      "Ticket Master",
+      "kitchen",
+      "customer",
+      "Cashier",
+      "Restaurant Owner",
+      "Home Delivery Person"
+    ],
+    "tasks": [
+      {
+        "actor": "Kitchen Employee",
+        "action": "see the orders with their status",
+        "condition": "",
+        "gatewayId": "",
+        "gatewayType": "",
+        "storyIndex": 0
+      },
+      {
+        "actor": "Ticket Master",
+        "action": "receive a notification if the customer makes changes after a new order is already paid",
+        "condition": "",
+        "gatewayId": "",
+        "gatewayType": "",
+        "storyIndex": 5
+      },
+      {
+        "actor": "Ticket Master",
+        "action": "label new orders as 'incoming orders'",
+        "condition": "",
+        "gatewayId": "",
+        "gatewayType": "",
+        "storyIndex": 6
+      },
+      {
+        "actor": "kitchen",
+        "action": "have an overview of all orders that are currently made by the kitchen",
+        "condition": "if their requested time is not yet within ten minutes",
+        "gatewayId": "EG0",
+        "gatewayType": "exclusive",
+        "storyIndex": 11
+      },
+      {
+        "actor": "Ticket Master",
+        "action": "separate all scheduled orders from the other statuses",
+        "condition": "if their requested time is not yet within ten minutes",
+        "gatewayId": "EG0",
+        "gatewayType": "exclusive",
+        "storyIndex": 14
+      },
+      {
+        "actor": "customer",
+        "action": "see the order type",
+        "condition": "if their requested time is not yet within ten minutes",
+        "gatewayId": "EG0",
+        "gatewayType": "exclusive",
+        "storyIndex": 17
+      },
+      {
+        "actor": "Cashier",
+        "action": "request a confirmation of payment",
+        "condition": "if their requested time is not yet within ten minutes",
+        "gatewayId": "EG0",
+        "gatewayType": "exclusive",
+        "storyIndex": 22
+      },
+      {
+        "actor": "Cashier",
+        "action": "add the phone number to the order",
+        "condition": "so that the delivery person knows where the delivery person needs to bring the order",
+        "gatewayId": "EG0",
+        "gatewayType": "exclusive",
+        "storyIndex": 30
+      },
+      {
+        "actor": "Restaurant Owner",
+        "action": "see the VAT of each order, so that i have an overview of the taxes.",
+        "condition": "so that i can customize the order for the customer.",
+        "gatewayId": "EG0",
+        "gatewayType": "exclusive",
+        "storyIndex": 36
+      },
+      {
+        "actor": "Restaurant Owner",
+        "action": "have an overview of the types of orders",
+        "condition": "so that i can customize the order for the customer.",
+        "gatewayId": "EG0",
+        "gatewayType": "exclusive",
+        "storyIndex": 38
+      },
+      {
+        "actor": "Home Delivery Person",
+        "action": "have the address printed on the ticket",
+        "condition": "so that i can customize the order for the customer.",
+        "gatewayId": "EG0",
+        "gatewayType": "exclusive",
+        "storyIndex": 44
+      },
+      {
+        "actor": "Home Delivery Person",
+        "action": "have the order price on a printed ticket",
+        "condition": "so that i can customize the order for the customer.",
+        "gatewayId": "EG0",
+        "gatewayType": "exclusive",
+        "storyIndex": 46
+      }
+    ],
+    "gateways": [
+      {
+        "id": "EG0",
+        "type": "exclusive",
+        "conditions": [
+          "at the moment the preparation of a product is started",
+          "after the preparation of a product is finished",
+          "if their requested time is not yet within ten minutes",
+          "so that i do not have to do that manually",
+          "so the customer has an insight into his order",
+          "so that a misunderstanding with the customer or a mistake from i can be resolved",
+          "so that the customer can make last-minute changes",
+          "so that the Ticket Master knows if the ticket master/she needs to hand the order directly to the customer or the delivery person",
+          "so that the kitchen knows when to start preparing a takeaway order",
+          "so that i do not have to walk physically to the kitchen",
+          "so that the delivery person knows where the delivery person needs to bring the order",
+          "so that the customer can be reached if there are problems with the order",
+          "so that i can customize the order for the customer."
+        ]
+      }
+    ],
+    "processObjects": [
+      "Orders With Their Status",
+      "Order Is Already Paid",
+      "Orders As 'incoming Orders'",
+      "Made By The Kitchen",
+      "From The Other Statuses",
+      "See The Order Type",
+      "A Confirmation Of Payment",
+      "Number To The Order",
+      "Overview Of The Taxes.",
+      "The Types Of Orders",
+      "Printed On The Ticket",
+      "On A Printed Ticket",
+      "Orders At A Glance",
+      "Products Of An Order",
+      "Requests Are Concerned About",
+      "With Its Related Products",
+      "New Order Is Received",
+      "Product As 'current Orders'",
+      "Product As 'finished Orders'",
+      "Products As 'scheduled Orders'",
+      "All The Incoming Orders",
+      "Completed By The Kitchen",
+      "Of All Scheduled Orders",
+      "Status Of Each Product",
+      "Screen With A Touchscreen",
+      "Select Orders",
+      "Order",
+      "During The Ordering Process",
+      "Automatically For The Customer",
+      "The Relevant Order Details"
+    ],
+    "capabilityHints": {
+      "hasApproval": false,
+      "hasDecision": true,
+      "hasNotification": true,
+      "hasWorkflowLikeRouting": true
+    },
+    "stats": {
+      "taskCount": 12,
+      "gatewayCount": 1,
+      "rawEntityCount": 93
+    }
+  },
+  "status": "completed",
+  "command": "/workspace/us2lc-pipeline/process-visualizer/.venv/bin/python /workspace/us2lc-pipeline/pipeline/scripts/run_process_visualizer.py --input /workspace/us2lc-pipeline/artifacts/practical-performance/20260528-165228/inputs/fish_chips/user-stories.txt --output-dir /workspace/us2lc-pipeline/artifacts/pv-runs/llama3.1-8b/fish_chips --model llama3.1:8b --ollama-url http://127.0.0.1:11434"
+}

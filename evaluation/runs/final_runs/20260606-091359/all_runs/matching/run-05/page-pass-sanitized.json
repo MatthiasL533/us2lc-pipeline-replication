@@ -1,0 +1,201 @@
+{
+  "pages": {
+    "specs": [
+      {
+        "name": "home",
+        "layout": "Blank",
+        "widgets": [
+          {
+            "type": "Text",
+            "caption": "Welcome to the Tutoring Platform"
+          },
+          {
+            "type": "Button",
+            "caption": "Manage Sessions",
+            "onClick": "OpenPage 'SessionOverview'"
+          },
+          {
+            "type": "Button",
+            "caption": "Manage Tutors",
+            "onClick": "OpenPage 'TutorOverview'"
+          },
+          {
+            "type": "Button",
+            "caption": "Manage Students",
+            "onClick": "OpenPage 'StudentOverview'"
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "SessionOverview",
+        "layout": "Table",
+        "entity": "Session",
+        "widgets": [
+          {
+            "type": "DataGrid",
+            "columns": [
+              {
+                "attribute": "Date"
+              },
+              {
+                "attribute": "Duration"
+              },
+              {
+                "attribute": "Tutor/Name"
+              },
+              {
+                "attribute": "Student/Name"
+              }
+            ]
+          },
+          {
+            "type": "Button",
+            "caption": "New Session",
+            "onClick": "OpenPage 'SessionNewEdit'"
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "TutorOverview",
+        "layout": "Table",
+        "entity": "Tutor",
+        "widgets": [
+          {
+            "type": "DataGrid",
+            "columns": [
+              {
+                "attribute": "Name"
+              },
+              {
+                "attribute": "Email"
+              },
+              {
+                "attribute": "Qualification"
+              }
+            ]
+          },
+          {
+            "type": "Button",
+            "caption": "New Tutor",
+            "onClick": "OpenPage 'TutorNewEdit'"
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "StudentOverview",
+        "layout": "Table",
+        "entity": "Student",
+        "widgets": [
+          {
+            "type": "DataGrid",
+            "columns": [
+              {
+                "attribute": "Name"
+              },
+              {
+                "attribute": "Email"
+              },
+              {
+                "attribute": "Address"
+              }
+            ]
+          },
+          {
+            "type": "Button",
+            "caption": "New Student",
+            "onClick": "OpenPage 'StudentNewEdit'"
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "SessionNewEdit",
+        "layout": "FormHorizontal",
+        "entity": "Session",
+        "widgets": [
+          {
+            "type": "TextInput",
+            "attribute": "Date"
+          },
+          {
+            "type": "NumberInput",
+            "attribute": "Duration"
+          },
+          {
+            "type": "ReferenceSelector",
+            "attribute": "Tutor",
+            "entity": "Tutor"
+          },
+          {
+            "type": "ReferenceSelector",
+            "attribute": "Student",
+            "entity": "Student"
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "TutorNewEdit",
+        "layout": "FormHorizontal",
+        "entity": "Tutor",
+        "widgets": [
+          {
+            "type": "TextInput",
+            "attribute": "Name"
+          },
+          {
+            "type": "TextInput",
+            "attribute": "Email"
+          },
+          {
+            "type": "TextInput",
+            "attribute": "Qualification"
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "StudentNewEdit",
+        "layout": "FormHorizontal",
+        "entity": "Student",
+        "widgets": [
+          {
+            "type": "TextInput",
+            "attribute": "Name"
+          },
+          {
+            "type": "TextInput",
+            "attribute": "Email"
+          },
+          {
+            "type": "TextInput",
+            "attribute": "Address"
+          }
+        ],
+        "content": []
+      }
+    ]
+  },
+  "app": {
+    "navigation": {
+      "homePage": "home",
+      "menuItems": [
+        {
+          "caption": "Sessions",
+          "page": "SessionOverview"
+        },
+        {
+          "caption": "Tutors",
+          "page": "TutorOverview"
+        },
+        {
+          "caption": "Students",
+          "page": "StudentOverview"
+        }
+      ]
+    }
+  }
+}

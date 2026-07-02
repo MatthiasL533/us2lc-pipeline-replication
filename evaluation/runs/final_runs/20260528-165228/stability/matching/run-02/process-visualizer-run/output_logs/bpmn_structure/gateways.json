@@ -1,0 +1,266 @@
+[
+    {
+        "id": "EG0",
+        "conditions": [
+            "so that i can be matched to a student based on this",
+            "so that i do not have to do it manually",
+            "so that partial matches do not have to be provided",
+            "if located far away",
+            "when the match is found"
+        ],
+        "start": 1707,
+        "end": 5820,
+        "paths": [
+            {
+                "start": 1707,
+                "end": 2240
+            },
+            {
+                "start": 2241,
+                "end": 2357
+            },
+            {
+                "start": 2358,
+                "end": 2822
+            },
+            {
+                "start": 2823,
+                "end": 3905
+            },
+            {
+                "start": 3906,
+                "end": 5820
+            }
+        ],
+        "type": "exclusive",
+        "children": [
+            [
+                {
+                    "content": {
+                        "agent": {
+                            "entity_group": "AGENT",
+                            "word": "tutor",
+                            "start": 1985,
+                            "end": 1990,
+                            "score": 0.99
+                        },
+                        "task": {
+                            "entity_group": "TASK",
+                            "word": "update my availability dynamically in the app",
+                            "start": 1882,
+                            "end": 1927,
+                            "score": 0.99,
+                            "task_id": "T3"
+                        },
+                        "sentence_idx": 15
+                    },
+                    "type": "task"
+                },
+                {
+                    "content": {
+                        "agent": {
+                            "entity_group": "AGENT",
+                            "word": "student",
+                            "start": 2053,
+                            "end": 2060,
+                            "score": 0.99
+                        },
+                        "task": {
+                            "entity_group": "TASK",
+                            "word": "specify my location",
+                            "start": 2002,
+                            "end": 2021,
+                            "score": 0.99,
+                            "task_id": "T4"
+                        },
+                        "sentence_idx": 16
+                    },
+                    "type": "task"
+                },
+                {
+                    "content": {
+                        "agent": {
+                            "entity_group": "AGENT",
+                            "word": "manager",
+                            "start": 2132,
+                            "end": 2139,
+                            "score": 0.99
+                        },
+                        "task": {
+                            "entity_group": "TASK",
+                            "word": "cancel a session",
+                            "start": 2109,
+                            "end": 2125,
+                            "score": 0.99,
+                            "task_id": "T5"
+                        },
+                        "sentence_idx": 17
+                    },
+                    "type": "task"
+                }
+            ],
+            [],
+            [
+                {
+                    "content": {
+                        "agent": {
+                            "entity_group": "AGENT",
+                            "word": "student",
+                            "start": 2775,
+                            "end": 2782,
+                            "score": 0.99
+                        },
+                        "task": {
+                            "entity_group": "TASK",
+                            "word": "be matched with a tutor that is available in the hours i have specified",
+                            "start": 2697,
+                            "end": 2768,
+                            "score": 0.99,
+                            "task_id": "T6"
+                        },
+                        "sentence_idx": 23
+                    },
+                    "type": "task"
+                },
+                {
+                    "content": {
+                        "agent": {
+                            "entity_group": "AGENT",
+                            "word": "tutor",
+                            "start": 2812,
+                            "end": 2817,
+                            "score": 0.99
+                        },
+                        "task": {
+                            "entity_group": "TASK",
+                            "word": "be matched with a tutor who",
+                            "start": 2794,
+                            "end": 2821,
+                            "score": 0.99,
+                            "task_id": "T7"
+                        },
+                        "sentence_idx": 24
+                    },
+                    "type": "task"
+                }
+            ],
+            [
+                {
+                    "content": {
+                        "agent": {
+                            "entity_group": "AGENT",
+                            "word": "tutor",
+                            "start": 2812,
+                            "end": 2817,
+                            "score": 0.99
+                        },
+                        "task": {
+                            "entity_group": "TASK",
+                            "word": "can offer online sessions",
+                            "start": 2844,
+                            "end": 2869,
+                            "score": 0.99,
+                            "task_id": "T8"
+                        },
+                        "sentence_idx": 24,
+                        "condition": {
+                            "entity_group": "CONDITION",
+                            "word": "if located far away",
+                            "start": 2823,
+                            "end": 2842,
+                            "score": 0.99,
+                            "condition_id": "C2"
+                        }
+                    },
+                    "type": "task"
+                }
+            ],
+            [
+                {
+                    "content": {
+                        "agent": {
+                            "entity_group": "AGENT",
+                            "word": "tutor",
+                            "start": 4160,
+                            "end": 4165,
+                            "score": 0.99
+                        },
+                        "task": {
+                            "entity_group": "TASK",
+                            "word": "receive notifications three and one day prior to the session date",
+                            "start": 4189,
+                            "end": 4254,
+                            "score": 0.99,
+                            "task_id": "T9"
+                        },
+                        "sentence_idx": 34
+                    },
+                    "type": "task"
+                },
+                {
+                    "content": {
+                        "agent": {
+                            "entity_group": "AGENT",
+                            "word": "tutor",
+                            "start": 4863,
+                            "end": 4868,
+                            "score": 0.99
+                        },
+                        "task": {
+                            "entity_group": "TASK",
+                            "word": "consider all available data",
+                            "start": 4829,
+                            "end": 4856,
+                            "score": 0.99,
+                            "task_id": "T10"
+                        },
+                        "sentence_idx": 40
+                    },
+                    "type": "task"
+                },
+                {
+                    "content": {
+                        "agent": {
+                            "entity_group": "AGENT",
+                            "word": "tutor",
+                            "start": 4863,
+                            "end": 4868,
+                            "score": 0.99
+                        },
+                        "task": {
+                            "entity_group": "TASK",
+                            "word": "view my ratings",
+                            "start": 4891,
+                            "end": 4906,
+                            "score": 0.99,
+                            "task_id": "T11"
+                        },
+                        "sentence_idx": 40
+                    },
+                    "type": "task"
+                },
+                {
+                    "content": {
+                        "agent": {
+                            "entity_group": "AGENT",
+                            "word": "manager",
+                            "start": 5670,
+                            "end": 5677,
+                            "score": 0.99
+                        },
+                        "task": {
+                            "entity_group": "TASK",
+                            "word": "access information about shortages of students or tutors by neighborhoods",
+                            "start": 5689,
+                            "end": 5762,
+                            "score": 0.99,
+                            "task_id": "T12"
+                        },
+                        "sentence_idx": 47
+                    },
+                    "type": "task"
+                }
+            ]
+        ]
+    }
+]

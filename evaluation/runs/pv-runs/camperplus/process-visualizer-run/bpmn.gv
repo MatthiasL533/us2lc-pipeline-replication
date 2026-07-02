@@ -1,0 +1,36 @@
+digraph bpmn_diagram {
+	node [color=black fillcolor=bisque shape=box style=filled]
+	T0 [label="camp administrator: add campers"]
+	T1 [label="camp administrator: suspend a camper who had behavioral problems"]
+	T0 -> T1
+	T2 [label="camp administrator: store camper's immediate parent/guardian's information, so that i can easily call to notify camper's immediate parent/guardian's in case a grossly unacceptable behavior"]
+	T1 -> T2
+	node [color=black fillcolor=azure shape=diamond style=filled]
+	EG0_S [label=X]
+	EG0_E [label=X]
+	node [color=black fillcolor=bisque shape=box style=filled]
+	T3 [label="camp administrator: add parents"]
+	T4 [label="camp administrator: modify the information of added parents"]
+	T3 -> T4
+	T5 [label="parent: delete parents from the database"]
+	T4 -> T5
+	T6 [label="parent: message my camper counselors"]
+	T5 -> T6
+	T6 -> EG0_E
+	T7 [label="camp worker: see which campers i am in charge of and where"]
+	T8 [label="camp counselor: take attendance of my assigned kids"]
+	T7 -> T8
+	T8 -> EG0_E
+	T2 -> EG0_S
+	node [color=black fillcolor=lightpink shape=ellipse style=filled]
+	START_0 [label=START]
+	START_0 -> T0
+	START_1 [label=START]
+	START_1 -> T3
+	END_0 [label=END]
+	EG0_E -> END_0
+	START_2 [label=START]
+	START_2 -> T7
+	END_1 [label=END]
+	EG0_S -> END_1
+}

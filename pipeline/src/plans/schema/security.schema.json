@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "security.schema.json",
+  "title": "Security section",
+  "type": "object",
+  "additionalProperties": true,
+  "properties": {
+    "enabled": { "type": "boolean" },
+    "securityLevel": { "type": "string", "enum": ["none", "off", "prototype", "production"] },
+    "moduleRoles": { "type": "array", "items": { "type": "string" } },
+    "userRoles": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": true,
+        "required": ["name"],
+        "properties": {
+          "name": { "type": "string", "minLength": 1 },
+          "moduleRoles": { "type": "array", "items": { "type": "string" } },
+          "systemModuleRole": { "type": "string" }
+        }
+      }
+    },
+    "demoUsers": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": true,
+        "required": ["password"],
+        "properties": {
+          "userName": { "type": "string" },
+          "username": { "type": "string" },
+          "password": { "type": "string", "minLength": 1 },
+          "userRoles": { "type": "array", "items": { "type": "string" } }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,347 @@
+
+> us2lc-pipeline@1.0.0 generate:vn
+> node pipeline/generate-vn-cli.js --input-dir=artifacts/practical-performance/20260528-165228/inputs/fish_chips --output-dir=artifacts/vn-runs/fish_chips
+
+{
+  "ok": true,
+  "inputDir": "/workspace/us2lc-pipeline/artifacts/practical-performance/20260528-165228/inputs/fish_chips",
+  "artifacts": {
+    "ontologyPath": "/workspace/us2lc-pipeline/artifacts/vn-runs/fish_chips/visual-narrator-ontology.omn",
+    "storiesPath": "/workspace/us2lc-pipeline/artifacts/vn-runs/fish_chips/visual-narrator-stories.json",
+    "summaryPath": "/workspace/us2lc-pipeline/artifacts/vn-runs/fish_chips/visual-narrator-summary.json",
+    "rawPath": "/workspace/us2lc-pipeline/artifacts/vn-runs/fish_chips/visual-narrator-result.json"
+  },
+  "summary": {
+    "classNames": [
+      "Kitchen",
+      "Order",
+      "Overview",
+      "Product",
+      "Request",
+      "Order Number",
+      "Number",
+      "Notification",
+      "Ticket",
+      "Insight",
+      "Status",
+      "Color",
+      "Order Type",
+      "Type",
+      "Screen",
+      "Change",
+      "Confirmation",
+      "Delivery Address",
+      "Address",
+      "Delivery",
+      "Phone Number",
+      "Phone",
+      "Name",
+      "Tip",
+      "Coupon",
+      "Restaurant",
+      "VAT",
+      "Amount",
+      "Account",
+      "Order Price",
+      "Price",
+      "Time",
+      "Method"
+    ],
+    "classes": [
+      {
+        "name": "Kitchen",
+        "parent": "",
+        "isRole": false
+      },
+      {
+        "name": "Order",
+        "parent": "",
+        "isRole": false
+      },
+      {
+        "name": "Overview",
+        "parent": "",
+        "isRole": false
+      },
+      {
+        "name": "Product",
+        "parent": "",
+        "isRole": false
+      },
+      {
+        "name": "Request",
+        "parent": "",
+        "isRole": false
+      },
+      {
+        "name": "Order Number",
+        "parent": "Number",
+        "isRole": false
+      },
+      {
+        "name": "Number",
+        "parent": "",
+        "isRole": false
+      },
+      {
+        "name": "Notification",
+        "parent": "",
+        "isRole": false
+      },
+      {
+        "name": "Ticket",
+        "parent": "",
+        "isRole": false
+      },
+      {
+        "name": "Insight",
+        "parent": "",
+        "isRole": false
+      },
+      {
+        "name": "Status",
+        "parent": "",
+        "isRole": false
+      },
+      {
+        "name": "Color",
+        "parent": "",
+        "isRole": false
+      },
+      {
+        "name": "Order Type",
+        "parent": "Type",
+        "isRole": false
+      },
+      {
+        "name": "Type",
+        "parent": "",
+        "isRole": false
+      },
+      {
+        "name": "Screen",
+        "parent": "",
+        "isRole": false
+      },
+      {
+        "name": "Change",
+        "parent": "",
+        "isRole": false
+      },
+      {
+        "name": "Confirmation",
+        "parent": "",
+        "isRole": false
+      },
+      {
+        "name": "Delivery Address",
+        "parent": "Address",
+        "isRole": false
+      },
+      {
+        "name": "Address",
+        "parent": "",
+        "isRole": false
+      },
+      {
+        "name": "Delivery",
+        "parent": "",
+        "isRole": false
+      },
+      {
+        "name": "Phone Number",
+        "parent": "Number",
+        "isRole": false
+      },
+      {
+        "name": "Phone",
+        "parent": "",
+        "isRole": false
+      },
+      {
+        "name": "Name",
+        "parent": "",
+        "isRole": false
+      },
+      {
+        "name": "Tip",
+        "parent": "",
+        "isRole": false
+      },
+      {
+        "name": "Coupon",
+        "parent": "",
+        "isRole": false
+      },
+      {
+        "name": "Restaurant",
+        "parent": "",
+        "isRole": false
+      },
+      {
+        "name": "VAT",
+        "parent": "",
+        "isRole": false
+      },
+      {
+        "name": "Amount",
+        "parent": "",
+        "isRole": false
+      },
+      {
+        "name": "Account",
+        "parent": "",
+        "isRole": false
+      },
+      {
+        "name": "Order Price",
+        "parent": "Price",
+        "isRole": false
+      },
+      {
+        "name": "Price",
+        "parent": "",
+        "isRole": false
+      },
+      {
+        "name": "Time",
+        "parent": "",
+        "isRole": false
+      },
+      {
+        "name": "Method",
+        "parent": "",
+        "isRole": false
+      }
+    ],
+    "relationships": [
+      {
+        "name": "hasNumber",
+        "domain": "Order",
+        "range": "Order Number"
+      },
+      {
+        "name": "canSeparate From",
+        "domain": "Order",
+        "range": "Order"
+      },
+      {
+        "name": "canOf",
+        "domain": "Status",
+        "range": "Order"
+      },
+      {
+        "name": "hasType",
+        "domain": "Order",
+        "range": "Order Type"
+      },
+      {
+        "name": "canShow",
+        "domain": "Order",
+        "range": "Overview"
+      },
+      {
+        "name": "canKnow",
+        "domain": "Kitchen",
+        "range": "Order"
+      },
+      {
+        "name": "hasAddress",
+        "domain": "Delivery",
+        "range": "Delivery Address"
+      },
+      {
+        "name": "hasNumber",
+        "domain": "Phone",
+        "range": "Phone Number"
+      },
+      {
+        "name": "hasPrice",
+        "domain": "Order",
+        "range": "Order Price"
+      }
+    ],
+    "keyNouns": [
+      {
+        "term": "Order",
+        "weight": 16.48
+      },
+      {
+        "term": "Ticket",
+        "weight": 12.900000000000002
+      },
+      {
+        "term": "Overview",
+        "weight": 8
+      },
+      {
+        "term": "Product",
+        "weight": 6.5
+      },
+      {
+        "term": "Restaurant",
+        "weight": 5.28
+      },
+      {
+        "term": "Kitchen",
+        "weight": 5.120000000000001
+      },
+      {
+        "term": "Number",
+        "weight": 4
+      },
+      {
+        "term": "Delivery",
+        "weight": 3.9600000000000004
+      },
+      {
+        "term": "Address",
+        "weight": 3.5
+      },
+      {
+        "term": "Change",
+        "weight": 3
+      },
+      {
+        "term": "Type",
+        "weight": 2
+      },
+      {
+        "term": "Screen",
+        "weight": 2
+      },
+      {
+        "term": "Insight",
+        "weight": 2
+      },
+      {
+        "term": "Notification",
+        "weight": 2
+      }
+    ],
+    "inferredRoles": [
+      "Cashier",
+      "Customer",
+      "Employee",
+      "Master",
+      "Owner",
+      "Person"
+    ],
+    "discardedClassNames": [
+      "Kitchen Employee",
+      "Employee",
+      "Progress",
+      "Ticket Master",
+      "Master",
+      "Customer",
+      "Cashier",
+      "Restaurant Owner",
+      "Owner",
+      "Question",
+      "Delivery Person",
+      "Person"
+    ]
+  },
+  "status": "completed",
+  "command": "/workspace/us2lc-pipeline/visual-narrator/.venv/bin/python /workspace/us2lc-pipeline/pipeline/scripts/run_visual_narrator.py --input /workspace/us2lc-pipeline/artifacts/practical-performance/20260528-165228/inputs/fish_chips/user-stories.txt --system-name PracticalPerf_fish_chips_Stability"
+}

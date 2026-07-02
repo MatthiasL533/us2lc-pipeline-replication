@@ -1,0 +1,228 @@
+{
+  "appId": "4f9f334b-a000-438b-a81a-918631c914a7",
+  "branch": "main",
+  "exportedAt": "2026-05-28",
+  "repository": {
+    "type": "mendix app",
+    "url": "Mendix app id 4f9f334b-a000-438b-a81a-918631c914a7"
+  },
+  "summary": {
+    "domainModels": 1,
+    "modules": [
+      "B2BMainModule"
+    ],
+    "entities": 31,
+    "associations": 35
+  },
+  "source": {
+    "note": "Counts are based on the B2BMainModule business domain model exported from the accessible Mendix app. Platform, marketplace, workflow, administration, file-upload, and technical integration modules were inspected but excluded from the dataset-comparison counts."
+  },
+  "domainModels": [
+    {
+      "module": "B2BMainModule",
+      "documentation": "Main Brewery business domain model exported from the reference Mendix application.",
+      "entities": [
+        {
+          "name": "Beer"
+        },
+        {
+          "name": "HospitalityOrder"
+        },
+        {
+          "name": "OrderLine"
+        },
+        {
+          "name": "RecurringOrder"
+        },
+        {
+          "name": "OrderTemplate"
+        },
+        {
+          "name": "Brewery"
+        },
+        {
+          "name": "HospitalityBusiness"
+        },
+        {
+          "name": "Contract"
+        },
+        {
+          "name": "Brand"
+        },
+        {
+          "name": "Payment"
+        },
+        {
+          "name": "Invoice"
+        },
+        {
+          "name": "Ingredient"
+        },
+        {
+          "name": "Proposal"
+        },
+        {
+          "name": "CategoryLine"
+        },
+        {
+          "name": "Request"
+        },
+        {
+          "name": "Company"
+        },
+        {
+          "name": "BreweryOrder"
+        },
+        {
+          "name": "Delivery"
+        },
+        {
+          "name": "Nutrient"
+        },
+        {
+          "name": "Registration"
+        },
+        {
+          "name": "BeerImage"
+        },
+        {
+          "name": "BrandLogoImage"
+        },
+        {
+          "name": "OrderTemplateLine"
+        },
+        {
+          "name": "ProductPackage"
+        },
+        {
+          "name": "StockMutation"
+        },
+        {
+          "name": "CartSummary"
+        },
+        {
+          "name": "ProductPackageImage"
+        },
+        {
+          "name": "ContractPdf"
+        },
+        {
+          "name": "ContractTextHelper"
+        },
+        {
+          "name": "B2BRequestHelper"
+        },
+        {
+          "name": "ShippingInfo"
+        }
+      ],
+      "associations": [
+        {
+          "name": "Request_Brewery"
+        },
+        {
+          "name": "CategoryLine_Proposal"
+        },
+        {
+          "name": "Proposal_Contract"
+        },
+        {
+          "name": "Contract_Brewery"
+        },
+        {
+          "name": "Request_Proposal"
+        },
+        {
+          "name": "CategoryLine_Request"
+        },
+        {
+          "name": "CategoryLine_Contract"
+        },
+        {
+          "name": "Beer_Brand"
+        },
+        {
+          "name": "Brand_Brewery"
+        },
+        {
+          "name": "Ingredient_Beer"
+        },
+        {
+          "name": "RecurringOrder_HospitalityBusiness"
+        },
+        {
+          "name": "HospitalityOrder_Invoice"
+        },
+        {
+          "name": "Invoice_Payment"
+        },
+        {
+          "name": "BreweryOrder_Delivery"
+        },
+        {
+          "name": "Nutrient_Beer"
+        },
+        {
+          "name": "BreweryOrder_HospitalityOrder"
+        },
+        {
+          "name": "HospitalityOrder_HospitalityBusiness"
+        },
+        {
+          "name": "OrderLine_HospitalityOrder"
+        },
+        {
+          "name": "OrderLine_BreweryOrder"
+        },
+        {
+          "name": "Beer_BeerImage"
+        },
+        {
+          "name": "Brand_BrandLogoImage"
+        },
+        {
+          "name": "OrderTemplateLine_OrderTemplate"
+        },
+        {
+          "name": "OrderTemplate_RecurringOrder"
+        },
+        {
+          "name": "ProductPackage_Beer"
+        },
+        {
+          "name": "StockMutation_ProductPackage"
+        },
+        {
+          "name": "OrderTemplate_HospitalityBusiness"
+        },
+        {
+          "name": "BreweryOrder_Brewery"
+        },
+        {
+          "name": "OrderLine_ProductPackage"
+        },
+        {
+          "name": "Registration_HospitalityBusiness"
+        },
+        {
+          "name": "Registration_Brewery"
+        },
+        {
+          "name": "ProductPackage_ProductPackageImage"
+        },
+        {
+          "name": "ContractPdf_Contract"
+        },
+        {
+          "name": "OrderTemplateLine_ProductPackage"
+        },
+        {
+          "name": "StockMutation_OrderLine"
+        },
+        {
+          "name": "ShippingInfo_HospitalityOrder"
+        }
+      ]
+    }
+  ]
+}

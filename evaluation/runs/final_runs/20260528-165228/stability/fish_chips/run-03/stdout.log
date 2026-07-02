@@ -1,0 +1,65 @@
+{
+  "ok": true,
+  "planPath": "/Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/artifacts/practical-performance/20260528-165228/stability/fish_chips/run-03/plan.json",
+  "reportPath": "/Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/artifacts/practical-performance/20260528-165228/stability/fish_chips/run-03/generation-report.json",
+  "warnings": [
+    "Dropped association \"Customer\" because entities could not be resolved after normalization.",
+    "Dropped association \"Items\" because entities could not be resolved after normalization.",
+    "Dropped association \"Product\" because entities could not be resolved after normalization.",
+    "Dropped association \"Product Statuses\" because entities could not be resolved after normalization.",
+    "Dropped association \"Payment Details\" because entities could not be resolved after normalization.",
+    "Dropped association \"Changes\" because entities could not be resolved after normalization.",
+    "Dropped association \"Transactions\" because entities could not be resolved after normalization.",
+    "Added missing overview page for entity \"Customer\".",
+    "Added missing NewEdit page for entity \"Customer\".",
+    "Added missing overview page for entity \"Product\".",
+    "Added missing NewEdit page for entity \"Product\".",
+    "Added missing overview page for entity \"Order\".",
+    "Added missing NewEdit page for entity \"Order\".",
+    "Added missing overview page for entity \"OrderItem\".",
+    "Added missing NewEdit page for entity \"OrderItem\".",
+    "Added missing overview page for entity \"OrderProductStatus\".",
+    "Added missing NewEdit page for entity \"OrderProductStatus\".",
+    "Added missing overview page for entity \"Payment\".",
+    "Added missing NewEdit page for entity \"Payment\".",
+    "Added missing overview page for entity \"OrderChange\".",
+    "Added missing NewEdit page for entity \"OrderChange\".",
+    "Added missing overview page for entity \"PaymentTransaction\".",
+    "Added missing NewEdit page for entity \"PaymentTransaction\".",
+    "Dropped placeholder page \"order_creation\" because it had no useful steps.",
+    "Dropped placeholder page \"order_detail\" because it had no useful steps.",
+    "Dropped placeholder page \"order_status_update\" because it had no useful steps.",
+    "Dropped placeholder page \"order_deletion\" because it had no useful steps.",
+    "Repaired NewEdit page for entity \"Order\" because its form inputs no longer matched current associations.",
+    "Domain model review LLM pass failed; applied deterministic story-evidence review only: Generated content is not valid JSON: Unterminated string in JSON at position 25433 (line 713 column 12)"
+  ],
+  "model": "gemma4:e4b",
+  "validationErrors": [],
+  "visualNarrator": {
+    "enabled": true,
+    "status": "completed",
+    "durationMs": 6213,
+    "command": "/Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/visual-narrator/.venv/bin/python /Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/pipeline/scripts/run_visual_narrator.py --input /Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/artifacts/practical-performance/20260528-165228/inputs/fish_chips/user-stories.txt --system-name PracticalPerf_fish_chips_Stability",
+    "artifacts": {
+      "ontologyPath": "/Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/artifacts/practical-performance/20260528-165228/stability/fish_chips/run-03/visual-narrator-ontology.omn",
+      "storiesPath": "/Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/artifacts/practical-performance/20260528-165228/stability/fish_chips/run-03/visual-narrator-stories.json",
+      "summaryPath": "/Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/artifacts/practical-performance/20260528-165228/stability/fish_chips/run-03/visual-narrator-summary.json",
+      "rawPath": "/Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/artifacts/practical-performance/20260528-165228/stability/fish_chips/run-03/visual-narrator-result.json"
+    },
+    "warnings": []
+  },
+  "processVisualizer": {
+    "enabled": true,
+    "status": "completed",
+    "durationMs": 296126,
+    "command": "/Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/process-visualizer/.venv/bin/python /Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/pipeline/scripts/run_process_visualizer.py --input /Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/artifacts/practical-performance/20260528-165228/inputs/fish_chips/user-stories.txt --output-dir /Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/artifacts/practical-performance/20260528-165228/stability/fish_chips/run-03 --model llama3 --ollama-url http://127.0.0.1:11434",
+    "artifacts": {
+      "summaryPath": "/Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/artifacts/practical-performance/20260528-165228/stability/fish_chips/run-03/process-visualizer-summary.json",
+      "rawPath": "/Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/artifacts/practical-performance/20260528-165228/stability/fish_chips/run-03/process-visualizer-result.json",
+      "graphSourcePath": "/Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/artifacts/practical-performance/20260528-165228/stability/fish_chips/run-03/process-visualizer-run/process-visualizer.gv",
+      "graphImagePath": "/Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/artifacts/practical-performance/20260528-165228/stability/fish_chips/run-03/process-visualizer-run/process-visualizer.png",
+      "logsDir": "/Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/artifacts/practical-performance/20260528-165228/stability/fish_chips/run-03/process-visualizer-run/output_logs"
+    },
+    "warnings": []
+  }
+}

@@ -1,0 +1,253 @@
+{
+  "pages": {
+    "specs": [
+      {
+        "name": "home",
+        "layout": "Blank",
+        "widgets": [
+          {
+            "type": "Text",
+            "caption": "Welcome to MyFirstModule"
+          },
+          {
+            "type": "Button",
+            "caption": "Subscribe to Premium",
+            "onClick": {
+              "type": "Microflow",
+              "microflowRef": "MyFirstModule.SubscribeToPremium"
+            }
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "SubscriptionOverview",
+        "layout": "Table",
+        "entity": "MyFirstModule.Subscription",
+        "widgets": [
+          {
+            "type": "DataGrid",
+            "columns": [
+              {
+                "attribute": "startDate"
+              },
+              {
+                "attribute": "endDate"
+              },
+              {
+                "attribute": "Price"
+              }
+            ]
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "SubscriptionDetail",
+        "layout": "FormHorizontal",
+        "entity": "MyFirstModule.Subscription",
+        "widgets": [
+          {
+            "type": "TextInput",
+            "attribute": "startDate"
+          },
+          {
+            "type": "TextInput",
+            "attribute": "endDate"
+          },
+          {
+            "type": "NumberInput",
+            "attribute": "Price"
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "PaymentMethodOverview",
+        "layout": "Table",
+        "entity": "MyFirstModule.PaymentMethod",
+        "widgets": [
+          {
+            "type": "DataGrid",
+            "columns": [
+              {
+                "attribute": "paymentDetails"
+              }
+            ]
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "PaymentMethodDetail",
+        "layout": "FormHorizontal",
+        "entity": "MyFirstModule.PaymentMethod",
+        "widgets": [
+          {
+            "type": "TextInput",
+            "attribute": "paymentDetails"
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "HistoricUserPaymentsOverview",
+        "layout": "Table",
+        "entity": "MyFirstModule.HistoricUserPayments",
+        "widgets": [
+          {
+            "type": "DataGrid",
+            "columns": [
+              {
+                "attribute": "paymentDate"
+              },
+              {
+                "attribute": "Amount"
+              }
+            ]
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "MovieOverview",
+        "layout": "Table",
+        "entity": "MyFirstModule.Movie",
+        "widgets": [
+          {
+            "type": "DataGrid",
+            "columns": [
+              {
+                "attribute": "Title"
+              },
+              {
+                "attribute": "releaseDate"
+              }
+            ]
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "MovieDetail",
+        "layout": "FormHorizontal",
+        "entity": "MyFirstModule.Movie",
+        "widgets": [
+          {
+            "type": "TextInput",
+            "attribute": "Title"
+          },
+          {
+            "type": "DateInput",
+            "attribute": "releaseDate"
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "ShowingOverview",
+        "layout": "Table",
+        "entity": "MyFirstModule.Showing",
+        "widgets": [
+          {
+            "type": "DataGrid",
+            "columns": [
+              {
+                "attribute": "movieTitle"
+              },
+              {
+                "attribute": "showTime"
+              }
+            ]
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "ShowingDetail",
+        "layout": "FormHorizontal",
+        "entity": "MyFirstModule.Showing",
+        "widgets": [
+          {
+            "type": "TextInput",
+            "attribute": "movieTitle"
+          },
+          {
+            "type": "DateInput",
+            "attribute": "showTime"
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "CinemaOverview",
+        "layout": "Table",
+        "entity": "MyFirstModule.Cinema",
+        "widgets": [
+          {
+            "type": "DataGrid",
+            "columns": [
+              {
+                "attribute": "Name"
+              },
+              {
+                "attribute": "City"
+              }
+            ]
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "CinemaDetail",
+        "layout": "FormHorizontal",
+        "entity": "MyFirstModule.Cinema",
+        "widgets": [
+          {
+            "type": "TextInput",
+            "attribute": "Name"
+          },
+          {
+            "type": "TextInput",
+            "attribute": "City"
+          }
+        ],
+        "content": []
+      }
+    ]
+  },
+  "app": {
+    "navigation": {
+      "menuItems": [
+        {
+          "name": "Home",
+          "pageRef": "home"
+        },
+        {
+          "name": "Subscription",
+          "pageRef": "SubscriptionOverview"
+        },
+        {
+          "name": "Payment Method",
+          "pageRef": "PaymentMethodOverview"
+        },
+        {
+          "name": "Historic User Payments",
+          "pageRef": "HistoricUserPaymentsOverview"
+        },
+        {
+          "name": "Movie",
+          "pageRef": "MovieOverview"
+        },
+        {
+          "name": "Showing",
+          "pageRef": "ShowingOverview"
+        },
+        {
+          "name": "Cinema",
+          "pageRef": "CinemaOverview"
+        }
+      ]
+    }
+  }
+}

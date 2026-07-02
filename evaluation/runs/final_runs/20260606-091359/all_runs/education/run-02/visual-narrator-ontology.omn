@@ -1,0 +1,415 @@
+# Generated with Visual Narrator
+Prefix: : <http://fakesite.org/practicalperf_education_stability.owl#>
+Prefix: owl: <http://www.w3.org/2002/07/owl#>
+Prefix: rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+Prefix: rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>
+Prefix: dc: <http://purl.org/dc/elements/1.1/>
+Prefix: onto: <http://fakesite.org/practicalperf_education_stability.owl#>
+
+Ontology: <:>
+
+Annotations:
+	dc:title "PracticalPerf_education_Stability",
+	dc:creator "Visual Narrator",
+	rdfs:comment "Generated with Visual Narrator"
+
+AnnotationProperty: dc:creator
+
+AnnotationProperty: dc:title
+
+
+# Relationships
+ObjectProperty: :canRegain
+	Domain: :FreelanceTeacher
+	Range: :Access
+
+ObjectProperty: :canIndicate1
+	Domain: :FreelanceTeacher
+	Range: :SkillLevel
+
+ObjectProperty: :canIndicate2
+	Domain: :FreelanceTeacher
+	Range: :TeachingExperience
+
+ObjectProperty: :canUse
+	Domain: :FreelanceTeacher
+	Range: :Slide
+
+ObjectProperty: :canManage1
+	Domain: :Administrator
+	Range: :Video
+
+ObjectProperty: :canManage2
+	Domain: :Administrator
+	Range: :Book
+
+ObjectProperty: :canManage3
+	Domain: :Administrator
+	Range: :ResearchPaper
+
+ObjectProperty: :canManage4
+	Domain: :Administrator
+	Range: :Slide
+
+ObjectProperty: :canManage5
+	Domain: :Administrator
+	Range: :Flashcard
+
+ObjectProperty: :canManage6
+	Domain: :Administrator
+	Range: :Game
+
+ObjectProperty: :canManage7
+	Domain: :Administrator
+	Range: :User
+
+ObjectProperty: :hasInformation
+	Domain: :Profile
+	Range: :ProfileInformation
+
+ObjectProperty: :canApprove
+	Domain: :Administrator
+	Range: :TeacherProfile
+
+ObjectProperty: :hasProfile
+	Domain: :Teacher
+	Range: :TeacherProfile
+
+ObjectProperty: :hasAssessment
+	Domain: :Skill
+	Range: :SkillAssessment
+
+ObjectProperty: :canCreate1
+	Domain: :Administrator
+	Range: :Module
+
+ObjectProperty: :canCreate2
+	Domain: :Administrator
+	Range: :Level
+
+ObjectProperty: :canCreate3
+	Domain: :Administrator
+	Range: :Quiz
+
+ObjectProperty: :canProvide
+	Domain: :Administrator
+	Range: :User
+
+ObjectProperty: :canDo
+	Domain: :FreelanceTeacher
+	Range: :Quiz
+
+ObjectProperty: :canAchieve
+	Domain: :FreelanceTeacher
+	Range: :Achievement
+
+ObjectProperty: :canAccess
+	Domain: :FreelanceTeacher
+	Range: :Collection
+
+ObjectProperty: :hasSkill
+	Domain: :Teaching
+	Range: :TeachingSkill
+
+ObjectProperty: :canNavigateThrough
+	Domain: :FreelanceTeacher
+	Range: :Level
+
+ObjectProperty: :canReset
+	Domain: :FreelanceTeacher
+	Range: :Password
+
+ObjectProperty: :hasLevel
+	Domain: :Skill
+	Range: :SkillLevel
+
+ObjectProperty: :canTrack1
+	Domain: :FreelanceTeacher
+	Range: :LearningProgress
+
+ObjectProperty: :canTrack2
+	Domain: :FreelanceTeacher
+	Range: :Progress
+
+ObjectProperty: :canHave1
+	Domain: :FreelanceTeacher
+	Range: :Place
+
+ObjectProperty: :canHave2
+	Domain: :FreelanceTeacher
+	Range: :Flashcard
+
+ObjectProperty: :canHave3
+	Domain: :FreelanceTeacher
+	Range: :Access
+
+ObjectProperty: :canHave4
+	Domain: :Administrator
+	Range: :Overview
+
+ObjectProperty: :canFind
+	Domain: :FreelanceTeacher
+	Range: :Video
+
+ObjectProperty: :canReceive
+	Domain: :FreelanceTeacher
+	Range: :Feedback
+
+ObjectProperty: :hasPaper
+	Domain: :Research
+	Range: :ResearchPaper
+
+ObjectProperty: :canUpdate
+	Domain: :FreelanceTeacher
+	Range: :ProfileInformation
+
+ObjectProperty: :canAdd1
+	Domain: :Administrator
+	Range: :Video
+
+ObjectProperty: :canAdd2
+	Domain: :Administrator
+	Range: :Book
+
+ObjectProperty: :canAdd3
+	Domain: :Administrator
+	Range: :ResearchPaper
+
+ObjectProperty: :canAdd4
+	Domain: :Administrator
+	Range: :Slide
+
+ObjectProperty: :canAdd5
+	Domain: :Administrator
+	Range: :Flashcard
+
+ObjectProperty: :canAdd6
+	Domain: :Administrator
+	Range: :Game
+
+ObjectProperty: :canSelect
+	Domain: :FreelanceTeacher
+	Range: :Material
+
+ObjectProperty: :canUnderstand
+	Domain: :FreelanceTeacher
+	Range: :What
+
+ObjectProperty: :hasTeacher
+	Domain: :Freelance
+	Range: :FreelanceTeacher
+
+ObjectProperty: :canLearn1
+	Domain: :FreelanceTeacher
+	Range: :TeachingSkill
+
+ObjectProperty: :canLearn2
+	Domain: :FreelanceTeacher
+	Range: :Skill
+
+ObjectProperty: :canCheck
+	Domain: :Administrator
+	Range: :Profile
+
+ObjectProperty: :canSend
+	Domain: :Administrator
+	Range: :Announcement
+
+ObjectProperty: :canRemove
+	Domain: :Administrator
+	Range: :Content
+
+ObjectProperty: :canPlay
+	Domain: :FreelanceTeacher
+	Range: :Game
+
+ObjectProperty: :canKnow
+	Domain: :FreelanceTeacher
+	Range: :What
+
+ObjectProperty: :hasExperience
+	Domain: :Teaching
+	Range: :TeachingExperience
+
+ObjectProperty: :canReflect
+	Domain: :Profile
+	Range: :Background
+
+ObjectProperty: :canTest
+	Domain: :FreelanceTeacher
+	Range: :LearningProgress
+
+ObjectProperty: :canOrganize
+	Domain: :Administrator
+	Range: :Content
+
+ObjectProperty: :canEdit
+	Domain: :Administrator
+	Range: :Content
+
+ObjectProperty: :canComplete
+	Domain: :FreelanceTeacher
+	Range: :SkillAssessment
+
+# Classes
+Class: :FreelanceTeacher
+	SubClassOf: :Teacher
+	Annotations:
+		rdfs:label "Freelance Teacher",
+		rdfs:comment "Functional Role"
+
+Class: :Teacher
+
+
+Class: :Freelance
+
+
+Class: :TeachingSkill
+	SubClassOf: :Skill
+	Annotations:
+		rdfs:label "Teaching Skill"
+
+Class: :Skill
+
+
+Class: :Teaching
+
+
+Class: :SkillAssessment
+	SubClassOf: :Assessment
+	Annotations:
+		rdfs:label "Skill Assessment"
+
+Class: :Assessment
+
+
+Class: :Level
+
+
+Class: :LearningProgress
+	Annotations:
+		rdfs:label "Learning Progress"
+
+Class: :Progress
+
+
+Class: :What
+
+
+Class: :Achievement
+
+
+Class: :Quiz
+
+
+Class: :Feedback
+
+
+Class: :SkillLevel
+	SubClassOf: :Level
+	Annotations:
+		rdfs:label "Skill Level"
+
+Class: :Profile
+
+
+Class: :Background
+
+
+Class: :TeachingExperience
+	SubClassOf: :Experience
+	Annotations:
+		rdfs:label "Teaching Experience"
+
+Class: :Experience
+
+
+Class: :Place
+
+
+Class: :Collection
+
+
+Class: :Material
+
+
+Class: :Flashcard
+
+
+Class: :Video
+
+
+Class: :ResearchPaper
+	SubClassOf: :Paper
+	Annotations:
+		rdfs:label "Research Paper"
+
+Class: :Paper
+
+
+Class: :Research
+
+
+Class: :Access
+
+
+Class: :Slide
+
+
+Class: :Game
+
+
+Class: :Password
+
+
+Class: :ProfileInformation
+	SubClassOf: :Information
+	Annotations:
+		rdfs:label "Profile Information"
+
+Class: :Information
+
+
+Class: :Administrator
+	Annotations:
+		rdfs:comment "Functional Role"
+
+Class: :TeacherProfile
+	SubClassOf: :Profile
+	Annotations:
+		rdfs:label "Teacher Profile"
+
+Class: :Module
+
+
+Class: :Content
+
+
+Class: :User
+
+
+Class: :Book
+
+
+Class: :Overview
+
+
+Class: :Announcement
+
+
+Class: :Function
+
+
+Class: :Learning
+
+
+Class: :Number
+
+
+Class: :Section
+
+
+Class: :Notification
+
+

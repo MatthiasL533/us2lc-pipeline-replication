@@ -1,0 +1,323 @@
+00:00:18 - 00:00:30
+P8: Zes actoren. Die wil je natuurlijk terugzien in het model. Ja, we hebben een customer. Ja, dat klopt. Dus dan neem ik gewoon number, delivery address, customerEmail.
+
+00:00:32 - 00:01:21
+P8: Oké, ook hier weer. De. Hij pakt wel de informatie, de velden die hij nodig heeft, bijvoorbeeld een customer. Name. Het zou wel met die required veld zijn. Phone number zou required zijn. E-mail ook. Wat ik goed vind is dat hij niet dingen erbij verzint. Dus hij zegt niet van ja, je kunt bij alles. Ik kan in ieder geval veel belang customer toevoegen. Ja, maar dat pakt hij allemaal niet. Ja, hij, hij beperkt zo een bepaalde scope. Dat is goed. Maar de of de required is en ook de data types zijn een beetje crazy. Het telefoonnummer is natuurlijk ook niet een string. Ja, dat is waar. En voor mij heb je ook. Ik weet niet. Ik weet het niet zeker, maar zo heb je ook een apart datatype voor een e-mailadres denk ik. Dus ik denk.
+
+00:01:21 - 00:01:28
+Researcher: Dat je validatie hebt voor je mailadres Volgens mij inderdaad. Ja dat klopt wel. Je kan wel iets doen daarmee. Alle regels.
+
+00:01:29 - 00:01:48
+P8: Eens even kijken. Ticketmaster. Oké, email isActive. Oké. Ticketmaster. Even, maar niet heel erg veel nodig. Qua informatie. Op het account zit ik ook wel te kloppen, maar kijk, dit is weer een soort.
+
+00:01:49 - 00:02:05
+P8: Deze twee dingen zo dadelijk weer geërfd moeten worden of iets anders. En dan is het Name opeens. Hier is die wel required. En hier opeens weer niet. Een van de liefhebbers is een andere zaak. Hetzelfde.
+
+00:02:11 - 00:02:21
+P8: The kitchen employee. Oké, klopt ook. En de rest van de owner zou ook een aparte actor moeten zijn dan.
+
+00:02:36 - 00:02:56
+P8: Kijk, nu ga ik even de status hier ook bijvoorbeeld status. Ja ja, dat heb je ook bij status iets, waarschijnlijk iets van wat zegt orders en commissies door de status, different status en controle. Dus. Ja, je hebt de statussen.
+
+00:02:56 - 00:03:01
+Researcher: Status heeft ook los gedaan inderdaad. Ja, dat had ook een enumeration moeten zijn. Ja. Ja.
+
+00:03:08 - 00:03:17
+P8: Oké. Voorbeeld bij Payment. Ik sta niet direct in de user stories, maar je zou willen hebben of een betaling is afgehandeld. Ja, dat is vaak zo.
+
+00:03:29 - 00:03:35
+P8: Ja of ja. Misschien pakt ie wel vanuit de order order number status.
+
+00:03:40 - 00:03:51
+P8: Maar als je geen aparte optie of echt de payment paid, dus ja of nee? Ja, ik kan geen doen, want dat zou wel belangrijk zijn. Als er iets mis gaat zal ik niet in de user stories staat.
+
+00:03:59 - 00:04:03
+P8: Dat klopt ook in de payment options. Oh ja, wat ook helemaal.
+
+00:04:06 - 00:04:10
+P8: Is. Ook een tip toevoegen. Even die gepakt.
+
+00:04:15 - 00:04:19
+Researcher: Ja, ik zie tip distribution heeft dat maar verder.
+
+00:04:20 - 00:04:35
+P8: Ja, dat is een andere user story eigenlijk. Dat gaat wat gaat over dat een van die andere actoren zeg maar goed kan verdelen. Ja, maar dat gaat niet per se over heel veel. Ook wel dat je een tip bij een bepaalde order wilt hebben. Dat heeft die van mij niet. Niet gepakt.
+
+00:04:38 - 00:04:41
+P8: Elke payment optie moet ook een enumeration zijn.
+
+00:04:41 - 00:04:42
+Researcher: Ja.
+
+00:04:42 - 00:04:45
+P8: Het is best gek dat je zeg maar dat dat een string is.
+
+00:04:46 - 00:04:46
+Researcher: payment methods ook Zo ook denk ik.
+
+00:04:56 - 00:04:58
+P8: Kijk, dit zou veel meer simplified kunnen worden.
+
+00:04:58 - 00:04:58
+Researcher: Ja.
+
+00:04:58 - 00:05:07
+P8: Hij pakt gewoon heel veel entiteiten hier. delivery hier dus een beetje random.
+
+00:05:07 - 00:05:08
+Researcher: Ja.
+
+00:05:11 - 00:05:20
+P8: kijk die delivery. Die heeft waarschijnlijk die. In z'n actor worden die delivery person. Zo denk je dat dat er ergens gelinkt aan moet zijn, maar dat zie ik niet.
+
+00:05:21 - 00:05:31
+P8: Ja. Order overview. Ja. Of of of dat een aparte entiteit moet zijn heb ik ook niet.
+
+00:05:40 - 00:06:01
+P8: Ja, een beetje hetzelfde als net ja, de niet de best practices van de enumerations. Beetje random als het gaat om genereren of entiteit. Ook is er maar een entiteit met maar één attribuut. Het is ook een beetje ja, het zou op zich wel kunnen, maar het is een beetje.
+
+00:06:01 - 00:06:01
+Researcher: Ja.
+
+00:06:02 - 00:06:27
+P8: Crazy. Maar hij pakt wel de entiteiten netjes dus. Dat zat ook in deze user stories. Iets over die status, maar dan echt specifiek wat ervoor zou kunnen zijn.
+
+00:06:28 - 00:06:30
+Researcher: Ja, dat staat er dus inderdaad niet. Nee.
+
+00:06:30 - 00:06:58
+P8: Nee. Current orders, Different status. Dus. Hij. Zou ook gewoon kunnen zeggen van oké. Wat hier wel enumeration hiervan, Maar dat hij. Hij geeft geen. Hij geeft geen invulling aan het feit. Dat is.
+
+00:06:59 - 00:06:59
+Researcher: Ja.
+
+00:07:00 - 00:07:01
+P8: Dat is op zich wel netjes.
+
+00:07:01 - 00:07:03
+Researcher: Ja. Maar hij vult het niet in voor de.
+
+00:07:03 - 00:07:05
+P8: Hij. Hij bedoelt niet per se in voor je.
+
+00:07:05 - 00:07:05
+Researcher: Ja.
+
+00:07:09 - 00:07:17
+P8: Maar als uiteindelijk wel zou moeten zijn. Maar het kan geen name en string zijn. Ja, alleen dat. Draait die.
+
+00:07:56 - 00:07:57
+P8: Vraag me af waar die mistakes vandaan komt.
+
+00:07:58 - 00:08:05
+Researcher: Ja, dat is ook. Nou, dat zit. Mmm. Dat is gewoon hallucineert, denk ik.
+
+00:08:09 - 00:08:13
+P8: Ja, dat dat dat kan wel, kan eigenlijk dan een attribuut zijn.
+
+00:08:13 - 00:08:14
+Researcher: Oh ja.
+
+00:08:14 - 00:08:15
+P8: Het was een losse entiteit.
+
+00:08:49 - 00:08:53
+P8: Ja dus. Het is eigenlijk een beetje verschillende rollen die je nu hier hebt.
+
+00:08:53 - 00:08:53
+Researcher: Ja.
+
+00:08:54 - 00:09:23
+P8: Normaal gesproken zou je t dan netjes doen, maar dat kan inloggen en dat je dan een nieuwe rol hebt. Maar dit pakt m wel. Ja, zo is de customer overview. Je hoort eigenlijk niet heel veel te zien, alleen maar een bepaald ja, gewoon een scherm, maar dan is een ordeningsproces zit. Dus ik neem aan dat als zo'n oh zo'n kassier dan een Oh.
+
+00:09:25 - 00:09:34
+Researcher: Ja, heeft het gewoon nog een als de entiteit overview gemaakt zeg maar. Ja ja. Dus hij heeft niet echt mooie user facing pagina's. Niet in de navigatie gezet in ieder geval.
+
+00:09:35 - 00:09:40
+P8: Want hoe kan ik dan ergens een order aanmaken? Een foutje vanuit de kassier?
+
+00:09:40 - 00:09:45
+Researcher: Nee, die zit niet in het navigation menu. Dat heeft hij niet gemaakt.
+
+00:09:45 - 00:09:53
+P8: Nee, want waarschijnlijk om te kunnen testen op customer moet je eerst een order aanmaken.
+
+00:09:53 - 00:10:00
+Researcher: Ja. Nee. Customer. Die heeft hij gewoon leeg gemaakt. Ja, die heeft hij gewoon niet gevuld met iets omdat hij niet wist dat hij erin moest.
+
+00:10:01 - 00:10:09
+P8: Ik weet niet of het buiten de scope valt, maar als je bijvoorbeeld dit zou uitrollen bij een organisatie zou hij wel demo data moeten hebben denk ik.
+
+00:10:09 - 00:10:10
+Researcher: Oh ja, ja, dat is ook een goeie.
+
+00:10:10 - 00:10:11
+P8: Zodat je wel kan.
+
+00:10:11 - 00:10:14
+Researcher: Ja, zodat je een gevulde database hebt.
+
+00:10:14 - 00:10:20
+P8: Ja, ja, gewoon demo data. Het hoeft niet heel veel te zijn, maar dat je gewoon een beetje doorheen kan rollen.
+
+00:10:20 - 00:10:21
+Researcher: Dat is ook wel een goede ja.
+
+00:10:26 - 00:10:34
+P8: Want dan kan ik niet echt checken of die of die customer zijn waar de juiste informatie zit zeg maar. Want hij heeft ook niet heel veel te zien.
+
+00:10:34 - 00:10:36
+Researcher: Ja, ja, maar nee.
+
+00:10:36 - 00:10:44
+P8: Dat niet alleen zeg maar waar in welke staat zijn order nu is kun je gewoon Delivery person.
+
+00:10:52 - 00:10:53
+Researcher: Ja.
+
+00:10:55 - 00:11:17
+P8: Je hoeft niet heel veel. Je hoeft niet heel veel te zien, maar wel. Heb je dat? De adres van een order. Bijv. Ook de prijs van een ticket. Kitchen Employee is ook een employee. Die hoeft alleen maar te zien als ik goed herinner.
+
+00:11:24 - 00:11:33
+P8: Voor een overzicht van alle orders. Je hoeft die dingen niet een. Wie niet? Een write. Alleen maar een read. Ja tabel. Eigenlijk van.
+
+00:11:34 - 00:11:35
+Researcher: Alle orders.
+
+00:11:35 - 00:11:36
+P8: Van alle orders.
+
+00:11:36 - 00:11:49
+Researcher: Ja. Oké. Dus eigenlijk is de UI en de navigatie is totaal niet volgens de user stories. Nou of. Wat denk je daarvan?
+
+00:11:50 - 00:11:59
+P8: Nou kijk, ik zou zeggen dat die. Kijk om het echt goed te kunnen testen. Zou je ook willen dat je de rollen goed verdeelt, zeg maar?
+
+00:12:00 - 00:12:01
+Researcher: Ja, ja. De user die.
+
+00:12:02 - 00:12:05
+P8: De user roles zat ik gewoon bij wijze van spreken naar.
+
+00:12:10 - 00:12:20
+P8: Ja, je kan gewoon inloggen en dan kan je gewoon zien oké van oké, dit zijn eigenlijk de pagina's die ik zie in de tabellen die ik hoor te zien. Ja, maar omdat ie dat niet heeft gedaan. Zo is het ook lastig om te testen zeg maar.
+
+00:12:20 - 00:12:21
+Researcher: Ja.
+
+00:12:21 - 00:12:37
+P8: En ook met een paar demo data Ja, zodat je het ook makkelijk kan valideren. Want als het alleen maar losse pagina's zeg. Want anders heb je nu alleen maar secties die heel veel dingen under the goed gedaan. Maar dat kan ik nu niet natuurlijk zien.
+
+00:12:37 - 00:12:39
+Researcher: Ja ja.
+
+00:12:41 - 00:12:47
+P8: Hier wil ik ook precies zien van oké. Komt het ook echt overeen met wat hier staat?
+
+00:12:50 - 00:12:53
+Researcher: Maar is dat niet raar? Ja.
+
+00:12:55 - 00:13:00
+P8: Ja. Het is ook echt zo van workflow.
+
+00:13:01 - 00:13:03
+Researcher: Nou ja, alleen microflows bij deze.
+
+00:13:05 - 00:13:06
+P8: Set change notification.
+
+00:13:19 - 00:13:25
+P8: Welke? Bij welke actor wordt deze user story? Bij ticketmaster.
+
+00:13:25 - 00:13:26
+Researcher: Ik denk. Het?
+
+00:13:28 - 00:13:31
+P8: Maar Ticketmaster die beheert volgens mij alleen maar die.
+
+00:13:35 - 00:13:51
+P8: Maar de inkomende tickets. Alleen hij kan ze dus ook. Want die tickets komen uiteindelijk van de van de cassière. Nee, ik wil niet anders. Dan kom ik anders.
+
+00:14:05 - 00:14:11
+P8: Ja, maar dat is dus eigenlijk het veranderen van die status, denk ik, als ik het begrijp.
+
+00:14:11 - 00:14:12
+Researcher: Ja, order change inderdaad.
+
+00:14:13 - 00:14:33
+P8: Current orders, finished orders, Scattered orders. Niet één, twee, drie wordt duidelijk waar het precies vandaan komt, maar het biedt orders. Staat waarschijnlijk hetzelfde idee.
+
+00:14:42 - 00:14:46
+P8: Nieuwe status. Zij brak gewoon de status van die order bij.
+
+00:14:48 - 00:14:52
+P8: Ja, daar heb je wel microflow voor nodig. Volgens mij heeft ie wel goed ingezien.
+
+00:14:54 - 00:14:54
+Researcher: Maar.
+
+00:14:56 - 00:15:05
+P8: Ik weet niet hoe de notification. dus wanneer die kassier een nieuwe order maakt?
+
+00:15:25 - 00:15:32
+P8: Maak je nou precies een nieuwe order aan? Want ze had ook een nieuw order notification. Want het was Wat denk je dat bedoeld wordt met notification?
+
+00:15:34 - 00:16:14
+Researcher: Ik denk dat hij in dat hij de entiteit order notification pakt denk ik daar een nieuwe van aanmaakt.
+
+00:16:16 - 00:16:23
+P8: Ik denk dat dit wel een aparte entiteit zou zijn trouwens. Maar in die notificatie, dus dat begrijp ik op zich wel.
+
+00:16:30 - 00:17:04
+P8: Verder ook heel erg kijken naar die benaming. zit er een best practice vast? Ja. Volgens mij is het wel verschillend. Ik zie bijvoorbeeld een underscore aan het begin. Ja. Naming convention. Ja, die heb ik niet uit mijn hoofd. Welke best practices/naming conventions er zijn in Mendix. Daar heb je weer veel documentatie over natuurlijk. Ik denk niet dat die die heeft echt heeft gepakt.
+
+00:17:06 - 00:17:07
+Researcher: Oh.
+
+00:17:09 - 00:17:14
+P8: Maar dat is niet echt. Dat is niet een enorm. Hoe noem je dat? Lastig als er niet meer eerste prioriteit zijn.
+
+00:17:29 - 00:17:41
+P8: En ook de restaurant owner, dat was best wel een. Het was de meest heftige actor als het gaat om de implementatie van functionaliteiten. Maak je de deal hier op het eind? Ja.
+
+00:17:51 - 00:18:09
+P8: Die moet heel veel verschillende pagina's kunnen zien die andere actoren natuurlijk nooit zien, want zo. Want zon employee iets een hele andere dingen als zo'n restauranthouder? Ja, nou kijk, dit heeft ie. Het is gewoon bestaat gewoon los. Oh ja, dat is per ongeluk. Ik heb net even iets verwijderd.
+
+00:18:09 - 00:18:15
+Researcher: Nee, nee, dat dat. Oké, hij heeft m niet weten te verbinden met iets. Inderdaad. Ja, ja.
+
+00:18:19 - 00:18:29
+P8: Staat ook hier allemaal in Search for specific orders. Dus hij moet wel een soort relatie hebben met die orders. Ja. Ook the number of the tips.
+
+00:18:32 - 00:18:32
+Researcher: Nee.
+
+00:18:34 - 00:18:53
+P8: Ik zie ook geen. Misschien ben ik gewoon blind, maar dat is ook nergens voor staan. Als Hij was heel fijn. Entiteit als attribuut. Ja. Ik zou ook niks. Type distribution. Alleen daar zijn maar distributie. Niet die tip zelf. Dus dat is. Dat is te vergeten.
+
+00:18:59 - 00:19:00
+Researcher: Hmm.
+
+00:19:04 - 00:19:10
+P8: Ja. Dus ja. Kijk, het liefst zou je dat wel gewoon willen testen aan derden aan de voorkant.
+
+00:19:10 - 00:19:11
+Researcher: Ja.
+
+00:19:11 - 00:19:17
+P8: Is er echt wel iets? Maar het is niet eens die gepakt, die restauranteigenaar.
+
+00:19:18 - 00:19:22
+Researcher: Nee, hij heeft niet alle entiteiten inderdaad op alle pagina's niet in application weten te zetten.
+
+00:19:22 - 00:19:28
+P8: Ja, dat is wel. Dat is wel ernstig ja. Dus.
+
+00:19:28 - 00:19:36
+P8: Want. Dat maakt het gewoon lastig te testen eigenlijk.
+
+00:19:36 - 00:19:37
+Researcher: Ja zeker ja.
+
+00:19:43 - 00:20:20
+Researcher: Verder heb ik niet te veel commentaar mee vergeleken. De andere kon ik wel wat meer testen bij de eerste, maar hier helemaal niet heel veel. En dit is denk ik een casus waarbij er best wel verschillende. pagina's worden getoond per ja, per per actor. Ik kijk hier bijvoorbeeld over cash flow accounts, check-out balance of the shift. Het liefst zou je gewoon dat kunnen testen of dat wel echt klopt.

@@ -1,0 +1,3134 @@
+{
+  "meta": {
+    "planVersion": "1.1.0",
+    "generatedAt": "2026-06-06T22:09:21.606Z",
+    "generatedBy": "pipeline.plan-generator"
+  },
+  "app": {
+    "appId": "",
+    "branch": "main",
+    "moduleName": "MyFirstModule",
+    "layoutQualifiedName": "Atlas_Core.Atlas_Default",
+    "homePageRef": "home",
+    "navigation": {
+      "homePageButtons": [
+        {
+          "pageRef": "appuser_overview",
+          "caption": "",
+          "allowedRoles": []
+        },
+        {
+          "pageRef": "customer_overview",
+          "caption": "",
+          "allowedRoles": []
+        },
+        {
+          "pageRef": "lesson_overview",
+          "caption": "",
+          "allowedRoles": []
+        },
+        {
+          "pageRef": "newcustomer_overview",
+          "caption": "",
+          "allowedRoles": []
+        },
+        {
+          "pageRef": "admin_overview",
+          "caption": "",
+          "allowedRoles": []
+        },
+        {
+          "pageRef": "appadministrator_overview",
+          "caption": "",
+          "allowedRoles": []
+        }
+      ],
+      "menuItems": [
+        {
+          "pageRef": "appuser_overview",
+          "caption": "",
+          "allowedRoles": []
+        },
+        {
+          "pageRef": "customer_overview",
+          "caption": "",
+          "allowedRoles": []
+        },
+        {
+          "pageRef": "lesson_overview",
+          "caption": "",
+          "allowedRoles": []
+        },
+        {
+          "pageRef": "newcustomer_overview",
+          "caption": "",
+          "allowedRoles": []
+        },
+        {
+          "pageRef": "admin_overview",
+          "caption": "",
+          "allowedRoles": []
+        },
+        {
+          "pageRef": "appadministrator_overview",
+          "caption": "",
+          "allowedRoles": []
+        }
+      ],
+      "homePageButtonRefs": [
+        "appuser_overview",
+        "customer_overview",
+        "lesson_overview",
+        "newcustomer_overview",
+        "admin_overview",
+        "appadministrator_overview"
+      ],
+      "navigationItemRefs": [
+        "appuser_overview",
+        "customer_overview",
+        "lesson_overview",
+        "newcustomer_overview",
+        "admin_overview",
+        "appadministrator_overview"
+      ],
+      "homePage": "home"
+    }
+  },
+  "execution": {
+    "commit": true,
+    "dg2Cleanup": true,
+    "forceLegacyWebClientForLookups": true,
+    "createApp": true,
+    "createAppName": "rerun-sports-run05",
+    "commitMessage": "Rerun practical performance builder-stage run: sports run-05"
+  },
+  "domainModel": {
+    "entities": [
+      {
+        "name": "Customer",
+        "attributes": [
+          {
+            "name": "firstName",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "lastName",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "Email",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "AccountNumber",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "membershipTypeId",
+            "type": "Integer",
+            "required": false
+          },
+          {
+            "name": "noShowCount",
+            "type": "Integer",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "MembershipType",
+        "attributes": [
+          {
+            "name": "Name",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "Description",
+            "type": "String",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "Subscription",
+        "attributes": [
+          {
+            "name": "startDate",
+            "type": "DateTime",
+            "required": false
+          },
+          {
+            "name": "endDate",
+            "type": "DateTime",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "Lesson",
+        "attributes": [
+          {
+            "name": "Title",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "Description",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "startTime",
+            "type": "DateTime",
+            "required": false
+          },
+          {
+            "name": "endTime",
+            "type": "DateTime",
+            "required": false
+          },
+          {
+            "name": "Capacity",
+            "type": "Integer",
+            "required": false
+          },
+          {
+            "name": "lessonType",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "maximumNumberOfPeopleAllowed",
+            "type": "Integer",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "NotificationPreference",
+        "attributes": [
+          {
+            "name": "notificationMethod",
+            "type": "String",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "Trainer",
+        "attributes": [
+          {
+            "name": "firstName",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "lastName",
+            "type": "String",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "Room",
+        "attributes": [
+          {
+            "name": "Name",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "Capacity",
+            "type": "Integer",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "NewCustomer",
+        "attributes": [
+          {
+            "name": "Name",
+            "type": "String",
+            "required": true
+          },
+          {
+            "name": "Email",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "IsActive",
+            "type": "Boolean",
+            "required": false,
+            "defaultValue": false
+          }
+        ]
+      },
+      {
+        "name": "ReturningCustomer",
+        "attributes": [
+          {
+            "name": "Name",
+            "type": "String",
+            "required": true
+          },
+          {
+            "name": "Email",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "IsActive",
+            "type": "Boolean",
+            "required": false,
+            "defaultValue": false
+          }
+        ]
+      },
+      {
+        "name": "AppUser",
+        "attributes": [
+          {
+            "name": "Name",
+            "type": "String",
+            "required": true
+          },
+          {
+            "name": "Email",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "IsActive",
+            "type": "Boolean",
+            "required": false,
+            "defaultValue": false
+          }
+        ]
+      },
+      {
+        "name": "PersonalInformation",
+        "attributes": [
+          {
+            "name": "Address",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "PhoneNumber",
+            "type": "String",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "BankingDetails",
+        "attributes": [
+          {
+            "name": "AccountNumber",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "RoutingNumber",
+            "type": "String",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "FamilyMembership",
+        "attributes": [
+          {
+            "name": "Members",
+            "type": "String",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "FamilyMembershipMember",
+        "attributes": [
+          {
+            "name": "Name",
+            "type": "String",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "BookingStatus",
+        "attributes": [
+          {
+            "name": "Name",
+            "type": "String",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "Cancellation",
+        "attributes": [
+          {
+            "name": "Name",
+            "type": "String",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "NoShow",
+        "attributes": [
+          {
+            "name": "Name",
+            "type": "String",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "FineHistory",
+        "attributes": [
+          {
+            "name": "Name",
+            "type": "String",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "Notification",
+        "attributes": [
+          {
+            "name": "Name",
+            "type": "String",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "CheckInHistory",
+        "attributes": [
+          {
+            "name": "checkInDate",
+            "type": "DateTime",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "SubscriptionStatus",
+        "attributes": [
+          {
+            "name": "Status",
+            "type": "String",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "Admin",
+        "attributes": [
+          {
+            "name": "Name",
+            "type": "String",
+            "required": true
+          },
+          {
+            "name": "Email",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "IsActive",
+            "type": "Boolean",
+            "required": false,
+            "defaultValue": false
+          }
+        ]
+      },
+      {
+        "name": "AppAdministrator",
+        "attributes": [
+          {
+            "name": "Name",
+            "type": "String",
+            "required": true
+          },
+          {
+            "name": "Email",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "IsActive",
+            "type": "Boolean",
+            "required": false,
+            "defaultValue": false
+          }
+        ]
+      }
+    ],
+    "associations": [
+      {
+        "name": "CustomerSubscription",
+        "parentEntity": "Customer",
+        "childEntity": "Subscription",
+        "type": "Reference",
+        "owner": "Both"
+      },
+      {
+        "name": "MembershipTypeSubscription",
+        "parentEntity": "MembershipType",
+        "childEntity": "Subscription",
+        "type": "Reference",
+        "owner": "Both"
+      },
+      {
+        "name": "CustomerLesson",
+        "parentEntity": "Customer",
+        "childEntity": "Lesson",
+        "type": "Reference",
+        "owner": "Both",
+        "metadata": {
+          "relationshipType": "ReferenceSet",
+          "normalizedInputMethod": "dropdown"
+        }
+      },
+      {
+        "name": "LessonRoom",
+        "parentEntity": "Lesson",
+        "childEntity": "Room",
+        "type": "Reference",
+        "owner": "Both"
+      },
+      {
+        "name": "TrainerLesson",
+        "parentEntity": "Trainer",
+        "childEntity": "Lesson",
+        "type": "Reference",
+        "owner": "Both"
+      },
+      {
+        "name": "CustomerNotificationPreference",
+        "parentEntity": "Customer",
+        "childEntity": "NotificationPreference",
+        "type": "Reference",
+        "owner": "Both"
+      },
+      {
+        "name": "CustomerBankingDetails",
+        "parentEntity": "Customer",
+        "childEntity": "BankingDetails",
+        "type": "Reference",
+        "owner": "Both"
+      },
+      {
+        "name": "CustomerPersonalInformation",
+        "parentEntity": "Customer",
+        "childEntity": "PersonalInformation",
+        "type": "Reference",
+        "owner": "Both"
+      },
+      {
+        "name": "CustomerFamilyMembership",
+        "parentEntity": "Customer",
+        "childEntity": "FamilyMembership",
+        "type": "Reference",
+        "owner": "Both"
+      },
+      {
+        "name": "LessonBookingStatus",
+        "parentEntity": "Lesson",
+        "childEntity": "BookingStatus",
+        "type": "Reference",
+        "owner": "Both"
+      },
+      {
+        "name": "CustomerCheckInHistory",
+        "parentEntity": "Customer",
+        "childEntity": "CheckInHistory",
+        "type": "Reference",
+        "owner": "Both"
+      },
+      {
+        "name": "SubscriptionSubscriptionStatus",
+        "parentEntity": "Subscription",
+        "childEntity": "SubscriptionStatus",
+        "type": "Reference",
+        "owner": "Both"
+      }
+    ],
+    "enumerations": []
+  },
+  "security": {
+    "enabled": true,
+    "securityLevel": "prototype",
+    "moduleRoles": [
+      "Customer",
+      "AppUser",
+      "Trainer",
+      "Admin",
+      "AppAdministrator",
+      "NewCustomer",
+      "ReturningCustomer"
+    ],
+    "userRoles": [
+      {
+        "name": "Customer",
+        "description": "A customer of Daily Sports",
+        "moduleRoles": [
+          "AppUser"
+        ],
+        "systemModuleRole": "System.User"
+      },
+      {
+        "name": "Trainer",
+        "description": "A trainer at Daily Sports",
+        "moduleRoles": [
+          "AppUser"
+        ],
+        "systemModuleRole": "System.User"
+      },
+      {
+        "name": "Admin",
+        "description": "An administrator of Daily Sports",
+        "moduleRoles": [
+          "AppAdministrator"
+        ],
+        "systemModuleRole": "System.Administrator"
+      },
+      {
+        "name": "AppAdministrator",
+        "moduleRoles": [
+          "AppAdministrator"
+        ],
+        "systemModuleRole": "System.User"
+      },
+      {
+        "name": "AppUser",
+        "moduleRoles": [
+          "AppUser"
+        ],
+        "systemModuleRole": "System.User"
+      },
+      {
+        "name": "NewCustomer",
+        "moduleRoles": [
+          "NewCustomer"
+        ],
+        "systemModuleRole": "System.User"
+      },
+      {
+        "name": "ReturningCustomer",
+        "moduleRoles": [
+          "ReturningCustomer"
+        ],
+        "systemModuleRole": "System.User"
+      }
+    ],
+    "demoUsers": []
+  },
+  "pages": {
+    "specs": [
+      {
+        "ref": "home",
+        "name": "Home",
+        "title": "Home",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "Lesson Workspace",
+            "renderMode": "H2",
+            "content": [],
+            "itemContent": [],
+            "templateContent": []
+          },
+          {
+            "type": "dynamicText",
+            "text": "Generated from user stories",
+            "renderMode": "Paragraph",
+            "content": [],
+            "itemContent": [],
+            "templateContent": []
+          },
+          {
+            "type": "buttonToPage",
+            "caption": "Lesson Dashboard",
+            "targetPageRef": "lesson_dashboard",
+            "content": [],
+            "itemContent": [],
+            "templateContent": []
+          },
+          {
+            "type": "buttonToPage",
+            "caption": "Lesson Overview",
+            "targetPageRef": "lesson_overview",
+            "content": [],
+            "itemContent": [],
+            "templateContent": []
+          },
+          {
+            "type": "buttonToPage",
+            "caption": "Customer Overview",
+            "targetPageRef": "customer_overview",
+            "content": [],
+            "itemContent": [],
+            "templateContent": []
+          },
+          {
+            "type": "buttonToPage",
+            "caption": "Room Overview",
+            "targetPageRef": "room_overview",
+            "content": [],
+            "itemContent": [],
+            "templateContent": []
+          },
+          {
+            "type": "buttonToPage",
+            "caption": "appuser overview",
+            "targetPageRef": "appuser_overview",
+            "content": [],
+            "itemContent": [],
+            "templateContent": []
+          },
+          {
+            "type": "buttonToPage",
+            "caption": "newcustomer overview",
+            "targetPageRef": "newcustomer_overview",
+            "content": [],
+            "itemContent": [],
+            "templateContent": []
+          },
+          {
+            "type": "buttonToPage",
+            "caption": "admin overview",
+            "targetPageRef": "admin_overview"
+          },
+          {
+            "type": "buttonToPage",
+            "caption": "appadministrator overview",
+            "targetPageRef": "appadministrator_overview"
+          }
+        ]
+      },
+      {
+        "ref": "lesson_dashboard",
+        "name": "Lesson_Dashboard",
+        "title": "Lesson Dashboard",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "Lesson Dashboard",
+            "renderMode": "H2",
+            "content": [],
+            "itemContent": [],
+            "templateContent": []
+          },
+          {
+            "type": "dynamicText",
+            "text": "Overview and data management for lesson.",
+            "renderMode": "Paragraph",
+            "content": [],
+            "itemContent": [],
+            "templateContent": []
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Add Lesson",
+            "entityRef": "MyFirstModule.Lesson",
+            "targetPageRef": "lesson_newedit",
+            "content": [],
+            "itemContent": [],
+            "templateContent": []
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.Lesson",
+            "rowClickTargetPageRef": "lesson_newedit",
+            "autoRowClickToDetail": true,
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Title",
+                "autoLabel": true,
+                "content": [],
+                "itemContent": [],
+                "templateContent": []
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Description",
+                "autoLabel": false,
+                "content": [],
+                "itemContent": [],
+                "templateContent": []
+              }
+            ],
+            "content": [],
+            "templateContent": []
+          }
+        ],
+        "entityRef": "MyFirstModule.Lesson"
+      },
+      {
+        "ref": "lesson_overview",
+        "name": "Lesson_Overview",
+        "title": "Lesson Overview",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "Lesson Overview",
+            "renderMode": "H2",
+            "content": [],
+            "itemContent": [],
+            "templateContent": []
+          },
+          {
+            "type": "dynamicText",
+            "text": "Manage lesson records and open the create dialog when new data is needed.",
+            "renderMode": "Paragraph",
+            "content": [],
+            "itemContent": [],
+            "templateContent": []
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Add Lesson",
+            "entityRef": "MyFirstModule.Lesson",
+            "targetPageRef": "lesson_newedit",
+            "content": [],
+            "itemContent": [],
+            "templateContent": []
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.Lesson",
+            "rowClickTargetPageRef": "lesson_newedit",
+            "autoRowClickToDetail": true,
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Title",
+                "autoLabel": true,
+                "content": [],
+                "itemContent": [],
+                "templateContent": []
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Description",
+                "autoLabel": false,
+                "content": [],
+                "itemContent": [],
+                "templateContent": []
+              }
+            ],
+            "content": [],
+            "templateContent": []
+          }
+        ],
+        "entityRef": "MyFirstModule.Lesson"
+      },
+      {
+        "ref": "lesson_newedit",
+        "name": "Lesson_NewEdit",
+        "title": "Lesson NewEdit",
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "Lesson",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Title"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Description"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "startTime"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "endTime"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Capacity"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "lessonType"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "maximumNumberOfPeopleAllowed"
+              },
+              {
+                "type": "associationInput",
+                "associationRef": "CustomerLesson",
+                "targetEntityRef": "MyFirstModule.Customer",
+                "label": "Customer"
+              },
+              {
+                "type": "associationInput",
+                "associationRef": "LessonRoom",
+                "targetEntityRef": "MyFirstModule.Room",
+                "label": "Room"
+              },
+              {
+                "type": "associationInput",
+                "associationRef": "TrainerLesson",
+                "targetEntityRef": "MyFirstModule.Trainer",
+                "label": "Trainer"
+              },
+              {
+                "type": "associationInput",
+                "associationRef": "LessonBookingStatus",
+                "targetEntityRef": "MyFirstModule.BookingStatus",
+                "label": "Booking Status"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ],
+        "entityRef": "MyFirstModule.Lesson",
+        "pageParameters": [
+          {
+            "name": "Lesson",
+            "entityRef": "MyFirstModule.Lesson",
+            "required": true
+          }
+        ],
+        "layoutQualifiedName": "Atlas_Core.PopupLayout"
+      },
+      {
+        "ref": "customer_overview",
+        "name": "Customer_Overview",
+        "title": "Customer Overview",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "Customer Overview",
+            "renderMode": "H2",
+            "content": [],
+            "itemContent": [],
+            "templateContent": []
+          },
+          {
+            "type": "dynamicText",
+            "text": "Manage customer records and open the create dialog when new data is needed.",
+            "renderMode": "Paragraph",
+            "content": [],
+            "itemContent": [],
+            "templateContent": []
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Add Customer",
+            "entityRef": "MyFirstModule.Customer",
+            "targetPageRef": "customer_newedit",
+            "content": [],
+            "itemContent": [],
+            "templateContent": []
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.Customer",
+            "rowClickTargetPageRef": "customer_newedit",
+            "autoRowClickToDetail": true,
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "firstName",
+                "autoLabel": true
+              }
+            ],
+            "content": [],
+            "templateContent": []
+          }
+        ],
+        "entityRef": "MyFirstModule.Customer"
+      },
+      {
+        "ref": "customer_newedit",
+        "name": "Customer_NewEdit",
+        "title": "Customer NewEdit",
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "Customer",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "firstName"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "lastName"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Email"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "AccountNumber"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "membershipTypeId"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "noShowCount"
+              },
+              {
+                "type": "associationInput",
+                "associationRef": "CustomerSubscription",
+                "targetEntityRef": "MyFirstModule.Subscription",
+                "label": "Subscription"
+              },
+              {
+                "type": "associationInput",
+                "associationRef": "CustomerLesson",
+                "targetEntityRef": "MyFirstModule.Lesson",
+                "label": "Lesson"
+              },
+              {
+                "type": "associationInput",
+                "associationRef": "CustomerNotificationPreference",
+                "targetEntityRef": "MyFirstModule.NotificationPreference",
+                "label": "Notification Preference"
+              },
+              {
+                "type": "associationInput",
+                "associationRef": "CustomerBankingDetails",
+                "targetEntityRef": "MyFirstModule.BankingDetails",
+                "label": "Banking Details"
+              },
+              {
+                "type": "associationInput",
+                "associationRef": "CustomerPersonalInformation",
+                "targetEntityRef": "MyFirstModule.PersonalInformation",
+                "label": "Personal Information"
+              },
+              {
+                "type": "associationInput",
+                "associationRef": "CustomerFamilyMembership",
+                "targetEntityRef": "MyFirstModule.FamilyMembership",
+                "label": "Family Membership"
+              },
+              {
+                "type": "associationInput",
+                "associationRef": "CustomerCheckInHistory",
+                "targetEntityRef": "MyFirstModule.CheckInHistory",
+                "label": "Check In History"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ],
+        "entityRef": "MyFirstModule.Customer",
+        "pageParameters": [
+          {
+            "name": "Customer",
+            "entityRef": "MyFirstModule.Customer",
+            "required": true
+          }
+        ],
+        "layoutQualifiedName": "Atlas_Core.PopupLayout"
+      },
+      {
+        "ref": "room_overview",
+        "name": "Room_Overview",
+        "title": "Room Overview",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "Room Overview",
+            "renderMode": "H2",
+            "content": [],
+            "itemContent": [],
+            "templateContent": []
+          },
+          {
+            "type": "dynamicText",
+            "text": "Manage room records and open the create dialog when new data is needed.",
+            "renderMode": "Paragraph",
+            "content": [],
+            "itemContent": [],
+            "templateContent": []
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Add Room",
+            "entityRef": "MyFirstModule.Room",
+            "targetPageRef": "room_newedit",
+            "content": [],
+            "itemContent": [],
+            "templateContent": []
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.Room",
+            "rowClickTargetPageRef": "room_newedit",
+            "autoRowClickToDetail": true,
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Capacity",
+                "autoLabel": true
+              }
+            ],
+            "content": [],
+            "templateContent": []
+          }
+        ],
+        "entityRef": "MyFirstModule.Room"
+      },
+      {
+        "ref": "room_newedit",
+        "name": "Room_NewEdit",
+        "title": "Room NewEdit",
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "Room",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Capacity"
+              },
+              {
+                "type": "associationInput",
+                "associationRef": "LessonRoom",
+                "targetEntityRef": "MyFirstModule.Lesson",
+                "label": "Lesson"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ],
+        "entityRef": "MyFirstModule.Room",
+        "pageParameters": [
+          {
+            "name": "Room",
+            "entityRef": "MyFirstModule.Room",
+            "required": true
+          }
+        ],
+        "layoutQualifiedName": "Atlas_Core.PopupLayout"
+      },
+      {
+        "ref": "newcustomer_overview",
+        "name": "NewCustomer_Overview",
+        "title": "NewCustomer Overview",
+        "entityRef": "MyFirstModule.NewCustomer",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "NewCustomer Overview",
+            "renderMode": "H2",
+            "content": [],
+            "itemContent": [],
+            "templateContent": []
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Create NewCustomer",
+            "entityRef": "MyFirstModule.NewCustomer",
+            "targetPageRef": "newcustomer_newedit",
+            "content": [],
+            "itemContent": [],
+            "templateContent": []
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.NewCustomer",
+            "autoRowClickToDetail": true,
+            "rowClickTargetPageRef": "newcustomer_newedit",
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name",
+                "autoLabel": true,
+                "content": [],
+                "itemContent": [],
+                "templateContent": []
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Email",
+                "autoLabel": false,
+                "content": [],
+                "itemContent": [],
+                "templateContent": []
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "IsActive",
+                "autoLabel": false,
+                "content": [],
+                "itemContent": [],
+                "templateContent": []
+              }
+            ],
+            "content": [],
+            "templateContent": []
+          }
+        ]
+      },
+      {
+        "ref": "newcustomer_newedit",
+        "name": "NewCustomer_NewEdit",
+        "title": "NewCustomer NewEdit",
+        "entityRef": "MyFirstModule.NewCustomer",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          {
+            "name": "NewCustomer",
+            "entityRef": "MyFirstModule.NewCustomer",
+            "required": true
+          }
+        ],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "NewCustomer",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name",
+                "content": [],
+                "itemContent": [],
+                "templateContent": []
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Email",
+                "content": [],
+                "itemContent": [],
+                "templateContent": []
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "IsActive",
+                "content": [],
+                "itemContent": [],
+                "templateContent": []
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true,
+                "content": [],
+                "itemContent": [],
+                "templateContent": []
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true,
+                "content": [],
+                "itemContent": [],
+                "templateContent": []
+              }
+            ],
+            "itemContent": [],
+            "templateContent": []
+          }
+        ]
+      },
+      {
+        "ref": "returningcustomer_overview",
+        "name": "ReturningCustomer_Overview",
+        "title": "ReturningCustomer Overview",
+        "entityRef": "MyFirstModule.ReturningCustomer",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "ReturningCustomer Overview",
+            "renderMode": "H2",
+            "content": [],
+            "itemContent": [],
+            "templateContent": []
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Create ReturningCustomer",
+            "entityRef": "MyFirstModule.ReturningCustomer",
+            "targetPageRef": "returningcustomer_newedit",
+            "content": [],
+            "itemContent": [],
+            "templateContent": []
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.ReturningCustomer",
+            "autoRowClickToDetail": true,
+            "rowClickTargetPageRef": "returningcustomer_newedit",
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name",
+                "autoLabel": true,
+                "content": [],
+                "itemContent": [],
+                "templateContent": []
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Email",
+                "autoLabel": false,
+                "content": [],
+                "itemContent": [],
+                "templateContent": []
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "IsActive",
+                "autoLabel": false,
+                "content": [],
+                "itemContent": [],
+                "templateContent": []
+              }
+            ],
+            "content": [],
+            "templateContent": []
+          }
+        ]
+      },
+      {
+        "ref": "returningcustomer_newedit",
+        "name": "ReturningCustomer_NewEdit",
+        "title": "ReturningCustomer NewEdit",
+        "entityRef": "MyFirstModule.ReturningCustomer",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          {
+            "name": "ReturningCustomer",
+            "entityRef": "MyFirstModule.ReturningCustomer",
+            "required": true
+          }
+        ],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "ReturningCustomer",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name",
+                "content": [],
+                "itemContent": [],
+                "templateContent": []
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Email",
+                "content": [],
+                "itemContent": [],
+                "templateContent": []
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "IsActive",
+                "content": [],
+                "itemContent": [],
+                "templateContent": []
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true,
+                "content": [],
+                "itemContent": [],
+                "templateContent": []
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true,
+                "content": [],
+                "itemContent": [],
+                "templateContent": []
+              }
+            ],
+            "itemContent": [],
+            "templateContent": []
+          }
+        ]
+      },
+      {
+        "ref": "trainer_overview",
+        "name": "Trainer_Overview",
+        "title": "Trainer Overview",
+        "entityRef": "MyFirstModule.Trainer",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "Trainer Overview",
+            "renderMode": "H2",
+            "content": [],
+            "itemContent": [],
+            "templateContent": []
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Create Trainer",
+            "entityRef": "MyFirstModule.Trainer",
+            "targetPageRef": "trainer_newedit",
+            "content": [],
+            "itemContent": [],
+            "templateContent": []
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.Trainer",
+            "autoRowClickToDetail": true,
+            "rowClickTargetPageRef": "trainer_newedit",
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "firstName",
+                "autoLabel": true
+              }
+            ],
+            "content": [],
+            "templateContent": []
+          }
+        ]
+      },
+      {
+        "ref": "trainer_newedit",
+        "name": "Trainer_NewEdit",
+        "title": "Trainer NewEdit",
+        "entityRef": "MyFirstModule.Trainer",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          {
+            "name": "Trainer",
+            "entityRef": "MyFirstModule.Trainer",
+            "required": true
+          }
+        ],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "Trainer",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "firstName"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "lastName"
+              },
+              {
+                "type": "associationInput",
+                "associationRef": "TrainerLesson",
+                "targetEntityRef": "MyFirstModule.Lesson",
+                "label": "Lesson"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "appuser_overview",
+        "name": "AppUser_Overview",
+        "title": "AppUser Overview",
+        "entityRef": "MyFirstModule.AppUser",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "AppUser Overview",
+            "renderMode": "H2",
+            "content": [],
+            "itemContent": [],
+            "templateContent": []
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Create AppUser",
+            "entityRef": "MyFirstModule.AppUser",
+            "targetPageRef": "appuser_newedit",
+            "content": [],
+            "itemContent": [],
+            "templateContent": []
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.AppUser",
+            "autoRowClickToDetail": true,
+            "rowClickTargetPageRef": "appuser_newedit",
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name",
+                "autoLabel": true,
+                "content": [],
+                "itemContent": [],
+                "templateContent": []
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Email",
+                "autoLabel": false,
+                "content": [],
+                "itemContent": [],
+                "templateContent": []
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "IsActive",
+                "autoLabel": false,
+                "content": [],
+                "itemContent": [],
+                "templateContent": []
+              }
+            ],
+            "content": [],
+            "templateContent": []
+          }
+        ]
+      },
+      {
+        "ref": "appuser_newedit",
+        "name": "AppUser_NewEdit",
+        "title": "AppUser NewEdit",
+        "entityRef": "MyFirstModule.AppUser",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          {
+            "name": "AppUser",
+            "entityRef": "MyFirstModule.AppUser",
+            "required": true
+          }
+        ],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "AppUser",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name",
+                "content": [],
+                "itemContent": [],
+                "templateContent": []
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Email",
+                "content": [],
+                "itemContent": [],
+                "templateContent": []
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "IsActive",
+                "content": [],
+                "itemContent": [],
+                "templateContent": []
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true,
+                "content": [],
+                "itemContent": [],
+                "templateContent": []
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true,
+                "content": [],
+                "itemContent": [],
+                "templateContent": []
+              }
+            ],
+            "itemContent": [],
+            "templateContent": []
+          }
+        ]
+      },
+      {
+        "ref": "customeroverview",
+        "name": "customerOverview",
+        "title": "customer Overview",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "customer Overview",
+            "renderMode": "H2",
+            "content": [],
+            "itemContent": [],
+            "templateContent": []
+          }
+        ],
+        "entityRef": "MyFirstModule.Customer"
+      },
+      {
+        "ref": "customerdetail",
+        "name": "customerDetail",
+        "title": "customer Detail",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "customer Detail",
+            "renderMode": "H2",
+            "content": [],
+            "itemContent": [],
+            "templateContent": []
+          }
+        ],
+        "entityRef": "MyFirstModule.Customer"
+      },
+      {
+        "ref": "customernewedit",
+        "name": "customerNewEdit",
+        "title": "customer New Edit",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "customer New Edit",
+            "renderMode": "H2",
+            "content": [],
+            "itemContent": [],
+            "templateContent": []
+          }
+        ],
+        "entityRef": "MyFirstModule.Customer"
+      },
+      {
+        "ref": "membershiptypeoverview",
+        "name": "membershipTypeOverview",
+        "title": "membership Type Overview",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "membership Type Overview",
+            "renderMode": "H2",
+            "content": [],
+            "itemContent": [],
+            "templateContent": []
+          }
+        ],
+        "entityRef": "MyFirstModule.MembershipType"
+      },
+      {
+        "ref": "membershiptypedetail",
+        "name": "membershipTypeDetail",
+        "title": "membership Type Detail",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "membership Type Detail",
+            "renderMode": "H2",
+            "content": [],
+            "itemContent": [],
+            "templateContent": []
+          }
+        ],
+        "entityRef": "MyFirstModule.MembershipType"
+      },
+      {
+        "ref": "subscriptionoverview",
+        "name": "subscriptionOverview",
+        "title": "subscription Overview",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "subscription Overview",
+            "renderMode": "H2",
+            "content": [],
+            "itemContent": [],
+            "templateContent": []
+          }
+        ],
+        "entityRef": "MyFirstModule.Subscription"
+      },
+      {
+        "ref": "subscriptiondetail",
+        "name": "subscriptionDetail",
+        "title": "subscription Detail",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "subscription Detail",
+            "renderMode": "H2",
+            "content": [],
+            "itemContent": [],
+            "templateContent": []
+          }
+        ],
+        "entityRef": "MyFirstModule.Subscription"
+      },
+      {
+        "ref": "lessonoverview",
+        "name": "lessonOverview",
+        "title": "lesson Overview",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "lesson Overview",
+            "renderMode": "H2",
+            "content": [],
+            "itemContent": [],
+            "templateContent": []
+          }
+        ],
+        "entityRef": "MyFirstModule.Lesson"
+      },
+      {
+        "ref": "lessondetail",
+        "name": "lessonDetail",
+        "title": "lesson Detail",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "lesson Detail",
+            "renderMode": "H2",
+            "content": [],
+            "itemContent": [],
+            "templateContent": []
+          }
+        ],
+        "entityRef": "MyFirstModule.Lesson"
+      },
+      {
+        "ref": "membershiptype_overview",
+        "name": "MembershipType_Overview",
+        "title": "MembershipType Overview",
+        "entityRef": "MyFirstModule.MembershipType",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "MembershipType Overview",
+            "renderMode": "H2"
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Create MembershipType",
+            "entityRef": "MyFirstModule.MembershipType",
+            "targetPageRef": "membershiptype_newedit"
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.MembershipType",
+            "autoRowClickToDetail": true,
+            "rowClickTargetPageRef": "membershiptype_newedit",
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name",
+                "autoLabel": true
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Description",
+                "autoLabel": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "membershiptype_newedit",
+        "name": "MembershipType_NewEdit",
+        "title": "MembershipType NewEdit",
+        "entityRef": "MyFirstModule.MembershipType",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          {
+            "name": "MembershipType",
+            "entityRef": "MyFirstModule.MembershipType",
+            "required": true
+          }
+        ],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "MembershipType",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Description"
+              },
+              {
+                "type": "associationInput",
+                "associationRef": "MembershipTypeSubscription",
+                "targetEntityRef": "MyFirstModule.Subscription",
+                "label": "Subscription"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "subscription_overview",
+        "name": "Subscription_Overview",
+        "title": "Subscription Overview",
+        "entityRef": "MyFirstModule.Subscription",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "Subscription Overview",
+            "renderMode": "H2"
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Create Subscription",
+            "entityRef": "MyFirstModule.Subscription",
+            "targetPageRef": "subscription_newedit"
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.Subscription",
+            "autoRowClickToDetail": true,
+            "rowClickTargetPageRef": "subscription_newedit",
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "startDate",
+                "autoLabel": true
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "endDate",
+                "autoLabel": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "subscription_newedit",
+        "name": "Subscription_NewEdit",
+        "title": "Subscription NewEdit",
+        "entityRef": "MyFirstModule.Subscription",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          {
+            "name": "Subscription",
+            "entityRef": "MyFirstModule.Subscription",
+            "required": true
+          }
+        ],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "Subscription",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "startDate"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "endDate"
+              },
+              {
+                "type": "associationInput",
+                "associationRef": "CustomerSubscription",
+                "targetEntityRef": "MyFirstModule.Customer",
+                "label": "Customer"
+              },
+              {
+                "type": "associationInput",
+                "associationRef": "MembershipTypeSubscription",
+                "targetEntityRef": "MyFirstModule.MembershipType",
+                "label": "Membership Type"
+              },
+              {
+                "type": "associationInput",
+                "associationRef": "SubscriptionSubscriptionStatus",
+                "targetEntityRef": "MyFirstModule.SubscriptionStatus",
+                "label": "Subscription Status"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "notificationpreference_overview",
+        "name": "NotificationPreference_Overview",
+        "title": "NotificationPreference Overview",
+        "entityRef": "MyFirstModule.NotificationPreference",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "NotificationPreference Overview",
+            "renderMode": "H2"
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Create NotificationPreference",
+            "entityRef": "MyFirstModule.NotificationPreference",
+            "targetPageRef": "notificationpreference_newedit"
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.NotificationPreference",
+            "autoRowClickToDetail": true,
+            "rowClickTargetPageRef": "notificationpreference_newedit",
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "notificationMethod",
+                "autoLabel": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "notificationpreference_newedit",
+        "name": "NotificationPreference_NewEdit",
+        "title": "NotificationPreference NewEdit",
+        "entityRef": "MyFirstModule.NotificationPreference",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          {
+            "name": "NotificationPreference",
+            "entityRef": "MyFirstModule.NotificationPreference",
+            "required": true
+          }
+        ],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "NotificationPreference",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "notificationMethod"
+              },
+              {
+                "type": "associationInput",
+                "associationRef": "CustomerNotificationPreference",
+                "targetEntityRef": "MyFirstModule.Customer",
+                "label": "Customer"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "personalinformation_overview",
+        "name": "PersonalInformation_Overview",
+        "title": "PersonalInformation Overview",
+        "entityRef": "MyFirstModule.PersonalInformation",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "PersonalInformation Overview",
+            "renderMode": "H2"
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Create PersonalInformation",
+            "entityRef": "MyFirstModule.PersonalInformation",
+            "targetPageRef": "personalinformation_newedit"
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.PersonalInformation",
+            "autoRowClickToDetail": true,
+            "rowClickTargetPageRef": "personalinformation_newedit",
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Address",
+                "autoLabel": true
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "PhoneNumber",
+                "autoLabel": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "personalinformation_newedit",
+        "name": "PersonalInformation_NewEdit",
+        "title": "PersonalInformation NewEdit",
+        "entityRef": "MyFirstModule.PersonalInformation",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          {
+            "name": "PersonalInformation",
+            "entityRef": "MyFirstModule.PersonalInformation",
+            "required": true
+          }
+        ],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "PersonalInformation",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Address"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "PhoneNumber"
+              },
+              {
+                "type": "associationInput",
+                "associationRef": "CustomerPersonalInformation",
+                "targetEntityRef": "MyFirstModule.Customer",
+                "label": "Customer"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "bankingdetails_overview",
+        "name": "BankingDetails_Overview",
+        "title": "BankingDetails Overview",
+        "entityRef": "MyFirstModule.BankingDetails",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "BankingDetails Overview",
+            "renderMode": "H2"
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Create BankingDetails",
+            "entityRef": "MyFirstModule.BankingDetails",
+            "targetPageRef": "bankingdetails_newedit"
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.BankingDetails",
+            "autoRowClickToDetail": true,
+            "rowClickTargetPageRef": "bankingdetails_newedit",
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "AccountNumber",
+                "autoLabel": true
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "RoutingNumber",
+                "autoLabel": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "bankingdetails_newedit",
+        "name": "BankingDetails_NewEdit",
+        "title": "BankingDetails NewEdit",
+        "entityRef": "MyFirstModule.BankingDetails",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          {
+            "name": "BankingDetails",
+            "entityRef": "MyFirstModule.BankingDetails",
+            "required": true
+          }
+        ],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "BankingDetails",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "AccountNumber"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "RoutingNumber"
+              },
+              {
+                "type": "associationInput",
+                "associationRef": "CustomerBankingDetails",
+                "targetEntityRef": "MyFirstModule.Customer",
+                "label": "Customer"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "familymembership_overview",
+        "name": "FamilyMembership_Overview",
+        "title": "FamilyMembership Overview",
+        "entityRef": "MyFirstModule.FamilyMembership",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "FamilyMembership Overview",
+            "renderMode": "H2"
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Create FamilyMembership",
+            "entityRef": "MyFirstModule.FamilyMembership",
+            "targetPageRef": "familymembership_newedit"
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.FamilyMembership",
+            "autoRowClickToDetail": true,
+            "rowClickTargetPageRef": "familymembership_newedit",
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Members",
+                "autoLabel": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "familymembership_newedit",
+        "name": "FamilyMembership_NewEdit",
+        "title": "FamilyMembership NewEdit",
+        "entityRef": "MyFirstModule.FamilyMembership",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          {
+            "name": "FamilyMembership",
+            "entityRef": "MyFirstModule.FamilyMembership",
+            "required": true
+          }
+        ],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "FamilyMembership",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Members"
+              },
+              {
+                "type": "associationInput",
+                "associationRef": "CustomerFamilyMembership",
+                "targetEntityRef": "MyFirstModule.Customer",
+                "label": "Customer"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "familymembershipmember_overview",
+        "name": "FamilyMembershipMember_Overview",
+        "title": "FamilyMembershipMember Overview",
+        "entityRef": "MyFirstModule.FamilyMembershipMember",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "FamilyMembershipMember Overview",
+            "renderMode": "H2"
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Create FamilyMembershipMember",
+            "entityRef": "MyFirstModule.FamilyMembershipMember",
+            "targetPageRef": "familymembershipmember_newedit"
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.FamilyMembershipMember",
+            "autoRowClickToDetail": true,
+            "rowClickTargetPageRef": "familymembershipmember_newedit",
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name",
+                "autoLabel": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "familymembershipmember_newedit",
+        "name": "FamilyMembershipMember_NewEdit",
+        "title": "FamilyMembershipMember NewEdit",
+        "entityRef": "MyFirstModule.FamilyMembershipMember",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          {
+            "name": "FamilyMembershipMember",
+            "entityRef": "MyFirstModule.FamilyMembershipMember",
+            "required": true
+          }
+        ],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "FamilyMembershipMember",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "bookingstatus_overview",
+        "name": "BookingStatus_Overview",
+        "title": "BookingStatus Overview",
+        "entityRef": "MyFirstModule.BookingStatus",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "BookingStatus Overview",
+            "renderMode": "H2"
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Create BookingStatus",
+            "entityRef": "MyFirstModule.BookingStatus",
+            "targetPageRef": "bookingstatus_newedit"
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.BookingStatus",
+            "autoRowClickToDetail": true,
+            "rowClickTargetPageRef": "bookingstatus_newedit",
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name",
+                "autoLabel": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "bookingstatus_newedit",
+        "name": "BookingStatus_NewEdit",
+        "title": "BookingStatus NewEdit",
+        "entityRef": "MyFirstModule.BookingStatus",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          {
+            "name": "BookingStatus",
+            "entityRef": "MyFirstModule.BookingStatus",
+            "required": true
+          }
+        ],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "BookingStatus",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name"
+              },
+              {
+                "type": "associationInput",
+                "associationRef": "LessonBookingStatus",
+                "targetEntityRef": "MyFirstModule.Lesson",
+                "label": "Lesson"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "cancellation_overview",
+        "name": "Cancellation_Overview",
+        "title": "Cancellation Overview",
+        "entityRef": "MyFirstModule.Cancellation",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "Cancellation Overview",
+            "renderMode": "H2"
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Create Cancellation",
+            "entityRef": "MyFirstModule.Cancellation",
+            "targetPageRef": "cancellation_newedit"
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.Cancellation",
+            "autoRowClickToDetail": true,
+            "rowClickTargetPageRef": "cancellation_newedit",
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name",
+                "autoLabel": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "cancellation_newedit",
+        "name": "Cancellation_NewEdit",
+        "title": "Cancellation NewEdit",
+        "entityRef": "MyFirstModule.Cancellation",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          {
+            "name": "Cancellation",
+            "entityRef": "MyFirstModule.Cancellation",
+            "required": true
+          }
+        ],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "Cancellation",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "noshow_overview",
+        "name": "NoShow_Overview",
+        "title": "NoShow Overview",
+        "entityRef": "MyFirstModule.NoShow",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "NoShow Overview",
+            "renderMode": "H2"
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Create NoShow",
+            "entityRef": "MyFirstModule.NoShow",
+            "targetPageRef": "noshow_newedit"
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.NoShow",
+            "autoRowClickToDetail": true,
+            "rowClickTargetPageRef": "noshow_newedit",
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name",
+                "autoLabel": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "noshow_newedit",
+        "name": "NoShow_NewEdit",
+        "title": "NoShow NewEdit",
+        "entityRef": "MyFirstModule.NoShow",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          {
+            "name": "NoShow",
+            "entityRef": "MyFirstModule.NoShow",
+            "required": true
+          }
+        ],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "NoShow",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "finehistory_overview",
+        "name": "FineHistory_Overview",
+        "title": "FineHistory Overview",
+        "entityRef": "MyFirstModule.FineHistory",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "FineHistory Overview",
+            "renderMode": "H2"
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Create FineHistory",
+            "entityRef": "MyFirstModule.FineHistory",
+            "targetPageRef": "finehistory_newedit"
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.FineHistory",
+            "autoRowClickToDetail": true,
+            "rowClickTargetPageRef": "finehistory_newedit",
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name",
+                "autoLabel": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "finehistory_newedit",
+        "name": "FineHistory_NewEdit",
+        "title": "FineHistory NewEdit",
+        "entityRef": "MyFirstModule.FineHistory",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          {
+            "name": "FineHistory",
+            "entityRef": "MyFirstModule.FineHistory",
+            "required": true
+          }
+        ],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "FineHistory",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "notification_overview",
+        "name": "Notification_Overview",
+        "title": "Notification Overview",
+        "entityRef": "MyFirstModule.Notification",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "Notification Overview",
+            "renderMode": "H2"
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Create Notification",
+            "entityRef": "MyFirstModule.Notification",
+            "targetPageRef": "notification_newedit"
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.Notification",
+            "autoRowClickToDetail": true,
+            "rowClickTargetPageRef": "notification_newedit",
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name",
+                "autoLabel": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "notification_newedit",
+        "name": "Notification_NewEdit",
+        "title": "Notification NewEdit",
+        "entityRef": "MyFirstModule.Notification",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          {
+            "name": "Notification",
+            "entityRef": "MyFirstModule.Notification",
+            "required": true
+          }
+        ],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "Notification",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "checkinhistory_overview",
+        "name": "CheckInHistory_Overview",
+        "title": "CheckInHistory Overview",
+        "entityRef": "MyFirstModule.CheckInHistory",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "CheckInHistory Overview",
+            "renderMode": "H2"
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Create CheckInHistory",
+            "entityRef": "MyFirstModule.CheckInHistory",
+            "targetPageRef": "checkinhistory_newedit"
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.CheckInHistory",
+            "autoRowClickToDetail": true,
+            "rowClickTargetPageRef": "checkinhistory_newedit",
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "checkInDate",
+                "autoLabel": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "checkinhistory_newedit",
+        "name": "CheckInHistory_NewEdit",
+        "title": "CheckInHistory NewEdit",
+        "entityRef": "MyFirstModule.CheckInHistory",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          {
+            "name": "CheckInHistory",
+            "entityRef": "MyFirstModule.CheckInHistory",
+            "required": true
+          }
+        ],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "CheckInHistory",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "checkInDate"
+              },
+              {
+                "type": "associationInput",
+                "associationRef": "CustomerCheckInHistory",
+                "targetEntityRef": "MyFirstModule.Customer",
+                "label": "Customer"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "subscriptionstatus_overview",
+        "name": "SubscriptionStatus_Overview",
+        "title": "SubscriptionStatus Overview",
+        "entityRef": "MyFirstModule.SubscriptionStatus",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "SubscriptionStatus Overview",
+            "renderMode": "H2"
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Create SubscriptionStatus",
+            "entityRef": "MyFirstModule.SubscriptionStatus",
+            "targetPageRef": "subscriptionstatus_newedit"
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.SubscriptionStatus",
+            "autoRowClickToDetail": true,
+            "rowClickTargetPageRef": "subscriptionstatus_newedit",
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Status",
+                "autoLabel": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "subscriptionstatus_newedit",
+        "name": "SubscriptionStatus_NewEdit",
+        "title": "SubscriptionStatus NewEdit",
+        "entityRef": "MyFirstModule.SubscriptionStatus",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          {
+            "name": "SubscriptionStatus",
+            "entityRef": "MyFirstModule.SubscriptionStatus",
+            "required": true
+          }
+        ],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "SubscriptionStatus",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Status"
+              },
+              {
+                "type": "associationInput",
+                "associationRef": "SubscriptionSubscriptionStatus",
+                "targetEntityRef": "MyFirstModule.Subscription",
+                "label": "Subscription"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "admin_overview",
+        "name": "Admin_Overview",
+        "title": "Admin Overview",
+        "entityRef": "MyFirstModule.Admin",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "Admin Overview",
+            "renderMode": "H2"
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Create Admin",
+            "entityRef": "MyFirstModule.Admin",
+            "targetPageRef": "admin_newedit"
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.Admin",
+            "autoRowClickToDetail": true,
+            "rowClickTargetPageRef": "admin_newedit",
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name",
+                "autoLabel": true
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Email",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "IsActive",
+                "autoLabel": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "admin_newedit",
+        "name": "Admin_NewEdit",
+        "title": "Admin NewEdit",
+        "entityRef": "MyFirstModule.Admin",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          {
+            "name": "Admin",
+            "entityRef": "MyFirstModule.Admin",
+            "required": true
+          }
+        ],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "Admin",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Email"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "IsActive"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "appadministrator_overview",
+        "name": "AppAdministrator_Overview",
+        "title": "AppAdministrator Overview",
+        "entityRef": "MyFirstModule.AppAdministrator",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "AppAdministrator Overview",
+            "renderMode": "H2"
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Create AppAdministrator",
+            "entityRef": "MyFirstModule.AppAdministrator",
+            "targetPageRef": "appadministrator_newedit"
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.AppAdministrator",
+            "autoRowClickToDetail": true,
+            "rowClickTargetPageRef": "appadministrator_newedit",
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name",
+                "autoLabel": true
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Email",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "IsActive",
+                "autoLabel": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "appadministrator_newedit",
+        "name": "AppAdministrator_NewEdit",
+        "title": "AppAdministrator NewEdit",
+        "entityRef": "MyFirstModule.AppAdministrator",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          {
+            "name": "AppAdministrator",
+            "entityRef": "MyFirstModule.AppAdministrator",
+            "required": true
+          }
+        ],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "AppAdministrator",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Email"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "IsActive"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "verification": {
+    "failOnMissing": true
+  },
+  "microflows": {
+    "specs": [
+      {
+        "name": "CreateSubscription",
+        "parameters": [
+          {
+            "name": "customer",
+            "type": {
+              "kind": "Object",
+              "entityRef": "MyFirstModule.Customer"
+            }
+          },
+          {
+            "name": "membershipType",
+            "type": {
+              "kind": "Object",
+              "entityRef": "MyFirstModule.MembershipType"
+            }
+          }
+        ],
+        "actions": [
+          {
+            "type": "createObject",
+            "entity": "Subscription",
+            "outputVariableName": "Subscription_New"
+          },
+          {
+            "type": "commitObject",
+            "variableName": "Subscription_New"
+          }
+        ]
+      },
+      {
+        "name": "UpdateNoShowCount",
+        "parameters": [
+          {
+            "name": "customer",
+            "type": {
+              "kind": "Object",
+              "entityRef": "MyFirstModule.Customer"
+            }
+          }
+        ],
+        "actions": [
+          {
+            "type": "retrieveObject",
+            "entity": "Customer",
+            "variable": "customerObject",
+            "outputVariableName": "Customer_Object"
+          }
+        ]
+      },
+      {
+        "name": "SendNotification",
+        "parameters": [
+          {
+            "name": "customer",
+            "type": {
+              "kind": "Object",
+              "entityRef": "MyFirstModule.Customer"
+            }
+          },
+          {
+            "name": "message",
+            "type": "String"
+          }
+        ],
+        "actions": [
+          {
+            "type": "retrieveObject",
+            "entity": "NotificationPreference",
+            "variable": "notificationPreference",
+            "outputVariableName": "NotificationPreference_Object"
+          },
+          {
+            "type": "decision",
+            "trueActions": [
+              {
+                "type": "showMessage",
+                "message": "$message"
+              }
+            ],
+            "falseActions": [],
+            "conditionExpression": "= $NotificationPreference_Object/notificationMethod = 'email'"
+          }
+        ]
+      }
+    ]
+  },
+  "nanoflows": {
+    "specs": [
+      {
+        "name": "CheckSubscriptionStatus",
+        "parameters": [
+          {
+            "name": "customer",
+            "type": {
+              "kind": "Object",
+              "entityRef": "MyFirstModule.Customer"
+            }
+          }
+        ],
+        "actions": [
+          {
+            "type": "retrieveObject",
+            "entity": "Subscription",
+            "variable": "subscription",
+            "outputVariableName": "Subscription_Object"
+          },
+          {
+            "type": "decision",
+            "trueActions": [
+              {
+                "type": "showMessage",
+                "message": "Your subscription has expired."
+              }
+            ],
+            "falseActions": [],
+            "conditionExpression": "= $Subscription_Object/endDate < now()"
+          }
+        ]
+      }
+    ]
+  },
+  "workflows": {
+    "specs": []
+  }
+}

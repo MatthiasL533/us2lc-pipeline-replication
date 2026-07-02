@@ -1,0 +1,1129 @@
+{
+  "generatedAt": "2026-05-31T20:43:34.976Z",
+  "results": [
+    {
+      "dataset": "matching",
+      "run": "run-03",
+      "appName": "matching-run03-revised",
+      "ok": true,
+      "durationMs": 24036,
+      "result": {
+        "appId": "2a6633f6-a1cc-4abb-8677-9c4e758ba761",
+        "appCreated": true,
+        "seedAppId": null,
+        "branch": "main",
+        "committed": true,
+        "commitRequested": true,
+        "workingCopyId": "3e7c08d7-77a9-4ed8-ba73-df7df30d05b6",
+        "personas": {
+          "enabled": false,
+          "generatedPageNames": [],
+          "personaNames": []
+        },
+        "stages": [
+          {
+            "stage": "domainModel",
+            "ok": true,
+            "summary": "entitiesCreated=14, associationsCreated=0, enumerationsCreated=2",
+            "artifacts": [],
+            "warnings": [],
+            "errors": [],
+            "durationMs": 440
+          },
+          {
+            "stage": "flush.afterDomainModel",
+            "ok": true,
+            "summary": "flush.afterDomainModel completed",
+            "artifacts": [],
+            "warnings": [],
+            "errors": [],
+            "durationMs": 529
+          },
+          {
+            "stage": "security",
+            "ok": true,
+            "summary": "moduleRolesCreated=3, userRolesCreated=3, demoUsersCreated=0",
+            "artifacts": [
+              {
+                "key": "moduleRoleNames",
+                "count": 4
+              },
+              {
+                "key": "userRoleNames",
+                "count": 5
+              },
+              {
+                "key": "demoUserNames",
+                "count": 2
+              }
+            ],
+            "warnings": [],
+            "errors": [],
+            "durationMs": 209
+          },
+          {
+            "stage": "flush.afterSecurity",
+            "ok": true,
+            "summary": "flush.afterSecurity completed",
+            "artifacts": [],
+            "warnings": [],
+            "errors": [],
+            "durationMs": 464
+          },
+          {
+            "stage": "pageCapabilities",
+            "ok": true,
+            "summary": "pageCapabilities completed",
+            "artifacts": [],
+            "warnings": [],
+            "errors": [],
+            "durationMs": 1
+          },
+          {
+            "stage": "webClientCompatibility",
+            "ok": true,
+            "summary": "webClientCompatibility completed",
+            "artifacts": [],
+            "warnings": [],
+            "errors": [],
+            "durationMs": 2
+          },
+          {
+            "stage": "pages",
+            "ok": true,
+            "summary": "pages completed",
+            "artifacts": [
+              {
+                "key": "pageNames",
+                "count": 30
+              }
+            ],
+            "warnings": [],
+            "errors": [],
+            "durationMs": 439
+          },
+          {
+            "stage": "navigationUI",
+            "ok": true,
+            "summary": "navigationUI completed",
+            "artifacts": [],
+            "warnings": [],
+            "errors": [],
+            "durationMs": 39
+          },
+          {
+            "stage": "homePage",
+            "ok": true,
+            "summary": "updatedProfiles=1",
+            "artifacts": [],
+            "warnings": [],
+            "errors": [],
+            "durationMs": 3
+          },
+          {
+            "stage": "flush.final",
+            "ok": true,
+            "summary": "flush.final completed",
+            "artifacts": [],
+            "warnings": [],
+            "errors": [],
+            "durationMs": 676
+          },
+          {
+            "stage": "verification",
+            "ok": true,
+            "summary": "ok=true",
+            "artifacts": [],
+            "warnings": [],
+            "errors": [],
+            "durationMs": 53
+          },
+          {
+            "stage": "capabilities",
+            "ok": true,
+            "summary": "capabilities completed",
+            "artifacts": [],
+            "warnings": [],
+            "errors": [],
+            "durationMs": 593
+          },
+          {
+            "stage": "commit",
+            "ok": true,
+            "summary": "commit completed",
+            "artifacts": [],
+            "warnings": [],
+            "errors": [],
+            "durationMs": 10370
+          }
+        ],
+        "createdApp": {
+          "appId": "2a6633f6-a1cc-4abb-8677-9c4e758ba761",
+          "name": "matching-run03-revised",
+          "repositoryType": "git"
+        },
+        "beforeCounts": {
+          "pagesInModule": 1,
+          "entitiesInModule": 0,
+          "microflowsInModule": 1,
+          "nanoflowsInModule": 0,
+          "workflowsInModule": 0
+        },
+        "domainModel": {
+          "moduleName": "MyFirstModule",
+          "entitiesCreated": 14,
+          "associationsCreated": 0,
+          "enumerationsCreated": 2
+        },
+        "security": {
+          "moduleName": "MyFirstModule",
+          "securityLevel": "CheckFormsAndMicroflows",
+          "moduleRolesCreated": 3,
+          "userRolesCreated": 3,
+          "demoUsersRequested": 0,
+          "demoUsersCreated": 0,
+          "demoUsersApplied": 0,
+          "demoUserHandling": "notRequested",
+          "skippedDemoUsers": [],
+          "moduleRoleNames": [
+            "Manager",
+            "Student",
+            "Tutor",
+            "User"
+          ],
+          "userRoleNames": [
+            "Administrator",
+            "Manager",
+            "Student",
+            "Tutor",
+            "User"
+          ],
+          "demoUserNames": [
+            "demo_administrator",
+            "demo_user"
+          ]
+        },
+        "pageCapabilities": null,
+        "webClientCompatibility": {
+          "lookupRequested": false,
+          "classicGridRequested": false,
+          "updated": false,
+          "useOptimizedClient": null
+        },
+        "pages": {
+          "moduleName": "MyFirstModule",
+          "layoutQualifiedName": "Atlas_Core.Atlas_Default",
+          "layoutParameterQname": "Atlas_Core.Atlas_Default.Main",
+          "pageNames": [
+            "Home",
+            "Session_Dashboard",
+            "Session_Overview",
+            "Session_NewEdit",
+            "Matched_Overview",
+            "Matched_NewEdit",
+            "Subject_Overview",
+            "Subject_NewEdit",
+            "Availability_Overview",
+            "Availability_NewEdit",
+            "Matching_Overview",
+            "Matching_NewEdit",
+            "Platform_Overview",
+            "Platform_NewEdit",
+            "Service_Overview",
+            "Service_NewEdit",
+            "Based_Overview",
+            "Based_NewEdit",
+            "User_Overview",
+            "User_NewEdit",
+            "TutorDocument_Overview",
+            "TutorDocument_NewEdit",
+            "Match_Overview",
+            "Match_NewEdit",
+            "Rating_Overview",
+            "Rating_NewEdit",
+            "PaymentTransaction_Overview",
+            "PaymentTransaction_NewEdit",
+            "ChatMessage_Overview",
+            "ChatMessage_NewEdit"
+          ],
+          "dg2Cleanup": {
+            "enabled": true,
+            "targetedPageNames": [],
+            "deletedPageNames": [],
+            "failed": []
+          },
+          "dataGrid2": {
+            "enabled": false,
+            "widgetId": "",
+            "resolvedFrom": "",
+            "useFallbackSchema": false,
+            "probeVariant": null,
+            "configuredWidgets": 0,
+            "attempts": []
+          }
+        },
+        "dg2Cleanup": {
+          "enabled": true,
+          "targetedPageNames": [],
+          "deletedPageNames": [],
+          "failed": []
+        },
+        "navigationUI": {
+          "requested": true,
+          "homeButtonsAdded": 0,
+          "navItemsAdded": 6
+        },
+        "homePage": {
+          "requested": true,
+          "updatedProfiles": 1,
+          "targetPageQualifiedName": "MyFirstModule.Home"
+        },
+        "afterCounts": {
+          "pagesInModule": 31,
+          "entitiesInModule": 14,
+          "microflowsInModule": 1,
+          "nanoflowsInModule": 0,
+          "workflowsInModule": 0
+        },
+        "beforeRefs": {
+          "pages": [
+            {
+              "name": "Home_Web",
+              "id": "5c6805fc-cadf-4d72-a5ef-f25da7cf4c97"
+            }
+          ],
+          "entities": [],
+          "microflows": [
+            {
+              "name": "MyFirstLogic",
+              "id": "4a8475b3-14cb-4100-8963-58f2fd3a0be8"
+            }
+          ],
+          "nanoflows": [],
+          "workflows": []
+        },
+        "afterRefs": {
+          "pages": [
+            {
+              "name": "Home_Web",
+              "id": "5c6805fc-cadf-4d72-a5ef-f25da7cf4c97"
+            },
+            {
+              "name": "Home",
+              "id": "cfb21953-5dd8-4675-bb65-565d1845eaf0"
+            },
+            {
+              "name": "Session_Dashboard",
+              "id": "980a6ff1-4b01-41e1-aaac-4a0fbdcefaf0"
+            },
+            {
+              "name": "Session_Overview",
+              "id": "1830992b-46d0-4671-9e8f-8804a5b3d8af"
+            },
+            {
+              "name": "Session_NewEdit",
+              "id": "dc5e5ef6-0cb7-4323-a17e-68d56a7432db"
+            },
+            {
+              "name": "Matched_Overview",
+              "id": "4e4b9747-60e1-4f99-83c2-a4051522d5c7"
+            },
+            {
+              "name": "Matched_NewEdit",
+              "id": "88a83a5b-8e51-47f4-b81f-d55e4c2fbe01"
+            },
+            {
+              "name": "Subject_Overview",
+              "id": "3ec9a568-b6f2-4b91-b7a7-207a23117296"
+            },
+            {
+              "name": "Subject_NewEdit",
+              "id": "d0945f50-78d1-42b5-99fa-cbf571236e21"
+            },
+            {
+              "name": "Availability_Overview",
+              "id": "351e051b-32de-442a-b7ad-9e863a403f87"
+            },
+            {
+              "name": "Availability_NewEdit",
+              "id": "0765cd85-25bb-48ac-831b-0cebb393d929"
+            },
+            {
+              "name": "Matching_Overview",
+              "id": "62867a12-56c7-4cc6-ba8c-ecf60deb4ddf"
+            },
+            {
+              "name": "Matching_NewEdit",
+              "id": "73522678-434a-408f-8018-d05721ebd88a"
+            },
+            {
+              "name": "Platform_Overview",
+              "id": "e6a96ffd-5328-4433-bc1b-a138570b4aec"
+            },
+            {
+              "name": "Platform_NewEdit",
+              "id": "156b779b-2215-4d4f-b89b-0e629b310bee"
+            },
+            {
+              "name": "Service_Overview",
+              "id": "f7e52b17-2607-4922-82df-5342bb2847b4"
+            },
+            {
+              "name": "Service_NewEdit",
+              "id": "ab9b1eb7-c6ee-4ad8-ab1b-a612dca58e10"
+            },
+            {
+              "name": "Based_Overview",
+              "id": "abbe7cb0-4457-4f8b-a6b5-f52a30435e2e"
+            },
+            {
+              "name": "Based_NewEdit",
+              "id": "fe004dd2-59f9-4122-864b-1fa3a759512e"
+            },
+            {
+              "name": "User_Overview",
+              "id": "1bc9da4b-b25a-4b90-8119-c104c6fac104"
+            },
+            {
+              "name": "User_NewEdit",
+              "id": "772ee81b-7976-4caf-bc68-f79ffa63a463"
+            },
+            {
+              "name": "TutorDocument_Overview",
+              "id": "68248f09-5ef0-4466-b106-9ce993eb43a9"
+            },
+            {
+              "name": "TutorDocument_NewEdit",
+              "id": "f29874b7-044d-4561-bd41-afc0c1a82789"
+            },
+            {
+              "name": "Match_Overview",
+              "id": "08de3301-82c0-4bd2-bff0-d92cf84c8e59"
+            },
+            {
+              "name": "Match_NewEdit",
+              "id": "2e7c04c9-452a-468b-9747-6444eb8feae9"
+            },
+            {
+              "name": "Rating_Overview",
+              "id": "4fcd64ef-9bc8-42b1-a33f-5171d33d6217"
+            },
+            {
+              "name": "Rating_NewEdit",
+              "id": "236a4967-a1d7-4b50-93ea-9955a9daa89e"
+            },
+            {
+              "name": "PaymentTransaction_Overview",
+              "id": "0ad86b49-3411-46b4-86ec-ac1345c755d9"
+            },
+            {
+              "name": "PaymentTransaction_NewEdit",
+              "id": "727bafca-8394-41ff-ae78-68997a64afec"
+            },
+            {
+              "name": "ChatMessage_Overview",
+              "id": "86448019-059e-4f7a-8500-37acc5bf920b"
+            },
+            {
+              "name": "ChatMessage_NewEdit",
+              "id": "adc89d62-2669-420c-9849-a35ad9fd4554"
+            }
+          ],
+          "entities": [
+            {
+              "name": "Session",
+              "id": "2e0aeb61-1faf-4dcc-8857-e506515975e5"
+            },
+            {
+              "name": "Matched",
+              "id": "ce425683-92d2-4001-ae5f-2d0a65568382"
+            },
+            {
+              "name": "Subject",
+              "id": "fcf014e6-ef58-4b28-81c6-dbcfbf00fc5f"
+            },
+            {
+              "name": "Availability",
+              "id": "7e291180-9df1-432c-a664-a3446e3c9182"
+            },
+            {
+              "name": "Matching",
+              "id": "88c29058-e79e-4d6e-9b2f-8fcf40c10de6"
+            },
+            {
+              "name": "Platform",
+              "id": "3b25ee83-acbd-4ab9-8e6e-4899d9348556"
+            },
+            {
+              "name": "Service",
+              "id": "0e35a29d-c892-4687-8e36-beb1b4fa1c8d"
+            },
+            {
+              "name": "Based",
+              "id": "259cb480-6da9-4514-9972-bff6fee39883"
+            },
+            {
+              "name": "User",
+              "id": "3e2f2d1b-3934-439c-89d3-db0b7dc2f6a5"
+            },
+            {
+              "name": "TutorDocument",
+              "id": "07a6b763-47ed-4a1b-b94e-872cb965d98d"
+            },
+            {
+              "name": "Match",
+              "id": "e15ba009-af4f-4b14-acc8-e9b1bda730f0"
+            },
+            {
+              "name": "Rating",
+              "id": "3fc9e4fc-1f2f-4063-ae49-9c156c9c869d"
+            },
+            {
+              "name": "PaymentTransaction",
+              "id": "45dd4bb6-2ead-4e77-9f6c-519f2590e39c"
+            },
+            {
+              "name": "ChatMessage",
+              "id": "fff97b4a-2646-4256-b14a-d5d4f02ded52"
+            }
+          ],
+          "microflows": [
+            {
+              "name": "MyFirstLogic",
+              "id": "4a8475b3-14cb-4100-8963-58f2fd3a0be8"
+            }
+          ],
+          "nanoflows": [],
+          "workflows": []
+        },
+        "verification": {
+          "missing": {
+            "pages": [],
+            "entities": [],
+            "microflows": [],
+            "nanoflows": [],
+            "workflows": []
+          },
+          "ok": true,
+          "artifacts": {
+            "ok": true,
+            "missing": {
+              "moduleRoles": [],
+              "userRoles": [],
+              "demoUsers": [],
+              "pageVisibility": [],
+              "homePageButtons": [],
+              "menuItems": [],
+              "widgets": []
+            }
+          },
+          "semantic": {
+            "enabled": false,
+            "ok": true,
+            "errors": []
+          }
+        },
+        "capabilities": {
+          "modules": [
+            "Administration",
+            "Atlas_Core",
+            "Atlas_Web_Content",
+            "DataWidgets",
+            "FeedbackModule",
+            "MyFirstModule",
+            "NanoflowCommons",
+            "WebActions"
+          ],
+          "widgetIds": [],
+          "widgetFamilies": [
+            "datawidgets_module"
+          ]
+        },
+        "commitMessage": "Revised evaluation app: matching run-03",
+        "ok": true
+      }
+    },
+    {
+      "dataset": "cinema",
+      "run": "run-02",
+      "appName": "cinema-run02-revised",
+      "ok": true,
+      "durationMs": 22004,
+      "result": {
+        "appId": "e2e49cc7-001e-4786-b84a-2626608f6be8",
+        "appCreated": true,
+        "seedAppId": null,
+        "branch": "main",
+        "committed": true,
+        "commitRequested": true,
+        "workingCopyId": "b8145a56-8758-4c0f-b9ff-5844459bf5be",
+        "personas": {
+          "enabled": false,
+          "generatedPageNames": [],
+          "personaNames": []
+        },
+        "stages": [
+          {
+            "stage": "domainModel",
+            "ok": true,
+            "summary": "entitiesCreated=16, associationsCreated=1, enumerationsCreated=0",
+            "artifacts": [],
+            "warnings": [],
+            "errors": [],
+            "durationMs": 55
+          },
+          {
+            "stage": "flush.afterDomainModel",
+            "ok": true,
+            "summary": "flush.afterDomainModel completed",
+            "artifacts": [],
+            "warnings": [],
+            "errors": [],
+            "durationMs": 124
+          },
+          {
+            "stage": "security",
+            "ok": true,
+            "summary": "moduleRolesCreated=4, userRolesCreated=4, demoUsersCreated=0",
+            "artifacts": [
+              {
+                "key": "moduleRoleNames",
+                "count": 5
+              },
+              {
+                "key": "userRoleNames",
+                "count": 6
+              },
+              {
+                "key": "demoUserNames",
+                "count": 2
+              }
+            ],
+            "warnings": [],
+            "errors": [],
+            "durationMs": 159
+          },
+          {
+            "stage": "flush.afterSecurity",
+            "ok": true,
+            "summary": "flush.afterSecurity completed",
+            "artifacts": [],
+            "warnings": [],
+            "errors": [],
+            "durationMs": 168
+          },
+          {
+            "stage": "pageCapabilities",
+            "ok": true,
+            "summary": "pageCapabilities completed",
+            "artifacts": [],
+            "warnings": [],
+            "errors": [],
+            "durationMs": 0
+          },
+          {
+            "stage": "webClientCompatibility",
+            "ok": true,
+            "summary": "webClientCompatibility completed",
+            "artifacts": [],
+            "warnings": [],
+            "errors": [],
+            "durationMs": 3
+          },
+          {
+            "stage": "flush.afterWebClientCompatibility",
+            "ok": true,
+            "summary": "flush.afterWebClientCompatibility completed",
+            "artifacts": [],
+            "warnings": [],
+            "errors": [],
+            "durationMs": 26
+          },
+          {
+            "stage": "pages",
+            "ok": true,
+            "summary": "pages completed",
+            "artifacts": [
+              {
+                "key": "pageNames",
+                "count": 34
+              }
+            ],
+            "warnings": [],
+            "errors": [],
+            "durationMs": 450
+          },
+          {
+            "stage": "navigationUI",
+            "ok": true,
+            "summary": "navigationUI completed",
+            "artifacts": [],
+            "warnings": [],
+            "errors": [],
+            "durationMs": 34
+          },
+          {
+            "stage": "homePage",
+            "ok": true,
+            "summary": "updatedProfiles=1",
+            "artifacts": [],
+            "warnings": [],
+            "errors": [],
+            "durationMs": 3
+          },
+          {
+            "stage": "flush.final",
+            "ok": true,
+            "summary": "flush.final completed",
+            "artifacts": [],
+            "warnings": [],
+            "errors": [],
+            "durationMs": 1036
+          },
+          {
+            "stage": "verification",
+            "ok": true,
+            "summary": "ok=true",
+            "artifacts": [],
+            "warnings": [],
+            "errors": [],
+            "durationMs": 47
+          },
+          {
+            "stage": "capabilities",
+            "ok": true,
+            "summary": "capabilities completed",
+            "artifacts": [],
+            "warnings": [],
+            "errors": [],
+            "durationMs": 552
+          },
+          {
+            "stage": "commit",
+            "ok": true,
+            "summary": "commit completed",
+            "artifacts": [],
+            "warnings": [],
+            "errors": [],
+            "durationMs": 10886
+          }
+        ],
+        "createdApp": {
+          "appId": "e2e49cc7-001e-4786-b84a-2626608f6be8",
+          "name": "cinema-run02-revised",
+          "repositoryType": "git"
+        },
+        "beforeCounts": {
+          "pagesInModule": 1,
+          "entitiesInModule": 0,
+          "microflowsInModule": 1,
+          "nanoflowsInModule": 0,
+          "workflowsInModule": 0
+        },
+        "domainModel": {
+          "moduleName": "MyFirstModule",
+          "entitiesCreated": 16,
+          "associationsCreated": 1,
+          "enumerationsCreated": 0
+        },
+        "security": {
+          "moduleName": "MyFirstModule",
+          "securityLevel": "CheckFormsAndMicroflows",
+          "moduleRolesCreated": 4,
+          "userRolesCreated": 4,
+          "demoUsersRequested": 0,
+          "demoUsersCreated": 0,
+          "demoUsersApplied": 0,
+          "demoUserHandling": "notRequested",
+          "skippedDemoUsers": [],
+          "moduleRoleNames": [
+            "MyFirstModuleRoleAdministrator",
+            "MyFirstModuleRoleUser",
+            "PremiumUser",
+            "RegisteredUser",
+            "User"
+          ],
+          "userRoleNames": [
+            "Administrator",
+            "MyFirstModuleRoleAdministrator",
+            "MyFirstModuleRoleUser",
+            "PremiumUser",
+            "RegisteredUser",
+            "User"
+          ],
+          "demoUserNames": [
+            "demo_administrator",
+            "demo_user"
+          ]
+        },
+        "pageCapabilities": null,
+        "webClientCompatibility": {
+          "lookupRequested": true,
+          "classicGridRequested": false,
+          "updated": true,
+          "useOptimizedClient": "No",
+          "previousUseOptimizedClient": "Yes"
+        },
+        "pages": {
+          "moduleName": "MyFirstModule",
+          "layoutQualifiedName": "Atlas_Core.Atlas_Default",
+          "layoutParameterQname": "Atlas_Core.Atlas_Default.Main",
+          "pageNames": [
+            "Home",
+            "Movie_Dashboard",
+            "Movie_Overview",
+            "Movie_NewEdit",
+            "Subscription_Overview",
+            "Subscription_NewEdit",
+            "Date_Overview",
+            "Date_NewEdit",
+            "MovieShowing_Overview",
+            "MovieShowing_NewEdit",
+            "Ensure_Overview",
+            "Ensure_NewEdit",
+            "Premium_Overview",
+            "Premium_NewEdit",
+            "Manually_Overview",
+            "Manually_NewEdit",
+            "User_Overview",
+            "User_NewEdit",
+            "PaymentMethod_Overview",
+            "PaymentMethod_NewEdit",
+            "PaymentTransaction_Overview",
+            "PaymentTransaction_NewEdit",
+            "MovieCastMember_Overview",
+            "MovieCastMember_NewEdit",
+            "MovieCrewMember_Overview",
+            "MovieCrewMember_NewEdit",
+            "Cinema_Overview",
+            "Cinema_NewEdit",
+            "FilmHouse_Overview",
+            "FilmHouse_NewEdit",
+            "StreamingPlatform_Overview",
+            "StreamingPlatform_NewEdit",
+            "UserPreference_Overview",
+            "UserPreference_NewEdit"
+          ],
+          "dg2Cleanup": {
+            "enabled": true,
+            "targetedPageNames": [],
+            "deletedPageNames": [],
+            "failed": []
+          },
+          "dataGrid2": {
+            "enabled": false,
+            "widgetId": "",
+            "resolvedFrom": "",
+            "useFallbackSchema": false,
+            "probeVariant": null,
+            "configuredWidgets": 0,
+            "attempts": []
+          }
+        },
+        "dg2Cleanup": {
+          "enabled": true,
+          "targetedPageNames": [],
+          "deletedPageNames": [],
+          "failed": []
+        },
+        "navigationUI": {
+          "requested": true,
+          "homeButtonsAdded": 0,
+          "navItemsAdded": 6
+        },
+        "homePage": {
+          "requested": true,
+          "updatedProfiles": 1,
+          "targetPageQualifiedName": "MyFirstModule.Home"
+        },
+        "afterCounts": {
+          "pagesInModule": 35,
+          "entitiesInModule": 16,
+          "microflowsInModule": 1,
+          "nanoflowsInModule": 0,
+          "workflowsInModule": 0
+        },
+        "beforeRefs": {
+          "pages": [
+            {
+              "name": "Home_Web",
+              "id": "5c6805fc-cadf-4d72-a5ef-f25da7cf4c97"
+            }
+          ],
+          "entities": [],
+          "microflows": [
+            {
+              "name": "MyFirstLogic",
+              "id": "4a8475b3-14cb-4100-8963-58f2fd3a0be8"
+            }
+          ],
+          "nanoflows": [],
+          "workflows": []
+        },
+        "afterRefs": {
+          "pages": [
+            {
+              "name": "Home_Web",
+              "id": "5c6805fc-cadf-4d72-a5ef-f25da7cf4c97"
+            },
+            {
+              "name": "Home",
+              "id": "ccec3785-9cfe-4460-9f0d-801dfbfff1c6"
+            },
+            {
+              "name": "Movie_Dashboard",
+              "id": "c4153722-de44-446d-a609-b8bcc6cd6c5c"
+            },
+            {
+              "name": "Movie_Overview",
+              "id": "80ee99e8-e6eb-4d74-bbe5-f6377a3209b9"
+            },
+            {
+              "name": "Movie_NewEdit",
+              "id": "c8846e32-e3b5-4fce-862b-bfce6f0bedb2"
+            },
+            {
+              "name": "Subscription_Overview",
+              "id": "e5d2fbcb-f8ae-4cb4-b4b8-d7aaf829c729"
+            },
+            {
+              "name": "Subscription_NewEdit",
+              "id": "0f270cca-99fc-4c3f-be88-33698462e309"
+            },
+            {
+              "name": "Date_Overview",
+              "id": "055c954d-51a4-441d-96af-78f59a036107"
+            },
+            {
+              "name": "Date_NewEdit",
+              "id": "5e975779-f5f7-4325-ad3f-c3d5c588bc1a"
+            },
+            {
+              "name": "MovieShowing_Overview",
+              "id": "58798293-efcf-4230-b6ee-5bcfccdaa6e6"
+            },
+            {
+              "name": "MovieShowing_NewEdit",
+              "id": "d13ce6f7-4bff-4898-a60c-0580d0752e82"
+            },
+            {
+              "name": "Ensure_Overview",
+              "id": "a9717609-c91d-40f4-8d45-2d90c1dc083c"
+            },
+            {
+              "name": "Ensure_NewEdit",
+              "id": "6924cd8f-6a72-4b22-a83b-7fcf1f694b33"
+            },
+            {
+              "name": "Premium_Overview",
+              "id": "d81908b3-3bce-480d-a4dd-f220160859bb"
+            },
+            {
+              "name": "Premium_NewEdit",
+              "id": "5b881570-b180-4852-9ea5-57d5dccc18fd"
+            },
+            {
+              "name": "Manually_Overview",
+              "id": "7c2b771c-8b28-4e7d-9b2a-29bed0cd4990"
+            },
+            {
+              "name": "Manually_NewEdit",
+              "id": "d6291104-aadc-4605-b4e1-81976e0185e0"
+            },
+            {
+              "name": "User_Overview",
+              "id": "0d1af4ca-6d2f-452b-845f-bda168064e80"
+            },
+            {
+              "name": "User_NewEdit",
+              "id": "3f88334a-bab7-48c2-994f-0669fa0305d7"
+            },
+            {
+              "name": "PaymentMethod_Overview",
+              "id": "427afdb9-9984-482d-8f33-3d56890582ad"
+            },
+            {
+              "name": "PaymentMethod_NewEdit",
+              "id": "62bd416b-afad-4061-bc51-75c0d73ab2fe"
+            },
+            {
+              "name": "PaymentTransaction_Overview",
+              "id": "5dee27bf-8441-48d4-9fc2-b6bb34824df0"
+            },
+            {
+              "name": "PaymentTransaction_NewEdit",
+              "id": "04700176-e051-453d-b1c4-f13485d95737"
+            },
+            {
+              "name": "MovieCastMember_Overview",
+              "id": "1058baf9-9cf1-4976-93a0-06939ad1db14"
+            },
+            {
+              "name": "MovieCastMember_NewEdit",
+              "id": "d4ff2d03-8cf9-41c6-b2b9-469037596380"
+            },
+            {
+              "name": "MovieCrewMember_Overview",
+              "id": "dee649b4-2ad0-4b38-8dce-63b343dbdf2e"
+            },
+            {
+              "name": "MovieCrewMember_NewEdit",
+              "id": "eb9f713e-08d9-4083-8b1e-33dcc35d0197"
+            },
+            {
+              "name": "Cinema_Overview",
+              "id": "75b497b4-397b-478c-a5ee-b11b296e2661"
+            },
+            {
+              "name": "Cinema_NewEdit",
+              "id": "71be09c9-6a5b-4fda-8541-d3bb8025d9a9"
+            },
+            {
+              "name": "FilmHouse_Overview",
+              "id": "ec9c55f2-8819-4c13-a150-587ea5461567"
+            },
+            {
+              "name": "FilmHouse_NewEdit",
+              "id": "3000979c-af39-4f55-b514-f6b7b48b4658"
+            },
+            {
+              "name": "StreamingPlatform_Overview",
+              "id": "a166c471-0a49-41a7-b69a-786d9b3411ef"
+            },
+            {
+              "name": "StreamingPlatform_NewEdit",
+              "id": "46799790-ebe0-4071-a0f6-9841d271e761"
+            },
+            {
+              "name": "UserPreference_Overview",
+              "id": "2a99cd63-98ba-45ef-bc12-6c2c8e78dc6e"
+            },
+            {
+              "name": "UserPreference_NewEdit",
+              "id": "10b7c654-db76-438c-86f4-24f2aef9020c"
+            }
+          ],
+          "entities": [
+            {
+              "name": "Movie",
+              "id": "462c0b8d-86a2-46ea-a14e-4ac508841b98"
+            },
+            {
+              "name": "Subscription",
+              "id": "190901bd-2377-4200-b0c7-14feb5de2fe4"
+            },
+            {
+              "name": "Date",
+              "id": "1884caef-6e1b-48bc-a74f-9fe4f669ec35"
+            },
+            {
+              "name": "MovieShowing",
+              "id": "b75fe234-9a48-471e-9a2d-97ccd8c3f451"
+            },
+            {
+              "name": "Ensure",
+              "id": "c9f4b64d-3390-4c24-a348-4ed8e1d8bac6"
+            },
+            {
+              "name": "Premium",
+              "id": "389d9a66-7d2d-4aba-bba8-cccbb36eb17a"
+            },
+            {
+              "name": "Manually",
+              "id": "8fbe0d47-e7da-4d02-b7f2-afb8df666249"
+            },
+            {
+              "name": "User",
+              "id": "3c19db04-f02e-4682-a7e2-d27619a4aa6a"
+            },
+            {
+              "name": "PaymentMethod",
+              "id": "62df357d-ef0d-4be4-af0c-f2458ca02f00"
+            },
+            {
+              "name": "PaymentTransaction",
+              "id": "b8ae26b8-1144-4ff7-ad66-d2237715b5f2"
+            },
+            {
+              "name": "MovieCastMember",
+              "id": "b65d30eb-c712-473e-b532-984e99777a9f"
+            },
+            {
+              "name": "MovieCrewMember",
+              "id": "af292e7a-07db-49b4-914d-0ba0733e1eda"
+            },
+            {
+              "name": "Cinema",
+              "id": "98bd654a-1614-4035-a802-ae17e460a875"
+            },
+            {
+              "name": "FilmHouse",
+              "id": "a3d18a83-50be-4c20-95a4-5fd0655a3eeb"
+            },
+            {
+              "name": "StreamingPlatform",
+              "id": "a3f1fb29-730f-4d0b-9ce4-513d2bfda4bd"
+            },
+            {
+              "name": "UserPreference",
+              "id": "1980fd5a-7e8c-48c9-a7cf-f02940b11750"
+            }
+          ],
+          "microflows": [
+            {
+              "name": "MyFirstLogic",
+              "id": "4a8475b3-14cb-4100-8963-58f2fd3a0be8"
+            }
+          ],
+          "nanoflows": [],
+          "workflows": []
+        },
+        "verification": {
+          "missing": {
+            "pages": [],
+            "entities": [],
+            "microflows": [],
+            "nanoflows": [],
+            "workflows": []
+          },
+          "ok": true,
+          "artifacts": {
+            "ok": true,
+            "missing": {
+              "moduleRoles": [],
+              "userRoles": [],
+              "demoUsers": [],
+              "pageVisibility": [],
+              "homePageButtons": [],
+              "menuItems": [],
+              "widgets": []
+            }
+          },
+          "semantic": {
+            "enabled": false,
+            "ok": true,
+            "errors": []
+          }
+        },
+        "capabilities": {
+          "modules": [
+            "Administration",
+            "Atlas_Core",
+            "Atlas_Web_Content",
+            "DataWidgets",
+            "FeedbackModule",
+            "MyFirstModule",
+            "NanoflowCommons",
+            "WebActions"
+          ],
+          "widgetIds": [],
+          "widgetFamilies": [
+            "datawidgets_module"
+          ]
+        },
+        "commitMessage": "Revised evaluation app: cinema run-02",
+        "ok": true
+      }
+    }
+  ]
+}

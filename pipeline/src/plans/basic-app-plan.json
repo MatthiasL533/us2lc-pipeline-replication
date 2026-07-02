@@ -1,0 +1,49 @@
+{
+  "meta": {
+    "planVersion": "1.0.0"
+  },
+  "app": {
+    "appId": "00000000-0000-0000-0000-000000000000",
+    "branch": "main",
+    "moduleName": "MyFirstModule",
+    "layoutQualifiedName": "Atlas_Core.Atlas_Default",
+    "homePageRef": "home"
+  },
+  "execution": {
+    "commit": false,
+    "deleteExistingDomainModel": true,
+    "deleteExistingMicroflows": true,
+    "deleteExistingWorkflows": true,
+    "deleteExistingPages": true,
+    "dg2Cleanup": true,
+    "forceLegacyWebClientForLookups": true
+  },
+  "domainModel": {
+    "entities": [
+      {
+        "name": "Task",
+        "attributes": [
+          { "name": "Title", "type": "String", "required": true }
+        ]
+      }
+    ],
+    "associations": [],
+    "enumerations": []
+  },
+  "pages": {
+    "specs": [
+      {
+        "ref": "home",
+        "name": "Home",
+        "title": "Home",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "Home",
+            "renderMode": "H2"
+          }
+        ]
+      }
+    ]
+  }
+}

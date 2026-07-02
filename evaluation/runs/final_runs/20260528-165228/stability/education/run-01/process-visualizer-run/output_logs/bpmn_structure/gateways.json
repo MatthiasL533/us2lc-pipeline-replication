@@ -1,0 +1,69 @@
+[
+    {
+        "id": "EG0",
+        "conditions": [
+            "to verify the user as a freelance teacher",
+            "after reviewing their details and checking their KvK numbers"
+        ],
+        "start": 3962,
+        "end": 7142,
+        "paths": [
+            {
+                "start": 3962,
+                "end": 4080
+            },
+            {
+                "start": 4081,
+                "end": 7142
+            }
+        ],
+        "type": "exclusive",
+        "children": [
+            [],
+            [
+                {
+                    "content": {
+                        "agent": {
+                            "entity_group": "AGENT",
+                            "word": "administrator",
+                            "start": 5071,
+                            "end": 5084,
+                            "score": 0.99
+                        },
+                        "task": {
+                            "entity_group": "TASK",
+                            "word": "add videos related to a certain module in the system",
+                            "start": 4947,
+                            "end": 4999,
+                            "score": 0.99,
+                            "task_id": "T4"
+                        },
+                        "sentence_idx": 31
+                    },
+                    "type": "task"
+                },
+                {
+                    "content": {
+                        "agent": {
+                            "entity_group": "AGENT",
+                            "word": "administrator",
+                            "start": 6383,
+                            "end": 6396,
+                            "score": 0.99
+                        },
+                        "task": {
+                            "entity_group": "TASK",
+                            "word": "add flashcards related to a certain module in the system",
+                            "start": 6255,
+                            "end": 6311,
+                            "score": 0.99,
+                            "task_id": "T5"
+                        },
+                        "sentence_idx": 39
+                    },
+                    "type": "task"
+                }
+            ]
+        ]
+    }
+]

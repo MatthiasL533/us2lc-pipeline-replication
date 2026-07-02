@@ -1,0 +1,2218 @@
+{
+  "meta": {
+    "planVersion": "1.1.0",
+    "generatedAt": "2026-05-29T09:26:01.428Z",
+    "generatedBy": "pipeline.plan-generator",
+    "mergedWithLlm": true
+  },
+  "app": {
+    "appId": "",
+    "branch": "main",
+    "moduleName": "MyFirstModule",
+    "layoutQualifiedName": "Atlas_Core.Atlas_Default",
+    "homePageRef": "home",
+    "navigation": {
+      "homePageButtons": [
+        {
+          "pageRef": "activityattendance_overview",
+          "caption": "",
+          "allowedRoles": []
+        },
+        {
+          "pageRef": "camp_overview",
+          "caption": "",
+          "allowedRoles": []
+        },
+        {
+          "pageRef": "camper_overview",
+          "caption": "",
+          "allowedRoles": []
+        },
+        {
+          "pageRef": "camperconsent_overview",
+          "caption": "",
+          "allowedRoles": []
+        },
+        {
+          "pageRef": "easily_overview",
+          "caption": "",
+          "allowedRoles": []
+        },
+        {
+          "pageRef": "emergencycontact_overview",
+          "caption": "",
+          "allowedRoles": []
+        }
+      ],
+      "menuItems": [
+        {
+          "pageRef": "activityattendance_overview",
+          "caption": "",
+          "allowedRoles": []
+        },
+        {
+          "pageRef": "camp_overview",
+          "caption": "",
+          "allowedRoles": []
+        },
+        {
+          "pageRef": "camper_overview",
+          "caption": "",
+          "allowedRoles": []
+        },
+        {
+          "pageRef": "camperconsent_overview",
+          "caption": "",
+          "allowedRoles": []
+        },
+        {
+          "pageRef": "easily_overview",
+          "caption": "",
+          "allowedRoles": []
+        },
+        {
+          "pageRef": "emergencycontact_overview",
+          "caption": "",
+          "allowedRoles": []
+        }
+      ],
+      "homePageButtonRefs": [
+        "activityattendance_overview",
+        "camp_overview",
+        "camper_overview",
+        "camperconsent_overview",
+        "easily_overview",
+        "emergencycontact_overview"
+      ],
+      "navigationItemRefs": [
+        "activityattendance_overview",
+        "camp_overview",
+        "camper_overview",
+        "camperconsent_overview",
+        "easily_overview",
+        "emergencycontact_overview"
+      ]
+    }
+  },
+  "execution": {
+    "commit": false,
+    "dg2Cleanup": true,
+    "forceLegacyWebClientForLookups": true,
+    "createApp": true,
+    "createAppName": "PracticalPerf_camperplus_Stability"
+  },
+  "domainModel": {
+    "entities": [
+      {
+        "name": "Camper",
+        "attributes": [
+          {
+            "name": "Title",
+            "type": "String",
+            "required": true
+          },
+          {
+            "name": "Description",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "Status",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "CreatedAt",
+            "type": "DateTime",
+            "required": false
+          },
+          {
+            "name": "CamperID",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "FirstName",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "LastName",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "DateOfBirth",
+            "type": "DateTime",
+            "required": false
+          },
+          {
+            "name": "Gender",
+            "type": "String",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "Camp",
+        "attributes": [
+          {
+            "name": "Title",
+            "type": "String",
+            "required": true
+          },
+          {
+            "name": "Description",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "Status",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "CreatedAt",
+            "type": "DateTime",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "Keep",
+        "attributes": [
+          {
+            "name": "Title",
+            "type": "String",
+            "required": true
+          },
+          {
+            "name": "Description",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "Status",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "CreatedAt",
+            "type": "DateTime",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "Group",
+        "attributes": [
+          {
+            "name": "Title",
+            "type": "String",
+            "required": true
+          },
+          {
+            "name": "Description",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "Status",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "CreatedAt",
+            "type": "DateTime",
+            "required": false
+          },
+          {
+            "name": "GroupID",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "GroupName",
+            "type": "String",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "Which",
+        "attributes": [
+          {
+            "name": "Title",
+            "type": "String",
+            "required": true
+          },
+          {
+            "name": "Description",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "Status",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "CreatedAt",
+            "type": "DateTime",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "Kid",
+        "attributes": [
+          {
+            "name": "Title",
+            "type": "String",
+            "required": true
+          },
+          {
+            "name": "Description",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "Status",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "CreatedAt",
+            "type": "DateTime",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "Event",
+        "attributes": [
+          {
+            "name": "Title",
+            "type": "String",
+            "required": true
+          },
+          {
+            "name": "Description",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "Status",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "CreatedAt",
+            "type": "DateTime",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "Easily",
+        "attributes": [
+          {
+            "name": "Title",
+            "type": "String",
+            "required": true
+          },
+          {
+            "name": "Description",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "Status",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "CreatedAt",
+            "type": "DateTime",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "ParentGuardian",
+        "attributes": [
+          {
+            "name": "ParentID",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "FirstName",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "LastName",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "Email",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "Phone",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "Address",
+            "type": "String",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "StaffMember",
+        "attributes": [
+          {
+            "name": "StaffID",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "FirstName",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "LastName",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "Email",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "Position",
+            "type": "String",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "CamperConsent",
+        "attributes": [
+          {
+            "name": "SubmissionDate",
+            "type": "DateTime",
+            "required": false
+          },
+          {
+            "name": "IsSigned",
+            "type": "Boolean",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "ActivityAttendance",
+        "attributes": [
+          {
+            "name": "AttendanceDate",
+            "type": "DateTime",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "FeedbackSubmission",
+        "attributes": [
+          {
+            "name": "SubmissionDate",
+            "type": "DateTime",
+            "required": false
+          },
+          {
+            "name": "FeedbackType",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "Content",
+            "type": "String",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "EmergencyContact",
+        "attributes": [
+          {
+            "name": "ContactType",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "Relationship",
+            "type": "String",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "IncidentReport",
+        "attributes": [
+          {
+            "name": "ReportID",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "ReportDate",
+            "type": "DateTime",
+            "required": false
+          },
+          {
+            "name": "Description",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "Severity",
+            "type": "String",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "Photo",
+        "attributes": [
+          {
+            "name": "PhotoID",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "CaptureDate",
+            "type": "DateTime",
+            "required": false
+          }
+        ]
+      }
+    ],
+    "associations": [
+      {
+        "name": "Group_Camper",
+        "parentEntity": "Group",
+        "childEntity": "Camper",
+        "type": "Reference",
+        "owner": "Both"
+      }
+    ],
+    "enumerations": []
+  },
+  "security": {
+    "enabled": true,
+    "securityLevel": "prototype",
+    "moduleRoles": [
+      "CampAdministrator",
+      "Parent",
+      "CampWorker",
+      "CampCounselor"
+    ],
+    "userRoles": [
+      {
+        "name": "CampAdministrator",
+        "moduleRoles": [
+          "CampAdministrator"
+        ],
+        "systemModuleRole": "System.User"
+      },
+      {
+        "name": "Parent",
+        "moduleRoles": [
+          "Parent"
+        ],
+        "systemModuleRole": "System.User"
+      },
+      {
+        "name": "CampWorker",
+        "moduleRoles": [
+          "CampWorker"
+        ],
+        "systemModuleRole": "System.User"
+      },
+      {
+        "name": "CampCounselor",
+        "moduleRoles": [
+          "CampCounselor"
+        ],
+        "systemModuleRole": "System.User"
+      }
+    ],
+    "demoUsers": []
+  },
+  "pages": {
+    "specs": [
+      {
+        "ref": "home",
+        "name": "Home",
+        "title": "Home",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "Camper Workspace",
+            "renderMode": "H2"
+          },
+          {
+            "type": "dynamicText",
+            "text": "Generated from user stories",
+            "renderMode": "Paragraph"
+          },
+          {
+            "type": "buttonToPage",
+            "caption": "Camper Dashboard",
+            "targetPageRef": "camper_dashboard"
+          },
+          {
+            "type": "buttonToPage",
+            "caption": "Camper Overview",
+            "targetPageRef": "camper_overview"
+          },
+          {
+            "type": "buttonToPage",
+            "caption": "Camp Overview",
+            "targetPageRef": "camp_overview"
+          },
+          {
+            "type": "buttonToPage",
+            "caption": "Keep Overview",
+            "targetPageRef": "keep_overview"
+          },
+          {
+            "type": "buttonToPage",
+            "caption": "Group Overview",
+            "targetPageRef": "group_overview"
+          },
+          {
+            "type": "buttonToPage",
+            "caption": "Which Overview",
+            "targetPageRef": "which_overview"
+          },
+          {
+            "type": "buttonToPage",
+            "caption": "Kid Overview",
+            "targetPageRef": "kid_overview"
+          },
+          {
+            "type": "buttonToPage",
+            "caption": "Event Overview",
+            "targetPageRef": "event_overview"
+          },
+          {
+            "type": "buttonToPage",
+            "caption": "Easily Overview",
+            "targetPageRef": "easily_overview"
+          },
+          {
+            "type": "buttonToPage",
+            "caption": "activityattendance overview",
+            "targetPageRef": "activityattendance_overview"
+          },
+          {
+            "type": "buttonToPage",
+            "caption": "camperconsent overview",
+            "targetPageRef": "camperconsent_overview"
+          },
+          {
+            "type": "buttonToPage",
+            "caption": "emergencycontact overview",
+            "targetPageRef": "emergencycontact_overview"
+          }
+        ]
+      },
+      {
+        "ref": "camper_dashboard",
+        "name": "Camper_Dashboard",
+        "title": "Camper Dashboard",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "Camper Dashboard",
+            "renderMode": "H2"
+          },
+          {
+            "type": "dynamicText",
+            "text": "Overview and data management for camper.",
+            "renderMode": "Paragraph"
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Add Camper",
+            "entityRef": "MyFirstModule.Camper",
+            "targetPageRef": "camper_newedit"
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.Camper",
+            "rowClickTargetPageRef": "camper_newedit",
+            "autoRowClickToDetail": true,
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Title",
+                "autoLabel": true
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Description",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Status",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "CreatedAt",
+                "autoLabel": false
+              }
+            ]
+          }
+        ],
+        "entityRef": "MyFirstModule.Camper"
+      },
+      {
+        "ref": "camper_overview",
+        "name": "Camper_Overview",
+        "title": "Camper Overview",
+        "entityRef": "MyFirstModule.Camper",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "Camper Overview",
+            "renderMode": "H2"
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Create Camper",
+            "entityRef": "MyFirstModule.Camper",
+            "targetPageRef": "camper_newedit"
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.Camper",
+            "autoRowClickToDetail": true,
+            "rowClickTargetPageRef": "camper_newedit",
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "CamperID",
+                "autoLabel": true
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "FirstName",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "LastName",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "DateOfBirth",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Gender",
+                "autoLabel": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "camper_newedit",
+        "name": "Camper_NewEdit",
+        "title": "Camper NewEdit",
+        "entityRef": "MyFirstModule.Camper",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          {
+            "name": "Camper",
+            "entityRef": "MyFirstModule.Camper",
+            "required": true
+          }
+        ],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "Camper",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Title"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Description"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Status"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "CreatedAt"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "CamperID"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "FirstName"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "LastName"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "DateOfBirth"
+              },
+              {
+                "type": "associationInput",
+                "associationRef": "Group_Camper",
+                "targetEntityRef": "MyFirstModule.Group",
+                "label": "Group"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "camp_overview",
+        "name": "Camp_Overview",
+        "title": "Camp Overview",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "Camp Overview",
+            "renderMode": "H2"
+          },
+          {
+            "type": "dynamicText",
+            "text": "Manage camp records and open the create dialog when new data is needed.",
+            "renderMode": "Paragraph"
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Add Camp",
+            "entityRef": "MyFirstModule.Camp",
+            "targetPageRef": "camp_newedit"
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.Camp",
+            "rowClickTargetPageRef": "camp_newedit",
+            "autoRowClickToDetail": true,
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Title",
+                "autoLabel": true
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Description",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Status",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "CreatedAt",
+                "autoLabel": false
+              }
+            ]
+          }
+        ],
+        "entityRef": "MyFirstModule.Camp"
+      },
+      {
+        "ref": "camp_newedit",
+        "name": "Camp_NewEdit",
+        "title": "Camp NewEdit",
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "Camp",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Title"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Description"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Status"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "CreatedAt"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ],
+        "entityRef": "MyFirstModule.Camp",
+        "pageParameters": [
+          {
+            "name": "Camp",
+            "entityRef": "MyFirstModule.Camp",
+            "required": true
+          }
+        ]
+      },
+      {
+        "ref": "keep_overview",
+        "name": "Keep_Overview",
+        "title": "Keep Overview",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "Keep Overview",
+            "renderMode": "H2"
+          },
+          {
+            "type": "dynamicText",
+            "text": "Manage keep records and open the create dialog when new data is needed.",
+            "renderMode": "Paragraph"
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Add Keep",
+            "entityRef": "MyFirstModule.Keep",
+            "targetPageRef": "keep_newedit"
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.Keep",
+            "rowClickTargetPageRef": "keep_newedit",
+            "autoRowClickToDetail": true,
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Title",
+                "autoLabel": true
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Description",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Status",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "CreatedAt",
+                "autoLabel": false
+              }
+            ]
+          }
+        ],
+        "entityRef": "MyFirstModule.Keep"
+      },
+      {
+        "ref": "keep_newedit",
+        "name": "Keep_NewEdit",
+        "title": "Keep NewEdit",
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "Keep",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Title"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Description"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Status"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "CreatedAt"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ],
+        "entityRef": "MyFirstModule.Keep",
+        "pageParameters": [
+          {
+            "name": "Keep",
+            "entityRef": "MyFirstModule.Keep",
+            "required": true
+          }
+        ]
+      },
+      {
+        "ref": "group_overview",
+        "name": "Group_Overview",
+        "title": "Group Overview",
+        "entityRef": "MyFirstModule.Group",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "Group Overview",
+            "renderMode": "H2"
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Create Group",
+            "entityRef": "MyFirstModule.Group",
+            "targetPageRef": "group_newedit"
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.Group",
+            "autoRowClickToDetail": true,
+            "rowClickTargetPageRef": "group_newedit",
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "GroupID",
+                "autoLabel": true
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "GroupName",
+                "autoLabel": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "group_newedit",
+        "name": "Group_NewEdit",
+        "title": "Group NewEdit",
+        "entityRef": "MyFirstModule.Group",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          {
+            "name": "Group",
+            "entityRef": "MyFirstModule.Group",
+            "required": true
+          }
+        ],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "Group",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Title"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Description"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Status"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "CreatedAt"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "GroupID"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "GroupName"
+              },
+              {
+                "type": "associationInput",
+                "associationRef": "Group_Camper",
+                "targetEntityRef": "MyFirstModule.Camper",
+                "label": "Camper"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "which_overview",
+        "name": "Which_Overview",
+        "title": "Which Overview",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "Which Overview",
+            "renderMode": "H2"
+          },
+          {
+            "type": "dynamicText",
+            "text": "Manage which records and open the create dialog when new data is needed.",
+            "renderMode": "Paragraph"
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Add Which",
+            "entityRef": "MyFirstModule.Which",
+            "targetPageRef": "which_newedit"
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.Which",
+            "rowClickTargetPageRef": "which_newedit",
+            "autoRowClickToDetail": true,
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Title",
+                "autoLabel": true
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Description",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Status",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "CreatedAt",
+                "autoLabel": false
+              }
+            ]
+          }
+        ],
+        "entityRef": "MyFirstModule.Which"
+      },
+      {
+        "ref": "which_newedit",
+        "name": "Which_NewEdit",
+        "title": "Which NewEdit",
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "Which",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Title"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Description"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Status"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "CreatedAt"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ],
+        "entityRef": "MyFirstModule.Which",
+        "pageParameters": [
+          {
+            "name": "Which",
+            "entityRef": "MyFirstModule.Which",
+            "required": true
+          }
+        ]
+      },
+      {
+        "ref": "kid_overview",
+        "name": "Kid_Overview",
+        "title": "Kid Overview",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "Kid Overview",
+            "renderMode": "H2"
+          },
+          {
+            "type": "dynamicText",
+            "text": "Manage kid records and open the create dialog when new data is needed.",
+            "renderMode": "Paragraph"
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Add Kid",
+            "entityRef": "MyFirstModule.Kid",
+            "targetPageRef": "kid_newedit"
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.Kid",
+            "rowClickTargetPageRef": "kid_newedit",
+            "autoRowClickToDetail": true,
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Title",
+                "autoLabel": true
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Description",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Status",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "CreatedAt",
+                "autoLabel": false
+              }
+            ]
+          }
+        ],
+        "entityRef": "MyFirstModule.Kid"
+      },
+      {
+        "ref": "kid_newedit",
+        "name": "Kid_NewEdit",
+        "title": "Kid NewEdit",
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "Kid",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Title"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Description"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Status"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "CreatedAt"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ],
+        "entityRef": "MyFirstModule.Kid",
+        "pageParameters": [
+          {
+            "name": "Kid",
+            "entityRef": "MyFirstModule.Kid",
+            "required": true
+          }
+        ]
+      },
+      {
+        "ref": "event_overview",
+        "name": "Event_Overview",
+        "title": "Event Overview",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "Event Overview",
+            "renderMode": "H2"
+          },
+          {
+            "type": "dynamicText",
+            "text": "Manage event records and open the create dialog when new data is needed.",
+            "renderMode": "Paragraph"
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Add Event",
+            "entityRef": "MyFirstModule.Event",
+            "targetPageRef": "event_newedit"
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.Event",
+            "rowClickTargetPageRef": "event_newedit",
+            "autoRowClickToDetail": true,
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Title",
+                "autoLabel": true
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Description",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Status",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "CreatedAt",
+                "autoLabel": false
+              }
+            ]
+          }
+        ],
+        "entityRef": "MyFirstModule.Event"
+      },
+      {
+        "ref": "event_newedit",
+        "name": "Event_NewEdit",
+        "title": "Event NewEdit",
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "Event",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Title"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Description"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Status"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "CreatedAt"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ],
+        "entityRef": "MyFirstModule.Event",
+        "pageParameters": [
+          {
+            "name": "Event",
+            "entityRef": "MyFirstModule.Event",
+            "required": true
+          }
+        ]
+      },
+      {
+        "ref": "easily_overview",
+        "name": "Easily_Overview",
+        "title": "Easily Overview",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "Easily Overview",
+            "renderMode": "H2"
+          },
+          {
+            "type": "dynamicText",
+            "text": "Manage easily records and open the create dialog when new data is needed.",
+            "renderMode": "Paragraph"
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Add Easily",
+            "entityRef": "MyFirstModule.Easily",
+            "targetPageRef": "easily_newedit"
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.Easily",
+            "rowClickTargetPageRef": "easily_newedit",
+            "autoRowClickToDetail": true,
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Title",
+                "autoLabel": true
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Description",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Status",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "CreatedAt",
+                "autoLabel": false
+              }
+            ]
+          }
+        ],
+        "entityRef": "MyFirstModule.Easily"
+      },
+      {
+        "ref": "easily_newedit",
+        "name": "Easily_NewEdit",
+        "title": "Easily NewEdit",
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "Easily",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Title"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Description"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Status"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "CreatedAt"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ],
+        "entityRef": "MyFirstModule.Easily",
+        "pageParameters": [
+          {
+            "name": "Easily",
+            "entityRef": "MyFirstModule.Easily",
+            "required": true
+          }
+        ]
+      },
+      {
+        "ref": "parentguardian_overview",
+        "name": "ParentGuardian_Overview",
+        "title": "ParentGuardian Overview",
+        "entityRef": "MyFirstModule.ParentGuardian",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "ParentGuardian Overview",
+            "renderMode": "H2"
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Create ParentGuardian",
+            "entityRef": "MyFirstModule.ParentGuardian",
+            "targetPageRef": "parentguardian_newedit"
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.ParentGuardian",
+            "autoRowClickToDetail": true,
+            "rowClickTargetPageRef": "parentguardian_newedit",
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "ParentID",
+                "autoLabel": true
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "FirstName",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "LastName",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Email",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Phone",
+                "autoLabel": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "parentguardian_newedit",
+        "name": "ParentGuardian_NewEdit",
+        "title": "ParentGuardian NewEdit",
+        "entityRef": "MyFirstModule.ParentGuardian",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          {
+            "name": "ParentGuardian",
+            "entityRef": "MyFirstModule.ParentGuardian",
+            "required": true
+          }
+        ],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "ParentGuardian",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "ParentID"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "FirstName"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "LastName"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Email"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Phone"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Address"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "staffmember_overview",
+        "name": "StaffMember_Overview",
+        "title": "StaffMember Overview",
+        "entityRef": "MyFirstModule.StaffMember",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "StaffMember Overview",
+            "renderMode": "H2"
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Create StaffMember",
+            "entityRef": "MyFirstModule.StaffMember",
+            "targetPageRef": "staffmember_newedit"
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.StaffMember",
+            "autoRowClickToDetail": true,
+            "rowClickTargetPageRef": "staffmember_newedit",
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "StaffID",
+                "autoLabel": true
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "FirstName",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "LastName",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Email",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Position",
+                "autoLabel": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "staffmember_newedit",
+        "name": "StaffMember_NewEdit",
+        "title": "StaffMember NewEdit",
+        "entityRef": "MyFirstModule.StaffMember",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          {
+            "name": "StaffMember",
+            "entityRef": "MyFirstModule.StaffMember",
+            "required": true
+          }
+        ],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "StaffMember",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "StaffID"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "FirstName"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "LastName"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Email"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Position"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "camperconsent_overview",
+        "name": "CamperConsent_Overview",
+        "title": "CamperConsent Overview",
+        "entityRef": "MyFirstModule.CamperConsent",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "CamperConsent Overview",
+            "renderMode": "H2"
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Create CamperConsent",
+            "entityRef": "MyFirstModule.CamperConsent",
+            "targetPageRef": "camperconsent_newedit"
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.CamperConsent",
+            "autoRowClickToDetail": true,
+            "rowClickTargetPageRef": "camperconsent_newedit",
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "SubmissionDate",
+                "autoLabel": true
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "IsSigned",
+                "autoLabel": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "camperconsent_newedit",
+        "name": "CamperConsent_NewEdit",
+        "title": "CamperConsent NewEdit",
+        "entityRef": "MyFirstModule.CamperConsent",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          {
+            "name": "CamperConsent",
+            "entityRef": "MyFirstModule.CamperConsent",
+            "required": true
+          }
+        ],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "CamperConsent",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "SubmissionDate"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "IsSigned"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "activityattendance_overview",
+        "name": "ActivityAttendance_Overview",
+        "title": "ActivityAttendance Overview",
+        "entityRef": "MyFirstModule.ActivityAttendance",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "ActivityAttendance Overview",
+            "renderMode": "H2"
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Create ActivityAttendance",
+            "entityRef": "MyFirstModule.ActivityAttendance",
+            "targetPageRef": "activityattendance_newedit"
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.ActivityAttendance",
+            "autoRowClickToDetail": true,
+            "rowClickTargetPageRef": "activityattendance_newedit",
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "AttendanceDate",
+                "autoLabel": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "activityattendance_newedit",
+        "name": "ActivityAttendance_NewEdit",
+        "title": "ActivityAttendance NewEdit",
+        "entityRef": "MyFirstModule.ActivityAttendance",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          {
+            "name": "ActivityAttendance",
+            "entityRef": "MyFirstModule.ActivityAttendance",
+            "required": true
+          }
+        ],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "ActivityAttendance",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "AttendanceDate"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "feedbacksubmission_overview",
+        "name": "FeedbackSubmission_Overview",
+        "title": "FeedbackSubmission Overview",
+        "entityRef": "MyFirstModule.FeedbackSubmission",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "FeedbackSubmission Overview",
+            "renderMode": "H2"
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Create FeedbackSubmission",
+            "entityRef": "MyFirstModule.FeedbackSubmission",
+            "targetPageRef": "feedbacksubmission_newedit"
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.FeedbackSubmission",
+            "autoRowClickToDetail": true,
+            "rowClickTargetPageRef": "feedbacksubmission_newedit",
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "SubmissionDate",
+                "autoLabel": true
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "FeedbackType",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Content",
+                "autoLabel": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "feedbacksubmission_newedit",
+        "name": "FeedbackSubmission_NewEdit",
+        "title": "FeedbackSubmission NewEdit",
+        "entityRef": "MyFirstModule.FeedbackSubmission",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          {
+            "name": "FeedbackSubmission",
+            "entityRef": "MyFirstModule.FeedbackSubmission",
+            "required": true
+          }
+        ],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "FeedbackSubmission",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "SubmissionDate"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "FeedbackType"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Content"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "emergencycontact_overview",
+        "name": "EmergencyContact_Overview",
+        "title": "EmergencyContact Overview",
+        "entityRef": "MyFirstModule.EmergencyContact",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "EmergencyContact Overview",
+            "renderMode": "H2"
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Create EmergencyContact",
+            "entityRef": "MyFirstModule.EmergencyContact",
+            "targetPageRef": "emergencycontact_newedit"
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.EmergencyContact",
+            "autoRowClickToDetail": true,
+            "rowClickTargetPageRef": "emergencycontact_newedit",
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "ContactType",
+                "autoLabel": true
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Relationship",
+                "autoLabel": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "emergencycontact_newedit",
+        "name": "EmergencyContact_NewEdit",
+        "title": "EmergencyContact NewEdit",
+        "entityRef": "MyFirstModule.EmergencyContact",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          {
+            "name": "EmergencyContact",
+            "entityRef": "MyFirstModule.EmergencyContact",
+            "required": true
+          }
+        ],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "EmergencyContact",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "ContactType"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Relationship"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "incidentreport_overview",
+        "name": "IncidentReport_Overview",
+        "title": "IncidentReport Overview",
+        "entityRef": "MyFirstModule.IncidentReport",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "IncidentReport Overview",
+            "renderMode": "H2"
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Create IncidentReport",
+            "entityRef": "MyFirstModule.IncidentReport",
+            "targetPageRef": "incidentreport_newedit"
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.IncidentReport",
+            "autoRowClickToDetail": true,
+            "rowClickTargetPageRef": "incidentreport_newedit",
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "ReportID",
+                "autoLabel": true
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "ReportDate",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Description",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Severity",
+                "autoLabel": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "incidentreport_newedit",
+        "name": "IncidentReport_NewEdit",
+        "title": "IncidentReport NewEdit",
+        "entityRef": "MyFirstModule.IncidentReport",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          {
+            "name": "IncidentReport",
+            "entityRef": "MyFirstModule.IncidentReport",
+            "required": true
+          }
+        ],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "IncidentReport",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "ReportID"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "ReportDate"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Description"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Severity"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "photo_overview",
+        "name": "Photo_Overview",
+        "title": "Photo Overview",
+        "entityRef": "MyFirstModule.Photo",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "Photo Overview",
+            "renderMode": "H2"
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Create Photo",
+            "entityRef": "MyFirstModule.Photo",
+            "targetPageRef": "photo_newedit"
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.Photo",
+            "autoRowClickToDetail": true,
+            "rowClickTargetPageRef": "photo_newedit",
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "PhotoID",
+                "autoLabel": true
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "CaptureDate",
+                "autoLabel": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "photo_newedit",
+        "name": "Photo_NewEdit",
+        "title": "Photo NewEdit",
+        "entityRef": "MyFirstModule.Photo",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          {
+            "name": "Photo",
+            "entityRef": "MyFirstModule.Photo",
+            "required": true
+          }
+        ],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "Photo",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "PhotoID"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "CaptureDate"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "verification": {
+    "failOnMissing": true
+  }
+}

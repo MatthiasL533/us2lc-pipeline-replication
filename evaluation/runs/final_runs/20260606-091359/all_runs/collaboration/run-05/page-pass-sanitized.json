@@ -1,0 +1,477 @@
+{
+  "pages": {
+    "specs": [
+      {
+        "name": "home",
+        "layout": "Blank",
+        "widgets": [
+          {
+            "type": "DataGrid",
+            "entity": "Project",
+            "columns": [
+              {
+                "attribute": "Name"
+              },
+              {
+                "attribute": "StartDate"
+              }
+            ]
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "projectOverview",
+        "layout": "Sidebar",
+        "widgets": [
+          {
+            "type": "DataGrid",
+            "entity": "Project",
+            "columns": [
+              {
+                "attribute": "Name"
+              },
+              {
+                "attribute": "StartDate"
+              }
+            ]
+          },
+          {
+            "type": "DataView",
+            "entity": "Milestone",
+            "attributes": [
+              {
+                "attribute": "DueDate"
+              },
+              {
+                "attribute": "Status"
+              }
+            ]
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "projectDetail",
+        "layout": "FormHorizontal",
+        "widgets": [
+          {
+            "type": "DataView",
+            "entity": "Project",
+            "attributes": [
+              {
+                "attribute": "Name"
+              },
+              {
+                "attribute": "StartDate"
+              }
+            ]
+          },
+          {
+            "type": "DataGrid",
+            "entity": "Milestone",
+            "columns": [
+              {
+                "attribute": "DueDate"
+              },
+              {
+                "attribute": "Status"
+              }
+            ]
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "newProject",
+        "layout": "FormHorizontal",
+        "widgets": [
+          {
+            "type": "TextInput",
+            "entity": "Project",
+            "attribute": "Name"
+          },
+          {
+            "type": "DatePicker",
+            "entity": "Project",
+            "attribute": "StartDate"
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "editProject",
+        "layout": "FormHorizontal",
+        "widgets": [
+          {
+            "type": "TextInput",
+            "entity": "Project",
+            "attribute": "Name"
+          },
+          {
+            "type": "DatePicker",
+            "entity": "Project",
+            "attribute": "StartDate"
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "milestoneOverview",
+        "layout": "Sidebar",
+        "widgets": [
+          {
+            "type": "DataGrid",
+            "entity": "Milestone",
+            "columns": [
+              {
+                "attribute": "DueDate"
+              },
+              {
+                "attribute": "Status"
+              }
+            ]
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "milestoneDetail",
+        "layout": "FormHorizontal",
+        "widgets": [
+          {
+            "type": "DataView",
+            "entity": "Milestone",
+            "attributes": [
+              {
+                "attribute": "DueDate"
+              },
+              {
+                "attribute": "Status"
+              }
+            ]
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "newMilestone",
+        "layout": "FormHorizontal",
+        "widgets": [
+          {
+            "type": "DatePicker",
+            "entity": "Milestone",
+            "attribute": "DueDate"
+          },
+          {
+            "type": "Dropdown",
+            "entity": "Milestone",
+            "attribute": "Status"
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "editMilestone",
+        "layout": "FormHorizontal",
+        "widgets": [
+          {
+            "type": "DatePicker",
+            "entity": "Milestone",
+            "attribute": "DueDate"
+          },
+          {
+            "type": "Dropdown",
+            "entity": "Milestone",
+            "attribute": "Status"
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "taskOverview",
+        "layout": "Sidebar",
+        "widgets": [
+          {
+            "type": "DataGrid",
+            "entity": "Task",
+            "columns": [
+              {
+                "attribute": "Description"
+              },
+              {
+                "attribute": "DueDate"
+              }
+            ]
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "taskDetail",
+        "layout": "FormHorizontal",
+        "widgets": [
+          {
+            "type": "DataView",
+            "entity": "Task",
+            "attributes": [
+              {
+                "attribute": "Description"
+              },
+              {
+                "attribute": "DueDate"
+              }
+            ]
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "newTask",
+        "layout": "FormHorizontal",
+        "widgets": [
+          {
+            "type": "TextInput",
+            "entity": "Task",
+            "attribute": "Description"
+          },
+          {
+            "type": "DatePicker",
+            "entity": "Task",
+            "attribute": "DueDate"
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "editTask",
+        "layout": "FormHorizontal",
+        "widgets": [
+          {
+            "type": "TextInput",
+            "entity": "Task",
+            "attribute": "Description"
+          },
+          {
+            "type": "DatePicker",
+            "entity": "Task",
+            "attribute": "DueDate"
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "deliveryOverview",
+        "layout": "Sidebar",
+        "widgets": [
+          {
+            "type": "DataGrid",
+            "entity": "Delivery",
+            "columns": [
+              {
+                "attribute": "Description"
+              },
+              {
+                "attribute": "GoalDescription"
+              }
+            ]
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "deliveryDetail",
+        "layout": "FormHorizontal",
+        "widgets": [
+          {
+            "type": "DataView",
+            "entity": "Delivery",
+            "attributes": [
+              {
+                "attribute": "Description"
+              },
+              {
+                "attribute": "GoalDescription"
+              }
+            ]
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "newDelivery",
+        "layout": "FormHorizontal",
+        "widgets": [
+          {
+            "type": "TextInput",
+            "entity": "Delivery",
+            "attribute": "Description"
+          },
+          {
+            "type": "TextInput",
+            "entity": "Delivery",
+            "attribute": "GoalDescription"
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "editDelivery",
+        "layout": "FormHorizontal",
+        "widgets": [
+          {
+            "type": "TextInput",
+            "entity": "Delivery",
+            "attribute": "Description"
+          },
+          {
+            "type": "TextInput",
+            "entity": "Delivery",
+            "attribute": "GoalDescription"
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "fileOverview",
+        "layout": "Sidebar",
+        "widgets": [
+          {
+            "type": "DataGrid",
+            "entity": "File",
+            "columns": [
+              {
+                "attribute": "FileName"
+              },
+              {
+                "attribute": "FileType"
+              }
+            ]
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "fileDetail",
+        "layout": "FormHorizontal",
+        "widgets": [
+          {
+            "type": "DataView",
+            "entity": "File",
+            "attributes": [
+              {
+                "attribute": "FileName"
+              },
+              {
+                "attribute": "FileType"
+              }
+            ]
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "newFile",
+        "layout": "FormHorizontal",
+        "widgets": [
+          {
+            "type": "TextInput",
+            "entity": "File",
+            "attribute": "FileName"
+          },
+          {
+            "type": "Dropdown",
+            "entity": "File",
+            "attribute": "FileType"
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "editFile",
+        "layout": "FormHorizontal",
+        "widgets": [
+          {
+            "type": "TextInput",
+            "entity": "File",
+            "attribute": "FileName"
+          },
+          {
+            "type": "Dropdown",
+            "entity": "File",
+            "attribute": "FileType"
+          }
+        ],
+        "content": []
+      }
+    ]
+  },
+  "app": {
+    "navigation": [
+      {
+        "page": "home",
+        "role": "ProjectManager"
+      },
+      {
+        "page": "projectOverview",
+        "role": "ProjectManager"
+      },
+      {
+        "page": "newProject",
+        "role": "ProjectManager"
+      },
+      {
+        "page": "editProject",
+        "role": "ProjectManager"
+      },
+      {
+        "page": "milestoneOverview",
+        "role": "ProjectManager"
+      },
+      {
+        "page": "newMilestone",
+        "role": "ProjectManager"
+      },
+      {
+        "page": "editMilestone",
+        "role": "ProjectManager"
+      },
+      {
+        "page": "taskOverview",
+        "role": "TeamMember"
+      },
+      {
+        "page": "newTask",
+        "role": "TeamMember"
+      },
+      {
+        "page": "editTask",
+        "role": "TeamMember"
+      },
+      {
+        "page": "deliveryOverview",
+        "role": "Client"
+      },
+      {
+        "page": "newDelivery",
+        "role": "ProjectManager"
+      },
+      {
+        "page": "editDelivery",
+        "role": "ProjectManager"
+      },
+      {
+        "page": "fileOverview",
+        "role": "TeamMember"
+      },
+      {
+        "page": "newFile",
+        "role": "TeamMember"
+      },
+      {
+        "page": "editFile",
+        "role": "TeamMember"
+      }
+    ]
+  }
+}

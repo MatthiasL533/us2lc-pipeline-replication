@@ -1,0 +1,411 @@
+# Generated with Visual Narrator
+Prefix: : <http://fakesite.org/practicalperf_collaboration_stability.owl#>
+Prefix: owl: <http://www.w3.org/2002/07/owl#>
+Prefix: rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+Prefix: rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>
+Prefix: dc: <http://purl.org/dc/elements/1.1/>
+Prefix: onto: <http://fakesite.org/practicalperf_collaboration_stability.owl#>
+
+Ontology: <:>
+
+Annotations:
+	dc:title "PracticalPerf_collaboration_Stability",
+	dc:creator "Visual Narrator",
+	rdfs:comment "Generated with Visual Narrator"
+
+AnnotationProperty: dc:creator
+
+AnnotationProperty: dc:title
+
+
+# Relationships
+ObjectProperty: :canCreate1
+	Domain: :ProjectManager
+	Range: :Project
+
+ObjectProperty: :canCreate2
+	Domain: :ProjectManager
+	Range: :Milestone
+
+ObjectProperty: :canCreate3
+	Domain: :ProjectManager
+	Range: :Task
+
+ObjectProperty: :hasArchive
+	Domain: :File
+	Range: :FileArchive
+
+ObjectProperty: :canSort
+	Domain: :ProjectManager
+	Range: :File
+
+ObjectProperty: :canFind
+	Domain: :ProjectManager
+	Range: :File
+
+ObjectProperty: :canReceive
+	Domain: :Client
+	Range: :File
+
+ObjectProperty: :canAccess
+	Domain: :Client
+	Range: :File
+
+ObjectProperty: :canSearch
+	Domain: :ProjectManager
+	Range: :File
+
+ObjectProperty: :hasType
+	Domain: :File
+	Range: :FileType
+
+ObjectProperty: :canAssign
+	Domain: :ProjectManager
+	Range: :TeamMember
+
+ObjectProperty: :canAdd1
+	Domain: :ProjectManager
+	Range: :File
+
+ObjectProperty: :canAdd2
+	Domain: :ProjectManager
+	Range: :Description
+
+ObjectProperty: :canAdd3
+	Domain: :ProjectManager
+	Range: :Date
+
+ObjectProperty: :canAdd4
+	Domain: :Employee
+	Range: :Comment
+
+ObjectProperty: :hasRequest
+	Domain: :Access
+	Range: :AccessRequest
+
+ObjectProperty: :canMark
+	Domain: :TeamMember
+	Range: :Subtask
+
+ObjectProperty: :canRename
+	Domain: :ProjectManager
+	Range: :File
+
+ObjectProperty: :hasMessage
+	Domain: :Chat
+	Range: :ChatMessage
+
+ObjectProperty: :hasManager
+	Domain: :Project
+	Range: :ProjectManager
+
+ObjectProperty: :canDelete1
+	Domain: :ProjectManager
+	Range: :Milestone
+
+ObjectProperty: :canDelete2
+	Domain: :ProjectManager
+	Range: :File
+
+ObjectProperty: :canDelete3
+	Domain: :ProjectManager
+	Range: :TeamMember
+
+ObjectProperty: :canBase
+	Domain: :Client
+	Range: :Feedback
+
+ObjectProperty: :canCategorize
+	Domain: :ProjectManager
+	Range: :Task
+
+ObjectProperty: :canRate
+	Domain: :Client
+	Range: :Delivery
+
+ObjectProperty: :canSend
+	Domain: :TeamMember
+	Range: :ChatMessage
+
+ObjectProperty: :canInsert
+	Domain: :Client
+	Range: :Feedback
+
+ObjectProperty: :canProcess
+	Domain: :TeamMember
+	Range: :Feedback
+
+ObjectProperty: :hasMember
+	Domain: :Team
+	Range: :TeamMember
+
+ObjectProperty: :canFilter
+	Domain: :ProjectManager
+	Range: :FileType
+
+ObjectProperty: :canProvide
+	Domain: :ProjectManager
+	Range: :Feedback
+
+ObjectProperty: :canSave1
+	Domain: :ProjectManager
+	Range: :Delivery
+
+ObjectProperty: :canSave2
+	Domain: :Client
+	Range: :Feedback
+
+ObjectProperty: :canClutter
+	Domain: :Project
+	Range: :ProjectOverview
+
+ObjectProperty: :canChange
+	Domain: :ProjectManager
+	Range: :Status
+
+ObjectProperty: :hasDescription
+	Domain: :Goal
+	Range: :GoalDescription
+
+ObjectProperty: :canPublish1
+	Domain: :ProjectManager
+	Range: :Delivery
+
+ObjectProperty: :canPublish2
+	Domain: :Client
+	Range: :Feedback
+
+ObjectProperty: :canView1
+	Domain: :ProjectManager
+	Range: :Project
+
+ObjectProperty: :canView2
+	Domain: :TeamMember
+	Range: :Project
+
+ObjectProperty: :canView3
+	Domain: :ProjectManager
+	Range: :Milestone
+
+ObjectProperty: :canView4
+	Domain: :Client
+	Range: :GoalDescription
+
+ObjectProperty: :canView5
+	Domain: :ProjectManager
+	Range: :FileArchive
+
+ObjectProperty: :canView6
+	Domain: :TeamMember
+	Range: :File
+
+ObjectProperty: :canView7
+	Domain: :TeamMember
+	Range: :Detail
+
+ObjectProperty: :canView8
+	Domain: :TeamMember
+	Range: :Task
+
+ObjectProperty: :canView9
+	Domain: :TeamMember
+	Range: :Message
+
+ObjectProperty: :canView10
+	Domain: :TeamMember
+	Range: :Chat
+
+ObjectProperty: :canView11
+	Domain: :TeamMember
+	Range: :Feedback
+
+ObjectProperty: :canCommunicateWith
+	Domain: :TeamMember
+	Range: :TeamMember
+
+ObjectProperty: :canHandle
+	Domain: :ProjectManager
+	Range: :AccessRequest
+
+ObjectProperty: :canAssess
+	Domain: :ProjectManager
+	Range: :Work
+
+ObjectProperty: :canEdit1
+	Domain: :ProjectManager
+	Range: :Milestone
+
+ObjectProperty: :canEdit2
+	Domain: :TeamMember
+	Range: :File
+
+ObjectProperty: :canEdit3
+	Domain: :ProjectManager
+	Range: :Threshold
+
+ObjectProperty: :canOpen
+	Domain: :ProjectManager
+	Range: :File
+
+ObjectProperty: :canRequest
+	Domain: :TeamMember
+	Range: :Access
+
+ObjectProperty: :canFilterOn
+	Domain: :ProjectManager
+	Range: :Milestone
+
+ObjectProperty: :canArchive
+	Domain: :ProjectManager
+	Range: :Project
+
+ObjectProperty: :canHave1
+	Domain: :TeamMember
+	Range: :Overview
+
+ObjectProperty: :canHave2
+	Domain: :ProjectManager
+	Range: :Overview
+
+ObjectProperty: :canHave3
+	Domain: :TeamMember
+	Range: :Access
+
+ObjectProperty: :hasProject
+	Domain: :Archive
+	Range: :ArchiveProject
+
+# Classes
+Class: :ProjectManager
+	SubClassOf: :Manager
+	Annotations:
+		rdfs:label "Project Manager",
+		rdfs:comment "Functional Role"
+
+Class: :Manager
+
+
+Class: :Project
+
+
+Class: :ArchiveProject
+	SubClassOf: :Project
+	Annotations:
+		rdfs:label "Archive Project"
+
+Class: :Archive
+
+
+Class: :ProjectOverview
+	Annotations:
+		rdfs:label "Project Overview"
+
+Class: :TeamMember
+	SubClassOf: :Member
+	Annotations:
+		rdfs:label "Team Member",
+		rdfs:comment "Functional Role"
+
+Class: :Member
+
+
+Class: :Team
+
+
+Class: :Overview
+
+
+Class: :Milestone
+
+
+Class: :Status
+
+
+Class: :File
+
+
+Class: :Client
+	Annotations:
+		rdfs:comment "Functional Role"
+
+Class: :Description
+
+
+Class: :Delivery
+
+
+Class: :GoalDescription
+	SubClassOf: :Description
+	Annotations:
+		rdfs:label "Goal Description"
+
+Class: :Goal
+
+
+Class: :Feedback
+
+
+Class: :FileArchive
+	SubClassOf: :Archive
+	Annotations:
+		rdfs:label "File Archive"
+
+Class: :FileType
+	SubClassOf: :Type
+	Annotations:
+		rdfs:label "File Type"
+
+Class: :Type
+
+
+Class: :AccessRequest
+	SubClassOf: :Request
+	Annotations:
+		rdfs:label "Access Request"
+
+Class: :Request
+
+
+Class: :Access
+
+
+Class: :Threshold
+
+
+Class: :Task
+
+
+Class: :Date
+
+
+Class: :Detail
+
+
+Class: :Employee
+	Annotations:
+		rdfs:comment "Functional Role"
+
+Class: :Comment
+
+
+Class: :Subtask
+
+
+Class: :Message
+
+
+Class: :ChatMessage
+	SubClassOf: :Message
+	Annotations:
+		rdfs:label "Chat Message"
+
+Class: :Chat
+
+
+Class: :Work
+
+
+Class: :Statistic
+
+

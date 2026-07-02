@@ -1,0 +1,54 @@
+digraph bpmn_diagram {
+	node [color=black fillcolor=bisque shape=box style=filled]
+	T0 [label="manager: have an overview and modification functionality"]
+	node [color=black fillcolor=azure shape=diamond style=filled]
+	EG0_S [label=X]
+	node [color=black fillcolor=bisque shape=box style=filled]
+	T1 [label="student: verify accounts of students and tutors"]
+	T2 [label="tutor: select one or multiple subjects i want to be tutored in"]
+	T1 -> T2
+	T3 [label="tutor: update my availability dynamically in the app"]
+	T2 -> T3
+	T4 [label="student: specify my location"]
+	T3 -> T4
+	T5 [label="manager: cancel a session"]
+	T4 -> T5
+	T6 [label="student: be matched with a tutor that is available in the hours i have specified"]
+	T5 -> T6
+	T7 [label="tutor: be matched with a tutor who"]
+	T6 -> T7
+	T8 [label="tutor: be matched with a student that is interested in the subject i teach"]
+	EG0_S -> T8 [label="if located far away"]
+	T9 [label="manager: agree to online sessions"]
+	T8 -> T9
+	T10 [label="manager: students to receive notifications about an upcoming session on WhatsApp 1 and 3 days prior"]
+	T9 -> T10
+	T11 [label="manager: want the student to receive an email when the match is found"]
+	T10 -> T11
+	T12 [label="student: want the student to receive an email when the match is found"]
+	T11 -> T12
+	T13 [label="tutor: receive notifications three and one day prior to the session date"]
+	T14 [label="tutor: consider all available data"]
+	T15 [label="tutor: view my ratings"]
+	T14 -> T15
+	T0 -> EG0_S
+	node [color=black fillcolor=lightpink shape=ellipse style=filled]
+	START_0 [label=START]
+	START_0 -> T0
+	START_1 [label=START]
+	START_1 -> T1
+	END_0 [label=END]
+	T7 -> END_0
+	END_1 [label=END]
+	EG0_S -> END_1 [label=Else]
+	END_2 [label=END]
+	T12 -> END_2
+	START_2 [label=START]
+	START_2 -> T13
+	END_3 [label=END]
+	T13 -> END_3
+	START_3 [label=START]
+	START_3 -> T14
+	END_4 [label=END]
+	T15 -> END_4
+}

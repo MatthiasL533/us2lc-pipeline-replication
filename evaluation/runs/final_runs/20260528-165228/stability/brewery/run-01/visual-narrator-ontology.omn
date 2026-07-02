@@ -1,0 +1,269 @@
+# Generated with Visual Narrator
+Prefix: : <http://fakesite.org/practicalperf_brewery_stability.owl#>
+Prefix: owl: <http://www.w3.org/2002/07/owl#>
+Prefix: rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+Prefix: rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>
+Prefix: dc: <http://purl.org/dc/elements/1.1/>
+Prefix: onto: <http://fakesite.org/practicalperf_brewery_stability.owl#>
+
+Ontology: <:>
+
+Annotations:
+	dc:title "PracticalPerf_brewery_Stability",
+	dc:creator "Visual Narrator",
+	rdfs:comment "Generated with Visual Narrator"
+
+AnnotationProperty: dc:creator
+
+AnnotationProperty: dc:title
+
+
+# Relationships
+ObjectProperty: :canView1
+	Domain: :ManagementUser
+	Range: :Overview
+
+ObjectProperty: :canView2
+	Domain: :Brewery
+	Range: :Overview
+
+ObjectProperty: :canView3
+	Domain: :ManagementUser
+	Range: :Performance
+
+ObjectProperty: :canAccess
+	Domain: :Brewery
+	Range: :Contract
+
+ObjectProperty: :canSchedule
+	Domain: :HospitalityBusiness
+	Range: :Delivery
+
+ObjectProperty: :canAdjust
+	Domain: :HospitalityBusiness
+	Range: :Delivery
+
+ObjectProperty: :canSign
+	Domain: :Brewery
+	Range: :Contract
+
+ObjectProperty: :hasOrder
+	Domain: :Beer
+	Range: :BeerOrder
+
+ObjectProperty: :canBrowseWithin
+	Domain: :HospitalityBusiness
+	Range: :Catalogue
+
+ObjectProperty: :canManage1
+	Domain: :HospitalityBusiness
+	Range: :Order
+
+ObjectProperty: :canManage2
+	Domain: :Brewery
+	Range: :Contract
+
+ObjectProperty: :canManage3
+	Domain: :Brewery
+	Range: :Order
+
+ObjectProperty: :hasBusiness
+	Domain: :Hospitality
+	Range: :HospitalityBusiness
+
+ObjectProperty: :canReview
+	Domain: :ManagementUser
+	Range: :They
+
+ObjectProperty: :hasAssortment
+	Domain: :Product
+	Range: :ProductAssortment
+
+ObjectProperty: :canTailor
+	Domain: :HospitalityBusiness
+	Range: :ProductAssortment
+
+ObjectProperty: :canLog
+	Domain: :ManagementUser
+	Range: :Homepage
+
+ObjectProperty: :canMonitor
+	Domain: :Brewery
+	Range: :Order
+
+ObjectProperty: :canKeep
+	Domain: :Brewery
+	Range: :Assortment
+
+ObjectProperty: :canOffer1
+	Domain: :Brewery
+	Range: :Platform
+
+ObjectProperty: :canOffer2
+	Domain: :Brewery
+	Range: :Product
+
+ObjectProperty: :canCreate1
+	Domain: :ManagementUser
+	Range: :Proposal
+
+ObjectProperty: :canCreate2
+	Domain: :Brewery
+	Range: :Product
+
+ObjectProperty: :canCreate3
+	Domain: :ManagementUser
+	Range: :Contract
+
+ObjectProperty: :canCreate4
+	Domain: :HospitalityBusiness
+	Range: :Order
+
+ObjectProperty: :canCreate5
+	Domain: :HospitalityBusiness
+	Range: :OrderTemplate
+
+ObjectProperty: :canCreate6
+	Domain: :HospitalityBusiness
+	Range: :BeerOrder
+
+ObjectProperty: :hasUser
+	Domain: :Management
+	Range: :ManagementUser
+
+ObjectProperty: :canReceive
+	Domain: :HospitalityBusiness
+	Range: :Beer
+
+ObjectProperty: :canAdd
+	Domain: :Brewery
+	Range: :Brand
+
+ObjectProperty: :hasTemplate
+	Domain: :Order
+	Range: :OrderTemplate
+
+ObjectProperty: :canSee
+	Domain: :HospitalityBusiness
+	Range: :Platform
+
+ObjectProperty: :canPayFor
+	Domain: :HospitalityBusiness
+	Range: :Order
+
+ObjectProperty: :canModify1
+	Domain: :Brewery
+	Range: :Product
+
+ObjectProperty: :canModify2
+	Domain: :HospitalityBusiness
+	Range: :OrderTemplate
+
+ObjectProperty: :canContinueWith
+	Domain: :HospitalityBusiness
+	Range: :Order
+
+ObjectProperty: :canRenew
+	Domain: :Brewery
+	Range: :They
+
+ObjectProperty: :canNotify
+	Domain: :Brewery
+	Range: :HospitalityBusiness
+
+# Classes
+Class: :ManagementUser
+	SubClassOf: :User
+	Annotations:
+		rdfs:label "Management User",
+		rdfs:comment "Functional Role"
+
+Class: :User
+
+
+Class: :Management
+
+
+Class: :HospitalityBusiness
+	SubClassOf: :Business
+	Annotations:
+		rdfs:label "Hospitality Business",
+		rdfs:comment "Functional Role"
+
+Class: :Business
+
+
+Class: :Hospitality
+
+
+Class: :Homepage
+
+
+Class: :Proposal
+
+
+Class: :Overview
+
+
+Class: :They
+
+
+Class: :Order
+
+
+Class: :Brewery
+	Annotations:
+		rdfs:comment "Functional Role"
+
+Class: :Brand
+
+
+Class: :Product
+
+
+Class: :Assortment
+
+
+Class: :Platform
+
+
+Class: :Catalogue
+
+
+Class: :Contract
+
+
+Class: :Delivery
+
+
+Class: :OrderTemplate
+	SubClassOf: :Template
+	Annotations:
+		rdfs:label "Order Template"
+
+Class: :Template
+
+
+Class: :ProductAssortment
+	SubClassOf: :Assortment
+	Annotations:
+		rdfs:label "Product Assortment"
+
+Class: :BeerOrder
+	SubClassOf: :Order
+	Annotations:
+		rdfs:label "Beer Order"
+
+Class: :Beer
+
+
+Class: :Performance
+
+
+Class: :Account
+
+
+Class: :Cart
+
+

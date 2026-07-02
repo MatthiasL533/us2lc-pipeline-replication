@@ -1,0 +1,4745 @@
+{
+  "ok": true,
+  "inputPath": "/Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/artifacts/practical-performance/20260528-165228/inputs/grocery/user-stories.txt",
+  "systemName": "PracticalPerf_grocery_Stability",
+  "ontology": "# Generated with Visual Narrator\nPrefix: : <http://fakesite.org/practicalperf_grocery_stability.owl#>\nPrefix: owl: <http://www.w3.org/2002/07/owl#>\nPrefix: rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPrefix: rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPrefix: xsd: <http://www.w3.org/2001/XMLSchema#>\nPrefix: dc: <http://purl.org/dc/elements/1.1/>\nPrefix: onto: <http://fakesite.org/practicalperf_grocery_stability.owl#>\n\nOntology: <:>\n\nAnnotations:\n\tdc:title \"PracticalPerf_grocery_Stability\",\n\tdc:creator \"Visual Narrator\",\n\trdfs:comment \"Generated with Visual Narrator\"\n\nAnnotationProperty: dc:creator\n\nAnnotationProperty: dc:title\n\n\n# Relationships\nObjectProperty: :canEvaluate\n\tDomain: :Manager\n\tRange: :Employee\n\nObjectProperty: :canView1\n\tDomain: :Employee\n\tRange: :Schedule\n\nObjectProperty: :canView2\n\tDomain: :Manager\n\tRange: :Schedule\n\nObjectProperty: :canView3\n\tDomain: :OfficeEmployee\n\tRange: :Complaint\n\nObjectProperty: :canView4\n\tDomain: :Manager\n\tRange: :Complaint\n\nObjectProperty: :canView5\n\tDomain: :Manager\n\tRange: :Contract\n\nObjectProperty: :canView6\n\tDomain: :Manager\n\tRange: :Certificate\n\nObjectProperty: :canView7\n\tDomain: :Employee\n\tRange: :Inbox\n\nObjectProperty: :canView8\n\tDomain: :Employee\n\tRange: :Statement\n\nObjectProperty: :canView9\n\tDomain: :Employee\n\tRange: :Contract\n\nObjectProperty: :canKeep1\n\tDomain: :Manager\n\tRange: :Operation\n\nObjectProperty: :canKeep2\n\tDomain: :Employee\n\tRange: :Hour\n\nObjectProperty: :canKeep3\n\tDomain: :Employee\n\tRange: :Track\n\nObjectProperty: :canLose\n\tDomain: :Manager\n\tRange: :Track\n\nObjectProperty: :hasEmployee\n\tDomain: :Office\n\tRange: :OfficeEmployee\n\nObjectProperty: :canReset\n\tDomain: :Employee\n\tRange: :Password\n\nObjectProperty: :canScale\n\tDomain: :Manager\n\tRange: :Operation\n\nObjectProperty: :hasStatement\n\tDomain: :Salary\n\tRange: :SalaryStatement\n\nObjectProperty: :canStayWith\n\tDomain: :Employee\n\tRange: :Date\n\nObjectProperty: :canNavigateThrough\n\tDomain: :Employee\n\tRange: :Application\n\nObjectProperty: :canChange\n\tDomain: :Employee\n\tRange: :Information\n\nObjectProperty: :canUpTo\n\tDomain: :Manager\n\tRange: :Date\n\nObjectProperty: :canFind\n\tDomain: :Employee\n\tRange: :Information\n\nObjectProperty: :canAutomate\n\tDomain: :Manager\n\tRange: :PaymentSystem\n\nObjectProperty: :canPrioritize\n\tDomain: :OfficeEmployee\n\tRange: :Complaint\n\nObjectProperty: :canNotify1\n\tDomain: :Manager\n\tRange: :Practicalperf_grocery_stability\n\nObjectProperty: :canNotify2\n\tDomain: :Manager\n\tRange: :Employee\n\nObjectProperty: :hasSystem\n\tDomain: :Payment\n\tRange: :PaymentSystem\n\nObjectProperty: :canRegister\n\tDomain: :Applicant\n\tRange: :Account\n\nObjectProperty: :canSee\n\tDomain: :Employee\n\tRange: :Schedule\n\nObjectProperty: :canRespondTo\n\tDomain: :OfficeEmployee\n\tRange: :Complaint\n\nObjectProperty: :canHelp\n\tDomain: :OfficeEmployee\n\tRange: :Employee\n\nObjectProperty: :canReceive1\n\tDomain: :Employee\n\tRange: :SalaryStatement\n\nObjectProperty: :canReceive2\n\tDomain: :Employee\n\tRange: :Notification\n\nObjectProperty: :canAuthorize\n\tDomain: :Manager\n\tRange: :Schedule\n\nObjectProperty: :canForward\n\tDomain: :Manager\n\tRange: :Message\n\nObjectProperty: :canHire\n\tDomain: :Manager\n\tRange: :Employee\n\nObjectProperty: :canContact1\n\tDomain: :Employee\n\tRange: :Management\n\nObjectProperty: :canContact2\n\tDomain: :Manager\n\tRange: :Employee\n\nObjectProperty: :canOutsource\n\tDomain: :Manager\n\tRange: :Part\n\nObjectProperty: :canEnable\n\tDomain: :Manager\n\tRange: :Option\n\nObjectProperty: :canFile1\n\tDomain: :Employee\n\tRange: :Complaint\n\nObjectProperty: :canFile2\n\tDomain: :Manager\n\tRange: :Complaint\n\nObjectProperty: :canSend\n\tDomain: :Manager\n\tRange: :SalaryStatement\n\nObjectProperty: :canHave1\n\tDomain: :Employee\n\tRange: :Overview\n\nObjectProperty: :canHave2\n\tDomain: :Manager\n\tRange: :Ability\n\nObjectProperty: :canHave3\n\tDomain: :OfficeEmployee\n\tRange: :Overview\n\nObjectProperty: :canHave4\n\tDomain: :Manager\n\tRange: :Overview\n\nObjectProperty: :canHave5\n\tDomain: :Manager\n\tRange: :System\n\nObjectProperty: :canHave6\n\tDomain: :Employee\n\tRange: :Application\n\nObjectProperty: :canCategorize\n\tDomain: :OfficeEmployee\n\tRange: :Complaint\n\nObjectProperty: :canChooseBetween1\n\tDomain: :Employee\n\tRange: :Email\n\nObjectProperty: :canChooseBetween2\n\tDomain: :Employee\n\tRange: :Payment\n\nObjectProperty: :canAccess\n\tDomain: :Employee\n\tRange: :Account\n\n# Classes\nClass: :SalaryStatement\n\tSubClassOf: :Statement\n\tAnnotations:\n\t\trdfs:label \"Salary Statement\"\n\nClass: :Statement\n\n\nClass: :Salary\n\n\nClass: :Employee\n\tAnnotations:\n\t\trdfs:comment \"Functional Role\"\n\nClass: :Overview\n\n\nClass: :Manager\n\tAnnotations:\n\t\trdfs:comment \"Functional Role\"\n\nClass: :Option\n\n\nClass: :PaymentSystem\n\tSubClassOf: :System\n\tAnnotations:\n\t\trdfs:label \"Payment System\"\n\nClass: :System\n\n\nClass: :Payment\n\n\nClass: :Part\n\n\nClass: :Notification\n\n\nClass: :Date\n\n\nClass: :Ability\n\n\nClass: :Operation\n\n\nClass: :Schedule\n\n\nClass: :Practicalperf_grocery_stability\n\n\nClass: :Hour\n\n\nClass: :Track\n\n\nClass: :Complaint\n\n\nClass: :OfficeEmployee\n\tSubClassOf: :Employee\n\tAnnotations:\n\t\trdfs:label \"Office Employee\",\n\t\trdfs:comment \"Functional Role\"\n\nClass: :Office\n\n\nClass: :Applicant\n\tAnnotations:\n\t\trdfs:comment \"Functional Role\"\n\nClass: :Account\n\n\nClass: :Contract\n\n\nClass: :Certificate\n\n\nClass: :Management\n\n\nClass: :Message\n\n\nClass: :Inbox\n\n\nClass: :Password\n\n\nClass: :Application\n\n\nClass: :Email\n\n\nClass: :Information\n\n\nClass: :Process\n\n\n",
+  "stories": [
+    {
+      "number": 1,
+      "text": "As an employee, I want to receive my salary statement, so that I have a clear overview.",
+      "role": {
+        "name": "employee",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "statement",
+        "compound": [
+          "salary",
+          "statement"
+        ]
+      },
+      "json": {
+        "number": 1,
+        "text": "As an employee, I want to receive my salary statement, so that I have a clear overview.",
+        "iloc": [
+          3,
+          12
+        ],
+        "role": {
+          "text": "employee",
+          "indicator": "As an"
+        },
+        "means": {
+          "text": "receive my salary statement",
+          "indicator": "I want to"
+        },
+        "ends": {
+          "text": "I have a clear overview",
+          "indicator": "So that"
+        }
+      }
+    },
+    {
+      "number": 2,
+      "text": "As a manager, I want to send salary statements, so that my employees have a clear overview.",
+      "role": {
+        "name": "manager",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "statements",
+        "compound": [
+          "salary",
+          "statements"
+        ]
+      },
+      "json": {
+        "number": 2,
+        "text": "As a manager, I want to send salary statements, so that my employees have a clear overview.",
+        "iloc": [
+          3
+        ],
+        "role": {
+          "text": "manager",
+          "indicator": "As a"
+        },
+        "means": {
+          "text": "send salary statements",
+          "indicator": "I want to"
+        },
+        "ends": {
+          "text": "my employees have a clear overview",
+          "indicator": "So that"
+        }
+      }
+    },
+    {
+      "number": 3,
+      "text": "As a manager, I want to enable the option for weekly and monthly payments for my employees, so that employee satisfaction rises.",
+      "role": {
+        "name": "manager",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "option",
+        "compound": []
+      },
+      "json": {
+        "number": 3,
+        "text": "As a manager, I want to enable the option for weekly and monthly payments for my employees, so that employee satisfaction rises.",
+        "iloc": [
+          3
+        ],
+        "role": {
+          "text": "manager",
+          "indicator": "As a"
+        },
+        "means": {
+          "text": "enable the option for weekly and monthly payments for my employees",
+          "indicator": "I want to"
+        },
+        "ends": {
+          "text": "employee satisfaction rises",
+          "indicator": "So that"
+        }
+      }
+    },
+    {
+      "number": 4,
+      "text": "As a manager, I want to automate the payment system, so that all payments are handled correctly and on time.",
+      "role": {
+        "name": "manager",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "system",
+        "compound": [
+          "payment",
+          "system"
+        ]
+      },
+      "json": {
+        "number": 4,
+        "text": "As a manager, I want to automate the payment system, so that all payments are handled correctly and on time.",
+        "iloc": [
+          3
+        ],
+        "role": {
+          "text": "manager",
+          "indicator": "As a"
+        },
+        "means": {
+          "text": "automate the payment system",
+          "indicator": "I want to"
+        },
+        "ends": {
+          "text": "all payments are handled correctly and on time",
+          "indicator": "So that"
+        }
+      }
+    },
+    {
+      "number": 5,
+      "text": "As a manager, I want to outsource part of the payment process, so that I do not have to worry about local payment regulations for each country.",
+      "role": {
+        "name": "manager",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "part",
+        "compound": []
+      },
+      "json": {
+        "number": 5,
+        "text": "As a manager, I want to outsource part of the payment process, so that I do not have to worry about local payment regulations for each country.",
+        "iloc": [
+          3,
+          14
+        ],
+        "role": {
+          "text": "manager",
+          "indicator": "As a"
+        },
+        "means": {
+          "text": "outsource part of the payment process",
+          "indicator": "I want to"
+        },
+        "ends": {
+          "text": "I do not have to worry about local payment regulations for each country",
+          "indicator": "So that"
+        }
+      }
+    },
+    {
+      "number": 6,
+      "text": "As an employee, I want to receive a notification when my salary payment is handled, so that I stay up to date with my financial status.",
+      "role": {
+        "name": "employee",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "notification",
+        "compound": []
+      },
+      "json": {
+        "number": 6,
+        "text": "As an employee, I want to receive a notification when my salary payment is handled, so that I stay up to date with my financial status.",
+        "iloc": [
+          3,
+          17
+        ],
+        "role": {
+          "text": "employee",
+          "indicator": "As an"
+        },
+        "means": {
+          "text": "receive a notification when my salary payment is handled",
+          "indicator": "I want to"
+        },
+        "ends": {
+          "text": "I stay up to date with my financial status",
+          "indicator": "So that"
+        }
+      }
+    },
+    {
+      "number": 7,
+      "text": "As an employee, I want to express my preferred working hours, so that I am most likely to work on hours that best suit me.",
+      "role": {
+        "name": "employee",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "hours",
+        "compound": [
+          "working",
+          "hours"
+        ]
+      },
+      "json": {
+        "number": 7,
+        "text": "As an employee, I want to express my preferred working hours, so that I am most likely to work on hours that best suit me.",
+        "iloc": [
+          3,
+          13
+        ],
+        "role": {
+          "text": "employee",
+          "indicator": "As an"
+        },
+        "means": {
+          "text": "express my preferred working hours",
+          "indicator": "I want to"
+        },
+        "ends": {
+          "text": "I am most likely to work on hours that best suit me",
+          "indicator": "So that"
+        }
+      }
+    },
+    {
+      "number": 8,
+      "text": "As a manager, I want to semi-automate the scheduling process, so that the scheduling process is more efficient.",
+      "role": {
+        "name": "manager",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "process",
+        "compound": [
+          "scheduling",
+          "process"
+        ]
+      },
+      "json": {
+        "number": 8,
+        "text": "As a manager, I want to semi-automate the scheduling process, so that the scheduling process is more efficient.",
+        "iloc": [
+          3
+        ],
+        "role": {
+          "text": "manager",
+          "indicator": "As a"
+        },
+        "means": {
+          "text": "semi-automate the scheduling process",
+          "indicator": "I want to"
+        },
+        "ends": {
+          "text": "the scheduling process is more efficient",
+          "indicator": "So that"
+        }
+      }
+    },
+    {
+      "number": 9,
+      "text": "As a manager, I want to have the ability to manually edit the automatically-generated schedule, so that I can keep the operations running on busy days.",
+      "role": {
+        "name": "manager",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "ability",
+        "compound": []
+      },
+      "json": {
+        "number": 9,
+        "text": "As a manager, I want to have the ability to manually edit the automatically-generated schedule, so that I can keep the operations running on busy days.",
+        "iloc": [
+          3,
+          19
+        ],
+        "role": {
+          "text": "manager",
+          "indicator": "As a"
+        },
+        "means": {
+          "text": "have the ability to manually edit the automatically-generated schedule",
+          "indicator": "I want to"
+        },
+        "ends": {
+          "text": "I can keep the operations running on busy days",
+          "indicator": "So that"
+        }
+      }
+    },
+    {
+      "number": 10,
+      "text": "As a manager, I want to manually authorize the schedule before it goes live, so that I can ensure a correct schedule is being shared.",
+      "role": {
+        "name": "manager",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "schedule",
+        "compound": []
+      },
+      "json": {
+        "number": 10,
+        "text": "As a manager, I want to manually authorize the schedule before it goes live, so that I can ensure a correct schedule is being shared.",
+        "iloc": [
+          3,
+          16
+        ],
+        "role": {
+          "text": "manager",
+          "indicator": "As a"
+        },
+        "means": {
+          "text": "manually authorize the schedule before it goes live",
+          "indicator": "I want to"
+        },
+        "ends": {
+          "text": "I can ensure a correct schedule is being shared",
+          "indicator": "So that"
+        }
+      }
+    },
+    {
+      "number": 11,
+      "text": "As a manager, I want to be notified as soon as manual adjustments need to be made, so that I can swiftly handle these adjustments and keep a clear overview.",
+      "role": {
+        "name": "manager",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "PracticalPerf_grocery_Stability",
+        "compound": []
+      },
+      "json": {
+        "number": 11,
+        "text": "As a manager, I want to be notified as soon as manual adjustments need to be made, so that I can swiftly handle these adjustments and keep a clear overview.",
+        "iloc": [
+          3,
+          19
+        ],
+        "role": {
+          "text": "manager",
+          "indicator": "As a"
+        },
+        "means": {
+          "text": "be notified as soon as manual adjustments need to be made",
+          "indicator": "I want to"
+        },
+        "ends": {
+          "text": "I can swiftly handle these adjustments and keep a clear overview",
+          "indicator": "So that"
+        }
+      }
+    },
+    {
+      "number": 12,
+      "text": "As an employee, I want to receive notification when the new schedule is available, so that I can keep the scheduled hours free from other activities.",
+      "role": {
+        "name": "employee",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "notification",
+        "compound": []
+      },
+      "json": {
+        "number": 12,
+        "text": "As an employee, I want to receive notification when the new schedule is available, so that I can keep the scheduled hours free from other activities.",
+        "iloc": [
+          3,
+          16
+        ],
+        "role": {
+          "text": "employee",
+          "indicator": "As an"
+        },
+        "means": {
+          "text": "receive notification when the new schedule is available",
+          "indicator": "I want to"
+        },
+        "ends": {
+          "text": "I can keep the scheduled hours free from other activities",
+          "indicator": "So that"
+        }
+      }
+    },
+    {
+      "number": 13,
+      "text": "As an employee, I want to view the schedule at any given time, so that I can effectively keep track of my personal time.",
+      "role": {
+        "name": "employee",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "schedule",
+        "compound": []
+      },
+      "json": {
+        "number": 13,
+        "text": "As an employee, I want to view the schedule at any given time, so that I can effectively keep track of my personal time.",
+        "iloc": [
+          3,
+          15
+        ],
+        "role": {
+          "text": "employee",
+          "indicator": "As an"
+        },
+        "means": {
+          "text": "view the schedule at any given time",
+          "indicator": "I want to"
+        },
+        "ends": {
+          "text": "I can effectively keep track of my personal time",
+          "indicator": "So that"
+        }
+      }
+    },
+    {
+      "number": 14,
+      "text": "As a manager, I want to view the schedule at any given time, so that I can effectively manage the employee presence on the work floor.",
+      "role": {
+        "name": "manager",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "schedule",
+        "compound": []
+      },
+      "json": {
+        "number": 14,
+        "text": "As a manager, I want to view the schedule at any given time, so that I can effectively manage the employee presence on the work floor.",
+        "iloc": [
+          3,
+          15
+        ],
+        "role": {
+          "text": "manager",
+          "indicator": "As a"
+        },
+        "means": {
+          "text": "view the schedule at any given time",
+          "indicator": "I want to"
+        },
+        "ends": {
+          "text": "I can effectively manage the employee presence on the work floor",
+          "indicator": "So that"
+        }
+      }
+    },
+    {
+      "number": 18,
+      "text": "As an employee, I want to be able to file a complaint regarding my workplace, so that my problems can be solved.",
+      "role": {
+        "name": "employee",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "complaint",
+        "compound": []
+      },
+      "json": {
+        "number": 18,
+        "text": "As an employee, I want to be able to file a complaint regarding my workplace, so that my problems can be solved.",
+        "iloc": [
+          3
+        ],
+        "role": {
+          "text": "employee",
+          "indicator": "As an"
+        },
+        "means": {
+          "text": "file a complaint regarding my workplace",
+          "indicator": "I want to be able to"
+        },
+        "ends": {
+          "text": "my problems can be solved",
+          "indicator": "So that"
+        }
+      }
+    },
+    {
+      "number": 19,
+      "text": "As a manager, I want to be able to file a complaint regarding my workplace, so that my problems can be solved.",
+      "role": {
+        "name": "manager",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "complaint",
+        "compound": []
+      },
+      "json": {
+        "number": 19,
+        "text": "As a manager, I want to be able to file a complaint regarding my workplace, so that my problems can be solved.",
+        "iloc": [
+          3
+        ],
+        "role": {
+          "text": "manager",
+          "indicator": "As a"
+        },
+        "means": {
+          "text": "file a complaint regarding my workplace",
+          "indicator": "I want to be able to"
+        },
+        "ends": {
+          "text": "my problems can be solved",
+          "indicator": "So that"
+        }
+      }
+    },
+    {
+      "number": 21,
+      "text": "As an office employee, I want to be able to view all complaints, so that I can have an overview of the problems other employees face.",
+      "role": {
+        "name": "employee",
+        "compound": [
+          "office",
+          "employee"
+        ]
+      },
+      "means": {
+        "mainObject": "complaints",
+        "compound": []
+      },
+      "json": {
+        "number": 21,
+        "text": "As an office employee, I want to be able to view all complaints, so that I can have an overview of the problems other employees face.",
+        "iloc": [
+          4,
+          15
+        ],
+        "role": {
+          "text": "office employee",
+          "indicator": "As an"
+        },
+        "means": {
+          "text": "view all complaints",
+          "indicator": "I want to be able to"
+        },
+        "ends": {
+          "text": "I can have an overview of the problems other employees face",
+          "indicator": "So that"
+        }
+      }
+    },
+    {
+      "number": 22,
+      "text": "As a manager, I want to be able to view all complaints, so that I can have an overview of the problems my employees face.",
+      "role": {
+        "name": "manager",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "complaints",
+        "compound": []
+      },
+      "json": {
+        "number": 22,
+        "text": "As a manager, I want to be able to view all complaints, so that I can have an overview of the problems my employees face.",
+        "iloc": [
+          3,
+          14
+        ],
+        "role": {
+          "text": "manager",
+          "indicator": "As a"
+        },
+        "means": {
+          "text": "view all complaints",
+          "indicator": "I want to be able to"
+        },
+        "ends": {
+          "text": "I can have an overview of the problems my employees face",
+          "indicator": "So that"
+        }
+      }
+    },
+    {
+      "number": 23,
+      "text": "As an office employee, I want to be able to respond to unsolved complaints, so that I can help the employees with their problems.",
+      "role": {
+        "name": "employee",
+        "compound": [
+          "office",
+          "employee"
+        ]
+      },
+      "means": {
+        "mainObject": "complaints",
+        "compound": []
+      },
+      "json": {
+        "number": 23,
+        "text": "As an office employee, I want to be able to respond to unsolved complaints, so that I can help the employees with their problems.",
+        "iloc": [
+          4,
+          16
+        ],
+        "role": {
+          "text": "office employee",
+          "indicator": "As an"
+        },
+        "means": {
+          "text": "respond to unsolved complaints",
+          "indicator": "I want to be able to"
+        },
+        "ends": {
+          "text": "I can help the employees with their problems",
+          "indicator": "So that"
+        }
+      }
+    },
+    {
+      "number": 24,
+      "text": "As an office employee, I want to be able to categorize complaints, so that there is an overview of the extent of problem areas.",
+      "role": {
+        "name": "employee",
+        "compound": [
+          "office",
+          "employee"
+        ]
+      },
+      "means": {
+        "mainObject": "complaints",
+        "compound": []
+      },
+      "json": {
+        "number": 24,
+        "text": "As an office employee, I want to be able to categorize complaints, so that there is an overview of the extent of problem areas.",
+        "iloc": [
+          4
+        ],
+        "role": {
+          "text": "office employee",
+          "indicator": "As an"
+        },
+        "means": {
+          "text": "categorize complaints",
+          "indicator": "I want to be able to"
+        },
+        "ends": {
+          "text": "there is an overview of the extent of problem areas",
+          "indicator": "So that"
+        }
+      }
+    },
+    {
+      "number": 25,
+      "text": "As an office employee, I want to be able to prioritize complaints that require high management intervention to solve, so that important complaints will be solved swiftly.",
+      "role": {
+        "name": "employee",
+        "compound": [
+          "office",
+          "employee"
+        ]
+      },
+      "means": {
+        "mainObject": "complaints",
+        "compound": []
+      },
+      "json": {
+        "number": 25,
+        "text": "As an office employee, I want to be able to prioritize complaints that require high management intervention to solve, so that important complaints will be solved swiftly.",
+        "iloc": [
+          4
+        ],
+        "role": {
+          "text": "office employee",
+          "indicator": "As an"
+        },
+        "means": {
+          "text": "prioritize complaints that require high management intervention to solve",
+          "indicator": "I want to be able to"
+        },
+        "ends": {
+          "text": "important complaints will be solved swiftly",
+          "indicator": "So that"
+        }
+      }
+    },
+    {
+      "number": 26,
+      "text": "As an employee, I want to receive a notification when my filed complaint is handled, so that I can stay up to date with the status of my complaint.",
+      "role": {
+        "name": "employee",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "notification",
+        "compound": []
+      },
+      "json": {
+        "number": 26,
+        "text": "As an employee, I want to receive a notification when my filed complaint is handled, so that I can stay up to date with the status of my complaint.",
+        "iloc": [
+          3,
+          17
+        ],
+        "role": {
+          "text": "employee",
+          "indicator": "As an"
+        },
+        "means": {
+          "text": "receive a notification when my filed complaint is handled",
+          "indicator": "I want to"
+        },
+        "ends": {
+          "text": "I can stay up to date with the status of my complaint",
+          "indicator": "So that"
+        }
+      }
+    },
+    {
+      "number": 27,
+      "text": "As a manager, I want to be able to quickly and effectively hire new employees, so that I can easily scale up our operations.",
+      "role": {
+        "name": "manager",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "employees",
+        "compound": []
+      },
+      "json": {
+        "number": 27,
+        "text": "As a manager, I want to be able to quickly and effectively hire new employees, so that I can easily scale up our operations.",
+        "iloc": [
+          3,
+          17
+        ],
+        "role": {
+          "text": "manager",
+          "indicator": "As a"
+        },
+        "means": {
+          "text": "quickly and effectively hire new employees",
+          "indicator": "I want to be able to"
+        },
+        "ends": {
+          "text": "I can easily scale up our operations",
+          "indicator": "So that"
+        }
+      }
+    },
+    {
+      "number": 28,
+      "text": "As a manager, I want to be notified when the hiring process of an employee is finished, so that I am up to date regarding the status of our new employees.",
+      "role": {
+        "name": "manager",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "employee",
+        "compound": []
+      },
+      "json": {
+        "number": 28,
+        "text": "As a manager, I want to be notified when the hiring process of an employee is finished, so that I am up to date regarding the status of our new employees.",
+        "iloc": [
+          3,
+          19
+        ],
+        "role": {
+          "text": "manager",
+          "indicator": "As a"
+        },
+        "means": {
+          "text": "be notified when the hiring process of an employee is finished",
+          "indicator": "I want to"
+        },
+        "ends": {
+          "text": "I am up to date regarding the status of our new employees",
+          "indicator": "So that"
+        }
+      }
+    },
+    {
+      "number": 29,
+      "text": "As a manager, I want to be able to have an overview of all our active employees, so that I can easily evaluate our employees.",
+      "role": {
+        "name": "manager",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "overview",
+        "compound": []
+      },
+      "json": {
+        "number": 29,
+        "text": "As a manager, I want to be able to have an overview of all our active employees, so that I can easily evaluate our employees.",
+        "iloc": [
+          3,
+          19
+        ],
+        "role": {
+          "text": "manager",
+          "indicator": "As a"
+        },
+        "means": {
+          "text": "have an overview of all our active employees",
+          "indicator": "I want to be able to"
+        },
+        "ends": {
+          "text": "I can easily evaluate our employees",
+          "indicator": "So that"
+        }
+      }
+    },
+    {
+      "number": 30,
+      "text": "As a manager, I want to be able to have an overview of all our absent employees, so that I can manually verify these absences.",
+      "role": {
+        "name": "manager",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "overview",
+        "compound": []
+      },
+      "json": {
+        "number": 30,
+        "text": "As a manager, I want to be able to have an overview of all our absent employees, so that I can manually verify these absences.",
+        "iloc": [
+          3,
+          19
+        ],
+        "role": {
+          "text": "manager",
+          "indicator": "As a"
+        },
+        "means": {
+          "text": "have an overview of all our absent employees",
+          "indicator": "I want to be able to"
+        },
+        "ends": {
+          "text": "I can manually verify these absences",
+          "indicator": "So that"
+        }
+      }
+    },
+    {
+      "number": 31,
+      "text": "As an applicant, I want to be able to register an account, so that I can finalize my hiring process and start working at the organization.",
+      "role": {
+        "name": "applicant",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "account",
+        "compound": []
+      },
+      "json": {
+        "number": 31,
+        "text": "As an applicant, I want to be able to register an account, so that I can finalize my hiring process and start working at the organization.",
+        "iloc": [
+          3,
+          14
+        ],
+        "role": {
+          "text": "applicant",
+          "indicator": "As an"
+        },
+        "means": {
+          "text": "register an account",
+          "indicator": "I want to be able to"
+        },
+        "ends": {
+          "text": "I can finalize my hiring process and start working at the organization",
+          "indicator": "So that"
+        }
+      }
+    },
+    {
+      "number": 32,
+      "text": "As a manager, I want to be able to view my employee's contracts at any given time, so that I have a clear overview of when extensions are due.",
+      "role": {
+        "name": "manager",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "contracts",
+        "compound": []
+      },
+      "json": {
+        "number": 32,
+        "text": "As a manager, I want to be able to view my employee's contracts at any given time, so that I have a clear overview of when extensions are due.",
+        "iloc": [
+          3,
+          20
+        ],
+        "role": {
+          "text": "manager",
+          "indicator": "As a"
+        },
+        "means": {
+          "text": "view my employee's contracts at any given time",
+          "indicator": "I want to be able to"
+        },
+        "ends": {
+          "text": "I have a clear overview of when extensions are due",
+          "indicator": "So that"
+        }
+      }
+    },
+    {
+      "number": 33,
+      "text": "As a manager, I want to be able to view my employee's certificates at any given time, so that I have a clear overview of the qualifications of my employees.",
+      "role": {
+        "name": "manager",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "certificates",
+        "compound": []
+      },
+      "json": {
+        "number": 33,
+        "text": "As a manager, I want to be able to view my employee's certificates at any given time, so that I have a clear overview of the qualifications of my employees.",
+        "iloc": [
+          3,
+          20
+        ],
+        "role": {
+          "text": "manager",
+          "indicator": "As a"
+        },
+        "means": {
+          "text": "view my employee's certificates at any given time",
+          "indicator": "I want to be able to"
+        },
+        "ends": {
+          "text": "I have a clear overview of the qualifications of my employees",
+          "indicator": "So that"
+        }
+      }
+    },
+    {
+      "number": 34,
+      "text": "As an employee, I want to be able to contact the management when needed, so that I can discuss important topics regarding my employment with them.",
+      "role": {
+        "name": "employee",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "management",
+        "compound": []
+      },
+      "json": {
+        "number": 34,
+        "text": "As an employee, I want to be able to contact the management when needed, so that I can discuss important topics regarding my employment with them.",
+        "iloc": [
+          3,
+          16
+        ],
+        "role": {
+          "text": "employee",
+          "indicator": "As an"
+        },
+        "means": {
+          "text": "contact the management when needed",
+          "indicator": "I want to be able to"
+        },
+        "ends": {
+          "text": "I can discuss important topics regarding my employment with them",
+          "indicator": "So that"
+        }
+      }
+    },
+    {
+      "number": 35,
+      "text": "As a manager, I want to be able to contact an employee easily, so I can reach them when needed.",
+      "role": {
+        "name": "manager",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "employee",
+        "compound": []
+      },
+      "json": {
+        "number": 35,
+        "text": "As a manager, I want to be able to contact an employee easily, so I can reach them when needed.",
+        "iloc": [
+          3,
+          14
+        ],
+        "role": {
+          "text": "manager",
+          "indicator": "As a"
+        },
+        "means": {
+          "text": "contact an employee easily",
+          "indicator": "I want to be able to"
+        },
+        "ends": {
+          "text": "I can reach them when needed",
+          "indicator": "So"
+        }
+      }
+    },
+    {
+      "number": 36,
+      "text": "As an employee, I want to be able to use the messaging system to message other employees when needed, so that I can keep in touch with my colleagues.",
+      "role": {
+        "name": "employee",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "system",
+        "compound": [
+          "messaging",
+          "system"
+        ]
+      },
+      "json": {
+        "number": 36,
+        "text": "As an employee, I want to be able to use the messaging system to message other employees when needed, so that I can keep in touch with my colleagues.",
+        "iloc": [
+          3,
+          21
+        ],
+        "role": {
+          "text": "employee",
+          "indicator": "As an"
+        },
+        "means": {
+          "text": "use the messaging system to message other employees when needed",
+          "indicator": "I want to be able to"
+        },
+        "ends": {
+          "text": "I can keep in touch with my colleagues",
+          "indicator": "So that"
+        }
+      }
+    },
+    {
+      "number": 37,
+      "text": "As a manager, I want to be able to forward formal messages to employees in bulk, so that I can communicate with a big group of employees when needed.",
+      "role": {
+        "name": "manager",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "messages",
+        "compound": []
+      },
+      "json": {
+        "number": 37,
+        "text": "As a manager, I want to be able to forward formal messages to employees in bulk, so that I can communicate with a big group of employees when needed.",
+        "iloc": [
+          3,
+          18
+        ],
+        "role": {
+          "text": "manager",
+          "indicator": "As a"
+        },
+        "means": {
+          "text": "forward formal messages to employees in bulk",
+          "indicator": "I want to be able to"
+        },
+        "ends": {
+          "text": "I can communicate with a big group of employees when needed",
+          "indicator": "So that"
+        }
+      }
+    },
+    {
+      "number": 38,
+      "text": "As an employee, I want to view my personal inbox easily, so that I have a clear overview of important work-related information.",
+      "role": {
+        "name": "employee",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "inbox",
+        "compound": []
+      },
+      "json": {
+        "number": 38,
+        "text": "As an employee, I want to view my personal inbox easily, so that I have a clear overview of important work-related information.",
+        "iloc": [
+          3,
+          13
+        ],
+        "role": {
+          "text": "employee",
+          "indicator": "As an"
+        },
+        "means": {
+          "text": "view my personal inbox easily",
+          "indicator": "I want to"
+        },
+        "ends": {
+          "text": "I have a clear overview of important work-related information",
+          "indicator": "So that"
+        }
+      }
+    },
+    {
+      "number": 39,
+      "text": "As a manager, I want to have one system with one login, so that I don't lose track of my account information.",
+      "role": {
+        "name": "manager",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "system",
+        "compound": []
+      },
+      "json": {
+        "number": 39,
+        "text": "As a manager, I want to have one system with one login, so that I don't lose track of my account information.",
+        "iloc": [
+          3,
+          14
+        ],
+        "role": {
+          "text": "manager",
+          "indicator": "As a"
+        },
+        "means": {
+          "text": "have one system with one login",
+          "indicator": "I want to"
+        },
+        "ends": {
+          "text": "I don't lose track of my account information",
+          "indicator": "So that"
+        }
+      }
+    },
+    {
+      "number": 40,
+      "text": "As an employee, I want to be able to reset my password, so that I can always access my account.",
+      "role": {
+        "name": "employee",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "password",
+        "compound": []
+      },
+      "json": {
+        "number": 40,
+        "text": "As an employee, I want to be able to reset my password, so that I can always access my account.",
+        "iloc": [
+          3,
+          14
+        ],
+        "role": {
+          "text": "employee",
+          "indicator": "As an"
+        },
+        "means": {
+          "text": "reset my password",
+          "indicator": "I want to be able to"
+        },
+        "ends": {
+          "text": "I can always access my account",
+          "indicator": "So that"
+        }
+      }
+    },
+    {
+      "number": 41,
+      "text": "As an employee, I want to have a user-friendly application, so that I can access all functionalities easily.",
+      "role": {
+        "name": "employee",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "application",
+        "compound": []
+      },
+      "json": {
+        "number": 41,
+        "text": "As an employee, I want to have a user-friendly application, so that I can access all functionalities easily.",
+        "iloc": [
+          3,
+          14
+        ],
+        "role": {
+          "text": "employee",
+          "indicator": "As an"
+        },
+        "means": {
+          "text": "have a user-friendly application",
+          "indicator": "I want to"
+        },
+        "ends": {
+          "text": "I can access all functionalities easily",
+          "indicator": "So that"
+        }
+      }
+    },
+    {
+      "number": 42,
+      "text": "As an employee, I want to be able to navigate through the application easily, so that I can quickly see my schedule while riding.",
+      "role": {
+        "name": "employee",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "application",
+        "compound": []
+      },
+      "json": {
+        "number": 42,
+        "text": "As an employee, I want to be able to navigate through the application easily, so that I can quickly see my schedule while riding.",
+        "iloc": [
+          3,
+          16
+        ],
+        "role": {
+          "text": "employee",
+          "indicator": "As an"
+        },
+        "means": {
+          "text": "navigate through the application easily",
+          "indicator": "I want to be able to"
+        },
+        "ends": {
+          "text": "I can quickly see my schedule while riding",
+          "indicator": "So that"
+        }
+      }
+    },
+    {
+      "number": 43,
+      "text": "As an employee, I want to be able to choose between email or application notifications, so that I can adjust my administration in the way that I prefer.",
+      "role": {
+        "name": "employee",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "email",
+        "compound": []
+      },
+      "json": {
+        "number": 43,
+        "text": "As an employee, I want to be able to choose between email or application notifications, so that I can adjust my administration in the way that I prefer.",
+        "iloc": [
+          3,
+          17,
+          26
+        ],
+        "role": {
+          "text": "employee",
+          "indicator": "As an"
+        },
+        "means": {
+          "text": "choose between email or application notifications",
+          "indicator": "I want to be able to"
+        },
+        "ends": {
+          "text": "I can adjust my administration in the way that I prefer",
+          "indicator": "So that"
+        }
+      }
+    },
+    {
+      "number": 44,
+      "text": "As an employee, I want to be able to choose between weekly or monthly payments, so that I can adjust my payment routine to my lifestyle.",
+      "role": {
+        "name": "employee",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "payments",
+        "compound": []
+      },
+      "json": {
+        "number": 44,
+        "text": "As an employee, I want to be able to choose between weekly or monthly payments, so that I can adjust my payment routine to my lifestyle.",
+        "iloc": [
+          3,
+          17
+        ],
+        "role": {
+          "text": "employee",
+          "indicator": "As an"
+        },
+        "means": {
+          "text": "choose between weekly or monthly payments",
+          "indicator": "I want to be able to"
+        },
+        "ends": {
+          "text": "I can adjust my payment routine to my lifestyle",
+          "indicator": "So that"
+        }
+      }
+    },
+    {
+      "number": 45,
+      "text": "As an employee, I want to be able to view my financial annual statements, so that I can easily find my financial information for filing taxes, etc.",
+      "role": {
+        "name": "employee",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "statements",
+        "compound": []
+      },
+      "json": {
+        "number": 45,
+        "text": "As an employee, I want to be able to view my financial annual statements, so that I can easily find my financial information for filing taxes, etc.",
+        "iloc": [
+          3,
+          16
+        ],
+        "role": {
+          "text": "employee",
+          "indicator": "As an"
+        },
+        "means": {
+          "text": "view my financial annual statements",
+          "indicator": "I want to be able to"
+        },
+        "ends": {
+          "text": "I can easily find my financial information for filing taxes etc",
+          "indicator": "So that"
+        }
+      }
+    },
+    {
+      "number": 47,
+      "text": "As an employee, I want to be able to change my personal information, so that the information my employer has is always up to date.",
+      "role": {
+        "name": "employee",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "information",
+        "compound": []
+      },
+      "json": {
+        "number": 47,
+        "text": "As an employee, I want to be able to change my personal information, so that the information my employer has is always up to date.",
+        "iloc": [
+          3
+        ],
+        "role": {
+          "text": "employee",
+          "indicator": "As an"
+        },
+        "means": {
+          "text": "change my personal information",
+          "indicator": "I want to be able to"
+        },
+        "ends": {
+          "text": "the information my employer has is always up to date",
+          "indicator": "So that"
+        }
+      }
+    },
+    {
+      "number": 48,
+      "text": "As an employee, I want to be able to view my contract, so that I have a clear overview of important work-related information.",
+      "role": {
+        "name": "employee",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "contract",
+        "compound": []
+      },
+      "json": {
+        "number": 48,
+        "text": "As an employee, I want to be able to view my contract, so that I have a clear overview of important work-related information.",
+        "iloc": [
+          3,
+          14
+        ],
+        "role": {
+          "text": "employee",
+          "indicator": "As an"
+        },
+        "means": {
+          "text": "view my contract",
+          "indicator": "I want to be able to"
+        },
+        "ends": {
+          "text": "I have a clear overview of important work-related information",
+          "indicator": "So that"
+        }
+      }
+    }
+  ],
+  "failedStories": [
+    [
+      15,
+      "As an employee, I want the system to automatically verify my work hours, so that my salary statements are calculated accurately.",
+      [
+        "Could not find a means indicator",
+        1
+      ]
+    ],
+    [
+      16,
+      "As a manager, I want the system to automatically verify employees' work hours, so that employees' salary statements are calculated accurately.",
+      [
+        "Could not find a means indicator",
+        1
+      ]
+    ],
+    [
+      17,
+      "As an office employee, I want a separate complaint system with tickets, so that I don't have to filter through my email for complaints anymore.",
+      [
+        "Could not find a means indicator",
+        1
+      ]
+    ],
+    [
+      20,
+      "As a manager, I want my employees to be able to file complaints regarding their workplace, so that employee satisfaction rises.",
+      [
+        "Could not find a means indicator",
+        1
+      ]
+    ],
+    [
+      46,
+      "As an employee, I want the information that is shared with the payment handler to be encrypted, so that my privacy is ensured.",
+      [
+        "Could not find a means indicator",
+        1
+      ]
+    ],
+    [
+      49,
+      "As an employee, I want the application as secure as possible, so that my data does not fall into malicious hands.",
+      [
+        "Could not find a means indicator",
+        1
+      ]
+    ]
+  ],
+  "classes": [
+    {
+      "name": "Salary Statement",
+      "parent": "Statement",
+      "isRole": false,
+      "stories": [
+        1,
+        1,
+        1,
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "name": "Statement",
+      "parent": "",
+      "isRole": false,
+      "stories": [
+        -1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        45,
+        45,
+        45,
+        45
+      ]
+    },
+    {
+      "name": "Salary",
+      "parent": "",
+      "isRole": false,
+      "stories": [
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        2,
+        6,
+        6,
+        6
+      ]
+    },
+    {
+      "name": "Employee",
+      "parent": "",
+      "isRole": true,
+      "stories": [
+        -1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        34,
+        34,
+        34,
+        34,
+        34,
+        34,
+        34,
+        34,
+        34,
+        34,
+        34,
+        34,
+        34,
+        34,
+        34,
+        34,
+        34,
+        34,
+        34,
+        34,
+        34,
+        34,
+        34,
+        34,
+        34,
+        34,
+        34,
+        34,
+        34,
+        34,
+        34,
+        34,
+        34,
+        34,
+        34,
+        34,
+        34,
+        34,
+        34,
+        34,
+        34,
+        34,
+        34,
+        34,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        38,
+        38,
+        38,
+        38,
+        38,
+        38,
+        38,
+        38,
+        38,
+        38,
+        38,
+        38,
+        38,
+        38,
+        38,
+        38,
+        38,
+        38,
+        38,
+        38,
+        38,
+        38,
+        38,
+        38,
+        38,
+        38,
+        38,
+        38,
+        38,
+        38,
+        38,
+        38,
+        38,
+        38,
+        38,
+        38,
+        38,
+        38,
+        38,
+        38,
+        38,
+        38,
+        38,
+        38,
+        38,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45,
+        47,
+        47,
+        47,
+        47,
+        47,
+        47,
+        47,
+        47,
+        47,
+        47,
+        47,
+        47,
+        47,
+        47,
+        47,
+        47,
+        47,
+        47,
+        47,
+        47,
+        47,
+        47,
+        47,
+        47,
+        47,
+        47,
+        47,
+        47,
+        47,
+        47,
+        47,
+        47,
+        47,
+        47,
+        47,
+        47,
+        47,
+        47,
+        47,
+        47,
+        47,
+        47,
+        47,
+        47,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48
+      ]
+    },
+    {
+      "name": "Overview",
+      "parent": "",
+      "isRole": false,
+      "stories": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        38,
+        38,
+        38,
+        38,
+        38,
+        38,
+        38,
+        38,
+        38,
+        38,
+        38,
+        38,
+        38,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48
+      ]
+    },
+    {
+      "name": "Manager",
+      "parent": "",
+      "isRole": true,
+      "stories": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39
+      ]
+    },
+    {
+      "name": "Option",
+      "parent": "",
+      "isRole": false,
+      "stories": [
+        3,
+        3
+      ]
+    },
+    {
+      "name": "Payment System",
+      "parent": "System",
+      "isRole": false,
+      "stories": [
+        4,
+        4,
+        4
+      ]
+    },
+    {
+      "name": "System",
+      "parent": "",
+      "isRole": false,
+      "stories": [
+        -1,
+        4,
+        4,
+        4,
+        36,
+        36,
+        36,
+        39,
+        39,
+        39,
+        39
+      ]
+    },
+    {
+      "name": "Payment",
+      "parent": "",
+      "isRole": false,
+      "stories": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44
+      ]
+    },
+    {
+      "name": "Part",
+      "parent": "",
+      "isRole": false,
+      "stories": [
+        5,
+        5
+      ]
+    },
+    {
+      "name": "Notification",
+      "parent": "",
+      "isRole": false,
+      "stories": [
+        6,
+        6,
+        6,
+        6,
+        6,
+        12,
+        12,
+        12,
+        12,
+        12,
+        26,
+        26,
+        26,
+        26,
+        26,
+        43,
+        43,
+        43,
+        43
+      ]
+    },
+    {
+      "name": "Date",
+      "parent": "",
+      "isRole": false,
+      "stories": [
+        6,
+        6,
+        6,
+        6,
+        6,
+        26,
+        26,
+        26,
+        26,
+        26,
+        28,
+        28,
+        28,
+        28,
+        28,
+        47,
+        47,
+        47,
+        47
+      ]
+    },
+    {
+      "name": "Ability",
+      "parent": "",
+      "isRole": false,
+      "stories": [
+        9,
+        9
+      ]
+    },
+    {
+      "name": "Operation",
+      "parent": "",
+      "isRole": false,
+      "stories": [
+        9,
+        9,
+        9,
+        27,
+        27,
+        27
+      ]
+    },
+    {
+      "name": "Schedule",
+      "parent": "",
+      "isRole": false,
+      "stories": [
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42
+      ]
+    },
+    {
+      "name": "Practicalperf_grocery_stability",
+      "parent": "",
+      "isRole": false,
+      "stories": [
+        11
+      ]
+    },
+    {
+      "name": "Hour",
+      "parent": "",
+      "isRole": false,
+      "stories": [
+        7,
+        7,
+        7,
+        12,
+        12,
+        12,
+        12
+      ]
+    },
+    {
+      "name": "Track",
+      "parent": "",
+      "isRole": false,
+      "stories": [
+        13,
+        13,
+        13,
+        39,
+        39,
+        39
+      ]
+    },
+    {
+      "name": "Complaint",
+      "parent": "",
+      "isRole": false,
+      "stories": [
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26
+      ]
+    },
+    {
+      "name": "Office Employee",
+      "parent": "Employee",
+      "isRole": true,
+      "stories": [
+        21,
+        21,
+        21,
+        21,
+        21,
+        23,
+        23,
+        23,
+        23,
+        23,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        25,
+        25,
+        25,
+        25
+      ]
+    },
+    {
+      "name": "Office",
+      "parent": "",
+      "isRole": false,
+      "stories": [
+        21,
+        21,
+        21,
+        21,
+        21,
+        23,
+        23,
+        23,
+        23,
+        23,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        25,
+        25,
+        25,
+        25,
+        25
+      ]
+    },
+    {
+      "name": "Applicant",
+      "parent": "",
+      "isRole": true,
+      "stories": [
+        31,
+        31,
+        31
+      ]
+    },
+    {
+      "name": "Account",
+      "parent": "",
+      "isRole": false,
+      "stories": [
+        31,
+        31,
+        31,
+        31,
+        39,
+        39,
+        39,
+        40,
+        40,
+        40,
+        40
+      ]
+    },
+    {
+      "name": "Contract",
+      "parent": "",
+      "isRole": false,
+      "stories": [
+        32,
+        32,
+        32,
+        48,
+        48,
+        48
+      ]
+    },
+    {
+      "name": "Certificate",
+      "parent": "",
+      "isRole": false,
+      "stories": [
+        33,
+        33
+      ]
+    },
+    {
+      "name": "Management",
+      "parent": "",
+      "isRole": false,
+      "stories": [
+        25,
+        25,
+        34,
+        34,
+        34
+      ]
+    },
+    {
+      "name": "Message",
+      "parent": "",
+      "isRole": false,
+      "stories": [
+        36,
+        36,
+        37,
+        37,
+        37
+      ]
+    },
+    {
+      "name": "Inbox",
+      "parent": "",
+      "isRole": false,
+      "stories": [
+        38,
+        38
+      ]
+    },
+    {
+      "name": "Password",
+      "parent": "",
+      "isRole": false,
+      "stories": [
+        40,
+        40
+      ]
+    },
+    {
+      "name": "Application",
+      "parent": "",
+      "isRole": false,
+      "stories": [
+        41,
+        41,
+        41,
+        41,
+        42,
+        42,
+        42,
+        42,
+        43,
+        43,
+        43
+      ]
+    },
+    {
+      "name": "Email",
+      "parent": "",
+      "isRole": false,
+      "stories": [
+        43,
+        43
+      ]
+    },
+    {
+      "name": "Information",
+      "parent": "",
+      "isRole": false,
+      "stories": [
+        38,
+        38,
+        38,
+        38,
+        38,
+        38,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45,
+        47,
+        47,
+        47,
+        47,
+        47,
+        47,
+        47,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48
+      ]
+    },
+    {
+      "name": "Process",
+      "parent": "",
+      "isRole": false,
+      "stories": [
+        5,
+        5,
+        5,
+        5,
+        5,
+        8,
+        8,
+        8,
+        8,
+        8,
+        28,
+        28,
+        28,
+        28,
+        28,
+        31,
+        31,
+        31,
+        31,
+        31
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "name": "hasStatement",
+      "domain": "Salary",
+      "range": "Salary Statement",
+      "stories": [
+        1,
+        2
+      ]
+    },
+    {
+      "name": "canReceive",
+      "domain": "Employee",
+      "range": "Salary Statement",
+      "stories": [
+        1
+      ]
+    },
+    {
+      "name": "canHave",
+      "domain": "Employee",
+      "range": "Overview",
+      "stories": [
+        1,
+        2,
+        38,
+        48
+      ]
+    },
+    {
+      "name": "canSend",
+      "domain": "Manager",
+      "range": "Salary Statement",
+      "stories": [
+        2
+      ]
+    },
+    {
+      "name": "canEnable",
+      "domain": "Manager",
+      "range": "Option",
+      "stories": [
+        3
+      ]
+    },
+    {
+      "name": "hasSystem",
+      "domain": "Payment",
+      "range": "Payment System",
+      "stories": [
+        4
+      ]
+    },
+    {
+      "name": "canAutomate",
+      "domain": "Manager",
+      "range": "Payment System",
+      "stories": [
+        4
+      ]
+    },
+    {
+      "name": "canOutsource",
+      "domain": "Manager",
+      "range": "Part",
+      "stories": [
+        5
+      ]
+    },
+    {
+      "name": "canReceive",
+      "domain": "Employee",
+      "range": "Notification",
+      "stories": [
+        6,
+        12,
+        26
+      ]
+    },
+    {
+      "name": "canStay With",
+      "domain": "Employee",
+      "range": "Date",
+      "stories": [
+        6,
+        26
+      ]
+    },
+    {
+      "name": "canHave",
+      "domain": "Manager",
+      "range": "Ability",
+      "stories": [
+        9
+      ]
+    },
+    {
+      "name": "canKeep",
+      "domain": "Manager",
+      "range": "Operation",
+      "stories": [
+        9
+      ]
+    },
+    {
+      "name": "canAuthorize",
+      "domain": "Manager",
+      "range": "Schedule",
+      "stories": [
+        10
+      ]
+    },
+    {
+      "name": "canNotify",
+      "domain": "Manager",
+      "range": "Practicalperf_grocery_stability",
+      "stories": [
+        11
+      ]
+    },
+    {
+      "name": "canKeep",
+      "domain": "Employee",
+      "range": "Hour",
+      "stories": [
+        12
+      ]
+    },
+    {
+      "name": "canView",
+      "domain": "Employee",
+      "range": "Schedule",
+      "stories": [
+        13
+      ]
+    },
+    {
+      "name": "canKeep",
+      "domain": "Employee",
+      "range": "Track",
+      "stories": [
+        13
+      ]
+    },
+    {
+      "name": "canView",
+      "domain": "Manager",
+      "range": "Schedule",
+      "stories": [
+        14
+      ]
+    },
+    {
+      "name": "canFile",
+      "domain": "Employee",
+      "range": "Complaint",
+      "stories": [
+        18
+      ]
+    },
+    {
+      "name": "canFile",
+      "domain": "Manager",
+      "range": "Complaint",
+      "stories": [
+        19
+      ]
+    },
+    {
+      "name": "hasEmployee",
+      "domain": "Office",
+      "range": "Office Employee",
+      "stories": [
+        21,
+        23,
+        24,
+        24,
+        25
+      ]
+    },
+    {
+      "name": "canView",
+      "domain": "Office Employee",
+      "range": "Complaint",
+      "stories": [
+        21
+      ]
+    },
+    {
+      "name": "canHave",
+      "domain": "Office Employee",
+      "range": "Overview",
+      "stories": [
+        21
+      ]
+    },
+    {
+      "name": "canView",
+      "domain": "Manager",
+      "range": "Complaint",
+      "stories": [
+        22
+      ]
+    },
+    {
+      "name": "canHave",
+      "domain": "Manager",
+      "range": "Overview",
+      "stories": [
+        22,
+        29,
+        30,
+        32,
+        33
+      ]
+    },
+    {
+      "name": "canRespond To",
+      "domain": "Office Employee",
+      "range": "Complaint",
+      "stories": [
+        23
+      ]
+    },
+    {
+      "name": "canHelp",
+      "domain": "Office Employee",
+      "range": "Employee",
+      "stories": [
+        23
+      ]
+    },
+    {
+      "name": "canCategorize",
+      "domain": "Office Employee",
+      "range": "Complaint",
+      "stories": [
+        24
+      ]
+    },
+    {
+      "name": "canPrioritize",
+      "domain": "Office Employee",
+      "range": "Complaint",
+      "stories": [
+        25
+      ]
+    },
+    {
+      "name": "canHire",
+      "domain": "Manager",
+      "range": "Employee",
+      "stories": [
+        27
+      ]
+    },
+    {
+      "name": "canScale",
+      "domain": "Manager",
+      "range": "Operation",
+      "stories": [
+        27
+      ]
+    },
+    {
+      "name": "canNotify",
+      "domain": "Manager",
+      "range": "Employee",
+      "stories": [
+        28
+      ]
+    },
+    {
+      "name": "canUp To",
+      "domain": "Manager",
+      "range": "Date",
+      "stories": [
+        28
+      ]
+    },
+    {
+      "name": "canEvaluate",
+      "domain": "Manager",
+      "range": "Employee",
+      "stories": [
+        29
+      ]
+    },
+    {
+      "name": "canRegister",
+      "domain": "Applicant",
+      "range": "Account",
+      "stories": [
+        31
+      ]
+    },
+    {
+      "name": "canView",
+      "domain": "Manager",
+      "range": "Contract",
+      "stories": [
+        32
+      ]
+    },
+    {
+      "name": "canView",
+      "domain": "Manager",
+      "range": "Certificate",
+      "stories": [
+        33
+      ]
+    },
+    {
+      "name": "canContact",
+      "domain": "Employee",
+      "range": "Management",
+      "stories": [
+        34
+      ]
+    },
+    {
+      "name": "canContact",
+      "domain": "Manager",
+      "range": "Employee",
+      "stories": [
+        35
+      ]
+    },
+    {
+      "name": "canForward",
+      "domain": "Manager",
+      "range": "Message",
+      "stories": [
+        37
+      ]
+    },
+    {
+      "name": "canView",
+      "domain": "Employee",
+      "range": "Inbox",
+      "stories": [
+        38
+      ]
+    },
+    {
+      "name": "canHave",
+      "domain": "Manager",
+      "range": "System",
+      "stories": [
+        39
+      ]
+    },
+    {
+      "name": "canLose",
+      "domain": "Manager",
+      "range": "Track",
+      "stories": [
+        39
+      ]
+    },
+    {
+      "name": "canReset",
+      "domain": "Employee",
+      "range": "Password",
+      "stories": [
+        40
+      ]
+    },
+    {
+      "name": "canAccess",
+      "domain": "Employee",
+      "range": "Account",
+      "stories": [
+        40
+      ]
+    },
+    {
+      "name": "canHave",
+      "domain": "Employee",
+      "range": "Application",
+      "stories": [
+        41
+      ]
+    },
+    {
+      "name": "canNavigate Through",
+      "domain": "Employee",
+      "range": "Application",
+      "stories": [
+        42
+      ]
+    },
+    {
+      "name": "canSee",
+      "domain": "Employee",
+      "range": "Schedule",
+      "stories": [
+        42
+      ]
+    },
+    {
+      "name": "canChoose Between",
+      "domain": "Employee",
+      "range": "Email",
+      "stories": [
+        43
+      ]
+    },
+    {
+      "name": "canChoose Between",
+      "domain": "Employee",
+      "range": "Payment",
+      "stories": [
+        44
+      ]
+    },
+    {
+      "name": "canView",
+      "domain": "Employee",
+      "range": "Statement",
+      "stories": [
+        45
+      ]
+    },
+    {
+      "name": "canFind",
+      "domain": "Employee",
+      "range": "Information",
+      "stories": [
+        45
+      ]
+    },
+    {
+      "name": "canChange",
+      "domain": "Employee",
+      "range": "Information",
+      "stories": [
+        47
+      ]
+    },
+    {
+      "name": "canView",
+      "domain": "Employee",
+      "range": "Contract",
+      "stories": [
+        48
+      ]
+    }
+  ],
+  "inferredRoles": [
+    "applicant",
+    "employee",
+    "manager"
+  ],
+  "keyNouns": [
+    {
+      "term": "Employee",
+      "weight": 26.5
+    },
+    {
+      "term": "Manager",
+      "weight": 20
+    },
+    {
+      "term": "Complaint",
+      "weight": 7
+    },
+    {
+      "term": "Overview",
+      "weight": 6
+    },
+    {
+      "term": "Schedule",
+      "weight": 3.5
+    },
+    {
+      "term": "System",
+      "weight": 3
+    },
+    {
+      "term": "Notification",
+      "weight": 3
+    },
+    {
+      "term": "Statement",
+      "weight": 3
+    },
+    {
+      "term": "Payment",
+      "weight": 2.66
+    },
+    {
+      "term": "Office",
+      "weight": 2.64
+    },
+    {
+      "term": "Date",
+      "weight": 2
+    },
+    {
+      "term": "Contract",
+      "weight": 2
+    },
+    {
+      "term": "Application",
+      "weight": 2
+    },
+    {
+      "term": "Hour",
+      "weight": 1.5
+    },
+    {
+      "term": "Information",
+      "weight": 1.5
+    },
+    {
+      "term": "Account",
+      "weight": 1.5
+    },
+    {
+      "term": "Process",
+      "weight": 1.5
+    },
+    {
+      "term": "Salary",
+      "weight": 1.32
+    },
+    {
+      "term": "Email",
+      "weight": 1
+    },
+    {
+      "term": "Part",
+      "weight": 1
+    }
+  ],
+  "stats": {
+    "successCount": 43,
+    "failedCount": 6
+  }
+}

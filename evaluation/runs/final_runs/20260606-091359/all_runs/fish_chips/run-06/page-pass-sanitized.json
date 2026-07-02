@@ -1,0 +1,110 @@
+{
+  "pages": {
+    "specs": [
+      {
+        "name": "home",
+        "layout": "Blank",
+        "widgets": [
+          {
+            "type": "DataGrid",
+            "entity": "MyFirstModule.Order",
+            "columns": [
+              {
+                "attribute": "orderNumber"
+              },
+              {
+                "attribute": "Status"
+              }
+            ]
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "Order_Overview",
+        "layout": "FormHorizontal",
+        "entity": "MyFirstModule.Order",
+        "widgets": [
+          {
+            "type": "TextView",
+            "attribute": "orderNumber"
+          },
+          {
+            "type": "TextView",
+            "attribute": "Status"
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "Order_Detail",
+        "layout": "FormHorizontal",
+        "entity": "MyFirstModule.Order",
+        "widgets": [
+          {
+            "type": "TextView",
+            "attribute": "orderNumber"
+          },
+          {
+            "type": "TextView",
+            "attribute": "Status"
+          },
+          {
+            "type": "DataGrid",
+            "entity": "MyFirstModule.Product",
+            "association": "Order_Product",
+            "columns": [
+              {
+                "attribute": "productName"
+              }
+            ]
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "Product_Overview",
+        "layout": "FormHorizontal",
+        "entity": "MyFirstModule.Product",
+        "widgets": [
+          {
+            "type": "TextView",
+            "attribute": "productName"
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "Customer_Overview",
+        "layout": "FormHorizontal",
+        "entity": "MyFirstModule.Customer",
+        "widgets": [
+          {
+            "type": "TextView",
+            "attribute": "customerName"
+          }
+        ],
+        "content": []
+      }
+    ]
+  },
+  "app": {
+    "navigation": {
+      "homePage": "home",
+      "menuItems": [
+        {
+          "name": "Orders",
+          "page": "Order_Overview"
+        },
+        {
+          "name": "Products",
+          "page": "Product_Overview"
+        },
+        {
+          "name": "Customers",
+          "page": "Customer_Overview"
+        }
+      ]
+    }
+  }
+}

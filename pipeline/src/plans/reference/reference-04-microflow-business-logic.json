@@ -1,0 +1,301 @@
+{
+  "meta": {
+    "planVersion": "1.1.0",
+    "name": "reference-04-microflow-business-logic.json"
+  },
+  "app": {
+    "appId": "id",
+    "branch": "main",
+    "moduleName": "MyFirstModule",
+    "layoutQualifiedName": "Atlas_Core.Atlas_Default",
+    "homePageRef": "home",
+    "navigation": {
+      "homePageButtons": [
+        { "pageRef": "dispatcher_queue", "caption": "Dispatcher Queue", "icon": { "name": "home" }, "allowedRoles": ["Dispatcher"] },
+        { "pageRef": "technician_tasks", "caption": "Technician Tasks", "icon": { "name": "home" }, "allowedRoles": ["Technician"] }
+      ],
+      "menuItems": [
+        { "pageRef": "home", "caption": "Home", "icon": { "name": "home" }, "allowedRoles": ["Dispatcher", "Technician"] },
+        { "pageRef": "dispatcher_queue", "caption": "Dispatcher Queue", "icon": { "name": "home" }, "allowedRoles": ["Dispatcher"] },
+        { "pageRef": "technician_tasks", "caption": "Technician Tasks", "icon": { "name": "home" }, "allowedRoles": ["Technician"] }
+      ]
+    }
+  },
+  "execution": {
+    "createApp": true,
+    "createAppNamePrefix": "Reference04Microflows",
+    "createAppRepositoryType": "git",
+    "commit": true,
+    "commitMessage": "Reference 04: microflow business logic reference plan",
+    "deleteExistingDomainModel": true,
+    "deleteExistingPages": true,
+    "deleteExistingMicroflows": true,
+    "deleteExistingWorkflows": true,
+    "dg2Cleanup": true
+  },
+  "domainModel": {
+    "entities": [
+      {
+        "name": "WorkOrder",
+        "attributes": [
+          { "name": "Title", "type": "String", "required": true },
+          { "name": "Status", "type": "Enum:WorkOrderStatus", "required": true },
+          { "name": "Priority", "type": "Integer", "required": true, "defaultValue": 3 },
+          { "name": "DispatchNote", "type": "String", "required": false }
+        ]
+      }
+    ],
+    "associations": [],
+    "enumerations": [
+      {
+        "name": "WorkOrderStatus",
+        "values": ["Queued", "Ready", "InProgress", "Completed"]
+      }
+    ]
+  },
+  "security": {
+    "enabled": true,
+    "securityLevel": "prototype",
+    "moduleRoles": ["Dispatcher", "Technician"],
+    "userRoles": [
+      { "name": "Dispatcher", "moduleRoles": ["Dispatcher"], "systemModuleRole": "System.User" },
+      { "name": "Technician", "moduleRoles": ["Technician"], "systemModuleRole": "System.User" }
+    ],
+    "demoUsers": [
+      { "userName": "demo_dispatcher", "password": "Dispatcher123!", "userRoles": ["Dispatcher"] },
+      { "userName": "demo_technician", "password": "Technician123!", "userRoles": ["Technician"] }
+    ]
+  },
+  "microflows": {
+    "specs": [
+      {
+        "ref": "mf_prepare_queue",
+        "name": "MF_PrepareQueue",
+        "allowedRoles": ["Dispatcher", "Technician"],
+        "actions": [
+          { "type": "showMessage", "message": "Dispatcher queue and technician task board are ready." }
+        ]
+      },
+      {
+        "ref": "mf_prioritize_order",
+        "name": "MF_PrioritizeOrder",
+        "allowedRoles": ["Dispatcher", "Technician"],
+        "parameters": [
+          { "name": "WorkOrder", "type": { "kind": "Object", "entityRef": "MyFirstModule.WorkOrder" } }
+        ],
+        "actions": [
+          {
+            "type": "changeObject",
+            "targetVariableName": "WorkOrder",
+            "changes": [
+              { "attributeRef": "Priority", "valueExpression": "1" },
+              { "attributeRef": "Status", "valueExpression": "MyFirstModule.WorkOrderStatus.Ready" }
+            ],
+            "commit": "Yes",
+            "refreshInClient": true
+          }
+        ]
+      },
+      {
+        "ref": "mf_start_work",
+        "name": "MF_StartWork",
+        "allowedRoles": ["Dispatcher", "Technician"],
+        "parameters": [
+          { "name": "WorkOrder", "type": { "kind": "Object", "entityRef": "MyFirstModule.WorkOrder" } }
+        ],
+        "actions": [
+          {
+            "type": "changeObject",
+            "targetVariableName": "WorkOrder",
+            "changes": [
+              { "attributeRef": "Status", "valueExpression": "MyFirstModule.WorkOrderStatus.InProgress" },
+              { "attributeRef": "DispatchNote", "valueExpression": "'Technician has started this work order.'" }
+            ],
+            "commit": "Yes",
+            "refreshInClient": true
+          }
+        ]
+      },
+      {
+        "ref": "mf_complete_work",
+        "name": "MF_CompleteWork",
+        "allowedRoles": ["Dispatcher", "Technician"],
+        "parameters": [
+          { "name": "WorkOrder", "type": { "kind": "Object", "entityRef": "MyFirstModule.WorkOrder" } }
+        ],
+        "actions": [
+          {
+            "type": "changeObject",
+            "targetVariableName": "WorkOrder",
+            "changes": [
+              { "attributeRef": "Status", "valueExpression": "MyFirstModule.WorkOrderStatus.Completed" },
+              { "attributeRef": "DispatchNote", "valueExpression": "'Technician marked this work order as completed.'" }
+            ],
+            "commit": "Yes",
+            "refreshInClient": true
+          }
+        ]
+      },
+      {
+        "ref": "mf_escalate_backlog",
+        "name": "MF_EscalateBacklog",
+        "allowedRoles": ["Dispatcher", "Technician"],
+        "actions": [
+          {
+            "type": "retrieveObject",
+            "entityRef": "MyFirstModule.WorkOrder",
+            "xPathConstraint": "[Status = 'Queued']",
+            "outputVariableName": "QueuedWorkOrder"
+          },
+          {
+            "type": "decision",
+            "conditionExpression": "$QueuedWorkOrder = empty",
+            "whenTrue": [
+              { "type": "showMessage", "message": "No queued work order was found to escalate." }
+            ],
+            "whenFalse": [
+              {
+                "type": "changeObject",
+                "targetVariableName": "QueuedWorkOrder",
+                "changes": [
+                  { "attributeRef": "Priority", "valueExpression": "1" },
+                  { "attributeRef": "DispatchNote", "valueExpression": "'Escalated from queue.'" },
+                  { "attributeRef": "Status", "valueExpression": "MyFirstModule.WorkOrderStatus.Ready" }
+                ],
+                "commit": "Yes",
+                "refreshInClient": true
+              },
+              { "type": "showMessage", "message": "Oldest queued work order escalated." }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "pages": {
+    "specs": [
+      {
+        "ref": "home",
+        "name": "Home",
+        "title": "Dispatch Home",
+        "allowedRoles": ["Dispatcher", "Technician"],
+        "content": [
+          { "type": "dynamicText", "text": "Dispatch operations", "renderMode": "H2" },
+          { "type": "dynamicText", "text": "Dispatcher flow: add or prioritize queued work. Technician flow: start ready work and complete in-progress work.", "renderMode": "Paragraph" },
+          { "type": "buttonToPage", "caption": "Open Dispatcher Queue", "targetPageRef": "dispatcher_queue", "allowedRoles": ["Dispatcher"] },
+          { "type": "buttonToPage", "caption": "Open Technician Tasks", "targetPageRef": "technician_tasks", "allowedRoles": ["Technician"] },
+          { "type": "callMicroflowButton", "caption": "Refresh Queue", "microflowRef": "mf_prepare_queue" },
+          { "type": "callMicroflowButton", "caption": "Escalate Oldest Queued Order", "microflowRef": "mf_escalate_backlog" }
+        ]
+      },
+      {
+        "ref": "dispatcher_queue",
+        "name": "Dispatcher_Queue",
+        "title": "Dispatcher Queue",
+        "entityRef": "MyFirstModule.WorkOrder",
+        "allowedRoles": ["Dispatcher"],
+        "content": [
+          { "type": "dynamicText", "text": "Queued and ready work orders for dispatch", "renderMode": "H3" },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.WorkOrder",
+            "xPathConstraint": "[Status = 'Queued' or Status = 'Ready']",
+            "rowClickTargetPageRef": "dispatcher_workorder_detail",
+            "itemContent": [
+              { "type": "attributeInput", "attributeRef": "Title", "autoLabel": true },
+              { "type": "attributeInput", "attributeRef": "Status", "autoLabel": false },
+              { "type": "attributeInput", "attributeRef": "Priority", "autoLabel": false },
+              { "type": "attributeInput", "attributeRef": "DispatchNote", "autoLabel": false }
+            ]
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Add Work Order",
+            "entityRef": "MyFirstModule.WorkOrder",
+            "targetPageRef": "dispatcher_workorder_detail"
+          }
+        ]
+      },
+      {
+        "ref": "technician_tasks",
+        "name": "Technician_Tasks",
+        "title": "Technician Tasks",
+        "entityRef": "MyFirstModule.WorkOrder",
+        "allowedRoles": ["Technician"],
+        "content": [
+          { "type": "dynamicText", "text": "Ready or active work for technicians", "renderMode": "H3" },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.WorkOrder",
+            "xPathConstraint": "[Status = 'Ready' or Status = 'InProgress']",
+            "rowClickTargetPageRef": "technician_workorder_detail",
+            "itemContent": [
+              { "type": "attributeInput", "attributeRef": "Title", "autoLabel": true },
+              { "type": "attributeInput", "attributeRef": "Status", "autoLabel": false },
+              { "type": "attributeInput", "attributeRef": "Priority", "autoLabel": false },
+              { "type": "attributeInput", "attributeRef": "DispatchNote", "autoLabel": false }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "dispatcher_workorder_detail",
+        "name": "Dispatcher_WorkOrder_Detail",
+        "title": "Dispatcher Work Order Detail",
+        "entityRef": "MyFirstModule.WorkOrder",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          { "name": "WorkOrder", "entityRef": "MyFirstModule.WorkOrder", "required": true }
+        ],
+        "allowedRoles": ["Dispatcher"],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "WorkOrder",
+            "labelWidth": 3,
+            "content": [
+              { "type": "attributeInput", "attributeRef": "Title" },
+              { "type": "attributeInput", "attributeRef": "Status" },
+              { "type": "attributeInput", "attributeRef": "Priority" },
+              { "type": "attributeInput", "attributeRef": "DispatchNote" },
+              { "type": "callMicroflowButton", "caption": "Prioritize This Order", "microflowRef": "mf_prioritize_order" },
+              { "type": "saveChangesButton", "caption": "Save", "closePage": true },
+              { "type": "cancelChangesButton", "caption": "Cancel", "closePage": true }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "technician_workorder_detail",
+        "name": "Technician_WorkOrder_Detail",
+        "title": "Technician Work Order Detail",
+        "entityRef": "MyFirstModule.WorkOrder",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          { "name": "WorkOrder", "entityRef": "MyFirstModule.WorkOrder", "required": true }
+        ],
+        "allowedRoles": ["Technician"],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "WorkOrder",
+            "labelWidth": 3,
+            "content": [
+              { "type": "attributeInput", "attributeRef": "Title" },
+              { "type": "attributeInput", "attributeRef": "Status" },
+              { "type": "attributeInput", "attributeRef": "Priority" },
+              { "type": "attributeInput", "attributeRef": "DispatchNote" },
+              { "type": "callMicroflowButton", "caption": "Start Work", "microflowRef": "mf_start_work" },
+              { "type": "callMicroflowButton", "caption": "Complete Work", "microflowRef": "mf_complete_work" },
+              { "type": "saveChangesButton", "caption": "Save", "closePage": true },
+              { "type": "cancelChangesButton", "caption": "Cancel", "closePage": true }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "verification": {
+    "failOnMissing": true
+  }
+}

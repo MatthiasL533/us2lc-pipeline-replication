@@ -1,0 +1,113 @@
+{
+    "T0": {
+        "after": [
+            "EG0_S"
+        ],
+        "before": [
+            "START_0"
+        ]
+    },
+    "T1": {
+        "after": [
+            "END_0"
+        ],
+        "before": [
+            "START_1"
+        ]
+    },
+    "T2": {
+        "after": [
+            "END_1"
+        ],
+        "before": [
+            "START_2"
+        ]
+    },
+    "T3": {
+        "after": [
+            "END_2"
+        ],
+        "before": [
+            "EG0_S"
+        ]
+    },
+    "EG0_S": {
+        "after": [
+            "T3",
+            "END_3"
+        ],
+        "before": [
+            "T0"
+        ]
+    },
+    "T4": {
+        "after": [
+            "T5"
+        ],
+        "before": [
+            "START_3"
+        ]
+    },
+    "T5": {
+        "after": [
+            "END_4"
+        ],
+        "before": [
+            "T4"
+        ]
+    },
+    "START_0": {
+        "after": [
+            "T0"
+        ],
+        "before": []
+    },
+    "START_1": {
+        "after": [
+            "T1"
+        ],
+        "before": []
+    },
+    "END_0": {
+        "after": [],
+        "before": [
+            "T1"
+        ]
+    },
+    "START_2": {
+        "after": [
+            "T2"
+        ],
+        "before": []
+    },
+    "END_1": {
+        "after": [],
+        "before": [
+            "T2"
+        ]
+    },
+    "END_2": {
+        "after": [],
+        "before": [
+            "T3"
+        ]
+    },
+    "END_3": {
+        "after": [],
+        "before": [
+            "EG0_S"
+        ]
+    },
+    "START_3": {
+        "after": [
+            "T4"
+        ],
+        "before": []
+    },
+    "END_4": {
+        "after": [],
+        "before": [
+            "T5"
+        ]
+    }
+}

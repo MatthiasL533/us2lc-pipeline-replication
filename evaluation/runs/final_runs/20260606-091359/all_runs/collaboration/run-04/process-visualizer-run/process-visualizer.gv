@@ -1,0 +1,18 @@
+digraph process_visualizer {
+  t0 [label="project manager: view projects for each department in the general projects overview"];
+  t1 [label="team member: create new projects so that planning and collaboration can be centered around a specific goal"];
+  t2 [label="project manager: archive projects that have been completed, so that completed projects do not clutter up the project overview"];
+  t3 [label="client: view active projects in my personal view, so that i have an organized overview of my ongoing projects"];
+  t4 [label="client: create milestones with a due date so that projects are divided into manageable, time-bound partitions"];
+  t5 [label="project manager: edit milestone due dates so that any mistakes or changes to milestone due dates can be implemented"];
+  t6 [label="project manager: delete milestones"];
+  t7 [label="team member: change the status of a milestone so that the relative position of a milestone to the current progress can be accurately tracked"];
+  t8 [label="project manager: filter on a specific milestone"];
+  t9 [label="employee: view upcoming milestones in the project overview"];
+  t10 [label="project manager: add files to a delivery while creating a delivery"];
+  t11 [label="team member: delete files from a delivery while creating a delivery"];
+  t12 [label="employee: add a description of the feedback goal to a delivery while creating a delivery"];
+  t13 [label="team member: save a delivery as a concept so that a delivery can be published later"];
+  t14 [label="project manager: publish a delivery so that clients will be aware of a delivery progress"];
+  t15 [label="client: view the goal description of a delivery so that i have some idea of what kind of feedback is expected"];
+}

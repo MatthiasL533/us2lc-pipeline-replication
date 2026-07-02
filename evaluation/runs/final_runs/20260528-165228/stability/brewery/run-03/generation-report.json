@@ -1,0 +1,1853 @@
+{
+  "ok": true,
+  "generatedAt": "2026-05-29T11:00:46.093Z",
+  "inputDir": "/Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/artifacts/practical-performance/20260528-165228/inputs/brewery",
+  "outputPlanPath": "/Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/artifacts/practical-performance/20260528-165228/stability/brewery/run-03/plan.json",
+  "warnings": [
+    "Dropped association \"<unnamed>\" because entities could not be resolved after normalization.",
+    "Dropped association \"<unnamed>\" because entities could not be resolved after normalization.",
+    "Dropped association \"<unnamed>\" because entities could not be resolved after normalization.",
+    "Dropped association \"<unnamed>\" because entities could not be resolved after normalization.",
+    "Dropped association \"<unnamed>\" because entities could not be resolved after normalization.",
+    "Dropped association \"<unnamed>\" because entities could not be resolved after normalization.",
+    "Dropped association \"<unnamed>\" because entities could not be resolved after normalization.",
+    "Dropped association \"<unnamed>\" because entities could not be resolved after normalization.",
+    "Dropped association \"<unnamed>\" because entities could not be resolved after normalization.",
+    "Dropped association \"<unnamed>\" because entities could not be resolved after normalization.",
+    "Dropped association \"<unnamed>\" because entities could not be resolved after normalization.",
+    "Dropped association \"<unnamed>\" because entities could not be resolved after normalization.",
+    "Dropped association \"<unnamed>\" because entities could not be resolved after normalization.",
+    "Dropped association \"<unnamed>\" because entities could not be resolved after normalization.",
+    "Dropped association \"<unnamed>\" because entities could not be resolved after normalization.",
+    "Added missing overview page for entity \"Account\".",
+    "Added missing NewEdit page for entity \"Account\".",
+    "Added missing overview page for entity \"User\".",
+    "Added missing NewEdit page for entity \"User\".",
+    "Added missing overview page for entity \"Brewery\".",
+    "Added missing NewEdit page for entity \"Brewery\".",
+    "Added missing overview page for entity \"HospitalityBusiness\".",
+    "Added missing NewEdit page for entity \"HospitalityBusiness\".",
+    "Added missing overview page for entity \"Brand\".",
+    "Added missing NewEdit page for entity \"Brand\".",
+    "Added missing overview page for entity \"Product\".",
+    "Added missing NewEdit page for entity \"Product\".",
+    "Added missing overview page for entity \"Beer\".",
+    "Added missing NewEdit page for entity \"Beer\".",
+    "Added missing overview page for entity \"ProductAssortment\".",
+    "Added missing NewEdit page for entity \"ProductAssortment\".",
+    "Added missing overview page for entity \"OrderTemplate\".",
+    "Added missing NewEdit page for entity \"OrderTemplate\".",
+    "Added missing overview page for entity \"Order\".",
+    "Added missing NewEdit page for entity \"Order\".",
+    "Added missing overview page for entity \"OrderLineItem\".",
+    "Added missing NewEdit page for entity \"OrderLineItem\".",
+    "Added missing overview page for entity \"Proposal\".",
+    "Added missing NewEdit page for entity \"Proposal\".",
+    "Added missing overview page for entity \"Contract\".",
+    "Added missing NewEdit page for entity \"Contract\".",
+    "Added missing overview page for entity \"OrderAssignment\".",
+    "Added missing NewEdit page for entity \"OrderAssignment\".",
+    "Dropped placeholder page \"createproposal\" because it had no useful steps.",
+    "Dropped placeholder page \"breweryoverview\" because it had no useful steps.",
+    "Dropped placeholder page \"productdetail\" because it had no useful steps.",
+    "Dropped placeholder page \"productmanagement\" because it had no useful steps.",
+    "Dropped placeholder page \"cataloguebrowse\" because it had no useful steps.",
+    "Dropped placeholder page \"ordertemplatemanagement\" because it had no useful steps.",
+    "Dropped placeholder page \"ordertemplatedetail\" because it had no useful steps.",
+    "Dropped placeholder page \"ordercreation\" because it had no useful steps.",
+    "Dropped placeholder page \"orderreview\" because it had no useful steps.",
+    "Dropped low-relevance LLM entity \"OrderLineItem\".",
+    "Added callWorkflowButton to Beer_NewEdit for generated workflow.",
+    "Synthesized reference-style workflow scaffold for Beer because workflow stories were detected but no usable workflow was generated.",
+    "Replaced unsupported navigation icon for \"beer_workflow_tasks\" with the only supported icon \"home\".",
+    "Added workflow task inbox \"beer_workflow_tasks\" to homepage navigation.",
+    "Replaced unsupported navigation icon for \"beer_workflow_tasks\" with the only supported icon \"home\".",
+    "Added workflow task inbox \"beer_workflow_tasks\" to menu navigation.",
+    "Domain review dropped duplicate generic entity \"Template\": Generic entity duplicates more specific story-backed entity \"OrderTemplate\".",
+    "Removed page \"template_overview\" for dropped entity \"Template\".",
+    "Removed page \"template_newedit\" for dropped entity \"Template\".",
+    "Added story-backed association \"Platform_Brand\" from Platform to Brand.",
+    "Repaired NewEdit page for entity \"Platform\" because its form inputs no longer matched current associations.",
+    "Repaired NewEdit page for entity \"Brand\" because its form inputs no longer matched current associations."
+  ],
+  "validation": {
+    "ok": true,
+    "errors": []
+  },
+  "model": "gemma4:e4b",
+  "coverage": {
+    "score": 0.8846153846153846,
+    "covered": 23,
+    "total": 26,
+    "missingStoryIds": [
+      "US16",
+      "US19",
+      "US26"
+    ],
+    "entries": [
+      {
+        "id": "US01",
+        "story": "As a Brewery, Hospitality business, or Beer2Beer (B2B) management user, I want to log in and be redirected to my personalized homepage so that I can access platform functionalities relevant to my role.",
+        "storyConcepts": [
+          "functionalityrelevant",
+          "hospitalitybusiness",
+          "managementuser",
+          "personalizedhomepage",
+          "b2b",
+          "beer2beer",
+          "brewery",
+          "business",
+          "functionality",
+          "homepage",
+          "hospitality",
+          "log",
+          "management",
+          "personalized",
+          "platform",
+          "redirected",
+          "relevant",
+          "role",
+          "user"
+        ],
+        "matchedConcepts": [
+          "hospitalitybusiness",
+          "brewery",
+          "business",
+          "hospitality",
+          "platform",
+          "user"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "hospitalitybusiness_overview",
+          "brewery_overview",
+          "platform_overview",
+          "user_overview"
+        ],
+        "lexicalScore": 0.3157894736842105,
+        "covered": true
+      },
+      {
+        "id": "US02",
+        "story": "As a Beer2Beer management user, I want to create proposals for brewery requests so that I can send tailored offers to breweries.",
+        "storyConcepts": [
+          "brewery",
+          "breweryrequest",
+          "offer",
+          "proposal",
+          "tailored",
+          "beer2beer",
+          "management",
+          "user"
+        ],
+        "matchedConcepts": [
+          "brewery",
+          "proposal",
+          "user"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "brewery_overview",
+          "proposal_overview",
+          "user_overview"
+        ],
+        "lexicalScore": 0.375,
+        "covered": true
+      },
+      {
+        "id": "US03",
+        "story": "As a Beer2Beer management user, I want to view an overview of all brewery sign-up requests so that I can review and approve them.",
+        "storyConcepts": [
+          "ndapprovethem",
+          "noverview",
+          "brewerysign",
+          "uprequest",
+          "brewery",
+          "sign",
+          "them",
+          "beer2beer",
+          "management",
+          "user"
+        ],
+        "matchedConcepts": [
+          "noverview",
+          "brewery",
+          "user"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "noverview_overview",
+          "brewery_overview",
+          "user_overview"
+        ],
+        "lexicalScore": 0.3,
+        "covered": true
+      },
+      {
+        "id": "US04",
+        "story": "As a Brewery or Hospitality business, I want to create an account so that I can access and use the Beer 2 Beer platform.",
+        "storyConcepts": [
+          "beer",
+          "beerplatform",
+          "account",
+          "platform",
+          "brewery",
+          "hospitality",
+          "business"
+        ],
+        "matchedConcepts": [
+          "beer",
+          "account",
+          "platform",
+          "brewery",
+          "hospitality",
+          "business"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "beer_overview",
+          "account_overview",
+          "platform_overview",
+          "brewery_overview"
+        ],
+        "lexicalScore": 0.8571428571428571,
+        "covered": true
+      },
+      {
+        "id": "US05",
+        "story": "As a Hospitality business, I want to be able to use a shopping cart so that I can continue with my current selection before completing the order.",
+        "storyConcepts": [
+          "selectionbefore",
+          "shoppingcart",
+          "before",
+          "cart",
+          "completing",
+          "continue",
+          "current",
+          "order",
+          "selection",
+          "shopping",
+          "hospitality",
+          "business"
+        ],
+        "matchedConcepts": [
+          "current",
+          "order",
+          "hospitality",
+          "business"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "current_overview",
+          "order_overview"
+        ],
+        "lexicalScore": 0.3333333333333333,
+        "covered": true
+      },
+      {
+        "id": "US06",
+        "story": "As a Brewery, I want to add new brands and update existing ones on the platform so that I can keep my product offerings current and relevant for customers.",
+        "storyConcepts": [
+          "brand",
+          "current",
+          "customer",
+          "existing",
+          "keep",
+          "offering",
+          "one",
+          "platform",
+          "product",
+          "relevant",
+          "brewery"
+        ],
+        "matchedConcepts": [
+          "brand",
+          "current",
+          "platform",
+          "product",
+          "brewery"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "brand_overview",
+          "current_overview",
+          "platform_overview",
+          "product_overview",
+          "brewery_overview"
+        ],
+        "lexicalScore": 0.45454545454545453,
+        "covered": true
+      },
+      {
+        "id": "US07",
+        "story": "As a Brewery, I want to modify a product so that I can keep my assortment up to date.",
+        "storyConcepts": [
+          "assortmentup",
+          "assortment",
+          "date",
+          "keep",
+          "modify",
+          "product",
+          "brewery"
+        ],
+        "matchedConcepts": [
+          "assortment",
+          "date",
+          "product",
+          "brewery"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "product_overview",
+          "brewery_overview"
+        ],
+        "lexicalScore": 0.5714285714285714,
+        "covered": true
+      },
+      {
+        "id": "US08",
+        "story": "As a Brewery, I want to create a product so that I can offer it for sale on the platform.",
+        "storyConcepts": [
+          "producticanoffer",
+          "offer",
+          "platform",
+          "product",
+          "sale",
+          "brewery"
+        ],
+        "matchedConcepts": [
+          "platform",
+          "product",
+          "brewery"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "platform_overview",
+          "product_overview",
+          "brewery_overview"
+        ],
+        "lexicalScore": 0.5,
+        "covered": true
+      },
+      {
+        "id": "US09",
+        "story": "As a Brewery, I want to request a sales proposal so that I can offer my products on the Beer 2 Beer platform through order-based commissions.",
+        "storyConcepts": [
+          "beer",
+          "basedcommission",
+          "beerplatform",
+          "throughorder",
+          "based",
+          "commission",
+          "offer",
+          "order",
+          "platform",
+          "product",
+          "proposal",
+          "sale",
+          "through",
+          "brewery"
+        ],
+        "matchedConcepts": [
+          "beer",
+          "commission",
+          "order",
+          "platform",
+          "product",
+          "proposal",
+          "brewery"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "beer_overview",
+          "order_overview",
+          "platform_overview",
+          "product_overview",
+          "proposal_overview",
+          "brewery_overview"
+        ],
+        "lexicalScore": 0.5,
+        "covered": true
+      },
+      {
+        "id": "US10",
+        "story": "As a Hospitality business, I want to browse within a catalogue of the beers so that I can see which beers are available on the platform.",
+        "storyConcepts": [
+          "beer",
+          "catalogue",
+          "platform",
+          "which",
+          "within",
+          "hospitality",
+          "business"
+        ],
+        "matchedConcepts": [
+          "beer",
+          "platform",
+          "hospitality",
+          "business"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "beer_overview",
+          "platform_overview"
+        ],
+        "lexicalScore": 0.5714285714285714,
+        "covered": true
+      },
+      {
+        "id": "US11",
+        "story": "As a Beer2Beer management user, I want to view an overview of all beers and breweries available on the platform so that I can monitor the current offerings.",
+        "storyConcepts": [
+          "noverview",
+          "beer",
+          "brewery",
+          "current",
+          "offering",
+          "platform",
+          "beer2beer",
+          "management",
+          "user"
+        ],
+        "matchedConcepts": [
+          "noverview",
+          "beer",
+          "brewery",
+          "current",
+          "platform",
+          "user"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "noverview_overview",
+          "beer_overview",
+          "brewery_overview",
+          "current_overview",
+          "platform_overview",
+          "user_overview"
+        ],
+        "lexicalScore": 0.6666666666666666,
+        "covered": true
+      },
+      {
+        "id": "US12",
+        "story": "As a Beer2Beer management user, I want to create contracts after a proposal is accepted so that we can formalize agreements with breweries.",
+        "storyConcepts": [
+          "contractafteraproposal",
+          "contractafter",
+          "formalizeagreement",
+          "accepted",
+          "after",
+          "agreement",
+          "brewery",
+          "contract",
+          "formalize",
+          "proposal",
+          "beer2beer",
+          "management",
+          "user"
+        ],
+        "matchedConcepts": [
+          "brewery",
+          "contract",
+          "proposal",
+          "user"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "brewery_overview",
+          "contract_overview",
+          "proposal_overview",
+          "user_overview"
+        ],
+        "lexicalScore": 0.3076923076923077,
+        "covered": true
+      },
+      {
+        "id": "US13",
+        "story": "As a Brewery, I want to sign a contract with Beer 2 Beer so that we can agree on order commissions and delivery capacity.",
+        "storyConcepts": [
+          "beer",
+          "beerwe",
+          "deliverycapacity",
+          "agree",
+          "capacity",
+          "commission",
+          "contract",
+          "delivery",
+          "order",
+          "sign",
+          "brewery"
+        ],
+        "matchedConcepts": [
+          "beer",
+          "commission",
+          "contract",
+          "order",
+          "brewery"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "beer_overview",
+          "contract_overview",
+          "order_overview",
+          "brewery_overview"
+        ],
+        "lexicalScore": 0.45454545454545453,
+        "covered": true
+      },
+      {
+        "id": "US14",
+        "story": "As a brewery I want to be able to access current and previous contracts in pdf format",
+        "storyConcepts": [
+          "previoucontract",
+          "brewery",
+          "contract",
+          "current",
+          "format",
+          "pdf",
+          "previou",
+          "user"
+        ],
+        "matchedConcepts": [
+          "brewery",
+          "contract",
+          "current",
+          "user"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "brewery_overview",
+          "contract_overview",
+          "current_overview",
+          "user_overview"
+        ],
+        "lexicalScore": 0.5,
+        "covered": true
+      },
+      {
+        "id": "US15",
+        "story": "As a hospitality business, I want to manage recurring orders created from order templates, including the ability to cancel them, so I can adjust or stop deliveries as needed.",
+        "storyConcepts": [
+          "recurringordercreated",
+          "order",
+          "cancelthem",
+          "ordertemplate",
+          "recurringorder",
+          "ability",
+          "adjust",
+          "cancel",
+          "created",
+          "delivery",
+          "including",
+          "needed",
+          "recurring",
+          "stop",
+          "template",
+          "them",
+          "hospitality",
+          "business"
+        ],
+        "matchedConcepts": [
+          "order",
+          "ordertemplate",
+          "created",
+          "template",
+          "hospitality",
+          "business"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "order_overview",
+          "ordertemplate_overview"
+        ],
+        "lexicalScore": 0.3333333333333333,
+        "covered": true
+      },
+      {
+        "id": "US16",
+        "story": "As a hospitality business, I want to create recurring orders based on an order template so that I can schedule multiple deliveries automatically over a set period.",
+        "storyConcepts": [
+          "recurringorderbased",
+          "order",
+          "automaticallyover",
+          "multipledelivery",
+          "recurringorder",
+          "automatically",
+          "based",
+          "delivery",
+          "multiple",
+          "over",
+          "period",
+          "recurring",
+          "set",
+          "template",
+          "hospitality",
+          "business"
+        ],
+        "matchedConcepts": [
+          "order",
+          "template",
+          "hospitality",
+          "business"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "order_overview"
+        ],
+        "lexicalScore": 0.25,
+        "covered": false
+      },
+      {
+        "id": "US17",
+        "story": "As a hospitality business, I want to modify existing order templates so that I can tailor my product assortment to changing needs over time.",
+        "storyConcepts": [
+          "changingneed",
+          "overtime",
+          "assortment",
+          "changing",
+          "existing",
+          "modify",
+          "need",
+          "order",
+          "over",
+          "product",
+          "tailor",
+          "template",
+          "time",
+          "hospitality",
+          "business"
+        ],
+        "matchedConcepts": [
+          "assortment",
+          "order",
+          "product",
+          "template",
+          "hospitality",
+          "business"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "order_overview",
+          "product_overview"
+        ],
+        "lexicalScore": 0.4,
+        "covered": true
+      },
+      {
+        "id": "US18",
+        "story": "As a hospitality business, I want to create order templates that allow me to reorder my product assortment with a single click, saving time and reducing errors.",
+        "storyConcepts": [
+          "ordertemplate",
+          "productassortment",
+          "savingtime",
+          "singleclick",
+          "allow",
+          "assortment",
+          "click",
+          "error",
+          "order",
+          "product",
+          "reducing",
+          "reorder",
+          "saving",
+          "single",
+          "template",
+          "time",
+          "hospitality",
+          "business"
+        ],
+        "matchedConcepts": [
+          "ordertemplate",
+          "productassortment",
+          "assortment",
+          "order",
+          "product",
+          "template",
+          "hospitality",
+          "business"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "ordertemplate_overview",
+          "productassortment_overview",
+          "order_overview",
+          "product_overview"
+        ],
+        "lexicalScore": 0.4444444444444444,
+        "covered": true
+      },
+      {
+        "id": "US19",
+        "story": "As a Brewery, I want to manage my contracts with Beer2Beer so that I can renew them before they expire and avoid service interruptions.",
+        "storyConcepts": [
+          "avoidservice",
+          "renewthem",
+          "avoid",
+          "beer2beer",
+          "before",
+          "contract",
+          "expire",
+          "interruption",
+          "renew",
+          "service",
+          "them",
+          "brewery"
+        ],
+        "matchedConcepts": [
+          "contract",
+          "brewery"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "contract_overview",
+          "brewery_overview"
+        ],
+        "lexicalScore": 0.16666666666666666,
+        "covered": false
+      },
+      {
+        "id": "US20",
+        "story": "As a Brewery, I want to manage individual orders so that I can notify Hospitality businesses about the order status and updates.",
+        "storyConcepts": [
+          "order",
+          "businessesabout",
+          "individualorder",
+          "notifyhospitality",
+          "about",
+          "businesses",
+          "hospitality",
+          "individual",
+          "notify",
+          "statu",
+          "brewery"
+        ],
+        "matchedConcepts": [
+          "order",
+          "hospitality",
+          "statu",
+          "brewery"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "order_overview",
+          "brewery_overview"
+        ],
+        "lexicalScore": 0.36363636363636365,
+        "covered": true
+      },
+      {
+        "id": "US21",
+        "story": "As a Brewery, I want to view an overview of my orders so that I can monitor incoming orders and process them efficiently.",
+        "storyConcepts": [
+          "noverview",
+          "order",
+          "incomingorder",
+          "themefficiently",
+          "efficiently",
+          "incoming",
+          "them",
+          "brewery",
+          "process"
+        ],
+        "matchedConcepts": [
+          "noverview",
+          "order",
+          "brewery"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "noverview_overview",
+          "order_overview",
+          "brewery_overview"
+        ],
+        "lexicalScore": 0.3333333333333333,
+        "covered": true
+      },
+      {
+        "id": "US22",
+        "story": "As a Hospitality business, I want to manage my order templates so that I can quickly reorder the same selection at different times.",
+        "storyConcepts": [
+          "atdifferent",
+          "sameselection",
+          "different",
+          "order",
+          "quickly",
+          "reorder",
+          "same",
+          "selection",
+          "template",
+          "time",
+          "hospitality",
+          "business"
+        ],
+        "matchedConcepts": [
+          "order",
+          "template",
+          "hospitality",
+          "business"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "order_overview"
+        ],
+        "lexicalScore": 0.3333333333333333,
+        "covered": true
+      },
+      {
+        "id": "US23",
+        "story": "As a Hospitality business, I want to pay for my order so that the order can be processed and delivered.",
+        "storyConcepts": [
+          "order",
+          "delivered",
+          "pay",
+          "processed",
+          "hospitality",
+          "business"
+        ],
+        "matchedConcepts": [
+          "order",
+          "hospitality",
+          "business"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "order_overview"
+        ],
+        "lexicalScore": 0.5,
+        "covered": true
+      },
+      {
+        "id": "US24",
+        "story": "As a Hospitality business, I want to create a beer order at Beer2Beer so that I can receive the beers for my business from multiple breweries.",
+        "storyConcepts": [
+          "beerorderatbeer2beer",
+          "beer",
+          "multiplebrewery",
+          "orderat",
+          "beer2beer",
+          "brewery",
+          "business",
+          "multiple",
+          "order",
+          "hospitality"
+        ],
+        "matchedConcepts": [
+          "beer",
+          "brewery",
+          "business",
+          "order",
+          "hospitality"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "beer_overview",
+          "brewery_overview",
+          "order_overview"
+        ],
+        "lexicalScore": 0.5,
+        "covered": true
+      },
+      {
+        "id": "US25",
+        "story": "As a Beer2Beer management user, I want to view an overview of all breweries with accounts on the platform so that I can see our current client base.",
+        "storyConcepts": [
+          "noverview",
+          "account",
+          "base",
+          "brewery",
+          "client",
+          "current",
+          "platform",
+          "beer2beer",
+          "management",
+          "user"
+        ],
+        "matchedConcepts": [
+          "noverview",
+          "account",
+          "brewery",
+          "current",
+          "platform",
+          "user"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "noverview_overview",
+          "account_overview",
+          "brewery_overview",
+          "current_overview",
+          "platform_overview",
+          "user_overview"
+        ],
+        "lexicalScore": 0.6,
+        "covered": true
+      },
+      {
+        "id": "US26",
+        "story": "As a Beer2Beer management user, I want to view the logic operation's performance.",
+        "storyConcepts": [
+          "logicoperation",
+          "sperformance",
+          "logic",
+          "operation",
+          "performance",
+          "beer2beer",
+          "management",
+          "user"
+        ],
+        "matchedConcepts": [
+          "user"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "user_overview"
+        ],
+        "lexicalScore": 0.125,
+        "covered": false
+      }
+    ]
+  },
+  "coverageGate": {
+    "enabled": false,
+    "minimum": null,
+    "score": 0.8846153846153846,
+    "passed": true
+  },
+  "ollama": {
+    "model": "gemma4:e4b",
+    "totalDuration": 396224071542,
+    "loadDuration": 6285791750,
+    "promptEvalCount": 4944,
+    "evalCount": 3278,
+    "numCtx": 8192,
+    "numPredict": 6144,
+    "likelyPromptTruncated": false
+  },
+  "visualNarrator": {
+    "enabled": true,
+    "status": "completed",
+    "durationMs": 3919,
+    "command": "/Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/visual-narrator/.venv/bin/python /Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/pipeline/scripts/run_visual_narrator.py --input /Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/artifacts/practical-performance/20260528-165228/inputs/brewery/user-stories.txt --system-name PracticalPerf_brewery_Stability",
+    "artifacts": {
+      "ontologyPath": "/Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/artifacts/practical-performance/20260528-165228/stability/brewery/run-03/visual-narrator-ontology.omn",
+      "storiesPath": "/Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/artifacts/practical-performance/20260528-165228/stability/brewery/run-03/visual-narrator-stories.json",
+      "summaryPath": "/Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/artifacts/practical-performance/20260528-165228/stability/brewery/run-03/visual-narrator-summary.json",
+      "rawPath": "/Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/artifacts/practical-performance/20260528-165228/stability/brewery/run-03/visual-narrator-result.json"
+    },
+    "warnings": []
+  },
+  "processVisualizer": {
+    "enabled": true,
+    "status": "completed",
+    "durationMs": 310134,
+    "command": "/Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/process-visualizer/.venv/bin/python /Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/pipeline/scripts/run_process_visualizer.py --input /Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/artifacts/practical-performance/20260528-165228/inputs/brewery/user-stories.txt --output-dir /Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/artifacts/practical-performance/20260528-165228/stability/bebreweryun-03 --model llama3 --ollama-url http://127.0.0.1:11434",
+    "artifacts": {
+      "summaryPath": "/Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/artifacts/practical-performance/20260528-165228/stability/brewery/run-03/process-visualizer-summary.json",
+      "rawPath": "/Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/artifacts/practical-performance/20260528-165228/stability/brewery/run-03/process-visualizer-result.json",
+      "graphSourcePath": "/Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/artifacts/practical-performance/20260528-165228/stability/brewery/run-03/process-visualizer-run/process-visualizer.gv",
+      "graphImagePath": "/Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/artifacts/practical-performance/20260528-165228/stability/brewery/run-03/process-visualizer-run/process-visualizer.png",
+      "logsDir": "/Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/artifacts/practical-performance/20260528-165228/stability/brewery/run-03/process-visualizer-run/output_logs"
+    },
+    "warnings": []
+  },
+  "domainModelReview": {
+    "enabled": true,
+    "status": "completed",
+    "droppedEntities": [
+      {
+        "name": "Template",
+        "reason": "Generic entity duplicates more specific story-backed entity \"OrderTemplate\"."
+      }
+    ],
+    "droppedAssociations": [],
+    "repairedAssociations": [],
+    "addedAssociations": [
+      {
+        "name": "Platform_Brand",
+        "parentEntity": "Platform",
+        "childEntity": "Brand",
+        "reason": "Story US06 explicitly links Brand to Platform."
+      }
+    ],
+    "warnings": []
+  },
+  "planDiagnostics": {
+    "preprocessing": {
+      "visualNarratorEnabled": true,
+      "visualNarratorStatus": "completed",
+      "processVisualizerEnabled": true,
+      "processVisualizerStatus": "completed"
+    },
+    "domainModelReview": {
+      "enabled": true,
+      "status": "completed",
+      "droppedEntities": [
+        {
+          "name": "Template",
+          "reason": "Generic entity duplicates more specific story-backed entity \"OrderTemplate\"."
+        }
+      ],
+      "droppedAssociations": [],
+      "repairedAssociations": [],
+      "addedAssociations": [
+        {
+          "name": "Platform_Brand",
+          "parentEntity": "Platform",
+          "childEntity": "Brand",
+          "reason": "Story US06 explicitly links Brand to Platform."
+        }
+      ],
+      "warnings": []
+    },
+    "referenceAppBaseline": {
+      "source": "reference-app-baseline",
+      "capabilities": [
+        "workflow_support",
+        "role_separated_views"
+      ],
+      "archetypes": [
+        "tasks",
+        "role_separation"
+      ],
+      "recommendedWidgetFamilies": [
+        "workflow_commons"
+      ]
+    },
+    "capabilityRequirements": [
+      "workflow_commons"
+    ],
+    "storyCoverage": {
+      "entries": [
+        {
+          "id": "US01",
+          "story": "As a Brewery, Hospitality business, or Beer2Beer (B2B) management user, I want to log in and be redirected to my personalized homepage so that I can access platform functionalities relevant to my role.",
+          "storyConcepts": [
+            "functionalityrelevant",
+            "hospitalitybusiness",
+            "managementuser",
+            "personalizedhomepage",
+            "b2b",
+            "beer2beer",
+            "brewery",
+            "business",
+            "functionality",
+            "homepage",
+            "hospitality",
+            "log",
+            "management",
+            "personalized",
+            "platform",
+            "redirected",
+            "relevant",
+            "role",
+            "user"
+          ],
+          "matchedConcepts": [
+            "hospitalitybusiness",
+            "brewery",
+            "business",
+            "hospitality",
+            "platform",
+            "user"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "hospitalitybusiness_overview",
+            "brewery_overview",
+            "platform_overview",
+            "user_overview"
+          ],
+          "lexicalScore": 0.3157894736842105,
+          "covered": true
+        },
+        {
+          "id": "US02",
+          "story": "As a Beer2Beer management user, I want to create proposals for brewery requests so that I can send tailored offers to breweries.",
+          "storyConcepts": [
+            "brewery",
+            "breweryrequest",
+            "offer",
+            "proposal",
+            "tailored",
+            "beer2beer",
+            "management",
+            "user"
+          ],
+          "matchedConcepts": [
+            "brewery",
+            "proposal",
+            "user"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "brewery_overview",
+            "proposal_overview",
+            "user_overview"
+          ],
+          "lexicalScore": 0.375,
+          "covered": true
+        },
+        {
+          "id": "US03",
+          "story": "As a Beer2Beer management user, I want to view an overview of all brewery sign-up requests so that I can review and approve them.",
+          "storyConcepts": [
+            "ndapprovethem",
+            "noverview",
+            "brewerysign",
+            "uprequest",
+            "brewery",
+            "sign",
+            "them",
+            "beer2beer",
+            "management",
+            "user"
+          ],
+          "matchedConcepts": [
+            "noverview",
+            "brewery",
+            "user"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "noverview_overview",
+            "brewery_overview",
+            "user_overview"
+          ],
+          "lexicalScore": 0.3,
+          "covered": true
+        },
+        {
+          "id": "US04",
+          "story": "As a Brewery or Hospitality business, I want to create an account so that I can access and use the Beer 2 Beer platform.",
+          "storyConcepts": [
+            "beer",
+            "beerplatform",
+            "account",
+            "platform",
+            "brewery",
+            "hospitality",
+            "business"
+          ],
+          "matchedConcepts": [
+            "beer",
+            "account",
+            "platform",
+            "brewery",
+            "hospitality",
+            "business"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "beer_overview",
+            "account_overview",
+            "platform_overview",
+            "brewery_overview"
+          ],
+          "lexicalScore": 0.8571428571428571,
+          "covered": true
+        },
+        {
+          "id": "US05",
+          "story": "As a Hospitality business, I want to be able to use a shopping cart so that I can continue with my current selection before completing the order.",
+          "storyConcepts": [
+            "selectionbefore",
+            "shoppingcart",
+            "before",
+            "cart",
+            "completing",
+            "continue",
+            "current",
+            "order",
+            "selection",
+            "shopping",
+            "hospitality",
+            "business"
+          ],
+          "matchedConcepts": [
+            "current",
+            "order",
+            "hospitality",
+            "business"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "current_overview",
+            "order_overview"
+          ],
+          "lexicalScore": 0.3333333333333333,
+          "covered": true
+        },
+        {
+          "id": "US06",
+          "story": "As a Brewery, I want to add new brands and update existing ones on the platform so that I can keep my product offerings current and relevant for customers.",
+          "storyConcepts": [
+            "brand",
+            "current",
+            "customer",
+            "existing",
+            "keep",
+            "offering",
+            "one",
+            "platform",
+            "product",
+            "relevant",
+            "brewery"
+          ],
+          "matchedConcepts": [
+            "brand",
+            "current",
+            "platform",
+            "product",
+            "brewery"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "brand_overview",
+            "current_overview",
+            "platform_overview",
+            "product_overview",
+            "brewery_overview"
+          ],
+          "lexicalScore": 0.45454545454545453,
+          "covered": true
+        },
+        {
+          "id": "US07",
+          "story": "As a Brewery, I want to modify a product so that I can keep my assortment up to date.",
+          "storyConcepts": [
+            "assortmentup",
+            "assortment",
+            "date",
+            "keep",
+            "modify",
+            "product",
+            "brewery"
+          ],
+          "matchedConcepts": [
+            "assortment",
+            "date",
+            "product",
+            "brewery"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "product_overview",
+            "brewery_overview"
+          ],
+          "lexicalScore": 0.5714285714285714,
+          "covered": true
+        },
+        {
+          "id": "US08",
+          "story": "As a Brewery, I want to create a product so that I can offer it for sale on the platform.",
+          "storyConcepts": [
+            "producticanoffer",
+            "offer",
+            "platform",
+            "product",
+            "sale",
+            "brewery"
+          ],
+          "matchedConcepts": [
+            "platform",
+            "product",
+            "brewery"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "platform_overview",
+            "product_overview",
+            "brewery_overview"
+          ],
+          "lexicalScore": 0.5,
+          "covered": true
+        },
+        {
+          "id": "US09",
+          "story": "As a Brewery, I want to request a sales proposal so that I can offer my products on the Beer 2 Beer platform through order-based commissions.",
+          "storyConcepts": [
+            "beer",
+            "basedcommission",
+            "beerplatform",
+            "throughorder",
+            "based",
+            "commission",
+            "offer",
+            "order",
+            "platform",
+            "product",
+            "proposal",
+            "sale",
+            "through",
+            "brewery"
+          ],
+          "matchedConcepts": [
+            "beer",
+            "commission",
+            "order",
+            "platform",
+            "product",
+            "proposal",
+            "brewery"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "beer_overview",
+            "order_overview",
+            "platform_overview",
+            "product_overview",
+            "proposal_overview",
+            "brewery_overview"
+          ],
+          "lexicalScore": 0.5,
+          "covered": true
+        },
+        {
+          "id": "US10",
+          "story": "As a Hospitality business, I want to browse within a catalogue of the beers so that I can see which beers are available on the platform.",
+          "storyConcepts": [
+            "beer",
+            "catalogue",
+            "platform",
+            "which",
+            "within",
+            "hospitality",
+            "business"
+          ],
+          "matchedConcepts": [
+            "beer",
+            "platform",
+            "hospitality",
+            "business"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "beer_overview",
+            "platform_overview"
+          ],
+          "lexicalScore": 0.5714285714285714,
+          "covered": true
+        },
+        {
+          "id": "US11",
+          "story": "As a Beer2Beer management user, I want to view an overview of all beers and breweries available on the platform so that I can monitor the current offerings.",
+          "storyConcepts": [
+            "noverview",
+            "beer",
+            "brewery",
+            "current",
+            "offering",
+            "platform",
+            "beer2beer",
+            "management",
+            "user"
+          ],
+          "matchedConcepts": [
+            "noverview",
+            "beer",
+            "brewery",
+            "current",
+            "platform",
+            "user"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "noverview_overview",
+            "beer_overview",
+            "brewery_overview",
+            "current_overview",
+            "platform_overview",
+            "user_overview"
+          ],
+          "lexicalScore": 0.6666666666666666,
+          "covered": true
+        },
+        {
+          "id": "US12",
+          "story": "As a Beer2Beer management user, I want to create contracts after a proposal is accepted so that we can formalize agreements with breweries.",
+          "storyConcepts": [
+            "contractafteraproposal",
+            "contractafter",
+            "formalizeagreement",
+            "accepted",
+            "after",
+            "agreement",
+            "brewery",
+            "contract",
+            "formalize",
+            "proposal",
+            "beer2beer",
+            "management",
+            "user"
+          ],
+          "matchedConcepts": [
+            "brewery",
+            "contract",
+            "proposal",
+            "user"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "brewery_overview",
+            "contract_overview",
+            "proposal_overview",
+            "user_overview"
+          ],
+          "lexicalScore": 0.3076923076923077,
+          "covered": true
+        },
+        {
+          "id": "US13",
+          "story": "As a Brewery, I want to sign a contract with Beer 2 Beer so that we can agree on order commissions and delivery capacity.",
+          "storyConcepts": [
+            "beer",
+            "beerwe",
+            "deliverycapacity",
+            "agree",
+            "capacity",
+            "commission",
+            "contract",
+            "delivery",
+            "order",
+            "sign",
+            "brewery"
+          ],
+          "matchedConcepts": [
+            "beer",
+            "commission",
+            "contract",
+            "order",
+            "brewery"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "beer_overview",
+            "contract_overview",
+            "order_overview",
+            "brewery_overview"
+          ],
+          "lexicalScore": 0.45454545454545453,
+          "covered": true
+        },
+        {
+          "id": "US14",
+          "story": "As a brewery I want to be able to access current and previous contracts in pdf format",
+          "storyConcepts": [
+            "previoucontract",
+            "brewery",
+            "contract",
+            "current",
+            "format",
+            "pdf",
+            "previou",
+            "user"
+          ],
+          "matchedConcepts": [
+            "brewery",
+            "contract",
+            "current",
+            "user"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "brewery_overview",
+            "contract_overview",
+            "current_overview",
+            "user_overview"
+          ],
+          "lexicalScore": 0.5,
+          "covered": true
+        },
+        {
+          "id": "US15",
+          "story": "As a hospitality business, I want to manage recurring orders created from order templates, including the ability to cancel them, so I can adjust or stop deliveries as needed.",
+          "storyConcepts": [
+            "recurringordercreated",
+            "order",
+            "cancelthem",
+            "ordertemplate",
+            "recurringorder",
+            "ability",
+            "adjust",
+            "cancel",
+            "created",
+            "delivery",
+            "including",
+            "needed",
+            "recurring",
+            "stop",
+            "template",
+            "them",
+            "hospitality",
+            "business"
+          ],
+          "matchedConcepts": [
+            "order",
+            "ordertemplate",
+            "created",
+            "template",
+            "hospitality",
+            "business"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "order_overview",
+            "ordertemplate_overview"
+          ],
+          "lexicalScore": 0.3333333333333333,
+          "covered": true
+        },
+        {
+          "id": "US16",
+          "story": "As a hospitality business, I want to create recurring orders based on an order template so that I can schedule multiple deliveries automatically over a set period.",
+          "storyConcepts": [
+            "recurringorderbased",
+            "order",
+            "automaticallyover",
+            "multipledelivery",
+            "recurringorder",
+            "automatically",
+            "based",
+            "delivery",
+            "multiple",
+            "over",
+            "period",
+            "recurring",
+            "set",
+            "template",
+            "hospitality",
+            "business"
+          ],
+          "matchedConcepts": [
+            "order",
+            "template",
+            "hospitality",
+            "business"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "order_overview"
+          ],
+          "lexicalScore": 0.25,
+          "covered": false
+        },
+        {
+          "id": "US17",
+          "story": "As a hospitality business, I want to modify existing order templates so that I can tailor my product assortment to changing needs over time.",
+          "storyConcepts": [
+            "changingneed",
+            "overtime",
+            "assortment",
+            "changing",
+            "existing",
+            "modify",
+            "need",
+            "order",
+            "over",
+            "product",
+            "tailor",
+            "template",
+            "time",
+            "hospitality",
+            "business"
+          ],
+          "matchedConcepts": [
+            "assortment",
+            "order",
+            "product",
+            "template",
+            "hospitality",
+            "business"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "order_overview",
+            "product_overview"
+          ],
+          "lexicalScore": 0.4,
+          "covered": true
+        },
+        {
+          "id": "US18",
+          "story": "As a hospitality business, I want to create order templates that allow me to reorder my product assortment with a single click, saving time and reducing errors.",
+          "storyConcepts": [
+            "ordertemplate",
+            "productassortment",
+            "savingtime",
+            "singleclick",
+            "allow",
+            "assortment",
+            "click",
+            "error",
+            "order",
+            "product",
+            "reducing",
+            "reorder",
+            "saving",
+            "single",
+            "template",
+            "time",
+            "hospitality",
+            "business"
+          ],
+          "matchedConcepts": [
+            "ordertemplate",
+            "productassortment",
+            "assortment",
+            "order",
+            "product",
+            "template",
+            "hospitality",
+            "business"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "ordertemplate_overview",
+            "productassortment_overview",
+            "order_overview",
+            "product_overview"
+          ],
+          "lexicalScore": 0.4444444444444444,
+          "covered": true
+        },
+        {
+          "id": "US19",
+          "story": "As a Brewery, I want to manage my contracts with Beer2Beer so that I can renew them before they expire and avoid service interruptions.",
+          "storyConcepts": [
+            "avoidservice",
+            "renewthem",
+            "avoid",
+            "beer2beer",
+            "before",
+            "contract",
+            "expire",
+            "interruption",
+            "renew",
+            "service",
+            "them",
+            "brewery"
+          ],
+          "matchedConcepts": [
+            "contract",
+            "brewery"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "contract_overview",
+            "brewery_overview"
+          ],
+          "lexicalScore": 0.16666666666666666,
+          "covered": false
+        },
+        {
+          "id": "US20",
+          "story": "As a Brewery, I want to manage individual orders so that I can notify Hospitality businesses about the order status and updates.",
+          "storyConcepts": [
+            "order",
+            "businessesabout",
+            "individualorder",
+            "notifyhospitality",
+            "about",
+            "businesses",
+            "hospitality",
+            "individual",
+            "notify",
+            "statu",
+            "brewery"
+          ],
+          "matchedConcepts": [
+            "order",
+            "hospitality",
+            "statu",
+            "brewery"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "order_overview",
+            "brewery_overview"
+          ],
+          "lexicalScore": 0.36363636363636365,
+          "covered": true
+        },
+        {
+          "id": "US21",
+          "story": "As a Brewery, I want to view an overview of my orders so that I can monitor incoming orders and process them efficiently.",
+          "storyConcepts": [
+            "noverview",
+            "order",
+            "incomingorder",
+            "themefficiently",
+            "efficiently",
+            "incoming",
+            "them",
+            "brewery",
+            "process"
+          ],
+          "matchedConcepts": [
+            "noverview",
+            "order",
+            "brewery"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "noverview_overview",
+            "order_overview",
+            "brewery_overview"
+          ],
+          "lexicalScore": 0.3333333333333333,
+          "covered": true
+        },
+        {
+          "id": "US22",
+          "story": "As a Hospitality business, I want to manage my order templates so that I can quickly reorder the same selection at different times.",
+          "storyConcepts": [
+            "atdifferent",
+            "sameselection",
+            "different",
+            "order",
+            "quickly",
+            "reorder",
+            "same",
+            "selection",
+            "template",
+            "time",
+            "hospitality",
+            "business"
+          ],
+          "matchedConcepts": [
+            "order",
+            "template",
+            "hospitality",
+            "business"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "order_overview"
+          ],
+          "lexicalScore": 0.3333333333333333,
+          "covered": true
+        },
+        {
+          "id": "US23",
+          "story": "As a Hospitality business, I want to pay for my order so that the order can be processed and delivered.",
+          "storyConcepts": [
+            "order",
+            "delivered",
+            "pay",
+            "processed",
+            "hospitality",
+            "business"
+          ],
+          "matchedConcepts": [
+            "order",
+            "hospitality",
+            "business"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "order_overview"
+          ],
+          "lexicalScore": 0.5,
+          "covered": true
+        },
+        {
+          "id": "US24",
+          "story": "As a Hospitality business, I want to create a beer order at Beer2Beer so that I can receive the beers for my business from multiple breweries.",
+          "storyConcepts": [
+            "beerorderatbeer2beer",
+            "beer",
+            "multiplebrewery",
+            "orderat",
+            "beer2beer",
+            "brewery",
+            "business",
+            "multiple",
+            "order",
+            "hospitality"
+          ],
+          "matchedConcepts": [
+            "beer",
+            "brewery",
+            "business",
+            "order",
+            "hospitality"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "beer_overview",
+            "brewery_overview",
+            "order_overview"
+          ],
+          "lexicalScore": 0.5,
+          "covered": true
+        },
+        {
+          "id": "US25",
+          "story": "As a Beer2Beer management user, I want to view an overview of all breweries with accounts on the platform so that I can see our current client base.",
+          "storyConcepts": [
+            "noverview",
+            "account",
+            "base",
+            "brewery",
+            "client",
+            "current",
+            "platform",
+            "beer2beer",
+            "management",
+            "user"
+          ],
+          "matchedConcepts": [
+            "noverview",
+            "account",
+            "brewery",
+            "current",
+            "platform",
+            "user"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "noverview_overview",
+            "account_overview",
+            "brewery_overview",
+            "current_overview",
+            "platform_overview",
+            "user_overview"
+          ],
+          "lexicalScore": 0.6,
+          "covered": true
+        },
+        {
+          "id": "US26",
+          "story": "As a Beer2Beer management user, I want to view the logic operation's performance.",
+          "storyConcepts": [
+            "logicoperation",
+            "sperformance",
+            "logic",
+            "operation",
+            "performance",
+            "beer2beer",
+            "management",
+            "user"
+          ],
+          "matchedConcepts": [
+            "user"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "user_overview"
+          ],
+          "lexicalScore": 0.125,
+          "covered": false
+        }
+      ],
+      "score": 0.8846153846153846,
+      "covered": 23,
+      "total": 26
+    }
+  },
+  "generationStrategy": {
+    "llmPassCount": 1,
+    "repairPassEnabled": false
+  }
+}

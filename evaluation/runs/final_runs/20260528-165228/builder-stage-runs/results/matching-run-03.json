@@ -1,0 +1,544 @@
+{
+  "dataset": "matching",
+  "run": "run-03",
+  "planPath": "/Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/artifacts/practical-performance/20260528-165228/stability/matching/run-03/plan.json",
+  "ok": true,
+  "startedAt": "2026-05-30T18:17:59.871Z",
+  "tempPlanPath": "/Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/artifacts/practical-performance/20260528-165228/builder-stage-runs/plans/matching/run-03/plan.json",
+  "totalMs": 19286,
+  "result": {
+    "appId": "ac49a7a3-4bc1-4fa1-8ad3-56ac35556b3a",
+    "appCreated": true,
+    "seedAppId": null,
+    "branch": "main",
+    "committed": true,
+    "commitRequested": true,
+    "workingCopyId": "3466f790-4b78-481d-ba78-7778a932624e",
+    "personas": {
+      "enabled": false,
+      "generatedPageNames": [],
+      "personaNames": []
+    },
+    "stages": [
+      {
+        "stage": "domainModel",
+        "ok": true,
+        "summary": "entitiesCreated=14, associationsCreated=0, enumerationsCreated=2",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 40
+      },
+      {
+        "stage": "flush.afterDomainModel",
+        "ok": true,
+        "summary": "flush.afterDomainModel completed",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 133
+      },
+      {
+        "stage": "security",
+        "ok": true,
+        "summary": "moduleRolesCreated=3, userRolesCreated=3, demoUsersCreated=0",
+        "artifacts": [
+          {
+            "key": "moduleRoleNames",
+            "count": 4
+          },
+          {
+            "key": "userRoleNames",
+            "count": 5
+          },
+          {
+            "key": "demoUserNames",
+            "count": 2
+          }
+        ],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 260
+      },
+      {
+        "stage": "flush.afterSecurity",
+        "ok": true,
+        "summary": "flush.afterSecurity completed",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 133
+      },
+      {
+        "stage": "pageCapabilities",
+        "ok": true,
+        "summary": "pageCapabilities completed",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 1
+      },
+      {
+        "stage": "webClientCompatibility",
+        "ok": true,
+        "summary": "webClientCompatibility completed",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 0
+      },
+      {
+        "stage": "pages",
+        "ok": true,
+        "summary": "pages completed",
+        "artifacts": [
+          {
+            "key": "pageNames",
+            "count": 30
+          }
+        ],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 467
+      },
+      {
+        "stage": "navigationUI",
+        "ok": true,
+        "summary": "navigationUI completed",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 38
+      },
+      {
+        "stage": "homePage",
+        "ok": true,
+        "summary": "updatedProfiles=1",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 2
+      },
+      {
+        "stage": "flush.final",
+        "ok": true,
+        "summary": "flush.final completed",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 885
+      },
+      {
+        "stage": "verification",
+        "ok": true,
+        "summary": "ok=true",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 63
+      },
+      {
+        "stage": "capabilities",
+        "ok": true,
+        "summary": "capabilities completed",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 742
+      },
+      {
+        "stage": "commit",
+        "ok": true,
+        "summary": "commit completed",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 8327
+      }
+    ],
+    "createdApp": {
+      "appId": "ac49a7a3-4bc1-4fa1-8ad3-56ac35556b3a",
+      "name": "matching-run03",
+      "repositoryType": "git"
+    },
+    "beforeCounts": {
+      "pagesInModule": 1,
+      "entitiesInModule": 0,
+      "microflowsInModule": 1,
+      "nanoflowsInModule": 0,
+      "workflowsInModule": 0
+    },
+    "domainModel": {
+      "moduleName": "MyFirstModule",
+      "entitiesCreated": 14,
+      "associationsCreated": 0,
+      "enumerationsCreated": 2
+    },
+    "security": {
+      "moduleName": "MyFirstModule",
+      "securityLevel": "CheckFormsAndMicroflows",
+      "moduleRolesCreated": 3,
+      "userRolesCreated": 3,
+      "demoUsersRequested": 0,
+      "demoUsersCreated": 0,
+      "demoUsersApplied": 0,
+      "demoUserHandling": "notRequested",
+      "skippedDemoUsers": [],
+      "moduleRoleNames": [
+        "Manager",
+        "Student",
+        "Tutor",
+        "User"
+      ],
+      "userRoleNames": [
+        "Administrator",
+        "Manager",
+        "Student",
+        "Tutor",
+        "User"
+      ],
+      "demoUserNames": [
+        "demo_administrator",
+        "demo_user"
+      ]
+    },
+    "pageCapabilities": null,
+    "webClientCompatibility": {
+      "lookupRequested": false,
+      "classicGridRequested": false,
+      "updated": false,
+      "useOptimizedClient": null
+    },
+    "pages": {
+      "moduleName": "MyFirstModule",
+      "layoutQualifiedName": "Atlas_Core.Atlas_Default",
+      "layoutParameterQname": "Atlas_Core.Atlas_Default.Main",
+      "pageNames": [
+        "Home",
+        "Session_Dashboard",
+        "Session_Overview",
+        "Session_NewEdit",
+        "Matched_Overview",
+        "Matched_NewEdit",
+        "Subject_Overview",
+        "Subject_NewEdit",
+        "Availability_Overview",
+        "Availability_NewEdit",
+        "Matching_Overview",
+        "Matching_NewEdit",
+        "Platform_Overview",
+        "Platform_NewEdit",
+        "Service_Overview",
+        "Service_NewEdit",
+        "Based_Overview",
+        "Based_NewEdit",
+        "User_Overview",
+        "User_NewEdit",
+        "TutorDocument_Overview",
+        "TutorDocument_NewEdit",
+        "Match_Overview",
+        "Match_NewEdit",
+        "Rating_Overview",
+        "Rating_NewEdit",
+        "PaymentTransaction_Overview",
+        "PaymentTransaction_NewEdit",
+        "ChatMessage_Overview",
+        "ChatMessage_NewEdit"
+      ],
+      "dg2Cleanup": {
+        "enabled": true,
+        "targetedPageNames": [],
+        "deletedPageNames": [],
+        "failed": []
+      },
+      "dataGrid2": {
+        "enabled": false,
+        "widgetId": "",
+        "resolvedFrom": "",
+        "useFallbackSchema": false,
+        "probeVariant": null,
+        "configuredWidgets": 0,
+        "attempts": []
+      }
+    },
+    "dg2Cleanup": {
+      "enabled": true,
+      "targetedPageNames": [],
+      "deletedPageNames": [],
+      "failed": []
+    },
+    "navigationUI": {
+      "requested": true,
+      "homeButtonsAdded": 0,
+      "navItemsAdded": 6
+    },
+    "homePage": {
+      "requested": true,
+      "updatedProfiles": 1,
+      "targetPageQualifiedName": "MyFirstModule.Home"
+    },
+    "afterCounts": {
+      "pagesInModule": 31,
+      "entitiesInModule": 14,
+      "microflowsInModule": 1,
+      "nanoflowsInModule": 0,
+      "workflowsInModule": 0
+    },
+    "beforeRefs": {
+      "pages": [
+        {
+          "name": "Home_Web",
+          "id": "5c6805fc-cadf-4d72-a5ef-f25da7cf4c97"
+        }
+      ],
+      "entities": [],
+      "microflows": [
+        {
+          "name": "MyFirstLogic",
+          "id": "4a8475b3-14cb-4100-8963-58f2fd3a0be8"
+        }
+      ],
+      "nanoflows": [],
+      "workflows": []
+    },
+    "afterRefs": {
+      "pages": [
+        {
+          "name": "Home_Web",
+          "id": "5c6805fc-cadf-4d72-a5ef-f25da7cf4c97"
+        },
+        {
+          "name": "Home",
+          "id": "b720e816-4ce1-43dd-934f-bc21998afd61"
+        },
+        {
+          "name": "Session_Dashboard",
+          "id": "19c11bbf-9d8f-4e84-9202-01e773e678cb"
+        },
+        {
+          "name": "Session_Overview",
+          "id": "05cc1632-80ee-4d86-bab3-7d9045a53b40"
+        },
+        {
+          "name": "Session_NewEdit",
+          "id": "185f7df6-42f4-41a3-8e3b-3149e1b8a509"
+        },
+        {
+          "name": "Matched_Overview",
+          "id": "f9aa1069-1033-4c0a-b67b-c90ae6461ea8"
+        },
+        {
+          "name": "Matched_NewEdit",
+          "id": "d53df900-99f1-4850-8bb1-79b38fe7cb6d"
+        },
+        {
+          "name": "Subject_Overview",
+          "id": "7a419963-aa71-44c2-8576-056da7c39313"
+        },
+        {
+          "name": "Subject_NewEdit",
+          "id": "57c7e019-dd1b-4fa3-ac73-a2448ee625d0"
+        },
+        {
+          "name": "Availability_Overview",
+          "id": "38dca2fe-2c82-4122-ae39-ab422713b557"
+        },
+        {
+          "name": "Availability_NewEdit",
+          "id": "ff693e0f-d00c-4621-b172-41b9eb4843a2"
+        },
+        {
+          "name": "Matching_Overview",
+          "id": "2c3a15bf-c406-448f-82c7-9f9399385a58"
+        },
+        {
+          "name": "Matching_NewEdit",
+          "id": "33724aa4-a8ee-4483-92b7-70da79bd3ed2"
+        },
+        {
+          "name": "Platform_Overview",
+          "id": "ef35f970-8b1a-4de6-9a0d-d7d481cc1423"
+        },
+        {
+          "name": "Platform_NewEdit",
+          "id": "4a45571d-45d7-4bfa-b872-2a880480ccc4"
+        },
+        {
+          "name": "Service_Overview",
+          "id": "0f01313d-92dd-4e25-ace8-4555b0e4436b"
+        },
+        {
+          "name": "Service_NewEdit",
+          "id": "9f4ff675-94e7-43f0-8d6f-ab4582a93485"
+        },
+        {
+          "name": "Based_Overview",
+          "id": "46080d58-7114-4c94-a18c-3a53603f424a"
+        },
+        {
+          "name": "Based_NewEdit",
+          "id": "0b67e64f-c3f6-43b5-96e7-dc0e84fa3d6f"
+        },
+        {
+          "name": "User_Overview",
+          "id": "89883786-57a4-4c93-ba3a-64ae1589dc33"
+        },
+        {
+          "name": "User_NewEdit",
+          "id": "4d1d9ab4-e114-4a74-999b-f95418712126"
+        },
+        {
+          "name": "TutorDocument_Overview",
+          "id": "281961cb-0041-44d6-bfeb-9899f4ae0a3c"
+        },
+        {
+          "name": "TutorDocument_NewEdit",
+          "id": "c99bd39e-b916-4a1d-bac1-97b0b3fe9579"
+        },
+        {
+          "name": "Match_Overview",
+          "id": "22421d2b-eaf9-463b-be0f-cb4d655ce31b"
+        },
+        {
+          "name": "Match_NewEdit",
+          "id": "28b9af22-a9cd-44ae-8673-d341384a8c87"
+        },
+        {
+          "name": "Rating_Overview",
+          "id": "ea6349db-02e4-40ee-865b-a6559d45153f"
+        },
+        {
+          "name": "Rating_NewEdit",
+          "id": "22f1efdb-e89c-4339-9084-51ae9b7314de"
+        },
+        {
+          "name": "PaymentTransaction_Overview",
+          "id": "8fd43d56-d5eb-4071-812c-c269b6ae66af"
+        },
+        {
+          "name": "PaymentTransaction_NewEdit",
+          "id": "3ffa990c-4f44-494e-a691-df4fecaf4660"
+        },
+        {
+          "name": "ChatMessage_Overview",
+          "id": "69acc296-8189-4896-99a6-242124b5ee8e"
+        },
+        {
+          "name": "ChatMessage_NewEdit",
+          "id": "1aca50cc-218d-4c2b-a214-d16fbb92129d"
+        }
+      ],
+      "entities": [
+        {
+          "name": "Session",
+          "id": "9626773d-9f54-414c-a068-9fd16379a170"
+        },
+        {
+          "name": "Matched",
+          "id": "135a0b43-7fa6-486c-8025-73c773a146ec"
+        },
+        {
+          "name": "Subject",
+          "id": "84d34b97-6e39-4477-8d71-dea8e608bf3a"
+        },
+        {
+          "name": "Availability",
+          "id": "9130e43b-74e1-4b20-9116-9ddc64c24e57"
+        },
+        {
+          "name": "Matching",
+          "id": "1c2c370c-0eff-4a3b-8bcd-484c2486448a"
+        },
+        {
+          "name": "Platform",
+          "id": "930ace47-ab03-4559-aa29-dea0ca991e6f"
+        },
+        {
+          "name": "Service",
+          "id": "bde98f38-5178-4e1c-96b1-1514c2aa49fd"
+        },
+        {
+          "name": "Based",
+          "id": "ba2d1b82-1343-4d8d-bea0-5b162d36c877"
+        },
+        {
+          "name": "User",
+          "id": "9a8e5f12-75cb-4ccc-ad35-c12b6682875a"
+        },
+        {
+          "name": "TutorDocument",
+          "id": "4a9ab1b8-0bef-41cb-b252-d28e4d9e4402"
+        },
+        {
+          "name": "Match",
+          "id": "4a61893d-27a1-4bfa-a9c6-74eaa8e98328"
+        },
+        {
+          "name": "Rating",
+          "id": "726cd2ec-dcbb-42d6-b4a0-98e5ab6c9dc4"
+        },
+        {
+          "name": "PaymentTransaction",
+          "id": "f662afda-b2c4-4196-a30a-7d2d1b3136df"
+        },
+        {
+          "name": "ChatMessage",
+          "id": "50ff9eff-7864-4117-a485-9db0f1d7d1f3"
+        }
+      ],
+      "microflows": [
+        {
+          "name": "MyFirstLogic",
+          "id": "4a8475b3-14cb-4100-8963-58f2fd3a0be8"
+        }
+      ],
+      "nanoflows": [],
+      "workflows": []
+    },
+    "verification": {
+      "missing": {
+        "pages": [],
+        "entities": [],
+        "microflows": [],
+        "nanoflows": [],
+        "workflows": []
+      },
+      "ok": true,
+      "artifacts": {
+        "ok": true,
+        "missing": {
+          "moduleRoles": [],
+          "userRoles": [],
+          "demoUsers": [],
+          "pageVisibility": [],
+          "homePageButtons": [],
+          "menuItems": [],
+          "widgets": []
+        }
+      },
+      "semantic": {
+        "enabled": false,
+        "ok": true,
+        "errors": []
+      }
+    },
+    "capabilities": {
+      "modules": [
+        "Administration",
+        "Atlas_Core",
+        "Atlas_Web_Content",
+        "DataWidgets",
+        "FeedbackModule",
+        "MyFirstModule",
+        "NanoflowCommons",
+        "WebActions"
+      ],
+      "widgetIds": [],
+      "widgetFamilies": [
+        "datawidgets_module"
+      ]
+    },
+    "commitMessage": "Practical performance builder-stage run: matching run-03",
+    "ok": true
+  }
+}

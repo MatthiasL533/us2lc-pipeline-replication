@@ -1,0 +1,8 @@
+{
+  "model": "qwen2.5:7b",
+  "total_duration": 123456,
+  "load_duration": 34567,
+  "prompt_eval_count": 420,
+  "eval_count": 133,
+  "response": "{\"domainModel\":{\"entities\":[{\"name\":\"ServiceRequest\",\"attributes\":[{\"name\":\"Title\",\"type\":\"String\",\"required\":true},{\"name\":\"Description\",\"type\":\"String\",\"required\":false},{\"name\":\"Priority\",\"type\":{\"kind\":\"Enum\",\"enumName\":\"RequestPriority\"},\"required\":true},{\"name\":\"Status\",\"type\":{\"kind\":\"Enum\",\"enumName\":\"RequestStatus\"},\"required\":true}]},{\"name\":\"Agent\",\"attributes\":[{\"name\":\"FullName\",\"type\":\"String\",\"required\":true},{\"name\":\"Email\",\"type\":\"String\",\"required\":true}]}],\"associations\":[{\"name\":\"ServiceRequest_Agent\",\"parentEntity\":\"ServiceRequest\",\"childEntity\":\"Agent\",\"type\":\"Reference\",\"owner\":\"Both\"}],\"enumerations\":[{\"name\":\"RequestPriority\",\"values\":[\"Low\",\"Medium\",\"High\"]},{\"name\":\"RequestStatus\",\"values\":[\"Open\",\"InProgress\",\"Closed\"]}]},\"pages\":{\"specs\":[{\"ref\":\"home\",\"name\":\"Home\",\"title\":\"Home\",\"content\":[{\"type\":\"dynamicText\",\"text\":\"Service Request Console\",\"renderMode\":\"H2\"}]},{\"ref\":\"service_request_overview\",\"name\":\"ServiceRequest_Overview\",\"title\":\"Service Requests\",\"entityRef\":\"MyFirstModule.ServiceRequest\",\"content\":[{\"type\":\"dynamicText\",\"text\":\"Track and manage service requests\",\"renderMode\":\"Paragraph\"}]}]}}"
+}

@@ -1,0 +1,211 @@
+{
+  "actors": [
+    "Customer",
+    "Returning Customer",
+    "Customer with a Family Membership",
+    "Admin",
+    "Trainer",
+    "User"
+  ],
+  "tasks": [
+    {
+      "actor": "Customer",
+      "action": "open an account in the system",
+      "condition": "",
+      "gatewayId": "",
+      "gatewayType": "",
+      "storyIndex": 0
+    },
+    {
+      "actor": "Returning Customer",
+      "action": "know how long my subscription for daily sports lasts",
+      "condition": "so i know when i need to extend my subscription for daily sports",
+      "gatewayId": "EG0",
+      "gatewayType": "exclusive",
+      "storyIndex": 5
+    },
+    {
+      "actor": "Customer",
+      "action": "unsubscribe",
+      "condition": "so that sign-up is easier",
+      "gatewayId": "EG0",
+      "gatewayType": "exclusive",
+      "storyIndex": 7
+    },
+    {
+      "actor": "Customer with a Family Membership",
+      "action": "update my payment information",
+      "condition": "so that sign-up is easier",
+      "gatewayId": "EG0",
+      "gatewayType": "exclusive",
+      "storyIndex": 10
+    },
+    {
+      "actor": "Customer",
+      "action": "see what future lessons i have booked",
+      "condition": "so that sign-up is easier",
+      "gatewayId": "EG0",
+      "gatewayType": "exclusive",
+      "storyIndex": 15
+    },
+    {
+      "actor": "Admin",
+      "action": "call daily sports to cancel a lesson",
+      "condition": "so that i don't have to use the application",
+      "gatewayId": "EG0",
+      "gatewayType": "exclusive",
+      "storyIndex": 18
+    },
+    {
+      "actor": "Trainer",
+      "action": "see how many spots have been booked for a given timeslot",
+      "condition": "so that i know the free practice area will have capacity for i when i arrive",
+      "gatewayId": "EG0",
+      "gatewayType": "exclusive",
+      "storyIndex": 23
+    },
+    {
+      "actor": "Trainer",
+      "action": "be the only Trainer who can edit my lessons",
+      "condition": "so that i know the free practice area will have capacity for i when i arrive",
+      "gatewayId": "EG0",
+      "gatewayType": "exclusive",
+      "storyIndex": 31
+    },
+    {
+      "actor": "Admin",
+      "action": "be able to edit any lesson",
+      "condition": "so that i know the free practice area will have capacity for i when i arrive",
+      "gatewayId": "EG0",
+      "gatewayType": "exclusive",
+      "storyIndex": 36
+    },
+    {
+      "actor": "Customer",
+      "action": "receive a notification",
+      "condition": "so that i know the free practice area will have capacity for i when i arrive",
+      "gatewayId": "EG0",
+      "gatewayType": "exclusive",
+      "storyIndex": 39
+    },
+    {
+      "actor": "Admin",
+      "action": "see if a customer did not show up for a session",
+      "condition": "i didn't go to a session i had booked",
+      "gatewayId": "EG0",
+      "gatewayType": "exclusive",
+      "storyIndex": 41
+    },
+    {
+      "actor": "Admin",
+      "action": "remove a trainer from the system",
+      "condition": "i didn't go to a session i had booked",
+      "gatewayId": "EG0",
+      "gatewayType": "exclusive",
+      "storyIndex": 47
+    },
+    {
+      "actor": "User",
+      "action": "log in to the system",
+      "condition": "i didn't go to a session i had booked",
+      "gatewayId": "EG0",
+      "gatewayType": "exclusive",
+      "storyIndex": 48
+    },
+    {
+      "actor": "Customer",
+      "action": "receive notifications by the method which i prefer",
+      "condition": "i didn't go to a session i had booked",
+      "gatewayId": "EG0",
+      "gatewayType": "exclusive",
+      "storyIndex": 49
+    },
+    {
+      "actor": "Admin",
+      "action": "know which customers are aware that their booking has been canceled",
+      "condition": "i didn't go to a session i had booked",
+      "gatewayId": "EG0",
+      "gatewayType": "exclusive",
+      "storyIndex": 55
+    },
+    {
+      "actor": "customer",
+      "action": "know which customers are aware that their booking has been canceled",
+      "condition": "i didn't go to a session i had booked",
+      "gatewayId": "EG0",
+      "gatewayType": "exclusive",
+      "storyIndex": 55
+    },
+    {
+      "actor": "Trainer",
+      "action": "see information about my past and future training sessions",
+      "condition": "so that i can call customers if customers aren't",
+      "gatewayId": "EG0",
+      "gatewayType": "exclusive",
+      "storyIndex": 58
+    }
+  ],
+  "gateways": [
+    {
+      "id": "EG0",
+      "type": "exclusive",
+      "conditions": [
+        "so i meet the requirements of daily sports for signing up",
+        "so i can pay for my subscription",
+        "so i can pay according to my wishes",
+        "so i can continue working out",
+        "so i know when i need to extend my subscription for daily sports",
+        "so that sign-up is easier",
+        "so i can track my progress",
+        "so that i don't have to use the application",
+        "so that i know the free practice area will have capacity for i when i arrive",
+        "when my booked lesson is canceled",
+        "i didn't go to a session i had booked",
+        "so that i can call customers if customers aren't"
+      ]
+    }
+  ],
+  "processObjects": [
+    "Account In The System",
+    "For Daily Sports Lasts",
+    "Unsubscribe",
+    "My Payment Information",
+    "Lessons I Have Booked",
+    "To Cancel A Lesson",
+    "For A Given Timeslot",
+    "Can Edit My Lessons",
+    "To Edit Any Lesson",
+    "Notification",
+    "Up For A Session",
+    "Trainer From The System",
+    "In To The System",
+    "Method Which I Prefer",
+    "Booking Has Been Canceled",
+    "And Future Training Sessions",
+    "My Personal Information",
+    "My Banking Details",
+    "Choose My Membership Type",
+    "Subscription For Daily Sports",
+    "Use My Previous Information",
+    "Reset My Password",
+    "My Personal Details",
+    "Person To My Membership",
+    "Person From My Membership",
+    "To Book A Lesson",
+    "All Personal Training Sessions",
+    "A Personal Training Session",
+    "The Free Practice Area",
+    "At A Given Timeslot"
+  ],
+  "capabilityHints": {
+    "hasApproval": false,
+    "hasDecision": true,
+    "hasNotification": true,
+    "hasWorkflowLikeRouting": true
+  },
+  "stats": {
+    "taskCount": 17,
+    "gatewayCount": 1,
+    "rawEntityCount": 115
+  }
+}

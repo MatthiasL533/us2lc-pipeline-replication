@@ -1,0 +1,3009 @@
+{
+  "ok": true,
+  "generatedAt": "2026-05-29T18:20:08.394Z",
+  "inputDir": "/Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/artifacts/practical-performance/20260528-165228/inputs/grocery",
+  "outputPlanPath": "/Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/artifacts/practical-performance/20260528-165228/stability/grocery/run-01/plan.json",
+  "warnings": [
+    "Dropped association \"<unnamed>\" because entities could not be resolved after normalization.",
+    "Dropped association \"<unnamed>\" because entities could not be resolved after normalization.",
+    "Dropped association \"<unnamed>\" because entities could not be resolved after normalization.",
+    "Dropped association \"<unnamed>\" because entities could not be resolved after normalization.",
+    "Dropped association \"<unnamed>\" because entities could not be resolved after normalization.",
+    "Dropped association \"<unnamed>\" because entities could not be resolved after normalization.",
+    "Dropped association \"<unnamed>\" because entities could not be resolved after normalization.",
+    "Dropped association \"<unnamed>\" because entities could not be resolved after normalization.",
+    "Dropped association \"<unnamed>\" because entities could not be resolved after normalization.",
+    "Dropped association \"<unnamed>\" because entities could not be resolved after normalization.",
+    "Dropped association \"<unnamed>\" because entities could not be resolved after normalization.",
+    "Dropped association \"<unnamed>\" because entities could not be resolved after normalization.",
+    "Dropped association \"<unnamed>\" because entities could not be resolved after normalization.",
+    "Dropped association \"<unnamed>\" because entities could not be resolved after normalization.",
+    "Dropped association \"<unnamed>\" because entities could not be resolved after normalization.",
+    "Dropped association \"<unnamed>\" because entities could not be resolved after normalization.",
+    "Dropped association \"<unnamed>\" because entities could not be resolved after normalization.",
+    "Added missing overview page for entity \"Employee\".",
+    "Added missing NewEdit page for entity \"Employee\".",
+    "Added missing overview page for entity \"Manager\".",
+    "Added missing NewEdit page for entity \"Manager\".",
+    "Added missing overview page for entity \"Applicant\".",
+    "Added missing NewEdit page for entity \"Applicant\".",
+    "Added missing overview page for entity \"Contract\".",
+    "Added missing NewEdit page for entity \"Contract\".",
+    "Added missing overview page for entity \"Certificate\".",
+    "Added missing NewEdit page for entity \"Certificate\".",
+    "Added missing overview page for entity \"Schedule\".",
+    "Added missing NewEdit page for entity \"Schedule\".",
+    "Added missing overview page for entity \"WorkHour\".",
+    "Added missing NewEdit page for entity \"WorkHour\".",
+    "Added missing overview page for entity \"SalaryStatement\".",
+    "Added missing NewEdit page for entity \"SalaryStatement\".",
+    "Added missing NewEdit page for entity \"Complaint\".",
+    "Added missing overview page for entity \"Message\".",
+    "Added missing NewEdit page for entity \"Message\".",
+    "Added missing overview page for entity \"ComplaintCategory\".",
+    "Added missing NewEdit page for entity \"ComplaintCategory\".",
+    "Added missing overview page for entity \"Notification\".",
+    "Added missing NewEdit page for entity \"Notification\".",
+    "Dropped placeholder page \"employee_profile\" because it had no useful steps.",
+    "Dropped placeholder page \"contract_view\" because it had no useful steps.",
+    "Dropped placeholder page \"certificate_view\" because it had no useful steps.",
+    "Dropped placeholder page \"schedule_view\" because it had no useful steps.",
+    "Dropped placeholder page \"workhour_view\" because it had no useful steps.",
+    "Dropped placeholder page \"salarystatement_view\" because it had no useful steps.",
+    "Dropped placeholder page \"complaint_submission\" because it had no useful steps.",
+    "Dropped placeholder page \"complaint_overview\" because it had no useful steps.",
+    "Dropped placeholder page \"message_inbox\" because it had no useful steps.",
+    "Dropped placeholder page \"messaging_chat\" because it had no useful steps.",
+    "Dropped placeholder page \"payment_setup\" because it had no useful steps.",
+    "Dropped placeholder page \"hiring_process\" because it had no useful steps.",
+    "Dropped low-relevance LLM entity \"Schedule\".",
+    "Dropped low-relevance LLM entity \"Message\".",
+    "Dropped low-relevance LLM page \"Schedule_Overview\".",
+    "Dropped low-relevance LLM page \"Schedule_NewEdit\".",
+    "Dropped low-relevance LLM page \"Message_Overview\".",
+    "Dropped low-relevance LLM page \"Message_NewEdit\".",
+    "Domain review dropped duplicate generic entity \"Statement\": Generic entity duplicates more specific story-backed entity \"SalaryStatement\".",
+    "Domain review dropped duplicate generic entity \"Hour\": Generic entity duplicates more specific story-backed entity \"WorkHour\".",
+    "Removed page \"statement_overview\" for dropped entity \"Statement\".",
+    "Removed page \"statement_newedit\" for dropped entity \"Statement\".",
+    "Removed page \"hour_overview\" for dropped entity \"Hour\".",
+    "Removed page \"hour_newedit\" for dropped entity \"Hour\"."
+  ],
+  "validation": {
+    "ok": true,
+    "errors": []
+  },
+  "model": "gemma4:e4b",
+  "coverage": {
+    "score": 0.40816326530612246,
+    "covered": 20,
+    "total": 49,
+    "missingStoryIds": [
+      "US04",
+      "US05",
+      "US08",
+      "US09",
+      "US10",
+      "US11",
+      "US13",
+      "US14",
+      "US17",
+      "US18",
+      "US19",
+      "US21",
+      "US23",
+      "US24",
+      "US25",
+      "US30",
+      "US31",
+      "US34",
+      "US36",
+      "US37",
+      "US39",
+      "US40",
+      "US41",
+      "US42",
+      "US43",
+      "US44",
+      "US45",
+      "US46",
+      "US49"
+    ],
+    "entries": [
+      {
+        "id": "US01",
+        "story": "As an employee, I want to receive my salary statement, so that I have a clear overview.",
+        "storyConcepts": [
+          "clear",
+          "salary",
+          "statement",
+          "employee"
+        ],
+        "matchedConcepts": [
+          "clear",
+          "salary",
+          "statement",
+          "employee"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "clear_overview",
+          "employee_overview"
+        ],
+        "lexicalScore": 1,
+        "covered": true
+      },
+      {
+        "id": "US02",
+        "story": "As a manager, I want to send salary statements, so that my employees have a clear overview.",
+        "storyConcepts": [
+          "clearoverview",
+          "salarystatement",
+          "clear",
+          "employee",
+          "salary",
+          "statement",
+          "manager"
+        ],
+        "matchedConcepts": [
+          "clearoverview",
+          "salarystatement",
+          "clear",
+          "employee",
+          "salary",
+          "statement",
+          "manager"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "salarystatement_overview",
+          "clear_overview",
+          "employee_overview",
+          "manager_overview"
+        ],
+        "lexicalScore": 1,
+        "covered": true
+      },
+      {
+        "id": "US03",
+        "story": "As a manager, I want to enable the option for weekly and monthly payments for my employees, so that employee satisfaction rises.",
+        "storyConcepts": [
+          "employee",
+          "employeesatisfaction",
+          "enable",
+          "monthly",
+          "option",
+          "payment",
+          "rise",
+          "satisfaction",
+          "weekly",
+          "manager"
+        ],
+        "matchedConcepts": [
+          "employee",
+          "payment",
+          "manager"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "employee_overview",
+          "payment_overview",
+          "manager_overview"
+        ],
+        "lexicalScore": 0.3,
+        "covered": true
+      },
+      {
+        "id": "US04",
+        "story": "As a manager, I want to automate the payment system, so that all payments are handled correctly and on time.",
+        "storyConcepts": [
+          "payment",
+          "automate",
+          "correctly",
+          "handled",
+          "time",
+          "manager",
+          "system"
+        ],
+        "matchedConcepts": [
+          "payment",
+          "manager"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "payment_overview",
+          "manager_overview"
+        ],
+        "lexicalScore": 0.2857142857142857,
+        "covered": false
+      },
+      {
+        "id": "US05",
+        "story": "As a manager, I want to outsource part of the payment process, so that I do not have to worry about local payment regulations for each country.",
+        "storyConcepts": [
+          "payment",
+          "aboutlocal",
+          "paymentregulation",
+          "about",
+          "country",
+          "each",
+          "local",
+          "not",
+          "outsource",
+          "part",
+          "regulation",
+          "worry",
+          "manager",
+          "process"
+        ],
+        "matchedConcepts": [
+          "payment",
+          "manager"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "payment_overview",
+          "manager_overview"
+        ],
+        "lexicalScore": 0.14285714285714285,
+        "covered": false
+      },
+      {
+        "id": "US06",
+        "story": "As an employee, I want to receive a notification when my salary payment is handled, so that I stay up to date with my financial status.",
+        "storyConcepts": [
+          "salarypayment",
+          "date",
+          "financial",
+          "handled",
+          "notification",
+          "payment",
+          "salary",
+          "statu",
+          "stay",
+          "when",
+          "employee"
+        ],
+        "matchedConcepts": [
+          "date",
+          "notification",
+          "payment",
+          "salary",
+          "statu",
+          "when",
+          "employee"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "notification_overview",
+          "payment_overview",
+          "when_overview",
+          "employee_overview"
+        ],
+        "lexicalScore": 0.6363636363636364,
+        "covered": true
+      },
+      {
+        "id": "US07",
+        "story": "As an employee, I want to express my preferred working hours, so that I am most likely to work on hours that best suit me.",
+        "storyConcepts": [
+          "hour",
+          "mostlikely",
+          "suitme",
+          "workinghour",
+          "best",
+          "express",
+          "likely",
+          "most",
+          "preferred",
+          "suit",
+          "working",
+          "employee"
+        ],
+        "matchedConcepts": [
+          "hour",
+          "workinghour",
+          "preferred",
+          "working",
+          "employee"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "employee_overview"
+        ],
+        "lexicalScore": 0.4166666666666667,
+        "covered": true
+      },
+      {
+        "id": "US08",
+        "story": "As a manager, I want to semi-automate the scheduling process, so that the scheduling process is more efficient.",
+        "storyConcepts": [
+          "scheduling",
+          "moreefficient",
+          "schedulingprocess",
+          "automate",
+          "efficient",
+          "more",
+          "semi",
+          "manager",
+          "process"
+        ],
+        "matchedConcepts": [
+          "manager"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "manager_overview"
+        ],
+        "lexicalScore": 0.1111111111111111,
+        "covered": false
+      },
+      {
+        "id": "US09",
+        "story": "As a manager, I want to have the ability to manually edit the automatically-generated schedule, so that I can keep the operations running on busy days.",
+        "storyConcepts": [
+          "generatedschedule",
+          "operationrunning",
+          "ability",
+          "automatically",
+          "busy",
+          "day",
+          "generated",
+          "keep",
+          "manually",
+          "operation",
+          "running",
+          "manager"
+        ],
+        "matchedConcepts": [
+          "manager"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "manager_overview"
+        ],
+        "lexicalScore": 0.08333333333333333,
+        "covered": false
+      },
+      {
+        "id": "US10",
+        "story": "As a manager, I want to manually authorize the schedule before it goes live, so that I can ensure a correct schedule is being shared.",
+        "storyConcepts": [
+          "correctschedule",
+          "authorize",
+          "before",
+          "being",
+          "correct",
+          "ensure",
+          "goe",
+          "live",
+          "manually",
+          "shared",
+          "manager"
+        ],
+        "matchedConcepts": [
+          "manager"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "manager_overview"
+        ],
+        "lexicalScore": 0.09090909090909091,
+        "covered": false
+      },
+      {
+        "id": "US11",
+        "story": "As a manager, I want to be notified as soon as manual adjustments need to be made, so that I can swiftly handle these adjustments and keep a clear overview.",
+        "storyConcepts": [
+          "adjustment",
+          "manualadjustment",
+          "swiftlyhandle",
+          "theseadjustment",
+          "clear",
+          "handle",
+          "keep",
+          "made",
+          "manual",
+          "need",
+          "notified",
+          "soon",
+          "swiftly",
+          "these",
+          "manager"
+        ],
+        "matchedConcepts": [
+          "clear",
+          "manager"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "clear_overview",
+          "manager_overview"
+        ],
+        "lexicalScore": 0.13333333333333333,
+        "covered": false
+      },
+      {
+        "id": "US12",
+        "story": "As an employee, I want to receive notification when the new schedule is available, so that I can keep the scheduled hours free from other activities.",
+        "storyConcepts": [
+          "notificationwhen",
+          "otheractivity",
+          "scheduledhour",
+          "free",
+          "hour",
+          "keep",
+          "notification",
+          "other",
+          "scheduled",
+          "when",
+          "employee"
+        ],
+        "matchedConcepts": [
+          "hour",
+          "notification",
+          "when",
+          "employee"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "notification_overview",
+          "when_overview",
+          "employee_overview"
+        ],
+        "lexicalScore": 0.36363636363636365,
+        "covered": true
+      },
+      {
+        "id": "US13",
+        "story": "As an employee, I want to view the schedule at any given time, so that I can effectively keep track of my personal time.",
+        "storyConcepts": [
+          "time",
+          "atany",
+          "effectivelykeep",
+          "giventime",
+          "any",
+          "effectively",
+          "given",
+          "keep",
+          "personal",
+          "employee"
+        ],
+        "matchedConcepts": [
+          "personal",
+          "employee"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "employee_overview"
+        ],
+        "lexicalScore": 0.2,
+        "covered": false
+      },
+      {
+        "id": "US14",
+        "story": "As a manager, I want to view the schedule at any given time, so that I can effectively manage the employee presence on the work floor.",
+        "storyConcepts": [
+          "employeepresence",
+          "atany",
+          "effectivelymanage",
+          "giventime",
+          "any",
+          "effectively",
+          "employee",
+          "given",
+          "presence",
+          "time",
+          "manager"
+        ],
+        "matchedConcepts": [
+          "employee",
+          "manager"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "employee_overview",
+          "manager_overview"
+        ],
+        "lexicalScore": 0.18181818181818182,
+        "covered": false
+      },
+      {
+        "id": "US15",
+        "story": "As an employee, I want the system to automatically verify my work hours, so that my salary statements are calculated accurately.",
+        "storyConcepts": [
+          "calculatedaccurately",
+          "accurately",
+          "automatically",
+          "calculated",
+          "hour",
+          "salary",
+          "statement",
+          "verify",
+          "employee",
+          "system"
+        ],
+        "matchedConcepts": [
+          "hour",
+          "salary",
+          "statement",
+          "employee"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "employee_overview"
+        ],
+        "lexicalScore": 0.4,
+        "covered": true
+      },
+      {
+        "id": "US16",
+        "story": "As a manager, I want the system to automatically verify employees' work hours, so that employees' salary statements are calculated accurately.",
+        "storyConcepts": [
+          "employee",
+          "salarystatement",
+          "verifyemployee",
+          "accurately",
+          "automatically",
+          "calculated",
+          "hour",
+          "salary",
+          "statement",
+          "verify",
+          "manager",
+          "system"
+        ],
+        "matchedConcepts": [
+          "employee",
+          "salarystatement",
+          "hour",
+          "salary",
+          "statement",
+          "manager"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "employee_overview",
+          "salarystatement_overview",
+          "manager_overview"
+        ],
+        "lexicalScore": 0.5,
+        "covered": true
+      },
+      {
+        "id": "US17",
+        "story": "As an office employee, I want a separate complaint system with tickets, so that I don't have to filter through my email for complaints anymore.",
+        "storyConcepts": [
+          "complaint",
+          "complaintanymore",
+          "complaintsystem",
+          "anymore",
+          "don",
+          "email",
+          "separate",
+          "through",
+          "ticket",
+          "office",
+          "employee",
+          "system"
+        ],
+        "matchedConcepts": [
+          "complaint",
+          "email",
+          "employee"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "complaint_overview",
+          "employee_overview"
+        ],
+        "lexicalScore": 0.25,
+        "covered": false
+      },
+      {
+        "id": "US18",
+        "story": "As an employee, I want to be able to file a complaint regarding my workplace, so that my problems can be solved.",
+        "storyConcepts": [
+          "complaintregarding",
+          "complaint",
+          "file",
+          "problem",
+          "regarding",
+          "solved",
+          "workplace",
+          "employee"
+        ],
+        "matchedConcepts": [
+          "complaint",
+          "employee"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "complaint_overview",
+          "employee_overview"
+        ],
+        "lexicalScore": 0.25,
+        "covered": false
+      },
+      {
+        "id": "US19",
+        "story": "As a manager, I want to be able to file a complaint regarding my workplace, so that my problems can be solved.",
+        "storyConcepts": [
+          "complaintregarding",
+          "complaint",
+          "file",
+          "problem",
+          "regarding",
+          "solved",
+          "workplace",
+          "manager"
+        ],
+        "matchedConcepts": [
+          "complaint",
+          "manager"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "complaint_overview",
+          "manager_overview"
+        ],
+        "lexicalScore": 0.25,
+        "covered": false
+      },
+      {
+        "id": "US20",
+        "story": "As a manager, I want my employees to be able to file complaints regarding their workplace, so that employee satisfaction rises.",
+        "storyConcepts": [
+          "employee",
+          "employeesatisfaction",
+          "filecomplaint",
+          "complaint",
+          "file",
+          "regarding",
+          "rise",
+          "satisfaction",
+          "workplace",
+          "manager"
+        ],
+        "matchedConcepts": [
+          "employee",
+          "complaint",
+          "manager"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "employee_overview",
+          "complaint_overview",
+          "manager_overview"
+        ],
+        "lexicalScore": 0.3,
+        "covered": true
+      },
+      {
+        "id": "US21",
+        "story": "As an office employee, I want to be able to view all complaints, so that I can have an overview of the problems other employees face.",
+        "storyConcepts": [
+          "llcomplaint",
+          "otheremployee",
+          "complaint",
+          "employee",
+          "face",
+          "other",
+          "problem",
+          "office"
+        ],
+        "matchedConcepts": [
+          "complaint",
+          "employee"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "complaint_overview",
+          "employee_overview"
+        ],
+        "lexicalScore": 0.25,
+        "covered": false
+      },
+      {
+        "id": "US22",
+        "story": "As a manager, I want to be able to view all complaints, so that I can have an overview of the problems my employees face.",
+        "storyConcepts": [
+          "llcomplaint",
+          "complaint",
+          "employee",
+          "face",
+          "problem",
+          "manager"
+        ],
+        "matchedConcepts": [
+          "complaint",
+          "employee",
+          "manager"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "complaint_overview",
+          "employee_overview",
+          "manager_overview"
+        ],
+        "lexicalScore": 0.5,
+        "covered": true
+      },
+      {
+        "id": "US23",
+        "story": "As an office employee, I want to be able to respond to unsolved complaints, so that I can help the employees with their problems.",
+        "storyConcepts": [
+          "unsolvedcomplaint",
+          "complaint",
+          "employee",
+          "help",
+          "problem",
+          "respond",
+          "unsolved",
+          "office"
+        ],
+        "matchedConcepts": [
+          "complaint",
+          "employee"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "complaint_overview",
+          "employee_overview"
+        ],
+        "lexicalScore": 0.25,
+        "covered": false
+      },
+      {
+        "id": "US24",
+        "story": "As an office employee, I want to be able to categorize complaints, so that there is an overview of the extent of problem areas.",
+        "storyConcepts": [
+          "categorizecomplaint",
+          "problemarea",
+          "area",
+          "categorize",
+          "complaint",
+          "extent",
+          "problem",
+          "there",
+          "office",
+          "employee"
+        ],
+        "matchedConcepts": [
+          "complaint",
+          "employee"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "complaint_overview",
+          "employee_overview"
+        ],
+        "lexicalScore": 0.2,
+        "covered": false
+      },
+      {
+        "id": "US25",
+        "story": "As an office employee, I want to be able to prioritize complaints that require high management intervention to solve, so that important complaints will be solved swiftly.",
+        "storyConcepts": [
+          "complaint",
+          "importantcomplaint",
+          "prioritizecomplaint",
+          "solvedswiftly",
+          "high",
+          "important",
+          "intervention",
+          "management",
+          "prioritize",
+          "require",
+          "solve",
+          "solved",
+          "swiftly",
+          "will",
+          "office",
+          "employee"
+        ],
+        "matchedConcepts": [
+          "complaint",
+          "employee"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "complaint_overview",
+          "employee_overview"
+        ],
+        "lexicalScore": 0.125,
+        "covered": false
+      },
+      {
+        "id": "US26",
+        "story": "As an employee, I want to receive a notification when my filed complaint is handled, so that I can stay up to date with the status of my complaint.",
+        "storyConcepts": [
+          "complaint",
+          "filedcomplaint",
+          "stayup",
+          "date",
+          "filed",
+          "handled",
+          "notification",
+          "statu",
+          "stay",
+          "when",
+          "employee"
+        ],
+        "matchedConcepts": [
+          "complaint",
+          "date",
+          "notification",
+          "statu",
+          "when",
+          "employee"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "complaint_overview",
+          "notification_overview",
+          "when_overview",
+          "employee_overview"
+        ],
+        "lexicalScore": 0.5454545454545454,
+        "covered": true
+      },
+      {
+        "id": "US27",
+        "story": "As a manager, I want to be able to quickly and effectively hire new employees, so that I can easily scale up our operations.",
+        "storyConcepts": [
+          "easilyscale",
+          "effectivelyhire",
+          "easily",
+          "effectively",
+          "employee",
+          "hire",
+          "operation",
+          "quickly",
+          "scale",
+          "manager"
+        ],
+        "matchedConcepts": [
+          "easily",
+          "employee",
+          "manager"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "easily_overview",
+          "employee_overview",
+          "manager_overview"
+        ],
+        "lexicalScore": 0.3,
+        "covered": true
+      },
+      {
+        "id": "US28",
+        "story": "As a manager, I want to be notified when the hiring process of an employee is finished, so that I am up to date regarding the status of our new employees.",
+        "storyConcepts": [
+          "employee",
+          "dateregarding",
+          "notifiedwhen",
+          "date",
+          "finished",
+          "hiring",
+          "notified",
+          "regarding",
+          "statu",
+          "when",
+          "manager",
+          "process"
+        ],
+        "matchedConcepts": [
+          "employee",
+          "date",
+          "statu",
+          "when",
+          "manager"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "employee_overview",
+          "when_overview",
+          "manager_overview"
+        ],
+        "lexicalScore": 0.4166666666666667,
+        "covered": true
+      },
+      {
+        "id": "US29",
+        "story": "As a manager, I want to be able to have an overview of all our active employees, so that I can easily evaluate our employees.",
+        "storyConcepts": [
+          "employee",
+          "activeemployee",
+          "easilyevaluate",
+          "active",
+          "easily",
+          "evaluate",
+          "manager"
+        ],
+        "matchedConcepts": [
+          "employee",
+          "active",
+          "easily",
+          "manager"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "employee_overview",
+          "easily_overview",
+          "manager_overview"
+        ],
+        "lexicalScore": 0.5714285714285714,
+        "covered": true
+      },
+      {
+        "id": "US30",
+        "story": "As a manager, I want to be able to have an overview of all our absent employees, so that I can manually verify these absences.",
+        "storyConcepts": [
+          "absentemployee",
+          "manuallyverify",
+          "theseabsence",
+          "absence",
+          "absent",
+          "employee",
+          "manually",
+          "these",
+          "verify",
+          "manager"
+        ],
+        "matchedConcepts": [
+          "employee",
+          "manager"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "employee_overview",
+          "manager_overview"
+        ],
+        "lexicalScore": 0.2,
+        "covered": false
+      },
+      {
+        "id": "US31",
+        "story": "As an applicant, I want to be able to register an account, so that I can finalize my hiring process and start working at the organization.",
+        "storyConcepts": [
+          "workingattheorganization",
+          "hiringprocess",
+          "workingat",
+          "account",
+          "finalize",
+          "hiring",
+          "organization",
+          "register",
+          "start",
+          "working",
+          "applicant",
+          "process"
+        ],
+        "matchedConcepts": [
+          "start",
+          "working",
+          "applicant"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "applicant_overview"
+        ],
+        "lexicalScore": 0.25,
+        "covered": false
+      },
+      {
+        "id": "US32",
+        "story": "As a manager, I want to be able to view my employee's contracts at any given time, so that I have a clear overview of when extensions are due.",
+        "storyConcepts": [
+          "atany",
+          "giventime",
+          "scontract",
+          "whenextension",
+          "any",
+          "clear",
+          "contract",
+          "due",
+          "employee",
+          "extension",
+          "given",
+          "time",
+          "when",
+          "manager"
+        ],
+        "matchedConcepts": [
+          "clear",
+          "contract",
+          "employee",
+          "when",
+          "manager"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "clear_overview",
+          "contract_overview",
+          "employee_overview",
+          "when_overview",
+          "manager_overview"
+        ],
+        "lexicalScore": 0.35714285714285715,
+        "covered": true
+      },
+      {
+        "id": "US33",
+        "story": "As a manager, I want to be able to view my employee's certificates at any given time, so that I have a clear overview of the qualifications of my employees.",
+        "storyConcepts": [
+          "employee",
+          "atany",
+          "giventime",
+          "scertificate",
+          "any",
+          "certificate",
+          "clear",
+          "given",
+          "qualification",
+          "time",
+          "manager"
+        ],
+        "matchedConcepts": [
+          "employee",
+          "certificate",
+          "clear",
+          "manager"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "employee_overview",
+          "certificate_overview",
+          "clear_overview",
+          "manager_overview"
+        ],
+        "lexicalScore": 0.36363636363636365,
+        "covered": true
+      },
+      {
+        "id": "US34",
+        "story": "As an employee, I want to be able to contact the management when needed, so that I can discuss important topics regarding my employment with them.",
+        "storyConcepts": [
+          "discussimportant",
+          "managementwhen",
+          "topicregarding",
+          "contact",
+          "discuss",
+          "employment",
+          "important",
+          "management",
+          "needed",
+          "regarding",
+          "them",
+          "topic",
+          "when",
+          "employee"
+        ],
+        "matchedConcepts": [
+          "when",
+          "employee"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "when_overview",
+          "employee_overview"
+        ],
+        "lexicalScore": 0.14285714285714285,
+        "covered": false
+      },
+      {
+        "id": "US35",
+        "story": "As a manager, I want to be able to contact an employee easily, so I can reach them when needed.",
+        "storyConcepts": [
+          "employeeeasily",
+          "themwhen",
+          "contact",
+          "easily",
+          "employee",
+          "needed",
+          "reach",
+          "them",
+          "when",
+          "manager"
+        ],
+        "matchedConcepts": [
+          "easily",
+          "employee",
+          "when",
+          "manager"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "easily_overview",
+          "employee_overview",
+          "when_overview",
+          "manager_overview"
+        ],
+        "lexicalScore": 0.4,
+        "covered": true
+      },
+      {
+        "id": "US36",
+        "story": "As an employee, I want to be able to use the messaging system to message other employees when needed, so that I can keep in touch with my colleagues.",
+        "storyConcepts": [
+          "messagingsystem",
+          "otheremployee",
+          "whenneeded",
+          "colleague",
+          "employee",
+          "keep",
+          "messaging",
+          "needed",
+          "other",
+          "touch",
+          "when",
+          "system"
+        ],
+        "matchedConcepts": [
+          "employee",
+          "when"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "employee_overview",
+          "when_overview"
+        ],
+        "lexicalScore": 0.16666666666666666,
+        "covered": false
+      },
+      {
+        "id": "US37",
+        "story": "As a manager, I want to be able to forward formal messages to employees in bulk, so that I can communicate with a big group of employees when needed.",
+        "storyConcepts": [
+          "employee",
+          "employeewhen",
+          "forwardformal",
+          "big",
+          "bulk",
+          "communicate",
+          "formal",
+          "forward",
+          "group",
+          "needed",
+          "when",
+          "manager"
+        ],
+        "matchedConcepts": [
+          "employee",
+          "when",
+          "manager"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "employee_overview",
+          "when_overview",
+          "manager_overview"
+        ],
+        "lexicalScore": 0.25,
+        "covered": false
+      },
+      {
+        "id": "US38",
+        "story": "As an employee, I want to view my personal inbox easily, so that I have a clear overview of important work-related information.",
+        "storyConcepts": [
+          "personalinboxeasily",
+          "importantwork",
+          "inboxeasily",
+          "relatedinformation",
+          "clear",
+          "easily",
+          "important",
+          "inbox",
+          "personal",
+          "related",
+          "employee"
+        ],
+        "matchedConcepts": [
+          "clear",
+          "easily",
+          "personal",
+          "employee"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "clear_overview",
+          "easily_overview",
+          "employee_overview"
+        ],
+        "lexicalScore": 0.36363636363636365,
+        "covered": true
+      },
+      {
+        "id": "US39",
+        "story": "As a manager, I want to have one system with one login, so that I don't lose track of my account information.",
+        "storyConcepts": [
+          "one",
+          "onesystem",
+          "tlose",
+          "account",
+          "don",
+          "login",
+          "lose",
+          "manager",
+          "system"
+        ],
+        "matchedConcepts": [
+          "manager"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "manager_overview"
+        ],
+        "lexicalScore": 0.1111111111111111,
+        "covered": false
+      },
+      {
+        "id": "US40",
+        "story": "As an employee, I want to be able to reset my password, so that I can always access my account.",
+        "storyConcepts": [
+          "alwayaccess",
+          "account",
+          "alway",
+          "password",
+          "reset",
+          "employee"
+        ],
+        "matchedConcepts": [
+          "employee"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "employee_overview"
+        ],
+        "lexicalScore": 0.16666666666666666,
+        "covered": false
+      },
+      {
+        "id": "US41",
+        "story": "As an employee, I want to have a user-friendly application, so that I can access all functionalities easily.",
+        "storyConcepts": [
+          "friendlyapplication",
+          "functionalityeasily",
+          "application",
+          "easily",
+          "friendly",
+          "functionality",
+          "user",
+          "employee"
+        ],
+        "matchedConcepts": [
+          "easily",
+          "employee"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "easily_overview",
+          "employee_overview"
+        ],
+        "lexicalScore": 0.25,
+        "covered": false
+      },
+      {
+        "id": "US42",
+        "story": "As an employee, I want to be able to navigate through the application easily, so that I can quickly see my schedule while riding.",
+        "storyConcepts": [
+          "navigatethrough",
+          "quicklysee",
+          "whileriding",
+          "application",
+          "easily",
+          "navigate",
+          "quickly",
+          "riding",
+          "through",
+          "while",
+          "employee"
+        ],
+        "matchedConcepts": [
+          "easily",
+          "employee"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "easily_overview",
+          "employee_overview"
+        ],
+        "lexicalScore": 0.18181818181818182,
+        "covered": false
+      },
+      {
+        "id": "US43",
+        "story": "As an employee, I want to be able to choose between email or application notifications, so that I can adjust my administration in the way that I prefer.",
+        "storyConcepts": [
+          "betweenemail",
+          "applicationnotification",
+          "adjust",
+          "administration",
+          "application",
+          "between",
+          "email",
+          "notification",
+          "prefer",
+          "way",
+          "employee"
+        ],
+        "matchedConcepts": [
+          "email",
+          "notification",
+          "employee"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "notification_overview",
+          "employee_overview"
+        ],
+        "lexicalScore": 0.2727272727272727,
+        "covered": false
+      },
+      {
+        "id": "US44",
+        "story": "As an employee, I want to be able to choose between weekly or monthly payments, so that I can adjust my payment routine to my lifestyle.",
+        "storyConcepts": [
+          "betweenweekly",
+          "payment",
+          "monthlypayment",
+          "paymentroutine",
+          "adjust",
+          "between",
+          "lifestyle",
+          "monthly",
+          "routine",
+          "weekly",
+          "employee"
+        ],
+        "matchedConcepts": [
+          "payment",
+          "employee"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "payment_overview",
+          "employee_overview"
+        ],
+        "lexicalScore": 0.18181818181818182,
+        "covered": false
+      },
+      {
+        "id": "US45",
+        "story": "As an employee, I want to be able to view my financial annual statements, so that I can easily find my financial information for filing taxes, etc.",
+        "storyConcepts": [
+          "financialannualstatement",
+          "financial",
+          "easilyfind",
+          "filingtaxe",
+          "financialannual",
+          "annual",
+          "easily",
+          "etc",
+          "filing",
+          "find",
+          "statement",
+          "taxe",
+          "employee"
+        ],
+        "matchedConcepts": [
+          "easily",
+          "statement",
+          "employee"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "easily_overview",
+          "employee_overview"
+        ],
+        "lexicalScore": 0.23076923076923078,
+        "covered": false
+      },
+      {
+        "id": "US46",
+        "story": "As an employee, I want the information that is shared with the payment handler to be encrypted, so that my privacy is ensured.",
+        "storyConcepts": [
+          "encrypted",
+          "ensured",
+          "handler",
+          "payment",
+          "privacy",
+          "shared",
+          "employee"
+        ],
+        "matchedConcepts": [
+          "payment",
+          "employee"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "payment_overview",
+          "employee_overview"
+        ],
+        "lexicalScore": 0.2857142857142857,
+        "covered": false
+      },
+      {
+        "id": "US47",
+        "story": "As an employee, I want to be able to change my personal information, so that the information my employer has is always up to date.",
+        "storyConcepts": [
+          "alwayup",
+          "personalinformation",
+          "alway",
+          "change",
+          "date",
+          "employer",
+          "personal",
+          "employee"
+        ],
+        "matchedConcepts": [
+          "date",
+          "personal",
+          "employee"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "employee_overview"
+        ],
+        "lexicalScore": 0.375,
+        "covered": true
+      },
+      {
+        "id": "US48",
+        "story": "As an employee, I want to be able to view my contract, so that I have a clear overview of important work-related information.",
+        "storyConcepts": [
+          "importantwork",
+          "relatedinformation",
+          "clear",
+          "contract",
+          "important",
+          "related",
+          "employee"
+        ],
+        "matchedConcepts": [
+          "clear",
+          "contract",
+          "employee"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "clear_overview",
+          "contract_overview",
+          "employee_overview"
+        ],
+        "lexicalScore": 0.42857142857142855,
+        "covered": true
+      },
+      {
+        "id": "US49",
+        "story": "As an employee, I want the application as secure as possible, so that my data does not fall into malicious hands.",
+        "storyConcepts": [
+          "doenot",
+          "maliciouhand",
+          "application",
+          "doe",
+          "fall",
+          "hand",
+          "maliciou",
+          "not",
+          "possible",
+          "secure",
+          "employee"
+        ],
+        "matchedConcepts": [
+          "employee"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "employee_overview"
+        ],
+        "lexicalScore": 0.09090909090909091,
+        "covered": false
+      }
+    ]
+  },
+  "coverageGate": {
+    "enabled": false,
+    "minimum": null,
+    "score": 0.40816326530612246,
+    "passed": true
+  },
+  "ollama": {
+    "model": "gemma4:e4b",
+    "totalDuration": 185895584209,
+    "loadDuration": 6656404834,
+    "promptEvalCount": 5291,
+    "evalCount": 3020,
+    "numCtx": 8192,
+    "numPredict": 6144,
+    "likelyPromptTruncated": false
+  },
+  "visualNarrator": {
+    "enabled": true,
+    "status": "completed",
+    "durationMs": 4403,
+    "command": "/Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/visual-narrator/.venv/bin/python /Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/pipeline/scripts/run_visual_narrator.py --input /Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/artifacts/practical-performance/20260528-165228/inputs/grocery/user-stories.txt --system-name PracticalPerf_grocery_Stability",
+    "artifacts": {
+      "ontologyPath": "/Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/artifacts/practical-performance/20260528-165228/stability/grocery/run-01/visual-narrator-ontology.omn",
+      "storiesPath": "/Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/artifacts/practical-performance/20260528-165228/stability/grocery/run-01/visual-narrator-stories.json",
+      "summaryPath": "/Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/artifacts/practical-performance/20260528-165228/stability/grocery/run-01/visual-narrator-summary.json",
+      "rawPath": "/Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/artifacts/practical-performance/20260528-165228/stability/grocery/run-01/visual-narrator-result.json"
+    },
+    "warnings": []
+  },
+  "processVisualizer": {
+    "enabled": false,
+    "status": "skipped",
+    "durationMs": 0,
+    "command": "",
+    "artifacts": {},
+    "warnings": [],
+    "error": ""
+  },
+  "domainModelReview": {
+    "enabled": true,
+    "status": "completed",
+    "droppedEntities": [
+      {
+        "name": "Statement",
+        "reason": "Generic entity duplicates more specific story-backed entity \"SalaryStatement\"."
+      },
+      {
+        "name": "Hour",
+        "reason": "Generic entity duplicates more specific story-backed entity \"WorkHour\"."
+      }
+    ],
+    "droppedAssociations": [],
+    "repairedAssociations": [],
+    "addedAssociations": [],
+    "warnings": []
+  },
+  "planDiagnostics": {
+    "preprocessing": {
+      "visualNarratorEnabled": true,
+      "visualNarratorStatus": "completed",
+      "processVisualizerEnabled": false,
+      "processVisualizerStatus": "skipped"
+    },
+    "domainModelReview": {
+      "enabled": true,
+      "status": "completed",
+      "droppedEntities": [
+        {
+          "name": "Statement",
+          "reason": "Generic entity duplicates more specific story-backed entity \"SalaryStatement\"."
+        },
+        {
+          "name": "Hour",
+          "reason": "Generic entity duplicates more specific story-backed entity \"WorkHour\"."
+        }
+      ],
+      "droppedAssociations": [],
+      "repairedAssociations": [],
+      "addedAssociations": [],
+      "warnings": []
+    },
+    "referenceAppBaseline": {
+      "source": "reference-app-baseline",
+      "capabilities": [
+        "searchable_data_management",
+        "role_separated_views",
+        "file_handling"
+      ],
+      "archetypes": [
+        "management",
+        "role_separation"
+      ],
+      "recommendedWidgetFamilies": [
+        "data_grid",
+        "data_grid_filters"
+      ]
+    },
+    "capabilityRequirements": [],
+    "storyCoverage": {
+      "entries": [
+        {
+          "id": "US01",
+          "story": "As an employee, I want to receive my salary statement, so that I have a clear overview.",
+          "storyConcepts": [
+            "clear",
+            "salary",
+            "statement",
+            "employee"
+          ],
+          "matchedConcepts": [
+            "clear",
+            "salary",
+            "statement",
+            "employee"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "clear_overview",
+            "employee_overview"
+          ],
+          "lexicalScore": 1,
+          "covered": true
+        },
+        {
+          "id": "US02",
+          "story": "As a manager, I want to send salary statements, so that my employees have a clear overview.",
+          "storyConcepts": [
+            "clearoverview",
+            "salarystatement",
+            "clear",
+            "employee",
+            "salary",
+            "statement",
+            "manager"
+          ],
+          "matchedConcepts": [
+            "clearoverview",
+            "salarystatement",
+            "clear",
+            "employee",
+            "salary",
+            "statement",
+            "manager"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "salarystatement_overview",
+            "clear_overview",
+            "employee_overview",
+            "manager_overview"
+          ],
+          "lexicalScore": 1,
+          "covered": true
+        },
+        {
+          "id": "US03",
+          "story": "As a manager, I want to enable the option for weekly and monthly payments for my employees, so that employee satisfaction rises.",
+          "storyConcepts": [
+            "employee",
+            "employeesatisfaction",
+            "enable",
+            "monthly",
+            "option",
+            "payment",
+            "rise",
+            "satisfaction",
+            "weekly",
+            "manager"
+          ],
+          "matchedConcepts": [
+            "employee",
+            "payment",
+            "manager"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "employee_overview",
+            "payment_overview",
+            "manager_overview"
+          ],
+          "lexicalScore": 0.3,
+          "covered": true
+        },
+        {
+          "id": "US04",
+          "story": "As a manager, I want to automate the payment system, so that all payments are handled correctly and on time.",
+          "storyConcepts": [
+            "payment",
+            "automate",
+            "correctly",
+            "handled",
+            "time",
+            "manager",
+            "system"
+          ],
+          "matchedConcepts": [
+            "payment",
+            "manager"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "payment_overview",
+            "manager_overview"
+          ],
+          "lexicalScore": 0.2857142857142857,
+          "covered": false
+        },
+        {
+          "id": "US05",
+          "story": "As a manager, I want to outsource part of the payment process, so that I do not have to worry about local payment regulations for each country.",
+          "storyConcepts": [
+            "payment",
+            "aboutlocal",
+            "paymentregulation",
+            "about",
+            "country",
+            "each",
+            "local",
+            "not",
+            "outsource",
+            "part",
+            "regulation",
+            "worry",
+            "manager",
+            "process"
+          ],
+          "matchedConcepts": [
+            "payment",
+            "manager"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "payment_overview",
+            "manager_overview"
+          ],
+          "lexicalScore": 0.14285714285714285,
+          "covered": false
+        },
+        {
+          "id": "US06",
+          "story": "As an employee, I want to receive a notification when my salary payment is handled, so that I stay up to date with my financial status.",
+          "storyConcepts": [
+            "salarypayment",
+            "date",
+            "financial",
+            "handled",
+            "notification",
+            "payment",
+            "salary",
+            "statu",
+            "stay",
+            "when",
+            "employee"
+          ],
+          "matchedConcepts": [
+            "date",
+            "notification",
+            "payment",
+            "salary",
+            "statu",
+            "when",
+            "employee"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "notification_overview",
+            "payment_overview",
+            "when_overview",
+            "employee_overview"
+          ],
+          "lexicalScore": 0.6363636363636364,
+          "covered": true
+        },
+        {
+          "id": "US07",
+          "story": "As an employee, I want to express my preferred working hours, so that I am most likely to work on hours that best suit me.",
+          "storyConcepts": [
+            "hour",
+            "mostlikely",
+            "suitme",
+            "workinghour",
+            "best",
+            "express",
+            "likely",
+            "most",
+            "preferred",
+            "suit",
+            "working",
+            "employee"
+          ],
+          "matchedConcepts": [
+            "hour",
+            "workinghour",
+            "preferred",
+            "working",
+            "employee"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "employee_overview"
+          ],
+          "lexicalScore": 0.4166666666666667,
+          "covered": true
+        },
+        {
+          "id": "US08",
+          "story": "As a manager, I want to semi-automate the scheduling process, so that the scheduling process is more efficient.",
+          "storyConcepts": [
+            "scheduling",
+            "moreefficient",
+            "schedulingprocess",
+            "automate",
+            "efficient",
+            "more",
+            "semi",
+            "manager",
+            "process"
+          ],
+          "matchedConcepts": [
+            "manager"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "manager_overview"
+          ],
+          "lexicalScore": 0.1111111111111111,
+          "covered": false
+        },
+        {
+          "id": "US09",
+          "story": "As a manager, I want to have the ability to manually edit the automatically-generated schedule, so that I can keep the operations running on busy days.",
+          "storyConcepts": [
+            "generatedschedule",
+            "operationrunning",
+            "ability",
+            "automatically",
+            "busy",
+            "day",
+            "generated",
+            "keep",
+            "manually",
+            "operation",
+            "running",
+            "manager"
+          ],
+          "matchedConcepts": [
+            "manager"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "manager_overview"
+          ],
+          "lexicalScore": 0.08333333333333333,
+          "covered": false
+        },
+        {
+          "id": "US10",
+          "story": "As a manager, I want to manually authorize the schedule before it goes live, so that I can ensure a correct schedule is being shared.",
+          "storyConcepts": [
+            "correctschedule",
+            "authorize",
+            "before",
+            "being",
+            "correct",
+            "ensure",
+            "goe",
+            "live",
+            "manually",
+            "shared",
+            "manager"
+          ],
+          "matchedConcepts": [
+            "manager"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "manager_overview"
+          ],
+          "lexicalScore": 0.09090909090909091,
+          "covered": false
+        },
+        {
+          "id": "US11",
+          "story": "As a manager, I want to be notified as soon as manual adjustments need to be made, so that I can swiftly handle these adjustments and keep a clear overview.",
+          "storyConcepts": [
+            "adjustment",
+            "manualadjustment",
+            "swiftlyhandle",
+            "theseadjustment",
+            "clear",
+            "handle",
+            "keep",
+            "made",
+            "manual",
+            "need",
+            "notified",
+            "soon",
+            "swiftly",
+            "these",
+            "manager"
+          ],
+          "matchedConcepts": [
+            "clear",
+            "manager"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "clear_overview",
+            "manager_overview"
+          ],
+          "lexicalScore": 0.13333333333333333,
+          "covered": false
+        },
+        {
+          "id": "US12",
+          "story": "As an employee, I want to receive notification when the new schedule is available, so that I can keep the scheduled hours free from other activities.",
+          "storyConcepts": [
+            "notificationwhen",
+            "otheractivity",
+            "scheduledhour",
+            "free",
+            "hour",
+            "keep",
+            "notification",
+            "other",
+            "scheduled",
+            "when",
+            "employee"
+          ],
+          "matchedConcepts": [
+            "hour",
+            "notification",
+            "when",
+            "employee"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "notification_overview",
+            "when_overview",
+            "employee_overview"
+          ],
+          "lexicalScore": 0.36363636363636365,
+          "covered": true
+        },
+        {
+          "id": "US13",
+          "story": "As an employee, I want to view the schedule at any given time, so that I can effectively keep track of my personal time.",
+          "storyConcepts": [
+            "time",
+            "atany",
+            "effectivelykeep",
+            "giventime",
+            "any",
+            "effectively",
+            "given",
+            "keep",
+            "personal",
+            "employee"
+          ],
+          "matchedConcepts": [
+            "personal",
+            "employee"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "employee_overview"
+          ],
+          "lexicalScore": 0.2,
+          "covered": false
+        },
+        {
+          "id": "US14",
+          "story": "As a manager, I want to view the schedule at any given time, so that I can effectively manage the employee presence on the work floor.",
+          "storyConcepts": [
+            "employeepresence",
+            "atany",
+            "effectivelymanage",
+            "giventime",
+            "any",
+            "effectively",
+            "employee",
+            "given",
+            "presence",
+            "time",
+            "manager"
+          ],
+          "matchedConcepts": [
+            "employee",
+            "manager"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "employee_overview",
+            "manager_overview"
+          ],
+          "lexicalScore": 0.18181818181818182,
+          "covered": false
+        },
+        {
+          "id": "US15",
+          "story": "As an employee, I want the system to automatically verify my work hours, so that my salary statements are calculated accurately.",
+          "storyConcepts": [
+            "calculatedaccurately",
+            "accurately",
+            "automatically",
+            "calculated",
+            "hour",
+            "salary",
+            "statement",
+            "verify",
+            "employee",
+            "system"
+          ],
+          "matchedConcepts": [
+            "hour",
+            "salary",
+            "statement",
+            "employee"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "employee_overview"
+          ],
+          "lexicalScore": 0.4,
+          "covered": true
+        },
+        {
+          "id": "US16",
+          "story": "As a manager, I want the system to automatically verify employees' work hours, so that employees' salary statements are calculated accurately.",
+          "storyConcepts": [
+            "employee",
+            "salarystatement",
+            "verifyemployee",
+            "accurately",
+            "automatically",
+            "calculated",
+            "hour",
+            "salary",
+            "statement",
+            "verify",
+            "manager",
+            "system"
+          ],
+          "matchedConcepts": [
+            "employee",
+            "salarystatement",
+            "hour",
+            "salary",
+            "statement",
+            "manager"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "employee_overview",
+            "salarystatement_overview",
+            "manager_overview"
+          ],
+          "lexicalScore": 0.5,
+          "covered": true
+        },
+        {
+          "id": "US17",
+          "story": "As an office employee, I want a separate complaint system with tickets, so that I don't have to filter through my email for complaints anymore.",
+          "storyConcepts": [
+            "complaint",
+            "complaintanymore",
+            "complaintsystem",
+            "anymore",
+            "don",
+            "email",
+            "separate",
+            "through",
+            "ticket",
+            "office",
+            "employee",
+            "system"
+          ],
+          "matchedConcepts": [
+            "complaint",
+            "email",
+            "employee"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "complaint_overview",
+            "employee_overview"
+          ],
+          "lexicalScore": 0.25,
+          "covered": false
+        },
+        {
+          "id": "US18",
+          "story": "As an employee, I want to be able to file a complaint regarding my workplace, so that my problems can be solved.",
+          "storyConcepts": [
+            "complaintregarding",
+            "complaint",
+            "file",
+            "problem",
+            "regarding",
+            "solved",
+            "workplace",
+            "employee"
+          ],
+          "matchedConcepts": [
+            "complaint",
+            "employee"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "complaint_overview",
+            "employee_overview"
+          ],
+          "lexicalScore": 0.25,
+          "covered": false
+        },
+        {
+          "id": "US19",
+          "story": "As a manager, I want to be able to file a complaint regarding my workplace, so that my problems can be solved.",
+          "storyConcepts": [
+            "complaintregarding",
+            "complaint",
+            "file",
+            "problem",
+            "regarding",
+            "solved",
+            "workplace",
+            "manager"
+          ],
+          "matchedConcepts": [
+            "complaint",
+            "manager"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "complaint_overview",
+            "manager_overview"
+          ],
+          "lexicalScore": 0.25,
+          "covered": false
+        },
+        {
+          "id": "US20",
+          "story": "As a manager, I want my employees to be able to file complaints regarding their workplace, so that employee satisfaction rises.",
+          "storyConcepts": [
+            "employee",
+            "employeesatisfaction",
+            "filecomplaint",
+            "complaint",
+            "file",
+            "regarding",
+            "rise",
+            "satisfaction",
+            "workplace",
+            "manager"
+          ],
+          "matchedConcepts": [
+            "employee",
+            "complaint",
+            "manager"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "employee_overview",
+            "complaint_overview",
+            "manager_overview"
+          ],
+          "lexicalScore": 0.3,
+          "covered": true
+        },
+        {
+          "id": "US21",
+          "story": "As an office employee, I want to be able to view all complaints, so that I can have an overview of the problems other employees face.",
+          "storyConcepts": [
+            "llcomplaint",
+            "otheremployee",
+            "complaint",
+            "employee",
+            "face",
+            "other",
+            "problem",
+            "office"
+          ],
+          "matchedConcepts": [
+            "complaint",
+            "employee"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "complaint_overview",
+            "employee_overview"
+          ],
+          "lexicalScore": 0.25,
+          "covered": false
+        },
+        {
+          "id": "US22",
+          "story": "As a manager, I want to be able to view all complaints, so that I can have an overview of the problems my employees face.",
+          "storyConcepts": [
+            "llcomplaint",
+            "complaint",
+            "employee",
+            "face",
+            "problem",
+            "manager"
+          ],
+          "matchedConcepts": [
+            "complaint",
+            "employee",
+            "manager"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "complaint_overview",
+            "employee_overview",
+            "manager_overview"
+          ],
+          "lexicalScore": 0.5,
+          "covered": true
+        },
+        {
+          "id": "US23",
+          "story": "As an office employee, I want to be able to respond to unsolved complaints, so that I can help the employees with their problems.",
+          "storyConcepts": [
+            "unsolvedcomplaint",
+            "complaint",
+            "employee",
+            "help",
+            "problem",
+            "respond",
+            "unsolved",
+            "office"
+          ],
+          "matchedConcepts": [
+            "complaint",
+            "employee"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "complaint_overview",
+            "employee_overview"
+          ],
+          "lexicalScore": 0.25,
+          "covered": false
+        },
+        {
+          "id": "US24",
+          "story": "As an office employee, I want to be able to categorize complaints, so that there is an overview of the extent of problem areas.",
+          "storyConcepts": [
+            "categorizecomplaint",
+            "problemarea",
+            "area",
+            "categorize",
+            "complaint",
+            "extent",
+            "problem",
+            "there",
+            "office",
+            "employee"
+          ],
+          "matchedConcepts": [
+            "complaint",
+            "employee"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "complaint_overview",
+            "employee_overview"
+          ],
+          "lexicalScore": 0.2,
+          "covered": false
+        },
+        {
+          "id": "US25",
+          "story": "As an office employee, I want to be able to prioritize complaints that require high management intervention to solve, so that important complaints will be solved swiftly.",
+          "storyConcepts": [
+            "complaint",
+            "importantcomplaint",
+            "prioritizecomplaint",
+            "solvedswiftly",
+            "high",
+            "important",
+            "intervention",
+            "management",
+            "prioritize",
+            "require",
+            "solve",
+            "solved",
+            "swiftly",
+            "will",
+            "office",
+            "employee"
+          ],
+          "matchedConcepts": [
+            "complaint",
+            "employee"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "complaint_overview",
+            "employee_overview"
+          ],
+          "lexicalScore": 0.125,
+          "covered": false
+        },
+        {
+          "id": "US26",
+          "story": "As an employee, I want to receive a notification when my filed complaint is handled, so that I can stay up to date with the status of my complaint.",
+          "storyConcepts": [
+            "complaint",
+            "filedcomplaint",
+            "stayup",
+            "date",
+            "filed",
+            "handled",
+            "notification",
+            "statu",
+            "stay",
+            "when",
+            "employee"
+          ],
+          "matchedConcepts": [
+            "complaint",
+            "date",
+            "notification",
+            "statu",
+            "when",
+            "employee"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "complaint_overview",
+            "notification_overview",
+            "when_overview",
+            "employee_overview"
+          ],
+          "lexicalScore": 0.5454545454545454,
+          "covered": true
+        },
+        {
+          "id": "US27",
+          "story": "As a manager, I want to be able to quickly and effectively hire new employees, so that I can easily scale up our operations.",
+          "storyConcepts": [
+            "easilyscale",
+            "effectivelyhire",
+            "easily",
+            "effectively",
+            "employee",
+            "hire",
+            "operation",
+            "quickly",
+            "scale",
+            "manager"
+          ],
+          "matchedConcepts": [
+            "easily",
+            "employee",
+            "manager"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "easily_overview",
+            "employee_overview",
+            "manager_overview"
+          ],
+          "lexicalScore": 0.3,
+          "covered": true
+        },
+        {
+          "id": "US28",
+          "story": "As a manager, I want to be notified when the hiring process of an employee is finished, so that I am up to date regarding the status of our new employees.",
+          "storyConcepts": [
+            "employee",
+            "dateregarding",
+            "notifiedwhen",
+            "date",
+            "finished",
+            "hiring",
+            "notified",
+            "regarding",
+            "statu",
+            "when",
+            "manager",
+            "process"
+          ],
+          "matchedConcepts": [
+            "employee",
+            "date",
+            "statu",
+            "when",
+            "manager"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "employee_overview",
+            "when_overview",
+            "manager_overview"
+          ],
+          "lexicalScore": 0.4166666666666667,
+          "covered": true
+        },
+        {
+          "id": "US29",
+          "story": "As a manager, I want to be able to have an overview of all our active employees, so that I can easily evaluate our employees.",
+          "storyConcepts": [
+            "employee",
+            "activeemployee",
+            "easilyevaluate",
+            "active",
+            "easily",
+            "evaluate",
+            "manager"
+          ],
+          "matchedConcepts": [
+            "employee",
+            "active",
+            "easily",
+            "manager"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "employee_overview",
+            "easily_overview",
+            "manager_overview"
+          ],
+          "lexicalScore": 0.5714285714285714,
+          "covered": true
+        },
+        {
+          "id": "US30",
+          "story": "As a manager, I want to be able to have an overview of all our absent employees, so that I can manually verify these absences.",
+          "storyConcepts": [
+            "absentemployee",
+            "manuallyverify",
+            "theseabsence",
+            "absence",
+            "absent",
+            "employee",
+            "manually",
+            "these",
+            "verify",
+            "manager"
+          ],
+          "matchedConcepts": [
+            "employee",
+            "manager"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "employee_overview",
+            "manager_overview"
+          ],
+          "lexicalScore": 0.2,
+          "covered": false
+        },
+        {
+          "id": "US31",
+          "story": "As an applicant, I want to be able to register an account, so that I can finalize my hiring process and start working at the organization.",
+          "storyConcepts": [
+            "workingattheorganization",
+            "hiringprocess",
+            "workingat",
+            "account",
+            "finalize",
+            "hiring",
+            "organization",
+            "register",
+            "start",
+            "working",
+            "applicant",
+            "process"
+          ],
+          "matchedConcepts": [
+            "start",
+            "working",
+            "applicant"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "applicant_overview"
+          ],
+          "lexicalScore": 0.25,
+          "covered": false
+        },
+        {
+          "id": "US32",
+          "story": "As a manager, I want to be able to view my employee's contracts at any given time, so that I have a clear overview of when extensions are due.",
+          "storyConcepts": [
+            "atany",
+            "giventime",
+            "scontract",
+            "whenextension",
+            "any",
+            "clear",
+            "contract",
+            "due",
+            "employee",
+            "extension",
+            "given",
+            "time",
+            "when",
+            "manager"
+          ],
+          "matchedConcepts": [
+            "clear",
+            "contract",
+            "employee",
+            "when",
+            "manager"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "clear_overview",
+            "contract_overview",
+            "employee_overview",
+            "when_overview",
+            "manager_overview"
+          ],
+          "lexicalScore": 0.35714285714285715,
+          "covered": true
+        },
+        {
+          "id": "US33",
+          "story": "As a manager, I want to be able to view my employee's certificates at any given time, so that I have a clear overview of the qualifications of my employees.",
+          "storyConcepts": [
+            "employee",
+            "atany",
+            "giventime",
+            "scertificate",
+            "any",
+            "certificate",
+            "clear",
+            "given",
+            "qualification",
+            "time",
+            "manager"
+          ],
+          "matchedConcepts": [
+            "employee",
+            "certificate",
+            "clear",
+            "manager"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "employee_overview",
+            "certificate_overview",
+            "clear_overview",
+            "manager_overview"
+          ],
+          "lexicalScore": 0.36363636363636365,
+          "covered": true
+        },
+        {
+          "id": "US34",
+          "story": "As an employee, I want to be able to contact the management when needed, so that I can discuss important topics regarding my employment with them.",
+          "storyConcepts": [
+            "discussimportant",
+            "managementwhen",
+            "topicregarding",
+            "contact",
+            "discuss",
+            "employment",
+            "important",
+            "management",
+            "needed",
+            "regarding",
+            "them",
+            "topic",
+            "when",
+            "employee"
+          ],
+          "matchedConcepts": [
+            "when",
+            "employee"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "when_overview",
+            "employee_overview"
+          ],
+          "lexicalScore": 0.14285714285714285,
+          "covered": false
+        },
+        {
+          "id": "US35",
+          "story": "As a manager, I want to be able to contact an employee easily, so I can reach them when needed.",
+          "storyConcepts": [
+            "employeeeasily",
+            "themwhen",
+            "contact",
+            "easily",
+            "employee",
+            "needed",
+            "reach",
+            "them",
+            "when",
+            "manager"
+          ],
+          "matchedConcepts": [
+            "easily",
+            "employee",
+            "when",
+            "manager"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "easily_overview",
+            "employee_overview",
+            "when_overview",
+            "manager_overview"
+          ],
+          "lexicalScore": 0.4,
+          "covered": true
+        },
+        {
+          "id": "US36",
+          "story": "As an employee, I want to be able to use the messaging system to message other employees when needed, so that I can keep in touch with my colleagues.",
+          "storyConcepts": [
+            "messagingsystem",
+            "otheremployee",
+            "whenneeded",
+            "colleague",
+            "employee",
+            "keep",
+            "messaging",
+            "needed",
+            "other",
+            "touch",
+            "when",
+            "system"
+          ],
+          "matchedConcepts": [
+            "employee",
+            "when"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "employee_overview",
+            "when_overview"
+          ],
+          "lexicalScore": 0.16666666666666666,
+          "covered": false
+        },
+        {
+          "id": "US37",
+          "story": "As a manager, I want to be able to forward formal messages to employees in bulk, so that I can communicate with a big group of employees when needed.",
+          "storyConcepts": [
+            "employee",
+            "employeewhen",
+            "forwardformal",
+            "big",
+            "bulk",
+            "communicate",
+            "formal",
+            "forward",
+            "group",
+            "needed",
+            "when",
+            "manager"
+          ],
+          "matchedConcepts": [
+            "employee",
+            "when",
+            "manager"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "employee_overview",
+            "when_overview",
+            "manager_overview"
+          ],
+          "lexicalScore": 0.25,
+          "covered": false
+        },
+        {
+          "id": "US38",
+          "story": "As an employee, I want to view my personal inbox easily, so that I have a clear overview of important work-related information.",
+          "storyConcepts": [
+            "personalinboxeasily",
+            "importantwork",
+            "inboxeasily",
+            "relatedinformation",
+            "clear",
+            "easily",
+            "important",
+            "inbox",
+            "personal",
+            "related",
+            "employee"
+          ],
+          "matchedConcepts": [
+            "clear",
+            "easily",
+            "personal",
+            "employee"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "clear_overview",
+            "easily_overview",
+            "employee_overview"
+          ],
+          "lexicalScore": 0.36363636363636365,
+          "covered": true
+        },
+        {
+          "id": "US39",
+          "story": "As a manager, I want to have one system with one login, so that I don't lose track of my account information.",
+          "storyConcepts": [
+            "one",
+            "onesystem",
+            "tlose",
+            "account",
+            "don",
+            "login",
+            "lose",
+            "manager",
+            "system"
+          ],
+          "matchedConcepts": [
+            "manager"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "manager_overview"
+          ],
+          "lexicalScore": 0.1111111111111111,
+          "covered": false
+        },
+        {
+          "id": "US40",
+          "story": "As an employee, I want to be able to reset my password, so that I can always access my account.",
+          "storyConcepts": [
+            "alwayaccess",
+            "account",
+            "alway",
+            "password",
+            "reset",
+            "employee"
+          ],
+          "matchedConcepts": [
+            "employee"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "employee_overview"
+          ],
+          "lexicalScore": 0.16666666666666666,
+          "covered": false
+        },
+        {
+          "id": "US41",
+          "story": "As an employee, I want to have a user-friendly application, so that I can access all functionalities easily.",
+          "storyConcepts": [
+            "friendlyapplication",
+            "functionalityeasily",
+            "application",
+            "easily",
+            "friendly",
+            "functionality",
+            "user",
+            "employee"
+          ],
+          "matchedConcepts": [
+            "easily",
+            "employee"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "easily_overview",
+            "employee_overview"
+          ],
+          "lexicalScore": 0.25,
+          "covered": false
+        },
+        {
+          "id": "US42",
+          "story": "As an employee, I want to be able to navigate through the application easily, so that I can quickly see my schedule while riding.",
+          "storyConcepts": [
+            "navigatethrough",
+            "quicklysee",
+            "whileriding",
+            "application",
+            "easily",
+            "navigate",
+            "quickly",
+            "riding",
+            "through",
+            "while",
+            "employee"
+          ],
+          "matchedConcepts": [
+            "easily",
+            "employee"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "easily_overview",
+            "employee_overview"
+          ],
+          "lexicalScore": 0.18181818181818182,
+          "covered": false
+        },
+        {
+          "id": "US43",
+          "story": "As an employee, I want to be able to choose between email or application notifications, so that I can adjust my administration in the way that I prefer.",
+          "storyConcepts": [
+            "betweenemail",
+            "applicationnotification",
+            "adjust",
+            "administration",
+            "application",
+            "between",
+            "email",
+            "notification",
+            "prefer",
+            "way",
+            "employee"
+          ],
+          "matchedConcepts": [
+            "email",
+            "notification",
+            "employee"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "notification_overview",
+            "employee_overview"
+          ],
+          "lexicalScore": 0.2727272727272727,
+          "covered": false
+        },
+        {
+          "id": "US44",
+          "story": "As an employee, I want to be able to choose between weekly or monthly payments, so that I can adjust my payment routine to my lifestyle.",
+          "storyConcepts": [
+            "betweenweekly",
+            "payment",
+            "monthlypayment",
+            "paymentroutine",
+            "adjust",
+            "between",
+            "lifestyle",
+            "monthly",
+            "routine",
+            "weekly",
+            "employee"
+          ],
+          "matchedConcepts": [
+            "payment",
+            "employee"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "payment_overview",
+            "employee_overview"
+          ],
+          "lexicalScore": 0.18181818181818182,
+          "covered": false
+        },
+        {
+          "id": "US45",
+          "story": "As an employee, I want to be able to view my financial annual statements, so that I can easily find my financial information for filing taxes, etc.",
+          "storyConcepts": [
+            "financialannualstatement",
+            "financial",
+            "easilyfind",
+            "filingtaxe",
+            "financialannual",
+            "annual",
+            "easily",
+            "etc",
+            "filing",
+            "find",
+            "statement",
+            "taxe",
+            "employee"
+          ],
+          "matchedConcepts": [
+            "easily",
+            "statement",
+            "employee"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "easily_overview",
+            "employee_overview"
+          ],
+          "lexicalScore": 0.23076923076923078,
+          "covered": false
+        },
+        {
+          "id": "US46",
+          "story": "As an employee, I want the information that is shared with the payment handler to be encrypted, so that my privacy is ensured.",
+          "storyConcepts": [
+            "encrypted",
+            "ensured",
+            "handler",
+            "payment",
+            "privacy",
+            "shared",
+            "employee"
+          ],
+          "matchedConcepts": [
+            "payment",
+            "employee"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "payment_overview",
+            "employee_overview"
+          ],
+          "lexicalScore": 0.2857142857142857,
+          "covered": false
+        },
+        {
+          "id": "US47",
+          "story": "As an employee, I want to be able to change my personal information, so that the information my employer has is always up to date.",
+          "storyConcepts": [
+            "alwayup",
+            "personalinformation",
+            "alway",
+            "change",
+            "date",
+            "employer",
+            "personal",
+            "employee"
+          ],
+          "matchedConcepts": [
+            "date",
+            "personal",
+            "employee"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "employee_overview"
+          ],
+          "lexicalScore": 0.375,
+          "covered": true
+        },
+        {
+          "id": "US48",
+          "story": "As an employee, I want to be able to view my contract, so that I have a clear overview of important work-related information.",
+          "storyConcepts": [
+            "importantwork",
+            "relatedinformation",
+            "clear",
+            "contract",
+            "important",
+            "related",
+            "employee"
+          ],
+          "matchedConcepts": [
+            "clear",
+            "contract",
+            "employee"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "clear_overview",
+            "contract_overview",
+            "employee_overview"
+          ],
+          "lexicalScore": 0.42857142857142855,
+          "covered": true
+        },
+        {
+          "id": "US49",
+          "story": "As an employee, I want the application as secure as possible, so that my data does not fall into malicious hands.",
+          "storyConcepts": [
+            "doenot",
+            "maliciouhand",
+            "application",
+            "doe",
+            "fall",
+            "hand",
+            "maliciou",
+            "not",
+            "possible",
+            "secure",
+            "employee"
+          ],
+          "matchedConcepts": [
+            "employee"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "employee_overview"
+          ],
+          "lexicalScore": 0.09090909090909091,
+          "covered": false
+        }
+      ],
+      "score": 0.40816326530612246,
+      "covered": 20,
+      "total": 49
+    }
+  },
+  "generationStrategy": {
+    "llmPassCount": 1,
+    "repairPassEnabled": false
+  }
+}

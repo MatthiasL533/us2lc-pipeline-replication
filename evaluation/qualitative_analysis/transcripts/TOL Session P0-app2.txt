@@ -1,0 +1,215 @@
+00:00:03 - 00:00:07
+P0: We hebben een subscription. Logisch.
+
+00:00:08 - 00:00:20
+P0: startDate, endDate, price. Decimal, cancellationDate was ook bij auto-renew. Logistiek online subscription ID, status, nieuwe status.
+
+00:00:22 - 00:00:32
+P0: Ja, dat is wat me opvalt is dat gewoon in de realiteit Zou dit waarschijnlijk niet ook een enumeration zijn? Verschillende statussen. Ja.
+
+00:00:33 - 00:00:35
+Researcher: Dat kan je niet twee dagen.
+
+00:00:36 - 00:01:00
+P0: Ik weet ook niet of het perspectief is in Mendix, maar bijvoorbeeld zo'n subscription ID moet waarschijnlijk de eerste property zijn. Ja. En verplicht vind ik ook. Oh ja, ook verplicht die verplicht zijn. Maar ook zie je vaak bij UML diagrammen is dat dan de de key of de. De ID staat bovenaan vaak. Ja, dat is niet echt een ramp of zo, maar dat zou best wel makkelijk best practice zijn om te implementeren. Ja
+
+00:01:00 - 00:01:22
+P0: Ja. cancellationDate. Dus dat is geen boolean, denk ik. Nee, da's gewoon een DateTime. Da's best wel ernstig. Dus zij maken. T Is wel een beetje een. Hij is wat meer boetseert zeg maar. Ik weet dat Nederlandse woord teveel is, maar ja, hij had het niet helemaal niet helemaal lekker. Ik ben het met de details even.
+
+00:01:26 - 00:01:26
+Researcher: Hmm.
+
+00:01:29 - 00:01:35
+P0: Dat is een string waarschijnlijk. Ja. Ook dit moet weer een een enumeration zijn. Natuurlijk, Die mag.
+
+00:01:38 - 00:01:42
+Researcher: Hij mist. Hij mist veel enumerations die hij wel had kunnen gebruiken.
+
+00:01:42 - 00:01:50
+P0: Ja, dat dat, dat is een grote. Dat is denk ik. Als je dit laat zien aan de Mendix developer, dan zal hij waarschijnlijk dat is dat ie ja tegen je zegt en dat.
+
+00:01:50 - 00:02:10
+P0: Maar hij pakt wel de. Het gevoel dit. Hij had deze nu wel meer context pakt dan bij payment method het dan eerder Ja. Ja. Mmm. Titel. Oké. Release date. Oké. Genre. Ja.
+
+00:02:10 - 00:02:22
+P0: Ook dit, weet je wel. Ik kan ook een vaste waarde zijn. Ja. Ja, maar tegelijkertijd ook wel. Misschien zelf een eigen genre er op invoeren, maar dat zou uiteindelijk uiteindelijk gewoon een lijst hebben met allemaal verschillende
+
+00:02:23 - 00:02:25
+P0: directors cast members.
+
+00:02:26 - 00:02:39
+P0: Oké. Ik voel me ook cast members dat ik zou het gewoon een aparte entiteit moeten zijn. Denk ik denk ik. Nou ja, zeg maar dat ie. Maar hij was niet allemaal in één string lijkt mij.
+
+00:02:39 - 00:02:40
+Researcher: Oh ja.
+
+00:02:40 - 00:03:01
+P0: Crew member. Dat is denk ik. Wat logisch dat je een movie net van members of cast members Production company. Production company vind ik wel logisch dat dit. Dat dit bij een movie hoort. Ons Anders voel je gewoon denk ik te veel ruis in één entiteit dat je niet hoeft te hebben. Ja wel logische attributen vind ik. Er zijn niet zijn. Je zet geen gekke dingen in.
+
+00:03:01 - 00:03:07
+P0: Nogmaals weer de attribute of ze required zijn. Ja, dat zal wel. Zal wel moeten.
+
+00:03:13 - 00:03:27
+P0: Platform. Share. Cinema stream adress. Oké, geen. Geen laatste natuurlijk, maar ze zullen wel moeten zijn. Ja. Hoef je verder? Ik weet niet of ze tussen een theater en een cinema.
+
+00:03:27 - 00:03:39
+Researcher: In principe is dit dan weer niet natuurlijk. Dat is een soort. Waarschijnlijk hebben ze in de user stories die twee termen interchangeably gebruikt. En de LLM dacht dat dat het dacht dat het niet hetzelfde was.
+
+00:03:39 - 00:03:45
+P0: Zij houdt niet echt rekening met synoniemen maar. Maar als je context mee zou geven dan zou je waarschijnlijk wel te realiseren.
+
+00:03:45 - 00:03:45
+Researcher: Ja.
+
+00:03:45 - 00:03:58
+P0: Ja. Streamingplatform. Oké. Kan dus op zich prima. Het is user. Oké, ook dit. Maar heb je het echt willekeurig gedaan? Zeg maar dat die required is.
+
+00:04:01 - 00:04:10
+Researcher: Volgens mij is dit wel deterministisch gedaan. Dus dat als er name bij zit dat die dan required is. Volgens mij is dat zo gebeurd.
+
+00:04:12 - 00:04:15
+P0: Nou ja, dat is wel logisch nu je het zegt
+
+00:04:24 - 00:04:25
+Researcher: Zo ja.
+
+00:04:25 - 00:04:41
+P0: Oké, valt voor mij op. Niet met de details. Ja ja kijk dan. Dit is eigenlijk een. Een attribute van deze entiteit. Zo zie je maar, deze moet eigenlijk gewoon weg.
+
+00:04:45 - 00:04:45
+Researcher: Mmm.
+
+00:04:48 - 00:05:15
+P0: Ja. Dus ik denk gewoon Hij pakt, hij pakt Hij pakt niet het geheel. Eerst wat hij dan zijn maar users gaat kijken. denkt dat hij ze maar gewoon allemaal langsgaat. Ja maar dat weet je toch maar uitleg denk ik. Maar ik snap het wel dat hij dan pas ziet van oh ja, ik moet. Ik zie opeens payment method als details. Net zoiets als ik mis een entiteit die ik dan hier aanmaak, maar dan niet realiseert van oké, eerder staat dit al, dus waarom ga ik nu niet? Ga ik dit nu genereren?
+
+00:05:15 - 00:05:18
+Researcher: Ja, maar hij mist een beetje bigger picture of zo.
+
+00:05:18 - 00:05:20
+P0: Ja, dat zou ik zeggen.
+
+00:05:20 - 00:05:21
+Researcher: Ja, ja.
+
+00:05:24 - 00:05:29
+P0: Zo laat je zien. Dit is licensing restrictions.
+
+00:05:45 - 00:05:56
+P0: die heeft hij wel gepakt. Of een aparte entiteit moet zijn weet ik niet heel zeker, maar hij heeft hij wel. Hij heeft wel de Is er komt maar in één user story voor.
+
+00:05:57 - 00:05:57
+Researcher: Ja.
+
+00:05:58 - 00:06:03
+P0: Dus hij Hij gaat ze wel allemaal gewoon heel secuur langs. Ja, dat is al een positief punt.
+
+00:06:05 - 00:06:10
+P0: Season. Ik weet niet hoe het precies is, maar season.
+
+00:06:19 - 00:06:20
+P0: wat is eigenlijk specific Seasons. Weet je dat?
+
+00:06:25 - 00:06:28
+Researcher: Platform-specific seasons of niet? Nee.
+
+00:06:30 - 00:06:37
+P0: Streamingplatform specifiek over seizoenen van een serie of zo? Ja. Ja.
+
+00:06:37 - 00:06:40
+Researcher: Het is denk ik een soort letterlijke vertaling, denk ik. Ja.
+
+00:06:40 - 00:06:41
+P0: Ja.
+
+00:06:41 - 00:06:43
+Researcher: Is niet super duidelijk beschreven.
+
+00:06:44 - 00:06:44
+P0: Seasons.
+
+00:06:48 - 00:06:48
+Researcher: Ja.
+
+00:06:54 - 00:06:58
+P0: Nou, dan zou bijvoorbeeld hier weer season gekoppeld moet worden aan een serie platform, wat natuurlijk niet het geval is. Ja.
+
+00:06:59 - 00:07:00
+Researcher: Ja.
+
+00:07:09 - 00:07:15
+P0: Ja. Question. Zijn deze user stories eigenlijk? En zijn dit echte user stories?
+
+00:07:16 - 00:07:28
+Researcher: Ja. Dit is. Dit. Deze user stories zijn gebruikt voor een project van studenten. Ja. Ja. Dus het zijn niet per se gouden perfecte kwaliteit user stories. Dus er zit ook echt wel kunnen ook echt wel gaps in zitten. Ja.
+
+00:07:39 - 00:07:47
+P0: Oké. Location latitude longitude. Dat is wel grappig. Waarvoor zou het nodig zijn dan?
+
+00:07:48 - 00:08:05
+P0: Ja, het is echt. Set my location to see accurate movie showing information nearby. Ja, het is natuurlijk ook logisch dat dit gewoon een attribuut is van een entity. Ja location, het is wel echt gewoon.
+
+00:08:08 - 00:08:09
+P0: Het is wel echt heel. Letterlijk
+
+00:08:14 - 00:08:35
+P0: Ik ben wel benieuwd hoe die hier op komt. Zeg maar gewoon dat ie dan zegt van oké, want zelfs zonder context zou die eigenlijk al slim moeten zijn om te realiseren van oké, ik heb het ook natuurlijk over een adres weet je wel, niet over letterlijk een lat/long. Maar goed. Ja.
+
+00:08:43 - 00:08:45
+P0: Filmhuis. Wat is filmhuis?
+
+00:08:48 - 00:08:51
+Researcher: Ja, ik denk dat het een soort ander type.
+
+00:09:03 - 00:09:07
+P0: Maar dat is natuurlijk zelfstandig naamwoord zo pak dat. Ik begrijp dat dan een entiteit van maakt.
+
+00:09:08 - 00:09:09
+Researcher: Ja.
+
+00:09:09 - 00:09:12
+P0: Ja. Filmhuis is een soort alternatief voor een bioscoop.
+
+00:09:12 - 00:09:13
+Researcher: Ja. Denk ik.
+
+00:09:14 - 00:09:15
+P0: Oh, dit is.
+
+00:09:16 - 00:09:16
+Researcher: Het is niet een synoniem.
+
+00:09:16 - 00:09:17
+P0: Het is niet. Synoniem.
+
+00:09:17 - 00:09:19
+Researcher: Nee, het is een alternatief. Is het.
+
+00:09:20 - 00:09:20
+P0: Ja?
+
+00:09:21 - 00:09:32
+Researcher: Maar filmhuis is weer met lokale films en zo. Van die niche soort dingen. Ik snap een soort van wel dat hij hem heeft gemaakt, maar hij heeft hem ook niet goed ingevuld qua attributen.
+
+00:09:32 - 00:09:39
+P0: Nee. Nou, hij is wel gewoon echt hyper. Letterlijk.
+
+00:09:39 - 00:09:45
+Researcher: Ja. Ja, dat is wel een goede constatering inderdaad.
+
+00:09:47 - 00:09:52
+P0: Mmm. Kijk, het. Adres pakt hij wel bij cinema.
+
+00:09:53 - 00:09:54
+Researcher: Ja.
+
+00:09:54 - 00:10:00
+P0: Ja dus. Hij weet wel dat dat dat een adres want er is echt een locatie is mij altijd al een passie en ook. Location maakt.
+
+00:10:01 - 00:10:07
+Researcher: Ja. Hier zit trouwens ook de user location history.
+
+00:10:07 - 00:10:09
+P0: Ja, dat lijkt me.
+
+00:10:09 - 00:10:38
+P0: Dus ook zo'n historie. Echt gewoon. Kijk, dat is misschien ook hier mee te maken. Het is een user story: user may search for movie showings for a specific location, zodat ik accurate movie showing information for locations of interest krijg. Ja, wat eigenlijk wil zeggen is van oké, ik wil gewoon een bepaald, ik heb gewoon een kaartje voor me, weet ik veel wat en ik wil gewoon een adres invoeren en dan kan ik gewoon zien wat voor dingen er zijn. Ja, maar dan heb je dit. Dit heb je natuurlijk niet nodig dan?

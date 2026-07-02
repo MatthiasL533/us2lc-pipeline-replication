@@ -1,0 +1,620 @@
+{
+  "dataset": "sports",
+  "run": "run-03",
+  "planPath": "/Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/artifacts/practical-performance/20260528-165228/stability/sports/run-03/plan.json",
+  "ok": true,
+  "startedAt": "2026-05-30T18:17:18.328Z",
+  "tempPlanPath": "/Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/artifacts/practical-performance/20260528-165228/builder-stage-runs/plans/sports/run-03/plan.json",
+  "totalMs": 22413,
+  "result": {
+    "appId": "c9634afc-df13-421f-9940-6b7df8df57b6",
+    "appCreated": true,
+    "seedAppId": null,
+    "branch": "main",
+    "committed": true,
+    "commitRequested": true,
+    "workingCopyId": "195527db-2fff-4994-8027-50f561d543a7",
+    "personas": {
+      "enabled": false,
+      "generatedPageNames": [],
+      "personaNames": []
+    },
+    "stages": [
+      {
+        "stage": "domainModel",
+        "ok": true,
+        "summary": "entitiesCreated=19, associationsCreated=0, enumerationsCreated=0",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 55
+      },
+      {
+        "stage": "flush.afterDomainModel",
+        "ok": true,
+        "summary": "flush.afterDomainModel completed",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 240
+      },
+      {
+        "stage": "security",
+        "ok": true,
+        "summary": "moduleRolesCreated=6, userRolesCreated=6, demoUsersCreated=0",
+        "artifacts": [
+          {
+            "key": "moduleRoleNames",
+            "count": 7
+          },
+          {
+            "key": "userRoleNames",
+            "count": 8
+          },
+          {
+            "key": "demoUserNames",
+            "count": 2
+          }
+        ],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 202
+      },
+      {
+        "stage": "flush.afterSecurity",
+        "ok": true,
+        "summary": "flush.afterSecurity completed",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 322
+      },
+      {
+        "stage": "pageCapabilities",
+        "ok": true,
+        "summary": "pageCapabilities completed",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 0
+      },
+      {
+        "stage": "webClientCompatibility",
+        "ok": true,
+        "summary": "webClientCompatibility completed",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 1
+      },
+      {
+        "stage": "pages",
+        "ok": true,
+        "summary": "pages completed",
+        "artifacts": [
+          {
+            "key": "pageNames",
+            "count": 40
+          }
+        ],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 410
+      },
+      {
+        "stage": "navigationUI",
+        "ok": true,
+        "summary": "navigationUI completed",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 124
+      },
+      {
+        "stage": "homePage",
+        "ok": true,
+        "summary": "updatedProfiles=1",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 2
+      },
+      {
+        "stage": "flush.final",
+        "ok": true,
+        "summary": "flush.final completed",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 1462
+      },
+      {
+        "stage": "verification",
+        "ok": true,
+        "summary": "ok=true",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 63
+      },
+      {
+        "stage": "capabilities",
+        "ok": true,
+        "summary": "capabilities completed",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 785
+      },
+      {
+        "stage": "commit",
+        "ok": true,
+        "summary": "commit completed",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 9362
+      }
+    ],
+    "createdApp": {
+      "appId": "c9634afc-df13-421f-9940-6b7df8df57b6",
+      "name": "sports-run03",
+      "repositoryType": "git"
+    },
+    "beforeCounts": {
+      "pagesInModule": 1,
+      "entitiesInModule": 0,
+      "microflowsInModule": 1,
+      "nanoflowsInModule": 0,
+      "workflowsInModule": 0
+    },
+    "domainModel": {
+      "moduleName": "MyFirstModule",
+      "entitiesCreated": 19,
+      "associationsCreated": 0,
+      "enumerationsCreated": 0
+    },
+    "security": {
+      "moduleName": "MyFirstModule",
+      "securityLevel": "CheckFormsAndMicroflows",
+      "moduleRolesCreated": 6,
+      "userRolesCreated": 6,
+      "demoUsersRequested": 0,
+      "demoUsersCreated": 0,
+      "demoUsersApplied": 0,
+      "demoUserHandling": "notRequested",
+      "skippedDemoUsers": [],
+      "moduleRoleNames": [
+        "Admin",
+        "Customer",
+        "MyFirstModuleRoleUser",
+        "NewCustomer",
+        "ReturningCustomer",
+        "Trainer",
+        "User"
+      ],
+      "userRoleNames": [
+        "Admin",
+        "Administrator",
+        "Customer",
+        "MyFirstModuleRoleUser",
+        "NewCustomer",
+        "ReturningCustomer",
+        "Trainer",
+        "User"
+      ],
+      "demoUserNames": [
+        "demo_administrator",
+        "demo_user"
+      ]
+    },
+    "pageCapabilities": null,
+    "webClientCompatibility": {
+      "lookupRequested": false,
+      "classicGridRequested": false,
+      "updated": false,
+      "useOptimizedClient": null
+    },
+    "pages": {
+      "moduleName": "MyFirstModule",
+      "layoutQualifiedName": "Atlas_Core.Atlas_Default",
+      "layoutParameterQname": "Atlas_Core.Atlas_Default.Main",
+      "pageNames": [
+        "Home",
+        "Lesson_Dashboard",
+        "Lesson_Overview",
+        "Lesson_NewEdit",
+        "Customer_Overview",
+        "Customer_NewEdit",
+        "Notification_Overview",
+        "Notification_NewEdit",
+        "Know_Overview",
+        "Know_NewEdit",
+        "Time_Overview",
+        "Time_NewEdit",
+        "Room_Overview",
+        "Room_NewEdit",
+        "Account_Overview",
+        "Account_NewEdit",
+        "FamilyMember_Overview",
+        "FamilyMember_NewEdit",
+        "Membership_Overview",
+        "Membership_NewEdit",
+        "MembershipType_Overview",
+        "MembershipType_NewEdit",
+        "Subscription_Overview",
+        "Subscription_NewEdit",
+        "BankingDetails_Overview",
+        "BankingDetails_NewEdit",
+        "Timeslot_Overview",
+        "Timeslot_NewEdit",
+        "Booking_Overview",
+        "Booking_NewEdit",
+        "LessonBooking_Overview",
+        "LessonBooking_NewEdit",
+        "PersonalTrainingSession_Overview",
+        "PersonalTrainingSession_NewEdit",
+        "SpotBooking_Overview",
+        "SpotBooking_NewEdit",
+        "NotificationPreference_Overview",
+        "NotificationPreference_NewEdit",
+        "NoShowRecord_Overview",
+        "NoShowRecord_NewEdit"
+      ],
+      "dg2Cleanup": {
+        "enabled": true,
+        "targetedPageNames": [],
+        "deletedPageNames": [],
+        "failed": []
+      },
+      "dataGrid2": {
+        "enabled": false,
+        "widgetId": "",
+        "resolvedFrom": "",
+        "useFallbackSchema": false,
+        "probeVariant": null,
+        "configuredWidgets": 0,
+        "attempts": []
+      }
+    },
+    "dg2Cleanup": {
+      "enabled": true,
+      "targetedPageNames": [],
+      "deletedPageNames": [],
+      "failed": []
+    },
+    "navigationUI": {
+      "requested": true,
+      "homeButtonsAdded": 0,
+      "navItemsAdded": 6
+    },
+    "homePage": {
+      "requested": true,
+      "updatedProfiles": 1,
+      "targetPageQualifiedName": "MyFirstModule.Home"
+    },
+    "afterCounts": {
+      "pagesInModule": 41,
+      "entitiesInModule": 19,
+      "microflowsInModule": 1,
+      "nanoflowsInModule": 0,
+      "workflowsInModule": 0
+    },
+    "beforeRefs": {
+      "pages": [
+        {
+          "name": "Home_Web",
+          "id": "5c6805fc-cadf-4d72-a5ef-f25da7cf4c97"
+        }
+      ],
+      "entities": [],
+      "microflows": [
+        {
+          "name": "MyFirstLogic",
+          "id": "4a8475b3-14cb-4100-8963-58f2fd3a0be8"
+        }
+      ],
+      "nanoflows": [],
+      "workflows": []
+    },
+    "afterRefs": {
+      "pages": [
+        {
+          "name": "Home_Web",
+          "id": "5c6805fc-cadf-4d72-a5ef-f25da7cf4c97"
+        },
+        {
+          "name": "Home",
+          "id": "92bb0017-b281-4827-b948-5908a849e4a3"
+        },
+        {
+          "name": "Lesson_Dashboard",
+          "id": "8b67e16f-ab32-4dde-9408-1f0dadc7f00d"
+        },
+        {
+          "name": "Lesson_Overview",
+          "id": "c92fd1f8-bf43-423c-aec9-0b6187297837"
+        },
+        {
+          "name": "Lesson_NewEdit",
+          "id": "65c34482-d851-461e-b172-c27fd00b6b1a"
+        },
+        {
+          "name": "Customer_Overview",
+          "id": "9fae16d1-572a-4f96-a734-39dec6ede79a"
+        },
+        {
+          "name": "Customer_NewEdit",
+          "id": "c82d3071-0d69-4d76-95cd-ca210418128a"
+        },
+        {
+          "name": "Notification_Overview",
+          "id": "993f3f1f-520c-4f12-ae53-9cf85667807d"
+        },
+        {
+          "name": "Notification_NewEdit",
+          "id": "2cdb6e1f-5493-4b25-a72f-d999fab3ac20"
+        },
+        {
+          "name": "Know_Overview",
+          "id": "ce608ec0-b1bb-4da5-af25-d9e614cb2bc5"
+        },
+        {
+          "name": "Know_NewEdit",
+          "id": "3681dc57-ba98-43c2-ae71-9718cb6cdfd3"
+        },
+        {
+          "name": "Time_Overview",
+          "id": "db5c464f-dc04-4f65-9a42-34f6495c8f1a"
+        },
+        {
+          "name": "Time_NewEdit",
+          "id": "d96199b9-01a4-4126-9f12-6df6a98dbb63"
+        },
+        {
+          "name": "Room_Overview",
+          "id": "03f16986-b26d-468b-aa8e-342e0f0b2dff"
+        },
+        {
+          "name": "Room_NewEdit",
+          "id": "42b9c545-a880-4ab2-be57-7dded3601bbc"
+        },
+        {
+          "name": "Account_Overview",
+          "id": "fc0f3985-e375-491c-8442-23de710a70c9"
+        },
+        {
+          "name": "Account_NewEdit",
+          "id": "159bc81c-d624-4ae0-9df2-c918987618f9"
+        },
+        {
+          "name": "FamilyMember_Overview",
+          "id": "5adc08d9-89be-479a-ac0c-3fc2cff44ae8"
+        },
+        {
+          "name": "FamilyMember_NewEdit",
+          "id": "044b25ba-6aac-4fc9-ad67-6dd53e98187d"
+        },
+        {
+          "name": "Membership_Overview",
+          "id": "36493753-75e7-4e15-a0cd-6cbe586cc737"
+        },
+        {
+          "name": "Membership_NewEdit",
+          "id": "ce3d1953-3a6a-4d9c-a625-d0266c58a3b5"
+        },
+        {
+          "name": "MembershipType_Overview",
+          "id": "814ccdca-8aa2-4e1a-a637-bfb17dae81b1"
+        },
+        {
+          "name": "MembershipType_NewEdit",
+          "id": "fdfd41d1-9b5e-4896-bf2e-3b12985e05d9"
+        },
+        {
+          "name": "Subscription_Overview",
+          "id": "806bca81-fc73-4d86-bc21-70bd6285d04c"
+        },
+        {
+          "name": "Subscription_NewEdit",
+          "id": "75a5997e-8c0f-41df-afdb-322e51f720b4"
+        },
+        {
+          "name": "BankingDetails_Overview",
+          "id": "8aa813aa-4baa-4581-9c26-130721e682af"
+        },
+        {
+          "name": "BankingDetails_NewEdit",
+          "id": "8eb6f208-3e0e-4552-ba5d-3f689dbad515"
+        },
+        {
+          "name": "Timeslot_Overview",
+          "id": "7329e4bf-c1c5-443f-a53a-06d979286dd0"
+        },
+        {
+          "name": "Timeslot_NewEdit",
+          "id": "9c547100-bb45-45b6-9cd3-47745cf2feb8"
+        },
+        {
+          "name": "Booking_Overview",
+          "id": "da969226-98ff-4178-aeab-d9b5d0cdfcde"
+        },
+        {
+          "name": "Booking_NewEdit",
+          "id": "4995585c-a435-4c89-bdd6-0d93ef952744"
+        },
+        {
+          "name": "LessonBooking_Overview",
+          "id": "36abd2ec-f2fc-45b5-be7e-c0b063bbc3ff"
+        },
+        {
+          "name": "LessonBooking_NewEdit",
+          "id": "d9e59359-15c3-4b29-a463-b0124342c608"
+        },
+        {
+          "name": "PersonalTrainingSession_Overview",
+          "id": "7e9ba07b-e1a7-4777-9ecb-f4c41857ff02"
+        },
+        {
+          "name": "PersonalTrainingSession_NewEdit",
+          "id": "cb7b6e45-394d-4a22-803e-948f70aaecab"
+        },
+        {
+          "name": "SpotBooking_Overview",
+          "id": "a34ed53b-4460-42fe-9124-9bb3918237cd"
+        },
+        {
+          "name": "SpotBooking_NewEdit",
+          "id": "2217ef59-e9dc-4c82-83e0-0b478e1e7b96"
+        },
+        {
+          "name": "NotificationPreference_Overview",
+          "id": "c4d394d2-20ab-427f-b7a7-e8a75842f91d"
+        },
+        {
+          "name": "NotificationPreference_NewEdit",
+          "id": "f5e8afe0-1f3d-4e91-975f-06f0663f5be2"
+        },
+        {
+          "name": "NoShowRecord_Overview",
+          "id": "0ea46c51-e60a-4d2f-8a75-80efa878da4f"
+        },
+        {
+          "name": "NoShowRecord_NewEdit",
+          "id": "e84d0077-a51a-4756-90c2-56a7cda9974a"
+        }
+      ],
+      "entities": [
+        {
+          "name": "Lesson",
+          "id": "4581adca-b7d7-41b2-b4fa-bffeb876953e"
+        },
+        {
+          "name": "Customer",
+          "id": "8c5bda0b-c15c-4358-989c-22342c365d45"
+        },
+        {
+          "name": "Notification",
+          "id": "55a843ce-1f4a-4eaa-b117-89d8393fba4b"
+        },
+        {
+          "name": "Know",
+          "id": "3d1932ad-9087-41f1-b3c5-667fa1e969da"
+        },
+        {
+          "name": "Time",
+          "id": "105a7208-4fdf-46e6-97ed-6a2d7ffda960"
+        },
+        {
+          "name": "Room",
+          "id": "8af7f383-367f-4483-8507-32f036003f2f"
+        },
+        {
+          "name": "Account",
+          "id": "bf855515-c4eb-4f5b-8f4b-278852b5d5ae"
+        },
+        {
+          "name": "FamilyMember",
+          "id": "2d4b74ca-c449-46c0-9bef-c426aac9ad33"
+        },
+        {
+          "name": "Membership",
+          "id": "2abf752c-490e-433b-bfd3-91e6fd6fd88c"
+        },
+        {
+          "name": "MembershipType",
+          "id": "00c4c3fc-6889-4e97-ba33-7b744fea841c"
+        },
+        {
+          "name": "Subscription",
+          "id": "7727f69b-088b-4fa6-bb00-d7edc64c7380"
+        },
+        {
+          "name": "BankingDetails",
+          "id": "eb2f23de-4062-4fa9-a468-18cdab4c185a"
+        },
+        {
+          "name": "Timeslot",
+          "id": "c498b002-968f-47e6-b1d6-8bc3da940f35"
+        },
+        {
+          "name": "Booking",
+          "id": "de01aeef-95ec-4703-9592-d595a1d17df7"
+        },
+        {
+          "name": "LessonBooking",
+          "id": "6808165d-7f2f-4698-a8ee-681226e94148"
+        },
+        {
+          "name": "PersonalTrainingSession",
+          "id": "d218909f-c25d-45bc-bde6-3a7abe9d00c9"
+        },
+        {
+          "name": "SpotBooking",
+          "id": "d27feb07-e41a-4f51-877d-7c43a8157888"
+        },
+        {
+          "name": "NotificationPreference",
+          "id": "9dcae6ad-6421-4696-9f65-57a2ca71e2c6"
+        },
+        {
+          "name": "NoShowRecord",
+          "id": "e3ee5269-e8c9-4ac4-ba87-c56f76450eaf"
+        }
+      ],
+      "microflows": [
+        {
+          "name": "MyFirstLogic",
+          "id": "4a8475b3-14cb-4100-8963-58f2fd3a0be8"
+        }
+      ],
+      "nanoflows": [],
+      "workflows": []
+    },
+    "verification": {
+      "missing": {
+        "pages": [],
+        "entities": [],
+        "microflows": [],
+        "nanoflows": [],
+        "workflows": []
+      },
+      "ok": true,
+      "artifacts": {
+        "ok": true,
+        "missing": {
+          "moduleRoles": [],
+          "userRoles": [],
+          "demoUsers": [],
+          "pageVisibility": [],
+          "homePageButtons": [],
+          "menuItems": [],
+          "widgets": []
+        }
+      },
+      "semantic": {
+        "enabled": false,
+        "ok": true,
+        "errors": []
+      }
+    },
+    "capabilities": {
+      "modules": [
+        "Administration",
+        "Atlas_Core",
+        "Atlas_Web_Content",
+        "DataWidgets",
+        "FeedbackModule",
+        "MyFirstModule",
+        "NanoflowCommons",
+        "WebActions"
+      ],
+      "widgetIds": [],
+      "widgetFamilies": [
+        "datawidgets_module"
+      ]
+    },
+    "commitMessage": "Practical performance builder-stage run: sports run-03",
+    "ok": true
+  }
+}

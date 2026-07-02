@@ -1,0 +1,290 @@
+{
+  "classNames": [
+    "Archive Project",
+    "Archive",
+    "Project Overview",
+    "Team",
+    "Overview",
+    "Milestone",
+    "Status",
+    "File",
+    "Description",
+    "Delivery",
+    "Goal Description",
+    "Goal",
+    "Feedback",
+    "File Archive",
+    "File Type",
+    "Type",
+    "Access Request",
+    "Request",
+    "Access",
+    "Threshold",
+    "Task",
+    "Date",
+    "Detail",
+    "Comment",
+    "Subtask",
+    "Message",
+    "Chat Message",
+    "Chat",
+    "Statistic"
+  ],
+  "classes": [
+    {
+      "name": "Archive Project",
+      "parent": "Project",
+      "isRole": false
+    },
+    {
+      "name": "Archive",
+      "parent": "",
+      "isRole": false
+    },
+    {
+      "name": "Project Overview",
+      "parent": "",
+      "isRole": false
+    },
+    {
+      "name": "Team",
+      "parent": "",
+      "isRole": false
+    },
+    {
+      "name": "Overview",
+      "parent": "",
+      "isRole": false
+    },
+    {
+      "name": "Milestone",
+      "parent": "",
+      "isRole": false
+    },
+    {
+      "name": "Status",
+      "parent": "",
+      "isRole": false
+    },
+    {
+      "name": "File",
+      "parent": "",
+      "isRole": false
+    },
+    {
+      "name": "Description",
+      "parent": "",
+      "isRole": false
+    },
+    {
+      "name": "Delivery",
+      "parent": "",
+      "isRole": false
+    },
+    {
+      "name": "Goal Description",
+      "parent": "Description",
+      "isRole": false
+    },
+    {
+      "name": "Goal",
+      "parent": "",
+      "isRole": false
+    },
+    {
+      "name": "Feedback",
+      "parent": "",
+      "isRole": false
+    },
+    {
+      "name": "File Archive",
+      "parent": "Archive",
+      "isRole": false
+    },
+    {
+      "name": "File Type",
+      "parent": "Type",
+      "isRole": false
+    },
+    {
+      "name": "Type",
+      "parent": "",
+      "isRole": false
+    },
+    {
+      "name": "Access Request",
+      "parent": "Request",
+      "isRole": false
+    },
+    {
+      "name": "Request",
+      "parent": "",
+      "isRole": false
+    },
+    {
+      "name": "Access",
+      "parent": "",
+      "isRole": false
+    },
+    {
+      "name": "Threshold",
+      "parent": "",
+      "isRole": false
+    },
+    {
+      "name": "Task",
+      "parent": "",
+      "isRole": false
+    },
+    {
+      "name": "Date",
+      "parent": "",
+      "isRole": false
+    },
+    {
+      "name": "Detail",
+      "parent": "",
+      "isRole": false
+    },
+    {
+      "name": "Comment",
+      "parent": "",
+      "isRole": false
+    },
+    {
+      "name": "Subtask",
+      "parent": "",
+      "isRole": false
+    },
+    {
+      "name": "Message",
+      "parent": "",
+      "isRole": false
+    },
+    {
+      "name": "Chat Message",
+      "parent": "Message",
+      "isRole": false
+    },
+    {
+      "name": "Chat",
+      "parent": "",
+      "isRole": false
+    },
+    {
+      "name": "Statistic",
+      "parent": "",
+      "isRole": false
+    }
+  ],
+  "relationships": [
+    {
+      "name": "hasProject",
+      "domain": "Archive",
+      "range": "Archive Project"
+    },
+    {
+      "name": "hasDescription",
+      "domain": "Goal",
+      "range": "Goal Description"
+    },
+    {
+      "name": "hasArchive",
+      "domain": "File",
+      "range": "File Archive"
+    },
+    {
+      "name": "hasType",
+      "domain": "File",
+      "range": "File Type"
+    },
+    {
+      "name": "hasRequest",
+      "domain": "Access",
+      "range": "Access Request"
+    },
+    {
+      "name": "hasMessage",
+      "domain": "Chat",
+      "range": "Chat Message"
+    }
+  ],
+  "keyNouns": [
+    {
+      "term": "File",
+      "weight": 18.32
+    },
+    {
+      "term": "Team",
+      "weight": 10.900000000000002
+    },
+    {
+      "term": "Feedback",
+      "weight": 6
+    },
+    {
+      "term": "Milestone",
+      "weight": 5.5
+    },
+    {
+      "term": "Access",
+      "weight": 3.16
+    },
+    {
+      "term": "Message",
+      "weight": 3
+    },
+    {
+      "term": "Delivery",
+      "weight": 3
+    },
+    {
+      "term": "Task",
+      "weight": 3
+    },
+    {
+      "term": "Description",
+      "weight": 2
+    },
+    {
+      "term": "Chat",
+      "weight": 1.6600000000000001
+    },
+    {
+      "term": "Date",
+      "weight": 1.5
+    },
+    {
+      "term": "Overview",
+      "weight": 1.5
+    },
+    {
+      "term": "Goal",
+      "weight": 1.1600000000000001
+    },
+    {
+      "term": "Detail",
+      "weight": 1
+    },
+    {
+      "term": "Statistic",
+      "weight": 1
+    }
+  ],
+  "inferredRoles": [
+    "client",
+    "employee",
+    "manager",
+    "member"
+  ],
+  "discardedClassNames": [
+    "Project Manager",
+    "Manager",
+    "Project",
+    "Team Member",
+    "Member",
+    "Client",
+    "Employee",
+    "Work"
+  ]
+}

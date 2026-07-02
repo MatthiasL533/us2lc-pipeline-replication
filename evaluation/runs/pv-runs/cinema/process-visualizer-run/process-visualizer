@@ -1,0 +1,62 @@
+digraph bpmn_diagram {
+	node [color=black fillcolor=bisque shape=box style=filled]
+	T0 [label="registered user: subscribe to Cinema premium"]
+	T1 [label="administrator: an overview of historic user payments"]
+	T0 -> T1
+	T2 [label="premium user: change my automated renew subscription status"]
+	T1 -> T2
+	node [color=black fillcolor=azure shape=diamond style=filled]
+	EG0_S [label=X]
+	EG0_E [label=X]
+	node [color=black fillcolor=bisque shape=box style=filled]
+	T3 [label="premium user: view my subscription price"]
+	T3 -> EG0_E
+	T4 [label="administrator: cancel my subscription"]
+	T4 -> EG0_E
+	T5 [label="administrator: change a premium user's subscription status"]
+	EG0_S -> T5 [label="so that a premium user's subscription status aligns with their needs"]
+	T5 -> EG0_E
+	T6 [label="administrator: change a premium user's subscription cancellation date"]
+	T7 [label="premium user: update a premium user's payment method details"]
+	T6 -> T7
+	T8 [label="premium user: access movie showing information"]
+	T7 -> T8
+	T8 -> EG0_E
+	T9 [label="administrator: add a movie manually"]
+	EG0_S -> T9 [label="so that i can be informed about regional licensing restrictions"]
+	T10 [label="administrator: edit a movie manually"]
+	T9 -> T10
+	T11 [label="administrator: add a cinema manually"]
+	T10 -> T11
+	T12 [label="administrator: edit a specific movie showing manually"]
+	T11 -> T12
+	T13 [label="premium user: view the cinema city for a specific movie showing"]
+	T12 -> T13
+	T14 [label="premium user: have a standard range limit of 5km"]
+	T13 -> T14
+	T15 [label="user: have a standard range limit of 5km"]
+	T14 -> T15
+	T15 -> EG0_E
+	T16 [label="registered user: recommend movies based on my meta-data"]
+	T17 [label="user: recommend movies based on my meta-data"]
+	T16 -> T17
+	T18 [label="premium user: share a specific movie showing on WhatsApp"]
+	T17 -> T18
+	T19 [label="registered user: set my lists to public"]
+	T18 -> T19
+	T19 -> EG0_E
+	T2 -> EG0_S
+	node [color=black fillcolor=lightpink shape=ellipse style=filled]
+	START_0 [label=START]
+	START_0 -> T0
+	START_1 [label=START]
+	START_1 -> T3
+	END_0 [label=END]
+	EG0_E -> END_0
+	START_2 [label=START]
+	START_2 -> T4
+	START_3 [label=START]
+	START_3 -> T6
+	START_4 [label=START]
+	START_4 -> T16
+}

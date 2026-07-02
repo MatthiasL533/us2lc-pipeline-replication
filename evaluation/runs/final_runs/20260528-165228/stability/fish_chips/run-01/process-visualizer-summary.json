@@ -1,0 +1,156 @@
+{
+  "actors": [
+    "Kitchen Employee",
+    "Ticket Master",
+    "customer",
+    "Cashier",
+    "Restaurant Owner",
+    "Home Delivery Person"
+  ],
+  "tasks": [
+    {
+      "actor": "Kitchen Employee",
+      "action": "see the orders with their status",
+      "condition": "",
+      "gatewayId": "",
+      "gatewayType": "",
+      "storyIndex": 0
+    },
+    {
+      "actor": "Ticket Master",
+      "action": "receive a notification if the customer makes changes after a new order is already paid",
+      "condition": "",
+      "gatewayId": "",
+      "gatewayType": "",
+      "storyIndex": 5
+    },
+    {
+      "actor": "Ticket Master",
+      "action": "label new orders as 'incoming orders'",
+      "condition": "",
+      "gatewayId": "",
+      "gatewayType": "",
+      "storyIndex": 6
+    },
+    {
+      "actor": "Ticket Master",
+      "action": "separate all scheduled orders from the other statuses",
+      "condition": "if their requested time is not yet within ten minutes",
+      "gatewayId": "EG0",
+      "gatewayType": "exclusive",
+      "storyIndex": 14
+    },
+    {
+      "actor": "customer",
+      "action": "see the order type",
+      "condition": "if their requested time is not yet within ten minutes",
+      "gatewayId": "EG0",
+      "gatewayType": "exclusive",
+      "storyIndex": 17
+    },
+    {
+      "actor": "Cashier",
+      "action": "request a confirmation of payment",
+      "condition": "if their requested time is not yet within ten minutes",
+      "gatewayId": "EG0",
+      "gatewayType": "exclusive",
+      "storyIndex": 22
+    },
+    {
+      "actor": "Cashier",
+      "action": "add the phone number to the order",
+      "condition": "if their requested time is not yet within ten minutes",
+      "gatewayId": "EG0",
+      "gatewayType": "exclusive",
+      "storyIndex": 30
+    },
+    {
+      "actor": "Restaurant Owner",
+      "action": "see the VAT of each order",
+      "condition": "in the case of takeaway",
+      "gatewayId": "EG0",
+      "gatewayType": "exclusive",
+      "storyIndex": 36
+    },
+    {
+      "actor": "Restaurant Owner",
+      "action": "have an overview of the types of orders",
+      "condition": "in the case of takeaway",
+      "gatewayId": "EG0",
+      "gatewayType": "exclusive",
+      "storyIndex": 38
+    },
+    {
+      "actor": "Home Delivery Person",
+      "action": "have the address printed on the ticket, so that i can directly type the address into the navigation system",
+      "condition": "in the case of takeaway",
+      "gatewayId": "EG0",
+      "gatewayType": "exclusive",
+      "storyIndex": 44
+    },
+    {
+      "actor": "Home Delivery Person",
+      "action": "have the order price on a printed ticket",
+      "condition": "in the case of takeaway",
+      "gatewayId": "EG0",
+      "gatewayType": "exclusive",
+      "storyIndex": 46
+    }
+  ],
+  "gateways": [
+    {
+      "id": "EG0",
+      "type": "exclusive",
+      "conditions": [
+        "at the moment the preparation of a product is started",
+        "after the preparation of a product is finished",
+        "if their requested time is not yet within ten minutes",
+        "if there are problems with the order",
+        "in the case of takeaway"
+      ]
+    }
+  ],
+  "processObjects": [
+    "Orders With Their Status",
+    "Order Is Already Paid",
+    "Orders As 'incoming Orders'",
+    "From The Other Statuses",
+    "See The Order Type",
+    "A Confirmation Of Payment",
+    "Number To The Order",
+    "Vat Of Each Order",
+    "The Types Of Orders",
+    "Into The Navigation System",
+    "On A Printed Ticket",
+    "Orders At A Glance",
+    "Products Of An Order",
+    "Requests Are Concerned About",
+    "With Its Related Products",
+    "New Order Is Received",
+    "Product As 'current Orders'",
+    "Product As 'finished Orders'",
+    "Products As 'scheduled Orders'",
+    "All The Incoming Orders",
+    "Made By The Kitchen",
+    "Completed By The Kitchen",
+    "Of All Scheduled Orders",
+    "Status Of Each Product",
+    "Screen With A Touchscreen",
+    "Select Orders",
+    "Order",
+    "During The Ordering Process",
+    "Automatically For The Customer",
+    "The Relevant Order Details"
+  ],
+  "capabilityHints": {
+    "hasApproval": false,
+    "hasDecision": true,
+    "hasNotification": true,
+    "hasWorkflowLikeRouting": true
+  },
+  "stats": {
+    "taskCount": 11,
+    "gatewayCount": 1,
+    "rawEntityCount": 83
+  }
+}

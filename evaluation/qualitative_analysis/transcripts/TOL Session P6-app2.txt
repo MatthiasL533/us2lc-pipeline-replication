@@ -1,0 +1,140 @@
+00:00:00 - 00:00:27
+P6: Oké. Students. RegularTutorId. Dat is het eerste wat ik lees. Wat niet logisch klinkt, want dat kunnen er sowieso meerdere zijn. Ja of geen. Ik zou in ieder geval niet onder hetzelfde object een student plaatsen.
+
+00:00:28 - 00:00:29
+P6: Als je dit allemaal één op één?
+
+00:00:30 - 00:00:30
+Researcher: Ja.
+
+00:00:30 - 00:00:39
+P6: Ja. Oké. Dan heb je tutor. Name en de qualification, lateCountValue.
+
+00:00:40 - 00:00:40
+Researcher: Late
+
+00:00:41 - 00:00:53
+P6: LateCountValue. Ja, dat kan. I guess. Niet heel erg. Uhm. Session duration. En die zit aan deze allebei gelinkt.
+
+00:00:53 - 00:01:00
+P6: Hier zijn de één op één session naar student naar tutor één. Dat is logisch. Andere kant op weer niet.
+
+00:01:01 - 00:01:17
+P6: Uhm. SearchInterval. SearchInterval omdat hij elk uur moest zoeken of zo. Ja, ik weet ja, die vond ik een beetje onduidelijk, want user stories moet ik zeggen ja maar daar komt ie vandaan dan. Dus dat pakt ie op zich goed mee.
+
+00:01:18 - 00:01:27
+P6: Uhm, payment bij een session? Ja, want payment was per session. Dat is ook wat ik eruit haalde.
+
+00:01:27 - 00:01:41
+P6: Uhm, Cancellation. Dat kan een reason zijn. Maar deze cancellation hoort ook. Dat stond ook in dat die door allebei. Dus dat moet ook nog erbij kunnen staan via cancelled.
+
+00:01:41 - 00:01:49
+P6: Ja uh oké, availability. Uh, die staat los, maar die hoort weer bij allebei.
+
+00:01:50 - 00:02:28
+P6: Match. Dat is. Oké. Dat houdt iets in. Dat is een beetje vaag. Een match tussen een tutor. Ja, ja, nee, da's t. Maar qua object is ie een beetje vaag. Wat ik vooral. Want dan is het meer een soort t is. Ja, ik snap wel waarom die het apart zet, want het is nog geen session, maar dan dit. Het is een beetje een deel ervan, dus dan zou ik misschien iets als een eh. Hoe noem je dat? Een inheritance-structuur is logischer vinden dan om het hier los neer te zetten. Dus je hebt een match en dan daaruit volgt een session met dezelfde informatie deels en dan wat erbij komt.
+
+00:02:29 - 00:02:38
+P6: Oké, hieronder staat nog een hoop. Hij zet wel. Minder dingen los neer. Ja, dat zie ik wel. Dan bij de vorige
+
+00:02:39 - 00:02:52
+P6: Notification. Ik weet niet waarom, maar omdat je een hele e-mail kunt sturen en WhatsApp-dingen. Ik weet niet of dat een object zou moeten zijn. Dat voelt niet helemaal als logisch.
+
+00:02:55 - 00:03:23
+P6: CV rating. Ja. Rating van een. Uhm van een tutor met een comment erbij. Dit voelt. Als je het als entity zou doen. Dan voelt het alsof elke tutor er meerdere zou moeten kunnen hebben. En dat lijkt me niet. Dus het zou meer een deel van een tutor of oh ja, op een manier, een structuur dat moeten zijn dat het echt aan één specifieke tutor gekoppeld is en niet meerdere ratings per tutor.
+
+00:03:25 - 00:03:43
+P6: CancellationReason. Die hoort gewoon hier bij en die staat er ook al, dus dat is dubbel. Nou, je hebt toch nog best wel een aantal los staan. MatchingAlgorithm, SearchInterval. Dit zijn eigenlijk velden die ik bij andere objecten al zag. Weer de feedback dan niet. Dat zijn entiteiten. Die je als attribuut al.
+
+00:03:43 - 00:03:55
+P6: Ziet. Ze staan al als attribuut bij dingen, maar ze staan hier dan nog een keer omdat ze belangrijk worden gevonden. Ja, omdat ze in de user stories voorkomen. Maar ja, op zich is het als veld nog steeds wel voldoende bij de meeste ja. Ja, dus.
+
+00:03:55 - 00:04:00
+Researcher: Er zou iets beter een keuze gemaakt kunnen worden tussen ja. Is het een attribuut of is het een entity?
+
+00:04:00 - 00:04:46
+P6: Ja, ik heb wel het idee. Hij haalt heel veel belangrijke dingen. Hij had alles eruit wat belangrijk is, maar hij weet niet wat hij ermee moet. Dat lijkt me zo, lijkt het een beetje, maar hij zet het wel neer. Soms zelfs meerdere keren. Waarschijnlijk omdat het meerdere keren voorkomt in de user stories. Maar ja. Ja. Zet velden als extra entiteiten neer omdat er dan misschien nog een keer wat extra's over is gezegd. NoShowRate. Dat hoort gewoon bij tutor. Dus ja, zet die dan ook. Hier staat dan feedback met een comment en de sessie. Ja, het is wel een beetje hetzelfde. Ja. Uhm en de rest Neighborhood? Dat adres is gewoon een veld van beide. Breakdown, breakdown. Ik weet niet waar die vandaan haalt.
+
+00:04:48 - 00:04:56
+P6: Oh, dat was één van die laatsten voor de administrator. Ja, en die zie ik trouwens ook niet terug in mijn systeem. Hoeft ook niet, want zijn rol, maar.
+
+00:04:57 - 00:05:02
+Researcher: Manager. Volgens mij wel. Dat zag ik dan wel inderdaad. Role. Ja.
+
+00:05:02 - 00:05:17
+P6: Oh, misschien was dat de andere naam. Bij deze. Oké. Uhm ja, ik zou weer zeggen het doet wel iets anders dan bij die vorige. Ja, maar het is wel herhaald. Alles wat nuttig is. Wat belangrijk is, komt wel uit de user stories. Ja, en een deel daarvan zet hij best goed neer.
+
+00:05:17 - 00:05:35
+P6: Eigenlijk alles wat expliciet onder een entity wordt gezet die duidelijk een entity is zoals student, tutor, session. Maar alle velden daaromheen heeft hij wat moeite mee en zit hij er of dubbel of los in, zonder goede reden. Ja, dat valt op ja.
+
+00:05:35 - 00:05:51
+P6: En weer de relationships. Die zijn een beetje één op één. Is weer niet heel handig. En ja, waar ze staan. Ja, er zijn een hele hoop lijnen naar diezelfde objecten die niet per se losse objecten moeten zijn of voor een entity zitten natuurlijk. Dus dat.
+
+00:05:52 - 00:05:55
+P6: Dat zijn dan pagina's denk ik.
+
+00:05:55 - 00:06:01
+Researcher: Ja. Hij heeft geen workflow en wel een paar microflows. nanoflows.
+
+00:06:02 - 00:06:09
+P6: Staat er hier ergens wat op pagina's? Of is het weer? Want voor de rest lijkt het wel een beetje hetzelfde.
+
+00:06:09 - 00:06:09
+Researcher: Ja.
+
+00:06:09 - 00:06:20
+P6: Het is weer overal overview en new/edit. Dus voor elke entity maakt hij overview en new/edit. Nou de meeste van deze entities is dat sowieso niet nodig omdat ze dat eigenlijk ook bij die andere.
+
+00:06:20 - 00:06:22
+Researcher: Omdat het allemaal relaties zijn.
+
+00:06:22 - 00:06:26
+P6: Ze zijn toch al in relaties? Horen eigenlijk geen entities te zijn, dus dan zijn het heel veel extra pagina's.
+
+00:06:27 - 00:06:43
+P6: Ja, ik denk dat, ja, een beetje terugkomen op die vragen ook. Ik denk dat het op zich er staat een hele hoop in wat nuttig is en ik denk dat het wel sneller maakt. Maar je moet wel even goed doorhebben welke entiteiten belangrijk zijn en welke niet, Want je moet.
+
+00:06:43 - 00:06:54
+P6: Je hebt hier al redelijk wat, maar je moet er best wel veel mee gaan schuiven en samenvoegen en relaties goed zetten. Ja en ja, ik zou zeg maar.
+
+00:06:54 - 00:07:08
+P6: Qua entiteiten zou ik bijna zeggen: iemand die er wat verstand van heeft, kan het sneller handmatig erin zetten, of even snel. In ieder geval als je vanaf hier moet beginnen. Ja, omdat het best wel vooral die relaties goed zetten.
+
+00:07:09 - 00:07:16
+P6: Dat je kan denk ik bijna alles weggooien wat hier nu in staat om voor een echte applicatie.
+
+00:07:16 - 00:07:21
+Researcher: Ja, en als je dat doet, dat betekent ook dat je alle gegenereerde pagina's eigenlijk ook weg kan gooien, omdat die daar allemaal op gebaseerd zijn.
+
+00:07:21 - 00:07:42
+P6: Ze zijn gebaseerd op relaties. Ja. Ja. Uh, I guess. Ja. Misschien wel. Ja. Uhm. Ja. Hij genereert te veel. Ik denk dat dat het is. En dan moet je dingen weg gaan halen. Ja. En dat is uh. Ja, dan moet je even opletten waar wel en niet. En als je dingen weghaalt, gaan dingen stuk.
+
+00:07:43 - 00:07:59
+P6: Ja. Uhm. Ik kijk nog even naar zo'n flow. Oh. Oké. Availability. Had hier een specifiek veld op.
+
+00:07:59 - 00:08:04
+Researcher: Nee, dat helaas niet. Al zou hij dat wel doen, zou het dan wel een nuttige flow zijn?
+
+00:08:04 - 00:08:40
+P6: Uh, ik weet niet dat er dan een flow voor nodig is. Misschien wel hoor. Dan dan? Dat weet ik net weer niet. Dat is met Mendix. Heb ik te lang niet gedaan. Maar ja, ik zou zeggen als je een flow hebt, dan moet je meer doen dan één specifiek veld ophalen. Ja. Dan zou ik eerder een flow om iets met die je aan keuzes te doen nog. Ja, dat zou ik hier nog missen. Oké. Uhm. Ja. Met tot en met user. Zit hier logica in? Nee, helaas. Ja, oké, hier zit geen match in. Dus hij heet Match student met tutor, maar hij haalt tutors op. En dat is het dus.
+
+00:08:40 - 00:08:40
+Researcher: Ja.
+
+00:08:41 - 00:09:04
+P6: Je hebt wel studentId en subjectName. Maar de match moest vrij. Er stond best wel. Ik zie bij welke velden en welke dingen je op basis van gematcht moet worden, dus dat zou het hier dan meer van terug verwachten? Ja, want dat is een van de complicerende dingen, dus dat zou leuk zijn als de LLM dat alvast kan doen, of een deel daarvan, maar dat is dit niet.
+
+00:09:04 - 00:09:43
+P6: Ja, misschien heeft hij hier wat ingezet, my first logic. Dat denk ik niet. Die blijkt leeg ook. Oh ja, die is wel leeg oké. Session notification, drie stappen. Session create notification en dan Send. Uhm. Ja. Oké, dit op zich logisch, maar er miste een soort decision step in. Ja, want ja, je kan hem ophalen en dan de notification maken. Maar wat voor notification? En moet er überhaupt een notification gemaakt worden? Misschien zijn ze daar nog helemaal niet.
+
+00:09:43 - 00:09:50
+Researcher: Ja, en er zit ook geen XPath in, dus je zou ook niet een notificatie naar een specifieke student kunnen sturen Dat.
+
+00:09:50 - 00:10:13
+P6: Oh ja. Nee, dat klopt. Ja. Oh nee, zeker niet. Ja, die zou je op moeten halen dan. Inderdaad. Dus dat is op zich wel logisch, maar daar moet nog iets van een keuze in. Ja dus. Het is uhm. Hij ziet. Ja, ik was bij die microflows dan. Hij ziet uhm. Hij haalt wel een paar van de belangrijke microflows eruit, maar hij ziet niet zo goed hoe hij keuzes moet maken.
+
+00:10:13 - 00:10:14
+Researcher: Ja.
+
+00:10:14 - 00:10:29
+P6: Ja, dat mist dus. Het is eigenlijk: hij weet, er moet hier iets mee. Maar wat, snapt hij niet helemaal. Oké. Uhm. Ja, oké, je haalt die er op en dan doet ie er niks mee. Ja, ja, hetzelfde.

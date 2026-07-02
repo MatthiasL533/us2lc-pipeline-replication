@@ -1,0 +1,14 @@
+digraph process_visualizer {
+  t0 [label="Kitchen Employee: see the orders with their status"];
+  t1 [label="Ticket Master: receive a notification if the customer makes changes after a new order is already paid"];
+  t2 [label="Ticket Master: label new orders as 'incoming orders'"];
+  t3 [label="kitchen: have an overview of all orders that are currently made by the kitchen"];
+  t4 [label="Ticket Master: separate all scheduled orders from the other statuses"];
+  t5 [label="customer: see the order type"];
+  t6 [label="Cashier: request a confirmation of payment"];
+  t7 [label="Cashier: add the phone number to the order"];
+  t8 [label="Restaurant Owner: see the VAT of each order, so that i have an overview of the taxes."];
+  t9 [label="Restaurant Owner: have an overview of the types of orders"];
+  t10 [label="Home Delivery Person: have the address printed on the ticket"];
+  t11 [label="Home Delivery Person: have the order price on a printed ticket"];
+}

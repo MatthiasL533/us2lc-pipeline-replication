@@ -1,0 +1,833 @@
+{
+  "dataset": "sports",
+  "run": "run-05",
+  "planPath": "/Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/artifacts/practical-performance/20260606-091359/stability/sports/run-05/plan.json",
+  "ok": true,
+  "startedAt": "2026-06-07T20:56:38.033Z",
+  "tempPlanPath": "/Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/artifacts/practical-performance/20260606-091359/builder-stage-runs/plans/sports/run-05/plan.json",
+  "totalMs": 23045,
+  "result": {
+    "appId": "fa5905f7-5369-460f-81b1-738ad9ca1ec6",
+    "appCreated": true,
+    "seedAppId": null,
+    "branch": "main",
+    "committed": true,
+    "commitRequested": true,
+    "workingCopyId": "b1099143-b1e4-48e6-9ff5-e6ef9728b0c1",
+    "personas": {
+      "enabled": false,
+      "generatedPageNames": [],
+      "personaNames": []
+    },
+    "stages": [
+      {
+        "stage": "domainModel",
+        "ok": true,
+        "summary": "entitiesCreated=23, associationsCreated=12, enumerationsCreated=0",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 57
+      },
+      {
+        "stage": "flush.afterDomainModel",
+        "ok": true,
+        "summary": "flush.afterDomainModel completed",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 145
+      },
+      {
+        "stage": "security",
+        "ok": true,
+        "summary": "moduleRolesCreated=7, userRolesCreated=7, demoUsersCreated=0",
+        "artifacts": [
+          {
+            "key": "moduleRoleNames",
+            "count": 8
+          },
+          {
+            "key": "userRoleNames",
+            "count": 9
+          },
+          {
+            "key": "demoUserNames",
+            "count": 2
+          }
+        ],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 311
+      },
+      {
+        "stage": "flush.afterSecurity",
+        "ok": true,
+        "summary": "flush.afterSecurity completed",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 411
+      },
+      {
+        "stage": "microflowsNanoflows",
+        "ok": true,
+        "summary": "microflowsCreated=3, nanoflowsCreated=1",
+        "artifacts": [
+          {
+            "key": "microflowNames",
+            "count": 3
+          },
+          {
+            "key": "nanoflowNames",
+            "count": 1
+          },
+          {
+            "key": "microflowRefsByRef",
+            "count": 0
+          },
+          {
+            "key": "nanoflowRefsByRef",
+            "count": 0
+          }
+        ],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 8
+      },
+      {
+        "stage": "flush.afterMicroflows",
+        "ok": true,
+        "summary": "flush.afterMicroflows completed",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 56
+      },
+      {
+        "stage": "workflows",
+        "ok": true,
+        "summary": "workflowsCreated=0",
+        "artifacts": [
+          {
+            "key": "workflowNames",
+            "count": 0
+          },
+          {
+            "key": "workflowRefsByRef",
+            "count": 0
+          }
+        ],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 2
+      },
+      {
+        "stage": "flush.afterWorkflows",
+        "ok": true,
+        "summary": "flush.afterWorkflows completed",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 31
+      },
+      {
+        "stage": "pageCapabilities",
+        "ok": true,
+        "summary": "pageCapabilities completed",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 0
+      },
+      {
+        "stage": "webClientCompatibility",
+        "ok": true,
+        "summary": "webClientCompatibility completed",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 2
+      },
+      {
+        "stage": "flush.afterWebClientCompatibility",
+        "ok": true,
+        "summary": "flush.afterWebClientCompatibility completed",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 26
+      },
+      {
+        "stage": "pages",
+        "ok": true,
+        "summary": "pages completed",
+        "artifacts": [
+          {
+            "key": "pageNames",
+            "count": 57
+          }
+        ],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 424
+      },
+      {
+        "stage": "navigationUI",
+        "ok": true,
+        "summary": "navigationUI completed",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 40
+      },
+      {
+        "stage": "homePage",
+        "ok": true,
+        "summary": "updatedProfiles=1",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 3
+      },
+      {
+        "stage": "flush.final",
+        "ok": true,
+        "summary": "flush.final completed",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 1682
+      },
+      {
+        "stage": "verification",
+        "ok": true,
+        "summary": "ok=true",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 81
+      },
+      {
+        "stage": "capabilities",
+        "ok": true,
+        "summary": "capabilities completed",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 771
+      },
+      {
+        "stage": "commit",
+        "ok": true,
+        "summary": "commit completed",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 10490
+      }
+    ],
+    "createdApp": {
+      "appId": "fa5905f7-5369-460f-81b1-738ad9ca1ec6",
+      "name": "rerun-sports-run05",
+      "repositoryType": "git"
+    },
+    "beforeCounts": {
+      "pagesInModule": 1,
+      "entitiesInModule": 0,
+      "microflowsInModule": 1,
+      "nanoflowsInModule": 0,
+      "workflowsInModule": 0
+    },
+    "domainModel": {
+      "moduleName": "MyFirstModule",
+      "entitiesCreated": 23,
+      "associationsCreated": 12,
+      "enumerationsCreated": 0
+    },
+    "security": {
+      "moduleName": "MyFirstModule",
+      "securityLevel": "CheckFormsAndMicroflows",
+      "moduleRolesCreated": 7,
+      "userRolesCreated": 7,
+      "demoUsersRequested": 0,
+      "demoUsersCreated": 0,
+      "demoUsersApplied": 0,
+      "demoUserHandling": "notRequested",
+      "skippedDemoUsers": [],
+      "moduleRoleNames": [
+        "Admin",
+        "AppAdministrator",
+        "AppUser",
+        "Customer",
+        "NewCustomer",
+        "ReturningCustomer",
+        "Trainer",
+        "User"
+      ],
+      "userRoleNames": [
+        "Admin",
+        "Administrator",
+        "AppAdministrator",
+        "AppUser",
+        "Customer",
+        "NewCustomer",
+        "ReturningCustomer",
+        "Trainer",
+        "User"
+      ],
+      "demoUserNames": [
+        "demo_administrator",
+        "demo_user"
+      ]
+    },
+    "microflows": {
+      "moduleName": "MyFirstModule",
+      "microflowsCreated": 3,
+      "nanoflowsCreated": 1,
+      "microflowNames": [
+        "CreateSubscription",
+        "UpdateNoShowCount",
+        "SendNotification"
+      ],
+      "nanoflowNames": [
+        "CheckSubscriptionStatus"
+      ],
+      "microflowRefsByRef": {},
+      "nanoflowRefsByRef": {}
+    },
+    "workflows": {
+      "moduleName": "MyFirstModule",
+      "workflowsCreated": 0,
+      "workflowNames": [],
+      "workflowRefsByRef": {}
+    },
+    "pageCapabilities": null,
+    "webClientCompatibility": {
+      "lookupRequested": true,
+      "classicGridRequested": false,
+      "updated": true,
+      "useOptimizedClient": "No",
+      "previousUseOptimizedClient": "Yes"
+    },
+    "pages": {
+      "moduleName": "MyFirstModule",
+      "layoutQualifiedName": "Atlas_Core.Atlas_Default",
+      "layoutParameterQname": "Atlas_Core.Atlas_Default.Main",
+      "pageNames": [
+        "Home",
+        "Lesson_Dashboard",
+        "Lesson_Overview",
+        "Lesson_NewEdit",
+        "Customer_Overview",
+        "Customer_NewEdit",
+        "Room_Overview",
+        "Room_NewEdit",
+        "NewCustomer_Overview",
+        "NewCustomer_NewEdit",
+        "ReturningCustomer_Overview",
+        "ReturningCustomer_NewEdit",
+        "Trainer_Overview",
+        "Trainer_NewEdit",
+        "AppUser_Overview",
+        "AppUser_NewEdit",
+        "customerOverview",
+        "customerDetail",
+        "customerNewEdit",
+        "membershipTypeOverview",
+        "membershipTypeDetail",
+        "subscriptionOverview",
+        "subscriptionDetail",
+        "lessonOverview",
+        "lessonDetail",
+        "MembershipType_Overview",
+        "MembershipType_NewEdit",
+        "Subscription_Overview",
+        "Subscription_NewEdit",
+        "NotificationPreference_Overview",
+        "NotificationPreference_NewEdit",
+        "PersonalInformation_Overview",
+        "PersonalInformation_NewEdit",
+        "BankingDetails_Overview",
+        "BankingDetails_NewEdit",
+        "FamilyMembership_Overview",
+        "FamilyMembership_NewEdit",
+        "FamilyMembershipMember_Overview",
+        "FamilyMembershipMember_NewEdit",
+        "BookingStatus_Overview",
+        "BookingStatus_NewEdit",
+        "Cancellation_Overview",
+        "Cancellation_NewEdit",
+        "NoShow_Overview",
+        "NoShow_NewEdit",
+        "FineHistory_Overview",
+        "FineHistory_NewEdit",
+        "Notification_Overview",
+        "Notification_NewEdit",
+        "CheckInHistory_Overview",
+        "CheckInHistory_NewEdit",
+        "SubscriptionStatus_Overview",
+        "SubscriptionStatus_NewEdit",
+        "Admin_Overview",
+        "Admin_NewEdit",
+        "AppAdministrator_Overview",
+        "AppAdministrator_NewEdit"
+      ],
+      "dg2Cleanup": {
+        "enabled": true,
+        "targetedPageNames": [],
+        "deletedPageNames": [],
+        "failed": []
+      },
+      "dataGrid2": {
+        "enabled": false,
+        "widgetId": "",
+        "resolvedFrom": "",
+        "useFallbackSchema": false,
+        "probeVariant": null,
+        "configuredWidgets": 0,
+        "attempts": []
+      }
+    },
+    "dg2Cleanup": {
+      "enabled": true,
+      "targetedPageNames": [],
+      "deletedPageNames": [],
+      "failed": []
+    },
+    "navigationUI": {
+      "requested": true,
+      "homeButtonsAdded": 0,
+      "navItemsAdded": 6
+    },
+    "homePage": {
+      "requested": true,
+      "updatedProfiles": 1,
+      "targetPageQualifiedName": "MyFirstModule.Home"
+    },
+    "afterCounts": {
+      "pagesInModule": 58,
+      "entitiesInModule": 23,
+      "microflowsInModule": 4,
+      "nanoflowsInModule": 1,
+      "workflowsInModule": 0
+    },
+    "beforeRefs": {
+      "pages": [
+        {
+          "name": "Home_Web",
+          "id": "5c6805fc-cadf-4d72-a5ef-f25da7cf4c97"
+        }
+      ],
+      "entities": [],
+      "microflows": [
+        {
+          "name": "MyFirstLogic",
+          "id": "4a8475b3-14cb-4100-8963-58f2fd3a0be8"
+        }
+      ],
+      "nanoflows": [],
+      "workflows": []
+    },
+    "afterRefs": {
+      "pages": [
+        {
+          "name": "Home_Web",
+          "id": "5c6805fc-cadf-4d72-a5ef-f25da7cf4c97"
+        },
+        {
+          "name": "Home",
+          "id": "cba042ff-cffa-48e4-8554-c43f2a231d87"
+        },
+        {
+          "name": "Lesson_Dashboard",
+          "id": "0c89ab09-13e2-49e5-b253-09dec6de9bbd"
+        },
+        {
+          "name": "Lesson_Overview",
+          "id": "fb143483-39ff-496b-bf68-f1e4cbae3a07"
+        },
+        {
+          "name": "Lesson_NewEdit",
+          "id": "a087d5cd-9e22-4843-9405-038cc93546af"
+        },
+        {
+          "name": "Customer_Overview",
+          "id": "43a3362b-3440-47c6-97c2-122a200b764a"
+        },
+        {
+          "name": "Customer_NewEdit",
+          "id": "e3aab457-d96e-4e39-995e-9c0626253627"
+        },
+        {
+          "name": "Room_Overview",
+          "id": "c55711ed-986c-4e08-8cc4-f0699b57baf3"
+        },
+        {
+          "name": "Room_NewEdit",
+          "id": "14fde78c-659e-49b4-b75b-7d4e325cd654"
+        },
+        {
+          "name": "NewCustomer_Overview",
+          "id": "3241a19b-146a-460a-a1bf-f909df6f4837"
+        },
+        {
+          "name": "NewCustomer_NewEdit",
+          "id": "d7ac824d-6800-4027-a929-be6dec9781b3"
+        },
+        {
+          "name": "ReturningCustomer_Overview",
+          "id": "b8c1bfba-5251-4c9f-8e6d-884f5968b398"
+        },
+        {
+          "name": "ReturningCustomer_NewEdit",
+          "id": "88e58b16-78c1-4b64-a3a2-4bcd3c421b87"
+        },
+        {
+          "name": "Trainer_Overview",
+          "id": "b2512fd7-1918-4700-9498-91fb1dab6e71"
+        },
+        {
+          "name": "Trainer_NewEdit",
+          "id": "9ff04cf5-c317-45ce-b511-62a5a70c76b2"
+        },
+        {
+          "name": "AppUser_Overview",
+          "id": "c1151bc1-f8b4-4c9f-a3f1-9209ca075a08"
+        },
+        {
+          "name": "AppUser_NewEdit",
+          "id": "69e8ebeb-e375-497f-a81e-183062b31eaa"
+        },
+        {
+          "name": "customerOverview",
+          "id": "d2abf887-e909-4cb0-943f-514777ccef47"
+        },
+        {
+          "name": "customerDetail",
+          "id": "8b4c8068-9e48-454a-a87f-f6b19e37a270"
+        },
+        {
+          "name": "customerNewEdit",
+          "id": "80f862d9-fbd3-4241-9135-5325433f45d1"
+        },
+        {
+          "name": "membershipTypeOverview",
+          "id": "2766125d-05e5-46aa-bf8f-c4277613cb9d"
+        },
+        {
+          "name": "membershipTypeDetail",
+          "id": "cae489bf-56e4-4e8d-8b49-e06ebc28ee18"
+        },
+        {
+          "name": "subscriptionOverview",
+          "id": "90b76fc5-fa98-4f09-a33f-ff234ae1a704"
+        },
+        {
+          "name": "subscriptionDetail",
+          "id": "a99b161b-fddc-4940-827d-a898f9f32bce"
+        },
+        {
+          "name": "lessonOverview",
+          "id": "1d19c944-d293-453f-8082-ba8df739774c"
+        },
+        {
+          "name": "lessonDetail",
+          "id": "09780f9d-3a33-42d7-a84b-6c53093be2fa"
+        },
+        {
+          "name": "MembershipType_Overview",
+          "id": "5c45bd6a-dd89-4fae-8ad0-54c017e39237"
+        },
+        {
+          "name": "MembershipType_NewEdit",
+          "id": "37314ae7-d802-489d-b0c4-92bce78bd244"
+        },
+        {
+          "name": "Subscription_Overview",
+          "id": "7f2a262f-1ec4-45f0-8889-6f1a5aacf0b8"
+        },
+        {
+          "name": "Subscription_NewEdit",
+          "id": "3725e2d1-d440-476e-802c-e8a05fe6f3d3"
+        },
+        {
+          "name": "NotificationPreference_Overview",
+          "id": "dc83bd29-eb68-4a33-82b7-97358497df67"
+        },
+        {
+          "name": "NotificationPreference_NewEdit",
+          "id": "83712477-6b78-4f8e-bb5a-c60769532609"
+        },
+        {
+          "name": "PersonalInformation_Overview",
+          "id": "9445173b-8a1c-4cf6-b229-bc1df4d16e25"
+        },
+        {
+          "name": "PersonalInformation_NewEdit",
+          "id": "eb51ac5f-b861-4857-b072-4697a12cd626"
+        },
+        {
+          "name": "BankingDetails_Overview",
+          "id": "9b5c3e46-f397-4245-8d37-efaeaa8dd6c2"
+        },
+        {
+          "name": "BankingDetails_NewEdit",
+          "id": "6f08f9c9-5bba-4242-9d77-a9009c0e447c"
+        },
+        {
+          "name": "FamilyMembership_Overview",
+          "id": "ff82a6e5-257c-4946-8573-a0b021879cad"
+        },
+        {
+          "name": "FamilyMembership_NewEdit",
+          "id": "d7f42947-05ac-4218-a4db-ca956870403d"
+        },
+        {
+          "name": "FamilyMembershipMember_Overview",
+          "id": "fcd7ff33-744e-4b54-bf2d-30f568a058dd"
+        },
+        {
+          "name": "FamilyMembershipMember_NewEdit",
+          "id": "475b8dc9-315d-4322-87fd-20d5a021b0bc"
+        },
+        {
+          "name": "BookingStatus_Overview",
+          "id": "8fe62f98-9c39-46a7-8604-adcbc8b9b51e"
+        },
+        {
+          "name": "BookingStatus_NewEdit",
+          "id": "97e3f85e-92bc-4b09-ac5e-90fa29d184f6"
+        },
+        {
+          "name": "Cancellation_Overview",
+          "id": "fd31dc4f-6968-4000-8cf0-740bff7587f8"
+        },
+        {
+          "name": "Cancellation_NewEdit",
+          "id": "91345126-6f0e-4748-b6d3-3b3763eba558"
+        },
+        {
+          "name": "NoShow_Overview",
+          "id": "e370bb35-a672-41b8-9a51-51c135e0a619"
+        },
+        {
+          "name": "NoShow_NewEdit",
+          "id": "a1678ad6-c53f-4209-9bf9-a255ad837ce3"
+        },
+        {
+          "name": "FineHistory_Overview",
+          "id": "eadd3ecd-97d5-445a-85a0-9fdc308e9bfb"
+        },
+        {
+          "name": "FineHistory_NewEdit",
+          "id": "aac7f405-6a88-4ca2-874e-494483003e7f"
+        },
+        {
+          "name": "Notification_Overview",
+          "id": "e9d70cbe-ea74-4b3a-8b6b-6a6be195a22d"
+        },
+        {
+          "name": "Notification_NewEdit",
+          "id": "812555dc-9e90-4697-abcd-440ad4206d7c"
+        },
+        {
+          "name": "CheckInHistory_Overview",
+          "id": "b52ce44a-f7aa-43a0-8441-58be446dc7c0"
+        },
+        {
+          "name": "CheckInHistory_NewEdit",
+          "id": "dadc3ab7-0408-4cf9-a369-53c337fe397a"
+        },
+        {
+          "name": "SubscriptionStatus_Overview",
+          "id": "75b4f48a-2259-432d-8b75-66fc4a9de186"
+        },
+        {
+          "name": "SubscriptionStatus_NewEdit",
+          "id": "6b8b0f0f-2578-4f68-8371-7b8c68364fe1"
+        },
+        {
+          "name": "Admin_Overview",
+          "id": "76630c72-badd-407d-9e27-d2c625d82388"
+        },
+        {
+          "name": "Admin_NewEdit",
+          "id": "e1f6c96b-3edd-418a-9bea-73159d9e9ccf"
+        },
+        {
+          "name": "AppAdministrator_Overview",
+          "id": "a78142ca-4eb0-4e11-879f-92684dab1807"
+        },
+        {
+          "name": "AppAdministrator_NewEdit",
+          "id": "726968c2-5abf-4506-8472-1437aad4027a"
+        }
+      ],
+      "entities": [
+        {
+          "name": "Customer",
+          "id": "1ffa7198-2cbb-4477-a520-2cde02167af6"
+        },
+        {
+          "name": "MembershipType",
+          "id": "c57215ed-198a-4c95-8bb5-51fbb2625825"
+        },
+        {
+          "name": "Subscription",
+          "id": "442026e2-39dd-4be7-b422-03e9a6119f9f"
+        },
+        {
+          "name": "Lesson",
+          "id": "2e9783fd-5566-48f3-8de4-d0d87fc0515d"
+        },
+        {
+          "name": "NotificationPreference",
+          "id": "673a703a-6c2b-43fb-b91d-98b2cf89091b"
+        },
+        {
+          "name": "Trainer",
+          "id": "01e055e0-22ba-434d-92f1-8e1f64824853"
+        },
+        {
+          "name": "Room",
+          "id": "a3485629-94ef-417c-8005-81a2aa3ba203"
+        },
+        {
+          "name": "NewCustomer",
+          "id": "526834d4-0971-4406-9d37-07b90ae56f1e"
+        },
+        {
+          "name": "ReturningCustomer",
+          "id": "ab2daf44-f568-45b2-b7c8-272b704c02f5"
+        },
+        {
+          "name": "AppUser",
+          "id": "7a6ef617-72fd-46a0-b876-7b4e09ad53c0"
+        },
+        {
+          "name": "PersonalInformation",
+          "id": "53393fe0-ab5e-4be5-a098-08fe8ea2274f"
+        },
+        {
+          "name": "BankingDetails",
+          "id": "db1caa47-c03b-4ce3-bc8c-df5f869919d4"
+        },
+        {
+          "name": "FamilyMembership",
+          "id": "6766a9b2-1b59-4e82-b897-8a90478dde50"
+        },
+        {
+          "name": "FamilyMembershipMember",
+          "id": "24539205-10d3-4714-b958-db7a75a7f825"
+        },
+        {
+          "name": "BookingStatus",
+          "id": "e724f147-922b-424a-b40f-19b5ea5a8ac5"
+        },
+        {
+          "name": "Cancellation",
+          "id": "20646dd5-b01d-4bcb-8845-2986db642cb6"
+        },
+        {
+          "name": "NoShow",
+          "id": "3fdff17b-0feb-488e-9311-ded8d53f12d4"
+        },
+        {
+          "name": "FineHistory",
+          "id": "6512512d-a44c-406c-9f32-769ba6569db6"
+        },
+        {
+          "name": "Notification",
+          "id": "0f9ed63b-a62c-4db6-a2d6-af0628b72559"
+        },
+        {
+          "name": "CheckInHistory",
+          "id": "d928a5b1-a62b-4010-a169-b94ce822b2a3"
+        },
+        {
+          "name": "SubscriptionStatus",
+          "id": "fc0a8ff2-5e24-43d2-b5c8-e79e9a7a4222"
+        },
+        {
+          "name": "Admin",
+          "id": "7380855a-47fd-4ec0-bdc6-8ac013df3a67"
+        },
+        {
+          "name": "AppAdministrator",
+          "id": "48d0a5c8-c163-48dc-82a6-18ae3c8f869e"
+        }
+      ],
+      "microflows": [
+        {
+          "name": "MyFirstLogic",
+          "id": "4a8475b3-14cb-4100-8963-58f2fd3a0be8"
+        },
+        {
+          "name": "CreateSubscription",
+          "id": "3c13ac40-6246-47dc-a6a7-f832ae08bf04"
+        },
+        {
+          "name": "UpdateNoShowCount",
+          "id": "b486a3ab-63ff-4e68-b8e0-2c7f043a64f7"
+        },
+        {
+          "name": "SendNotification",
+          "id": "ae710357-9bbc-406f-92ef-a8a13c197664"
+        }
+      ],
+      "nanoflows": [
+        {
+          "name": "CheckSubscriptionStatus",
+          "id": "d0f8ca23-8d2a-42a1-9801-88a352f2d173"
+        }
+      ],
+      "workflows": []
+    },
+    "verification": {
+      "missing": {
+        "pages": [],
+        "entities": [],
+        "microflows": [],
+        "nanoflows": [],
+        "workflows": []
+      },
+      "ok": true,
+      "artifacts": {
+        "ok": true,
+        "missing": {
+          "moduleRoles": [],
+          "userRoles": [],
+          "demoUsers": [],
+          "pageVisibility": [],
+          "homePageButtons": [],
+          "menuItems": [],
+          "widgets": []
+        }
+      },
+      "semantic": {
+        "enabled": false,
+        "ok": true,
+        "errors": []
+      }
+    },
+    "capabilities": {
+      "modules": [
+        "Administration",
+        "Atlas_Core",
+        "Atlas_Web_Content",
+        "DataWidgets",
+        "FeedbackModule",
+        "MyFirstModule",
+        "NanoflowCommons",
+        "WebActions"
+      ],
+      "widgetIds": [],
+      "widgetFamilies": [
+        "datawidgets_module"
+      ]
+    },
+    "commitMessage": "Rerun practical performance builder-stage run: sports run-05",
+    "ok": true
+  }
+}

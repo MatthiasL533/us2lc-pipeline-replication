@@ -1,0 +1,922 @@
+{
+  "dataset": "matching",
+  "run": "run-05",
+  "planPath": "/Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/artifacts/practical-performance/20260606-091359/stability/matching/run-05/plan.json",
+  "ok": true,
+  "startedAt": "2026-06-07T20:57:49.353Z",
+  "tempPlanPath": "/Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/artifacts/practical-performance/20260606-091359/builder-stage-runs/plans/matching/run-05/plan.json",
+  "totalMs": 24393,
+  "result": {
+    "appId": "b41cfac6-c0b5-4a22-8ed9-8888027694af",
+    "appCreated": true,
+    "seedAppId": null,
+    "branch": "main",
+    "committed": true,
+    "commitRequested": true,
+    "workingCopyId": "168ca62e-1995-4d47-bbc7-ef5774c0d7b5",
+    "personas": {
+      "enabled": false,
+      "generatedPageNames": [],
+      "personaNames": []
+    },
+    "stages": [
+      {
+        "stage": "domainModel",
+        "ok": true,
+        "summary": "entitiesCreated=31, associationsCreated=11, enumerationsCreated=1",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 63
+      },
+      {
+        "stage": "flush.afterDomainModel",
+        "ok": true,
+        "summary": "flush.afterDomainModel completed",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 159
+      },
+      {
+        "stage": "security",
+        "ok": true,
+        "summary": "moduleRolesCreated=3, userRolesCreated=3, demoUsersCreated=0",
+        "artifacts": [
+          {
+            "key": "moduleRoleNames",
+            "count": 4
+          },
+          {
+            "key": "userRoleNames",
+            "count": 5
+          },
+          {
+            "key": "demoUserNames",
+            "count": 2
+          }
+        ],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 177
+      },
+      {
+        "stage": "flush.afterSecurity",
+        "ok": true,
+        "summary": "flush.afterSecurity completed",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 154
+      },
+      {
+        "stage": "microflowsNanoflows",
+        "ok": true,
+        "summary": "microflowsCreated=3, nanoflowsCreated=1",
+        "artifacts": [
+          {
+            "key": "microflowNames",
+            "count": 3
+          },
+          {
+            "key": "nanoflowNames",
+            "count": 1
+          },
+          {
+            "key": "microflowRefsByRef",
+            "count": 0
+          },
+          {
+            "key": "nanoflowRefsByRef",
+            "count": 0
+          }
+        ],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 13
+      },
+      {
+        "stage": "flush.afterMicroflows",
+        "ok": true,
+        "summary": "flush.afterMicroflows completed",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 52
+      },
+      {
+        "stage": "workflows",
+        "ok": true,
+        "summary": "workflowsCreated=0",
+        "artifacts": [
+          {
+            "key": "workflowNames",
+            "count": 0
+          },
+          {
+            "key": "workflowRefsByRef",
+            "count": 0
+          }
+        ],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 4
+      },
+      {
+        "stage": "flush.afterWorkflows",
+        "ok": true,
+        "summary": "flush.afterWorkflows completed",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 30
+      },
+      {
+        "stage": "pageCapabilities",
+        "ok": true,
+        "summary": "pageCapabilities completed",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 1
+      },
+      {
+        "stage": "webClientCompatibility",
+        "ok": true,
+        "summary": "webClientCompatibility completed",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 0
+      },
+      {
+        "stage": "flush.afterWebClientCompatibility",
+        "ok": true,
+        "summary": "flush.afterWebClientCompatibility completed",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 124
+      },
+      {
+        "stage": "pages",
+        "ok": true,
+        "summary": "pages completed",
+        "artifacts": [
+          {
+            "key": "pageNames",
+            "count": 70
+          }
+        ],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 552
+      },
+      {
+        "stage": "navigationUI",
+        "ok": true,
+        "summary": "navigationUI completed",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 43
+      },
+      {
+        "stage": "homePage",
+        "ok": true,
+        "summary": "updatedProfiles=1",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 3
+      },
+      {
+        "stage": "flush.final",
+        "ok": true,
+        "summary": "flush.final completed",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 2023
+      },
+      {
+        "stage": "verification",
+        "ok": true,
+        "summary": "ok=true",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 101
+      },
+      {
+        "stage": "capabilities",
+        "ok": true,
+        "summary": "capabilities completed",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 798
+      },
+      {
+        "stage": "commit",
+        "ok": true,
+        "summary": "commit completed",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 11982
+      }
+    ],
+    "createdApp": {
+      "appId": "b41cfac6-c0b5-4a22-8ed9-8888027694af",
+      "name": "rerun-matching-run05",
+      "repositoryType": "git"
+    },
+    "beforeCounts": {
+      "pagesInModule": 1,
+      "entitiesInModule": 0,
+      "microflowsInModule": 1,
+      "nanoflowsInModule": 0,
+      "workflowsInModule": 0
+    },
+    "domainModel": {
+      "moduleName": "MyFirstModule",
+      "entitiesCreated": 31,
+      "associationsCreated": 11,
+      "enumerationsCreated": 1
+    },
+    "security": {
+      "moduleName": "MyFirstModule",
+      "securityLevel": "CheckFormsAndMicroflows",
+      "moduleRolesCreated": 3,
+      "userRolesCreated": 3,
+      "demoUsersRequested": 0,
+      "demoUsersCreated": 0,
+      "demoUsersApplied": 0,
+      "demoUserHandling": "notRequested",
+      "skippedDemoUsers": [],
+      "moduleRoleNames": [
+        "Manager",
+        "Student",
+        "Tutor",
+        "User"
+      ],
+      "userRoleNames": [
+        "Administrator",
+        "Manager",
+        "Student",
+        "Tutor",
+        "User"
+      ],
+      "demoUserNames": [
+        "demo_administrator",
+        "demo_user"
+      ]
+    },
+    "microflows": {
+      "moduleName": "MyFirstModule",
+      "microflowsCreated": 3,
+      "nanoflowsCreated": 1,
+      "microflowNames": [
+        "MatchStudentWithTutor",
+        "SendSessionNotificationToStudent",
+        "UpdateTutorNoShowRate"
+      ],
+      "nanoflowNames": [
+        "GetTutorAvailability"
+      ],
+      "microflowRefsByRef": {},
+      "nanoflowRefsByRef": {}
+    },
+    "workflows": {
+      "moduleName": "MyFirstModule",
+      "workflowsCreated": 0,
+      "workflowNames": [],
+      "workflowRefsByRef": {}
+    },
+    "pageCapabilities": null,
+    "webClientCompatibility": {
+      "lookupRequested": true,
+      "classicGridRequested": false,
+      "updated": true,
+      "useOptimizedClient": "No",
+      "previousUseOptimizedClient": "Yes"
+    },
+    "pages": {
+      "moduleName": "MyFirstModule",
+      "layoutQualifiedName": "Atlas_Core.Atlas_Default",
+      "layoutParameterQname": "Atlas_Core.Atlas_Default.Main",
+      "pageNames": [
+        "Home",
+        "Session_Dashboard",
+        "Session_Overview",
+        "Session_NewEdit",
+        "Subject_Overview",
+        "Subject_NewEdit",
+        "Availability_Overview",
+        "Availability_NewEdit",
+        "Manager_Overview",
+        "Manager_NewEdit",
+        "Student_Overview",
+        "Student_NewEdit",
+        "Tutor_Overview",
+        "Tutor_NewEdit",
+        "SessionOverview",
+        "TutorOverview",
+        "StudentOverview",
+        "SessionNewEdit",
+        "TutorNewEdit",
+        "StudentNewEdit",
+        "SessionType_Overview",
+        "SessionType_NewEdit",
+        "Match_Overview",
+        "Match_NewEdit",
+        "Rating_Overview",
+        "Rating_NewEdit",
+        "Payment_Overview",
+        "Payment_NewEdit",
+        "Notification_Overview",
+        "Notification_NewEdit",
+        "PaymentMethod_Overview",
+        "PaymentMethod_NewEdit",
+        "SessionOccurrence_Overview",
+        "SessionOccurrence_NewEdit",
+        "CV_Overview",
+        "CV_NewEdit",
+        "CancellationReason_Overview",
+        "CancellationReason_NewEdit",
+        "MatchingAlgorithm_Overview",
+        "MatchingAlgorithm_NewEdit",
+        "SearchInterval_Overview",
+        "SearchInterval_NewEdit",
+        "Location_Overview",
+        "Location_NewEdit",
+        "ChatFunction_Overview",
+        "ChatFunction_NewEdit",
+        "Cancellation_Overview",
+        "Cancellation_NewEdit",
+        "Feedback_Overview",
+        "Feedback_NewEdit",
+        "NoShowRate_Overview",
+        "NoShowRate_NewEdit",
+        "LateCount_Overview",
+        "LateCount_NewEdit",
+        "RegularStudent_Overview",
+        "RegularStudent_NewEdit",
+        "AvailableData_Overview",
+        "AvailableData_NewEdit",
+        "Integration_Overview",
+        "Integration_NewEdit",
+        "AutomatedTransfer_Overview",
+        "AutomatedTransfer_NewEdit",
+        "NoShow_Overview",
+        "NoShow_NewEdit",
+        "Breakdown_Overview",
+        "Breakdown_NewEdit",
+        "Neighborhood_Overview",
+        "Neighborhood_NewEdit",
+        "Advertisement_Overview",
+        "Advertisement_NewEdit"
+      ],
+      "dg2Cleanup": {
+        "enabled": true,
+        "targetedPageNames": [],
+        "deletedPageNames": [],
+        "failed": []
+      },
+      "dataGrid2": {
+        "enabled": false,
+        "widgetId": "",
+        "resolvedFrom": "",
+        "useFallbackSchema": false,
+        "probeVariant": null,
+        "configuredWidgets": 0,
+        "attempts": []
+      }
+    },
+    "dg2Cleanup": {
+      "enabled": true,
+      "targetedPageNames": [],
+      "deletedPageNames": [],
+      "failed": []
+    },
+    "navigationUI": {
+      "requested": true,
+      "homeButtonsAdded": 0,
+      "navItemsAdded": 6
+    },
+    "homePage": {
+      "requested": true,
+      "updatedProfiles": 1,
+      "targetPageQualifiedName": "MyFirstModule.Home"
+    },
+    "afterCounts": {
+      "pagesInModule": 71,
+      "entitiesInModule": 31,
+      "microflowsInModule": 4,
+      "nanoflowsInModule": 1,
+      "workflowsInModule": 0
+    },
+    "beforeRefs": {
+      "pages": [
+        {
+          "name": "Home_Web",
+          "id": "5c6805fc-cadf-4d72-a5ef-f25da7cf4c97"
+        }
+      ],
+      "entities": [],
+      "microflows": [
+        {
+          "name": "MyFirstLogic",
+          "id": "4a8475b3-14cb-4100-8963-58f2fd3a0be8"
+        }
+      ],
+      "nanoflows": [],
+      "workflows": []
+    },
+    "afterRefs": {
+      "pages": [
+        {
+          "name": "Home_Web",
+          "id": "5c6805fc-cadf-4d72-a5ef-f25da7cf4c97"
+        },
+        {
+          "name": "Home",
+          "id": "a367c73c-e894-4f1d-ac2b-7ddc44a718c1"
+        },
+        {
+          "name": "Session_Dashboard",
+          "id": "28e1f8ef-239a-4fbe-ae80-69976ae12a46"
+        },
+        {
+          "name": "Session_Overview",
+          "id": "3e1e42b7-33a8-4ea0-940c-bc488a1a9320"
+        },
+        {
+          "name": "Session_NewEdit",
+          "id": "b9366003-9611-4904-bc39-0dc18a53d9d3"
+        },
+        {
+          "name": "Subject_Overview",
+          "id": "49ee42e4-a647-4c1d-91d4-ece563f13437"
+        },
+        {
+          "name": "Subject_NewEdit",
+          "id": "1a28c3f6-f81e-4662-b935-706a16fdea1f"
+        },
+        {
+          "name": "Availability_Overview",
+          "id": "ae8c09fe-b312-4744-a962-98bfdd147ca3"
+        },
+        {
+          "name": "Availability_NewEdit",
+          "id": "c50f5c0b-d9a6-4450-a1b7-af73a3847147"
+        },
+        {
+          "name": "Manager_Overview",
+          "id": "3f82f40e-c4b5-4c67-9851-12e1ef588532"
+        },
+        {
+          "name": "Manager_NewEdit",
+          "id": "a59aab7c-d6f7-4954-a923-6743a6cd191e"
+        },
+        {
+          "name": "Student_Overview",
+          "id": "ca8cba47-d152-4eea-b1f8-fcd7a718b321"
+        },
+        {
+          "name": "Student_NewEdit",
+          "id": "3b37e7db-cc0f-485e-af83-5702ae299593"
+        },
+        {
+          "name": "Tutor_Overview",
+          "id": "6912a0c2-9ced-4b8b-a3fa-1dbeda32633f"
+        },
+        {
+          "name": "Tutor_NewEdit",
+          "id": "e25813d7-51b4-448d-92ba-32709f1c30dc"
+        },
+        {
+          "name": "SessionOverview",
+          "id": "701e19b9-90f9-4e5a-b666-b479ae270696"
+        },
+        {
+          "name": "TutorOverview",
+          "id": "24ba76c5-3a38-4364-81b2-4133720de8b8"
+        },
+        {
+          "name": "StudentOverview",
+          "id": "01fc3290-0c40-49c1-adea-7ca9e8491967"
+        },
+        {
+          "name": "SessionNewEdit",
+          "id": "2541b106-af60-480c-9c35-d6a1c191b161"
+        },
+        {
+          "name": "TutorNewEdit",
+          "id": "cfb7e4ab-941e-49fb-8384-cebc28e49676"
+        },
+        {
+          "name": "StudentNewEdit",
+          "id": "0b580312-9c7f-4bc3-b317-80f5d4001359"
+        },
+        {
+          "name": "SessionType_Overview",
+          "id": "cf23aed2-8e10-4e19-af13-a3d7ab45aa93"
+        },
+        {
+          "name": "SessionType_NewEdit",
+          "id": "22dbb3ab-3a7c-4649-9157-519381c1b84e"
+        },
+        {
+          "name": "Match_Overview",
+          "id": "7151f9cd-c2f0-4583-9661-987f5cd857e9"
+        },
+        {
+          "name": "Match_NewEdit",
+          "id": "63e63706-202e-4d7d-b5a0-27114a5cd8b7"
+        },
+        {
+          "name": "Rating_Overview",
+          "id": "8b5677eb-3c34-4abb-867d-b7fb62459963"
+        },
+        {
+          "name": "Rating_NewEdit",
+          "id": "20dc20a7-b2d1-4c6d-9f53-4ee8ed05284a"
+        },
+        {
+          "name": "Payment_Overview",
+          "id": "8650293e-ce28-49a2-96cd-5124e042c42c"
+        },
+        {
+          "name": "Payment_NewEdit",
+          "id": "de983a93-6a68-475c-bf24-b6ead070e045"
+        },
+        {
+          "name": "Notification_Overview",
+          "id": "0d447a50-a0a7-4c30-8417-496915c623f9"
+        },
+        {
+          "name": "Notification_NewEdit",
+          "id": "0ec3a67b-d932-48f8-aeb3-0ac7afb84df6"
+        },
+        {
+          "name": "PaymentMethod_Overview",
+          "id": "acf848eb-abc3-40a4-a198-9a577dc80e2b"
+        },
+        {
+          "name": "PaymentMethod_NewEdit",
+          "id": "ab20f30c-961b-4f7c-9bb4-83281db46cc8"
+        },
+        {
+          "name": "SessionOccurrence_Overview",
+          "id": "2c93811d-4ca2-4eb4-872e-8b390f5565f1"
+        },
+        {
+          "name": "SessionOccurrence_NewEdit",
+          "id": "a200987f-81a0-4963-93d9-73e529a45832"
+        },
+        {
+          "name": "CV_Overview",
+          "id": "1efbfd30-7bde-407b-b0be-4c32de70012d"
+        },
+        {
+          "name": "CV_NewEdit",
+          "id": "abdff04e-b69d-4850-bb1e-2648d6d56a66"
+        },
+        {
+          "name": "CancellationReason_Overview",
+          "id": "0ad9e150-7130-49e2-9644-3a36a0a8bb4c"
+        },
+        {
+          "name": "CancellationReason_NewEdit",
+          "id": "33153541-dac4-45c6-a076-1f75530ca997"
+        },
+        {
+          "name": "MatchingAlgorithm_Overview",
+          "id": "09307e2d-8bf5-49b8-b9e7-322920a2fab1"
+        },
+        {
+          "name": "MatchingAlgorithm_NewEdit",
+          "id": "8f585d8b-e1c2-40ea-9660-7b10fe2e9e9c"
+        },
+        {
+          "name": "SearchInterval_Overview",
+          "id": "46edd827-9b68-456f-a1c1-d6a68876ff34"
+        },
+        {
+          "name": "SearchInterval_NewEdit",
+          "id": "3ffd8b7e-55dd-4d07-9b50-686765c08191"
+        },
+        {
+          "name": "Location_Overview",
+          "id": "1e0471f7-602f-4cdb-b3e7-2ff9bbc79a58"
+        },
+        {
+          "name": "Location_NewEdit",
+          "id": "48e78373-51dc-4907-b94a-cf1901378615"
+        },
+        {
+          "name": "ChatFunction_Overview",
+          "id": "5eb581d5-e0a7-4a48-8172-f21e7b811c9c"
+        },
+        {
+          "name": "ChatFunction_NewEdit",
+          "id": "97ae4eb0-87fe-482a-b3c2-cfbcba4e35a7"
+        },
+        {
+          "name": "Cancellation_Overview",
+          "id": "16742ee5-fbff-415c-a5c0-586367b3cd12"
+        },
+        {
+          "name": "Cancellation_NewEdit",
+          "id": "99d26942-bf22-4a95-be1c-e10c597f3663"
+        },
+        {
+          "name": "Feedback_Overview",
+          "id": "5cd300a0-94e6-4982-951b-c02b47aa9b6c"
+        },
+        {
+          "name": "Feedback_NewEdit",
+          "id": "feadace2-4ed0-4cff-89f6-d8c45dd05747"
+        },
+        {
+          "name": "NoShowRate_Overview",
+          "id": "df95c0ea-06a2-4b8f-939e-18ced5575911"
+        },
+        {
+          "name": "NoShowRate_NewEdit",
+          "id": "08019571-ccfb-4a91-ba85-679f268b823d"
+        },
+        {
+          "name": "LateCount_Overview",
+          "id": "7b3037fd-e8fa-4b0a-8ebc-627b761600ef"
+        },
+        {
+          "name": "LateCount_NewEdit",
+          "id": "9140ac4c-40fb-44ad-8655-11b396b3af75"
+        },
+        {
+          "name": "RegularStudent_Overview",
+          "id": "9031fcdd-a439-4e80-b989-2574be1c7e94"
+        },
+        {
+          "name": "RegularStudent_NewEdit",
+          "id": "14d2422b-03d1-41af-a496-e4163af2d79c"
+        },
+        {
+          "name": "AvailableData_Overview",
+          "id": "4dd7c70e-33a0-456c-bad9-3af53cd141d6"
+        },
+        {
+          "name": "AvailableData_NewEdit",
+          "id": "cf624534-d582-4c4e-9fc3-c999b0df0897"
+        },
+        {
+          "name": "Integration_Overview",
+          "id": "8a6213d1-70cb-4fae-b730-33173e312038"
+        },
+        {
+          "name": "Integration_NewEdit",
+          "id": "1f4f9c57-9f8f-44cd-a10a-bba5460b06b6"
+        },
+        {
+          "name": "AutomatedTransfer_Overview",
+          "id": "30e974a8-3e5d-432e-9c95-c9883e6a8077"
+        },
+        {
+          "name": "AutomatedTransfer_NewEdit",
+          "id": "99ba059d-2677-4a1d-9acf-dcec4d648674"
+        },
+        {
+          "name": "NoShow_Overview",
+          "id": "d59b5249-2f2a-4238-9945-c91673721075"
+        },
+        {
+          "name": "NoShow_NewEdit",
+          "id": "0412329f-0e0b-47fe-adea-625b5cffbbd8"
+        },
+        {
+          "name": "Breakdown_Overview",
+          "id": "c7208ac5-eb0d-43ff-a415-bbdacc13dd51"
+        },
+        {
+          "name": "Breakdown_NewEdit",
+          "id": "49620049-7a69-4e65-82ef-0d6a858adae5"
+        },
+        {
+          "name": "Neighborhood_Overview",
+          "id": "60743628-2aa5-423d-8cb4-ab06dc39f3c4"
+        },
+        {
+          "name": "Neighborhood_NewEdit",
+          "id": "ff577019-bc86-49ec-8623-4bc1642fc40c"
+        },
+        {
+          "name": "Advertisement_Overview",
+          "id": "0701950a-ab3b-4be5-a913-833fea6e9436"
+        },
+        {
+          "name": "Advertisement_NewEdit",
+          "id": "b93e9c90-aceb-4772-8678-c74229a1ec53"
+        }
+      ],
+      "entities": [
+        {
+          "name": "Student",
+          "id": "7ccbd058-b22e-46c8-905e-b93f77dbddc4"
+        },
+        {
+          "name": "Tutor",
+          "id": "c4d59b6c-e7ca-4831-a229-139cb70c5d30"
+        },
+        {
+          "name": "Subject",
+          "id": "a8d64c54-93d2-4802-b545-df6796977582"
+        },
+        {
+          "name": "Session",
+          "id": "f0c7f60e-baea-4221-a7eb-391ef0c82022"
+        },
+        {
+          "name": "SessionType",
+          "id": "8ff059ad-53c2-4613-a123-cdf8501ba9d6"
+        },
+        {
+          "name": "Availability",
+          "id": "e48973d4-2268-4c1f-ba67-63c04d7908af"
+        },
+        {
+          "name": "Match",
+          "id": "31c83e0f-4901-4b37-86ce-7980c8df77fe"
+        },
+        {
+          "name": "Rating",
+          "id": "ebd7ac4c-1ff6-486f-975f-d09d24cc2da3"
+        },
+        {
+          "name": "Payment",
+          "id": "e31f1433-7d3e-4a97-845a-71853d05c6bc"
+        },
+        {
+          "name": "Manager",
+          "id": "2b658ace-4f6b-4943-9019-346465604922"
+        },
+        {
+          "name": "Notification",
+          "id": "7e8007b0-dd3c-43c2-a40e-d2ab74cf0a92"
+        },
+        {
+          "name": "PaymentMethod",
+          "id": "f5147284-e0fb-4ef8-b7a0-b0d1bdaae777"
+        },
+        {
+          "name": "SessionOccurrence",
+          "id": "b7edbef0-74ce-4058-9eb2-7d8a1b520563"
+        },
+        {
+          "name": "CV",
+          "id": "bc9069fa-1bd4-47f3-8781-468b6a5c2f71"
+        },
+        {
+          "name": "CancellationReason",
+          "id": "03717a63-56ff-4993-93e8-c2af431ae446"
+        },
+        {
+          "name": "MatchingAlgorithm",
+          "id": "8a6b11c0-417b-4098-906e-be15d4b12a72"
+        },
+        {
+          "name": "SearchInterval",
+          "id": "7ecba13f-f7d0-4201-a62e-153c19c7a7f2"
+        },
+        {
+          "name": "Location",
+          "id": "58a7e18b-4843-4caf-9f84-e90667c536e8"
+        },
+        {
+          "name": "ChatFunction",
+          "id": "46460656-7c29-467c-a2fd-0dbc6e2ce78d"
+        },
+        {
+          "name": "Cancellation",
+          "id": "91ad12e4-f437-4d24-9948-e39fa8e73e5e"
+        },
+        {
+          "name": "Feedback",
+          "id": "c5d9f4ad-d5fe-4d25-87d4-50be9898690b"
+        },
+        {
+          "name": "NoShowRate",
+          "id": "242992e1-012f-4f36-85cf-d24ba048d123"
+        },
+        {
+          "name": "LateCount",
+          "id": "45c62d5a-6674-41d1-b436-a69cbaf8490a"
+        },
+        {
+          "name": "RegularStudent",
+          "id": "35310578-2bf9-450d-b269-a35e4bb84a6f"
+        },
+        {
+          "name": "AvailableData",
+          "id": "0066eb11-a1c7-4e37-9bb4-3197ae7ab578"
+        },
+        {
+          "name": "Integration",
+          "id": "0034c0c2-66d4-4b00-8410-1b6c24dc5057"
+        },
+        {
+          "name": "AutomatedTransfer",
+          "id": "1bde2893-da60-46c7-b723-e26ad0a0b1ef"
+        },
+        {
+          "name": "NoShow",
+          "id": "576e56f0-7d89-4c2e-be9b-e8c84b4b5a13"
+        },
+        {
+          "name": "Breakdown",
+          "id": "70a58378-5d25-495b-977b-7da17cc506e1"
+        },
+        {
+          "name": "Neighborhood",
+          "id": "695c39e7-00fd-46f5-b81e-4f9ce7de88cc"
+        },
+        {
+          "name": "Advertisement",
+          "id": "1ea63b15-4a75-4362-8780-e78b0cc4a023"
+        }
+      ],
+      "microflows": [
+        {
+          "name": "MyFirstLogic",
+          "id": "4a8475b3-14cb-4100-8963-58f2fd3a0be8"
+        },
+        {
+          "name": "MatchStudentWithTutor",
+          "id": "15939227-5691-41c8-a9fc-a6ab8469dcfb"
+        },
+        {
+          "name": "SendSessionNotificationToStudent",
+          "id": "d2029051-a3c8-4f11-9f39-43e09c74ba2f"
+        },
+        {
+          "name": "UpdateTutorNoShowRate",
+          "id": "0902ee8d-cb0c-47b6-be0f-3cdd1df97995"
+        }
+      ],
+      "nanoflows": [
+        {
+          "name": "GetTutorAvailability",
+          "id": "95fb048a-5787-45cb-97af-ca277ab37dfe"
+        }
+      ],
+      "workflows": []
+    },
+    "verification": {
+      "missing": {
+        "pages": [],
+        "entities": [],
+        "microflows": [],
+        "nanoflows": [],
+        "workflows": []
+      },
+      "ok": true,
+      "artifacts": {
+        "ok": true,
+        "missing": {
+          "moduleRoles": [],
+          "userRoles": [],
+          "demoUsers": [],
+          "pageVisibility": [],
+          "homePageButtons": [],
+          "menuItems": [],
+          "widgets": []
+        }
+      },
+      "semantic": {
+        "enabled": false,
+        "ok": true,
+        "errors": []
+      }
+    },
+    "capabilities": {
+      "modules": [
+        "Administration",
+        "Atlas_Core",
+        "Atlas_Web_Content",
+        "DataWidgets",
+        "FeedbackModule",
+        "MyFirstModule",
+        "NanoflowCommons",
+        "WebActions"
+      ],
+      "widgetIds": [],
+      "widgetFamilies": [
+        "datawidgets_module"
+      ]
+    },
+    "commitMessage": "Rerun practical performance builder-stage run: matching run-05",
+    "ok": true
+  }
+}

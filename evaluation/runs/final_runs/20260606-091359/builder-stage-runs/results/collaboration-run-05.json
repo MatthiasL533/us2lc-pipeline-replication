@@ -1,0 +1,925 @@
+{
+  "dataset": "collaboration",
+  "run": "run-05",
+  "planPath": "/Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/artifacts/practical-performance/20260606-091359/stability/collaboration/run-05/plan.json",
+  "ok": true,
+  "startedAt": "2026-06-07T20:55:29.574Z",
+  "tempPlanPath": "/Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/artifacts/practical-performance/20260606-091359/builder-stage-runs/plans/collaboration/run-05/plan.json",
+  "totalMs": 21986,
+  "result": {
+    "appId": "70b4c866-7c66-4c4e-a45e-64e4164f0649",
+    "appCreated": true,
+    "seedAppId": null,
+    "branch": "main",
+    "committed": true,
+    "commitRequested": true,
+    "workingCopyId": "18a5f0d8-5c18-4a6c-abf8-db6ea4685ec5",
+    "personas": {
+      "enabled": false,
+      "generatedPageNames": [],
+      "personaNames": []
+    },
+    "stages": [
+      {
+        "stage": "domainModel",
+        "ok": true,
+        "summary": "entitiesCreated=25, associationsCreated=7, enumerationsCreated=0",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 122
+      },
+      {
+        "stage": "flush.afterDomainModel",
+        "ok": true,
+        "summary": "flush.afterDomainModel completed",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 114
+      },
+      {
+        "stage": "security",
+        "ok": true,
+        "summary": "moduleRolesCreated=4, userRolesCreated=4, demoUsersCreated=0",
+        "artifacts": [
+          {
+            "key": "moduleRoleNames",
+            "count": 5
+          },
+          {
+            "key": "userRoleNames",
+            "count": 6
+          },
+          {
+            "key": "demoUserNames",
+            "count": 2
+          }
+        ],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 191
+      },
+      {
+        "stage": "flush.afterSecurity",
+        "ok": true,
+        "summary": "flush.afterSecurity completed",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 278
+      },
+      {
+        "stage": "microflowsNanoflows",
+        "ok": true,
+        "summary": "microflowsCreated=5, nanoflowsCreated=2",
+        "artifacts": [
+          {
+            "key": "microflowNames",
+            "count": 5
+          },
+          {
+            "key": "nanoflowNames",
+            "count": 2
+          },
+          {
+            "key": "microflowRefsByRef",
+            "count": 0
+          },
+          {
+            "key": "nanoflowRefsByRef",
+            "count": 0
+          }
+        ],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 17
+      },
+      {
+        "stage": "flush.afterMicroflows",
+        "ok": true,
+        "summary": "flush.afterMicroflows completed",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 76
+      },
+      {
+        "stage": "workflows",
+        "ok": true,
+        "summary": "workflowsCreated=0",
+        "artifacts": [
+          {
+            "key": "workflowNames",
+            "count": 0
+          },
+          {
+            "key": "workflowRefsByRef",
+            "count": 0
+          }
+        ],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 4
+      },
+      {
+        "stage": "flush.afterWorkflows",
+        "ok": true,
+        "summary": "flush.afterWorkflows completed",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 31
+      },
+      {
+        "stage": "pageCapabilities",
+        "ok": true,
+        "summary": "pageCapabilities completed",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 1
+      },
+      {
+        "stage": "webClientCompatibility",
+        "ok": true,
+        "summary": "webClientCompatibility completed",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 2
+      },
+      {
+        "stage": "flush.afterWebClientCompatibility",
+        "ok": true,
+        "summary": "flush.afterWebClientCompatibility completed",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 29
+      },
+      {
+        "stage": "pages",
+        "ok": true,
+        "summary": "pages completed",
+        "artifacts": [
+          {
+            "key": "pageNames",
+            "count": 72
+          }
+        ],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 542
+      },
+      {
+        "stage": "navigationUI",
+        "ok": true,
+        "summary": "navigationUI completed",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 41
+      },
+      {
+        "stage": "homePage",
+        "ok": true,
+        "summary": "updatedProfiles=1",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 2
+      },
+      {
+        "stage": "flush.final",
+        "ok": true,
+        "summary": "flush.final completed",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 1631
+      },
+      {
+        "stage": "verification",
+        "ok": true,
+        "summary": "ok=true",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 110
+      },
+      {
+        "stage": "capabilities",
+        "ok": true,
+        "summary": "capabilities completed",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 800
+      },
+      {
+        "stage": "commit",
+        "ok": true,
+        "summary": "commit completed",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 9928
+      }
+    ],
+    "createdApp": {
+      "appId": "70b4c866-7c66-4c4e-a45e-64e4164f0649",
+      "name": "rerun-collaboration-run05",
+      "repositoryType": "git"
+    },
+    "beforeCounts": {
+      "pagesInModule": 1,
+      "entitiesInModule": 0,
+      "microflowsInModule": 1,
+      "nanoflowsInModule": 0,
+      "workflowsInModule": 0
+    },
+    "domainModel": {
+      "moduleName": "MyFirstModule",
+      "entitiesCreated": 25,
+      "associationsCreated": 7,
+      "enumerationsCreated": 0
+    },
+    "security": {
+      "moduleName": "MyFirstModule",
+      "securityLevel": "CheckFormsAndMicroflows",
+      "moduleRolesCreated": 4,
+      "userRolesCreated": 4,
+      "demoUsersRequested": 0,
+      "demoUsersCreated": 0,
+      "demoUsersApplied": 0,
+      "demoUserHandling": "notRequested",
+      "skippedDemoUsers": [],
+      "moduleRoleNames": [
+        "Client",
+        "Employee",
+        "ProjectManager",
+        "TeamMember",
+        "User"
+      ],
+      "userRoleNames": [
+        "Administrator",
+        "Client",
+        "Employee",
+        "ProjectManager",
+        "TeamMember",
+        "User"
+      ],
+      "demoUserNames": [
+        "demo_administrator",
+        "demo_user"
+      ]
+    },
+    "microflows": {
+      "moduleName": "MyFirstModule",
+      "microflowsCreated": 5,
+      "nanoflowsCreated": 2,
+      "microflowNames": [
+        "CreateProject",
+        "ArchiveProject",
+        "CreateMilestone",
+        "CreateTask",
+        "CreateDelivery"
+      ],
+      "nanoflowNames": [
+        "GetProjectMilestones",
+        "GetTaskFiles"
+      ],
+      "microflowRefsByRef": {},
+      "nanoflowRefsByRef": {}
+    },
+    "workflows": {
+      "moduleName": "MyFirstModule",
+      "workflowsCreated": 0,
+      "workflowNames": [],
+      "workflowRefsByRef": {}
+    },
+    "pageCapabilities": null,
+    "webClientCompatibility": {
+      "lookupRequested": true,
+      "classicGridRequested": false,
+      "updated": true,
+      "useOptimizedClient": "No",
+      "previousUseOptimizedClient": "Yes"
+    },
+    "pages": {
+      "moduleName": "MyFirstModule",
+      "layoutQualifiedName": "Atlas_Core.Atlas_Default",
+      "layoutParameterQname": "Atlas_Core.Atlas_Default.Main",
+      "pageNames": [
+        "Home",
+        "Task_Dashboard",
+        "File_Overview",
+        "File_NewEdit",
+        "Task_Overview",
+        "Task_NewEdit",
+        "Delivery_Overview",
+        "Delivery_NewEdit",
+        "Project_Overview",
+        "Project_NewEdit",
+        "Feedback_Overview",
+        "Feedback_NewEdit",
+        "ProjectManager_Overview",
+        "ProjectManager_NewEdit",
+        "TeamMember_Overview",
+        "TeamMember_NewEdit",
+        "Client_Overview",
+        "Client_NewEdit",
+        "projectOverview",
+        "projectDetail",
+        "newProject",
+        "editProject",
+        "milestoneOverview",
+        "milestoneDetail",
+        "newMilestone",
+        "editMilestone",
+        "taskOverview",
+        "taskDetail",
+        "newTask",
+        "editTask",
+        "deliveryOverview",
+        "deliveryDetail",
+        "newDelivery",
+        "editDelivery",
+        "fileOverview",
+        "fileDetail",
+        "newFile",
+        "editFile",
+        "Milestone_Overview",
+        "Milestone_NewEdit",
+        "Department_Overview",
+        "Department_NewEdit",
+        "Goal_Overview",
+        "Goal_NewEdit",
+        "ChatMessage_Overview",
+        "ChatMessage_NewEdit",
+        "Concept_Overview",
+        "Concept_NewEdit",
+        "SearchCriteria_Overview",
+        "SearchCriteria_NewEdit",
+        "SortOrder_Overview",
+        "SortOrder_NewEdit",
+        "Statistic_Overview",
+        "Statistic_NewEdit",
+        "Assignment_Overview",
+        "Assignment_NewEdit",
+        "SubtaskStatus_Overview",
+        "SubtaskStatus_NewEdit",
+        "TeamMemberChatMessage_Overview",
+        "TeamMemberChatMessage_NewEdit",
+        "GeneralChatMessage_Overview",
+        "GeneralChatMessage_NewEdit",
+        "ProjectManagerFeedback_Overview",
+        "ProjectManagerFeedback_NewEdit",
+        "RatingCriteria_Overview",
+        "RatingCriteria_NewEdit",
+        "SavedFeedback_Overview",
+        "SavedFeedback_NewEdit",
+        "Resource_Overview",
+        "Resource_NewEdit",
+        "Employee_Overview",
+        "Employee_NewEdit"
+      ],
+      "dg2Cleanup": {
+        "enabled": true,
+        "targetedPageNames": [],
+        "deletedPageNames": [],
+        "failed": []
+      },
+      "dataGrid2": {
+        "enabled": false,
+        "widgetId": "",
+        "resolvedFrom": "",
+        "useFallbackSchema": false,
+        "probeVariant": null,
+        "configuredWidgets": 0,
+        "attempts": []
+      }
+    },
+    "dg2Cleanup": {
+      "enabled": true,
+      "targetedPageNames": [],
+      "deletedPageNames": [],
+      "failed": []
+    },
+    "navigationUI": {
+      "requested": true,
+      "homeButtonsAdded": 0,
+      "navItemsAdded": 6
+    },
+    "homePage": {
+      "requested": true,
+      "updatedProfiles": 1,
+      "targetPageQualifiedName": "MyFirstModule.Home"
+    },
+    "afterCounts": {
+      "pagesInModule": 73,
+      "entitiesInModule": 25,
+      "microflowsInModule": 6,
+      "nanoflowsInModule": 2,
+      "workflowsInModule": 0
+    },
+    "beforeRefs": {
+      "pages": [
+        {
+          "name": "Home_Web",
+          "id": "5c6805fc-cadf-4d72-a5ef-f25da7cf4c97"
+        }
+      ],
+      "entities": [],
+      "microflows": [
+        {
+          "name": "MyFirstLogic",
+          "id": "4a8475b3-14cb-4100-8963-58f2fd3a0be8"
+        }
+      ],
+      "nanoflows": [],
+      "workflows": []
+    },
+    "afterRefs": {
+      "pages": [
+        {
+          "name": "Home_Web",
+          "id": "5c6805fc-cadf-4d72-a5ef-f25da7cf4c97"
+        },
+        {
+          "name": "Home",
+          "id": "8b7bfedf-6953-413c-90e0-9cace775a9fa"
+        },
+        {
+          "name": "Task_Dashboard",
+          "id": "5efabcf4-b601-4459-81c1-6e9a341f3f0a"
+        },
+        {
+          "name": "File_Overview",
+          "id": "bb0864a8-c8a0-439f-9a3f-f29a4c9d5550"
+        },
+        {
+          "name": "File_NewEdit",
+          "id": "f754fa8b-d8ca-42ba-8116-67e41e00ec29"
+        },
+        {
+          "name": "Task_Overview",
+          "id": "8d2f67df-c8bf-4708-82c6-da3a7fb5def1"
+        },
+        {
+          "name": "Task_NewEdit",
+          "id": "63a9a6d5-cc53-4761-bc75-ca48610d7c8a"
+        },
+        {
+          "name": "Delivery_Overview",
+          "id": "d65563f7-d068-4801-87f4-64c7556bd9d9"
+        },
+        {
+          "name": "Delivery_NewEdit",
+          "id": "793aa7a8-913f-44f1-b6cc-17eedbce58a5"
+        },
+        {
+          "name": "Project_Overview",
+          "id": "f47a6ce8-5945-40b9-9a5b-e1aec8408660"
+        },
+        {
+          "name": "Project_NewEdit",
+          "id": "9107b1e1-282a-4b37-957d-0ede0d5ece67"
+        },
+        {
+          "name": "Feedback_Overview",
+          "id": "0662234e-9670-4251-a237-5df847a09306"
+        },
+        {
+          "name": "Feedback_NewEdit",
+          "id": "6e3124cf-ca34-4816-af65-9443bed18a4d"
+        },
+        {
+          "name": "ProjectManager_Overview",
+          "id": "40cadb84-56fb-4fac-80a1-1aedb8227ad7"
+        },
+        {
+          "name": "ProjectManager_NewEdit",
+          "id": "b35ff8b9-9f49-456b-81a0-a4cc87c5cbcf"
+        },
+        {
+          "name": "TeamMember_Overview",
+          "id": "697efa89-87a0-4033-8066-1794e1caebdf"
+        },
+        {
+          "name": "TeamMember_NewEdit",
+          "id": "65b65790-e2da-4365-b8c0-baa6c08f4e84"
+        },
+        {
+          "name": "Client_Overview",
+          "id": "a9be18e2-c656-47b4-99c1-1ee53c7c90c0"
+        },
+        {
+          "name": "Client_NewEdit",
+          "id": "106c91e1-8e3a-4d41-985a-5cecead872c8"
+        },
+        {
+          "name": "projectOverview",
+          "id": "77aed176-3ff5-482a-956b-245789cf8d47"
+        },
+        {
+          "name": "projectDetail",
+          "id": "e92c0d13-d58a-44d8-a037-0644f00b6514"
+        },
+        {
+          "name": "newProject",
+          "id": "b141d786-bd1a-48e6-8e7a-9a5fa6626ec2"
+        },
+        {
+          "name": "editProject",
+          "id": "5857b27e-db92-4d58-a427-306c644bb847"
+        },
+        {
+          "name": "milestoneOverview",
+          "id": "16787678-14b1-4f33-9cae-31d07dbd67b1"
+        },
+        {
+          "name": "milestoneDetail",
+          "id": "5434d71d-60c2-48fd-9249-c37a9ac73064"
+        },
+        {
+          "name": "newMilestone",
+          "id": "975a7815-c61a-4b83-88f8-565fc5bc39be"
+        },
+        {
+          "name": "editMilestone",
+          "id": "d18fe124-fe76-4321-9c55-018b91ac0ea9"
+        },
+        {
+          "name": "taskOverview",
+          "id": "10ac7b6c-8ee2-4f3c-afb3-b860c76087dd"
+        },
+        {
+          "name": "taskDetail",
+          "id": "7338af31-7edd-4b52-9242-b94bf44131f1"
+        },
+        {
+          "name": "newTask",
+          "id": "15a160ff-7cb5-491c-b5f4-3006e38bbc26"
+        },
+        {
+          "name": "editTask",
+          "id": "8de1b012-ac19-40c2-b5f9-17bab003f554"
+        },
+        {
+          "name": "deliveryOverview",
+          "id": "c98cf62c-5bc4-496d-a3cc-870c7e664e6d"
+        },
+        {
+          "name": "deliveryDetail",
+          "id": "b5e02d20-53b5-4f3f-97d7-bd475b5883d2"
+        },
+        {
+          "name": "newDelivery",
+          "id": "df94eb3a-2b25-4607-8380-36dde4f0728d"
+        },
+        {
+          "name": "editDelivery",
+          "id": "738a4df2-ac69-49be-898a-528178cdc1a5"
+        },
+        {
+          "name": "fileOverview",
+          "id": "578e41a1-9940-46a9-9f29-0276b5731204"
+        },
+        {
+          "name": "fileDetail",
+          "id": "4ba3407e-f8b5-4744-ae9e-ed567f0effb6"
+        },
+        {
+          "name": "newFile",
+          "id": "e3360c67-7ef5-4bd7-b20f-e0890969ff7e"
+        },
+        {
+          "name": "editFile",
+          "id": "11dd466e-c2d0-400a-b9ee-8895e7356dd3"
+        },
+        {
+          "name": "Milestone_Overview",
+          "id": "188d5162-8d5f-40e0-9d02-e6f7ee7fecb5"
+        },
+        {
+          "name": "Milestone_NewEdit",
+          "id": "ae56f731-23b6-4328-bbf5-3528b5bffb84"
+        },
+        {
+          "name": "Department_Overview",
+          "id": "dcbfc2e7-8026-4292-aebd-0feb89010930"
+        },
+        {
+          "name": "Department_NewEdit",
+          "id": "17b32d02-d5c9-404e-bb9e-65adb9a1f573"
+        },
+        {
+          "name": "Goal_Overview",
+          "id": "ebc8e73e-6163-4037-8e13-5d65e507010d"
+        },
+        {
+          "name": "Goal_NewEdit",
+          "id": "43dedf4b-1906-435f-b6c7-f50ec12b81e2"
+        },
+        {
+          "name": "ChatMessage_Overview",
+          "id": "37eb23f0-4cb5-4a5f-95a7-c505d52e492e"
+        },
+        {
+          "name": "ChatMessage_NewEdit",
+          "id": "62a6b688-0452-4759-9ee1-a8551ecad564"
+        },
+        {
+          "name": "Concept_Overview",
+          "id": "e13a964f-dd11-41dc-8659-de4e8cf8422e"
+        },
+        {
+          "name": "Concept_NewEdit",
+          "id": "abb7e452-026b-4879-bdb2-a662cfaf4eb1"
+        },
+        {
+          "name": "SearchCriteria_Overview",
+          "id": "406b2cf1-3066-4bcb-a1b8-7f55a8225830"
+        },
+        {
+          "name": "SearchCriteria_NewEdit",
+          "id": "0d82bd67-18fe-41a5-a53c-f16e273ff274"
+        },
+        {
+          "name": "SortOrder_Overview",
+          "id": "e6dcd09c-274e-46e7-a7d3-94130ebb7288"
+        },
+        {
+          "name": "SortOrder_NewEdit",
+          "id": "99d900c5-2b6a-4cac-9adc-e5ebd5121ab6"
+        },
+        {
+          "name": "Statistic_Overview",
+          "id": "edfbe8ff-07c0-494d-a01c-137cf2a816a5"
+        },
+        {
+          "name": "Statistic_NewEdit",
+          "id": "38ebef4f-f55b-40f8-b9b2-a85278afb393"
+        },
+        {
+          "name": "Assignment_Overview",
+          "id": "9d6a5b04-a1c5-4a61-8441-3e569e3526c4"
+        },
+        {
+          "name": "Assignment_NewEdit",
+          "id": "c08d4fc6-49ed-42fe-9f68-df567044020c"
+        },
+        {
+          "name": "SubtaskStatus_Overview",
+          "id": "c772b8f3-9e56-4f5f-87e6-2134653ccd41"
+        },
+        {
+          "name": "SubtaskStatus_NewEdit",
+          "id": "011aa94f-9c58-428b-969f-d91aed2ffb97"
+        },
+        {
+          "name": "TeamMemberChatMessage_Overview",
+          "id": "93b7c622-1173-4fe1-8632-e3d8732cfacb"
+        },
+        {
+          "name": "TeamMemberChatMessage_NewEdit",
+          "id": "e863e2dc-6800-4675-9132-dc53f7130b8a"
+        },
+        {
+          "name": "GeneralChatMessage_Overview",
+          "id": "6ad7548b-0ea1-4ae3-a0ae-807d737cfab8"
+        },
+        {
+          "name": "GeneralChatMessage_NewEdit",
+          "id": "836cbcf5-1754-4e6f-9e80-e664c5a31028"
+        },
+        {
+          "name": "ProjectManagerFeedback_Overview",
+          "id": "c915e5ca-1754-4d51-aa11-64fc71dd2a0d"
+        },
+        {
+          "name": "ProjectManagerFeedback_NewEdit",
+          "id": "fe0a3602-f72a-498a-9602-1827340e9189"
+        },
+        {
+          "name": "RatingCriteria_Overview",
+          "id": "3f557752-a72f-4e6b-9550-2b1a1823bd34"
+        },
+        {
+          "name": "RatingCriteria_NewEdit",
+          "id": "deb8cb1b-a653-4817-8c37-5c3e29a6ce14"
+        },
+        {
+          "name": "SavedFeedback_Overview",
+          "id": "55c02ed6-6da9-4cc4-afb6-648055ca7b7f"
+        },
+        {
+          "name": "SavedFeedback_NewEdit",
+          "id": "b613b75d-5375-4116-a9f6-b55a6da0e4e9"
+        },
+        {
+          "name": "Resource_Overview",
+          "id": "c4c91618-5e5c-4074-809a-60eac95a62c1"
+        },
+        {
+          "name": "Resource_NewEdit",
+          "id": "f5e2ed09-4ae0-409c-81f5-49b8780974ca"
+        },
+        {
+          "name": "Employee_Overview",
+          "id": "d28ec2f9-e640-428a-b8c1-7ccba8c8a950"
+        },
+        {
+          "name": "Employee_NewEdit",
+          "id": "45078783-3cb3-44e0-9d07-de0fd318b99b"
+        }
+      ],
+      "entities": [
+        {
+          "name": "Project",
+          "id": "5624ca75-2044-40f4-9a05-c9be6c7a06f9"
+        },
+        {
+          "name": "Milestone",
+          "id": "10bf1ca1-1fb2-4b18-81c9-994ce6f52fef"
+        },
+        {
+          "name": "Task",
+          "id": "397892a5-d9b0-457a-b8b9-e137d4ba6263"
+        },
+        {
+          "name": "File",
+          "id": "5f59f3da-fcba-413d-954b-194643ed37a6"
+        },
+        {
+          "name": "Delivery",
+          "id": "003f6724-0781-4f91-b6f4-ceed53cc117e"
+        },
+        {
+          "name": "Feedback",
+          "id": "416a9731-1d17-4401-b11e-2852622111e6"
+        },
+        {
+          "name": "ProjectManager",
+          "id": "86f6c84d-6d18-4e0f-a1a6-01e783d39909"
+        },
+        {
+          "name": "TeamMember",
+          "id": "a282d7be-e9a3-4921-ab17-849d4ea3d8ae"
+        },
+        {
+          "name": "Client",
+          "id": "a032ac64-8129-4896-8ef3-9ad4ce541ce6"
+        },
+        {
+          "name": "Department",
+          "id": "b158560a-fb75-456b-b842-b0c7c285c39e"
+        },
+        {
+          "name": "Goal",
+          "id": "6a39b65c-a40c-4283-bfd1-87a2591ebe74"
+        },
+        {
+          "name": "ChatMessage",
+          "id": "e908ccd9-6411-46d7-bffb-3860cfe071c5"
+        },
+        {
+          "name": "Concept",
+          "id": "d4f1df73-348e-4128-ae8a-1535002c35cd"
+        },
+        {
+          "name": "SearchCriteria",
+          "id": "fa00742e-dfe8-44c4-9d5d-af9fb14cf368"
+        },
+        {
+          "name": "SortOrder",
+          "id": "f70516fb-c09f-4425-8b53-b2051df908fa"
+        },
+        {
+          "name": "Statistic",
+          "id": "2e2de2f6-02d8-4ab3-88a8-ad03594e952f"
+        },
+        {
+          "name": "Assignment",
+          "id": "30d3e813-5f09-4c8d-b0c9-fe53b99bf441"
+        },
+        {
+          "name": "SubtaskStatus",
+          "id": "15990823-c4d3-4530-b608-3ecd44160b26"
+        },
+        {
+          "name": "TeamMemberChatMessage",
+          "id": "7a4081cc-604c-45d1-b51d-de51a806e8a4"
+        },
+        {
+          "name": "GeneralChatMessage",
+          "id": "a16e9183-c39a-4e0b-8695-8f655908ff3d"
+        },
+        {
+          "name": "ProjectManagerFeedback",
+          "id": "d642cf1f-20a9-4516-855c-28528b8042f0"
+        },
+        {
+          "name": "RatingCriteria",
+          "id": "af8a8c41-d482-4d3d-b91b-dd0a349898ba"
+        },
+        {
+          "name": "SavedFeedback",
+          "id": "19c6d462-f99b-4148-ac50-9012becf1aba"
+        },
+        {
+          "name": "Resource",
+          "id": "85ec1c2d-c7f7-40b8-be56-af455cd5dea1"
+        },
+        {
+          "name": "Employee",
+          "id": "7d4462ba-3d01-4fe4-860d-087dee3bd187"
+        }
+      ],
+      "microflows": [
+        {
+          "name": "MyFirstLogic",
+          "id": "4a8475b3-14cb-4100-8963-58f2fd3a0be8"
+        },
+        {
+          "name": "CreateProject",
+          "id": "e0d95b15-b502-4584-a170-490a9aca2103"
+        },
+        {
+          "name": "ArchiveProject",
+          "id": "026cb6fe-c522-478c-8a86-df6de5e9d720"
+        },
+        {
+          "name": "CreateMilestone",
+          "id": "a5e54399-9c06-4d4b-9dcb-2ff176a593a3"
+        },
+        {
+          "name": "CreateTask",
+          "id": "f816dae3-2c22-4388-8153-3c9891c29ba8"
+        },
+        {
+          "name": "CreateDelivery",
+          "id": "9983959e-201b-4736-b83f-4ca4125b94c6"
+        }
+      ],
+      "nanoflows": [
+        {
+          "name": "GetProjectMilestones",
+          "id": "78ba50b8-72e3-4dfd-b4cc-54756e11d228"
+        },
+        {
+          "name": "GetTaskFiles",
+          "id": "528da9fb-b8d0-4349-9ef7-8cf0dc3309fb"
+        }
+      ],
+      "workflows": []
+    },
+    "verification": {
+      "missing": {
+        "pages": [],
+        "entities": [],
+        "microflows": [],
+        "nanoflows": [],
+        "workflows": []
+      },
+      "ok": true,
+      "artifacts": {
+        "ok": true,
+        "missing": {
+          "moduleRoles": [],
+          "userRoles": [],
+          "demoUsers": [],
+          "pageVisibility": [],
+          "homePageButtons": [],
+          "menuItems": [],
+          "widgets": []
+        }
+      },
+      "semantic": {
+        "enabled": false,
+        "ok": true,
+        "errors": []
+      }
+    },
+    "capabilities": {
+      "modules": [
+        "Administration",
+        "Atlas_Core",
+        "Atlas_Web_Content",
+        "DataWidgets",
+        "FeedbackModule",
+        "MyFirstModule",
+        "NanoflowCommons",
+        "WebActions"
+      ],
+      "widgetIds": [],
+      "widgetFamilies": [
+        "datawidgets_module"
+      ]
+    },
+    "commitMessage": "Rerun practical performance builder-stage run: collaboration run-05",
+    "ok": true
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "microflows": {
+    "specs": [
+      {
+        "ref": "mf_sample",
+        "name": "MF_Sample",
+        "actions": [
+          { "type": "showMessage", "message": "Sample microflow" }
+        ]
+      }
+    ]
+  },
+  "nanoflows": {
+    "specs": [
+      {
+        "ref": "nf_sample",
+        "name": "NF_Sample",
+        "actions": [
+          { "type": "showMessage", "message": "Sample nanoflow" }
+        ]
+      }
+    ]
+  }
+}

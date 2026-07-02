@@ -1,0 +1,3299 @@
+{
+  "ok": true,
+  "generatedAt": "2026-05-29T17:57:11.436Z",
+  "inputDir": "/Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/artifacts/practical-performance/20260528-165228/inputs/fish_chips",
+  "outputPlanPath": "/Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/artifacts/practical-performance/20260528-165228/stability/fish_chips/run-03/plan.json",
+  "warnings": [
+    "Dropped association \"Customer\" because entities could not be resolved after normalization.",
+    "Dropped association \"Items\" because entities could not be resolved after normalization.",
+    "Dropped association \"Product\" because entities could not be resolved after normalization.",
+    "Dropped association \"Product Statuses\" because entities could not be resolved after normalization.",
+    "Dropped association \"Payment Details\" because entities could not be resolved after normalization.",
+    "Dropped association \"Changes\" because entities could not be resolved after normalization.",
+    "Dropped association \"Transactions\" because entities could not be resolved after normalization.",
+    "Added missing overview page for entity \"Customer\".",
+    "Added missing NewEdit page for entity \"Customer\".",
+    "Added missing overview page for entity \"Product\".",
+    "Added missing NewEdit page for entity \"Product\".",
+    "Added missing overview page for entity \"Order\".",
+    "Added missing NewEdit page for entity \"Order\".",
+    "Added missing overview page for entity \"OrderItem\".",
+    "Added missing NewEdit page for entity \"OrderItem\".",
+    "Added missing overview page for entity \"OrderProductStatus\".",
+    "Added missing NewEdit page for entity \"OrderProductStatus\".",
+    "Added missing overview page for entity \"Payment\".",
+    "Added missing NewEdit page for entity \"Payment\".",
+    "Added missing overview page for entity \"OrderChange\".",
+    "Added missing NewEdit page for entity \"OrderChange\".",
+    "Added missing overview page for entity \"PaymentTransaction\".",
+    "Added missing NewEdit page for entity \"PaymentTransaction\".",
+    "Dropped placeholder page \"order_creation\" because it had no useful steps.",
+    "Dropped placeholder page \"order_detail\" because it had no useful steps.",
+    "Dropped placeholder page \"order_status_update\" because it had no useful steps.",
+    "Dropped placeholder page \"order_deletion\" because it had no useful steps.",
+    "Repaired NewEdit page for entity \"Order\" because its form inputs no longer matched current associations.",
+    "Domain model review LLM pass failed; applied deterministic story-evidence review only: Generated content is not valid JSON: Unterminated string in JSON at position 25433 (line 713 column 12)"
+  ],
+  "validation": {
+    "ok": true,
+    "errors": []
+  },
+  "model": "gemma4:e4b",
+  "coverage": {
+    "score": 0.5,
+    "covered": 25,
+    "total": 50,
+    "missingStoryIds": [
+      "US01",
+      "US02",
+      "US03",
+      "US05",
+      "US06",
+      "US12",
+      "US13",
+      "US14",
+      "US16",
+      "US20",
+      "US22",
+      "US23",
+      "US24",
+      "US25",
+      "US26",
+      "US28",
+      "US31",
+      "US38",
+      "US40",
+      "US42",
+      "US43",
+      "US44",
+      "US45",
+      "US46",
+      "US48"
+    ],
+    "entries": [
+      {
+        "id": "US01",
+        "story": "As a Kitchen Employee, I want to see the orders with their status, so that I am aware of the progress of each order.",
+        "storyConcepts": [
+          "order",
+          "aware",
+          "each",
+          "statu",
+          "kitchen",
+          "employee",
+          "progress"
+        ],
+        "matchedConcepts": [
+          "order",
+          "statu"
+        ],
+        "processVisualizerAlignedConcepts": [
+          "order"
+        ],
+        "matchedUiRefs": [
+          "order_overview"
+        ],
+        "lexicalScore": 0.2857142857142857,
+        "covered": false
+      },
+      {
+        "id": "US02",
+        "story": "As a Kitchen Employee, I want to have an overview of all orders at a glance, so that I cannot miss any relevant orders.",
+        "storyConcepts": [
+          "order",
+          "missany",
+          "orderat",
+          "relevantorder",
+          "any",
+          "cannot",
+          "glance",
+          "miss",
+          "relevant",
+          "kitchen",
+          "employee"
+        ],
+        "matchedConcepts": [
+          "order"
+        ],
+        "processVisualizerAlignedConcepts": [
+          "order"
+        ],
+        "matchedUiRefs": [
+          "order_overview"
+        ],
+        "lexicalScore": 0.09090909090909091,
+        "covered": false
+      },
+      {
+        "id": "US03",
+        "story": "As a Kitchen Employee, I want to receive only the products of an order, so that I do not get confused by other irrelevant products.",
+        "storyConcepts": [
+          "product",
+          "notget",
+          "otherirrelevant",
+          "confused",
+          "get",
+          "irrelevant",
+          "not",
+          "only",
+          "order",
+          "other",
+          "kitchen",
+          "employee"
+        ],
+        "matchedConcepts": [
+          "product",
+          "order"
+        ],
+        "processVisualizerAlignedConcepts": [
+          "order"
+        ],
+        "matchedUiRefs": [
+          "product_overview",
+          "order_overview"
+        ],
+        "lexicalScore": 0.16666666666666666,
+        "covered": false
+      },
+      {
+        "id": "US04",
+        "story": "As a Kitchen Employee, I want to see special requests to be shown together with the product they are concerned about, so that I know if I have to prepare a product in a special way",
+        "storyConcepts": [
+          "product",
+          "special",
+          "showntogether",
+          "specialrequest",
+          "about",
+          "concerned",
+          "know",
+          "prepare",
+          "shown",
+          "together",
+          "way",
+          "kitchen",
+          "employee"
+        ],
+        "matchedConcepts": [
+          "product",
+          "special",
+          "specialrequest",
+          "know"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "product_overview",
+          "know_overview"
+        ],
+        "lexicalScore": 0.3076923076923077,
+        "covered": true
+      },
+      {
+        "id": "US05",
+        "story": "As a Kitchen Employee, I want to have the order number shown together with its related products, so that I am aware of which order the products are coming from.",
+        "storyConcepts": [
+          "order",
+          "product",
+          "itsrelated",
+          "numbershown",
+          "aware",
+          "coming",
+          "its",
+          "number",
+          "related",
+          "shown",
+          "together",
+          "which",
+          "kitchen",
+          "employee"
+        ],
+        "matchedConcepts": [
+          "order",
+          "product",
+          "number"
+        ],
+        "processVisualizerAlignedConcepts": [
+          "order"
+        ],
+        "matchedUiRefs": [
+          "order_overview",
+          "product_overview"
+        ],
+        "lexicalScore": 0.21428571428571427,
+        "covered": false
+      },
+      {
+        "id": "US06",
+        "story": "As a Kitchen Employee, I want to receive a notification when a new order is received, so that I am aware of the new order.",
+        "storyConcepts": [
+          "order",
+          "aware",
+          "notification",
+          "received",
+          "when",
+          "kitchen",
+          "employee"
+        ],
+        "matchedConcepts": [
+          "order"
+        ],
+        "processVisualizerAlignedConcepts": [
+          "order"
+        ],
+        "matchedUiRefs": [
+          "order_overview"
+        ],
+        "lexicalScore": 0.14285714285714285,
+        "covered": false
+      },
+      {
+        "id": "US07",
+        "story": "As a Kitchen Employee, I want to receive a notification if the customer makes changes after the order is already paid, so that I know that there are changes to an order.",
+        "storyConcepts": [
+          "change",
+          "order",
+          "changeafter",
+          "customermake",
+          "after",
+          "already",
+          "customer",
+          "know",
+          "make",
+          "notification",
+          "paid",
+          "there",
+          "kitchen",
+          "employee"
+        ],
+        "matchedConcepts": [
+          "change",
+          "order",
+          "customer",
+          "know",
+          "paid"
+        ],
+        "processVisualizerAlignedConcepts": [
+          "order"
+        ],
+        "matchedUiRefs": [
+          "change_overview",
+          "order_overview",
+          "customer_overview",
+          "know_overview"
+        ],
+        "lexicalScore": 0.35714285714285715,
+        "covered": true
+      },
+      {
+        "id": "US08",
+        "story": "As a Ticket Master, I want to label new orders as 'incoming orders', so that incoming orders can be separated from orders with a different status.",
+        "storyConcepts": [
+          "order",
+          "incomingorder",
+          "incoming",
+          "different",
+          "label",
+          "separated",
+          "statu",
+          "ticket",
+          "master"
+        ],
+        "matchedConcepts": [
+          "order",
+          "statu",
+          "ticket"
+        ],
+        "processVisualizerAlignedConcepts": [
+          "order"
+        ],
+        "matchedUiRefs": [
+          "order_overview",
+          "ticket_overview"
+        ],
+        "lexicalScore": 0.3333333333333333,
+        "covered": true
+      },
+      {
+        "id": "US09",
+        "story": "As a Ticket Master, I want to label a product as 'current orders' at the moment the preparation of the products is started, so that current orders can be separated from orders with a different status.",
+        "storyConcepts": [
+          "order",
+          "current",
+          "product",
+          "different",
+          "label",
+          "moment",
+          "preparation",
+          "separated",
+          "started",
+          "statu",
+          "ticket",
+          "master"
+        ],
+        "matchedConcepts": [
+          "order",
+          "product",
+          "statu",
+          "ticket"
+        ],
+        "processVisualizerAlignedConcepts": [
+          "order"
+        ],
+        "matchedUiRefs": [
+          "order_overview",
+          "product_overview",
+          "ticket_overview"
+        ],
+        "lexicalScore": 0.3333333333333333,
+        "covered": true
+      },
+      {
+        "id": "US10",
+        "story": "As a Ticket Master, I want to label a product as 'finished orders' after the preparation of the products is finished, so that finished orders can be separated from orders with a different status.",
+        "storyConcepts": [
+          "finished",
+          "order",
+          "finishedorder",
+          "product",
+          "after",
+          "different",
+          "label",
+          "preparation",
+          "separated",
+          "statu",
+          "ticket",
+          "master"
+        ],
+        "matchedConcepts": [
+          "order",
+          "product",
+          "statu",
+          "ticket"
+        ],
+        "processVisualizerAlignedConcepts": [
+          "order"
+        ],
+        "matchedUiRefs": [
+          "order_overview",
+          "product_overview",
+          "ticket_overview"
+        ],
+        "lexicalScore": 0.3333333333333333,
+        "covered": true
+      },
+      {
+        "id": "US11",
+        "story": "As a Ticket Master, I want to label products as 'scheduled orders' if their requested time is not yet within ten minutes, so that scheduled orders can be separated from orders with a different status.",
+        "storyConcepts": [
+          "order",
+          "scheduledorder",
+          "scheduled",
+          "requestedtime",
+          "tenminute",
+          "yetwithin",
+          "different",
+          "label",
+          "minute",
+          "not",
+          "product",
+          "requested",
+          "separated",
+          "statu",
+          "ten",
+          "time",
+          "within",
+          "yet",
+          "ticket",
+          "master"
+        ],
+        "matchedConcepts": [
+          "order",
+          "scheduled",
+          "product",
+          "statu",
+          "time",
+          "ticket"
+        ],
+        "processVisualizerAlignedConcepts": [
+          "order"
+        ],
+        "matchedUiRefs": [
+          "order_overview",
+          "product_overview",
+          "ticket_overview"
+        ],
+        "lexicalScore": 0.3,
+        "covered": true
+      },
+      {
+        "id": "US12",
+        "story": "As a Ticket Master, I want to have an overview of all the incoming orders, so that I know how many orders should still be prepared.",
+        "storyConcepts": [
+          "order",
+          "howmany",
+          "ordershould",
+          "how",
+          "incoming",
+          "know",
+          "many",
+          "prepared",
+          "should",
+          "still",
+          "ticket",
+          "master"
+        ],
+        "matchedConcepts": [
+          "order",
+          "know",
+          "ticket"
+        ],
+        "processVisualizerAlignedConcepts": [
+          "order"
+        ],
+        "matchedUiRefs": [
+          "order_overview",
+          "know_overview",
+          "ticket_overview"
+        ],
+        "lexicalScore": 0.25,
+        "covered": false
+      },
+      {
+        "id": "US13",
+        "story": "As a Ticket Master, I want to have an overview of all orders that are currently made by the kitchen, so that I know how many orders are in progress.",
+        "storyConcepts": [
+          "order",
+          "howmany",
+          "currently",
+          "how",
+          "kitchen",
+          "know",
+          "made",
+          "many",
+          "ticket",
+          "master",
+          "progress"
+        ],
+        "matchedConcepts": [
+          "order",
+          "know",
+          "ticket"
+        ],
+        "processVisualizerAlignedConcepts": [
+          "order"
+        ],
+        "matchedUiRefs": [
+          "order_overview",
+          "know_overview",
+          "ticket_overview"
+        ],
+        "lexicalScore": 0.2727272727272727,
+        "covered": false
+      },
+      {
+        "id": "US14",
+        "story": "As a Ticket Master, I want to have an overview of all orders that are completed by the kitchen, so that I know when I should start packing an order.",
+        "storyConcepts": [
+          "packinganorder",
+          "order",
+          "shouldstart",
+          "completed",
+          "kitchen",
+          "know",
+          "packing",
+          "should",
+          "start",
+          "when",
+          "ticket",
+          "master"
+        ],
+        "matchedConcepts": [
+          "order",
+          "know",
+          "ticket"
+        ],
+        "processVisualizerAlignedConcepts": [
+          "order"
+        ],
+        "matchedUiRefs": [
+          "order_overview",
+          "know_overview",
+          "ticket_overview"
+        ],
+        "lexicalScore": 0.25,
+        "covered": false
+      },
+      {
+        "id": "US15",
+        "story": "As a Ticket Master, I want to have an overview of all scheduled orders, so that I have an insight into the orders that are scheduled for a later time in the day.",
+        "storyConcepts": [
+          "order",
+          "scheduled",
+          "latertime",
+          "scheduledorder",
+          "day",
+          "insight",
+          "later",
+          "time",
+          "ticket",
+          "master"
+        ],
+        "matchedConcepts": [
+          "order",
+          "scheduled",
+          "time",
+          "ticket"
+        ],
+        "processVisualizerAlignedConcepts": [
+          "order"
+        ],
+        "matchedUiRefs": [
+          "order_overview",
+          "ticket_overview"
+        ],
+        "lexicalScore": 0.4,
+        "covered": true
+      },
+      {
+        "id": "US16",
+        "story": "As a Ticket Master, I want to separate the scheduled orders from the other statuses, so that the focus will be on the most relevant orders.",
+        "storyConcepts": [
+          "order",
+          "mostrelevant",
+          "focu",
+          "most",
+          "other",
+          "relevant",
+          "scheduled",
+          "separate",
+          "statuse",
+          "will",
+          "ticket",
+          "master"
+        ],
+        "matchedConcepts": [
+          "order",
+          "scheduled",
+          "ticket"
+        ],
+        "processVisualizerAlignedConcepts": [
+          "order"
+        ],
+        "matchedUiRefs": [
+          "order_overview",
+          "ticket_overview"
+        ],
+        "lexicalScore": 0.25,
+        "covered": false
+      },
+      {
+        "id": "US17",
+        "story": "As a Ticket Master, I want to see the statuses of the products of an order, so that I have a good insight into the progress of an order.",
+        "storyConcepts": [
+          "order",
+          "good",
+          "insight",
+          "product",
+          "statuse",
+          "ticket",
+          "master",
+          "progress"
+        ],
+        "matchedConcepts": [
+          "order",
+          "product",
+          "ticket"
+        ],
+        "processVisualizerAlignedConcepts": [
+          "order"
+        ],
+        "matchedUiRefs": [
+          "order_overview",
+          "product_overview",
+          "ticket_overview"
+        ],
+        "lexicalScore": 0.375,
+        "covered": true
+      },
+      {
+        "id": "US18",
+        "story": "As a Ticket Master, I want to see matching colors with the status of each product, so that the status of an order is easier to see at a glance.",
+        "storyConcepts": [
+          "statu",
+          "matchingcolor",
+          "color",
+          "each",
+          "easier",
+          "glance",
+          "matching",
+          "order",
+          "product",
+          "ticket",
+          "master"
+        ],
+        "matchedConcepts": [
+          "statu",
+          "color",
+          "order",
+          "product",
+          "ticket"
+        ],
+        "processVisualizerAlignedConcepts": [
+          "order"
+        ],
+        "matchedUiRefs": [
+          "order_overview",
+          "product_overview",
+          "ticket_overview"
+        ],
+        "lexicalScore": 0.45454545454545453,
+        "covered": true
+      },
+      {
+        "id": "US19",
+        "story": "As a Ticket Master, I want to see the order type, so that I know if I need to bring the order to the customer or hand it to our delivery person.",
+        "storyConcepts": [
+          "order",
+          "bring",
+          "customer",
+          "delivery",
+          "hand",
+          "know",
+          "need",
+          "person",
+          "type",
+          "ticket",
+          "master"
+        ],
+        "matchedConcepts": [
+          "order",
+          "customer",
+          "delivery",
+          "know",
+          "type",
+          "ticket"
+        ],
+        "processVisualizerAlignedConcepts": [
+          "order"
+        ],
+        "matchedUiRefs": [
+          "order_overview",
+          "customer_overview",
+          "delivery_overview",
+          "know_overview",
+          "ticket_overview"
+        ],
+        "lexicalScore": 0.5454545454545454,
+        "covered": true
+      },
+      {
+        "id": "US20",
+        "story": "As a Ticket Master, I want to operate the screen with a touchscreen, so that it is easy to use.",
+        "storyConcepts": [
+          "easy",
+          "operate",
+          "screen",
+          "touchscreen",
+          "ticket",
+          "master"
+        ],
+        "matchedConcepts": [
+          "ticket"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "ticket_overview"
+        ],
+        "lexicalScore": 0.16666666666666666,
+        "covered": false
+      },
+      {
+        "id": "US21",
+        "story": "As a Ticket Master, I want to select orders, so that I can make changes to their status.",
+        "storyConcepts": [
+          "makechange",
+          "change",
+          "make",
+          "order",
+          "statu",
+          "ticket",
+          "master"
+        ],
+        "matchedConcepts": [
+          "change",
+          "order",
+          "statu",
+          "ticket"
+        ],
+        "processVisualizerAlignedConcepts": [
+          "order"
+        ],
+        "matchedUiRefs": [
+          "change_overview",
+          "order_overview",
+          "ticket_overview"
+        ],
+        "lexicalScore": 0.5714285714285714,
+        "covered": true
+      },
+      {
+        "id": "US22",
+        "story": "As a Ticket Master, I want to delete an order, so that no delivered orders are being shown and I can keep a better overview of the orders being in progress.",
+        "storyConcepts": [
+          "order",
+          "being",
+          "beingshown",
+          "nodelivered",
+          "better",
+          "delivered",
+          "keep",
+          "shown",
+          "ticket",
+          "master",
+          "progress"
+        ],
+        "matchedConcepts": [
+          "order",
+          "ticket"
+        ],
+        "processVisualizerAlignedConcepts": [
+          "order"
+        ],
+        "matchedUiRefs": [
+          "order_overview",
+          "ticket_overview"
+        ],
+        "lexicalScore": 0.18181818181818182,
+        "covered": false
+      },
+      {
+        "id": "US23",
+        "story": "As a Customer, I want to have a screen during the ordering process, so that I can review the order.",
+        "storyConcepts": [
+          "orderingprocess",
+          "during",
+          "order",
+          "ordering",
+          "screen",
+          "customer",
+          "process"
+        ],
+        "matchedConcepts": [
+          "order",
+          "customer"
+        ],
+        "processVisualizerAlignedConcepts": [
+          "order"
+        ],
+        "matchedUiRefs": [
+          "order_overview",
+          "customer_overview"
+        ],
+        "lexicalScore": 0.2857142857142857,
+        "covered": false
+      },
+      {
+        "id": "US24",
+        "story": "As a Customer, I want to be able to request a confirmation of payment, so that I am able to declare the costs or use it for my own administration.",
+        "storyConcepts": [
+          "ownadministration",
+          "administration",
+          "confirmation",
+          "cost",
+          "declare",
+          "own",
+          "payment",
+          "customer"
+        ],
+        "matchedConcepts": [
+          "payment",
+          "customer"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "payment_overview",
+          "customer_overview"
+        ],
+        "lexicalScore": 0.25,
+        "covered": false
+      },
+      {
+        "id": "US25",
+        "story": "As a Cashier, I want to have a physical ticket that shows the relevant information being printed automatically for the customer, so that I do not have to do that manually.",
+        "storyConcepts": [
+          "beingprinted",
+          "relevantinformation",
+          "automatically",
+          "being",
+          "customer",
+          "manually",
+          "not",
+          "physical",
+          "printed",
+          "relevant",
+          "ticket",
+          "cashier"
+        ],
+        "matchedConcepts": [
+          "customer",
+          "ticket"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "customer_overview",
+          "ticket_overview"
+        ],
+        "lexicalScore": 0.16666666666666666,
+        "covered": false
+      },
+      {
+        "id": "US26",
+        "story": "As a Cashier, I want to print a physical ticket that shows the relevant order details, so the customer has an insight into his order, and there will be no misunderstanding when the customer receives his order.",
+        "storyConcepts": [
+          "order",
+          "customer",
+          "his",
+          "customerreceive",
+          "hisorder",
+          "nomisunderstanding",
+          "relevantorder",
+          "insight",
+          "misunderstanding",
+          "physical",
+          "print",
+          "relevant",
+          "there",
+          "ticket",
+          "when",
+          "will",
+          "cashier"
+        ],
+        "matchedConcepts": [
+          "order",
+          "customer",
+          "ticket"
+        ],
+        "processVisualizerAlignedConcepts": [
+          "order"
+        ],
+        "matchedUiRefs": [
+          "order_overview",
+          "customer_overview",
+          "ticket_overview"
+        ],
+        "lexicalScore": 0.17647058823529413,
+        "covered": false
+      },
+      {
+        "id": "US27",
+        "story": "As a Cashier, I want to make changes during the order, so that a misunderstanding with the customer or a mistake from me can be resolved.",
+        "storyConcepts": [
+          "changeduring",
+          "change",
+          "customer",
+          "during",
+          "make",
+          "mistake",
+          "misunderstanding",
+          "order",
+          "resolved",
+          "cashier"
+        ],
+        "matchedConcepts": [
+          "change",
+          "customer",
+          "order"
+        ],
+        "processVisualizerAlignedConcepts": [
+          "order"
+        ],
+        "matchedUiRefs": [
+          "change_overview",
+          "customer_overview",
+          "order_overview"
+        ],
+        "lexicalScore": 0.3,
+        "covered": true
+      },
+      {
+        "id": "US28",
+        "story": "As a Cashier, I want to make changes after the order has been processed, so that the customer can make last-minute changes.",
+        "storyConcepts": [
+          "change",
+          "make",
+          "changeafter",
+          "minutechange",
+          "after",
+          "been",
+          "customer",
+          "last",
+          "minute",
+          "order",
+          "processed",
+          "cashier"
+        ],
+        "matchedConcepts": [
+          "change",
+          "customer",
+          "order"
+        ],
+        "processVisualizerAlignedConcepts": [
+          "order"
+        ],
+        "matchedUiRefs": [
+          "change_overview",
+          "customer_overview",
+          "order_overview"
+        ],
+        "lexicalScore": 0.25,
+        "covered": false
+      },
+      {
+        "id": "US29",
+        "story": "As a Cashier, I want to add the type of order, so that the Ticket Master knows if he/she needs to hand the order directly to the customer or the delivery person.",
+        "storyConcepts": [
+          "order",
+          "deliveryperson",
+          "ifhe",
+          "masterknow",
+          "sheneed",
+          "customer",
+          "delivery",
+          "directly",
+          "hand",
+          "know",
+          "master",
+          "need",
+          "person",
+          "she",
+          "ticket",
+          "type",
+          "cashier"
+        ],
+        "matchedConcepts": [
+          "order",
+          "customer",
+          "delivery",
+          "know",
+          "ticket",
+          "type"
+        ],
+        "processVisualizerAlignedConcepts": [
+          "order"
+        ],
+        "matchedUiRefs": [
+          "order_overview",
+          "customer_overview",
+          "delivery_overview",
+          "know_overview",
+          "ticket_overview"
+        ],
+        "lexicalScore": 0.35294117647058826,
+        "covered": true
+      },
+      {
+        "id": "US30",
+        "story": "As a Cashier, I want to add the pickup time for a takeaway order, so that the kitchen knows when to start preparing the order.",
+        "storyConcepts": [
+          "pickuptime",
+          "preparingtheorder",
+          "order",
+          "knowwhen",
+          "kitchen",
+          "know",
+          "pickup",
+          "preparing",
+          "start",
+          "takeaway",
+          "time",
+          "when",
+          "cashier"
+        ],
+        "matchedConcepts": [
+          "pickuptime",
+          "order",
+          "know",
+          "pickup",
+          "time"
+        ],
+        "processVisualizerAlignedConcepts": [
+          "order"
+        ],
+        "matchedUiRefs": [
+          "order_overview",
+          "know_overview"
+        ],
+        "lexicalScore": 0.38461538461538464,
+        "covered": true
+      },
+      {
+        "id": "US31",
+        "story": "As a Cashier, I want to have a digital ticket sent to the kitchen, so that I do not have to walk physically to the kitchen.",
+        "storyConcepts": [
+          "kitchen",
+          "ticketsent",
+          "digital",
+          "not",
+          "physically",
+          "sent",
+          "ticket",
+          "walk",
+          "cashier"
+        ],
+        "matchedConcepts": [
+          "ticket"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "ticket_overview"
+        ],
+        "lexicalScore": 0.1111111111111111,
+        "covered": false
+      },
+      {
+        "id": "US32",
+        "story": "As a Cashier, I want to add the delivery address to the order, so that the delivery person knows where he needs to bring the order.",
+        "storyConcepts": [
+          "deliveryaddress",
+          "delivery",
+          "order",
+          "personknow",
+          "wherehe",
+          "address",
+          "bring",
+          "know",
+          "need",
+          "person",
+          "where",
+          "cashier"
+        ],
+        "matchedConcepts": [
+          "deliveryaddress",
+          "delivery",
+          "order",
+          "address",
+          "know"
+        ],
+        "processVisualizerAlignedConcepts": [
+          "order"
+        ],
+        "matchedUiRefs": [
+          "delivery_overview",
+          "order_overview",
+          "know_overview"
+        ],
+        "lexicalScore": 0.4166666666666667,
+        "covered": true
+      },
+      {
+        "id": "US33",
+        "story": "As a Cashier, I want to add the phone number to the order, so that the customer can be reached if there are problems with their order.",
+        "storyConcepts": [
+          "phonenumber",
+          "order",
+          "reachedif",
+          "customer",
+          "number",
+          "phone",
+          "problem",
+          "reached",
+          "there",
+          "cashier"
+        ],
+        "matchedConcepts": [
+          "phonenumber",
+          "order",
+          "customer",
+          "number",
+          "phone"
+        ],
+        "processVisualizerAlignedConcepts": [
+          "order"
+        ],
+        "matchedUiRefs": [
+          "order_overview",
+          "customer_overview"
+        ],
+        "lexicalScore": 0.5,
+        "covered": true
+      },
+      {
+        "id": "US34",
+        "story": "As a Cashier, I want to add the customer's name to the order in the case of takeaway, so it is clear for the customer for which order to pay.",
+        "storyConcepts": [
+          "customer",
+          "order",
+          "sname",
+          "case",
+          "clear",
+          "name",
+          "pay",
+          "takeaway",
+          "which",
+          "cashier"
+        ],
+        "matchedConcepts": [
+          "customer",
+          "order",
+          "name"
+        ],
+        "processVisualizerAlignedConcepts": [
+          "order"
+        ],
+        "matchedUiRefs": [
+          "customer_overview",
+          "order_overview"
+        ],
+        "lexicalScore": 0.3,
+        "covered": true
+      },
+      {
+        "id": "US35",
+        "story": "As a Cashier, I want to add special requests to a product they are concerned about, so that I can customize the order for the customer.",
+        "storyConcepts": [
+          "specialrequest",
+          "about",
+          "concerned",
+          "customer",
+          "customize",
+          "order",
+          "product",
+          "special",
+          "cashier"
+        ],
+        "matchedConcepts": [
+          "specialrequest",
+          "customer",
+          "order",
+          "product",
+          "special"
+        ],
+        "processVisualizerAlignedConcepts": [
+          "order"
+        ],
+        "matchedUiRefs": [
+          "customer_overview",
+          "order_overview",
+          "product_overview"
+        ],
+        "lexicalScore": 0.5555555555555556,
+        "covered": true
+      },
+      {
+        "id": "US36",
+        "story": "As a Cashier, I want to offer different payment methods, so that a customer has multiple options to pay for their order.",
+        "storyConcepts": [
+          "differentpayment",
+          "customer",
+          "different",
+          "method",
+          "multiple",
+          "offer",
+          "option",
+          "order",
+          "pay",
+          "payment",
+          "cashier"
+        ],
+        "matchedConcepts": [
+          "customer",
+          "method",
+          "order",
+          "payment"
+        ],
+        "processVisualizerAlignedConcepts": [
+          "order"
+        ],
+        "matchedUiRefs": [
+          "customer_overview",
+          "order_overview",
+          "payment_overview"
+        ],
+        "lexicalScore": 0.36363636363636365,
+        "covered": true
+      },
+      {
+        "id": "US37",
+        "story": "As a Cashier, I want to be able to add a tip to the price of the order with all possible payment options, so that there is no hassle for the customer to tip.",
+        "storyConcepts": [
+          "tip",
+          "nohassle",
+          "paymentoption",
+          "customer",
+          "hassle",
+          "option",
+          "order",
+          "payment",
+          "possible",
+          "price",
+          "there",
+          "cashier"
+        ],
+        "matchedConcepts": [
+          "tip",
+          "customer",
+          "order",
+          "payment",
+          "price"
+        ],
+        "processVisualizerAlignedConcepts": [
+          "order"
+        ],
+        "matchedUiRefs": [
+          "customer_overview",
+          "order_overview",
+          "payment_overview"
+        ],
+        "lexicalScore": 0.4166666666666667,
+        "covered": true
+      },
+      {
+        "id": "US38",
+        "story": "As a Cashier, I want to activate coupons during the order process, so that discounts can be added to the order.",
+        "storyConcepts": [
+          "order",
+          "couponduring",
+          "activate",
+          "added",
+          "coupon",
+          "discount",
+          "during",
+          "cashier",
+          "process"
+        ],
+        "matchedConcepts": [
+          "order",
+          "coupon"
+        ],
+        "processVisualizerAlignedConcepts": [
+          "order"
+        ],
+        "matchedUiRefs": [
+          "order_overview"
+        ],
+        "lexicalScore": 0.2222222222222222,
+        "covered": false
+      },
+      {
+        "id": "US39",
+        "story": "As a Restaurant Owner, I want to see the VAT of each order, so that I have an overview of the taxes.",
+        "storyConcepts": [
+          "each",
+          "order",
+          "taxe",
+          "vat",
+          "restaurant",
+          "owner"
+        ],
+        "matchedConcepts": [
+          "order",
+          "vat"
+        ],
+        "processVisualizerAlignedConcepts": [
+          "order"
+        ],
+        "matchedUiRefs": [
+          "order_overview"
+        ],
+        "lexicalScore": 0.3333333333333333,
+        "covered": true
+      },
+      {
+        "id": "US40",
+        "story": "As a Restaurant Owner, I want to see the sold products, so that I know what products to purchase for restocking the inventory.",
+        "storyConcepts": [
+          "product",
+          "whatproduct",
+          "inventory",
+          "know",
+          "purchase",
+          "restocking",
+          "sold",
+          "restaurant",
+          "owner",
+          "what"
+        ],
+        "matchedConcepts": [
+          "product",
+          "know"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "product_overview",
+          "know_overview"
+        ],
+        "lexicalScore": 0.2,
+        "covered": false
+      },
+      {
+        "id": "US41",
+        "story": "As a Restaurant Owner, I want to have an overview of the types of orders.",
+        "storyConcepts": [
+          "order",
+          "type",
+          "restaurant",
+          "owner"
+        ],
+        "matchedConcepts": [
+          "order",
+          "type"
+        ],
+        "processVisualizerAlignedConcepts": [
+          "order"
+        ],
+        "matchedUiRefs": [
+          "order_overview"
+        ],
+        "lexicalScore": 0.5,
+        "covered": true
+      },
+      {
+        "id": "US42",
+        "story": "As a Restaurant Owner, I want to have an overview of prices per order so that I have an insight into the daily revenue.",
+        "storyConcepts": [
+          "dailyrevenue",
+          "perorder",
+          "daily",
+          "insight",
+          "order",
+          "per",
+          "price",
+          "revenue",
+          "restaurant",
+          "owner"
+        ],
+        "matchedConcepts": [
+          "order",
+          "price"
+        ],
+        "processVisualizerAlignedConcepts": [
+          "order"
+        ],
+        "matchedUiRefs": [
+          "order_overview"
+        ],
+        "lexicalScore": 0.2,
+        "covered": false
+      },
+      {
+        "id": "US43",
+        "story": "As a Restaurant Owner, I want to search for specific orders if a customer has questions about an order.",
+        "storyConcepts": [
+          "order",
+          "orderif",
+          "about",
+          "customer",
+          "restaurant",
+          "owner",
+          "question"
+        ],
+        "matchedConcepts": [
+          "order",
+          "customer"
+        ],
+        "processVisualizerAlignedConcepts": [
+          "order"
+        ],
+        "matchedUiRefs": [
+          "order_overview",
+          "customer_overview"
+        ],
+        "lexicalScore": 0.2857142857142857,
+        "covered": false
+      },
+      {
+        "id": "US44",
+        "story": "As a Restaurant Owner, I want to fill in the number of tips received on a day by the restaurant and the delivery employees, so that this amount can be fairly distributed among all employees.",
+        "storyConcepts": [
+          "employee",
+          "deliveryemployee",
+          "fairlydistributed",
+          "thiamount",
+          "tipreceived",
+          "among",
+          "amount",
+          "day",
+          "delivery",
+          "distributed",
+          "fairly",
+          "fill",
+          "number",
+          "received",
+          "restaurant",
+          "thi",
+          "tip",
+          "owner"
+        ],
+        "matchedConcepts": [
+          "amount",
+          "delivery",
+          "number",
+          "tip"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "delivery_overview"
+        ],
+        "lexicalScore": 0.2222222222222222,
+        "covered": false
+      },
+      {
+        "id": "US45",
+        "story": "As a Restaurant Owner, I want to have cashier accounts, so that I can check their balance at the end of a shift.",
+        "storyConcepts": [
+          "balanceat",
+          "cashieraccount",
+          "account",
+          "balance",
+          "cashier",
+          "check",
+          "end",
+          "shift",
+          "restaurant",
+          "owner"
+        ],
+        "matchedConcepts": [],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [],
+        "lexicalScore": 0,
+        "covered": false
+      },
+      {
+        "id": "US46",
+        "story": "As a Restaurant Owner, I want to fill in the amount of cash the delivery people receive per day, so that this value can be compared with the expected revenue of home delivery orders per day.",
+        "storyConcepts": [
+          "day",
+          "delivery",
+          "per",
+          "deliverypeople",
+          "orderper",
+          "amount",
+          "cash",
+          "compared",
+          "expected",
+          "fill",
+          "order",
+          "people",
+          "revenue",
+          "thi",
+          "restaurant",
+          "owner"
+        ],
+        "matchedConcepts": [
+          "delivery",
+          "amount",
+          "order"
+        ],
+        "processVisualizerAlignedConcepts": [
+          "order"
+        ],
+        "matchedUiRefs": [
+          "delivery_overview",
+          "order_overview"
+        ],
+        "lexicalScore": 0.1875,
+        "covered": false
+      },
+      {
+        "id": "US47",
+        "story": "As a Home Delivery Person, I want to have the address printed on the ticket, so that I can directly type the address into the navigation system.",
+        "storyConcepts": [
+          "address",
+          "directlytype",
+          "navigationsystem",
+          "directly",
+          "navigation",
+          "printed",
+          "ticket",
+          "type",
+          "delivery",
+          "person",
+          "system"
+        ],
+        "matchedConcepts": [
+          "address",
+          "ticket",
+          "type",
+          "delivery"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "ticket_overview",
+          "delivery_overview"
+        ],
+        "lexicalScore": 0.36363636363636365,
+        "covered": true
+      },
+      {
+        "id": "US48",
+        "story": "As a Home Delivery Person, I want to have the delivery address before the order is finished, so that I can combine orders that need to be delivered in the same area.",
+        "storyConcepts": [
+          "order",
+          "addressbefore",
+          "combineorder",
+          "address",
+          "area",
+          "before",
+          "combine",
+          "delivered",
+          "delivery",
+          "finished",
+          "need",
+          "same",
+          "person"
+        ],
+        "matchedConcepts": [
+          "order",
+          "address",
+          "delivery"
+        ],
+        "processVisualizerAlignedConcepts": [
+          "order"
+        ],
+        "matchedUiRefs": [
+          "order_overview",
+          "delivery_overview"
+        ],
+        "lexicalScore": 0.23076923076923078,
+        "covered": false
+      },
+      {
+        "id": "US49",
+        "story": "As a Home Delivery Person, I want to have the order price on a printed ticket, so that I know what the customers have to pay me.",
+        "storyConcepts": [
+          "customer",
+          "know",
+          "order",
+          "pay",
+          "price",
+          "printed",
+          "ticket",
+          "delivery",
+          "person",
+          "what"
+        ],
+        "matchedConcepts": [
+          "customer",
+          "know",
+          "order",
+          "price",
+          "ticket",
+          "delivery"
+        ],
+        "processVisualizerAlignedConcepts": [
+          "order"
+        ],
+        "matchedUiRefs": [
+          "customer_overview",
+          "know_overview",
+          "order_overview",
+          "ticket_overview",
+          "delivery_overview"
+        ],
+        "lexicalScore": 0.6,
+        "covered": true
+      },
+      {
+        "id": "US50",
+        "story": "As a Home Delivery Person, I want to know the phone number of the customer on a printed ticket, so that I can call the customer if I have some problems delivering the food to a certain location.",
+        "storyConcepts": [
+          "customer",
+          "customerif",
+          "printedticket",
+          "someproblem",
+          "call",
+          "certain",
+          "delivering",
+          "food",
+          "know",
+          "location",
+          "number",
+          "phone",
+          "printed",
+          "problem",
+          "some",
+          "ticket",
+          "delivery",
+          "person"
+        ],
+        "matchedConcepts": [
+          "customer",
+          "know",
+          "number",
+          "phone",
+          "ticket",
+          "delivery"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "customer_overview",
+          "know_overview",
+          "ticket_overview",
+          "delivery_overview"
+        ],
+        "lexicalScore": 0.3333333333333333,
+        "covered": true
+      }
+    ]
+  },
+  "coverageGate": {
+    "enabled": false,
+    "minimum": null,
+    "score": 0.5,
+    "passed": true
+  },
+  "ollama": {
+    "model": "gemma4:e4b",
+    "totalDuration": 162641796916,
+    "loadDuration": 5753735000,
+    "promptEvalCount": 6059,
+    "evalCount": 2247,
+    "numCtx": 8192,
+    "numPredict": 6144,
+    "likelyPromptTruncated": false
+  },
+  "visualNarrator": {
+    "enabled": true,
+    "status": "completed",
+    "durationMs": 6213,
+    "command": "/Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/visual-narrator/.venv/bin/python /Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/pipeline/scripts/run_visual_narrator.py --input /Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/artifacts/practical-performance/20260528-165228/inputs/fish_chips/user-stories.txt --system-name PracticalPerf_fish_chips_Stability",
+    "artifacts": {
+      "ontologyPath": "/Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/artifacts/practical-performance/20260528-165228/stability/fish_chips/run-03/visual-narrator-ontology.omn",
+      "storiesPath": "/Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/artifacts/practical-performance/20260528-165228/stability/fish_chips/run-03/visual-narrator-stories.json",
+      "summaryPath": "/Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/artifacts/practical-performance/20260528-165228/stability/fish_chips/run-03/visual-narrator-summary.json",
+      "rawPath": "/Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/artifacts/practical-performance/20260528-165228/stability/fish_chips/run-03/visual-narrator-result.json"
+    },
+    "warnings": []
+  },
+  "processVisualizer": {
+    "enabled": true,
+    "status": "completed",
+    "durationMs": 296126,
+    "command": "/Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/process-visualizer/.venv/bin/python /Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/pipeline/scripts/run_process_visualizer.py --input /Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/artifacts/practical-performance/20260528-165228/inputs/fish_chips/user-stories.txt --output-dir /Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/artifacts/practical-performance/20260528-165228/stability/fish_chips/run-03 --model llama3 --ollama-url http://127.0.0.1:11434",
+    "artifacts": {
+      "summaryPath": "/Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/artifacts/practical-performance/20260528-165228/stability/fish_chips/run-03/process-visualizer-summary.json",
+      "rawPath": "/Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/artifacts/practical-performance/20260528-165228/stability/fish_chips/run-03/process-visualizer-result.json",
+      "graphSourcePath": "/Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/artifacts/practical-performance/20260528-165228/stability/fish_chips/run-03/process-visualizer-run/process-visualizer.gv",
+      "graphImagePath": "/Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/artifacts/practical-performance/20260528-165228/stability/fish_chips/run-03/process-visualizer-run/process-visualizer.png",
+      "logsDir": "/Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/artifacts/practical-performance/20260528-165228/stability/fish_chips/run-03/process-visualizer-run/output_logs"
+    },
+    "warnings": []
+  },
+  "domainModelReview": {
+    "enabled": true,
+    "status": "llm_unavailable",
+    "droppedEntities": [],
+    "droppedAssociations": [],
+    "repairedAssociations": [],
+    "addedAssociations": [],
+    "warnings": []
+  },
+  "planDiagnostics": {
+    "preprocessing": {
+      "visualNarratorEnabled": true,
+      "visualNarratorStatus": "completed",
+      "processVisualizerEnabled": true,
+      "processVisualizerStatus": "completed"
+    },
+    "domainModelReview": {
+      "enabled": true,
+      "status": "llm_unavailable",
+      "droppedEntities": [],
+      "droppedAssociations": [],
+      "repairedAssociations": [],
+      "addedAssociations": [],
+      "warnings": []
+    },
+    "referenceAppBaseline": {
+      "source": "reference-app-baseline",
+      "capabilities": [
+        "searchable_data_management",
+        "workflow_support",
+        "role_separated_views"
+      ],
+      "archetypes": [
+        "management",
+        "tasks",
+        "role_separation"
+      ],
+      "recommendedWidgetFamilies": [
+        "data_grid",
+        "data_grid_filters",
+        "workflow_commons"
+      ]
+    },
+    "capabilityRequirements": [],
+    "storyCoverage": {
+      "entries": [
+        {
+          "id": "US01",
+          "story": "As a Kitchen Employee, I want to see the orders with their status, so that I am aware of the progress of each order.",
+          "storyConcepts": [
+            "order",
+            "aware",
+            "each",
+            "statu",
+            "kitchen",
+            "employee",
+            "progress"
+          ],
+          "matchedConcepts": [
+            "order",
+            "statu"
+          ],
+          "processVisualizerAlignedConcepts": [
+            "order"
+          ],
+          "matchedUiRefs": [
+            "order_overview"
+          ],
+          "lexicalScore": 0.2857142857142857,
+          "covered": false
+        },
+        {
+          "id": "US02",
+          "story": "As a Kitchen Employee, I want to have an overview of all orders at a glance, so that I cannot miss any relevant orders.",
+          "storyConcepts": [
+            "order",
+            "missany",
+            "orderat",
+            "relevantorder",
+            "any",
+            "cannot",
+            "glance",
+            "miss",
+            "relevant",
+            "kitchen",
+            "employee"
+          ],
+          "matchedConcepts": [
+            "order"
+          ],
+          "processVisualizerAlignedConcepts": [
+            "order"
+          ],
+          "matchedUiRefs": [
+            "order_overview"
+          ],
+          "lexicalScore": 0.09090909090909091,
+          "covered": false
+        },
+        {
+          "id": "US03",
+          "story": "As a Kitchen Employee, I want to receive only the products of an order, so that I do not get confused by other irrelevant products.",
+          "storyConcepts": [
+            "product",
+            "notget",
+            "otherirrelevant",
+            "confused",
+            "get",
+            "irrelevant",
+            "not",
+            "only",
+            "order",
+            "other",
+            "kitchen",
+            "employee"
+          ],
+          "matchedConcepts": [
+            "product",
+            "order"
+          ],
+          "processVisualizerAlignedConcepts": [
+            "order"
+          ],
+          "matchedUiRefs": [
+            "product_overview",
+            "order_overview"
+          ],
+          "lexicalScore": 0.16666666666666666,
+          "covered": false
+        },
+        {
+          "id": "US04",
+          "story": "As a Kitchen Employee, I want to see special requests to be shown together with the product they are concerned about, so that I know if I have to prepare a product in a special way",
+          "storyConcepts": [
+            "product",
+            "special",
+            "showntogether",
+            "specialrequest",
+            "about",
+            "concerned",
+            "know",
+            "prepare",
+            "shown",
+            "together",
+            "way",
+            "kitchen",
+            "employee"
+          ],
+          "matchedConcepts": [
+            "product",
+            "special",
+            "specialrequest",
+            "know"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "product_overview",
+            "know_overview"
+          ],
+          "lexicalScore": 0.3076923076923077,
+          "covered": true
+        },
+        {
+          "id": "US05",
+          "story": "As a Kitchen Employee, I want to have the order number shown together with its related products, so that I am aware of which order the products are coming from.",
+          "storyConcepts": [
+            "order",
+            "product",
+            "itsrelated",
+            "numbershown",
+            "aware",
+            "coming",
+            "its",
+            "number",
+            "related",
+            "shown",
+            "together",
+            "which",
+            "kitchen",
+            "employee"
+          ],
+          "matchedConcepts": [
+            "order",
+            "product",
+            "number"
+          ],
+          "processVisualizerAlignedConcepts": [
+            "order"
+          ],
+          "matchedUiRefs": [
+            "order_overview",
+            "product_overview"
+          ],
+          "lexicalScore": 0.21428571428571427,
+          "covered": false
+        },
+        {
+          "id": "US06",
+          "story": "As a Kitchen Employee, I want to receive a notification when a new order is received, so that I am aware of the new order.",
+          "storyConcepts": [
+            "order",
+            "aware",
+            "notification",
+            "received",
+            "when",
+            "kitchen",
+            "employee"
+          ],
+          "matchedConcepts": [
+            "order"
+          ],
+          "processVisualizerAlignedConcepts": [
+            "order"
+          ],
+          "matchedUiRefs": [
+            "order_overview"
+          ],
+          "lexicalScore": 0.14285714285714285,
+          "covered": false
+        },
+        {
+          "id": "US07",
+          "story": "As a Kitchen Employee, I want to receive a notification if the customer makes changes after the order is already paid, so that I know that there are changes to an order.",
+          "storyConcepts": [
+            "change",
+            "order",
+            "changeafter",
+            "customermake",
+            "after",
+            "already",
+            "customer",
+            "know",
+            "make",
+            "notification",
+            "paid",
+            "there",
+            "kitchen",
+            "employee"
+          ],
+          "matchedConcepts": [
+            "change",
+            "order",
+            "customer",
+            "know",
+            "paid"
+          ],
+          "processVisualizerAlignedConcepts": [
+            "order"
+          ],
+          "matchedUiRefs": [
+            "change_overview",
+            "order_overview",
+            "customer_overview",
+            "know_overview"
+          ],
+          "lexicalScore": 0.35714285714285715,
+          "covered": true
+        },
+        {
+          "id": "US08",
+          "story": "As a Ticket Master, I want to label new orders as 'incoming orders', so that incoming orders can be separated from orders with a different status.",
+          "storyConcepts": [
+            "order",
+            "incomingorder",
+            "incoming",
+            "different",
+            "label",
+            "separated",
+            "statu",
+            "ticket",
+            "master"
+          ],
+          "matchedConcepts": [
+            "order",
+            "statu",
+            "ticket"
+          ],
+          "processVisualizerAlignedConcepts": [
+            "order"
+          ],
+          "matchedUiRefs": [
+            "order_overview",
+            "ticket_overview"
+          ],
+          "lexicalScore": 0.3333333333333333,
+          "covered": true
+        },
+        {
+          "id": "US09",
+          "story": "As a Ticket Master, I want to label a product as 'current orders' at the moment the preparation of the products is started, so that current orders can be separated from orders with a different status.",
+          "storyConcepts": [
+            "order",
+            "current",
+            "product",
+            "different",
+            "label",
+            "moment",
+            "preparation",
+            "separated",
+            "started",
+            "statu",
+            "ticket",
+            "master"
+          ],
+          "matchedConcepts": [
+            "order",
+            "product",
+            "statu",
+            "ticket"
+          ],
+          "processVisualizerAlignedConcepts": [
+            "order"
+          ],
+          "matchedUiRefs": [
+            "order_overview",
+            "product_overview",
+            "ticket_overview"
+          ],
+          "lexicalScore": 0.3333333333333333,
+          "covered": true
+        },
+        {
+          "id": "US10",
+          "story": "As a Ticket Master, I want to label a product as 'finished orders' after the preparation of the products is finished, so that finished orders can be separated from orders with a different status.",
+          "storyConcepts": [
+            "finished",
+            "order",
+            "finishedorder",
+            "product",
+            "after",
+            "different",
+            "label",
+            "preparation",
+            "separated",
+            "statu",
+            "ticket",
+            "master"
+          ],
+          "matchedConcepts": [
+            "order",
+            "product",
+            "statu",
+            "ticket"
+          ],
+          "processVisualizerAlignedConcepts": [
+            "order"
+          ],
+          "matchedUiRefs": [
+            "order_overview",
+            "product_overview",
+            "ticket_overview"
+          ],
+          "lexicalScore": 0.3333333333333333,
+          "covered": true
+        },
+        {
+          "id": "US11",
+          "story": "As a Ticket Master, I want to label products as 'scheduled orders' if their requested time is not yet within ten minutes, so that scheduled orders can be separated from orders with a different status.",
+          "storyConcepts": [
+            "order",
+            "scheduledorder",
+            "scheduled",
+            "requestedtime",
+            "tenminute",
+            "yetwithin",
+            "different",
+            "label",
+            "minute",
+            "not",
+            "product",
+            "requested",
+            "separated",
+            "statu",
+            "ten",
+            "time",
+            "within",
+            "yet",
+            "ticket",
+            "master"
+          ],
+          "matchedConcepts": [
+            "order",
+            "scheduled",
+            "product",
+            "statu",
+            "time",
+            "ticket"
+          ],
+          "processVisualizerAlignedConcepts": [
+            "order"
+          ],
+          "matchedUiRefs": [
+            "order_overview",
+            "product_overview",
+            "ticket_overview"
+          ],
+          "lexicalScore": 0.3,
+          "covered": true
+        },
+        {
+          "id": "US12",
+          "story": "As a Ticket Master, I want to have an overview of all the incoming orders, so that I know how many orders should still be prepared.",
+          "storyConcepts": [
+            "order",
+            "howmany",
+            "ordershould",
+            "how",
+            "incoming",
+            "know",
+            "many",
+            "prepared",
+            "should",
+            "still",
+            "ticket",
+            "master"
+          ],
+          "matchedConcepts": [
+            "order",
+            "know",
+            "ticket"
+          ],
+          "processVisualizerAlignedConcepts": [
+            "order"
+          ],
+          "matchedUiRefs": [
+            "order_overview",
+            "know_overview",
+            "ticket_overview"
+          ],
+          "lexicalScore": 0.25,
+          "covered": false
+        },
+        {
+          "id": "US13",
+          "story": "As a Ticket Master, I want to have an overview of all orders that are currently made by the kitchen, so that I know how many orders are in progress.",
+          "storyConcepts": [
+            "order",
+            "howmany",
+            "currently",
+            "how",
+            "kitchen",
+            "know",
+            "made",
+            "many",
+            "ticket",
+            "master",
+            "progress"
+          ],
+          "matchedConcepts": [
+            "order",
+            "know",
+            "ticket"
+          ],
+          "processVisualizerAlignedConcepts": [
+            "order"
+          ],
+          "matchedUiRefs": [
+            "order_overview",
+            "know_overview",
+            "ticket_overview"
+          ],
+          "lexicalScore": 0.2727272727272727,
+          "covered": false
+        },
+        {
+          "id": "US14",
+          "story": "As a Ticket Master, I want to have an overview of all orders that are completed by the kitchen, so that I know when I should start packing an order.",
+          "storyConcepts": [
+            "packinganorder",
+            "order",
+            "shouldstart",
+            "completed",
+            "kitchen",
+            "know",
+            "packing",
+            "should",
+            "start",
+            "when",
+            "ticket",
+            "master"
+          ],
+          "matchedConcepts": [
+            "order",
+            "know",
+            "ticket"
+          ],
+          "processVisualizerAlignedConcepts": [
+            "order"
+          ],
+          "matchedUiRefs": [
+            "order_overview",
+            "know_overview",
+            "ticket_overview"
+          ],
+          "lexicalScore": 0.25,
+          "covered": false
+        },
+        {
+          "id": "US15",
+          "story": "As a Ticket Master, I want to have an overview of all scheduled orders, so that I have an insight into the orders that are scheduled for a later time in the day.",
+          "storyConcepts": [
+            "order",
+            "scheduled",
+            "latertime",
+            "scheduledorder",
+            "day",
+            "insight",
+            "later",
+            "time",
+            "ticket",
+            "master"
+          ],
+          "matchedConcepts": [
+            "order",
+            "scheduled",
+            "time",
+            "ticket"
+          ],
+          "processVisualizerAlignedConcepts": [
+            "order"
+          ],
+          "matchedUiRefs": [
+            "order_overview",
+            "ticket_overview"
+          ],
+          "lexicalScore": 0.4,
+          "covered": true
+        },
+        {
+          "id": "US16",
+          "story": "As a Ticket Master, I want to separate the scheduled orders from the other statuses, so that the focus will be on the most relevant orders.",
+          "storyConcepts": [
+            "order",
+            "mostrelevant",
+            "focu",
+            "most",
+            "other",
+            "relevant",
+            "scheduled",
+            "separate",
+            "statuse",
+            "will",
+            "ticket",
+            "master"
+          ],
+          "matchedConcepts": [
+            "order",
+            "scheduled",
+            "ticket"
+          ],
+          "processVisualizerAlignedConcepts": [
+            "order"
+          ],
+          "matchedUiRefs": [
+            "order_overview",
+            "ticket_overview"
+          ],
+          "lexicalScore": 0.25,
+          "covered": false
+        },
+        {
+          "id": "US17",
+          "story": "As a Ticket Master, I want to see the statuses of the products of an order, so that I have a good insight into the progress of an order.",
+          "storyConcepts": [
+            "order",
+            "good",
+            "insight",
+            "product",
+            "statuse",
+            "ticket",
+            "master",
+            "progress"
+          ],
+          "matchedConcepts": [
+            "order",
+            "product",
+            "ticket"
+          ],
+          "processVisualizerAlignedConcepts": [
+            "order"
+          ],
+          "matchedUiRefs": [
+            "order_overview",
+            "product_overview",
+            "ticket_overview"
+          ],
+          "lexicalScore": 0.375,
+          "covered": true
+        },
+        {
+          "id": "US18",
+          "story": "As a Ticket Master, I want to see matching colors with the status of each product, so that the status of an order is easier to see at a glance.",
+          "storyConcepts": [
+            "statu",
+            "matchingcolor",
+            "color",
+            "each",
+            "easier",
+            "glance",
+            "matching",
+            "order",
+            "product",
+            "ticket",
+            "master"
+          ],
+          "matchedConcepts": [
+            "statu",
+            "color",
+            "order",
+            "product",
+            "ticket"
+          ],
+          "processVisualizerAlignedConcepts": [
+            "order"
+          ],
+          "matchedUiRefs": [
+            "order_overview",
+            "product_overview",
+            "ticket_overview"
+          ],
+          "lexicalScore": 0.45454545454545453,
+          "covered": true
+        },
+        {
+          "id": "US19",
+          "story": "As a Ticket Master, I want to see the order type, so that I know if I need to bring the order to the customer or hand it to our delivery person.",
+          "storyConcepts": [
+            "order",
+            "bring",
+            "customer",
+            "delivery",
+            "hand",
+            "know",
+            "need",
+            "person",
+            "type",
+            "ticket",
+            "master"
+          ],
+          "matchedConcepts": [
+            "order",
+            "customer",
+            "delivery",
+            "know",
+            "type",
+            "ticket"
+          ],
+          "processVisualizerAlignedConcepts": [
+            "order"
+          ],
+          "matchedUiRefs": [
+            "order_overview",
+            "customer_overview",
+            "delivery_overview",
+            "know_overview",
+            "ticket_overview"
+          ],
+          "lexicalScore": 0.5454545454545454,
+          "covered": true
+        },
+        {
+          "id": "US20",
+          "story": "As a Ticket Master, I want to operate the screen with a touchscreen, so that it is easy to use.",
+          "storyConcepts": [
+            "easy",
+            "operate",
+            "screen",
+            "touchscreen",
+            "ticket",
+            "master"
+          ],
+          "matchedConcepts": [
+            "ticket"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "ticket_overview"
+          ],
+          "lexicalScore": 0.16666666666666666,
+          "covered": false
+        },
+        {
+          "id": "US21",
+          "story": "As a Ticket Master, I want to select orders, so that I can make changes to their status.",
+          "storyConcepts": [
+            "makechange",
+            "change",
+            "make",
+            "order",
+            "statu",
+            "ticket",
+            "master"
+          ],
+          "matchedConcepts": [
+            "change",
+            "order",
+            "statu",
+            "ticket"
+          ],
+          "processVisualizerAlignedConcepts": [
+            "order"
+          ],
+          "matchedUiRefs": [
+            "change_overview",
+            "order_overview",
+            "ticket_overview"
+          ],
+          "lexicalScore": 0.5714285714285714,
+          "covered": true
+        },
+        {
+          "id": "US22",
+          "story": "As a Ticket Master, I want to delete an order, so that no delivered orders are being shown and I can keep a better overview of the orders being in progress.",
+          "storyConcepts": [
+            "order",
+            "being",
+            "beingshown",
+            "nodelivered",
+            "better",
+            "delivered",
+            "keep",
+            "shown",
+            "ticket",
+            "master",
+            "progress"
+          ],
+          "matchedConcepts": [
+            "order",
+            "ticket"
+          ],
+          "processVisualizerAlignedConcepts": [
+            "order"
+          ],
+          "matchedUiRefs": [
+            "order_overview",
+            "ticket_overview"
+          ],
+          "lexicalScore": 0.18181818181818182,
+          "covered": false
+        },
+        {
+          "id": "US23",
+          "story": "As a Customer, I want to have a screen during the ordering process, so that I can review the order.",
+          "storyConcepts": [
+            "orderingprocess",
+            "during",
+            "order",
+            "ordering",
+            "screen",
+            "customer",
+            "process"
+          ],
+          "matchedConcepts": [
+            "order",
+            "customer"
+          ],
+          "processVisualizerAlignedConcepts": [
+            "order"
+          ],
+          "matchedUiRefs": [
+            "order_overview",
+            "customer_overview"
+          ],
+          "lexicalScore": 0.2857142857142857,
+          "covered": false
+        },
+        {
+          "id": "US24",
+          "story": "As a Customer, I want to be able to request a confirmation of payment, so that I am able to declare the costs or use it for my own administration.",
+          "storyConcepts": [
+            "ownadministration",
+            "administration",
+            "confirmation",
+            "cost",
+            "declare",
+            "own",
+            "payment",
+            "customer"
+          ],
+          "matchedConcepts": [
+            "payment",
+            "customer"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "payment_overview",
+            "customer_overview"
+          ],
+          "lexicalScore": 0.25,
+          "covered": false
+        },
+        {
+          "id": "US25",
+          "story": "As a Cashier, I want to have a physical ticket that shows the relevant information being printed automatically for the customer, so that I do not have to do that manually.",
+          "storyConcepts": [
+            "beingprinted",
+            "relevantinformation",
+            "automatically",
+            "being",
+            "customer",
+            "manually",
+            "not",
+            "physical",
+            "printed",
+            "relevant",
+            "ticket",
+            "cashier"
+          ],
+          "matchedConcepts": [
+            "customer",
+            "ticket"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "customer_overview",
+            "ticket_overview"
+          ],
+          "lexicalScore": 0.16666666666666666,
+          "covered": false
+        },
+        {
+          "id": "US26",
+          "story": "As a Cashier, I want to print a physical ticket that shows the relevant order details, so the customer has an insight into his order, and there will be no misunderstanding when the customer receives his order.",
+          "storyConcepts": [
+            "order",
+            "customer",
+            "his",
+            "customerreceive",
+            "hisorder",
+            "nomisunderstanding",
+            "relevantorder",
+            "insight",
+            "misunderstanding",
+            "physical",
+            "print",
+            "relevant",
+            "there",
+            "ticket",
+            "when",
+            "will",
+            "cashier"
+          ],
+          "matchedConcepts": [
+            "order",
+            "customer",
+            "ticket"
+          ],
+          "processVisualizerAlignedConcepts": [
+            "order"
+          ],
+          "matchedUiRefs": [
+            "order_overview",
+            "customer_overview",
+            "ticket_overview"
+          ],
+          "lexicalScore": 0.17647058823529413,
+          "covered": false
+        },
+        {
+          "id": "US27",
+          "story": "As a Cashier, I want to make changes during the order, so that a misunderstanding with the customer or a mistake from me can be resolved.",
+          "storyConcepts": [
+            "changeduring",
+            "change",
+            "customer",
+            "during",
+            "make",
+            "mistake",
+            "misunderstanding",
+            "order",
+            "resolved",
+            "cashier"
+          ],
+          "matchedConcepts": [
+            "change",
+            "customer",
+            "order"
+          ],
+          "processVisualizerAlignedConcepts": [
+            "order"
+          ],
+          "matchedUiRefs": [
+            "change_overview",
+            "customer_overview",
+            "order_overview"
+          ],
+          "lexicalScore": 0.3,
+          "covered": true
+        },
+        {
+          "id": "US28",
+          "story": "As a Cashier, I want to make changes after the order has been processed, so that the customer can make last-minute changes.",
+          "storyConcepts": [
+            "change",
+            "make",
+            "changeafter",
+            "minutechange",
+            "after",
+            "been",
+            "customer",
+            "last",
+            "minute",
+            "order",
+            "processed",
+            "cashier"
+          ],
+          "matchedConcepts": [
+            "change",
+            "customer",
+            "order"
+          ],
+          "processVisualizerAlignedConcepts": [
+            "order"
+          ],
+          "matchedUiRefs": [
+            "change_overview",
+            "customer_overview",
+            "order_overview"
+          ],
+          "lexicalScore": 0.25,
+          "covered": false
+        },
+        {
+          "id": "US29",
+          "story": "As a Cashier, I want to add the type of order, so that the Ticket Master knows if he/she needs to hand the order directly to the customer or the delivery person.",
+          "storyConcepts": [
+            "order",
+            "deliveryperson",
+            "ifhe",
+            "masterknow",
+            "sheneed",
+            "customer",
+            "delivery",
+            "directly",
+            "hand",
+            "know",
+            "master",
+            "need",
+            "person",
+            "she",
+            "ticket",
+            "type",
+            "cashier"
+          ],
+          "matchedConcepts": [
+            "order",
+            "customer",
+            "delivery",
+            "know",
+            "ticket",
+            "type"
+          ],
+          "processVisualizerAlignedConcepts": [
+            "order"
+          ],
+          "matchedUiRefs": [
+            "order_overview",
+            "customer_overview",
+            "delivery_overview",
+            "know_overview",
+            "ticket_overview"
+          ],
+          "lexicalScore": 0.35294117647058826,
+          "covered": true
+        },
+        {
+          "id": "US30",
+          "story": "As a Cashier, I want to add the pickup time for a takeaway order, so that the kitchen knows when to start preparing the order.",
+          "storyConcepts": [
+            "pickuptime",
+            "preparingtheorder",
+            "order",
+            "knowwhen",
+            "kitchen",
+            "know",
+            "pickup",
+            "preparing",
+            "start",
+            "takeaway",
+            "time",
+            "when",
+            "cashier"
+          ],
+          "matchedConcepts": [
+            "pickuptime",
+            "order",
+            "know",
+            "pickup",
+            "time"
+          ],
+          "processVisualizerAlignedConcepts": [
+            "order"
+          ],
+          "matchedUiRefs": [
+            "order_overview",
+            "know_overview"
+          ],
+          "lexicalScore": 0.38461538461538464,
+          "covered": true
+        },
+        {
+          "id": "US31",
+          "story": "As a Cashier, I want to have a digital ticket sent to the kitchen, so that I do not have to walk physically to the kitchen.",
+          "storyConcepts": [
+            "kitchen",
+            "ticketsent",
+            "digital",
+            "not",
+            "physically",
+            "sent",
+            "ticket",
+            "walk",
+            "cashier"
+          ],
+          "matchedConcepts": [
+            "ticket"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "ticket_overview"
+          ],
+          "lexicalScore": 0.1111111111111111,
+          "covered": false
+        },
+        {
+          "id": "US32",
+          "story": "As a Cashier, I want to add the delivery address to the order, so that the delivery person knows where he needs to bring the order.",
+          "storyConcepts": [
+            "deliveryaddress",
+            "delivery",
+            "order",
+            "personknow",
+            "wherehe",
+            "address",
+            "bring",
+            "know",
+            "need",
+            "person",
+            "where",
+            "cashier"
+          ],
+          "matchedConcepts": [
+            "deliveryaddress",
+            "delivery",
+            "order",
+            "address",
+            "know"
+          ],
+          "processVisualizerAlignedConcepts": [
+            "order"
+          ],
+          "matchedUiRefs": [
+            "delivery_overview",
+            "order_overview",
+            "know_overview"
+          ],
+          "lexicalScore": 0.4166666666666667,
+          "covered": true
+        },
+        {
+          "id": "US33",
+          "story": "As a Cashier, I want to add the phone number to the order, so that the customer can be reached if there are problems with their order.",
+          "storyConcepts": [
+            "phonenumber",
+            "order",
+            "reachedif",
+            "customer",
+            "number",
+            "phone",
+            "problem",
+            "reached",
+            "there",
+            "cashier"
+          ],
+          "matchedConcepts": [
+            "phonenumber",
+            "order",
+            "customer",
+            "number",
+            "phone"
+          ],
+          "processVisualizerAlignedConcepts": [
+            "order"
+          ],
+          "matchedUiRefs": [
+            "order_overview",
+            "customer_overview"
+          ],
+          "lexicalScore": 0.5,
+          "covered": true
+        },
+        {
+          "id": "US34",
+          "story": "As a Cashier, I want to add the customer's name to the order in the case of takeaway, so it is clear for the customer for which order to pay.",
+          "storyConcepts": [
+            "customer",
+            "order",
+            "sname",
+            "case",
+            "clear",
+            "name",
+            "pay",
+            "takeaway",
+            "which",
+            "cashier"
+          ],
+          "matchedConcepts": [
+            "customer",
+            "order",
+            "name"
+          ],
+          "processVisualizerAlignedConcepts": [
+            "order"
+          ],
+          "matchedUiRefs": [
+            "customer_overview",
+            "order_overview"
+          ],
+          "lexicalScore": 0.3,
+          "covered": true
+        },
+        {
+          "id": "US35",
+          "story": "As a Cashier, I want to add special requests to a product they are concerned about, so that I can customize the order for the customer.",
+          "storyConcepts": [
+            "specialrequest",
+            "about",
+            "concerned",
+            "customer",
+            "customize",
+            "order",
+            "product",
+            "special",
+            "cashier"
+          ],
+          "matchedConcepts": [
+            "specialrequest",
+            "customer",
+            "order",
+            "product",
+            "special"
+          ],
+          "processVisualizerAlignedConcepts": [
+            "order"
+          ],
+          "matchedUiRefs": [
+            "customer_overview",
+            "order_overview",
+            "product_overview"
+          ],
+          "lexicalScore": 0.5555555555555556,
+          "covered": true
+        },
+        {
+          "id": "US36",
+          "story": "As a Cashier, I want to offer different payment methods, so that a customer has multiple options to pay for their order.",
+          "storyConcepts": [
+            "differentpayment",
+            "customer",
+            "different",
+            "method",
+            "multiple",
+            "offer",
+            "option",
+            "order",
+            "pay",
+            "payment",
+            "cashier"
+          ],
+          "matchedConcepts": [
+            "customer",
+            "method",
+            "order",
+            "payment"
+          ],
+          "processVisualizerAlignedConcepts": [
+            "order"
+          ],
+          "matchedUiRefs": [
+            "customer_overview",
+            "order_overview",
+            "payment_overview"
+          ],
+          "lexicalScore": 0.36363636363636365,
+          "covered": true
+        },
+        {
+          "id": "US37",
+          "story": "As a Cashier, I want to be able to add a tip to the price of the order with all possible payment options, so that there is no hassle for the customer to tip.",
+          "storyConcepts": [
+            "tip",
+            "nohassle",
+            "paymentoption",
+            "customer",
+            "hassle",
+            "option",
+            "order",
+            "payment",
+            "possible",
+            "price",
+            "there",
+            "cashier"
+          ],
+          "matchedConcepts": [
+            "tip",
+            "customer",
+            "order",
+            "payment",
+            "price"
+          ],
+          "processVisualizerAlignedConcepts": [
+            "order"
+          ],
+          "matchedUiRefs": [
+            "customer_overview",
+            "order_overview",
+            "payment_overview"
+          ],
+          "lexicalScore": 0.4166666666666667,
+          "covered": true
+        },
+        {
+          "id": "US38",
+          "story": "As a Cashier, I want to activate coupons during the order process, so that discounts can be added to the order.",
+          "storyConcepts": [
+            "order",
+            "couponduring",
+            "activate",
+            "added",
+            "coupon",
+            "discount",
+            "during",
+            "cashier",
+            "process"
+          ],
+          "matchedConcepts": [
+            "order",
+            "coupon"
+          ],
+          "processVisualizerAlignedConcepts": [
+            "order"
+          ],
+          "matchedUiRefs": [
+            "order_overview"
+          ],
+          "lexicalScore": 0.2222222222222222,
+          "covered": false
+        },
+        {
+          "id": "US39",
+          "story": "As a Restaurant Owner, I want to see the VAT of each order, so that I have an overview of the taxes.",
+          "storyConcepts": [
+            "each",
+            "order",
+            "taxe",
+            "vat",
+            "restaurant",
+            "owner"
+          ],
+          "matchedConcepts": [
+            "order",
+            "vat"
+          ],
+          "processVisualizerAlignedConcepts": [
+            "order"
+          ],
+          "matchedUiRefs": [
+            "order_overview"
+          ],
+          "lexicalScore": 0.3333333333333333,
+          "covered": true
+        },
+        {
+          "id": "US40",
+          "story": "As a Restaurant Owner, I want to see the sold products, so that I know what products to purchase for restocking the inventory.",
+          "storyConcepts": [
+            "product",
+            "whatproduct",
+            "inventory",
+            "know",
+            "purchase",
+            "restocking",
+            "sold",
+            "restaurant",
+            "owner",
+            "what"
+          ],
+          "matchedConcepts": [
+            "product",
+            "know"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "product_overview",
+            "know_overview"
+          ],
+          "lexicalScore": 0.2,
+          "covered": false
+        },
+        {
+          "id": "US41",
+          "story": "As a Restaurant Owner, I want to have an overview of the types of orders.",
+          "storyConcepts": [
+            "order",
+            "type",
+            "restaurant",
+            "owner"
+          ],
+          "matchedConcepts": [
+            "order",
+            "type"
+          ],
+          "processVisualizerAlignedConcepts": [
+            "order"
+          ],
+          "matchedUiRefs": [
+            "order_overview"
+          ],
+          "lexicalScore": 0.5,
+          "covered": true
+        },
+        {
+          "id": "US42",
+          "story": "As a Restaurant Owner, I want to have an overview of prices per order so that I have an insight into the daily revenue.",
+          "storyConcepts": [
+            "dailyrevenue",
+            "perorder",
+            "daily",
+            "insight",
+            "order",
+            "per",
+            "price",
+            "revenue",
+            "restaurant",
+            "owner"
+          ],
+          "matchedConcepts": [
+            "order",
+            "price"
+          ],
+          "processVisualizerAlignedConcepts": [
+            "order"
+          ],
+          "matchedUiRefs": [
+            "order_overview"
+          ],
+          "lexicalScore": 0.2,
+          "covered": false
+        },
+        {
+          "id": "US43",
+          "story": "As a Restaurant Owner, I want to search for specific orders if a customer has questions about an order.",
+          "storyConcepts": [
+            "order",
+            "orderif",
+            "about",
+            "customer",
+            "restaurant",
+            "owner",
+            "question"
+          ],
+          "matchedConcepts": [
+            "order",
+            "customer"
+          ],
+          "processVisualizerAlignedConcepts": [
+            "order"
+          ],
+          "matchedUiRefs": [
+            "order_overview",
+            "customer_overview"
+          ],
+          "lexicalScore": 0.2857142857142857,
+          "covered": false
+        },
+        {
+          "id": "US44",
+          "story": "As a Restaurant Owner, I want to fill in the number of tips received on a day by the restaurant and the delivery employees, so that this amount can be fairly distributed among all employees.",
+          "storyConcepts": [
+            "employee",
+            "deliveryemployee",
+            "fairlydistributed",
+            "thiamount",
+            "tipreceived",
+            "among",
+            "amount",
+            "day",
+            "delivery",
+            "distributed",
+            "fairly",
+            "fill",
+            "number",
+            "received",
+            "restaurant",
+            "thi",
+            "tip",
+            "owner"
+          ],
+          "matchedConcepts": [
+            "amount",
+            "delivery",
+            "number",
+            "tip"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "delivery_overview"
+          ],
+          "lexicalScore": 0.2222222222222222,
+          "covered": false
+        },
+        {
+          "id": "US45",
+          "story": "As a Restaurant Owner, I want to have cashier accounts, so that I can check their balance at the end of a shift.",
+          "storyConcepts": [
+            "balanceat",
+            "cashieraccount",
+            "account",
+            "balance",
+            "cashier",
+            "check",
+            "end",
+            "shift",
+            "restaurant",
+            "owner"
+          ],
+          "matchedConcepts": [],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [],
+          "lexicalScore": 0,
+          "covered": false
+        },
+        {
+          "id": "US46",
+          "story": "As a Restaurant Owner, I want to fill in the amount of cash the delivery people receive per day, so that this value can be compared with the expected revenue of home delivery orders per day.",
+          "storyConcepts": [
+            "day",
+            "delivery",
+            "per",
+            "deliverypeople",
+            "orderper",
+            "amount",
+            "cash",
+            "compared",
+            "expected",
+            "fill",
+            "order",
+            "people",
+            "revenue",
+            "thi",
+            "restaurant",
+            "owner"
+          ],
+          "matchedConcepts": [
+            "delivery",
+            "amount",
+            "order"
+          ],
+          "processVisualizerAlignedConcepts": [
+            "order"
+          ],
+          "matchedUiRefs": [
+            "delivery_overview",
+            "order_overview"
+          ],
+          "lexicalScore": 0.1875,
+          "covered": false
+        },
+        {
+          "id": "US47",
+          "story": "As a Home Delivery Person, I want to have the address printed on the ticket, so that I can directly type the address into the navigation system.",
+          "storyConcepts": [
+            "address",
+            "directlytype",
+            "navigationsystem",
+            "directly",
+            "navigation",
+            "printed",
+            "ticket",
+            "type",
+            "delivery",
+            "person",
+            "system"
+          ],
+          "matchedConcepts": [
+            "address",
+            "ticket",
+            "type",
+            "delivery"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "ticket_overview",
+            "delivery_overview"
+          ],
+          "lexicalScore": 0.36363636363636365,
+          "covered": true
+        },
+        {
+          "id": "US48",
+          "story": "As a Home Delivery Person, I want to have the delivery address before the order is finished, so that I can combine orders that need to be delivered in the same area.",
+          "storyConcepts": [
+            "order",
+            "addressbefore",
+            "combineorder",
+            "address",
+            "area",
+            "before",
+            "combine",
+            "delivered",
+            "delivery",
+            "finished",
+            "need",
+            "same",
+            "person"
+          ],
+          "matchedConcepts": [
+            "order",
+            "address",
+            "delivery"
+          ],
+          "processVisualizerAlignedConcepts": [
+            "order"
+          ],
+          "matchedUiRefs": [
+            "order_overview",
+            "delivery_overview"
+          ],
+          "lexicalScore": 0.23076923076923078,
+          "covered": false
+        },
+        {
+          "id": "US49",
+          "story": "As a Home Delivery Person, I want to have the order price on a printed ticket, so that I know what the customers have to pay me.",
+          "storyConcepts": [
+            "customer",
+            "know",
+            "order",
+            "pay",
+            "price",
+            "printed",
+            "ticket",
+            "delivery",
+            "person",
+            "what"
+          ],
+          "matchedConcepts": [
+            "customer",
+            "know",
+            "order",
+            "price",
+            "ticket",
+            "delivery"
+          ],
+          "processVisualizerAlignedConcepts": [
+            "order"
+          ],
+          "matchedUiRefs": [
+            "customer_overview",
+            "know_overview",
+            "order_overview",
+            "ticket_overview",
+            "delivery_overview"
+          ],
+          "lexicalScore": 0.6,
+          "covered": true
+        },
+        {
+          "id": "US50",
+          "story": "As a Home Delivery Person, I want to know the phone number of the customer on a printed ticket, so that I can call the customer if I have some problems delivering the food to a certain location.",
+          "storyConcepts": [
+            "customer",
+            "customerif",
+            "printedticket",
+            "someproblem",
+            "call",
+            "certain",
+            "delivering",
+            "food",
+            "know",
+            "location",
+            "number",
+            "phone",
+            "printed",
+            "problem",
+            "some",
+            "ticket",
+            "delivery",
+            "person"
+          ],
+          "matchedConcepts": [
+            "customer",
+            "know",
+            "number",
+            "phone",
+            "ticket",
+            "delivery"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "customer_overview",
+            "know_overview",
+            "ticket_overview",
+            "delivery_overview"
+          ],
+          "lexicalScore": 0.3333333333333333,
+          "covered": true
+        }
+      ],
+      "score": 0.5,
+      "covered": 25,
+      "total": 50
+    }
+  },
+  "generationStrategy": {
+    "llmPassCount": 1,
+    "repairPassEnabled": false
+  }
+}

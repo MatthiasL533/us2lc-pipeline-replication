@@ -1,0 +1,34 @@
+digraph bpmn_diagram {
+	node [color=black fillcolor=bisque shape=box style=filled]
+	T0 [label="freelance teacher: communicate with other teachers using a chat function"]
+	node [color=black fillcolor=azure shape=diamond style=filled]
+	EG0_S [label=X]
+	node [color=black fillcolor=bisque shape=box style=filled]
+	T1 [label="freelance teacher: do a quiz about a certain topic that is connected to a level or part of a level"]
+	T2 [label="freelance teacher: have flashcards available in a digital format, organized by topic and source"]
+	T3 [label="administrator: receive email notifications about my progress and new learning opportunities"]
+	EG0_S -> T3 [label="so that i am always updated"]
+	T4 [label="administrator: add videos related to a certain module in the system"]
+	T5 [label="administrator: add flashcards related to a certain module in the system"]
+	T4 -> T5
+	T0 -> EG0_S
+	node [color=black fillcolor=lightpink shape=ellipse style=filled]
+	START_0 [label=START]
+	START_0 -> T0
+	START_1 [label=START]
+	START_1 -> T1
+	END_0 [label=END]
+	T1 -> END_0
+	START_2 [label=START]
+	START_2 -> T2
+	END_1 [label=END]
+	T2 -> END_1
+	END_2 [label=END]
+	T3 -> END_2
+	END_3 [label=END]
+	EG0_S -> END_3 [label=Else]
+	START_3 [label=START]
+	START_3 -> T4
+	END_4 [label=END]
+	T5 -> END_4
+}

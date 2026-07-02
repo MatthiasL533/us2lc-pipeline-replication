@@ -1,0 +1,202 @@
+{
+  "pages": {
+    "specs": [
+      {
+        "name": "home",
+        "layout": "Blank",
+        "widgets": [
+          {
+            "type": "Text",
+            "caption": "Welcome to Daily Sports"
+          },
+          {
+            "type": "Button",
+            "caption": "Sign up",
+            "onClick": {
+              "type": "Open page",
+              "page": "newCustomer"
+            }
+          },
+          {
+            "type": "Button",
+            "caption": "Log in",
+            "onClick": {
+              "type": "Open page",
+              "page": "login"
+            }
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "newCustomer",
+        "layout": "Form horizontal",
+        "widgets": [
+          {
+            "type": "TextInput",
+            "attribute": "Name",
+            "entity": "NewCustomer"
+          },
+          {
+            "type": "TextInput",
+            "attribute": "Email",
+            "entity": "NewCustomer"
+          },
+          {
+            "type": "Button",
+            "caption": "Sign up",
+            "onClick": {
+              "type": "Microflow",
+              "microflow": "IssueFineToCustomer"
+            }
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "login",
+        "layout": "Form horizontal",
+        "widgets": [
+          {
+            "type": "TextInput",
+            "attribute": "Email",
+            "entity": "AppUser"
+          },
+          {
+            "type": "PasswordInput",
+            "attribute": "Password",
+            "entity": "AppUser"
+          },
+          {
+            "type": "Button",
+            "caption": "Log in",
+            "onClick": {
+              "type": "Microflow",
+              "microflow": "CheckCustomerSubscription"
+            }
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "customerOverview",
+        "layout": "Table",
+        "widgets": [
+          {
+            "type": "Data grid",
+            "entity": "Customer",
+            "columns": [
+              {
+                "attribute": "Name"
+              },
+              {
+                "attribute": "Email"
+              }
+            ]
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "customerDetail",
+        "layout": "Form horizontal",
+        "widgets": [
+          {
+            "type": "TextInput",
+            "attribute": "Name",
+            "entity": "Customer"
+          },
+          {
+            "type": "TextInput",
+            "attribute": "Email",
+            "entity": "Customer"
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "lessonOverview",
+        "layout": "Table",
+        "widgets": [
+          {
+            "type": "Data grid",
+            "entity": "Lesson",
+            "columns": [
+              {
+                "attribute": "Title"
+              },
+              {
+                "attribute": "Description"
+              }
+            ]
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "lessonDetail",
+        "layout": "Form horizontal",
+        "widgets": [
+          {
+            "type": "TextInput",
+            "attribute": "Title",
+            "entity": "Lesson"
+          },
+          {
+            "type": "TextInput",
+            "attribute": "Description",
+            "entity": "Lesson"
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "trainerOverview",
+        "layout": "Table",
+        "widgets": [
+          {
+            "type": "Data grid",
+            "entity": "Trainer",
+            "columns": [
+              {
+                "attribute": "Name"
+              }
+            ]
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "trainerDetail",
+        "layout": "Form horizontal",
+        "widgets": [
+          {
+            "type": "TextInput",
+            "attribute": "Name",
+            "entity": "Trainer"
+          }
+        ],
+        "content": []
+      }
+    ]
+  },
+  "app": {
+    "navigation": {
+      "homePage": "home",
+      "menuItems": [
+        {
+          "page": "customerOverview",
+          "caption": "Customers"
+        },
+        {
+          "page": "lessonOverview",
+          "caption": "Lessons"
+        },
+        {
+          "page": "trainerOverview",
+          "caption": "Trainers"
+        }
+      ]
+    }
+  }
+}

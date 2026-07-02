@@ -1,0 +1,202 @@
+{
+  "pages": {
+    "specs": [
+      {
+        "name": "home",
+        "layout": "Blank",
+        "widgets": [
+          {
+            "type": "Text",
+            "text": "Welcome to Daily Sports"
+          },
+          {
+            "type": "Button",
+            "caption": "Login",
+            "onClick": "nanoflow",
+            "nanoflow": "Login"
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "customerOverview",
+        "layout": "Table",
+        "entity": "Customer",
+        "widgets": [
+          {
+            "type": "DataGrid",
+            "columns": [
+              {
+                "attribute": "firstName"
+              },
+              {
+                "attribute": "lastName"
+              }
+            ]
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "customerDetail",
+        "layout": "FormHorizontal",
+        "entity": "Customer",
+        "widgets": [
+          {
+            "type": "TextInput",
+            "attribute": "firstName"
+          },
+          {
+            "type": "TextInput",
+            "attribute": "lastName"
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "customerNewEdit",
+        "layout": "FormHorizontal",
+        "entity": "Customer",
+        "widgets": [
+          {
+            "type": "TextInput",
+            "attribute": "firstName"
+          },
+          {
+            "type": "TextInput",
+            "attribute": "lastName"
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "membershipTypeOverview",
+        "layout": "Table",
+        "entity": "MembershipType",
+        "widgets": [
+          {
+            "type": "DataGrid",
+            "columns": [
+              {
+                "attribute": "Name"
+              },
+              {
+                "attribute": "Description"
+              }
+            ]
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "membershipTypeDetail",
+        "layout": "FormHorizontal",
+        "entity": "MembershipType",
+        "widgets": [
+          {
+            "type": "TextInput",
+            "attribute": "Name"
+          },
+          {
+            "type": "TextInput",
+            "attribute": "Description"
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "subscriptionOverview",
+        "layout": "Table",
+        "entity": "Subscription",
+        "widgets": [
+          {
+            "type": "DataGrid",
+            "columns": [
+              {
+                "attribute": "startDate"
+              },
+              {
+                "attribute": "endDate"
+              }
+            ]
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "subscriptionDetail",
+        "layout": "FormHorizontal",
+        "entity": "Subscription",
+        "widgets": [
+          {
+            "type": "DateInput",
+            "attribute": "startDate"
+          },
+          {
+            "type": "DateInput",
+            "attribute": "endDate"
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "lessonOverview",
+        "layout": "Table",
+        "entity": "Lesson",
+        "widgets": [
+          {
+            "type": "DataGrid",
+            "columns": [
+              {
+                "attribute": "Title"
+              },
+              {
+                "attribute": "Description"
+              }
+            ]
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "lessonDetail",
+        "layout": "FormHorizontal",
+        "entity": "Lesson",
+        "widgets": [
+          {
+            "type": "TextInput",
+            "attribute": "Title"
+          },
+          {
+            "type": "TextInput",
+            "attribute": "Description"
+          }
+        ],
+        "content": []
+      }
+    ]
+  },
+  "app": {
+    "navigation": {
+      "homePage": "home",
+      "menuItems": [
+        {
+          "name": "Customers",
+          "page": "customerOverview"
+        },
+        {
+          "name": "Membership Types",
+          "page": "membershipTypeOverview"
+        },
+        {
+          "name": "Subscriptions",
+          "page": "subscriptionOverview"
+        },
+        {
+          "name": "Lessons",
+          "page": "lessonOverview"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,19 @@
+digraph process_visualizer {
+  t0 [label="Customer: open an account in the system"];
+  t1 [label="Returning Customer: know how long my subscription for daily sports lasts"];
+  t2 [label="Customer: unsubscribe"];
+  t3 [label="Customer with a Family Membership: update my payment information"];
+  t4 [label="Customer: see what future lessons i have booked"];
+  t5 [label="Admin: call daily sports to cancel a lesson"];
+  t6 [label="Trainer: see how many spots have been booked for a given timeslot"];
+  t7 [label="Trainer: be the only Trainer who can edit my lessons"];
+  t8 [label="Admin: be able to edit any lesson"];
+  t9 [label="Customer: receive a notification"];
+  t10 [label="Admin: see if a customer did not show up for a session"];
+  t11 [label="Admin: remove a trainer from the system"];
+  t12 [label="User: log in to the system"];
+  t13 [label="Customer: receive notifications by the method which i prefer"];
+  t14 [label="Admin: know which customers are aware that their booking has been canceled"];
+  t15 [label="customer: know which customers are aware that their booking has been canceled"];
+  t16 [label="Trainer: see information about my past and future training sessions"];
+}

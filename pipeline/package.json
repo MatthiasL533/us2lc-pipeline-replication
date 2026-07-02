@@ -1,0 +1,28 @@
+{
+  "name": "us2lc-pipeline",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Reliability-first Mendix model generation pipeline",
+  "scripts": {
+    "test": "npm run test:unit && npm run test:smoke",
+    "test:unit": "node src/commander.test.js && node src/security-builder.test.js && node src/lib/validation.test.js && node src/lib/semantic-checks.test.js && node src/lib/visual-narrator.test.js && node src/lib/process-visualizer.test.js && node src/plan-generator.test.js && node src/plan-generator.integration.test.js && node src/lib/plan-checker.test.js && node src/lib/plan-consistency.test.js && node src/lib/feature-fit-scorer.test.js && node src/lib/plan-diff.test.js && node src/plan-benchmark.test.js && node src/builders/page/page-builder-template.test.js && node src/builders/microflow/microflow-builder-template.test.js && node src/builders/microflow/lib/sequence-flow.test.js && node src/builders/workflow/workflow-builder-template.test.js",
+    "test:smoke": "node src/plans/contract.test.js",
+    "test:smoke:live": "node src/plans/live-smoke.js",
+    "validate:plan": "node -e \"if(!process.env.npm_config_plan){console.error('Usage: npm run validate:plan --plan=<path-to-plan.json>');process.exit(1)}\" && node src/commander.js \"$npm_config_plan\" --validate-only",
+    "run:plan": "node -e \"if(!process.env.npm_config_plan){console.error('Usage: npm run run:plan --plan=<path-to-plan.json>');process.exit(1)}\" && node src/commander.js \"$npm_config_plan\"",
+    "generate:plan": "node src/plan-generator-cli.js",
+    "generate:vn": "node src/generate-vn-cli.js",
+    "generate:process-viz": "node src/generate-process-viz-cli.js",
+    "check:plan": "node -e \"if(!process.env.npm_config_plan){console.error('Usage: npm run check:plan --plan=<path-to-plan.json> [--input-dir=<input-dir>]');process.exit(1)}\" && node src/plan-checker.js --plan=\"$npm_config_plan\" ${npm_config_input_dir:+--input-dir=\"$npm_config_input_dir\"}",
+    "diff:plans": "node -e \"if((!process.env.npm_config_left||!process.env.npm_config_right)&&!process.env.npm_config_benchmark_dir){console.error('Usage: npm run diff:plans --left=<plan-a.json> --right=<plan-b.json> [--format=json|markdown] OR --benchmark-dir=<benchmark-run-dir>');process.exit(1)}\" && node src/plan-diff.js ${npm_config_benchmark_dir:+--benchmark-dir=\"$npm_config_benchmark_dir\"} ${npm_config_left:+--left=\"$npm_config_left\"} ${npm_config_right:+--right=\"$npm_config_right\"} ${npm_config_left_label:+--left-label=\"$npm_config_left_label\"} ${npm_config_right_label:+--right-label=\"$npm_config_right_label\"} ${npm_config_format:+--format=\"$npm_config_format\"}",
+    "benchmark:plans": "node src/plan-benchmark.js",
+    "benchmark:llm-selection": "node src/llm-selection-benchmark.js",
+    "run:e2e": "node src/e2e-runner.js",
+    "setup:vn": "node src/setup-visual-narrator.js",
+    "setup:process-viz": "node src/setup-process-visualizer.js"
+  },
+  "dependencies": {
+    "mendixmodelsdk": "^4.112.0",
+    "mendixplatformsdk": "^5.2.0"
+  }
+}

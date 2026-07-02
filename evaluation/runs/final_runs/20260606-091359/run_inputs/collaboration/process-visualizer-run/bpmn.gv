@@ -1,0 +1,59 @@
+digraph bpmn_diagram {
+	node [color=black fillcolor=bisque shape=box style=filled]
+	T0 [label="project manager: view projects for each department in the general projects overview"]
+	T1 [label="team member: create new projects so that planning and collaboration can be centered around a specific goal"]
+	T0 -> T1 [label="so that i can base my feedback on these deliverables"]
+	T0 -> T1
+	T2 [label="project manager: archive projects that have been completed, so that completed projects do not clutter up the project overview"]
+	T1 -> T2 [label="so that i can base my feedback on these deliverables"]
+	T1 -> T2
+	T3 [label="client: view active projects in my personal view, so that i have an organized overview of my ongoing projects"]
+	T2 -> T3 [label="so that i can base my feedback on these deliverables"]
+	T2 -> T3
+	T4 [label="client: create milestones with a due date so that projects are divided into manageable, time-bound partitions"]
+	T3 -> T4 [label="so that i can base my feedback on these deliverables"]
+	T3 -> T4
+	T5 [label="project manager: edit milestone due dates so that any mistakes or changes to milestone due dates can be implemented"]
+	T4 -> T5 [label="so that i can base my feedback on these deliverables"]
+	T4 -> T5
+	T6 [label="project manager: delete milestones"]
+	T5 -> T6 [label="so that i can base my feedback on these deliverables"]
+	T5 -> T6
+	T7 [label="team member: change the status of a milestone so that the relative position of a milestone to the current progress can be accurately tracked"]
+	T6 -> T7 [label="so that i can base my feedback on these deliverables"]
+	T6 -> T7
+	T8 [label="project manager: filter on a specific milestone"]
+	T7 -> T8 [label="so that i can base my feedback on these deliverables"]
+	T7 -> T8
+	T9 [label="employee: view upcoming milestones in the project overview"]
+	T8 -> T9 [label="so that i can base my feedback on these deliverables"]
+	T8 -> T9
+	T10 [label="project manager: add files to a delivery while creating a delivery"]
+	T9 -> T10 [label="so that i can base my feedback on these deliverables"]
+	T9 -> T10
+	T11 [label="team member: delete files from a delivery while creating a delivery"]
+	T10 -> T11 [label="so that i can base my feedback on these deliverables"]
+	T10 -> T11
+	T12 [label="employee: add a description of the feedback goal to a delivery while creating a delivery"]
+	T11 -> T12 [label="so that i can base my feedback on these deliverables"]
+	T11 -> T12
+	T13 [label="team member: save a delivery as a concept so that a delivery can be published later"]
+	T12 -> T13 [label="so that i can base my feedback on these deliverables"]
+	T12 -> T13
+	T14 [label="project manager: publish a delivery so that clients will be aware of a delivery progress"]
+	T13 -> T14 [label="so that i can base my feedback on these deliverables"]
+	T13 -> T14
+	T15 [label="client: view the goal description of a delivery so that i have some idea of what kind of feedback is expected"]
+	T14 -> T15 [label="so that i can base my feedback on these deliverables"]
+	T14 -> T15
+	node [color=black fillcolor=azure shape=diamond style=filled]
+	EG0_S [label=X]
+	EG0_E [label=X]
+	node [color=black fillcolor=bisque shape=box style=filled]
+	T15 -> EG0_S
+	node [color=black fillcolor=lightpink shape=ellipse style=filled]
+	START_0 [label=START]
+	START_0 -> T0
+	END_0 [label=END]
+	EG0_S -> END_0
+}

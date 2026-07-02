@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "domain-model.schema.json",
+  "title": "Domain model section",
+  "type": "object",
+  "additionalProperties": true,
+  "properties": {
+    "clearExisting": { "type": "boolean" },
+    "clearExistingEnumerations": { "type": "boolean" },
+    "entities": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": true,
+        "required": ["name"],
+        "properties": {
+          "name": { "type": "string", "minLength": 1 },
+          "attributes": { "type": "array" },
+          "indexes": { "type": "array" }
+        }
+      }
+    },
+    "associations": { "type": "array" },
+    "enumerations": { "type": "array" }
+  }
+}

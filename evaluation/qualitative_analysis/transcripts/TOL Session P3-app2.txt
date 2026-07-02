@@ -1,0 +1,128 @@
+00:00:05 - 00:00:13
+P3: Oké, ik heb nu de applicatie Cinema voor m'n neus en daarbij vallen me een aantal dingen op.
+
+00:00:13 - 00:00:46
+P3: Ik zie een relatie en ik heb natuurlijk net naar Grocery gekeken. En ik zie ook hoe de entiteiten. Subscription is erg uitgebreid aangegeven. Ik vind dat de attributen van subscription wel goed. Zijn.
+
+00:00:48 - 00:01:11
+P3: En eigenlijk hetzelfde geldt wel voor Movie. Ik vind dat ook een goede. Ja, goede attributen hebben. En je ziet duidelijk dat hij heeft bedoeld om Movie Showing en Cinema. Nou zijn ze niet aan elkaar verbonden door een relatie, dus kan je het nooit zeker weten. Maar je ziet wel de degene die ze die naast elkaar bedoelde.
+
+00:01:17 - 00:01:37
+P3: En hij heeft ook een onderscheid gemaakt tussen cinema en movie theater. En verder zijn er toch nog wel veel entiteiten ook maar met één attribuut. Dus. In die zin zou het wel. Als je nadenkt over je eigen werk, kan je daar wel makkelijk dingen aan toevoegen. Ja.
+
+00:01:44 - 00:01:52
+Researcher: Ja. Ja.
+
+00:01:54 - 00:02:15
+P3: Verder is het inderdaad. In de eerdere user story staat ook veel over dat de administrator dingen wil zien van andere users, en dat lijkt er allemaal goed in opgenomen. Maar inderdaad, ik zie wel weer weinig relaties. Ik zie een relatie één, maar je mag.
+
+00:02:15 - 00:02:21
+Researcher: Ze ook uit elkaar slepen als je dat. Als je dan beter kan lezen of zo. Het is maar eentje.
+
+00:02:21 - 00:02:39
+P3: En dat is de. Favorite Movie Theaters met movies wordt gelinkt als één op één. Dus met een parent and a child. De parent zou dan een Favorite Movie Theater zijn en de child een movie.
+
+00:02:42 - 00:02:43
+Researcher: Is die associatie logisch?
+
+00:02:43 - 00:02:58
+P3: Ja, daar zit ik nu over na te denken. Terwijl, Want een movie heeft niet per se een favoriete movie theater. Ja dus die associatie zou je eerder verwachten met een subscription of met een. Ja.
+
+00:02:59 - 00:03:03
+Researcher: Het is eigenlijk de ene associatie die die heeft gegenereerd is niet correct.
+
+00:03:04 - 00:03:15
+P3: Nee, daar lijkt het niet op. Ja en? Ik probeer even te zoeken of hij nog een andere associatie heeft gemaakt, maar dat heeft hij niet.
+
+00:03:18 - 00:04:12
+P3: Dan ga ik vanaf hier door naar de security. Oh, die moet naar boven. Voor de user roles. Ja, hij heeft dus een premium user en een normale user, een registered user en een app user gemaakt. Ja, dat lijkt wel te kloppen volgens mij. In de user stories heb je inderdaad ook deze rollen. Dan ga ik even naar een premium user. Ja, hij heeft hier geen user management gedaan. Oh jawel, een administrator, maar die heeft altijd alles.
+
+00:04:12 - 00:04:15
+Researcher: Ja, die is automatisch gegenereerd, dus die kan je negeren. Ja.
+
+00:04:16 - 00:04:43
+P3: Ja nee dus. Hij heeft geen uhm, hij heeft geen user management gedaan. Verder zie ik wel de module rules van de users. En dan ga ik door naar een aantal pagina's. Zou je misschien de runnende app kunnen laten zien?
+
+00:04:48 - 00:04:48
+Researcher: Ja.
+
+00:04:48 - 00:04:49
+P3: Oké. Top.
+
+00:04:49 - 00:04:55
+Researcher: En kan je hier dan de user alsnog selecteren? Maar daar zit in. In theorie zit daar geen dus dus geen verschil tussen.
+
+00:04:55 - 00:05:22
+P3: Ja super thanks. Ja, de Movie Workspace zie ik hier. En hier zie ik wel dat de pagina's zijn ingevuld. Dus in de vorige die ik heb gezien, daar waren de pagina's niet ingevuld. Hier doen alle buttons het. En zie ik dat ik als administrator inderdaad overal doorheen kan klikken. Dus dat is mooi.
+
+00:05:23 - 00:05:51
+P3: Ik zal eens beginnen met een movie toevoegen, want de movies hadden veel attributen, dus die kan ik kijken. Hij heeft in de Movie new Edit. Volgens mij alle attributen meegenomen die hij mee moet nemen, dus dat is heel goed. Hij is. Je ziet ook dat de attributen staan in de. Ehm ja, ze staan in de goede vorm, dus een string is een string. De release date is inderdaad een datum.
+
+00:05:52 - 00:05:55
+Researcher: De input selectors die komen overeen met de.
+
+00:05:56 - 00:06:03
+P3: Met de types inderdaad. Ja, dus bij een movie.
+
+00:06:04 - 00:06:11
+Researcher: Je zou ook bijvoorbeeld als je hier een favoriet movie theater toevoegt, dan zou je kunnen kijken of het werkt om hem toe te voegen aan een movie.
+
+00:06:13 - 00:06:13
+P3: Ja.
+
+00:06:17 - 00:06:20
+Researcher: Die is dan leeg omdat er nog geen movies zijn. Maar je kan het ook andersom nog kunnen doen.
+
+00:06:20 - 00:06:25
+P3: Ik ga het even proberen. Ik ga een movie toevoegen.
+
+00:06:42 - 00:06:46
+P3: Ik ben nu met mijn eigen versie van Pirates of the Caribbean aan het aanmaken.
+
+00:07:05 - 00:07:07
+P3: Maakt hier ook een Favorite Movie Theater aan
+
+00:07:08 - 00:07:10
+Researcher: Omdat ie inderdaad één op één is inderdaad. Dus dat.
+
+00:07:10 - 00:07:50
+P3: Ja. Ja, hij maakt dus de relatie wel goed aan. Hij kan een één op één relatie zien, maar ziet hij wel. En hij kan ze ook linken aan elkaar, wat dus betekent dat de parent child ook goed is gegaan. Dus dat betekent dat de buttons die ik nu op de pagina's zie, nou sowieso alle pagina's zijn ingevuld en de buttons werken allemaal. Dan ga ik nu even naar de process flows. Elke keer weer om het even op.
+
+00:07:51 - 00:07:51
+Researcher: Ja.
+
+00:07:54 - 00:08:44
+P3: Ik begin met Get historic user payments. RegisteredHumanUser als input. Inderdaad als parameter. En hij heeft een retrieve object gemaakt, wat dus ook goed lijkt. Hij heeft geen XPath gemaakt, maar op zich is dat prima. Dat is al wel een grote stap van een voor. Dit type heeft hij een list van gemaakt van een bepaalde user. Ja dus. Deze lijkt wel echt een actie te bevatten wat dus wel goed is.
+
+00:08:49 - 00:09:17
+P3: Dan ga ik hetzelfde bekijken bij Subscription State dus. Geen XPath, maar wel. Ook hier heeft hij ook wel een identiteit. Ik zie ook geen start event. Hij heeft dus wel gezien dat er een premium user en parameter moet zijn en niet een registered user, want anders heeft hij geen subscription, dus dat heeft hij wel goed gezien.
+
+00:09:17 - 00:09:43
+P3: Maar verder qua process flow zie ik niet dat hij echt een actie onderneemt. Ook geen retrieve dus in die zin reken ik hem dan fout. Dan ga ik nu even kijken naar een. Kijken. Ik zie, kijk de check auto-renew status en hij maakt geen start event.
+
+00:09:43 - 00:09:45
+Researcher: Dat kan ik niet. Dus klikken dan? Inderdaad.
+
+00:09:45 - 00:09:49
+P3: Ja, en hij heeft dus een Subscription.AutoRenew is true gemaakt.
+
+00:09:49 - 00:09:50
+Researcher: Ja is een decision.
+
+00:09:51 - 00:09:59
+P3: Ja, een decision. Ja, hij heeft alleen een false path gemaakt. En als hij vals wordt? Nee, trouwens, denk het niet eigenlijk. Ik denk dat het misschien wel.
+
+00:09:59 - 00:10:04
+Researcher: Ja, ik vond het wel hoor. Hij heeft een uh. Oh jawel. Ja, dat is een merge. Is dat?
+
+00:10:06 - 00:10:26
+P3: Ja, dat is dan als ie false is. Dan heeft hij een merge gemaakt en daarna naar de nanoflow, naar de naar het einde gebracht. Ja ja, deze nanoflow zie ik ook niet in wat daar goed aan is. Ja. Dus je het.
+
+00:10:26 - 00:10:49
+P3: Ja. Wat hij dus wel weer goed heeft gedaan is dat hij de goede parameter ophaalt en dat hij dus checkt dat hij ziet dat er een check uitgevoerd moet worden. Dus hij ziet dat het inderdaad true of false moet zijn. Ja. Alleen wat hij dus niet heel goed heeft gedaan is dat hij de true path niet heeft gemaakt en niet echt acties heeft toegevoegd, maar het is sowieso een goede gedachte. Steun van wat je hebt gezien.
+
+00:10:52 - 00:11:42
+P3: Dan bekijk ik nu de laatste process flow. Tenminste, die heeft er meer gemaakt. Maar degene die ik als laatste bekeek en dat is de subscribe to premium. Dus hij neemt de RegisteredHumanUser or RegisteredUser en de payment method neemt hij op. En verder heeft hij inderdaad weer zo'n zelfde type process flow gemaakt. Dus dan een start event. Geen start event, wel een startknopje in de process en een entiteit ophalen, maar niet verder een retrieve actie of iets er mee doen. Wel een inderdaad dus iets waar je merkt dat hij goed in is, dat hij dus die parameters goed ophaalt of degene die de parameters die hij nodig heeft, die ziet hij goed en dan denk ik dat dit mijn review was.
+
+00:11:42 - 00:11:43
+Researcher: Nice!

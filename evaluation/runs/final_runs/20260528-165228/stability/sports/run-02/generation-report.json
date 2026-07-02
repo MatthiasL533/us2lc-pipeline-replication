@@ -1,0 +1,3273 @@
+{
+  "ok": true,
+  "generatedAt": "2026-05-29T23:09:25.293Z",
+  "inputDir": "/Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/artifacts/practical-performance/20260528-165228/inputs/sports",
+  "outputPlanPath": "/Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/artifacts/practical-performance/20260528-165228/stability/sports/run-02/plan.json",
+  "warnings": [
+    "No home page ref found; inserted Home page with ref \"home\".",
+    "Added missing overview page for entity \"Account\".",
+    "Added missing NewEdit page for entity \"Account\".",
+    "Added missing overview page for entity \"Customer\".",
+    "Added missing NewEdit page for entity \"Customer\".",
+    "Added missing overview page for entity \"MembershipType\".",
+    "Added missing NewEdit page for entity \"MembershipType\".",
+    "Added missing overview page for entity \"Subscription\".",
+    "Added missing NewEdit page for entity \"Subscription\".",
+    "Added missing overview page for entity \"PaymentDetails\".",
+    "Added missing NewEdit page for entity \"PaymentDetails\".",
+    "Added missing overview page for entity \"FamilyMember\".",
+    "Added missing NewEdit page for entity \"FamilyMember\".",
+    "Added missing overview page for entity \"Lesson\".",
+    "Added missing NewEdit page for entity \"Lesson\".",
+    "Added missing overview page for entity \"Room\".",
+    "Added missing NewEdit page for entity \"Room\".",
+    "Added missing overview page for entity \"Timeslot\".",
+    "Added missing NewEdit page for entity \"Timeslot\".",
+    "Added missing overview page for entity \"Booking\".",
+    "Added missing NewEdit page for entity \"Booking\".",
+    "Added missing overview page for entity \"LessonBooking\".",
+    "Added missing NewEdit page for entity \"LessonBooking\".",
+    "Added missing overview page for entity \"AttendanceRecord\".",
+    "Added missing NewEdit page for entity \"AttendanceRecord\".",
+    "Dropped placeholder page \"user\" because it had no useful steps."
+  ],
+  "validation": {
+    "ok": true,
+    "errors": []
+  },
+  "model": "gemma4:e4b",
+  "coverage": {
+    "score": 0.49206349206349204,
+    "covered": 31,
+    "total": 63,
+    "missingStoryIds": [
+      "US02",
+      "US05",
+      "US07",
+      "US10",
+      "US18",
+      "US19",
+      "US23",
+      "US24",
+      "US31",
+      "US32",
+      "US33",
+      "US34",
+      "US35",
+      "US37",
+      "US38",
+      "US39",
+      "US40",
+      "US41",
+      "US42",
+      "US43",
+      "US44",
+      "US45",
+      "US46",
+      "US47",
+      "US48",
+      "US49",
+      "US50",
+      "US56",
+      "US57",
+      "US58",
+      "US60",
+      "US63"
+    ],
+    "entries": [
+      {
+        "id": "US01",
+        "story": "As a new Customer, I want to open an account in the system, so I can start training at Daily Sports.",
+        "storyConcepts": [
+          "trainingatdailysport",
+          "dailysport",
+          "trainingat",
+          "account",
+          "daily",
+          "sport",
+          "start",
+          "training",
+          "customer",
+          "system"
+        ],
+        "matchedConcepts": [
+          "account",
+          "start",
+          "training",
+          "customer"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "account_overview",
+          "training_overview",
+          "customer_overview"
+        ],
+        "lexicalScore": 0.4,
+        "covered": true
+      },
+      {
+        "id": "US02",
+        "story": "As a Customer, I want to add my personal information, so I meet the requirements of the gym for signing up.",
+        "storyConcepts": [
+          "personalinformation",
+          "gym",
+          "meet",
+          "personal",
+          "requirement",
+          "signing",
+          "customer"
+        ],
+        "matchedConcepts": [
+          "customer"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "customer_overview"
+        ],
+        "lexicalScore": 0.14285714285714285,
+        "covered": false
+      },
+      {
+        "id": "US03",
+        "story": "As a Customer, I want to add my banking details, so I can pay for my subscription.",
+        "storyConcepts": [
+          "bankingdetail",
+          "banking",
+          "pay",
+          "subscription",
+          "customer"
+        ],
+        "matchedConcepts": [
+          "subscription",
+          "customer"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "subscription_overview",
+          "customer_overview"
+        ],
+        "lexicalScore": 0.4,
+        "covered": true
+      },
+      {
+        "id": "US04",
+        "story": "As a Customer, I want to be able to choose my membership type, so I can pay according to my wishes.",
+        "storyConcepts": [
+          "membershiptype",
+          "according",
+          "membership",
+          "pay",
+          "type",
+          "wishe",
+          "customer"
+        ],
+        "matchedConcepts": [
+          "membershiptype",
+          "membership",
+          "type",
+          "customer"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "membershiptype_overview",
+          "customer_overview"
+        ],
+        "lexicalScore": 0.5714285714285714,
+        "covered": true
+      },
+      {
+        "id": "US05",
+        "story": "As a Customer, I want to be able to extend my subscription for Daily Sports, so I can continue working out.",
+        "storyConcepts": [
+          "dailysport",
+          "workingout",
+          "continue",
+          "daily",
+          "extend",
+          "out",
+          "sport",
+          "subscription",
+          "working",
+          "customer"
+        ],
+        "matchedConcepts": [
+          "subscription",
+          "customer"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "subscription_overview",
+          "customer_overview"
+        ],
+        "lexicalScore": 0.2,
+        "covered": false
+      },
+      {
+        "id": "US06",
+        "story": "As a Customer, I want to know how long my subscription lasts, so I know when I need to extend it.",
+        "storyConcepts": [
+          "know",
+          "howlong",
+          "knowwhen",
+          "extend",
+          "how",
+          "last",
+          "long",
+          "need",
+          "subscription",
+          "when",
+          "customer"
+        ],
+        "matchedConcepts": [
+          "know",
+          "last",
+          "subscription",
+          "customer"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "know_overview",
+          "subscription_overview",
+          "customer_overview"
+        ],
+        "lexicalScore": 0.36363636363636365,
+        "covered": true
+      },
+      {
+        "id": "US07",
+        "story": "As a Returning Customer, I want to be able to use my previous information, so that sign-up is easier.",
+        "storyConcepts": [
+          "previouinformation",
+          "easier",
+          "previou",
+          "sign",
+          "returning",
+          "customer"
+        ],
+        "matchedConcepts": [
+          "customer"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "customer_overview"
+        ],
+        "lexicalScore": 0.16666666666666666,
+        "covered": false
+      },
+      {
+        "id": "US08",
+        "story": "As a Customer, I want to be able to unsubscribe.",
+        "storyConcepts": [
+          "unsubscribe",
+          "customer"
+        ],
+        "matchedConcepts": [
+          "customer"
+        ],
+        "processVisualizerAlignedConcepts": [
+          "unsubscribe"
+        ],
+        "matchedUiRefs": [
+          "customer_overview"
+        ],
+        "lexicalScore": 0.5,
+        "covered": true
+      },
+      {
+        "id": "US09",
+        "story": "As a Customer, I want to be able to reset my password.",
+        "storyConcepts": [
+          "password",
+          "reset",
+          "customer"
+        ],
+        "matchedConcepts": [
+          "password",
+          "customer"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "customer_overview"
+        ],
+        "lexicalScore": 0.6666666666666666,
+        "covered": true
+      },
+      {
+        "id": "US10",
+        "story": "As a Customer, I want to be able to change my personal details.",
+        "storyConcepts": [
+          "personaldetail",
+          "change",
+          "personal",
+          "customer"
+        ],
+        "matchedConcepts": [
+          "customer"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "customer_overview"
+        ],
+        "lexicalScore": 0.25,
+        "covered": false
+      },
+      {
+        "id": "US11",
+        "story": "As a Customer, I want to be able to update my payment information.",
+        "storyConcepts": [
+          "paymentinformation",
+          "payment",
+          "customer"
+        ],
+        "matchedConcepts": [
+          "payment",
+          "customer"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "customer_overview"
+        ],
+        "lexicalScore": 0.6666666666666666,
+        "covered": true
+      },
+      {
+        "id": "US12",
+        "story": "As a Customer with a Family Membership, I want to see who is using my membership.",
+        "storyConcepts": [
+          "membership",
+          "who",
+          "customer",
+          "family"
+        ],
+        "matchedConcepts": [
+          "membership",
+          "customer",
+          "family"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "customer_overview"
+        ],
+        "lexicalScore": 0.75,
+        "covered": true
+      },
+      {
+        "id": "US13",
+        "story": "As a Customer with a Family Membership, I want to add a person to my membership, so that I can utilize it effectively.",
+        "storyConcepts": [
+          "effectively",
+          "membership",
+          "person",
+          "utilize",
+          "customer",
+          "family"
+        ],
+        "matchedConcepts": [
+          "membership",
+          "customer",
+          "family"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "customer_overview"
+        ],
+        "lexicalScore": 0.5,
+        "covered": true
+      },
+      {
+        "id": "US14",
+        "story": "As a Customer with a Family Membership, I want to remove a person from my membership.",
+        "storyConcepts": [
+          "membership",
+          "person",
+          "remove",
+          "customer",
+          "family"
+        ],
+        "matchedConcepts": [
+          "membership",
+          "customer",
+          "family"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "customer_overview"
+        ],
+        "lexicalScore": 0.6,
+        "covered": true
+      },
+      {
+        "id": "US15",
+        "story": "As a Customer, I want to see an overview of all available lessons, so that I can choose which one to book.",
+        "storyConcepts": [
+          "book",
+          "lesson",
+          "one",
+          "which",
+          "customer"
+        ],
+        "matchedConcepts": [
+          "lesson",
+          "customer"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "lesson_overview",
+          "customer_overview"
+        ],
+        "lexicalScore": 0.4,
+        "covered": true
+      },
+      {
+        "id": "US16",
+        "story": "As a Customer, I want to see what future lessons I have booked, so that I can manage my time.",
+        "storyConcepts": [
+          "whatfuture",
+          "booked",
+          "future",
+          "lesson",
+          "time",
+          "customer",
+          "what"
+        ],
+        "matchedConcepts": [
+          "lesson",
+          "time",
+          "customer"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "lesson_overview",
+          "time_overview",
+          "customer_overview"
+        ],
+        "lexicalScore": 0.42857142857142855,
+        "covered": true
+      },
+      {
+        "id": "US17",
+        "story": "As a Customer, I want to see a record of previous lessons I have booked, so I can track my progress.",
+        "storyConcepts": [
+          "booked",
+          "lesson",
+          "previou",
+          "customer",
+          "progress"
+        ],
+        "matchedConcepts": [
+          "lesson",
+          "customer"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "lesson_overview",
+          "customer_overview"
+        ],
+        "lexicalScore": 0.4,
+        "covered": true
+      },
+      {
+        "id": "US18",
+        "story": "As a Customer, I want to be able to call the gym to book a lesson, so that I don't have to use the application.",
+        "storyConcepts": [
+          "application",
+          "book",
+          "call",
+          "don",
+          "gym",
+          "lesson",
+          "customer"
+        ],
+        "matchedConcepts": [
+          "lesson",
+          "customer"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "lesson_overview",
+          "customer_overview"
+        ],
+        "lexicalScore": 0.2857142857142857,
+        "covered": false
+      },
+      {
+        "id": "US19",
+        "story": "As a Customer, I want to be able to call the gym to cancel a lesson, so that I don't have to use the application.",
+        "storyConcepts": [
+          "application",
+          "call",
+          "cancel",
+          "don",
+          "gym",
+          "lesson",
+          "customer"
+        ],
+        "matchedConcepts": [
+          "lesson",
+          "customer"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "lesson_overview",
+          "customer_overview"
+        ],
+        "lexicalScore": 0.2857142857142857,
+        "covered": false
+      },
+      {
+        "id": "US20",
+        "story": "As an Admin, I want to be able to edit all personal training sessions.",
+        "storyConcepts": [
+          "llpersonaltrainingsession",
+          "personaltraining",
+          "personal",
+          "session",
+          "training",
+          "admin"
+        ],
+        "matchedConcepts": [
+          "session",
+          "training"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "session_overview",
+          "training_overview"
+        ],
+        "lexicalScore": 0.3333333333333333,
+        "covered": true
+      },
+      {
+        "id": "US21",
+        "story": "As a Customer, I want to call the gym to book a personal training session, so that I don't have to use the application.",
+        "storyConcepts": [
+          "trainingsession",
+          "application",
+          "book",
+          "call",
+          "don",
+          "gym",
+          "personal",
+          "session",
+          "training",
+          "customer"
+        ],
+        "matchedConcepts": [
+          "session",
+          "training",
+          "customer"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "session_overview",
+          "training_overview",
+          "customer_overview"
+        ],
+        "lexicalScore": 0.3,
+        "covered": true
+      },
+      {
+        "id": "US22",
+        "story": "As a Customer, I want to call the gym to cancel a personal training session, so that I don't have to use the application.",
+        "storyConcepts": [
+          "trainingsession",
+          "application",
+          "call",
+          "cancel",
+          "don",
+          "gym",
+          "personal",
+          "session",
+          "training",
+          "customer"
+        ],
+        "matchedConcepts": [
+          "session",
+          "training",
+          "customer"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "session_overview",
+          "training_overview",
+          "customer_overview"
+        ],
+        "lexicalScore": 0.3,
+        "covered": true
+      },
+      {
+        "id": "US23",
+        "story": "As a Customer, I want to be able to book a spot for the free practice area, so that I know it will have capacity for me when I arrive.",
+        "storyConcepts": [
+          "practicearea",
+          "area",
+          "arrive",
+          "book",
+          "capacity",
+          "free",
+          "know",
+          "practice",
+          "spot",
+          "when",
+          "will",
+          "customer"
+        ],
+        "matchedConcepts": [
+          "capacity",
+          "know",
+          "customer"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "know_overview",
+          "customer_overview"
+        ],
+        "lexicalScore": 0.25,
+        "covered": false
+      },
+      {
+        "id": "US24",
+        "story": "As a Customer, I want to see how many spots have been booked for a given timeslot.",
+        "storyConcepts": [
+          "beenbooked",
+          "giventimeslot",
+          "howmany",
+          "been",
+          "booked",
+          "given",
+          "how",
+          "many",
+          "spot",
+          "timeslot",
+          "customer"
+        ],
+        "matchedConcepts": [
+          "timeslot",
+          "customer"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "timeslot_overview",
+          "customer_overview"
+        ],
+        "lexicalScore": 0.18181818181818182,
+        "covered": false
+      },
+      {
+        "id": "US25",
+        "story": "As a Trainer, I want to see which rooms are free at a given timeslot, so I can organize a lesson.",
+        "storyConcepts": [
+          "giventimeslot",
+          "free",
+          "given",
+          "lesson",
+          "organize",
+          "room",
+          "timeslot",
+          "which",
+          "trainer"
+        ],
+        "matchedConcepts": [
+          "lesson",
+          "room",
+          "timeslot"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "lesson_overview",
+          "room_overview",
+          "timeslot_overview"
+        ],
+        "lexicalScore": 0.3333333333333333,
+        "covered": true
+      },
+      {
+        "id": "US26",
+        "story": "As a Trainer, I want to add a lesson to the schedule, so customers would be able to sign-up.",
+        "storyConcepts": [
+          "customer",
+          "lesson",
+          "sign",
+          "would",
+          "trainer"
+        ],
+        "matchedConcepts": [
+          "customer",
+          "lesson"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "customer_overview",
+          "lesson_overview"
+        ],
+        "lexicalScore": 0.4,
+        "covered": true
+      },
+      {
+        "id": "US27",
+        "story": "As a Trainer, I want to set the time of the lesson, so the customers know when they should be at Daily Sports.",
+        "storyConcepts": [
+          "atdaily",
+          "customerknow",
+          "customer",
+          "daily",
+          "know",
+          "lesson",
+          "set",
+          "should",
+          "sport",
+          "time",
+          "when",
+          "trainer"
+        ],
+        "matchedConcepts": [
+          "customer",
+          "know",
+          "lesson",
+          "time"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "customer_overview",
+          "know_overview",
+          "lesson_overview",
+          "time_overview"
+        ],
+        "lexicalScore": 0.3333333333333333,
+        "covered": true
+      },
+      {
+        "id": "US28",
+        "story": "As a Trainer, I want to set the description of the lesson, so the customers know what to expect from it.",
+        "storyConcepts": [
+          "customerknow",
+          "customer",
+          "description",
+          "expect",
+          "know",
+          "lesson",
+          "set",
+          "trainer",
+          "what"
+        ],
+        "matchedConcepts": [
+          "customer",
+          "description",
+          "know",
+          "lesson"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "customer_overview",
+          "know_overview",
+          "lesson_overview"
+        ],
+        "lexicalScore": 0.4444444444444444,
+        "covered": true
+      },
+      {
+        "id": "US29",
+        "story": "As a Trainer, I want to set the room of the lesson, so the customers know where to go.",
+        "storyConcepts": [
+          "customerknow",
+          "customer",
+          "know",
+          "lesson",
+          "room",
+          "set",
+          "where",
+          "trainer"
+        ],
+        "matchedConcepts": [
+          "customer",
+          "know",
+          "lesson",
+          "room"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "customer_overview",
+          "know_overview",
+          "lesson_overview",
+          "room_overview"
+        ],
+        "lexicalScore": 0.5,
+        "covered": true
+      },
+      {
+        "id": "US30",
+        "story": "As a Trainer, I want to set the type of lesson.",
+        "storyConcepts": [
+          "lesson",
+          "set",
+          "type",
+          "trainer"
+        ],
+        "matchedConcepts": [
+          "lesson",
+          "type"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "lesson_overview"
+        ],
+        "lexicalScore": 0.5,
+        "covered": true
+      },
+      {
+        "id": "US31",
+        "story": "As a Trainer, I want to set the maximum number of people allowed in the lesson, so that we don't over-crowd a room.",
+        "storyConcepts": [
+          "peopleallowed",
+          "tover",
+          "wedon",
+          "allowed",
+          "crowd",
+          "don",
+          "lesson",
+          "maximum",
+          "number",
+          "over",
+          "people",
+          "room",
+          "set",
+          "trainer"
+        ],
+        "matchedConcepts": [
+          "lesson",
+          "number",
+          "room"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "lesson_overview",
+          "room_overview"
+        ],
+        "lexicalScore": 0.21428571428571427,
+        "covered": false
+      },
+      {
+        "id": "US32",
+        "story": "As a Trainer, I want to be able to see what my schedule is.",
+        "storyConcepts": [
+          "trainer",
+          "what"
+        ],
+        "matchedConcepts": [],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [],
+        "lexicalScore": 0,
+        "covered": false
+      },
+      {
+        "id": "US33",
+        "story": "As a Trainer, I want to be the only Trainer who can edit my lessons.",
+        "storyConcepts": [
+          "trainerwho",
+          "lesson",
+          "only",
+          "trainer",
+          "who"
+        ],
+        "matchedConcepts": [
+          "lesson"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "lesson_overview"
+        ],
+        "lexicalScore": 0.2,
+        "covered": false
+      },
+      {
+        "id": "US34",
+        "story": "As a Trainer, I want to edit the time of the lesson, so a more suitable time can be set.",
+        "storyConcepts": [
+          "time",
+          "moresuitable",
+          "lesson",
+          "more",
+          "set",
+          "suitable",
+          "trainer"
+        ],
+        "matchedConcepts": [
+          "time",
+          "lesson"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "time_overview",
+          "lesson_overview"
+        ],
+        "lexicalScore": 0.2857142857142857,
+        "covered": false
+      },
+      {
+        "id": "US35",
+        "story": "As a Trainer, I want to change the room of the lesson, so I can move the lesson to another place.",
+        "storyConcepts": [
+          "lesson",
+          "another",
+          "change",
+          "move",
+          "room",
+          "trainer",
+          "place"
+        ],
+        "matchedConcepts": [
+          "lesson",
+          "room"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "lesson_overview",
+          "room_overview"
+        ],
+        "lexicalScore": 0.2857142857142857,
+        "covered": false
+      },
+      {
+        "id": "US36",
+        "story": "As a Trainer, I want to edit the description of the lesson, so the customers know what to expect.",
+        "storyConcepts": [
+          "customerknow",
+          "customer",
+          "description",
+          "expect",
+          "know",
+          "lesson",
+          "trainer",
+          "what"
+        ],
+        "matchedConcepts": [
+          "customer",
+          "description",
+          "know",
+          "lesson"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "customer_overview",
+          "know_overview",
+          "lesson_overview"
+        ],
+        "lexicalScore": 0.5,
+        "covered": true
+      },
+      {
+        "id": "US37",
+        "story": "As a Trainer, I want to edit the maximum number of people allowed in the lesson, so it is correct for this lesson.",
+        "storyConcepts": [
+          "maximumnumber",
+          "lesson",
+          "peopleallowed",
+          "allowed",
+          "correct",
+          "maximum",
+          "number",
+          "people",
+          "thi",
+          "trainer"
+        ],
+        "matchedConcepts": [
+          "lesson",
+          "number"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "lesson_overview"
+        ],
+        "lexicalScore": 0.2,
+        "covered": false
+      },
+      {
+        "id": "US38",
+        "story": "As an Admin, I want to be able to edit any lesson.",
+        "storyConcepts": [
+          "nylesson",
+          "any",
+          "lesson",
+          "admin"
+        ],
+        "matchedConcepts": [
+          "lesson"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "lesson_overview"
+        ],
+        "lexicalScore": 0.25,
+        "covered": false
+      },
+      {
+        "id": "US39",
+        "story": "As a Trainer, I want to cancel a lesson, so customers won't show up in an empty room when I can't make it.",
+        "storyConcepts": [
+          "roomwhen",
+          "tmake",
+          "tshow",
+          "cancel",
+          "customer",
+          "empty",
+          "lesson",
+          "make",
+          "room",
+          "when",
+          "won",
+          "trainer"
+        ],
+        "matchedConcepts": [
+          "customer",
+          "lesson",
+          "room"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "customer_overview",
+          "lesson_overview",
+          "room_overview"
+        ],
+        "lexicalScore": 0.25,
+        "covered": false
+      },
+      {
+        "id": "US40",
+        "story": "As an Admin, I want to cancel a lesson, so customers won't show up in an empty room when the Trainer can't make it.",
+        "storyConcepts": [
+          "roomwhen",
+          "tmake",
+          "tshow",
+          "cancel",
+          "customer",
+          "empty",
+          "lesson",
+          "make",
+          "room",
+          "trainer",
+          "when",
+          "won",
+          "admin"
+        ],
+        "matchedConcepts": [
+          "customer",
+          "lesson",
+          "room"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "customer_overview",
+          "lesson_overview",
+          "room_overview"
+        ],
+        "lexicalScore": 0.23076923076923078,
+        "covered": false
+      },
+      {
+        "id": "US41",
+        "story": "As a Customer, I want to receive a notification when my booked lesson is canceled, so I won't go to Daily Sports for a canceled lesson.",
+        "storyConcepts": [
+          "canceled",
+          "lesson",
+          "bookedlesson",
+          "tgo",
+          "booked",
+          "daily",
+          "notification",
+          "sport",
+          "when",
+          "won",
+          "customer"
+        ],
+        "matchedConcepts": [
+          "lesson",
+          "notification",
+          "customer"
+        ],
+        "processVisualizerAlignedConcepts": [
+          "notification"
+        ],
+        "matchedUiRefs": [
+          "lesson_overview",
+          "notification_overview",
+          "customer_overview"
+        ],
+        "lexicalScore": 0.2727272727272727,
+        "covered": false
+      },
+      {
+        "id": "US42",
+        "story": "As a Customer, I want to be notified if I didn't go to a session I had booked, so that I know it happened.",
+        "storyConcepts": [
+          "hadbooked",
+          "notifiedif",
+          "tgo",
+          "booked",
+          "didn",
+          "had",
+          "happened",
+          "know",
+          "notified",
+          "session",
+          "customer"
+        ],
+        "matchedConcepts": [
+          "know",
+          "session",
+          "customer"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "know_overview",
+          "session_overview",
+          "customer_overview"
+        ],
+        "lexicalScore": 0.2727272727272727,
+        "covered": false
+      },
+      {
+        "id": "US43",
+        "story": "As an Admin, I want to see if a customer did not show up for a session they had booked, so that I can take further action.",
+        "storyConcepts": [
+          "customerdid",
+          "notshow",
+          "takefurther",
+          "action",
+          "booked",
+          "customer",
+          "did",
+          "further",
+          "had",
+          "not",
+          "session",
+          "take",
+          "admin"
+        ],
+        "matchedConcepts": [
+          "customer",
+          "session"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "customer_overview",
+          "session_overview"
+        ],
+        "lexicalScore": 0.15384615384615385,
+        "covered": false
+      },
+      {
+        "id": "US44",
+        "story": "As an Admin, I want to see how many times a customer did not show up for a session.",
+        "storyConcepts": [
+          "customerdid",
+          "howmany",
+          "notshow",
+          "customer",
+          "did",
+          "how",
+          "many",
+          "not",
+          "session",
+          "time",
+          "admin"
+        ],
+        "matchedConcepts": [
+          "customer",
+          "session",
+          "time"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "customer_overview",
+          "session_overview",
+          "time_overview"
+        ],
+        "lexicalScore": 0.2727272727272727,
+        "covered": false
+      },
+      {
+        "id": "US45",
+        "story": "As an Admin, I want to have the system to issue a fine if a customer does not show up more than 2 times, so that we can deter no-shows.",
+        "storyConcepts": [
+          "customerdoe",
+          "deterno",
+          "notshow",
+          "upmore",
+          "customer",
+          "deter",
+          "doe",
+          "fine",
+          "issue",
+          "more",
+          "not",
+          "than",
+          "time",
+          "admin",
+          "system"
+        ],
+        "matchedConcepts": [
+          "customer",
+          "time"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "customer_overview",
+          "time_overview"
+        ],
+        "lexicalScore": 0.13333333333333333,
+        "covered": false
+      },
+      {
+        "id": "US46",
+        "story": "As an Admin, I want to have the fines for repeat offenders to increase exponentially for each subsequent offense, so we can deter no-shows.",
+        "storyConcepts": [
+          "increaseexponentially",
+          "subsequentoffense",
+          "deter",
+          "each",
+          "exponentially",
+          "fine",
+          "increase",
+          "offender",
+          "offense",
+          "repeat",
+          "subsequent",
+          "admin"
+        ],
+        "matchedConcepts": [],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [],
+        "lexicalScore": 0,
+        "covered": false
+      },
+      {
+        "id": "US47",
+        "story": "As an Admin I want to add a new trainer to the system, so the new trainer can start working.",
+        "storyConcepts": [
+          "trainer",
+          "admin",
+          "start",
+          "working",
+          "user",
+          "system"
+        ],
+        "matchedConcepts": [
+          "start"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [],
+        "lexicalScore": 0.16666666666666666,
+        "covered": false
+      },
+      {
+        "id": "US48",
+        "story": "As an Admin I want to add a new admin to the system, so the new admin can start working.",
+        "storyConcepts": [
+          "admin",
+          "start",
+          "working",
+          "user",
+          "system"
+        ],
+        "matchedConcepts": [
+          "start"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [],
+        "lexicalScore": 0.2,
+        "covered": false
+      },
+      {
+        "id": "US49",
+        "story": "As an Admin I want to remove a trainer from the system, so they cannot access the system anymore.",
+        "storyConcepts": [
+          "cannotaccess",
+          "admin",
+          "anymore",
+          "cannot",
+          "remove",
+          "trainer",
+          "user",
+          "system"
+        ],
+        "matchedConcepts": [],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [],
+        "lexicalScore": 0,
+        "covered": false
+      },
+      {
+        "id": "US50",
+        "story": "As a User, I want to log in to the system, so that I can use the system.",
+        "storyConcepts": [
+          "log",
+          "user",
+          "system"
+        ],
+        "matchedConcepts": [],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [],
+        "lexicalScore": 0,
+        "covered": false
+      },
+      {
+        "id": "US51",
+        "story": "As a Customer, I want to receive notifications by the method which I prefer, so that I am able to see them and not be annoyed by them.",
+        "storyConcepts": [
+          "them",
+          "annoyed",
+          "method",
+          "not",
+          "notification",
+          "prefer",
+          "which",
+          "customer"
+        ],
+        "matchedConcepts": [
+          "method",
+          "notification",
+          "customer"
+        ],
+        "processVisualizerAlignedConcepts": [
+          "notification"
+        ],
+        "matchedUiRefs": [
+          "notification_overview",
+          "customer_overview"
+        ],
+        "lexicalScore": 0.375,
+        "covered": true
+      },
+      {
+        "id": "US52",
+        "story": "As a Customer, I want to receive notifications by email.",
+        "storyConcepts": [
+          "email",
+          "notification",
+          "customer"
+        ],
+        "matchedConcepts": [
+          "email",
+          "notification",
+          "customer"
+        ],
+        "processVisualizerAlignedConcepts": [
+          "notification"
+        ],
+        "matchedUiRefs": [
+          "notification_overview",
+          "customer_overview"
+        ],
+        "lexicalScore": 1,
+        "covered": true
+      },
+      {
+        "id": "US53",
+        "story": "As a Customer, I want to receive push notifications from the system.",
+        "storyConcepts": [
+          "pushnotification",
+          "notification",
+          "push",
+          "customer",
+          "system"
+        ],
+        "matchedConcepts": [
+          "notification",
+          "customer"
+        ],
+        "processVisualizerAlignedConcepts": [
+          "notification"
+        ],
+        "matchedUiRefs": [
+          "notification_overview",
+          "customer_overview"
+        ],
+        "lexicalScore": 0.4,
+        "covered": true
+      },
+      {
+        "id": "US54",
+        "story": "As a Customer, I want to choose what to receive notifications for.",
+        "storyConcepts": [
+          "notification",
+          "customer",
+          "what"
+        ],
+        "matchedConcepts": [
+          "notification",
+          "customer"
+        ],
+        "processVisualizerAlignedConcepts": [
+          "notification"
+        ],
+        "matchedUiRefs": [
+          "notification_overview",
+          "customer_overview"
+        ],
+        "lexicalScore": 0.6666666666666666,
+        "covered": true
+      },
+      {
+        "id": "US55",
+        "story": "As a Customer, I want to receive a notification when a training session is canceled.",
+        "storyConcepts": [
+          "trainingsession",
+          "canceled",
+          "notification",
+          "session",
+          "training",
+          "when",
+          "customer"
+        ],
+        "matchedConcepts": [
+          "notification",
+          "session",
+          "training",
+          "customer"
+        ],
+        "processVisualizerAlignedConcepts": [
+          "notification"
+        ],
+        "matchedUiRefs": [
+          "notification_overview",
+          "session_overview",
+          "training_overview",
+          "customer_overview"
+        ],
+        "lexicalScore": 0.5714285714285714,
+        "covered": true
+      },
+      {
+        "id": "US56",
+        "story": "As a Customer, I want to confirm that I am aware that my booking has been canceled.",
+        "storyConcepts": [
+          "amaware",
+          "beencanceled",
+          "aware",
+          "been",
+          "booking",
+          "canceled",
+          "confirm",
+          "customer"
+        ],
+        "matchedConcepts": [
+          "booking",
+          "customer"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "booking_overview",
+          "customer_overview"
+        ],
+        "lexicalScore": 0.25,
+        "covered": false
+      },
+      {
+        "id": "US57",
+        "story": "As an Admin, I want to know which customers are aware that their booking has been canceled, so that I can call them if they aren't.",
+        "storyConcepts": [
+          "beencanceled",
+          "callthem",
+          "aren",
+          "aware",
+          "been",
+          "booking",
+          "call",
+          "canceled",
+          "customer",
+          "know",
+          "them",
+          "which",
+          "admin"
+        ],
+        "matchedConcepts": [
+          "booking",
+          "customer",
+          "know"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "booking_overview",
+          "customer_overview",
+          "know_overview"
+        ],
+        "lexicalScore": 0.23076923076923078,
+        "covered": false
+      },
+      {
+        "id": "US58",
+        "story": "As a Customer, I want to see an overview of my personal information.",
+        "storyConcepts": [
+          "personalinformation",
+          "personal",
+          "customer"
+        ],
+        "matchedConcepts": [
+          "customer"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "customer_overview"
+        ],
+        "lexicalScore": 0.3333333333333333,
+        "covered": false
+      },
+      {
+        "id": "US59",
+        "story": "As a Customer, I want to see information about my membership.",
+        "storyConcepts": [
+          "about",
+          "membership",
+          "customer"
+        ],
+        "matchedConcepts": [
+          "membership",
+          "customer"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "customer_overview"
+        ],
+        "lexicalScore": 0.6666666666666666,
+        "covered": true
+      },
+      {
+        "id": "US60",
+        "story": "As a Trainer, I want to see information about my past and future training sessions.",
+        "storyConcepts": [
+          "trainingsession",
+          "about",
+          "future",
+          "past",
+          "session",
+          "training",
+          "trainer"
+        ],
+        "matchedConcepts": [
+          "session",
+          "training"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "session_overview",
+          "training_overview"
+        ],
+        "lexicalScore": 0.2857142857142857,
+        "covered": false
+      },
+      {
+        "id": "US61",
+        "story": "As a Customer, I want to have a method by which I can check-in.",
+        "storyConcepts": [
+          "check",
+          "method",
+          "which",
+          "customer"
+        ],
+        "matchedConcepts": [
+          "check",
+          "method",
+          "customer"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "customer_overview"
+        ],
+        "lexicalScore": 0.75,
+        "covered": true
+      },
+      {
+        "id": "US62",
+        "story": "As an Admin, I want to see if the Customer who is checking-in has a subscription.",
+        "storyConcepts": [
+          "customerwho",
+          "checking",
+          "customer",
+          "subscription",
+          "who",
+          "admin"
+        ],
+        "matchedConcepts": [
+          "customer",
+          "subscription"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "customer_overview",
+          "subscription_overview"
+        ],
+        "lexicalScore": 0.3333333333333333,
+        "covered": true
+      },
+      {
+        "id": "US63",
+        "story": "As an Admin, I want to see if the Customer who is checking-in has any bookings.",
+        "storyConcepts": [
+          "anybooking",
+          "customerwho",
+          "any",
+          "booking",
+          "checking",
+          "customer",
+          "who",
+          "admin"
+        ],
+        "matchedConcepts": [
+          "booking",
+          "customer"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "booking_overview",
+          "customer_overview"
+        ],
+        "lexicalScore": 0.25,
+        "covered": false
+      }
+    ]
+  },
+  "coverageGate": {
+    "enabled": false,
+    "minimum": null,
+    "score": 0.49206349206349204,
+    "passed": true
+  },
+  "ollama": {
+    "model": "gemma4:e4b",
+    "totalDuration": 263922903334,
+    "loadDuration": 6221632000,
+    "promptEvalCount": 6100,
+    "evalCount": 2171,
+    "numCtx": 8192,
+    "numPredict": 6144,
+    "likelyPromptTruncated": false
+  },
+  "visualNarrator": {
+    "enabled": true,
+    "status": "completed",
+    "durationMs": 5158,
+    "command": "/Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/visual-narrator/.venv/bin/python /Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/pipeline/scripts/run_visual_narrator.py --input /Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/artifacts/practical-performance/20260528-165228/inputs/sports/user-stories.txt --system-name PracticalPerf_sports_Stability",
+    "artifacts": {
+      "ontologyPath": "/Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/artifacts/practical-performance/20260528-165228/stability/sports/run-02/visual-narrator-ontology.omn",
+      "storiesPath": "/Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/artifacts/practical-performance/20260528-165228/stability/sports/run-02/visual-narrator-stories.json",
+      "summaryPath": "/Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/artifacts/practical-performance/20260528-165228/stability/sports/run-02/visual-narrator-summary.json",
+      "rawPath": "/Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/artifacts/practical-performance/20260528-165228/stability/sports/run-02/visual-narrator-result.json"
+    },
+    "warnings": []
+  },
+  "processVisualizer": {
+    "enabled": true,
+    "status": "completed",
+    "durationMs": 589547,
+    "command": "/Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/process-visualizer/.venv/bin/python /Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/pipeline/scripts/run_process_visualizer.py --input /Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/artifacts/practical-performance/20260528-165228/inputs/sports/user-stories.txt --output-dir /Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/artifacts/practical-performance/20260528-165228/stability/sports/run-02 --model llama3 --ollama-url http://127.0.0.1:11434",
+    "artifacts": {
+      "summaryPath": "/Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/artifacts/practical-performance/20260528-165228/stability/sports/run-02/process-visualizer-summary.json",
+      "rawPath": "/Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/artifacts/practical-performance/20260528-165228/stability/sports/run-02/process-visualizer-result.json",
+      "graphSourcePath": "/Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/artifacts/practical-performance/20260528-165228/stability/sports/run-02/process-visualizer-run/process-visualizer.gv",
+      "graphImagePath": "/Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/artifacts/practical-performance/20260528-165228/stability/sports/run-02/process-visualizer-run/process-visualizer.png",
+      "logsDir": "/Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/artifacts/practical-performance/20260528-165228/stability/sports/run-02/process-visualizer-run/output_logs"
+    },
+    "warnings": []
+  },
+  "domainModelReview": {
+    "enabled": true,
+    "status": "completed",
+    "droppedEntities": [],
+    "droppedAssociations": [],
+    "repairedAssociations": [],
+    "addedAssociations": [],
+    "warnings": []
+  },
+  "planDiagnostics": {
+    "preprocessing": {
+      "visualNarratorEnabled": true,
+      "visualNarratorStatus": "completed",
+      "processVisualizerEnabled": true,
+      "processVisualizerStatus": "completed"
+    },
+    "domainModelReview": {
+      "enabled": true,
+      "status": "completed",
+      "droppedEntities": [],
+      "droppedAssociations": [],
+      "repairedAssociations": [],
+      "addedAssociations": [],
+      "warnings": []
+    },
+    "referenceAppBaseline": {
+      "source": "reference-app-baseline",
+      "capabilities": [
+        "workflow_support",
+        "role_separated_views"
+      ],
+      "archetypes": [
+        "tasks",
+        "role_separation"
+      ],
+      "recommendedWidgetFamilies": [
+        "workflow_commons"
+      ]
+    },
+    "capabilityRequirements": [],
+    "storyCoverage": {
+      "entries": [
+        {
+          "id": "US01",
+          "story": "As a new Customer, I want to open an account in the system, so I can start training at Daily Sports.",
+          "storyConcepts": [
+            "trainingatdailysport",
+            "dailysport",
+            "trainingat",
+            "account",
+            "daily",
+            "sport",
+            "start",
+            "training",
+            "customer",
+            "system"
+          ],
+          "matchedConcepts": [
+            "account",
+            "start",
+            "training",
+            "customer"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "account_overview",
+            "training_overview",
+            "customer_overview"
+          ],
+          "lexicalScore": 0.4,
+          "covered": true
+        },
+        {
+          "id": "US02",
+          "story": "As a Customer, I want to add my personal information, so I meet the requirements of the gym for signing up.",
+          "storyConcepts": [
+            "personalinformation",
+            "gym",
+            "meet",
+            "personal",
+            "requirement",
+            "signing",
+            "customer"
+          ],
+          "matchedConcepts": [
+            "customer"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "customer_overview"
+          ],
+          "lexicalScore": 0.14285714285714285,
+          "covered": false
+        },
+        {
+          "id": "US03",
+          "story": "As a Customer, I want to add my banking details, so I can pay for my subscription.",
+          "storyConcepts": [
+            "bankingdetail",
+            "banking",
+            "pay",
+            "subscription",
+            "customer"
+          ],
+          "matchedConcepts": [
+            "subscription",
+            "customer"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "subscription_overview",
+            "customer_overview"
+          ],
+          "lexicalScore": 0.4,
+          "covered": true
+        },
+        {
+          "id": "US04",
+          "story": "As a Customer, I want to be able to choose my membership type, so I can pay according to my wishes.",
+          "storyConcepts": [
+            "membershiptype",
+            "according",
+            "membership",
+            "pay",
+            "type",
+            "wishe",
+            "customer"
+          ],
+          "matchedConcepts": [
+            "membershiptype",
+            "membership",
+            "type",
+            "customer"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "membershiptype_overview",
+            "customer_overview"
+          ],
+          "lexicalScore": 0.5714285714285714,
+          "covered": true
+        },
+        {
+          "id": "US05",
+          "story": "As a Customer, I want to be able to extend my subscription for Daily Sports, so I can continue working out.",
+          "storyConcepts": [
+            "dailysport",
+            "workingout",
+            "continue",
+            "daily",
+            "extend",
+            "out",
+            "sport",
+            "subscription",
+            "working",
+            "customer"
+          ],
+          "matchedConcepts": [
+            "subscription",
+            "customer"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "subscription_overview",
+            "customer_overview"
+          ],
+          "lexicalScore": 0.2,
+          "covered": false
+        },
+        {
+          "id": "US06",
+          "story": "As a Customer, I want to know how long my subscription lasts, so I know when I need to extend it.",
+          "storyConcepts": [
+            "know",
+            "howlong",
+            "knowwhen",
+            "extend",
+            "how",
+            "last",
+            "long",
+            "need",
+            "subscription",
+            "when",
+            "customer"
+          ],
+          "matchedConcepts": [
+            "know",
+            "last",
+            "subscription",
+            "customer"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "know_overview",
+            "subscription_overview",
+            "customer_overview"
+          ],
+          "lexicalScore": 0.36363636363636365,
+          "covered": true
+        },
+        {
+          "id": "US07",
+          "story": "As a Returning Customer, I want to be able to use my previous information, so that sign-up is easier.",
+          "storyConcepts": [
+            "previouinformation",
+            "easier",
+            "previou",
+            "sign",
+            "returning",
+            "customer"
+          ],
+          "matchedConcepts": [
+            "customer"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "customer_overview"
+          ],
+          "lexicalScore": 0.16666666666666666,
+          "covered": false
+        },
+        {
+          "id": "US08",
+          "story": "As a Customer, I want to be able to unsubscribe.",
+          "storyConcepts": [
+            "unsubscribe",
+            "customer"
+          ],
+          "matchedConcepts": [
+            "customer"
+          ],
+          "processVisualizerAlignedConcepts": [
+            "unsubscribe"
+          ],
+          "matchedUiRefs": [
+            "customer_overview"
+          ],
+          "lexicalScore": 0.5,
+          "covered": true
+        },
+        {
+          "id": "US09",
+          "story": "As a Customer, I want to be able to reset my password.",
+          "storyConcepts": [
+            "password",
+            "reset",
+            "customer"
+          ],
+          "matchedConcepts": [
+            "password",
+            "customer"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "customer_overview"
+          ],
+          "lexicalScore": 0.6666666666666666,
+          "covered": true
+        },
+        {
+          "id": "US10",
+          "story": "As a Customer, I want to be able to change my personal details.",
+          "storyConcepts": [
+            "personaldetail",
+            "change",
+            "personal",
+            "customer"
+          ],
+          "matchedConcepts": [
+            "customer"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "customer_overview"
+          ],
+          "lexicalScore": 0.25,
+          "covered": false
+        },
+        {
+          "id": "US11",
+          "story": "As a Customer, I want to be able to update my payment information.",
+          "storyConcepts": [
+            "paymentinformation",
+            "payment",
+            "customer"
+          ],
+          "matchedConcepts": [
+            "payment",
+            "customer"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "customer_overview"
+          ],
+          "lexicalScore": 0.6666666666666666,
+          "covered": true
+        },
+        {
+          "id": "US12",
+          "story": "As a Customer with a Family Membership, I want to see who is using my membership.",
+          "storyConcepts": [
+            "membership",
+            "who",
+            "customer",
+            "family"
+          ],
+          "matchedConcepts": [
+            "membership",
+            "customer",
+            "family"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "customer_overview"
+          ],
+          "lexicalScore": 0.75,
+          "covered": true
+        },
+        {
+          "id": "US13",
+          "story": "As a Customer with a Family Membership, I want to add a person to my membership, so that I can utilize it effectively.",
+          "storyConcepts": [
+            "effectively",
+            "membership",
+            "person",
+            "utilize",
+            "customer",
+            "family"
+          ],
+          "matchedConcepts": [
+            "membership",
+            "customer",
+            "family"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "customer_overview"
+          ],
+          "lexicalScore": 0.5,
+          "covered": true
+        },
+        {
+          "id": "US14",
+          "story": "As a Customer with a Family Membership, I want to remove a person from my membership.",
+          "storyConcepts": [
+            "membership",
+            "person",
+            "remove",
+            "customer",
+            "family"
+          ],
+          "matchedConcepts": [
+            "membership",
+            "customer",
+            "family"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "customer_overview"
+          ],
+          "lexicalScore": 0.6,
+          "covered": true
+        },
+        {
+          "id": "US15",
+          "story": "As a Customer, I want to see an overview of all available lessons, so that I can choose which one to book.",
+          "storyConcepts": [
+            "book",
+            "lesson",
+            "one",
+            "which",
+            "customer"
+          ],
+          "matchedConcepts": [
+            "lesson",
+            "customer"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "lesson_overview",
+            "customer_overview"
+          ],
+          "lexicalScore": 0.4,
+          "covered": true
+        },
+        {
+          "id": "US16",
+          "story": "As a Customer, I want to see what future lessons I have booked, so that I can manage my time.",
+          "storyConcepts": [
+            "whatfuture",
+            "booked",
+            "future",
+            "lesson",
+            "time",
+            "customer",
+            "what"
+          ],
+          "matchedConcepts": [
+            "lesson",
+            "time",
+            "customer"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "lesson_overview",
+            "time_overview",
+            "customer_overview"
+          ],
+          "lexicalScore": 0.42857142857142855,
+          "covered": true
+        },
+        {
+          "id": "US17",
+          "story": "As a Customer, I want to see a record of previous lessons I have booked, so I can track my progress.",
+          "storyConcepts": [
+            "booked",
+            "lesson",
+            "previou",
+            "customer",
+            "progress"
+          ],
+          "matchedConcepts": [
+            "lesson",
+            "customer"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "lesson_overview",
+            "customer_overview"
+          ],
+          "lexicalScore": 0.4,
+          "covered": true
+        },
+        {
+          "id": "US18",
+          "story": "As a Customer, I want to be able to call the gym to book a lesson, so that I don't have to use the application.",
+          "storyConcepts": [
+            "application",
+            "book",
+            "call",
+            "don",
+            "gym",
+            "lesson",
+            "customer"
+          ],
+          "matchedConcepts": [
+            "lesson",
+            "customer"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "lesson_overview",
+            "customer_overview"
+          ],
+          "lexicalScore": 0.2857142857142857,
+          "covered": false
+        },
+        {
+          "id": "US19",
+          "story": "As a Customer, I want to be able to call the gym to cancel a lesson, so that I don't have to use the application.",
+          "storyConcepts": [
+            "application",
+            "call",
+            "cancel",
+            "don",
+            "gym",
+            "lesson",
+            "customer"
+          ],
+          "matchedConcepts": [
+            "lesson",
+            "customer"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "lesson_overview",
+            "customer_overview"
+          ],
+          "lexicalScore": 0.2857142857142857,
+          "covered": false
+        },
+        {
+          "id": "US20",
+          "story": "As an Admin, I want to be able to edit all personal training sessions.",
+          "storyConcepts": [
+            "llpersonaltrainingsession",
+            "personaltraining",
+            "personal",
+            "session",
+            "training",
+            "admin"
+          ],
+          "matchedConcepts": [
+            "session",
+            "training"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "session_overview",
+            "training_overview"
+          ],
+          "lexicalScore": 0.3333333333333333,
+          "covered": true
+        },
+        {
+          "id": "US21",
+          "story": "As a Customer, I want to call the gym to book a personal training session, so that I don't have to use the application.",
+          "storyConcepts": [
+            "trainingsession",
+            "application",
+            "book",
+            "call",
+            "don",
+            "gym",
+            "personal",
+            "session",
+            "training",
+            "customer"
+          ],
+          "matchedConcepts": [
+            "session",
+            "training",
+            "customer"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "session_overview",
+            "training_overview",
+            "customer_overview"
+          ],
+          "lexicalScore": 0.3,
+          "covered": true
+        },
+        {
+          "id": "US22",
+          "story": "As a Customer, I want to call the gym to cancel a personal training session, so that I don't have to use the application.",
+          "storyConcepts": [
+            "trainingsession",
+            "application",
+            "call",
+            "cancel",
+            "don",
+            "gym",
+            "personal",
+            "session",
+            "training",
+            "customer"
+          ],
+          "matchedConcepts": [
+            "session",
+            "training",
+            "customer"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "session_overview",
+            "training_overview",
+            "customer_overview"
+          ],
+          "lexicalScore": 0.3,
+          "covered": true
+        },
+        {
+          "id": "US23",
+          "story": "As a Customer, I want to be able to book a spot for the free practice area, so that I know it will have capacity for me when I arrive.",
+          "storyConcepts": [
+            "practicearea",
+            "area",
+            "arrive",
+            "book",
+            "capacity",
+            "free",
+            "know",
+            "practice",
+            "spot",
+            "when",
+            "will",
+            "customer"
+          ],
+          "matchedConcepts": [
+            "capacity",
+            "know",
+            "customer"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "know_overview",
+            "customer_overview"
+          ],
+          "lexicalScore": 0.25,
+          "covered": false
+        },
+        {
+          "id": "US24",
+          "story": "As a Customer, I want to see how many spots have been booked for a given timeslot.",
+          "storyConcepts": [
+            "beenbooked",
+            "giventimeslot",
+            "howmany",
+            "been",
+            "booked",
+            "given",
+            "how",
+            "many",
+            "spot",
+            "timeslot",
+            "customer"
+          ],
+          "matchedConcepts": [
+            "timeslot",
+            "customer"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "timeslot_overview",
+            "customer_overview"
+          ],
+          "lexicalScore": 0.18181818181818182,
+          "covered": false
+        },
+        {
+          "id": "US25",
+          "story": "As a Trainer, I want to see which rooms are free at a given timeslot, so I can organize a lesson.",
+          "storyConcepts": [
+            "giventimeslot",
+            "free",
+            "given",
+            "lesson",
+            "organize",
+            "room",
+            "timeslot",
+            "which",
+            "trainer"
+          ],
+          "matchedConcepts": [
+            "lesson",
+            "room",
+            "timeslot"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "lesson_overview",
+            "room_overview",
+            "timeslot_overview"
+          ],
+          "lexicalScore": 0.3333333333333333,
+          "covered": true
+        },
+        {
+          "id": "US26",
+          "story": "As a Trainer, I want to add a lesson to the schedule, so customers would be able to sign-up.",
+          "storyConcepts": [
+            "customer",
+            "lesson",
+            "sign",
+            "would",
+            "trainer"
+          ],
+          "matchedConcepts": [
+            "customer",
+            "lesson"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "customer_overview",
+            "lesson_overview"
+          ],
+          "lexicalScore": 0.4,
+          "covered": true
+        },
+        {
+          "id": "US27",
+          "story": "As a Trainer, I want to set the time of the lesson, so the customers know when they should be at Daily Sports.",
+          "storyConcepts": [
+            "atdaily",
+            "customerknow",
+            "customer",
+            "daily",
+            "know",
+            "lesson",
+            "set",
+            "should",
+            "sport",
+            "time",
+            "when",
+            "trainer"
+          ],
+          "matchedConcepts": [
+            "customer",
+            "know",
+            "lesson",
+            "time"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "customer_overview",
+            "know_overview",
+            "lesson_overview",
+            "time_overview"
+          ],
+          "lexicalScore": 0.3333333333333333,
+          "covered": true
+        },
+        {
+          "id": "US28",
+          "story": "As a Trainer, I want to set the description of the lesson, so the customers know what to expect from it.",
+          "storyConcepts": [
+            "customerknow",
+            "customer",
+            "description",
+            "expect",
+            "know",
+            "lesson",
+            "set",
+            "trainer",
+            "what"
+          ],
+          "matchedConcepts": [
+            "customer",
+            "description",
+            "know",
+            "lesson"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "customer_overview",
+            "know_overview",
+            "lesson_overview"
+          ],
+          "lexicalScore": 0.4444444444444444,
+          "covered": true
+        },
+        {
+          "id": "US29",
+          "story": "As a Trainer, I want to set the room of the lesson, so the customers know where to go.",
+          "storyConcepts": [
+            "customerknow",
+            "customer",
+            "know",
+            "lesson",
+            "room",
+            "set",
+            "where",
+            "trainer"
+          ],
+          "matchedConcepts": [
+            "customer",
+            "know",
+            "lesson",
+            "room"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "customer_overview",
+            "know_overview",
+            "lesson_overview",
+            "room_overview"
+          ],
+          "lexicalScore": 0.5,
+          "covered": true
+        },
+        {
+          "id": "US30",
+          "story": "As a Trainer, I want to set the type of lesson.",
+          "storyConcepts": [
+            "lesson",
+            "set",
+            "type",
+            "trainer"
+          ],
+          "matchedConcepts": [
+            "lesson",
+            "type"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "lesson_overview"
+          ],
+          "lexicalScore": 0.5,
+          "covered": true
+        },
+        {
+          "id": "US31",
+          "story": "As a Trainer, I want to set the maximum number of people allowed in the lesson, so that we don't over-crowd a room.",
+          "storyConcepts": [
+            "peopleallowed",
+            "tover",
+            "wedon",
+            "allowed",
+            "crowd",
+            "don",
+            "lesson",
+            "maximum",
+            "number",
+            "over",
+            "people",
+            "room",
+            "set",
+            "trainer"
+          ],
+          "matchedConcepts": [
+            "lesson",
+            "number",
+            "room"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "lesson_overview",
+            "room_overview"
+          ],
+          "lexicalScore": 0.21428571428571427,
+          "covered": false
+        },
+        {
+          "id": "US32",
+          "story": "As a Trainer, I want to be able to see what my schedule is.",
+          "storyConcepts": [
+            "trainer",
+            "what"
+          ],
+          "matchedConcepts": [],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [],
+          "lexicalScore": 0,
+          "covered": false
+        },
+        {
+          "id": "US33",
+          "story": "As a Trainer, I want to be the only Trainer who can edit my lessons.",
+          "storyConcepts": [
+            "trainerwho",
+            "lesson",
+            "only",
+            "trainer",
+            "who"
+          ],
+          "matchedConcepts": [
+            "lesson"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "lesson_overview"
+          ],
+          "lexicalScore": 0.2,
+          "covered": false
+        },
+        {
+          "id": "US34",
+          "story": "As a Trainer, I want to edit the time of the lesson, so a more suitable time can be set.",
+          "storyConcepts": [
+            "time",
+            "moresuitable",
+            "lesson",
+            "more",
+            "set",
+            "suitable",
+            "trainer"
+          ],
+          "matchedConcepts": [
+            "time",
+            "lesson"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "time_overview",
+            "lesson_overview"
+          ],
+          "lexicalScore": 0.2857142857142857,
+          "covered": false
+        },
+        {
+          "id": "US35",
+          "story": "As a Trainer, I want to change the room of the lesson, so I can move the lesson to another place.",
+          "storyConcepts": [
+            "lesson",
+            "another",
+            "change",
+            "move",
+            "room",
+            "trainer",
+            "place"
+          ],
+          "matchedConcepts": [
+            "lesson",
+            "room"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "lesson_overview",
+            "room_overview"
+          ],
+          "lexicalScore": 0.2857142857142857,
+          "covered": false
+        },
+        {
+          "id": "US36",
+          "story": "As a Trainer, I want to edit the description of the lesson, so the customers know what to expect.",
+          "storyConcepts": [
+            "customerknow",
+            "customer",
+            "description",
+            "expect",
+            "know",
+            "lesson",
+            "trainer",
+            "what"
+          ],
+          "matchedConcepts": [
+            "customer",
+            "description",
+            "know",
+            "lesson"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "customer_overview",
+            "know_overview",
+            "lesson_overview"
+          ],
+          "lexicalScore": 0.5,
+          "covered": true
+        },
+        {
+          "id": "US37",
+          "story": "As a Trainer, I want to edit the maximum number of people allowed in the lesson, so it is correct for this lesson.",
+          "storyConcepts": [
+            "maximumnumber",
+            "lesson",
+            "peopleallowed",
+            "allowed",
+            "correct",
+            "maximum",
+            "number",
+            "people",
+            "thi",
+            "trainer"
+          ],
+          "matchedConcepts": [
+            "lesson",
+            "number"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "lesson_overview"
+          ],
+          "lexicalScore": 0.2,
+          "covered": false
+        },
+        {
+          "id": "US38",
+          "story": "As an Admin, I want to be able to edit any lesson.",
+          "storyConcepts": [
+            "nylesson",
+            "any",
+            "lesson",
+            "admin"
+          ],
+          "matchedConcepts": [
+            "lesson"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "lesson_overview"
+          ],
+          "lexicalScore": 0.25,
+          "covered": false
+        },
+        {
+          "id": "US39",
+          "story": "As a Trainer, I want to cancel a lesson, so customers won't show up in an empty room when I can't make it.",
+          "storyConcepts": [
+            "roomwhen",
+            "tmake",
+            "tshow",
+            "cancel",
+            "customer",
+            "empty",
+            "lesson",
+            "make",
+            "room",
+            "when",
+            "won",
+            "trainer"
+          ],
+          "matchedConcepts": [
+            "customer",
+            "lesson",
+            "room"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "customer_overview",
+            "lesson_overview",
+            "room_overview"
+          ],
+          "lexicalScore": 0.25,
+          "covered": false
+        },
+        {
+          "id": "US40",
+          "story": "As an Admin, I want to cancel a lesson, so customers won't show up in an empty room when the Trainer can't make it.",
+          "storyConcepts": [
+            "roomwhen",
+            "tmake",
+            "tshow",
+            "cancel",
+            "customer",
+            "empty",
+            "lesson",
+            "make",
+            "room",
+            "trainer",
+            "when",
+            "won",
+            "admin"
+          ],
+          "matchedConcepts": [
+            "customer",
+            "lesson",
+            "room"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "customer_overview",
+            "lesson_overview",
+            "room_overview"
+          ],
+          "lexicalScore": 0.23076923076923078,
+          "covered": false
+        },
+        {
+          "id": "US41",
+          "story": "As a Customer, I want to receive a notification when my booked lesson is canceled, so I won't go to Daily Sports for a canceled lesson.",
+          "storyConcepts": [
+            "canceled",
+            "lesson",
+            "bookedlesson",
+            "tgo",
+            "booked",
+            "daily",
+            "notification",
+            "sport",
+            "when",
+            "won",
+            "customer"
+          ],
+          "matchedConcepts": [
+            "lesson",
+            "notification",
+            "customer"
+          ],
+          "processVisualizerAlignedConcepts": [
+            "notification"
+          ],
+          "matchedUiRefs": [
+            "lesson_overview",
+            "notification_overview",
+            "customer_overview"
+          ],
+          "lexicalScore": 0.2727272727272727,
+          "covered": false
+        },
+        {
+          "id": "US42",
+          "story": "As a Customer, I want to be notified if I didn't go to a session I had booked, so that I know it happened.",
+          "storyConcepts": [
+            "hadbooked",
+            "notifiedif",
+            "tgo",
+            "booked",
+            "didn",
+            "had",
+            "happened",
+            "know",
+            "notified",
+            "session",
+            "customer"
+          ],
+          "matchedConcepts": [
+            "know",
+            "session",
+            "customer"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "know_overview",
+            "session_overview",
+            "customer_overview"
+          ],
+          "lexicalScore": 0.2727272727272727,
+          "covered": false
+        },
+        {
+          "id": "US43",
+          "story": "As an Admin, I want to see if a customer did not show up for a session they had booked, so that I can take further action.",
+          "storyConcepts": [
+            "customerdid",
+            "notshow",
+            "takefurther",
+            "action",
+            "booked",
+            "customer",
+            "did",
+            "further",
+            "had",
+            "not",
+            "session",
+            "take",
+            "admin"
+          ],
+          "matchedConcepts": [
+            "customer",
+            "session"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "customer_overview",
+            "session_overview"
+          ],
+          "lexicalScore": 0.15384615384615385,
+          "covered": false
+        },
+        {
+          "id": "US44",
+          "story": "As an Admin, I want to see how many times a customer did not show up for a session.",
+          "storyConcepts": [
+            "customerdid",
+            "howmany",
+            "notshow",
+            "customer",
+            "did",
+            "how",
+            "many",
+            "not",
+            "session",
+            "time",
+            "admin"
+          ],
+          "matchedConcepts": [
+            "customer",
+            "session",
+            "time"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "customer_overview",
+            "session_overview",
+            "time_overview"
+          ],
+          "lexicalScore": 0.2727272727272727,
+          "covered": false
+        },
+        {
+          "id": "US45",
+          "story": "As an Admin, I want to have the system to issue a fine if a customer does not show up more than 2 times, so that we can deter no-shows.",
+          "storyConcepts": [
+            "customerdoe",
+            "deterno",
+            "notshow",
+            "upmore",
+            "customer",
+            "deter",
+            "doe",
+            "fine",
+            "issue",
+            "more",
+            "not",
+            "than",
+            "time",
+            "admin",
+            "system"
+          ],
+          "matchedConcepts": [
+            "customer",
+            "time"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "customer_overview",
+            "time_overview"
+          ],
+          "lexicalScore": 0.13333333333333333,
+          "covered": false
+        },
+        {
+          "id": "US46",
+          "story": "As an Admin, I want to have the fines for repeat offenders to increase exponentially for each subsequent offense, so we can deter no-shows.",
+          "storyConcepts": [
+            "increaseexponentially",
+            "subsequentoffense",
+            "deter",
+            "each",
+            "exponentially",
+            "fine",
+            "increase",
+            "offender",
+            "offense",
+            "repeat",
+            "subsequent",
+            "admin"
+          ],
+          "matchedConcepts": [],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [],
+          "lexicalScore": 0,
+          "covered": false
+        },
+        {
+          "id": "US47",
+          "story": "As an Admin I want to add a new trainer to the system, so the new trainer can start working.",
+          "storyConcepts": [
+            "trainer",
+            "admin",
+            "start",
+            "working",
+            "user",
+            "system"
+          ],
+          "matchedConcepts": [
+            "start"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [],
+          "lexicalScore": 0.16666666666666666,
+          "covered": false
+        },
+        {
+          "id": "US48",
+          "story": "As an Admin I want to add a new admin to the system, so the new admin can start working.",
+          "storyConcepts": [
+            "admin",
+            "start",
+            "working",
+            "user",
+            "system"
+          ],
+          "matchedConcepts": [
+            "start"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [],
+          "lexicalScore": 0.2,
+          "covered": false
+        },
+        {
+          "id": "US49",
+          "story": "As an Admin I want to remove a trainer from the system, so they cannot access the system anymore.",
+          "storyConcepts": [
+            "cannotaccess",
+            "admin",
+            "anymore",
+            "cannot",
+            "remove",
+            "trainer",
+            "user",
+            "system"
+          ],
+          "matchedConcepts": [],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [],
+          "lexicalScore": 0,
+          "covered": false
+        },
+        {
+          "id": "US50",
+          "story": "As a User, I want to log in to the system, so that I can use the system.",
+          "storyConcepts": [
+            "log",
+            "user",
+            "system"
+          ],
+          "matchedConcepts": [],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [],
+          "lexicalScore": 0,
+          "covered": false
+        },
+        {
+          "id": "US51",
+          "story": "As a Customer, I want to receive notifications by the method which I prefer, so that I am able to see them and not be annoyed by them.",
+          "storyConcepts": [
+            "them",
+            "annoyed",
+            "method",
+            "not",
+            "notification",
+            "prefer",
+            "which",
+            "customer"
+          ],
+          "matchedConcepts": [
+            "method",
+            "notification",
+            "customer"
+          ],
+          "processVisualizerAlignedConcepts": [
+            "notification"
+          ],
+          "matchedUiRefs": [
+            "notification_overview",
+            "customer_overview"
+          ],
+          "lexicalScore": 0.375,
+          "covered": true
+        },
+        {
+          "id": "US52",
+          "story": "As a Customer, I want to receive notifications by email.",
+          "storyConcepts": [
+            "email",
+            "notification",
+            "customer"
+          ],
+          "matchedConcepts": [
+            "email",
+            "notification",
+            "customer"
+          ],
+          "processVisualizerAlignedConcepts": [
+            "notification"
+          ],
+          "matchedUiRefs": [
+            "notification_overview",
+            "customer_overview"
+          ],
+          "lexicalScore": 1,
+          "covered": true
+        },
+        {
+          "id": "US53",
+          "story": "As a Customer, I want to receive push notifications from the system.",
+          "storyConcepts": [
+            "pushnotification",
+            "notification",
+            "push",
+            "customer",
+            "system"
+          ],
+          "matchedConcepts": [
+            "notification",
+            "customer"
+          ],
+          "processVisualizerAlignedConcepts": [
+            "notification"
+          ],
+          "matchedUiRefs": [
+            "notification_overview",
+            "customer_overview"
+          ],
+          "lexicalScore": 0.4,
+          "covered": true
+        },
+        {
+          "id": "US54",
+          "story": "As a Customer, I want to choose what to receive notifications for.",
+          "storyConcepts": [
+            "notification",
+            "customer",
+            "what"
+          ],
+          "matchedConcepts": [
+            "notification",
+            "customer"
+          ],
+          "processVisualizerAlignedConcepts": [
+            "notification"
+          ],
+          "matchedUiRefs": [
+            "notification_overview",
+            "customer_overview"
+          ],
+          "lexicalScore": 0.6666666666666666,
+          "covered": true
+        },
+        {
+          "id": "US55",
+          "story": "As a Customer, I want to receive a notification when a training session is canceled.",
+          "storyConcepts": [
+            "trainingsession",
+            "canceled",
+            "notification",
+            "session",
+            "training",
+            "when",
+            "customer"
+          ],
+          "matchedConcepts": [
+            "notification",
+            "session",
+            "training",
+            "customer"
+          ],
+          "processVisualizerAlignedConcepts": [
+            "notification"
+          ],
+          "matchedUiRefs": [
+            "notification_overview",
+            "session_overview",
+            "training_overview",
+            "customer_overview"
+          ],
+          "lexicalScore": 0.5714285714285714,
+          "covered": true
+        },
+        {
+          "id": "US56",
+          "story": "As a Customer, I want to confirm that I am aware that my booking has been canceled.",
+          "storyConcepts": [
+            "amaware",
+            "beencanceled",
+            "aware",
+            "been",
+            "booking",
+            "canceled",
+            "confirm",
+            "customer"
+          ],
+          "matchedConcepts": [
+            "booking",
+            "customer"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "booking_overview",
+            "customer_overview"
+          ],
+          "lexicalScore": 0.25,
+          "covered": false
+        },
+        {
+          "id": "US57",
+          "story": "As an Admin, I want to know which customers are aware that their booking has been canceled, so that I can call them if they aren't.",
+          "storyConcepts": [
+            "beencanceled",
+            "callthem",
+            "aren",
+            "aware",
+            "been",
+            "booking",
+            "call",
+            "canceled",
+            "customer",
+            "know",
+            "them",
+            "which",
+            "admin"
+          ],
+          "matchedConcepts": [
+            "booking",
+            "customer",
+            "know"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "booking_overview",
+            "customer_overview",
+            "know_overview"
+          ],
+          "lexicalScore": 0.23076923076923078,
+          "covered": false
+        },
+        {
+          "id": "US58",
+          "story": "As a Customer, I want to see an overview of my personal information.",
+          "storyConcepts": [
+            "personalinformation",
+            "personal",
+            "customer"
+          ],
+          "matchedConcepts": [
+            "customer"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "customer_overview"
+          ],
+          "lexicalScore": 0.3333333333333333,
+          "covered": false
+        },
+        {
+          "id": "US59",
+          "story": "As a Customer, I want to see information about my membership.",
+          "storyConcepts": [
+            "about",
+            "membership",
+            "customer"
+          ],
+          "matchedConcepts": [
+            "membership",
+            "customer"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "customer_overview"
+          ],
+          "lexicalScore": 0.6666666666666666,
+          "covered": true
+        },
+        {
+          "id": "US60",
+          "story": "As a Trainer, I want to see information about my past and future training sessions.",
+          "storyConcepts": [
+            "trainingsession",
+            "about",
+            "future",
+            "past",
+            "session",
+            "training",
+            "trainer"
+          ],
+          "matchedConcepts": [
+            "session",
+            "training"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "session_overview",
+            "training_overview"
+          ],
+          "lexicalScore": 0.2857142857142857,
+          "covered": false
+        },
+        {
+          "id": "US61",
+          "story": "As a Customer, I want to have a method by which I can check-in.",
+          "storyConcepts": [
+            "check",
+            "method",
+            "which",
+            "customer"
+          ],
+          "matchedConcepts": [
+            "check",
+            "method",
+            "customer"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "customer_overview"
+          ],
+          "lexicalScore": 0.75,
+          "covered": true
+        },
+        {
+          "id": "US62",
+          "story": "As an Admin, I want to see if the Customer who is checking-in has a subscription.",
+          "storyConcepts": [
+            "customerwho",
+            "checking",
+            "customer",
+            "subscription",
+            "who",
+            "admin"
+          ],
+          "matchedConcepts": [
+            "customer",
+            "subscription"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "customer_overview",
+            "subscription_overview"
+          ],
+          "lexicalScore": 0.3333333333333333,
+          "covered": true
+        },
+        {
+          "id": "US63",
+          "story": "As an Admin, I want to see if the Customer who is checking-in has any bookings.",
+          "storyConcepts": [
+            "anybooking",
+            "customerwho",
+            "any",
+            "booking",
+            "checking",
+            "customer",
+            "who",
+            "admin"
+          ],
+          "matchedConcepts": [
+            "booking",
+            "customer"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "booking_overview",
+            "customer_overview"
+          ],
+          "lexicalScore": 0.25,
+          "covered": false
+        }
+      ],
+      "score": 0.49206349206349204,
+      "covered": 31,
+      "total": 63
+    }
+  },
+  "generationStrategy": {
+    "llmPassCount": 1,
+    "repairPassEnabled": false
+  }
+}

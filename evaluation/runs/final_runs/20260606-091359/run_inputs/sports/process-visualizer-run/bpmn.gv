@@ -1,0 +1,62 @@
+digraph bpmn_diagram {
+	node [color=black fillcolor=bisque shape=box style=filled]
+	T0 [label="Customer: open an account in the system"]
+	node [color=black fillcolor=azure shape=diamond style=filled]
+	EG0_S [label=X]
+	node [color=black fillcolor=bisque shape=box style=filled]
+	T1 [label="Returning Customer: know how long my subscription for daily sports lasts"]
+	EG0_S -> T1 [label="so i know when i need to extend my subscription for daily sports"]
+	T2 [label="Customer: unsubscribe"]
+	T3 [label="Customer with a Family Membership: update my payment information"]
+	T2 -> T3
+	T4 [label="Customer: see what future lessons i have booked"]
+	T3 -> T4
+	T5 [label="Admin: call daily sports to cancel a lesson"]
+	T6 [label="Trainer: see how many spots have been booked for a given timeslot"]
+	T7 [label="Trainer: be the only Trainer who can edit my lessons"]
+	T6 -> T7
+	T8 [label="Admin: be able to edit any lesson"]
+	T7 -> T8
+	T9 [label="Customer: receive a notification"]
+	T8 -> T9
+	T10 [label="Admin: see if a customer did not show up for a session"]
+	T11 [label="Admin: remove a trainer from the system"]
+	T10 -> T11
+	T12 [label="User: log in to the system"]
+	T11 -> T12
+	T13 [label="Customer: receive notifications by the method which i prefer"]
+	T12 -> T13
+	T14 [label="Admin: know which customers are aware that their booking has been canceled"]
+	T13 -> T14
+	T15 [label="customer: know which customers are aware that their booking has been canceled"]
+	T14 -> T15
+	T16 [label="Trainer: see information about my past and future training sessions"]
+	T0 -> EG0_S
+	node [color=black fillcolor=lightpink shape=ellipse style=filled]
+	START_0 [label=START]
+	START_0 -> T0
+	END_0 [label=END]
+	T1 -> END_0
+	END_1 [label=END]
+	EG0_S -> END_1 [label=Else]
+	START_1 [label=START]
+	START_1 -> T2
+	END_2 [label=END]
+	T4 -> END_2
+	START_2 [label=START]
+	START_2 -> T5
+	END_3 [label=END]
+	T5 -> END_3
+	START_3 [label=START]
+	START_3 -> T6
+	END_4 [label=END]
+	T9 -> END_4
+	START_4 [label=START]
+	START_4 -> T10
+	END_5 [label=END]
+	T15 -> END_5
+	START_5 [label=START]
+	START_5 -> T16
+	END_6 [label=END]
+	T16 -> END_6
+}

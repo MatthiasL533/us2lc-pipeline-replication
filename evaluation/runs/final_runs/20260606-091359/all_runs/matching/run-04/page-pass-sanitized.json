@@ -1,0 +1,201 @@
+{
+  "pages": {
+    "specs": [
+      {
+        "name": "home",
+        "layout": "Blank",
+        "widgets": [
+          {
+            "type": "Text",
+            "caption": "Welcome to the Tutoring Platform"
+          },
+          {
+            "type": "Button",
+            "caption": "Get Started",
+            "onClick": "OpenPage 'studentOverview'"
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "studentOverview",
+        "layout": "Table",
+        "entity": "Student",
+        "widgets": [
+          {
+            "type": "DataGrid",
+            "columns": [
+              {
+                "attribute": "Name"
+              },
+              {
+                "attribute": "Email"
+              }
+            ]
+          },
+          {
+            "type": "Button",
+            "caption": "New Student",
+            "onClick": "OpenPage 'newStudent'"
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "newStudent",
+        "layout": "FormHorizontal",
+        "entity": "Student",
+        "widgets": [
+          {
+            "type": "TextInput",
+            "attribute": "Name"
+          },
+          {
+            "type": "TextInput",
+            "attribute": "Email"
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "tutorOverview",
+        "layout": "Table",
+        "entity": "Tutor",
+        "widgets": [
+          {
+            "type": "DataGrid",
+            "columns": [
+              {
+                "attribute": "Name"
+              },
+              {
+                "attribute": "Email"
+              }
+            ]
+          },
+          {
+            "type": "Button",
+            "caption": "New Tutor",
+            "onClick": "OpenPage 'newTutor'"
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "newTutor",
+        "layout": "FormHorizontal",
+        "entity": "Tutor",
+        "widgets": [
+          {
+            "type": "TextInput",
+            "attribute": "Name"
+          },
+          {
+            "type": "TextInput",
+            "attribute": "Email"
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "sessionOverview",
+        "layout": "Table",
+        "entity": "Session",
+        "widgets": [
+          {
+            "type": "DataGrid",
+            "columns": [
+              {
+                "attribute": "Date"
+              },
+              {
+                "attribute": "Duration"
+              }
+            ]
+          },
+          {
+            "type": "Button",
+            "caption": "New Session",
+            "onClick": "OpenPage 'newSession'"
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "newSession",
+        "layout": "FormHorizontal",
+        "entity": "Session",
+        "widgets": [
+          {
+            "type": "DateInput",
+            "attribute": "Date"
+          },
+          {
+            "type": "NumberInput",
+            "attribute": "Duration"
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "matchOverview",
+        "layout": "Table",
+        "entity": "Match",
+        "widgets": [
+          {
+            "type": "DataGrid",
+            "columns": [
+              {
+                "attribute": "Name"
+              }
+            ]
+          },
+          {
+            "type": "Button",
+            "caption": "New Match",
+            "onClick": "OpenPage 'newMatch'"
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "newMatch",
+        "layout": "FormHorizontal",
+        "entity": "Match",
+        "widgets": [
+          {
+            "type": "TextInput",
+            "attribute": "Name"
+          }
+        ],
+        "content": []
+      }
+    ]
+  },
+  "app": {
+    "navigation": {
+      "menuItems": [
+        {
+          "name": "Home",
+          "page": "home"
+        },
+        {
+          "name": "Students",
+          "page": "studentOverview"
+        },
+        {
+          "name": "Tutors",
+          "page": "tutorOverview"
+        },
+        {
+          "name": "Sessions",
+          "page": "sessionOverview"
+        },
+        {
+          "name": "Matches",
+          "page": "matchOverview"
+        }
+      ]
+    }
+  }
+}

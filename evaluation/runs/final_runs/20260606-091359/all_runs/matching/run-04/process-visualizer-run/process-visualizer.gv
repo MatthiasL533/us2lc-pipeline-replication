@@ -1,0 +1,18 @@
+digraph process_visualizer {
+  t0 [label="manager: have an overview and modification functionality"];
+  t1 [label="student: verify accounts of students and tutors"];
+  t2 [label="tutor: select one or multiple subjects i want to be tutored in"];
+  t3 [label="tutor: update my availability dynamically in the app"];
+  t4 [label="student: specify my location"];
+  t5 [label="manager: cancel a session"];
+  t6 [label="student: be matched with a tutor that is available in the hours i have specified"];
+  t7 [label="tutor: be matched with a tutor who"];
+  t8 [label="tutor: be matched with a student that is interested in the subject i teach"];
+  t9 [label="manager: agree to online sessions"];
+  t10 [label="manager: students to receive notifications about an upcoming session on WhatsApp 1 and 3 days prior"];
+  t11 [label="manager: want the student to receive an email when the match is found"];
+  t12 [label="student: want the student to receive an email when the match is found"];
+  t13 [label="tutor: receive notifications three and one day prior to the session date"];
+  t14 [label="tutor: consider all available data"];
+  t15 [label="tutor: view my ratings"];
+}

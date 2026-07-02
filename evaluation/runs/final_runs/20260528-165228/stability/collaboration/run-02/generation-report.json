@@ -1,0 +1,3319 @@
+{
+  "ok": true,
+  "generatedAt": "2026-05-29T22:19:09.726Z",
+  "inputDir": "/Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/artifacts/practical-performance/20260528-165228/inputs/collaboration",
+  "outputPlanPath": "/Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/artifacts/practical-performance/20260528-165228/stability/collaboration/run-02/plan.json",
+  "warnings": [
+    "Dropped association \"<unnamed>\" because entities could not be resolved after normalization.",
+    "Dropped association \"<unnamed>\" because entities could not be resolved after normalization.",
+    "Dropped association \"<unnamed>\" because entities could not be resolved after normalization.",
+    "Dropped association \"<unnamed>\" because entities could not be resolved after normalization.",
+    "Dropped association \"<unnamed>\" because entities could not be resolved after normalization.",
+    "Dropped association \"<unnamed>\" because entities could not be resolved after normalization.",
+    "Dropped association \"<unnamed>\" because entities could not be resolved after normalization.",
+    "Dropped association \"<unnamed>\" because entities could not be resolved after normalization.",
+    "Dropped association \"<unnamed>\" because entities could not be resolved after normalization.",
+    "Dropped association \"<unnamed>\" because entities could not be resolved after normalization.",
+    "Added missing overview page for entity \"Project\".",
+    "Added missing NewEdit page for entity \"Project\".",
+    "Added missing overview page for entity \"Milestone\".",
+    "Added missing NewEdit page for entity \"Milestone\".",
+    "Added missing overview page for entity \"ProjectFile\".",
+    "Added missing NewEdit page for entity \"ProjectFile\".",
+    "Added missing overview page for entity \"Delivery\".",
+    "Added missing NewEdit page for entity \"Delivery\".",
+    "Added missing overview page for entity \"Task\".",
+    "Added missing NewEdit page for entity \"Task\".",
+    "Added missing overview page for entity \"ToDoItem\".",
+    "Added missing NewEdit page for entity \"ToDoItem\".",
+    "Added missing overview page for entity \"TeamMember\".",
+    "Added missing NewEdit page for entity \"TeamMember\".",
+    "Added missing overview page for entity \"FileAccessRequest\".",
+    "Added missing NewEdit page for entity \"FileAccessRequest\".",
+    "Added missing overview page for entity \"ChatMessage\".",
+    "Added missing NewEdit page for entity \"ChatMessage\".",
+    "Added missing overview page for entity \"Feedback\".",
+    "Added missing NewEdit page for entity \"Feedback\".",
+    "Dropped placeholder page \"projectoverview\" because it had no useful steps.",
+    "Dropped placeholder page \"projectdetail\" because it had no useful steps.",
+    "Dropped placeholder page \"filemanagement\" because it had no useful steps.",
+    "Dropped placeholder page \"deliverycreation\" because it had no useful steps.",
+    "Dropped placeholder page \"taskoverview\" because it had no useful steps.",
+    "Dropped placeholder page \"taskdetail\" because it had no useful steps.",
+    "Dropped placeholder page \"chatview\" because it had no useful steps.",
+    "Dropped placeholder page \"fileaccessrequestpage\" because it had no useful steps.",
+    "Repaired NewEdit page for entity \"Task\" because its form inputs no longer matched current associations.",
+    "Repaired NewEdit page for entity \"Delivery\" because its form inputs no longer matched current associations.",
+    "Repaired NewEdit page for entity \"Feedback\" because its form inputs no longer matched current associations.",
+    "Domain model review LLM pass failed; applied deterministic story-evidence review only: Ollama request timed out after 450000ms.",
+    "Domain review dropped duplicate generic entity \"File\": Generic entity duplicates more specific story-backed entity \"FileAccessRequest\".",
+    "Domain review dropped duplicate generic entity \"Team\": Generic entity duplicates more specific story-backed entity \"TeamMember\".",
+    "Domain review dropped association \"Delivery_File\" because it references a dropped entity.",
+    "Domain review dropped association \"Task_File\" because it references a dropped entity.",
+    "Domain review dropped association \"Task_Team\" because it references a dropped entity.",
+    "Removed page \"file_overview\" for dropped entity \"File\".",
+    "Removed page \"file_newedit\" for dropped entity \"File\".",
+    "Removed page \"team_overview\" for dropped entity \"Team\".",
+    "Removed page \"team_newedit\" for dropped entity \"Team\".",
+    "Added story-backed association \"Task_TeamMember\" from Task to TeamMember.",
+    "Repaired NewEdit page for entity \"Task\" because its form inputs no longer matched current associations.",
+    "Repaired NewEdit page for entity \"Delivery\" because its form inputs no longer matched current associations.",
+    "Repaired NewEdit page for entity \"TeamMember\" because its form inputs no longer matched current associations."
+  ],
+  "validation": {
+    "ok": true,
+    "errors": []
+  },
+  "model": "gemma4:e4b",
+  "coverage": {
+    "score": 0.7192982456140351,
+    "covered": 41,
+    "total": 57,
+    "missingStoryIds": [
+      "US02",
+      "US06",
+      "US08",
+      "US12",
+      "US13",
+      "US16",
+      "US20",
+      "US22",
+      "US23",
+      "US27",
+      "US33",
+      "US34",
+      "US35",
+      "US43",
+      "US46",
+      "US54"
+    ],
+    "entries": [
+      {
+        "id": "US01",
+        "story": "As a project manager, I want to view projects for each department in the general projects overview",
+        "storyConcepts": [
+          "project",
+          "generalproject",
+          "department",
+          "each",
+          "general",
+          "manager"
+        ],
+        "matchedConcepts": [
+          "project",
+          "department"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "project_overview"
+        ],
+        "lexicalScore": 0.3333333333333333,
+        "covered": true
+      },
+      {
+        "id": "US02",
+        "story": "As a project manager, I want to create new projects so that planning and collaboration can be centered around a specific goal",
+        "storyConcepts": [
+          "projectplanning",
+          "around",
+          "centered",
+          "collaboration",
+          "goal",
+          "planning",
+          "project",
+          "manager"
+        ],
+        "matchedConcepts": [
+          "goal",
+          "project"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "project_overview"
+        ],
+        "lexicalScore": 0.25,
+        "covered": false
+      },
+      {
+        "id": "US03",
+        "story": "As a project manager, I want to archive projects that have been completed, so that completed projects do not clutter up the project overview",
+        "storyConcepts": [
+          "project",
+          "completed",
+          "clutterup",
+          "completedproject",
+          "donot",
+          "archive",
+          "been",
+          "clutter",
+          "not",
+          "manager"
+        ],
+        "matchedConcepts": [
+          "project",
+          "completed",
+          "not"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "project_overview",
+          "not_overview"
+        ],
+        "lexicalScore": 0.3,
+        "covered": true
+      },
+      {
+        "id": "US04",
+        "story": "As a team member, I want to view active projects in my personal view, so that I have an organized overview of my ongoing projects",
+        "storyConcepts": [
+          "ctiveproject",
+          "project",
+          "activeproject",
+          "personalview",
+          "active",
+          "ongoing",
+          "organized",
+          "personal",
+          "team",
+          "member"
+        ],
+        "matchedConcepts": [
+          "project",
+          "team",
+          "member"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "project_overview"
+        ],
+        "lexicalScore": 0.3,
+        "covered": true
+      },
+      {
+        "id": "US05",
+        "story": "As a project manager, I want to create milestones with a due date so that projects are divided into manageable, time-bound partitions",
+        "storyConcepts": [
+          "boundpartition",
+          "dateproject",
+          "bound",
+          "date",
+          "divided",
+          "due",
+          "manageable",
+          "milestone",
+          "partition",
+          "project",
+          "time",
+          "manager"
+        ],
+        "matchedConcepts": [
+          "date",
+          "due",
+          "milestone",
+          "project"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "milestone_overview",
+          "project_overview"
+        ],
+        "lexicalScore": 0.3333333333333333,
+        "covered": true
+      },
+      {
+        "id": "US06",
+        "story": "As a project manager, I want to edit milestone due dates so that any mistakes or changes to these dates can be implemented",
+        "storyConcepts": [
+          "milestoneduedateany",
+          "date",
+          "dateany",
+          "milestonedue",
+          "thesedate",
+          "any",
+          "change",
+          "due",
+          "implemented",
+          "milestone",
+          "mistake",
+          "these",
+          "project",
+          "manager"
+        ],
+        "matchedConcepts": [
+          "date",
+          "due",
+          "milestone",
+          "project"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "milestone_overview",
+          "project_overview"
+        ],
+        "lexicalScore": 0.2857142857142857,
+        "covered": false
+      },
+      {
+        "id": "US07",
+        "story": "As a project manager, I want to be able to delete milestones",
+        "storyConcepts": [
+          "milestone",
+          "project",
+          "manager"
+        ],
+        "matchedConcepts": [
+          "milestone",
+          "project"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "milestone_overview",
+          "project_overview"
+        ],
+        "lexicalScore": 0.6666666666666666,
+        "covered": true
+      },
+      {
+        "id": "US08",
+        "story": "As a project manager, I want to change the status of a milestone so that the relative position of these milestones to the current progress can be accurately tracked",
+        "storyConcepts": [
+          "milestone",
+          "relativeposition",
+          "accurately",
+          "change",
+          "current",
+          "position",
+          "relative",
+          "statu",
+          "these",
+          "tracked",
+          "project",
+          "manager",
+          "progress"
+        ],
+        "matchedConcepts": [
+          "milestone",
+          "statu",
+          "project"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "milestone_overview",
+          "project_overview"
+        ],
+        "lexicalScore": 0.23076923076923078,
+        "covered": false
+      },
+      {
+        "id": "US09",
+        "story": "As a project manager, I want to filter on a specific milestone so that I can have a comprehensive overview of only the content that relates to this specific milestone",
+        "storyConcepts": [
+          "milestone",
+          "comprehensiveoverview",
+          "comprehensive",
+          "content",
+          "only",
+          "relate",
+          "thi",
+          "project",
+          "manager"
+        ],
+        "matchedConcepts": [
+          "milestone",
+          "content",
+          "project"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "milestone_overview",
+          "project_overview"
+        ],
+        "lexicalScore": 0.3333333333333333,
+        "covered": true
+      },
+      {
+        "id": "US10",
+        "story": "As a project manager, I want an indication of new messages and file access requests so that I am aware of new activity that needs my attention",
+        "storyConcepts": [
+          "amaware",
+          "fileaccess",
+          "attention",
+          "aware",
+          "file",
+          "indication",
+          "need",
+          "project",
+          "manager"
+        ],
+        "matchedConcepts": [
+          "fileaccess",
+          "file",
+          "project"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "project_overview"
+        ],
+        "lexicalScore": 0.3333333333333333,
+        "covered": true
+      },
+      {
+        "id": "US11",
+        "story": "As a project manager, I want to be able to view upcoming milestones in the project overview",
+        "storyConcepts": [
+          "upcomingmilestone",
+          "milestone",
+          "project",
+          "upcoming",
+          "manager"
+        ],
+        "matchedConcepts": [
+          "milestone",
+          "project"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "milestone_overview",
+          "project_overview"
+        ],
+        "lexicalScore": 0.4,
+        "covered": true
+      },
+      {
+        "id": "US12",
+        "story": "As a project manager, I want to add files to a delivery while creating a delivery so that clients will be informed of the team’s results",
+        "storyConcepts": [
+          "delivery",
+          "clientwill",
+          "sresult",
+          "whilecreating",
+          "client",
+          "creating",
+          "file",
+          "informed",
+          "result",
+          "team",
+          "while",
+          "will",
+          "project",
+          "manager"
+        ],
+        "matchedConcepts": [
+          "delivery",
+          "file",
+          "team",
+          "project"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "delivery_overview",
+          "project_overview"
+        ],
+        "lexicalScore": 0.2857142857142857,
+        "covered": false
+      },
+      {
+        "id": "US13",
+        "story": "As a project manager, I want to delete files from a delivery while creating a delivery so clients will receive the correct files",
+        "storyConcepts": [
+          "delivery",
+          "file",
+          "whilecreating",
+          "willreceive",
+          "client",
+          "correct",
+          "creating",
+          "while",
+          "will",
+          "project",
+          "manager"
+        ],
+        "matchedConcepts": [
+          "delivery",
+          "file",
+          "project"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "delivery_overview",
+          "project_overview"
+        ],
+        "lexicalScore": 0.2727272727272727,
+        "covered": false
+      },
+      {
+        "id": "US14",
+        "story": "As a project manager, I want to add a description of the feedback goal to a delivery while creating the delivery so that it will be clear for clients on which areas feedback is needed",
+        "storyConcepts": [
+          "delivery",
+          "feedback",
+          "deliverywhile",
+          "feedbackgoal",
+          "area",
+          "clear",
+          "client",
+          "creating",
+          "description",
+          "goal",
+          "needed",
+          "which",
+          "while",
+          "will",
+          "project",
+          "manager"
+        ],
+        "matchedConcepts": [
+          "delivery",
+          "feedback",
+          "description",
+          "goal",
+          "project"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "delivery_overview",
+          "feedback_overview",
+          "project_overview"
+        ],
+        "lexicalScore": 0.3125,
+        "covered": true
+      },
+      {
+        "id": "US15",
+        "story": "As a project manager, I want to save a delivery as a concept so that this delivery can be published later",
+        "storyConcepts": [
+          "delivery",
+          "conceptthi",
+          "concept",
+          "later",
+          "published",
+          "save",
+          "thi",
+          "project",
+          "manager"
+        ],
+        "matchedConcepts": [
+          "delivery",
+          "concept",
+          "project"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "delivery_overview",
+          "project_overview"
+        ],
+        "lexicalScore": 0.3333333333333333,
+        "covered": true
+      },
+      {
+        "id": "US16",
+        "story": "As a project manager, I want to publish a delivery so that clients will be aware of the project’s progress",
+        "storyConcepts": [
+          "clientwill",
+          "sprogress",
+          "aware",
+          "client",
+          "delivery",
+          "project",
+          "publish",
+          "will",
+          "manager",
+          "progress"
+        ],
+        "matchedConcepts": [
+          "delivery",
+          "project"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "delivery_overview",
+          "project_overview"
+        ],
+        "lexicalScore": 0.2,
+        "covered": false
+      },
+      {
+        "id": "US17",
+        "story": "As a client, I want to view the goal description of a delivery so that I have some idea of what kind of feedback is expected",
+        "storyConcepts": [
+          "goaldescription",
+          "someidea",
+          "delivery",
+          "description",
+          "expected",
+          "feedback",
+          "goal",
+          "idea",
+          "kind",
+          "some",
+          "client",
+          "what"
+        ],
+        "matchedConcepts": [
+          "goaldescription",
+          "delivery",
+          "description",
+          "feedback",
+          "goal"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "delivery_overview",
+          "feedback_overview"
+        ],
+        "lexicalScore": 0.4166666666666667,
+        "covered": true
+      },
+      {
+        "id": "US18",
+        "story": "As a client, I want to access the files that are associated with the delivery so that I can base my feedback on these deliverables",
+        "storyConcepts": [
+          "thesedeliverable",
+          "associated",
+          "base",
+          "deliverable",
+          "delivery",
+          "feedback",
+          "file",
+          "these",
+          "client"
+        ],
+        "matchedConcepts": [
+          "delivery",
+          "feedback",
+          "file"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "delivery_overview",
+          "feedback_overview"
+        ],
+        "lexicalScore": 0.3333333333333333,
+        "covered": true
+      },
+      {
+        "id": "US19",
+        "story": "As a project manager, I want to add a file to the file management so that this can be easily found by the team",
+        "storyConcepts": [
+          "file",
+          "filemanagement",
+          "easily",
+          "found",
+          "management",
+          "team",
+          "thi",
+          "project",
+          "manager"
+        ],
+        "matchedConcepts": [
+          "file",
+          "team",
+          "project"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "project_overview"
+        ],
+        "lexicalScore": 0.3333333333333333,
+        "covered": true
+      },
+      {
+        "id": "US20",
+        "story": "As a project manager, I want to delete a file from file management so that accidentally added files do not clutter up the file management",
+        "storyConcepts": [
+          "file",
+          "management",
+          "addedfile",
+          "clutterup",
+          "donot",
+          "managementaccidentally",
+          "accidentally",
+          "added",
+          "clutter",
+          "not",
+          "project",
+          "manager"
+        ],
+        "matchedConcepts": [
+          "file",
+          "not",
+          "project"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "not_overview",
+          "project_overview"
+        ],
+        "lexicalScore": 0.25,
+        "covered": false
+      },
+      {
+        "id": "US21",
+        "story": "As a project manager, I want to open a file in the dedicated desktop app",
+        "storyConcepts": [
+          "dedicateddesktop",
+          "dedicated",
+          "desktop",
+          "file",
+          "project",
+          "manager"
+        ],
+        "matchedConcepts": [
+          "file",
+          "project"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "project_overview"
+        ],
+        "lexicalScore": 0.3333333333333333,
+        "covered": true
+      },
+      {
+        "id": "US22",
+        "story": "As a project manager, I want to open a file in the online editor associated with that file",
+        "storyConcepts": [
+          "file",
+          "onlineeditor",
+          "associated",
+          "editor",
+          "online",
+          "project",
+          "manager"
+        ],
+        "matchedConcepts": [
+          "file",
+          "project"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "project_overview"
+        ],
+        "lexicalScore": 0.2857142857142857,
+        "covered": false
+      },
+      {
+        "id": "US23",
+        "story": "As a project manager, I want to view the file archive so that I can find previous versions of files",
+        "storyConcepts": [
+          "file",
+          "previouversion",
+          "archive",
+          "find",
+          "previou",
+          "version",
+          "project",
+          "manager"
+        ],
+        "matchedConcepts": [
+          "file",
+          "project"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "project_overview"
+        ],
+        "lexicalScore": 0.25,
+        "covered": false
+      },
+      {
+        "id": "US24",
+        "story": "As a project manager, I want to rename a file so that filenames can be adjusted to properly describe the file",
+        "storyConcepts": [
+          "file",
+          "adjusted",
+          "describe",
+          "filename",
+          "properly",
+          "rename",
+          "project",
+          "manager"
+        ],
+        "matchedConcepts": [
+          "file",
+          "filename",
+          "project"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "project_overview"
+        ],
+        "lexicalScore": 0.375,
+        "covered": true
+      },
+      {
+        "id": "US25",
+        "story": "As a project manager, I want to filter on file type to quickly find the type of file that I am looking for",
+        "storyConcepts": [
+          "file",
+          "type",
+          "amlooking",
+          "quicklyfind",
+          "find",
+          "looking",
+          "quickly",
+          "project",
+          "manager"
+        ],
+        "matchedConcepts": [
+          "file",
+          "type",
+          "project"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "project_overview"
+        ],
+        "lexicalScore": 0.3333333333333333,
+        "covered": true
+      },
+      {
+        "id": "US26",
+        "story": "As a project manager, I want to search files so that I can quickly find specific files",
+        "storyConcepts": [
+          "file",
+          "find",
+          "quickly",
+          "project",
+          "manager"
+        ],
+        "matchedConcepts": [
+          "file",
+          "project"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "project_overview"
+        ],
+        "lexicalScore": 0.4,
+        "covered": true
+      },
+      {
+        "id": "US27",
+        "story": "As a project manager, I want to sort files so that I can quickly find files based on specific attributes",
+        "storyConcepts": [
+          "file",
+          "findfile",
+          "attribute",
+          "based",
+          "find",
+          "quickly",
+          "sort",
+          "project",
+          "manager"
+        ],
+        "matchedConcepts": [
+          "file",
+          "project"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "project_overview"
+        ],
+        "lexicalScore": 0.2222222222222222,
+        "covered": false
+      },
+      {
+        "id": "US28",
+        "story": "As a project manager, I want to handle file access requests so that file access is restricted to the appropriate users",
+        "storyConcepts": [
+          "file",
+          "fileaccess",
+          "appropriate",
+          "handle",
+          "restricted",
+          "user",
+          "project",
+          "manager"
+        ],
+        "matchedConcepts": [
+          "file",
+          "fileaccess",
+          "project"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "project_overview"
+        ],
+        "lexicalScore": 0.375,
+        "covered": true
+      },
+      {
+        "id": "US29",
+        "story": "As a team member, I want to view files for each project in a personal overview",
+        "storyConcepts": [
+          "personaloverview",
+          "each",
+          "file",
+          "personal",
+          "project",
+          "team",
+          "member"
+        ],
+        "matchedConcepts": [
+          "file",
+          "project",
+          "team",
+          "member"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "project_overview"
+        ],
+        "lexicalScore": 0.5714285714285714,
+        "covered": true
+      },
+      {
+        "id": "US30",
+        "story": "As a team member, I want to have access to files that belong to a task assigned to me, so that I can edit the file",
+        "storyConcepts": [
+          "file",
+          "assigned",
+          "belong",
+          "task",
+          "team",
+          "member"
+        ],
+        "matchedConcepts": [
+          "file",
+          "task",
+          "team",
+          "member"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "task_overview"
+        ],
+        "lexicalScore": 0.6666666666666666,
+        "covered": true
+      },
+      {
+        "id": "US31",
+        "story": "As a team member, I want to be able to request access to files that I do not have access to",
+        "storyConcepts": [
+          "donot",
+          "file",
+          "not",
+          "team",
+          "member"
+        ],
+        "matchedConcepts": [
+          "file",
+          "not",
+          "team",
+          "member"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "not_overview"
+        ],
+        "lexicalScore": 0.8,
+        "covered": true
+      },
+      {
+        "id": "US32",
+        "story": "As a team member, I want to be able to view (not edit) files that do not belong to tasks assigned to me",
+        "storyConcepts": [
+          "not",
+          "donot",
+          "notedit",
+          "taskassigned",
+          "assigned",
+          "belong",
+          "file",
+          "task",
+          "team",
+          "member"
+        ],
+        "matchedConcepts": [
+          "not",
+          "file",
+          "task",
+          "team",
+          "member"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "not_overview",
+          "task_overview"
+        ],
+        "lexicalScore": 0.5,
+        "covered": true
+      },
+      {
+        "id": "US33",
+        "story": "As a project manager, I want to view project resource statistics so that I can keep track of the available resources",
+        "storyConcepts": [
+          "resource",
+          "projectresource",
+          "keep",
+          "project",
+          "statistic",
+          "manager"
+        ],
+        "matchedConcepts": [
+          "project"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "project_overview"
+        ],
+        "lexicalScore": 0.16666666666666666,
+        "covered": false
+      },
+      {
+        "id": "US34",
+        "story": "As a project manager, I want to edit the thresholds of available resources to account for changes in budget allocations",
+        "storyConcepts": [
+          "budgetallocation",
+          "account",
+          "allocation",
+          "budget",
+          "change",
+          "resource",
+          "threshold",
+          "project",
+          "manager"
+        ],
+        "matchedConcepts": [
+          "project"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "project_overview"
+        ],
+        "lexicalScore": 0.1111111111111111,
+        "covered": false
+      },
+      {
+        "id": "US35",
+        "story": "As a project manager, I want to create a new task so that work can be split up into actionable parts",
+        "storyConcepts": [
+          "splitup",
+          "taskwork",
+          "actionable",
+          "part",
+          "split",
+          "task",
+          "project",
+          "manager"
+        ],
+        "matchedConcepts": [
+          "task",
+          "project"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "task_overview",
+          "project_overview"
+        ],
+        "lexicalScore": 0.25,
+        "covered": false
+      },
+      {
+        "id": "US36",
+        "story": "As a project manager, I want to add a file to a task",
+        "storyConcepts": [
+          "file",
+          "task",
+          "project",
+          "manager"
+        ],
+        "matchedConcepts": [
+          "file",
+          "task",
+          "project"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "task_overview",
+          "project_overview"
+        ],
+        "lexicalScore": 0.75,
+        "covered": true
+      },
+      {
+        "id": "US37",
+        "story": "As a project manager, I want to delete files from a task so that unneeded files for that task do not clutter up the workspace",
+        "storyConcepts": [
+          "file",
+          "task",
+          "notclutter",
+          "taskdo",
+          "unneededfile",
+          "clutter",
+          "not",
+          "unneeded",
+          "workspace",
+          "project",
+          "manager"
+        ],
+        "matchedConcepts": [
+          "file",
+          "task",
+          "not",
+          "project"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "task_overview",
+          "not_overview",
+          "project_overview"
+        ],
+        "lexicalScore": 0.36363636363636365,
+        "covered": true
+      },
+      {
+        "id": "US38",
+        "story": "As a project manager, I want to assign a team member to a task so that it is clear for the team member they are responsible to handle this work",
+        "storyConcepts": [
+          "teammember",
+          "member",
+          "team",
+          "thiwork",
+          "clear",
+          "handle",
+          "responsible",
+          "task",
+          "thi",
+          "project",
+          "manager"
+        ],
+        "matchedConcepts": [
+          "teammember",
+          "member",
+          "team",
+          "task",
+          "project"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "teammember_overview",
+          "task_overview",
+          "project_overview"
+        ],
+        "lexicalScore": 0.45454545454545453,
+        "covered": true
+      },
+      {
+        "id": "US39",
+        "story": "As a project manager, I want to delete a team member from a task so that team members do not have unnecessary access to the task and its related files",
+        "storyConcepts": [
+          "member",
+          "task",
+          "team",
+          "donot",
+          "relatedfile",
+          "teammember",
+          "file",
+          "its",
+          "not",
+          "related",
+          "unnecessary",
+          "project",
+          "manager"
+        ],
+        "matchedConcepts": [
+          "member",
+          "task",
+          "team",
+          "teammember",
+          "file",
+          "not",
+          "project"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "task_overview",
+          "teammember_overview",
+          "not_overview",
+          "project_overview"
+        ],
+        "lexicalScore": 0.5384615384615384,
+        "covered": true
+      },
+      {
+        "id": "US40",
+        "story": "As a project manager, I want to add a due date to a task",
+        "storyConcepts": [
+          "duedate",
+          "date",
+          "due",
+          "task",
+          "project",
+          "manager"
+        ],
+        "matchedConcepts": [
+          "duedate",
+          "date",
+          "due",
+          "task",
+          "project"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "task_overview",
+          "project_overview"
+        ],
+        "lexicalScore": 0.8333333333333334,
+        "covered": true
+      },
+      {
+        "id": "US41",
+        "story": "As an employee, I want to add a to do item to a task so that project work can be further split up to the smallest possible unit of work",
+        "storyConcepts": [
+          "doitem",
+          "smallestpossible",
+          "splitup",
+          "taskproject",
+          "further",
+          "possible",
+          "project",
+          "smallest",
+          "split",
+          "task",
+          "unit",
+          "employee",
+          "item"
+        ],
+        "matchedConcepts": [
+          "doitem",
+          "project",
+          "task",
+          "item"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "project_overview",
+          "task_overview"
+        ],
+        "lexicalScore": 0.3076923076923077,
+        "covered": true
+      },
+      {
+        "id": "US42",
+        "story": "As a project manager, I want to delete a to do item from a task so that any errors can be corrected if needed",
+        "storyConcepts": [
+          "doitem",
+          "ifneeded",
+          "taskany",
+          "any",
+          "corrected",
+          "error",
+          "needed",
+          "task",
+          "project",
+          "manager",
+          "item"
+        ],
+        "matchedConcepts": [
+          "doitem",
+          "task",
+          "project",
+          "item"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "task_overview",
+          "project_overview"
+        ],
+        "lexicalScore": 0.36363636363636365,
+        "covered": true
+      },
+      {
+        "id": "US43",
+        "story": "As a project manager, I want to categorize tasks into either to-do, doing, review or done so that individual task progress in the project can be tracked",
+        "storyConcepts": [
+          "task",
+          "doneindividual",
+          "taskprogress",
+          "categorize",
+          "doing",
+          "done",
+          "either",
+          "individual",
+          "project",
+          "tracked",
+          "manager",
+          "progress"
+        ],
+        "matchedConcepts": [
+          "task",
+          "project"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "task_overview",
+          "project_overview"
+        ],
+        "lexicalScore": 0.16666666666666666,
+        "covered": false
+      },
+      {
+        "id": "US44",
+        "story": "As a team member, I want to view the details of a task that I am assigned to",
+        "storyConcepts": [
+          "assigned",
+          "task",
+          "team",
+          "member"
+        ],
+        "matchedConcepts": [
+          "task",
+          "team",
+          "member"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "task_overview"
+        ],
+        "lexicalScore": 0.75,
+        "covered": true
+      },
+      {
+        "id": "US45",
+        "story": "As an employee, I want to add a comment to a task",
+        "storyConcepts": [
+          "comment",
+          "task",
+          "employee"
+        ],
+        "matchedConcepts": [
+          "task"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "task_overview"
+        ],
+        "lexicalScore": 0.3333333333333333,
+        "covered": true
+      },
+      {
+        "id": "US46",
+        "story": "As a team member, I want to view my upcoming tasks in my personal overview, so that I can start working on those immediately when my day starts",
+        "storyConcepts": [
+          "upcomingtask",
+          "start",
+          "immediatelywhen",
+          "startworking",
+          "day",
+          "immediately",
+          "personal",
+          "task",
+          "those",
+          "upcoming",
+          "when",
+          "working",
+          "team",
+          "member"
+        ],
+        "matchedConcepts": [
+          "task",
+          "team",
+          "member"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "task_overview"
+        ],
+        "lexicalScore": 0.21428571428571427,
+        "covered": false
+      },
+      {
+        "id": "US47",
+        "story": "As a team member, I want to be able to mark a subtask as completed so that it is clear when a it does not need my attention anymore",
+        "storyConcepts": [
+          "notneed",
+          "anymore",
+          "attention",
+          "clear",
+          "completed",
+          "doe",
+          "need",
+          "not",
+          "subtask",
+          "when",
+          "team",
+          "member"
+        ],
+        "matchedConcepts": [
+          "completed",
+          "not",
+          "team",
+          "member"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "not_overview"
+        ],
+        "lexicalScore": 0.3333333333333333,
+        "covered": true
+      },
+      {
+        "id": "US48",
+        "story": "As a team member, I want to be able to view archived messages in past milestones, so that I can retrieve past information and maintain context",
+        "storyConcepts": [
+          "rchivedmessage",
+          "past",
+          "pastmilestone",
+          "retrievepast",
+          "archived",
+          "context",
+          "milestone",
+          "retrieve",
+          "team",
+          "member"
+        ],
+        "matchedConcepts": [
+          "milestone",
+          "team",
+          "member"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "milestone_overview"
+        ],
+        "lexicalScore": 0.3,
+        "covered": true
+      },
+      {
+        "id": "US49",
+        "story": "As a team member, I want to be able to send chat messages so that I can communicate with my fellow team members on project related issues",
+        "storyConcepts": [
+          "fellowteam",
+          "projectrelated",
+          "chat",
+          "communicate",
+          "fellow",
+          "issue",
+          "member",
+          "project",
+          "related",
+          "team"
+        ],
+        "matchedConcepts": [
+          "chat",
+          "member",
+          "project",
+          "team"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "project_overview"
+        ],
+        "lexicalScore": 0.4,
+        "covered": true
+      },
+      {
+        "id": "US50",
+        "story": "As a team member, I want to be able to view chat messages of other team members in the general chat",
+        "storyConcepts": [
+          "chatmessage",
+          "chat",
+          "otherteam",
+          "general",
+          "member",
+          "other",
+          "team"
+        ],
+        "matchedConcepts": [
+          "chatmessage",
+          "chat",
+          "member",
+          "team"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "chatmessage_overview"
+        ],
+        "lexicalScore": 0.5714285714285714,
+        "covered": true
+      },
+      {
+        "id": "US51",
+        "story": "As a team member, I want to be able to view the chat for each specific project",
+        "storyConcepts": [
+          "chat",
+          "each",
+          "project",
+          "team",
+          "member"
+        ],
+        "matchedConcepts": [
+          "chat",
+          "project",
+          "team",
+          "member"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "project_overview"
+        ],
+        "lexicalScore": 0.8,
+        "covered": true
+      },
+      {
+        "id": "US52",
+        "story": "As a project manager, I want to provide feedback on a task so that I can assess the work of team members",
+        "storyConcepts": [
+          "teammember",
+          "assess",
+          "feedback",
+          "member",
+          "provide",
+          "task",
+          "team",
+          "project",
+          "manager"
+        ],
+        "matchedConcepts": [
+          "teammember",
+          "feedback",
+          "member",
+          "task",
+          "team",
+          "project"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "teammember_overview",
+          "feedback_overview",
+          "task_overview",
+          "project_overview"
+        ],
+        "lexicalScore": 0.6666666666666666,
+        "covered": true
+      },
+      {
+        "id": "US53",
+        "story": "As a team member, I want to view feedback that was given on a task, so that I can process the given feedback",
+        "storyConcepts": [
+          "feedback",
+          "given",
+          "givenfeedback",
+          "wasgiven",
+          "task",
+          "was",
+          "team",
+          "member",
+          "process"
+        ],
+        "matchedConcepts": [
+          "feedback",
+          "task",
+          "team",
+          "member"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "feedback_overview",
+          "task_overview"
+        ],
+        "lexicalScore": 0.4444444444444444,
+        "covered": true
+      },
+      {
+        "id": "US54",
+        "story": "As a client, I want to rate a delivery on several criteria on a five-point scale",
+        "storyConcepts": [
+          "pointscale",
+          "criteria",
+          "delivery",
+          "five",
+          "point",
+          "rate",
+          "scale",
+          "several",
+          "client"
+        ],
+        "matchedConcepts": [
+          "criteria",
+          "delivery"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "delivery_overview"
+        ],
+        "lexicalScore": 0.2222222222222222,
+        "covered": false
+      },
+      {
+        "id": "US55",
+        "story": "As a client, I want to insert textual feedback on several criteria in a delivery",
+        "storyConcepts": [
+          "textualfeedback",
+          "criteria",
+          "delivery",
+          "feedback",
+          "insert",
+          "several",
+          "textual",
+          "client"
+        ],
+        "matchedConcepts": [
+          "textualfeedback",
+          "criteria",
+          "delivery",
+          "feedback",
+          "textual"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "delivery_overview",
+          "feedback_overview"
+        ],
+        "lexicalScore": 0.625,
+        "covered": true
+      },
+      {
+        "id": "US56",
+        "story": "As a client, I want to save feedback on a delivery as a concept so that this delivery can be published later",
+        "storyConcepts": [
+          "delivery",
+          "conceptthi",
+          "concept",
+          "feedback",
+          "later",
+          "published",
+          "save",
+          "thi",
+          "client"
+        ],
+        "matchedConcepts": [
+          "delivery",
+          "concept",
+          "feedback"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "delivery_overview",
+          "feedback_overview"
+        ],
+        "lexicalScore": 0.3333333333333333,
+        "covered": true
+      },
+      {
+        "id": "US57",
+        "story": "As a client, I want to publish feedback on a delivery so that the responsible project team can improve my product",
+        "storyConcepts": [
+          "projectteam",
+          "delivery",
+          "feedback",
+          "improve",
+          "product",
+          "project",
+          "publish",
+          "responsible",
+          "team",
+          "client"
+        ],
+        "matchedConcepts": [
+          "delivery",
+          "feedback",
+          "project",
+          "team"
+        ],
+        "processVisualizerAlignedConcepts": [],
+        "matchedUiRefs": [
+          "delivery_overview",
+          "feedback_overview",
+          "project_overview"
+        ],
+        "lexicalScore": 0.4,
+        "covered": true
+      }
+    ]
+  },
+  "coverageGate": {
+    "enabled": false,
+    "minimum": null,
+    "score": 0.7192982456140351,
+    "passed": true
+  },
+  "ollama": {
+    "model": "gemma4:e4b",
+    "totalDuration": 256449295042,
+    "loadDuration": 6444101042,
+    "promptEvalCount": 6114,
+    "evalCount": 2118,
+    "numCtx": 8192,
+    "numPredict": 6144,
+    "likelyPromptTruncated": false
+  },
+  "visualNarrator": {
+    "enabled": true,
+    "status": "completed",
+    "durationMs": 5527,
+    "command": "/Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/visual-narrator/.venv/bin/python /Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/pipeline/scripts/run_visual_narrator.py --input /Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/artifacts/practical-performance/20260528-165228/inputs/collaboration/user-stories.txt --system-name PracticalPerf_collaboration_Stability",
+    "artifacts": {
+      "ontologyPath": "/Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/artifacts/practical-performance/20260528-165228/stability/collaboration/run-02/visual-narrator-ontology.omn",
+      "storiesPath": "/Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/artifacts/practical-performance/20260528-165228/stability/collaboration/run-02/visual-narrator-stories.json",
+      "summaryPath": "/Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/artifacts/practical-performance/20260528-165228/stability/collaboration/run-02/visual-narrator-summary.json",
+      "rawPath": "/Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/artifacts/practical-performance/20260528-165228/stability/collaboration/run-02/visual-narrator-result.json"
+    },
+    "warnings": []
+  },
+  "processVisualizer": {
+    "enabled": true,
+    "status": "completed",
+    "durationMs": 581559,
+    "command": "/Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/process-visualizer/.venv/bin/python /Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/pipeline/scripts/run_process_visualizer.py --input /Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/artifacts/practical-performance/20260528-165228/inputs/collaboration/user-stories.txt --output-dir /Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/artifacts/practical-performance/20260528-165228/stability/collaboration/run-02 --model llama3 --ollama-url http://127.0.0.1:11434",
+    "artifacts": {
+      "summaryPath": "/Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/artifacts/practical-performance/20260528-165228/stability/collaboration/run-02/process-visualizer-summary.json",
+      "rawPath": "/Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/artifacts/practical-performance/20260528-165228/stability/collaboration/run-02/process-visualizer-result.json",
+      "graphSourcePath": "/Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/artifacts/practical-performance/20260528-165228/stability/collaboration/run-02/process-visualizer-run/process-visualizer.gv",
+      "graphImagePath": "/Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/artifacts/practical-performance/20260528-165228/stability/collaboration/run-02/process-visualizer-run/process-visualizer.png",
+      "logsDir": "/Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/artifacts/practical-performance/20260528-165228/stability/collaboration/run-02/process-visualizer-run/output_logs"
+    },
+    "warnings": []
+  },
+  "domainModelReview": {
+    "enabled": true,
+    "status": "llm_unavailable",
+    "droppedEntities": [
+      {
+        "name": "File",
+        "reason": "Generic entity duplicates more specific story-backed entity \"FileAccessRequest\"."
+      },
+      {
+        "name": "Team",
+        "reason": "Generic entity duplicates more specific story-backed entity \"TeamMember\"."
+      }
+    ],
+    "droppedAssociations": [
+      {
+        "name": "Delivery_File",
+        "reason": "Association references a dropped entity."
+      },
+      {
+        "name": "Task_File",
+        "reason": "Association references a dropped entity."
+      },
+      {
+        "name": "Task_Team",
+        "reason": "Association references a dropped entity."
+      }
+    ],
+    "repairedAssociations": [],
+    "addedAssociations": [
+      {
+        "name": "Task_TeamMember",
+        "parentEntity": "Task",
+        "childEntity": "TeamMember",
+        "reason": "Story US38 explicitly links TeamMember to Task."
+      }
+    ],
+    "warnings": []
+  },
+  "planDiagnostics": {
+    "preprocessing": {
+      "visualNarratorEnabled": true,
+      "visualNarratorStatus": "completed",
+      "processVisualizerEnabled": true,
+      "processVisualizerStatus": "completed"
+    },
+    "domainModelReview": {
+      "enabled": true,
+      "status": "llm_unavailable",
+      "droppedEntities": [
+        {
+          "name": "File",
+          "reason": "Generic entity duplicates more specific story-backed entity \"FileAccessRequest\"."
+        },
+        {
+          "name": "Team",
+          "reason": "Generic entity duplicates more specific story-backed entity \"TeamMember\"."
+        }
+      ],
+      "droppedAssociations": [
+        {
+          "name": "Delivery_File",
+          "reason": "Association references a dropped entity."
+        },
+        {
+          "name": "Task_File",
+          "reason": "Association references a dropped entity."
+        },
+        {
+          "name": "Task_Team",
+          "reason": "Association references a dropped entity."
+        }
+      ],
+      "repairedAssociations": [],
+      "addedAssociations": [
+        {
+          "name": "Task_TeamMember",
+          "parentEntity": "Task",
+          "childEntity": "TeamMember",
+          "reason": "Story US38 explicitly links TeamMember to Task."
+        }
+      ],
+      "warnings": []
+    },
+    "referenceAppBaseline": {
+      "source": "reference-app-baseline",
+      "capabilities": [
+        "searchable_data_management",
+        "workflow_support",
+        "role_separated_views",
+        "file_handling"
+      ],
+      "archetypes": [
+        "management",
+        "tasks",
+        "role_separation"
+      ],
+      "recommendedWidgetFamilies": [
+        "data_grid",
+        "data_grid_filters",
+        "workflow_commons"
+      ]
+    },
+    "capabilityRequirements": [],
+    "storyCoverage": {
+      "entries": [
+        {
+          "id": "US01",
+          "story": "As a project manager, I want to view projects for each department in the general projects overview",
+          "storyConcepts": [
+            "project",
+            "generalproject",
+            "department",
+            "each",
+            "general",
+            "manager"
+          ],
+          "matchedConcepts": [
+            "project",
+            "department"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "project_overview"
+          ],
+          "lexicalScore": 0.3333333333333333,
+          "covered": true
+        },
+        {
+          "id": "US02",
+          "story": "As a project manager, I want to create new projects so that planning and collaboration can be centered around a specific goal",
+          "storyConcepts": [
+            "projectplanning",
+            "around",
+            "centered",
+            "collaboration",
+            "goal",
+            "planning",
+            "project",
+            "manager"
+          ],
+          "matchedConcepts": [
+            "goal",
+            "project"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "project_overview"
+          ],
+          "lexicalScore": 0.25,
+          "covered": false
+        },
+        {
+          "id": "US03",
+          "story": "As a project manager, I want to archive projects that have been completed, so that completed projects do not clutter up the project overview",
+          "storyConcepts": [
+            "project",
+            "completed",
+            "clutterup",
+            "completedproject",
+            "donot",
+            "archive",
+            "been",
+            "clutter",
+            "not",
+            "manager"
+          ],
+          "matchedConcepts": [
+            "project",
+            "completed",
+            "not"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "project_overview",
+            "not_overview"
+          ],
+          "lexicalScore": 0.3,
+          "covered": true
+        },
+        {
+          "id": "US04",
+          "story": "As a team member, I want to view active projects in my personal view, so that I have an organized overview of my ongoing projects",
+          "storyConcepts": [
+            "ctiveproject",
+            "project",
+            "activeproject",
+            "personalview",
+            "active",
+            "ongoing",
+            "organized",
+            "personal",
+            "team",
+            "member"
+          ],
+          "matchedConcepts": [
+            "project",
+            "team",
+            "member"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "project_overview"
+          ],
+          "lexicalScore": 0.3,
+          "covered": true
+        },
+        {
+          "id": "US05",
+          "story": "As a project manager, I want to create milestones with a due date so that projects are divided into manageable, time-bound partitions",
+          "storyConcepts": [
+            "boundpartition",
+            "dateproject",
+            "bound",
+            "date",
+            "divided",
+            "due",
+            "manageable",
+            "milestone",
+            "partition",
+            "project",
+            "time",
+            "manager"
+          ],
+          "matchedConcepts": [
+            "date",
+            "due",
+            "milestone",
+            "project"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "milestone_overview",
+            "project_overview"
+          ],
+          "lexicalScore": 0.3333333333333333,
+          "covered": true
+        },
+        {
+          "id": "US06",
+          "story": "As a project manager, I want to edit milestone due dates so that any mistakes or changes to these dates can be implemented",
+          "storyConcepts": [
+            "milestoneduedateany",
+            "date",
+            "dateany",
+            "milestonedue",
+            "thesedate",
+            "any",
+            "change",
+            "due",
+            "implemented",
+            "milestone",
+            "mistake",
+            "these",
+            "project",
+            "manager"
+          ],
+          "matchedConcepts": [
+            "date",
+            "due",
+            "milestone",
+            "project"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "milestone_overview",
+            "project_overview"
+          ],
+          "lexicalScore": 0.2857142857142857,
+          "covered": false
+        },
+        {
+          "id": "US07",
+          "story": "As a project manager, I want to be able to delete milestones",
+          "storyConcepts": [
+            "milestone",
+            "project",
+            "manager"
+          ],
+          "matchedConcepts": [
+            "milestone",
+            "project"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "milestone_overview",
+            "project_overview"
+          ],
+          "lexicalScore": 0.6666666666666666,
+          "covered": true
+        },
+        {
+          "id": "US08",
+          "story": "As a project manager, I want to change the status of a milestone so that the relative position of these milestones to the current progress can be accurately tracked",
+          "storyConcepts": [
+            "milestone",
+            "relativeposition",
+            "accurately",
+            "change",
+            "current",
+            "position",
+            "relative",
+            "statu",
+            "these",
+            "tracked",
+            "project",
+            "manager",
+            "progress"
+          ],
+          "matchedConcepts": [
+            "milestone",
+            "statu",
+            "project"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "milestone_overview",
+            "project_overview"
+          ],
+          "lexicalScore": 0.23076923076923078,
+          "covered": false
+        },
+        {
+          "id": "US09",
+          "story": "As a project manager, I want to filter on a specific milestone so that I can have a comprehensive overview of only the content that relates to this specific milestone",
+          "storyConcepts": [
+            "milestone",
+            "comprehensiveoverview",
+            "comprehensive",
+            "content",
+            "only",
+            "relate",
+            "thi",
+            "project",
+            "manager"
+          ],
+          "matchedConcepts": [
+            "milestone",
+            "content",
+            "project"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "milestone_overview",
+            "project_overview"
+          ],
+          "lexicalScore": 0.3333333333333333,
+          "covered": true
+        },
+        {
+          "id": "US10",
+          "story": "As a project manager, I want an indication of new messages and file access requests so that I am aware of new activity that needs my attention",
+          "storyConcepts": [
+            "amaware",
+            "fileaccess",
+            "attention",
+            "aware",
+            "file",
+            "indication",
+            "need",
+            "project",
+            "manager"
+          ],
+          "matchedConcepts": [
+            "fileaccess",
+            "file",
+            "project"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "project_overview"
+          ],
+          "lexicalScore": 0.3333333333333333,
+          "covered": true
+        },
+        {
+          "id": "US11",
+          "story": "As a project manager, I want to be able to view upcoming milestones in the project overview",
+          "storyConcepts": [
+            "upcomingmilestone",
+            "milestone",
+            "project",
+            "upcoming",
+            "manager"
+          ],
+          "matchedConcepts": [
+            "milestone",
+            "project"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "milestone_overview",
+            "project_overview"
+          ],
+          "lexicalScore": 0.4,
+          "covered": true
+        },
+        {
+          "id": "US12",
+          "story": "As a project manager, I want to add files to a delivery while creating a delivery so that clients will be informed of the team’s results",
+          "storyConcepts": [
+            "delivery",
+            "clientwill",
+            "sresult",
+            "whilecreating",
+            "client",
+            "creating",
+            "file",
+            "informed",
+            "result",
+            "team",
+            "while",
+            "will",
+            "project",
+            "manager"
+          ],
+          "matchedConcepts": [
+            "delivery",
+            "file",
+            "team",
+            "project"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "delivery_overview",
+            "project_overview"
+          ],
+          "lexicalScore": 0.2857142857142857,
+          "covered": false
+        },
+        {
+          "id": "US13",
+          "story": "As a project manager, I want to delete files from a delivery while creating a delivery so clients will receive the correct files",
+          "storyConcepts": [
+            "delivery",
+            "file",
+            "whilecreating",
+            "willreceive",
+            "client",
+            "correct",
+            "creating",
+            "while",
+            "will",
+            "project",
+            "manager"
+          ],
+          "matchedConcepts": [
+            "delivery",
+            "file",
+            "project"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "delivery_overview",
+            "project_overview"
+          ],
+          "lexicalScore": 0.2727272727272727,
+          "covered": false
+        },
+        {
+          "id": "US14",
+          "story": "As a project manager, I want to add a description of the feedback goal to a delivery while creating the delivery so that it will be clear for clients on which areas feedback is needed",
+          "storyConcepts": [
+            "delivery",
+            "feedback",
+            "deliverywhile",
+            "feedbackgoal",
+            "area",
+            "clear",
+            "client",
+            "creating",
+            "description",
+            "goal",
+            "needed",
+            "which",
+            "while",
+            "will",
+            "project",
+            "manager"
+          ],
+          "matchedConcepts": [
+            "delivery",
+            "feedback",
+            "description",
+            "goal",
+            "project"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "delivery_overview",
+            "feedback_overview",
+            "project_overview"
+          ],
+          "lexicalScore": 0.3125,
+          "covered": true
+        },
+        {
+          "id": "US15",
+          "story": "As a project manager, I want to save a delivery as a concept so that this delivery can be published later",
+          "storyConcepts": [
+            "delivery",
+            "conceptthi",
+            "concept",
+            "later",
+            "published",
+            "save",
+            "thi",
+            "project",
+            "manager"
+          ],
+          "matchedConcepts": [
+            "delivery",
+            "concept",
+            "project"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "delivery_overview",
+            "project_overview"
+          ],
+          "lexicalScore": 0.3333333333333333,
+          "covered": true
+        },
+        {
+          "id": "US16",
+          "story": "As a project manager, I want to publish a delivery so that clients will be aware of the project’s progress",
+          "storyConcepts": [
+            "clientwill",
+            "sprogress",
+            "aware",
+            "client",
+            "delivery",
+            "project",
+            "publish",
+            "will",
+            "manager",
+            "progress"
+          ],
+          "matchedConcepts": [
+            "delivery",
+            "project"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "delivery_overview",
+            "project_overview"
+          ],
+          "lexicalScore": 0.2,
+          "covered": false
+        },
+        {
+          "id": "US17",
+          "story": "As a client, I want to view the goal description of a delivery so that I have some idea of what kind of feedback is expected",
+          "storyConcepts": [
+            "goaldescription",
+            "someidea",
+            "delivery",
+            "description",
+            "expected",
+            "feedback",
+            "goal",
+            "idea",
+            "kind",
+            "some",
+            "client",
+            "what"
+          ],
+          "matchedConcepts": [
+            "goaldescription",
+            "delivery",
+            "description",
+            "feedback",
+            "goal"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "delivery_overview",
+            "feedback_overview"
+          ],
+          "lexicalScore": 0.4166666666666667,
+          "covered": true
+        },
+        {
+          "id": "US18",
+          "story": "As a client, I want to access the files that are associated with the delivery so that I can base my feedback on these deliverables",
+          "storyConcepts": [
+            "thesedeliverable",
+            "associated",
+            "base",
+            "deliverable",
+            "delivery",
+            "feedback",
+            "file",
+            "these",
+            "client"
+          ],
+          "matchedConcepts": [
+            "delivery",
+            "feedback",
+            "file"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "delivery_overview",
+            "feedback_overview"
+          ],
+          "lexicalScore": 0.3333333333333333,
+          "covered": true
+        },
+        {
+          "id": "US19",
+          "story": "As a project manager, I want to add a file to the file management so that this can be easily found by the team",
+          "storyConcepts": [
+            "file",
+            "filemanagement",
+            "easily",
+            "found",
+            "management",
+            "team",
+            "thi",
+            "project",
+            "manager"
+          ],
+          "matchedConcepts": [
+            "file",
+            "team",
+            "project"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "project_overview"
+          ],
+          "lexicalScore": 0.3333333333333333,
+          "covered": true
+        },
+        {
+          "id": "US20",
+          "story": "As a project manager, I want to delete a file from file management so that accidentally added files do not clutter up the file management",
+          "storyConcepts": [
+            "file",
+            "management",
+            "addedfile",
+            "clutterup",
+            "donot",
+            "managementaccidentally",
+            "accidentally",
+            "added",
+            "clutter",
+            "not",
+            "project",
+            "manager"
+          ],
+          "matchedConcepts": [
+            "file",
+            "not",
+            "project"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "not_overview",
+            "project_overview"
+          ],
+          "lexicalScore": 0.25,
+          "covered": false
+        },
+        {
+          "id": "US21",
+          "story": "As a project manager, I want to open a file in the dedicated desktop app",
+          "storyConcepts": [
+            "dedicateddesktop",
+            "dedicated",
+            "desktop",
+            "file",
+            "project",
+            "manager"
+          ],
+          "matchedConcepts": [
+            "file",
+            "project"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "project_overview"
+          ],
+          "lexicalScore": 0.3333333333333333,
+          "covered": true
+        },
+        {
+          "id": "US22",
+          "story": "As a project manager, I want to open a file in the online editor associated with that file",
+          "storyConcepts": [
+            "file",
+            "onlineeditor",
+            "associated",
+            "editor",
+            "online",
+            "project",
+            "manager"
+          ],
+          "matchedConcepts": [
+            "file",
+            "project"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "project_overview"
+          ],
+          "lexicalScore": 0.2857142857142857,
+          "covered": false
+        },
+        {
+          "id": "US23",
+          "story": "As a project manager, I want to view the file archive so that I can find previous versions of files",
+          "storyConcepts": [
+            "file",
+            "previouversion",
+            "archive",
+            "find",
+            "previou",
+            "version",
+            "project",
+            "manager"
+          ],
+          "matchedConcepts": [
+            "file",
+            "project"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "project_overview"
+          ],
+          "lexicalScore": 0.25,
+          "covered": false
+        },
+        {
+          "id": "US24",
+          "story": "As a project manager, I want to rename a file so that filenames can be adjusted to properly describe the file",
+          "storyConcepts": [
+            "file",
+            "adjusted",
+            "describe",
+            "filename",
+            "properly",
+            "rename",
+            "project",
+            "manager"
+          ],
+          "matchedConcepts": [
+            "file",
+            "filename",
+            "project"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "project_overview"
+          ],
+          "lexicalScore": 0.375,
+          "covered": true
+        },
+        {
+          "id": "US25",
+          "story": "As a project manager, I want to filter on file type to quickly find the type of file that I am looking for",
+          "storyConcepts": [
+            "file",
+            "type",
+            "amlooking",
+            "quicklyfind",
+            "find",
+            "looking",
+            "quickly",
+            "project",
+            "manager"
+          ],
+          "matchedConcepts": [
+            "file",
+            "type",
+            "project"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "project_overview"
+          ],
+          "lexicalScore": 0.3333333333333333,
+          "covered": true
+        },
+        {
+          "id": "US26",
+          "story": "As a project manager, I want to search files so that I can quickly find specific files",
+          "storyConcepts": [
+            "file",
+            "find",
+            "quickly",
+            "project",
+            "manager"
+          ],
+          "matchedConcepts": [
+            "file",
+            "project"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "project_overview"
+          ],
+          "lexicalScore": 0.4,
+          "covered": true
+        },
+        {
+          "id": "US27",
+          "story": "As a project manager, I want to sort files so that I can quickly find files based on specific attributes",
+          "storyConcepts": [
+            "file",
+            "findfile",
+            "attribute",
+            "based",
+            "find",
+            "quickly",
+            "sort",
+            "project",
+            "manager"
+          ],
+          "matchedConcepts": [
+            "file",
+            "project"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "project_overview"
+          ],
+          "lexicalScore": 0.2222222222222222,
+          "covered": false
+        },
+        {
+          "id": "US28",
+          "story": "As a project manager, I want to handle file access requests so that file access is restricted to the appropriate users",
+          "storyConcepts": [
+            "file",
+            "fileaccess",
+            "appropriate",
+            "handle",
+            "restricted",
+            "user",
+            "project",
+            "manager"
+          ],
+          "matchedConcepts": [
+            "file",
+            "fileaccess",
+            "project"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "project_overview"
+          ],
+          "lexicalScore": 0.375,
+          "covered": true
+        },
+        {
+          "id": "US29",
+          "story": "As a team member, I want to view files for each project in a personal overview",
+          "storyConcepts": [
+            "personaloverview",
+            "each",
+            "file",
+            "personal",
+            "project",
+            "team",
+            "member"
+          ],
+          "matchedConcepts": [
+            "file",
+            "project",
+            "team",
+            "member"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "project_overview"
+          ],
+          "lexicalScore": 0.5714285714285714,
+          "covered": true
+        },
+        {
+          "id": "US30",
+          "story": "As a team member, I want to have access to files that belong to a task assigned to me, so that I can edit the file",
+          "storyConcepts": [
+            "file",
+            "assigned",
+            "belong",
+            "task",
+            "team",
+            "member"
+          ],
+          "matchedConcepts": [
+            "file",
+            "task",
+            "team",
+            "member"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "task_overview"
+          ],
+          "lexicalScore": 0.6666666666666666,
+          "covered": true
+        },
+        {
+          "id": "US31",
+          "story": "As a team member, I want to be able to request access to files that I do not have access to",
+          "storyConcepts": [
+            "donot",
+            "file",
+            "not",
+            "team",
+            "member"
+          ],
+          "matchedConcepts": [
+            "file",
+            "not",
+            "team",
+            "member"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "not_overview"
+          ],
+          "lexicalScore": 0.8,
+          "covered": true
+        },
+        {
+          "id": "US32",
+          "story": "As a team member, I want to be able to view (not edit) files that do not belong to tasks assigned to me",
+          "storyConcepts": [
+            "not",
+            "donot",
+            "notedit",
+            "taskassigned",
+            "assigned",
+            "belong",
+            "file",
+            "task",
+            "team",
+            "member"
+          ],
+          "matchedConcepts": [
+            "not",
+            "file",
+            "task",
+            "team",
+            "member"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "not_overview",
+            "task_overview"
+          ],
+          "lexicalScore": 0.5,
+          "covered": true
+        },
+        {
+          "id": "US33",
+          "story": "As a project manager, I want to view project resource statistics so that I can keep track of the available resources",
+          "storyConcepts": [
+            "resource",
+            "projectresource",
+            "keep",
+            "project",
+            "statistic",
+            "manager"
+          ],
+          "matchedConcepts": [
+            "project"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "project_overview"
+          ],
+          "lexicalScore": 0.16666666666666666,
+          "covered": false
+        },
+        {
+          "id": "US34",
+          "story": "As a project manager, I want to edit the thresholds of available resources to account for changes in budget allocations",
+          "storyConcepts": [
+            "budgetallocation",
+            "account",
+            "allocation",
+            "budget",
+            "change",
+            "resource",
+            "threshold",
+            "project",
+            "manager"
+          ],
+          "matchedConcepts": [
+            "project"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "project_overview"
+          ],
+          "lexicalScore": 0.1111111111111111,
+          "covered": false
+        },
+        {
+          "id": "US35",
+          "story": "As a project manager, I want to create a new task so that work can be split up into actionable parts",
+          "storyConcepts": [
+            "splitup",
+            "taskwork",
+            "actionable",
+            "part",
+            "split",
+            "task",
+            "project",
+            "manager"
+          ],
+          "matchedConcepts": [
+            "task",
+            "project"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "task_overview",
+            "project_overview"
+          ],
+          "lexicalScore": 0.25,
+          "covered": false
+        },
+        {
+          "id": "US36",
+          "story": "As a project manager, I want to add a file to a task",
+          "storyConcepts": [
+            "file",
+            "task",
+            "project",
+            "manager"
+          ],
+          "matchedConcepts": [
+            "file",
+            "task",
+            "project"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "task_overview",
+            "project_overview"
+          ],
+          "lexicalScore": 0.75,
+          "covered": true
+        },
+        {
+          "id": "US37",
+          "story": "As a project manager, I want to delete files from a task so that unneeded files for that task do not clutter up the workspace",
+          "storyConcepts": [
+            "file",
+            "task",
+            "notclutter",
+            "taskdo",
+            "unneededfile",
+            "clutter",
+            "not",
+            "unneeded",
+            "workspace",
+            "project",
+            "manager"
+          ],
+          "matchedConcepts": [
+            "file",
+            "task",
+            "not",
+            "project"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "task_overview",
+            "not_overview",
+            "project_overview"
+          ],
+          "lexicalScore": 0.36363636363636365,
+          "covered": true
+        },
+        {
+          "id": "US38",
+          "story": "As a project manager, I want to assign a team member to a task so that it is clear for the team member they are responsible to handle this work",
+          "storyConcepts": [
+            "teammember",
+            "member",
+            "team",
+            "thiwork",
+            "clear",
+            "handle",
+            "responsible",
+            "task",
+            "thi",
+            "project",
+            "manager"
+          ],
+          "matchedConcepts": [
+            "teammember",
+            "member",
+            "team",
+            "task",
+            "project"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "teammember_overview",
+            "task_overview",
+            "project_overview"
+          ],
+          "lexicalScore": 0.45454545454545453,
+          "covered": true
+        },
+        {
+          "id": "US39",
+          "story": "As a project manager, I want to delete a team member from a task so that team members do not have unnecessary access to the task and its related files",
+          "storyConcepts": [
+            "member",
+            "task",
+            "team",
+            "donot",
+            "relatedfile",
+            "teammember",
+            "file",
+            "its",
+            "not",
+            "related",
+            "unnecessary",
+            "project",
+            "manager"
+          ],
+          "matchedConcepts": [
+            "member",
+            "task",
+            "team",
+            "teammember",
+            "file",
+            "not",
+            "project"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "task_overview",
+            "teammember_overview",
+            "not_overview",
+            "project_overview"
+          ],
+          "lexicalScore": 0.5384615384615384,
+          "covered": true
+        },
+        {
+          "id": "US40",
+          "story": "As a project manager, I want to add a due date to a task",
+          "storyConcepts": [
+            "duedate",
+            "date",
+            "due",
+            "task",
+            "project",
+            "manager"
+          ],
+          "matchedConcepts": [
+            "duedate",
+            "date",
+            "due",
+            "task",
+            "project"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "task_overview",
+            "project_overview"
+          ],
+          "lexicalScore": 0.8333333333333334,
+          "covered": true
+        },
+        {
+          "id": "US41",
+          "story": "As an employee, I want to add a to do item to a task so that project work can be further split up to the smallest possible unit of work",
+          "storyConcepts": [
+            "doitem",
+            "smallestpossible",
+            "splitup",
+            "taskproject",
+            "further",
+            "possible",
+            "project",
+            "smallest",
+            "split",
+            "task",
+            "unit",
+            "employee",
+            "item"
+          ],
+          "matchedConcepts": [
+            "doitem",
+            "project",
+            "task",
+            "item"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "project_overview",
+            "task_overview"
+          ],
+          "lexicalScore": 0.3076923076923077,
+          "covered": true
+        },
+        {
+          "id": "US42",
+          "story": "As a project manager, I want to delete a to do item from a task so that any errors can be corrected if needed",
+          "storyConcepts": [
+            "doitem",
+            "ifneeded",
+            "taskany",
+            "any",
+            "corrected",
+            "error",
+            "needed",
+            "task",
+            "project",
+            "manager",
+            "item"
+          ],
+          "matchedConcepts": [
+            "doitem",
+            "task",
+            "project",
+            "item"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "task_overview",
+            "project_overview"
+          ],
+          "lexicalScore": 0.36363636363636365,
+          "covered": true
+        },
+        {
+          "id": "US43",
+          "story": "As a project manager, I want to categorize tasks into either to-do, doing, review or done so that individual task progress in the project can be tracked",
+          "storyConcepts": [
+            "task",
+            "doneindividual",
+            "taskprogress",
+            "categorize",
+            "doing",
+            "done",
+            "either",
+            "individual",
+            "project",
+            "tracked",
+            "manager",
+            "progress"
+          ],
+          "matchedConcepts": [
+            "task",
+            "project"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "task_overview",
+            "project_overview"
+          ],
+          "lexicalScore": 0.16666666666666666,
+          "covered": false
+        },
+        {
+          "id": "US44",
+          "story": "As a team member, I want to view the details of a task that I am assigned to",
+          "storyConcepts": [
+            "assigned",
+            "task",
+            "team",
+            "member"
+          ],
+          "matchedConcepts": [
+            "task",
+            "team",
+            "member"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "task_overview"
+          ],
+          "lexicalScore": 0.75,
+          "covered": true
+        },
+        {
+          "id": "US45",
+          "story": "As an employee, I want to add a comment to a task",
+          "storyConcepts": [
+            "comment",
+            "task",
+            "employee"
+          ],
+          "matchedConcepts": [
+            "task"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "task_overview"
+          ],
+          "lexicalScore": 0.3333333333333333,
+          "covered": true
+        },
+        {
+          "id": "US46",
+          "story": "As a team member, I want to view my upcoming tasks in my personal overview, so that I can start working on those immediately when my day starts",
+          "storyConcepts": [
+            "upcomingtask",
+            "start",
+            "immediatelywhen",
+            "startworking",
+            "day",
+            "immediately",
+            "personal",
+            "task",
+            "those",
+            "upcoming",
+            "when",
+            "working",
+            "team",
+            "member"
+          ],
+          "matchedConcepts": [
+            "task",
+            "team",
+            "member"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "task_overview"
+          ],
+          "lexicalScore": 0.21428571428571427,
+          "covered": false
+        },
+        {
+          "id": "US47",
+          "story": "As a team member, I want to be able to mark a subtask as completed so that it is clear when a it does not need my attention anymore",
+          "storyConcepts": [
+            "notneed",
+            "anymore",
+            "attention",
+            "clear",
+            "completed",
+            "doe",
+            "need",
+            "not",
+            "subtask",
+            "when",
+            "team",
+            "member"
+          ],
+          "matchedConcepts": [
+            "completed",
+            "not",
+            "team",
+            "member"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "not_overview"
+          ],
+          "lexicalScore": 0.3333333333333333,
+          "covered": true
+        },
+        {
+          "id": "US48",
+          "story": "As a team member, I want to be able to view archived messages in past milestones, so that I can retrieve past information and maintain context",
+          "storyConcepts": [
+            "rchivedmessage",
+            "past",
+            "pastmilestone",
+            "retrievepast",
+            "archived",
+            "context",
+            "milestone",
+            "retrieve",
+            "team",
+            "member"
+          ],
+          "matchedConcepts": [
+            "milestone",
+            "team",
+            "member"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "milestone_overview"
+          ],
+          "lexicalScore": 0.3,
+          "covered": true
+        },
+        {
+          "id": "US49",
+          "story": "As a team member, I want to be able to send chat messages so that I can communicate with my fellow team members on project related issues",
+          "storyConcepts": [
+            "fellowteam",
+            "projectrelated",
+            "chat",
+            "communicate",
+            "fellow",
+            "issue",
+            "member",
+            "project",
+            "related",
+            "team"
+          ],
+          "matchedConcepts": [
+            "chat",
+            "member",
+            "project",
+            "team"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "project_overview"
+          ],
+          "lexicalScore": 0.4,
+          "covered": true
+        },
+        {
+          "id": "US50",
+          "story": "As a team member, I want to be able to view chat messages of other team members in the general chat",
+          "storyConcepts": [
+            "chatmessage",
+            "chat",
+            "otherteam",
+            "general",
+            "member",
+            "other",
+            "team"
+          ],
+          "matchedConcepts": [
+            "chatmessage",
+            "chat",
+            "member",
+            "team"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "chatmessage_overview"
+          ],
+          "lexicalScore": 0.5714285714285714,
+          "covered": true
+        },
+        {
+          "id": "US51",
+          "story": "As a team member, I want to be able to view the chat for each specific project",
+          "storyConcepts": [
+            "chat",
+            "each",
+            "project",
+            "team",
+            "member"
+          ],
+          "matchedConcepts": [
+            "chat",
+            "project",
+            "team",
+            "member"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "project_overview"
+          ],
+          "lexicalScore": 0.8,
+          "covered": true
+        },
+        {
+          "id": "US52",
+          "story": "As a project manager, I want to provide feedback on a task so that I can assess the work of team members",
+          "storyConcepts": [
+            "teammember",
+            "assess",
+            "feedback",
+            "member",
+            "provide",
+            "task",
+            "team",
+            "project",
+            "manager"
+          ],
+          "matchedConcepts": [
+            "teammember",
+            "feedback",
+            "member",
+            "task",
+            "team",
+            "project"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "teammember_overview",
+            "feedback_overview",
+            "task_overview",
+            "project_overview"
+          ],
+          "lexicalScore": 0.6666666666666666,
+          "covered": true
+        },
+        {
+          "id": "US53",
+          "story": "As a team member, I want to view feedback that was given on a task, so that I can process the given feedback",
+          "storyConcepts": [
+            "feedback",
+            "given",
+            "givenfeedback",
+            "wasgiven",
+            "task",
+            "was",
+            "team",
+            "member",
+            "process"
+          ],
+          "matchedConcepts": [
+            "feedback",
+            "task",
+            "team",
+            "member"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "feedback_overview",
+            "task_overview"
+          ],
+          "lexicalScore": 0.4444444444444444,
+          "covered": true
+        },
+        {
+          "id": "US54",
+          "story": "As a client, I want to rate a delivery on several criteria on a five-point scale",
+          "storyConcepts": [
+            "pointscale",
+            "criteria",
+            "delivery",
+            "five",
+            "point",
+            "rate",
+            "scale",
+            "several",
+            "client"
+          ],
+          "matchedConcepts": [
+            "criteria",
+            "delivery"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "delivery_overview"
+          ],
+          "lexicalScore": 0.2222222222222222,
+          "covered": false
+        },
+        {
+          "id": "US55",
+          "story": "As a client, I want to insert textual feedback on several criteria in a delivery",
+          "storyConcepts": [
+            "textualfeedback",
+            "criteria",
+            "delivery",
+            "feedback",
+            "insert",
+            "several",
+            "textual",
+            "client"
+          ],
+          "matchedConcepts": [
+            "textualfeedback",
+            "criteria",
+            "delivery",
+            "feedback",
+            "textual"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "delivery_overview",
+            "feedback_overview"
+          ],
+          "lexicalScore": 0.625,
+          "covered": true
+        },
+        {
+          "id": "US56",
+          "story": "As a client, I want to save feedback on a delivery as a concept so that this delivery can be published later",
+          "storyConcepts": [
+            "delivery",
+            "conceptthi",
+            "concept",
+            "feedback",
+            "later",
+            "published",
+            "save",
+            "thi",
+            "client"
+          ],
+          "matchedConcepts": [
+            "delivery",
+            "concept",
+            "feedback"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "delivery_overview",
+            "feedback_overview"
+          ],
+          "lexicalScore": 0.3333333333333333,
+          "covered": true
+        },
+        {
+          "id": "US57",
+          "story": "As a client, I want to publish feedback on a delivery so that the responsible project team can improve my product",
+          "storyConcepts": [
+            "projectteam",
+            "delivery",
+            "feedback",
+            "improve",
+            "product",
+            "project",
+            "publish",
+            "responsible",
+            "team",
+            "client"
+          ],
+          "matchedConcepts": [
+            "delivery",
+            "feedback",
+            "project",
+            "team"
+          ],
+          "processVisualizerAlignedConcepts": [],
+          "matchedUiRefs": [
+            "delivery_overview",
+            "feedback_overview",
+            "project_overview"
+          ],
+          "lexicalScore": 0.4,
+          "covered": true
+        }
+      ],
+      "score": 0.7192982456140351,
+      "covered": 41,
+      "total": 57
+    }
+  },
+  "generationStrategy": {
+    "llmPassCount": 1,
+    "repairPassEnabled": false
+  }
+}

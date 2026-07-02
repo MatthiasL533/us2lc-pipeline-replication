@@ -1,0 +1,1873 @@
+{
+  "appId": "91585e85-3cc1-4d49-aa8a-5f3e7e9d7986",
+  "branch": "main",
+  "exportedAt": "2026-05-25T13:46:03.679Z",
+  "repository": {
+    "type": "git",
+    "url": "https://git.api.mendix.com/91585e85-3cc1-4d49-aa8a-5f3e7e9d7986.git"
+  },
+  "summary": {
+    "domainModels": 1,
+    "modules": [
+      "Education"
+    ],
+    "entities": 21,
+    "associations": 18,
+    "enumerations": 9
+  },
+  "domainModels": [
+    {
+      "module": "Education",
+      "documentation": "Administrates",
+      "entities": [
+        {
+          "name": "FreelanceTeacher",
+          "qualifiedName": "Education.FreelanceTeacher",
+          "documentation": "",
+          "location": {
+            "x": 510,
+            "y": 280
+          },
+          "generalization": "Education.Person",
+          "attributes": [
+            {
+              "name": "TeacherID",
+              "qualifiedName": "Education.FreelanceTeacher.TeacherID",
+              "documentation": "",
+              "type": {
+                "kind": "AutoNumber",
+                "structureTypeName": "DomainModels$AutoNumberAttributeType"
+              },
+              "defaultValue": "1",
+              "valueType": "DomainModels$StoredValue",
+              "dataStorageGuid": "d6fb1e57-b488-4233-a0bc-592d522bc70f"
+            },
+            {
+              "name": "Email",
+              "qualifiedName": "Education.FreelanceTeacher.Email",
+              "documentation": "",
+              "type": {
+                "kind": "String",
+                "structureTypeName": "DomainModels$StringAttributeType",
+                "length": 200
+              },
+              "defaultValue": "",
+              "valueType": "DomainModels$StoredValue",
+              "dataStorageGuid": "1bb523f5-8c74-4970-9b82-9a0828de273e"
+            },
+            {
+              "name": "KvKNumber",
+              "qualifiedName": "Education.FreelanceTeacher.KvKNumber",
+              "documentation": "",
+              "type": {
+                "kind": "Integer",
+                "structureTypeName": "DomainModels$IntegerAttributeType"
+              },
+              "defaultValue": "0",
+              "valueType": "DomainModels$StoredValue",
+              "dataStorageGuid": "9eeab6b4-7e49-460f-9f13-0ca870f34ea7"
+            },
+            {
+              "name": "TeachingExperience",
+              "qualifiedName": "Education.FreelanceTeacher.TeachingExperience",
+              "documentation": "",
+              "type": {
+                "kind": "Enumeration",
+                "structureTypeName": "DomainModels$EnumerationAttributeType",
+                "enumerationQualifiedName": "Education.TeachingExperience",
+                "enumeration": "TeachingExperience"
+              },
+              "defaultValue": "",
+              "valueType": "DomainModels$StoredValue",
+              "dataStorageGuid": "8e677800-41b7-45e7-92fd-c521d531edb4"
+            },
+            {
+              "name": "Certification",
+              "qualifiedName": "Education.FreelanceTeacher.Certification",
+              "documentation": "",
+              "type": {
+                "kind": "Enumeration",
+                "structureTypeName": "DomainModels$EnumerationAttributeType",
+                "enumerationQualifiedName": "Education.TeacherDegree",
+                "enumeration": "TeacherDegree"
+              },
+              "defaultValue": "",
+              "valueType": "DomainModels$StoredValue",
+              "dataStorageGuid": "560662a9-5ef0-418b-903d-7a230c4762a2"
+            },
+            {
+              "name": "TechnicalSkillLevel",
+              "qualifiedName": "Education.FreelanceTeacher.TechnicalSkillLevel",
+              "documentation": "",
+              "type": {
+                "kind": "Enumeration",
+                "structureTypeName": "DomainModels$EnumerationAttributeType",
+                "enumerationQualifiedName": "Education.Technical_skill_level",
+                "enumeration": "Technical_skill_level"
+              },
+              "defaultValue": "",
+              "valueType": "DomainModels$StoredValue",
+              "dataStorageGuid": "0c270999-7cf9-442c-bb93-d1194bcb217a"
+            },
+            {
+              "name": "KvKApproved",
+              "qualifiedName": "Education.FreelanceTeacher.KvKApproved",
+              "documentation": "",
+              "type": {
+                "kind": "Enumeration",
+                "structureTypeName": "DomainModels$EnumerationAttributeType",
+                "enumerationQualifiedName": "Education.KvKStatus",
+                "enumeration": "KvKStatus"
+              },
+              "defaultValue": "Not_checked",
+              "valueType": "DomainModels$StoredValue",
+              "dataStorageGuid": "4a4d6dd6-2cc8-4d3f-b707-6229964138fd"
+            },
+            {
+              "name": "EmploymentAgency",
+              "qualifiedName": "Education.FreelanceTeacher.EmploymentAgency",
+              "documentation": "",
+              "type": {
+                "kind": "String",
+                "structureTypeName": "DomainModels$StringAttributeType",
+                "length": 200
+              },
+              "defaultValue": "",
+              "valueType": "DomainModels$StoredValue",
+              "dataStorageGuid": "e0756e75-b203-48c3-a0d4-76258b863eaa"
+            }
+          ],
+          "validationRules": [],
+          "indexes": [],
+          "accessRules": [],
+          "image": null,
+          "dataStorageGuid": "4a3d8506-0b19-4663-8920-1d90e80d2a89"
+        },
+        {
+          "name": "MinistryOfEducation",
+          "qualifiedName": "Education.MinistryOfEducation",
+          "documentation": "",
+          "location": {
+            "x": 900,
+            "y": 80
+          },
+          "generalization": "DomainModels$NoGeneralization",
+          "attributes": [
+            {
+              "name": "MinistryID",
+              "qualifiedName": "Education.MinistryOfEducation.MinistryID",
+              "documentation": "",
+              "type": {
+                "kind": "AutoNumber",
+                "structureTypeName": "DomainModels$AutoNumberAttributeType"
+              },
+              "defaultValue": "1",
+              "valueType": "DomainModels$StoredValue",
+              "dataStorageGuid": "00a7ce29-be49-4785-a8b2-42563d52d4fa"
+            }
+          ],
+          "validationRules": [],
+          "indexes": [],
+          "accessRules": [],
+          "image": null,
+          "dataStorageGuid": "76598830-6630-4674-8c87-818aa20ef3af"
+        },
+        {
+          "name": "Person",
+          "qualifiedName": "Education.Person",
+          "documentation": "",
+          "location": {
+            "x": 1330,
+            "y": 630
+          },
+          "generalization": "DomainModels$NoGeneralization",
+          "attributes": [
+            {
+              "name": "FirstName",
+              "qualifiedName": "Education.Person.FirstName",
+              "documentation": "",
+              "type": {
+                "kind": "String",
+                "structureTypeName": "DomainModels$StringAttributeType",
+                "length": 200
+              },
+              "defaultValue": "",
+              "valueType": "DomainModels$StoredValue",
+              "dataStorageGuid": "9670d3a7-bc3d-4fc9-affd-72d413fd7d09"
+            },
+            {
+              "name": "LastName",
+              "qualifiedName": "Education.Person.LastName",
+              "documentation": "",
+              "type": {
+                "kind": "String",
+                "structureTypeName": "DomainModels$StringAttributeType",
+                "length": 200
+              },
+              "defaultValue": "",
+              "valueType": "DomainModels$StoredValue",
+              "dataStorageGuid": "c3ec4179-222f-49ef-80df-c62d72fd5df4"
+            },
+            {
+              "name": "Age",
+              "qualifiedName": "Education.Person.Age",
+              "documentation": "",
+              "type": {
+                "kind": "Integer",
+                "structureTypeName": "DomainModels$IntegerAttributeType"
+              },
+              "defaultValue": "0",
+              "valueType": "DomainModels$StoredValue",
+              "dataStorageGuid": "f98905a6-e326-4950-bc56-81815791ef7d"
+            },
+            {
+              "name": "Gender",
+              "qualifiedName": "Education.Person.Gender",
+              "documentation": "",
+              "type": {
+                "kind": "Enumeration",
+                "structureTypeName": "DomainModels$EnumerationAttributeType",
+                "enumerationQualifiedName": "Education.Gender",
+                "enumeration": "Gender"
+              },
+              "defaultValue": "",
+              "valueType": "DomainModels$StoredValue",
+              "dataStorageGuid": "70e4ad70-12ae-4f4d-9050-f03cf9285d5d"
+            }
+          ],
+          "validationRules": [],
+          "indexes": [],
+          "accessRules": [],
+          "image": null,
+          "dataStorageGuid": "8dea1877-b719-447b-8322-2bed7c8b8f70"
+        },
+        {
+          "name": "Administrator",
+          "qualifiedName": "Education.Administrator",
+          "documentation": "",
+          "location": {
+            "x": 510,
+            "y": 70
+          },
+          "generalization": "Education.Person",
+          "attributes": [
+            {
+              "name": "AdminID",
+              "qualifiedName": "Education.Administrator.AdminID",
+              "documentation": "",
+              "type": {
+                "kind": "AutoNumber",
+                "structureTypeName": "DomainModels$AutoNumberAttributeType"
+              },
+              "defaultValue": "1",
+              "valueType": "DomainModels$StoredValue",
+              "dataStorageGuid": "1ac3e765-649e-41da-a870-412b8c4bf6d3"
+            }
+          ],
+          "validationRules": [],
+          "indexes": [],
+          "accessRules": [],
+          "image": null,
+          "dataStorageGuid": "482b1b39-3175-4d8b-bfcd-b42584752224"
+        },
+        {
+          "name": "Module",
+          "qualifiedName": "Education.Module",
+          "documentation": "",
+          "location": {
+            "x": 1240,
+            "y": 320
+          },
+          "generalization": "DomainModels$NoGeneralization",
+          "attributes": [
+            {
+              "name": "Name",
+              "qualifiedName": "Education.Module.Name",
+              "documentation": "",
+              "type": {
+                "kind": "String",
+                "structureTypeName": "DomainModels$StringAttributeType",
+                "length": 200
+              },
+              "defaultValue": "",
+              "valueType": "DomainModels$StoredValue",
+              "dataStorageGuid": "7f699d47-c2af-46ef-94fb-451c6e2fbd0d"
+            },
+            {
+              "name": "Length",
+              "qualifiedName": "Education.Module.Length",
+              "documentation": "",
+              "type": {
+                "kind": "Integer",
+                "structureTypeName": "DomainModels$IntegerAttributeType"
+              },
+              "defaultValue": "0",
+              "valueType": "DomainModels$StoredValue",
+              "dataStorageGuid": "2f0a6d82-06ef-47f1-a836-676e86887c2d"
+            },
+            {
+              "name": "SkillLevel",
+              "qualifiedName": "Education.Module.SkillLevel",
+              "documentation": "",
+              "type": {
+                "kind": "Integer",
+                "structureTypeName": "DomainModels$IntegerAttributeType"
+              },
+              "defaultValue": "0",
+              "valueType": "DomainModels$StoredValue",
+              "dataStorageGuid": "655816ff-29f3-4567-9743-4f713cd5f3e6"
+            },
+            {
+              "name": "ModuleNumber",
+              "qualifiedName": "Education.Module.ModuleNumber",
+              "documentation": "",
+              "type": {
+                "kind": "Integer",
+                "structureTypeName": "DomainModels$IntegerAttributeType"
+              },
+              "defaultValue": "0",
+              "valueType": "DomainModels$StoredValue",
+              "dataStorageGuid": "a71d6c3d-e3cf-4f93-8b30-720150287690"
+            }
+          ],
+          "validationRules": [],
+          "indexes": [],
+          "accessRules": [],
+          "image": null,
+          "dataStorageGuid": "a8ba5cdd-f1e9-4f1d-a14f-032116f89e49"
+        },
+        {
+          "name": "Videos",
+          "qualifiedName": "Education.Videos",
+          "documentation": "",
+          "location": {
+            "x": 1510,
+            "y": 50
+          },
+          "generalization": "Education.LearningMaterialContent",
+          "attributes": [
+            {
+              "name": "Platform",
+              "qualifiedName": "Education.Videos.Platform",
+              "documentation": "",
+              "type": {
+                "kind": "String",
+                "structureTypeName": "DomainModels$StringAttributeType",
+                "length": 200
+              },
+              "defaultValue": "",
+              "valueType": "DomainModels$StoredValue",
+              "dataStorageGuid": "c8a2894a-752c-4773-92ab-300c0bc9d3db"
+            },
+            {
+              "name": "URL",
+              "qualifiedName": "Education.Videos.URL",
+              "documentation": "",
+              "type": {
+                "kind": "String",
+                "structureTypeName": "DomainModels$StringAttributeType",
+                "length": 200
+              },
+              "defaultValue": "",
+              "valueType": "DomainModels$StoredValue",
+              "dataStorageGuid": "ee8d0f72-fe9a-4455-ade5-d7cc4bb1cee8"
+            },
+            {
+              "name": "RequiredTeachingLevel",
+              "qualifiedName": "Education.Videos.RequiredTeachingLevel",
+              "documentation": "",
+              "type": {
+                "kind": "Enumeration",
+                "structureTypeName": "DomainModels$EnumerationAttributeType",
+                "enumerationQualifiedName": "Education.TeachingExperience",
+                "enumeration": "TeachingExperience"
+              },
+              "defaultValue": "",
+              "valueType": "DomainModels$StoredValue",
+              "dataStorageGuid": "e8ac1cfb-0037-4095-bff6-30763ae9a02f"
+            }
+          ],
+          "validationRules": [],
+          "indexes": [],
+          "accessRules": [],
+          "image": null,
+          "dataStorageGuid": "697ab680-b727-4368-9d3a-c499055a35b1"
+        },
+        {
+          "name": "Books",
+          "qualifiedName": "Education.Books",
+          "documentation": "",
+          "location": {
+            "x": 1510,
+            "y": 160
+          },
+          "generalization": "Education.LearningMaterialContent",
+          "attributes": [
+            {
+              "name": "ISBN",
+              "qualifiedName": "Education.Books.ISBN",
+              "documentation": "",
+              "type": {
+                "kind": "String",
+                "structureTypeName": "DomainModels$StringAttributeType",
+                "length": 200
+              },
+              "defaultValue": "",
+              "valueType": "DomainModels$StoredValue",
+              "dataStorageGuid": "dd066c93-bd57-433b-9c0b-6d404bb2b1b0"
+            },
+            {
+              "name": "Publisher",
+              "qualifiedName": "Education.Books.Publisher",
+              "documentation": "",
+              "type": {
+                "kind": "String",
+                "structureTypeName": "DomainModels$StringAttributeType",
+                "length": 200
+              },
+              "defaultValue": "",
+              "valueType": "DomainModels$StoredValue",
+              "dataStorageGuid": "0c78610a-cc06-4d60-a9e8-21142cc1ba2d"
+            },
+            {
+              "name": "Journal",
+              "qualifiedName": "Education.Books.Journal",
+              "documentation": "",
+              "type": {
+                "kind": "String",
+                "structureTypeName": "DomainModels$StringAttributeType",
+                "length": 200
+              },
+              "defaultValue": "",
+              "valueType": "DomainModels$StoredValue",
+              "dataStorageGuid": "241f664f-5791-49af-92d7-8fa5948bed35"
+            },
+            {
+              "name": "RequiredTeachingLevel",
+              "qualifiedName": "Education.Books.RequiredTeachingLevel",
+              "documentation": "",
+              "type": {
+                "kind": "Enumeration",
+                "structureTypeName": "DomainModels$EnumerationAttributeType",
+                "enumerationQualifiedName": "Education.TeachingExperience",
+                "enumeration": "TeachingExperience"
+              },
+              "defaultValue": "",
+              "valueType": "DomainModels$StoredValue",
+              "dataStorageGuid": "b86a5855-f771-4743-b75b-3a96a04596ca"
+            }
+          ],
+          "validationRules": [],
+          "indexes": [],
+          "accessRules": [],
+          "image": null,
+          "dataStorageGuid": "e535132e-de48-402b-ae18-401cad620a8a"
+        },
+        {
+          "name": "ResearchPapers",
+          "qualifiedName": "Education.ResearchPapers",
+          "documentation": "",
+          "location": {
+            "x": 1510,
+            "y": 400
+          },
+          "generalization": "Education.LearningMaterialContent",
+          "attributes": [
+            {
+              "name": "DOI",
+              "qualifiedName": "Education.ResearchPapers.DOI",
+              "documentation": "",
+              "type": {
+                "kind": "String",
+                "structureTypeName": "DomainModels$StringAttributeType",
+                "length": 200
+              },
+              "defaultValue": "",
+              "valueType": "DomainModels$StoredValue",
+              "dataStorageGuid": "7361f510-4ce3-4a18-9331-008ece0a080b"
+            },
+            {
+              "name": "Volume",
+              "qualifiedName": "Education.ResearchPapers.Volume",
+              "documentation": "",
+              "type": {
+                "kind": "String",
+                "structureTypeName": "DomainModels$StringAttributeType",
+                "length": 200
+              },
+              "defaultValue": "",
+              "valueType": "DomainModels$StoredValue",
+              "dataStorageGuid": "dbaefe85-e55b-4e27-9e8a-eac03e512d27"
+            },
+            {
+              "name": "Journal",
+              "qualifiedName": "Education.ResearchPapers.Journal",
+              "documentation": "",
+              "type": {
+                "kind": "String",
+                "structureTypeName": "DomainModels$StringAttributeType",
+                "length": 200
+              },
+              "defaultValue": "",
+              "valueType": "DomainModels$StoredValue",
+              "dataStorageGuid": "2950d57d-f012-4e4c-82b2-bd3e0da8c82a"
+            },
+            {
+              "name": "DatePublished",
+              "qualifiedName": "Education.ResearchPapers.DatePublished",
+              "documentation": "",
+              "type": {
+                "kind": "DateTime",
+                "structureTypeName": "DomainModels$DateTimeAttributeType"
+              },
+              "defaultValue": "",
+              "valueType": "DomainModels$StoredValue",
+              "dataStorageGuid": "b8b4534b-11ff-44eb-9370-fa93b120672d"
+            },
+            {
+              "name": "RequiredTeachingLevel",
+              "qualifiedName": "Education.ResearchPapers.RequiredTeachingLevel",
+              "documentation": "",
+              "type": {
+                "kind": "Enumeration",
+                "structureTypeName": "DomainModels$EnumerationAttributeType",
+                "enumerationQualifiedName": "Education.TeachingExperience",
+                "enumeration": "TeachingExperience"
+              },
+              "defaultValue": "",
+              "valueType": "DomainModels$StoredValue",
+              "dataStorageGuid": "d8387e3f-3aed-4420-a401-d73666b989ac"
+            }
+          ],
+          "validationRules": [],
+          "indexes": [],
+          "accessRules": [],
+          "image": null,
+          "dataStorageGuid": "fdcf1658-fabc-4106-b55e-b0b9b4f57d06"
+        },
+        {
+          "name": "Slides",
+          "qualifiedName": "Education.Slides",
+          "documentation": "",
+          "location": {
+            "x": 1510,
+            "y": 650
+          },
+          "generalization": "Education.LearningMaterialContent",
+          "attributes": [
+            {
+              "name": "Source",
+              "qualifiedName": "Education.Slides.Source",
+              "documentation": "",
+              "type": {
+                "kind": "String",
+                "structureTypeName": "DomainModels$StringAttributeType",
+                "length": 200
+              },
+              "defaultValue": "",
+              "valueType": "DomainModels$StoredValue",
+              "dataStorageGuid": "bf2ab6c5-4b38-4469-8a9f-845d878c4f92"
+            },
+            {
+              "name": "RequiredTeachingLevel",
+              "qualifiedName": "Education.Slides.RequiredTeachingLevel",
+              "documentation": "",
+              "type": {
+                "kind": "Enumeration",
+                "structureTypeName": "DomainModels$EnumerationAttributeType",
+                "enumerationQualifiedName": "Education.TeachingExperience",
+                "enumeration": "TeachingExperience"
+              },
+              "defaultValue": "",
+              "valueType": "DomainModels$StoredValue",
+              "dataStorageGuid": "4aa43784-c277-4fd8-9473-ab740998d9dd"
+            }
+          ],
+          "validationRules": [],
+          "indexes": [],
+          "accessRules": [],
+          "image": null,
+          "dataStorageGuid": "1044f69e-defc-46b2-b4a7-49fc2d6eb251"
+        },
+        {
+          "name": "Flashcards",
+          "qualifiedName": "Education.Flashcards",
+          "documentation": "",
+          "location": {
+            "x": 1510,
+            "y": 540
+          },
+          "generalization": "Education.LearningMaterialContent",
+          "attributes": [
+            {
+              "name": "Source",
+              "qualifiedName": "Education.Flashcards.Source",
+              "documentation": "",
+              "type": {
+                "kind": "String",
+                "structureTypeName": "DomainModels$StringAttributeType",
+                "length": 200
+              },
+              "defaultValue": "",
+              "valueType": "DomainModels$StoredValue",
+              "dataStorageGuid": "c443e8ed-f89f-4571-856b-22d038c63176"
+            },
+            {
+              "name": "RequiredTeachingLevel",
+              "qualifiedName": "Education.Flashcards.RequiredTeachingLevel",
+              "documentation": "",
+              "type": {
+                "kind": "Enumeration",
+                "structureTypeName": "DomainModels$EnumerationAttributeType",
+                "enumerationQualifiedName": "Education.TeachingExperience",
+                "enumeration": "TeachingExperience"
+              },
+              "defaultValue": "",
+              "valueType": "DomainModels$StoredValue",
+              "dataStorageGuid": "2daaa806-e281-4010-b5eb-5c0c77f7664c"
+            }
+          ],
+          "validationRules": [],
+          "indexes": [],
+          "accessRules": [],
+          "image": null,
+          "dataStorageGuid": "479d4fa5-8d89-4ca3-873e-19b30732e273"
+        },
+        {
+          "name": "Games",
+          "qualifiedName": "Education.Games",
+          "documentation": "",
+          "location": {
+            "x": 1510,
+            "y": 290
+          },
+          "generalization": "Education.LearningMaterialContent",
+          "attributes": [
+            {
+              "name": "GameType",
+              "qualifiedName": "Education.Games.GameType",
+              "documentation": "",
+              "type": {
+                "kind": "String",
+                "structureTypeName": "DomainModels$StringAttributeType",
+                "length": 200
+              },
+              "defaultValue": "",
+              "valueType": "DomainModels$StoredValue",
+              "dataStorageGuid": "5e466ae5-418a-401e-a8fc-82fac2987baf"
+            },
+            {
+              "name": "RequiredTeachingLevel",
+              "qualifiedName": "Education.Games.RequiredTeachingLevel",
+              "documentation": "",
+              "type": {
+                "kind": "Enumeration",
+                "structureTypeName": "DomainModels$EnumerationAttributeType",
+                "enumerationQualifiedName": "Education.TeachingExperience",
+                "enumeration": "TeachingExperience"
+              },
+              "defaultValue": "",
+              "valueType": "DomainModels$StoredValue",
+              "dataStorageGuid": "109a48c6-a89b-40b6-b36d-b0411a9bac45"
+            }
+          ],
+          "validationRules": [],
+          "indexes": [],
+          "accessRules": [],
+          "image": null,
+          "dataStorageGuid": "5c3d9f83-a013-4c28-9fc3-a39dcbe51d35"
+        },
+        {
+          "name": "ModuleLevel",
+          "qualifiedName": "Education.ModuleLevel",
+          "documentation": "",
+          "location": {
+            "x": 900,
+            "y": 460
+          },
+          "generalization": "DomainModels$NoGeneralization",
+          "attributes": [
+            {
+              "name": "Name",
+              "qualifiedName": "Education.ModuleLevel.Name",
+              "documentation": "",
+              "type": {
+                "kind": "String",
+                "structureTypeName": "DomainModels$StringAttributeType",
+                "length": 200
+              },
+              "defaultValue": "",
+              "valueType": "DomainModels$StoredValue",
+              "dataStorageGuid": "c501c7b7-cda2-4c26-88eb-2fb4a1776869"
+            }
+          ],
+          "validationRules": [],
+          "indexes": [],
+          "accessRules": [],
+          "image": null,
+          "dataStorageGuid": "b0e6f3fc-ada1-4edc-9acc-ed1a8e980bad"
+        },
+        {
+          "name": "LearningMaterialContent",
+          "qualifiedName": "Education.LearningMaterialContent",
+          "documentation": "",
+          "location": {
+            "x": 1240,
+            "y": 80
+          },
+          "generalization": "DomainModels$NoGeneralization",
+          "attributes": [
+            {
+              "name": "Topic",
+              "qualifiedName": "Education.LearningMaterialContent.Topic",
+              "documentation": "",
+              "type": {
+                "kind": "String",
+                "structureTypeName": "DomainModels$StringAttributeType",
+                "length": 200
+              },
+              "defaultValue": "",
+              "valueType": "DomainModels$StoredValue",
+              "dataStorageGuid": "59a76d18-cd06-4d9b-9536-b17a6eaaaff6"
+            },
+            {
+              "name": "Year",
+              "qualifiedName": "Education.LearningMaterialContent.Year",
+              "documentation": "",
+              "type": {
+                "kind": "DateTime",
+                "structureTypeName": "DomainModels$DateTimeAttributeType"
+              },
+              "defaultValue": "",
+              "valueType": "DomainModels$StoredValue",
+              "dataStorageGuid": "e86ee9e6-9b97-4ec8-8600-18c3ab8d4414"
+            },
+            {
+              "name": "Author",
+              "qualifiedName": "Education.LearningMaterialContent.Author",
+              "documentation": "",
+              "type": {
+                "kind": "String",
+                "structureTypeName": "DomainModels$StringAttributeType",
+                "length": 200
+              },
+              "defaultValue": "",
+              "valueType": "DomainModels$StoredValue",
+              "dataStorageGuid": "6302f4f6-ba4f-4d4f-aaf5-d47dd9e9d410"
+            }
+          ],
+          "validationRules": [],
+          "indexes": [],
+          "accessRules": [],
+          "image": null,
+          "dataStorageGuid": "71c06b4f-2634-4bd3-a02c-9449ff0169bb"
+        },
+        {
+          "name": "ModuleProgress",
+          "qualifiedName": "Education.ModuleProgress",
+          "documentation": "",
+          "location": {
+            "x": 900,
+            "y": 310
+          },
+          "generalization": "DomainModels$NoGeneralization",
+          "attributes": [
+            {
+              "name": "Topic",
+              "qualifiedName": "Education.ModuleProgress.Topic",
+              "documentation": "",
+              "type": {
+                "kind": "String",
+                "structureTypeName": "DomainModels$StringAttributeType",
+                "length": 200
+              },
+              "defaultValue": "",
+              "valueType": "DomainModels$StoredValue",
+              "dataStorageGuid": "9be9af3f-8a84-4dd4-bb70-43f79f4a2bff"
+            },
+            {
+              "name": "StartDate",
+              "qualifiedName": "Education.ModuleProgress.StartDate",
+              "documentation": "",
+              "type": {
+                "kind": "DateTime",
+                "structureTypeName": "DomainModels$DateTimeAttributeType"
+              },
+              "defaultValue": "",
+              "valueType": "DomainModels$StoredValue",
+              "dataStorageGuid": "47552bbc-d0b2-44d2-bc52-6208791fc260"
+            },
+            {
+              "name": "EndDate",
+              "qualifiedName": "Education.ModuleProgress.EndDate",
+              "documentation": "",
+              "type": {
+                "kind": "DateTime",
+                "structureTypeName": "DomainModels$DateTimeAttributeType"
+              },
+              "defaultValue": "",
+              "valueType": "DomainModels$StoredValue",
+              "dataStorageGuid": "df3cc397-8a23-4caa-8f27-74cfc3d9894a"
+            },
+            {
+              "name": "ProgressPercentage",
+              "qualifiedName": "Education.ModuleProgress.ProgressPercentage",
+              "documentation": "",
+              "type": {
+                "kind": "Decimal",
+                "structureTypeName": "DomainModels$DecimalAttributeType"
+              },
+              "defaultValue": "0",
+              "valueType": "DomainModels$StoredValue",
+              "dataStorageGuid": "ab918caf-9384-4687-8605-500dead18de3"
+            }
+          ],
+          "validationRules": [],
+          "indexes": [],
+          "accessRules": [],
+          "image": null,
+          "dataStorageGuid": "0969d1a9-81f9-4700-81ab-4bb03424b1da"
+        },
+        {
+          "name": "Achievements",
+          "qualifiedName": "Education.Achievements",
+          "documentation": "",
+          "location": {
+            "x": 900,
+            "y": 180
+          },
+          "generalization": "DomainModels$NoGeneralization",
+          "attributes": [],
+          "validationRules": [],
+          "indexes": [],
+          "accessRules": [],
+          "image": null,
+          "dataStorageGuid": "ea991f75-4bff-482c-959a-1ec59f28d117"
+        },
+        {
+          "name": "Competence",
+          "qualifiedName": "Education.Competence",
+          "documentation": "",
+          "location": {
+            "x": 500,
+            "y": 650
+          },
+          "generalization": "DomainModels$NoGeneralization",
+          "attributes": [
+            {
+              "name": "Name",
+              "qualifiedName": "Education.Competence.Name",
+              "documentation": "",
+              "type": {
+                "kind": "String",
+                "structureTypeName": "DomainModels$StringAttributeType",
+                "length": 200
+              },
+              "defaultValue": "",
+              "valueType": "DomainModels$StoredValue",
+              "dataStorageGuid": "b5c48b85-f69b-480b-8e00-c10fb4d0a5f3"
+            }
+          ],
+          "validationRules": [],
+          "indexes": [],
+          "accessRules": [],
+          "image": null,
+          "dataStorageGuid": "83827d94-075e-423f-aa6d-b012fd1f81c6"
+        },
+        {
+          "name": "Proficiency",
+          "qualifiedName": "Education.Proficiency",
+          "documentation": "",
+          "location": {
+            "x": 500,
+            "y": 510
+          },
+          "generalization": "DomainModels$NoGeneralization",
+          "attributes": [
+            {
+              "name": "Level",
+              "qualifiedName": "Education.Proficiency.Level",
+              "documentation": "",
+              "type": {
+                "kind": "String",
+                "structureTypeName": "DomainModels$StringAttributeType",
+                "length": 200
+              },
+              "defaultValue": "",
+              "valueType": "DomainModels$StoredValue",
+              "dataStorageGuid": "5ab87ece-dd29-4f22-b7ec-c93c05bdaead"
+            }
+          ],
+          "validationRules": [],
+          "indexes": [],
+          "accessRules": [],
+          "image": null,
+          "dataStorageGuid": "21f79270-c8a8-4383-abfe-88be438b6022"
+        },
+        {
+          "name": "TempLM",
+          "qualifiedName": "Education.TempLM",
+          "documentation": "",
+          "location": {
+            "x": 690,
+            "y": 650
+          },
+          "generalization": "DomainModels$NoGeneralization",
+          "attributes": [
+            {
+              "name": "TempString",
+              "qualifiedName": "Education.TempLM.TempString",
+              "documentation": "",
+              "type": {
+                "kind": "String",
+                "structureTypeName": "DomainModels$StringAttributeType",
+                "length": 200
+              },
+              "defaultValue": "",
+              "valueType": "DomainModels$StoredValue",
+              "dataStorageGuid": "6295b838-eb55-4729-a55b-7b5e50cf1578"
+            }
+          ],
+          "validationRules": [],
+          "indexes": [],
+          "accessRules": [],
+          "image": null,
+          "dataStorageGuid": "5bde4d77-7f1a-4737-80e4-d6361b44d85e"
+        },
+        {
+          "name": "TempModule",
+          "qualifiedName": "Education.TempModule",
+          "documentation": "",
+          "location": {
+            "x": 1170,
+            "y": 650
+          },
+          "generalization": "DomainModels$NoGeneralization",
+          "attributes": [
+            {
+              "name": "TempString",
+              "qualifiedName": "Education.TempModule.TempString",
+              "documentation": "",
+              "type": {
+                "kind": "String",
+                "structureTypeName": "DomainModels$StringAttributeType",
+                "length": 200
+              },
+              "defaultValue": "",
+              "valueType": "DomainModels$StoredValue",
+              "dataStorageGuid": "68f47173-85b6-44fe-960e-d1a0e7d2f982"
+            }
+          ],
+          "validationRules": [],
+          "indexes": [],
+          "accessRules": [],
+          "image": null,
+          "dataStorageGuid": "a4b91239-6cd2-4a55-87c3-7f255732aeda"
+        },
+        {
+          "name": "TempKvK",
+          "qualifiedName": "Education.TempKvK",
+          "documentation": "",
+          "location": {
+            "x": 1010,
+            "y": 650
+          },
+          "generalization": "DomainModels$NoGeneralization",
+          "attributes": [
+            {
+              "name": "TempString",
+              "qualifiedName": "Education.TempKvK.TempString",
+              "documentation": "",
+              "type": {
+                "kind": "String",
+                "structureTypeName": "DomainModels$StringAttributeType",
+                "length": 200
+              },
+              "defaultValue": "",
+              "valueType": "DomainModels$StoredValue",
+              "dataStorageGuid": "79538b7d-4b7a-4df2-9643-375f27282656"
+            }
+          ],
+          "validationRules": [],
+          "indexes": [],
+          "accessRules": [],
+          "image": null,
+          "dataStorageGuid": "b7698922-ffa7-4af8-b550-4312212dc825"
+        },
+        {
+          "name": "TempKvKReject",
+          "qualifiedName": "Education.TempKvKReject",
+          "documentation": "",
+          "location": {
+            "x": 850,
+            "y": 650
+          },
+          "generalization": "DomainModels$NoGeneralization",
+          "attributes": [
+            {
+              "name": "TempString",
+              "qualifiedName": "Education.TempKvKReject.TempString",
+              "documentation": "",
+              "type": {
+                "kind": "String",
+                "structureTypeName": "DomainModels$StringAttributeType",
+                "length": 200
+              },
+              "defaultValue": "",
+              "valueType": "DomainModels$StoredValue",
+              "dataStorageGuid": "ca5be3e2-be58-4008-b183-32f40c72e6f4"
+            }
+          ],
+          "validationRules": [],
+          "indexes": [],
+          "accessRules": [],
+          "image": null,
+          "dataStorageGuid": "59fadf24-50eb-451d-9ff8-ef0a14602ab9"
+        }
+      ],
+      "associations": [
+        {
+          "name": "Reports_to",
+          "qualifiedName": "Education.Reports_to",
+          "documentation": "",
+          "parent": "Education.Administrator",
+          "child": "Education.MinistryOfEducation",
+          "type": "Reference",
+          "owner": "Default",
+          "storageFormat": null,
+          "deleteBehavior": {
+            "parentDeleteBehavior": "DeleteMeButKeepReferences",
+            "childDeleteBehavior": "DeleteMeButKeepReferences",
+            "parentErrorMessage": null,
+            "childErrorMessage": null
+          },
+          "parentConnection": {
+            "x": 100,
+            "y": 58
+          },
+          "childConnection": {
+            "x": 0,
+            "y": 46
+          },
+          "dataStorageGuid": "7a4a210e-5bf5-4c7c-8e1e-23d14507242f"
+        },
+        {
+          "name": "Administrates",
+          "qualifiedName": "Education.Administrates",
+          "documentation": "",
+          "parent": "Education.FreelanceTeacher",
+          "child": "Education.Administrator",
+          "type": "ReferenceSet",
+          "owner": "Both",
+          "storageFormat": null,
+          "deleteBehavior": {
+            "parentDeleteBehavior": "DeleteMeButKeepReferences",
+            "childDeleteBehavior": "DeleteMeButKeepReferences",
+            "parentErrorMessage": null,
+            "childErrorMessage": null
+          },
+          "parentConnection": {
+            "x": 49,
+            "y": 0
+          },
+          "childConnection": {
+            "x": 49,
+            "y": 100
+          },
+          "dataStorageGuid": "1bb64d81-9ba6-4ccc-90cd-4264ab403c5a"
+        },
+        {
+          "name": "interacts_with",
+          "qualifiedName": "Education.interacts_with",
+          "documentation": "",
+          "parent": "Education.FreelanceTeacher",
+          "child": "Education.FreelanceTeacher",
+          "type": "ReferenceSet",
+          "owner": "Default",
+          "storageFormat": null,
+          "deleteBehavior": {
+            "parentDeleteBehavior": "DeleteMeButKeepReferences",
+            "childDeleteBehavior": "DeleteMeButKeepReferences",
+            "parentErrorMessage": null,
+            "childErrorMessage": null
+          },
+          "parentConnection": {
+            "x": 100,
+            "y": 25
+          },
+          "childConnection": {
+            "x": 70,
+            "y": 0
+          },
+          "dataStorageGuid": "715552fb-a7a1-4725-bd74-a9bea08846e4"
+        },
+        {
+          "name": "ModuleLevel_Module",
+          "qualifiedName": "Education.ModuleLevel_Module",
+          "documentation": "",
+          "parent": "Education.ModuleLevel",
+          "child": "Education.Module",
+          "type": "Reference",
+          "owner": "Default",
+          "storageFormat": null,
+          "deleteBehavior": {
+            "parentDeleteBehavior": "DeleteMeButKeepReferences",
+            "childDeleteBehavior": "DeleteMeButKeepReferences",
+            "parentErrorMessage": null,
+            "childErrorMessage": null
+          },
+          "parentConnection": {
+            "x": 100,
+            "y": 17
+          },
+          "childConnection": {
+            "x": 0,
+            "y": 64
+          },
+          "dataStorageGuid": "6ef26579-6923-4bdf-a346-2036bc9b52b8"
+        },
+        {
+          "name": "ModuleProgress_FreelanceTeacher",
+          "qualifiedName": "Education.ModuleProgress_FreelanceTeacher",
+          "documentation": "",
+          "parent": "Education.ModuleProgress",
+          "child": "Education.FreelanceTeacher",
+          "type": "Reference",
+          "owner": "Default",
+          "storageFormat": null,
+          "deleteBehavior": {
+            "parentDeleteBehavior": "DeleteMeButKeepReferences",
+            "childDeleteBehavior": "DeleteMeButKeepReferences",
+            "parentErrorMessage": null,
+            "childErrorMessage": null
+          },
+          "parentConnection": {
+            "x": 0,
+            "y": 46
+          },
+          "childConnection": {
+            "x": 100,
+            "y": 56
+          },
+          "dataStorageGuid": "4f8885a5-49a9-4cb1-b1e3-6fda28c7c7a4"
+        },
+        {
+          "name": "ModuleProgress_Module",
+          "qualifiedName": "Education.ModuleProgress_Module",
+          "documentation": "",
+          "parent": "Education.ModuleProgress",
+          "child": "Education.Module",
+          "type": "Reference",
+          "owner": "Default",
+          "storageFormat": null,
+          "deleteBehavior": {
+            "parentDeleteBehavior": "DeleteMeButKeepReferences",
+            "childDeleteBehavior": "DeleteMeButKeepReferences",
+            "parentErrorMessage": null,
+            "childErrorMessage": null
+          },
+          "parentConnection": {
+            "x": 100,
+            "y": 48
+          },
+          "childConnection": {
+            "x": 0,
+            "y": 47
+          },
+          "dataStorageGuid": "42f8fe79-04b0-43a6-9903-2f4e7aa31136"
+        },
+        {
+          "name": "Achievements_FreelanceTeacher",
+          "qualifiedName": "Education.Achievements_FreelanceTeacher",
+          "documentation": "",
+          "parent": "Education.Achievements",
+          "child": "Education.FreelanceTeacher",
+          "type": "Reference",
+          "owner": "Default",
+          "storageFormat": null,
+          "deleteBehavior": {
+            "parentDeleteBehavior": "DeleteMeButKeepReferences",
+            "childDeleteBehavior": "DeleteMeButKeepReferences",
+            "parentErrorMessage": null,
+            "childErrorMessage": null
+          },
+          "parentConnection": {
+            "x": 0,
+            "y": 66
+          },
+          "childConnection": {
+            "x": 100,
+            "y": 36
+          },
+          "dataStorageGuid": "b6c5f6fa-83dc-4266-b6e1-e35324b594b8"
+        },
+        {
+          "name": "Module_Achievements",
+          "qualifiedName": "Education.Module_Achievements",
+          "documentation": "",
+          "parent": "Education.Module",
+          "child": "Education.Achievements",
+          "type": "Reference",
+          "owner": "Default",
+          "storageFormat": null,
+          "deleteBehavior": {
+            "parentDeleteBehavior": "DeleteMeButKeepReferences",
+            "childDeleteBehavior": "DeleteMeButKeepReferences",
+            "parentErrorMessage": null,
+            "childErrorMessage": null
+          },
+          "parentConnection": {
+            "x": 50,
+            "y": 0
+          },
+          "childConnection": {
+            "x": 100,
+            "y": 59
+          },
+          "dataStorageGuid": "72bfb395-e88d-46a2-8809-d6edc2a133a9"
+        },
+        {
+          "name": "Proficiency_FreelanceTeacher",
+          "qualifiedName": "Education.Proficiency_FreelanceTeacher",
+          "documentation": "",
+          "parent": "Education.Proficiency",
+          "child": "Education.FreelanceTeacher",
+          "type": "Reference",
+          "owner": "Default",
+          "storageFormat": null,
+          "deleteBehavior": {
+            "parentDeleteBehavior": "DeleteMeButKeepReferences",
+            "childDeleteBehavior": "DeleteMeButKeepReferences",
+            "parentErrorMessage": null,
+            "childErrorMessage": null
+          },
+          "parentConnection": {
+            "x": 50,
+            "y": 0
+          },
+          "childConnection": {
+            "x": 44,
+            "y": 100
+          },
+          "dataStorageGuid": "e59ece8b-007e-4169-9f12-eb4c9d2eae2d"
+        },
+        {
+          "name": "Proficiency_Competence",
+          "qualifiedName": "Education.Proficiency_Competence",
+          "documentation": "",
+          "parent": "Education.Proficiency",
+          "child": "Education.Competence",
+          "type": "Reference",
+          "owner": "Default",
+          "storageFormat": null,
+          "deleteBehavior": {
+            "parentDeleteBehavior": "DeleteMeButKeepReferences",
+            "childDeleteBehavior": "DeleteMeButKeepReferences",
+            "parentErrorMessage": null,
+            "childErrorMessage": null
+          },
+          "parentConnection": {
+            "x": 43,
+            "y": 100
+          },
+          "childConnection": {
+            "x": 46,
+            "y": 0
+          },
+          "dataStorageGuid": "69f7ab34-9e13-414d-9484-3e5800b973ce"
+        },
+        {
+          "name": "Proficiency_ModuleLevel",
+          "qualifiedName": "Education.Proficiency_ModuleLevel",
+          "documentation": "",
+          "parent": "Education.Proficiency",
+          "child": "Education.ModuleLevel",
+          "type": "Reference",
+          "owner": "Default",
+          "storageFormat": null,
+          "deleteBehavior": {
+            "parentDeleteBehavior": "DeleteMeButKeepReferences",
+            "childDeleteBehavior": "DeleteMeButKeepReferences",
+            "parentErrorMessage": null,
+            "childErrorMessage": null
+          },
+          "parentConnection": {
+            "x": 100,
+            "y": 61
+          },
+          "childConnection": {
+            "x": 0,
+            "y": 59
+          },
+          "dataStorageGuid": "72bdbcdc-99be-41f0-9c9f-8f67e7dc5f53"
+        },
+        {
+          "name": "LearningMaterialContent_Module",
+          "qualifiedName": "Education.LearningMaterialContent_Module",
+          "documentation": "",
+          "parent": "Education.LearningMaterialContent",
+          "child": "Education.Module",
+          "type": "Reference",
+          "owner": "Default",
+          "storageFormat": null,
+          "deleteBehavior": {
+            "parentDeleteBehavior": "DeleteMeButKeepReferences",
+            "childDeleteBehavior": "DeleteMeButKeepReferences",
+            "parentErrorMessage": null,
+            "childErrorMessage": null
+          },
+          "parentConnection": {
+            "x": 53,
+            "y": 100
+          },
+          "childConnection": {
+            "x": 82,
+            "y": 0
+          },
+          "dataStorageGuid": "8bbf4f61-be09-47e1-b933-1d12a7542b34"
+        },
+        {
+          "name": "Videos_Module",
+          "qualifiedName": "Education.Videos_Module",
+          "documentation": "",
+          "parent": "Education.Videos",
+          "child": "Education.Module",
+          "type": "Reference",
+          "owner": "Default",
+          "storageFormat": null,
+          "deleteBehavior": {
+            "parentDeleteBehavior": "DeleteMeButKeepReferences",
+            "childDeleteBehavior": "DeleteMeButKeepReferences",
+            "parentErrorMessage": null,
+            "childErrorMessage": null
+          },
+          "parentConnection": {
+            "x": 0,
+            "y": 60
+          },
+          "childConnection": {
+            "x": 100,
+            "y": 10
+          },
+          "dataStorageGuid": "510e109d-685a-4184-a2b2-9b093014d1ca"
+        },
+        {
+          "name": "Books_Module",
+          "qualifiedName": "Education.Books_Module",
+          "documentation": "",
+          "parent": "Education.Books",
+          "child": "Education.Module",
+          "type": "Reference",
+          "owner": "Default",
+          "storageFormat": null,
+          "deleteBehavior": {
+            "parentDeleteBehavior": "DeleteMeButKeepReferences",
+            "childDeleteBehavior": "DeleteMeButKeepReferences",
+            "parentErrorMessage": null,
+            "childErrorMessage": null
+          },
+          "parentConnection": {
+            "x": 0,
+            "y": 61
+          },
+          "childConnection": {
+            "x": 100,
+            "y": 33
+          },
+          "dataStorageGuid": "4f832541-ee03-490a-a544-74fa93d1b64c"
+        },
+        {
+          "name": "ResearchPapers_Module",
+          "qualifiedName": "Education.ResearchPapers_Module",
+          "documentation": "",
+          "parent": "Education.ResearchPapers",
+          "child": "Education.Module",
+          "type": "Reference",
+          "owner": "Default",
+          "storageFormat": null,
+          "deleteBehavior": {
+            "parentDeleteBehavior": "DeleteMeButKeepReferences",
+            "childDeleteBehavior": "DeleteMeButKeepReferences",
+            "parentErrorMessage": null,
+            "childErrorMessage": null
+          },
+          "parentConnection": {
+            "x": 0,
+            "y": 38
+          },
+          "childConnection": {
+            "x": 100,
+            "y": 79
+          },
+          "dataStorageGuid": "9db679a1-c38c-4d71-9fb0-9ff85b1f2a05"
+        },
+        {
+          "name": "Slides_Module",
+          "qualifiedName": "Education.Slides_Module",
+          "documentation": "",
+          "parent": "Education.Slides",
+          "child": "Education.Module",
+          "type": "Reference",
+          "owner": "Default",
+          "storageFormat": null,
+          "deleteBehavior": {
+            "parentDeleteBehavior": "DeleteMeButKeepReferences",
+            "childDeleteBehavior": "DeleteMeButKeepReferences",
+            "parentErrorMessage": null,
+            "childErrorMessage": null
+          },
+          "parentConnection": {
+            "x": 22,
+            "y": 0
+          },
+          "childConnection": {
+            "x": 90,
+            "y": 99
+          },
+          "dataStorageGuid": "242a76ee-0204-4110-95c3-746b3993efa3"
+        },
+        {
+          "name": "Flashcards_Module",
+          "qualifiedName": "Education.Flashcards_Module",
+          "documentation": "",
+          "parent": "Education.Flashcards",
+          "child": "Education.Module",
+          "type": "Reference",
+          "owner": "Default",
+          "storageFormat": null,
+          "deleteBehavior": {
+            "parentDeleteBehavior": "DeleteMeButKeepReferences",
+            "childDeleteBehavior": "DeleteMeButKeepReferences",
+            "parentErrorMessage": null,
+            "childErrorMessage": null
+          },
+          "parentConnection": {
+            "x": 33,
+            "y": 0
+          },
+          "childConnection": {
+            "x": 100,
+            "y": 99
+          },
+          "dataStorageGuid": "0540c4a2-bc81-4506-bce1-2d120ac08abb"
+        },
+        {
+          "name": "Games_Module",
+          "qualifiedName": "Education.Games_Module",
+          "documentation": "",
+          "parent": "Education.Games",
+          "child": "Education.Module",
+          "type": "Reference",
+          "owner": "Default",
+          "storageFormat": null,
+          "deleteBehavior": {
+            "parentDeleteBehavior": "DeleteMeButKeepReferences",
+            "childDeleteBehavior": "DeleteMeButKeepReferences",
+            "parentErrorMessage": null,
+            "childErrorMessage": null
+          },
+          "parentConnection": {
+            "x": 22,
+            "y": 0
+          },
+          "childConnection": {
+            "x": 100,
+            "y": 60
+          },
+          "dataStorageGuid": "bb7064f9-fb21-4dd4-87bb-3c54dd1275f4"
+        }
+      ],
+      "crossAssociations": [],
+      "annotations": []
+    }
+  ],
+  "enumerations": [
+    {
+      "name": "ENUM_Answers",
+      "qualifiedName": "Education.ENUM_Answers",
+      "module": "Education",
+      "documentation": "",
+      "values": [
+        {
+          "name": "A",
+          "caption": [
+            {
+              "languageCode": "en_US",
+              "text": "A"
+            }
+          ]
+        },
+        {
+          "name": "B",
+          "caption": [
+            {
+              "languageCode": "en_US",
+              "text": "B"
+            }
+          ]
+        },
+        {
+          "name": "C",
+          "caption": [
+            {
+              "languageCode": "en_US",
+              "text": "C"
+            }
+          ]
+        },
+        {
+          "name": "D",
+          "caption": [
+            {
+              "languageCode": "en_US",
+              "text": "D"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Gender",
+      "qualifiedName": "Education.Gender",
+      "module": "Education",
+      "documentation": "",
+      "values": [
+        {
+          "name": "Male",
+          "caption": [
+            {
+              "languageCode": "en_US",
+              "text": "Male"
+            }
+          ]
+        },
+        {
+          "name": "Female",
+          "caption": [
+            {
+              "languageCode": "en_US",
+              "text": "Female"
+            }
+          ]
+        },
+        {
+          "name": "Other",
+          "caption": [
+            {
+              "languageCode": "en_US",
+              "text": "Other"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "EducationType",
+      "qualifiedName": "Education.EducationType",
+      "module": "Education",
+      "documentation": "",
+      "values": [
+        {
+          "name": "Montessori",
+          "caption": [
+            {
+              "languageCode": "en_US",
+              "text": "MontessoriSchool"
+            }
+          ]
+        },
+        {
+          "name": "JenaplansSchooling",
+          "caption": [
+            {
+              "languageCode": "en_US",
+              "text": "JenaplanSchool"
+            }
+          ]
+        },
+        {
+          "name": "Dalton",
+          "caption": [
+            {
+              "languageCode": "en_US",
+              "text": "DaltonSchool"
+            }
+          ]
+        },
+        {
+          "name": "FreinetSchool",
+          "caption": [
+            {
+              "languageCode": "en_US",
+              "text": "FreinetSchool"
+            }
+          ]
+        },
+        {
+          "name": "FreeSchool",
+          "caption": [
+            {
+              "languageCode": "en_US",
+              "text": "FreeSchool"
+            }
+          ]
+        },
+        {
+          "name": "NutsSchool",
+          "caption": [
+            {
+              "languageCode": "en_US",
+              "text": "NutsSchool"
+            }
+          ]
+        },
+        {
+          "name": "None",
+          "caption": [
+            {
+              "languageCode": "en_US",
+              "text": "None"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "TeachingExperience",
+      "qualifiedName": "Education.TeachingExperience",
+      "module": "Education",
+      "documentation": "",
+      "values": [
+        {
+          "name": "Entry_Level",
+          "caption": [
+            {
+              "languageCode": "en_US",
+              "text": "Beginner"
+            }
+          ]
+        },
+        {
+          "name": "Intermediate",
+          "caption": [
+            {
+              "languageCode": "en_US",
+              "text": "Intermediate"
+            }
+          ]
+        },
+        {
+          "name": "Senior",
+          "caption": [
+            {
+              "languageCode": "en_US",
+              "text": "Senior"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "KvKStatus",
+      "qualifiedName": "Education.KvKStatus",
+      "module": "Education",
+      "documentation": "",
+      "values": [
+        {
+          "name": "Approved",
+          "caption": [
+            {
+              "languageCode": "en_US",
+              "text": "Approved"
+            }
+          ]
+        },
+        {
+          "name": "Rejected",
+          "caption": [
+            {
+              "languageCode": "en_US",
+              "text": "Rejected"
+            }
+          ]
+        },
+        {
+          "name": "Not_checked",
+          "caption": [
+            {
+              "languageCode": "en_US",
+              "text": "Not checked"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Technical_skill_level",
+      "qualifiedName": "Education.Technical_skill_level",
+      "module": "Education",
+      "documentation": "The technical skill level of teachers (i.e. to what extend they are familiar with technological features)\n",
+      "values": [
+        {
+          "name": "Low",
+          "caption": [
+            {
+              "languageCode": "en_US",
+              "text": "Low"
+            }
+          ]
+        },
+        {
+          "name": "Medium",
+          "caption": [
+            {
+              "languageCode": "en_US",
+              "text": "Medium"
+            }
+          ]
+        },
+        {
+          "name": "High",
+          "caption": [
+            {
+              "languageCode": "en_US",
+              "text": "High"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "TeacherDegree",
+      "qualifiedName": "Education.TeacherDegree",
+      "module": "Education",
+      "documentation": "",
+      "values": [
+        {
+          "name": "Pabo",
+          "caption": [
+            {
+              "languageCode": "en_US",
+              "text": "Pabo"
+            }
+          ]
+        },
+        {
+          "name": "First_Degree",
+          "caption": [
+            {
+              "languageCode": "en_US",
+              "text": "First Degree"
+            }
+          ]
+        },
+        {
+          "name": "Second_Degree",
+          "caption": [
+            {
+              "languageCode": "en_US",
+              "text": "Second Degree"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "HigherEducation",
+      "qualifiedName": "Education.HigherEducation",
+      "module": "Education",
+      "documentation": "",
+      "values": [
+        {
+          "name": "wo",
+          "caption": [
+            {
+              "languageCode": "en_US",
+              "text": "wo"
+            }
+          ]
+        },
+        {
+          "name": "hbo",
+          "caption": [
+            {
+              "languageCode": "en_US",
+              "text": "hbo"
+            }
+          ]
+        },
+        {
+          "name": "mbo",
+          "caption": [
+            {
+              "languageCode": "en_US",
+              "text": "mbo"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "SecondarySchool",
+      "qualifiedName": "Education.SecondarySchool",
+      "module": "Education",
+      "documentation": "",
+      "values": [
+        {
+          "name": "vwo",
+          "caption": [
+            {
+              "languageCode": "en_US",
+              "text": "vwo"
+            }
+          ]
+        },
+        {
+          "name": "havo",
+          "caption": [
+            {
+              "languageCode": "en_US",
+              "text": "havo"
+            }
+          ]
+        },
+        {
+          "name": "vmbo_t",
+          "caption": [
+            {
+              "languageCode": "en_US",
+              "text": "vmbo-t"
+            }
+          ]
+        },
+        {
+          "name": "vmbo_kader",
+          "caption": [
+            {
+              "languageCode": "en_US",
+              "text": "vmbo kader"
+            }
+          ]
+        },
+        {
+          "name": "vmbo_basis",
+          "caption": [
+            {
+              "languageCode": "en_US",
+              "text": "vmbo basis"
+            }
+          ]
+        },
+        {
+          "name": "praktijkonderwijs",
+          "caption": [
+            {
+              "languageCode": "en_US",
+              "text": "praktijkonderwijs"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

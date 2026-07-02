@@ -1,0 +1,30 @@
+This app is for a cooking-school meal plan approval process. The main goal of this input case is to exercise workflow generation, including a start workflow action, a user task page, and approve/reject outcomes.
+
+Core roles:
+- Cooking student: browses cooking schools, creates meal plan approval requests, and adds recipes to a request.
+- Chef Instructor: receives workflow user tasks and reviews submitted meal plan approval requests.
+- Cooking admin: maintains the recipe catalog and cooking school records.
+
+Core domain concepts:
+- CookingSchool: a cooking school location with Name, Location, Address, and Rating.
+- Recipe: an approved recipe catalog item with Name, CuisineType, Difficulty, RequiredIngredients, and EstimatedPreparationTime.
+- MealPlanApprovalRequest: the workflow context entity. It belongs to a CookingSchool, is created by a Cooking student, contains review notes, and has a Status such as Draft, Submitted, Approved, Rejected, or RevisionRequested.
+- MealPlanRecipe: a linking record between a MealPlanApprovalRequest and a Recipe. Use this if the generator needs to represent multiple selected recipes without a reference-set selector.
+
+Workflow behavior:
+- A Cooking student submits a MealPlanApprovalRequest.
+- Submitting the request should start a workflow for the request.
+- The workflow should create a user task assigned to the Chef Instructor role.
+- The Chef Instructor task page should show the request details, selected recipes, and review notes.
+- The Chef Instructor can choose Approve, Reject, or Request Revision.
+- Approve should set the request Status to Approved.
+- Reject should set the request Status to Rejected.
+- Request Revision should set the request Status to RevisionRequested.
+
+Implementation guidance for the generated plan:
+- Include a workflow named for MealPlanApprovalRequest review or approval.
+- Include a workflow task page bound to System.WorkflowUserTask.
+- Include clear workflow outcome buttons on the task page.
+- Include a button or action on the MealPlanApprovalRequest detail page to start the workflow.
+- Prefer dropdown association inputs for selecting one CookingSchool or Recipe.
+- For multiple recipes on a meal plan, prefer a join entity such as MealPlanRecipe instead of an editable reference-set selector.

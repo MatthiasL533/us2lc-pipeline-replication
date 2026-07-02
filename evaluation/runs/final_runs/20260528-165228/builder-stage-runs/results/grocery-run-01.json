@@ -1,0 +1,546 @@
+{
+  "dataset": "grocery",
+  "run": "run-01",
+  "planPath": "/Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/artifacts/practical-performance/20260528-165228/stability/grocery/run-01/plan.json",
+  "ok": true,
+  "startedAt": "2026-05-30T18:13:41.910Z",
+  "tempPlanPath": "/Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/artifacts/practical-performance/20260528-165228/builder-stage-runs/plans/grocery/run-01/plan.json",
+  "totalMs": 25539,
+  "result": {
+    "appId": "f77c097c-d2f5-44f3-aec0-1c29e8b8a1ea",
+    "appCreated": true,
+    "seedAppId": null,
+    "branch": "main",
+    "committed": true,
+    "commitRequested": true,
+    "workingCopyId": "760f9364-3378-449e-b6aa-353767a4d7d5",
+    "personas": {
+      "enabled": false,
+      "generatedPageNames": [],
+      "personaNames": []
+    },
+    "stages": [
+      {
+        "stage": "domainModel",
+        "ok": true,
+        "summary": "entitiesCreated=14, associationsCreated=0, enumerationsCreated=4",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 52
+      },
+      {
+        "stage": "flush.afterDomainModel",
+        "ok": true,
+        "summary": "flush.afterDomainModel completed",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 142
+      },
+      {
+        "stage": "security",
+        "ok": true,
+        "summary": "moduleRolesCreated=4, userRolesCreated=4, demoUsersCreated=0",
+        "artifacts": [
+          {
+            "key": "moduleRoleNames",
+            "count": 5
+          },
+          {
+            "key": "userRoleNames",
+            "count": 6
+          },
+          {
+            "key": "demoUserNames",
+            "count": 2
+          }
+        ],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 300
+      },
+      {
+        "stage": "flush.afterSecurity",
+        "ok": true,
+        "summary": "flush.afterSecurity completed",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 413
+      },
+      {
+        "stage": "pageCapabilities",
+        "ok": true,
+        "summary": "pageCapabilities completed",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 0
+      },
+      {
+        "stage": "webClientCompatibility",
+        "ok": true,
+        "summary": "webClientCompatibility completed",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 1
+      },
+      {
+        "stage": "pages",
+        "ok": true,
+        "summary": "pages completed",
+        "artifacts": [
+          {
+            "key": "pageNames",
+            "count": 30
+          }
+        ],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 416
+      },
+      {
+        "stage": "navigationUI",
+        "ok": true,
+        "summary": "navigationUI completed",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 48
+      },
+      {
+        "stage": "homePage",
+        "ok": true,
+        "summary": "updatedProfiles=1",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 3
+      },
+      {
+        "stage": "flush.final",
+        "ok": true,
+        "summary": "flush.final completed",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 1283
+      },
+      {
+        "stage": "verification",
+        "ok": true,
+        "summary": "ok=true",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 49
+      },
+      {
+        "stage": "capabilities",
+        "ok": true,
+        "summary": "capabilities completed",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 3517
+      },
+      {
+        "stage": "commit",
+        "ok": true,
+        "summary": "commit completed",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 10556
+      }
+    ],
+    "createdApp": {
+      "appId": "f77c097c-d2f5-44f3-aec0-1c29e8b8a1ea",
+      "name": "grocery-run01",
+      "repositoryType": "git"
+    },
+    "beforeCounts": {
+      "pagesInModule": 1,
+      "entitiesInModule": 0,
+      "microflowsInModule": 1,
+      "nanoflowsInModule": 0,
+      "workflowsInModule": 0
+    },
+    "domainModel": {
+      "moduleName": "MyFirstModule",
+      "entitiesCreated": 14,
+      "associationsCreated": 0,
+      "enumerationsCreated": 4
+    },
+    "security": {
+      "moduleName": "MyFirstModule",
+      "securityLevel": "CheckFormsAndMicroflows",
+      "moduleRolesCreated": 4,
+      "userRolesCreated": 4,
+      "demoUsersRequested": 0,
+      "demoUsersCreated": 0,
+      "demoUsersApplied": 0,
+      "demoUserHandling": "notRequested",
+      "skippedDemoUsers": [],
+      "moduleRoleNames": [
+        "Applicant",
+        "Employee",
+        "Manager",
+        "OfficeEmployee",
+        "User"
+      ],
+      "userRoleNames": [
+        "Administrator",
+        "Applicant",
+        "Employee",
+        "Manager",
+        "OfficeEmployee",
+        "User"
+      ],
+      "demoUserNames": [
+        "demo_administrator",
+        "demo_user"
+      ]
+    },
+    "pageCapabilities": null,
+    "webClientCompatibility": {
+      "lookupRequested": false,
+      "classicGridRequested": false,
+      "updated": false,
+      "useOptimizedClient": null
+    },
+    "pages": {
+      "moduleName": "MyFirstModule",
+      "layoutQualifiedName": "Atlas_Core.Atlas_Default",
+      "layoutParameterQname": "Atlas_Core.Atlas_Default.Main",
+      "pageNames": [
+        "Home",
+        "Employee_Dashboard",
+        "Employee_Overview",
+        "Employee_NewEdit",
+        "Complaint_Overview",
+        "Complaint_NewEdit",
+        "Payment_Overview",
+        "Payment_NewEdit",
+        "When_Overview",
+        "When_NewEdit",
+        "Clear_Overview",
+        "Clear_NewEdit",
+        "Easily_Overview",
+        "Easily_NewEdit",
+        "Manager_Overview",
+        "Manager_NewEdit",
+        "Applicant_Overview",
+        "Applicant_NewEdit",
+        "Contract_Overview",
+        "Contract_NewEdit",
+        "Certificate_Overview",
+        "Certificate_NewEdit",
+        "WorkHour_Overview",
+        "WorkHour_NewEdit",
+        "SalaryStatement_Overview",
+        "SalaryStatement_NewEdit",
+        "ComplaintCategory_Overview",
+        "ComplaintCategory_NewEdit",
+        "Notification_Overview",
+        "Notification_NewEdit"
+      ],
+      "dg2Cleanup": {
+        "enabled": true,
+        "targetedPageNames": [],
+        "deletedPageNames": [],
+        "failed": []
+      },
+      "dataGrid2": {
+        "enabled": false,
+        "widgetId": "",
+        "resolvedFrom": "",
+        "useFallbackSchema": false,
+        "probeVariant": null,
+        "configuredWidgets": 0,
+        "attempts": []
+      }
+    },
+    "dg2Cleanup": {
+      "enabled": true,
+      "targetedPageNames": [],
+      "deletedPageNames": [],
+      "failed": []
+    },
+    "navigationUI": {
+      "requested": true,
+      "homeButtonsAdded": 0,
+      "navItemsAdded": 6
+    },
+    "homePage": {
+      "requested": true,
+      "updatedProfiles": 1,
+      "targetPageQualifiedName": "MyFirstModule.Home"
+    },
+    "afterCounts": {
+      "pagesInModule": 31,
+      "entitiesInModule": 14,
+      "microflowsInModule": 1,
+      "nanoflowsInModule": 0,
+      "workflowsInModule": 0
+    },
+    "beforeRefs": {
+      "pages": [
+        {
+          "name": "Home_Web",
+          "id": "5c6805fc-cadf-4d72-a5ef-f25da7cf4c97"
+        }
+      ],
+      "entities": [],
+      "microflows": [
+        {
+          "name": "MyFirstLogic",
+          "id": "4a8475b3-14cb-4100-8963-58f2fd3a0be8"
+        }
+      ],
+      "nanoflows": [],
+      "workflows": []
+    },
+    "afterRefs": {
+      "pages": [
+        {
+          "name": "Home_Web",
+          "id": "5c6805fc-cadf-4d72-a5ef-f25da7cf4c97"
+        },
+        {
+          "name": "Home",
+          "id": "193efa09-82a7-4889-83b8-d3be695dbe77"
+        },
+        {
+          "name": "Employee_Dashboard",
+          "id": "eb16da3d-bf48-4440-baea-a1b988ed2c15"
+        },
+        {
+          "name": "Employee_Overview",
+          "id": "171d63e0-2ef0-4ab0-9270-51424324544e"
+        },
+        {
+          "name": "Employee_NewEdit",
+          "id": "51d6c1f2-a4b4-42f1-b24f-d23b1d3a6b23"
+        },
+        {
+          "name": "Complaint_Overview",
+          "id": "d88dbc1a-d57a-4804-b795-f4f57db67e4d"
+        },
+        {
+          "name": "Complaint_NewEdit",
+          "id": "455a6172-72b7-4bd2-8205-a00827fe2701"
+        },
+        {
+          "name": "Payment_Overview",
+          "id": "f26d2c3b-174a-47a9-867d-b79d4e2ca38f"
+        },
+        {
+          "name": "Payment_NewEdit",
+          "id": "fa923a12-a93c-4857-a481-82a4a72c8c21"
+        },
+        {
+          "name": "When_Overview",
+          "id": "f4abba63-3552-497c-85fb-4ffb7cd837d1"
+        },
+        {
+          "name": "When_NewEdit",
+          "id": "bb2506cd-0117-40d9-856d-719d17a80c4a"
+        },
+        {
+          "name": "Clear_Overview",
+          "id": "d9fc181f-6646-4bd2-a903-2669f4c92a85"
+        },
+        {
+          "name": "Clear_NewEdit",
+          "id": "7460882a-ba5f-4c63-94e1-c3e651abc4d6"
+        },
+        {
+          "name": "Easily_Overview",
+          "id": "8e50827f-7883-4f40-be5f-18cfbcdbc7e3"
+        },
+        {
+          "name": "Easily_NewEdit",
+          "id": "01eaae90-5a32-4d7d-9523-967151e63b05"
+        },
+        {
+          "name": "Manager_Overview",
+          "id": "c22ccfc7-428b-476c-9388-65f054b199eb"
+        },
+        {
+          "name": "Manager_NewEdit",
+          "id": "60e830c7-c83f-48c9-afb4-d7d603b0ba3e"
+        },
+        {
+          "name": "Applicant_Overview",
+          "id": "7fa59fe3-b1f9-4fe3-8e29-7e7884ea8548"
+        },
+        {
+          "name": "Applicant_NewEdit",
+          "id": "4c1e70e7-d512-435c-85ba-6a13e664dcfb"
+        },
+        {
+          "name": "Contract_Overview",
+          "id": "33a85c47-9849-4be9-8a96-0bacdd43a799"
+        },
+        {
+          "name": "Contract_NewEdit",
+          "id": "f55e68d0-ea1a-4d1c-b642-347310de2377"
+        },
+        {
+          "name": "Certificate_Overview",
+          "id": "d83d7127-8a66-47a8-a54c-0331a0448909"
+        },
+        {
+          "name": "Certificate_NewEdit",
+          "id": "726d1bbf-a8c2-4547-a064-4b751fa8a8e4"
+        },
+        {
+          "name": "WorkHour_Overview",
+          "id": "3de952e4-5872-4585-a800-f538b4e98ea1"
+        },
+        {
+          "name": "WorkHour_NewEdit",
+          "id": "dff6ebf9-6958-4b14-ad9d-8a0190548a1a"
+        },
+        {
+          "name": "SalaryStatement_Overview",
+          "id": "45ba8ef7-470c-4a55-9dd4-fd9061bd0f7a"
+        },
+        {
+          "name": "SalaryStatement_NewEdit",
+          "id": "42d698df-0297-4272-aff6-c8cf9698e561"
+        },
+        {
+          "name": "ComplaintCategory_Overview",
+          "id": "523ba3b6-d9a8-4c7e-b8c8-82b668c09c13"
+        },
+        {
+          "name": "ComplaintCategory_NewEdit",
+          "id": "d485b57d-cb65-4359-84ad-dc04e796d887"
+        },
+        {
+          "name": "Notification_Overview",
+          "id": "190cdcd3-ddd5-4a0a-8784-4c26392622c2"
+        },
+        {
+          "name": "Notification_NewEdit",
+          "id": "c97d9f9a-e87a-458e-899b-afdf65819afe"
+        }
+      ],
+      "entities": [
+        {
+          "name": "Employee",
+          "id": "5dead1e2-61a7-407b-b96b-48a0188569d9"
+        },
+        {
+          "name": "Complaint",
+          "id": "ec1e1c22-92c8-4488-8994-1c0f44e56e5f"
+        },
+        {
+          "name": "Payment",
+          "id": "cf5747d0-45a4-4b33-9763-99058c4d0846"
+        },
+        {
+          "name": "When",
+          "id": "2940f124-c6c4-424f-9a2b-7030c8083b4a"
+        },
+        {
+          "name": "Clear",
+          "id": "7f47deab-518b-43f0-9641-e7ee6045e2c7"
+        },
+        {
+          "name": "Easily",
+          "id": "5e7038dc-5c7b-4e83-b4ae-f0cbec67a21e"
+        },
+        {
+          "name": "Manager",
+          "id": "054ba5d1-0be5-4e2a-aff2-a6b12b5eac7b"
+        },
+        {
+          "name": "Applicant",
+          "id": "194e0ed3-aec1-4eff-b325-0a56c585556b"
+        },
+        {
+          "name": "Contract",
+          "id": "95e14cfd-d514-4190-b840-914406be3a64"
+        },
+        {
+          "name": "Certificate",
+          "id": "d7d186d7-4029-4141-857b-88e5502668d0"
+        },
+        {
+          "name": "WorkHour",
+          "id": "f0915842-c104-4ce0-a104-45c569cbf293"
+        },
+        {
+          "name": "SalaryStatement",
+          "id": "7f45af40-fcef-4763-8e18-69c4537b9ff8"
+        },
+        {
+          "name": "ComplaintCategory",
+          "id": "41e6c9d4-af19-43ce-a750-327f5aff1d74"
+        },
+        {
+          "name": "Notification",
+          "id": "4950061d-e203-4713-b83b-0e6e3ebac8df"
+        }
+      ],
+      "microflows": [
+        {
+          "name": "MyFirstLogic",
+          "id": "4a8475b3-14cb-4100-8963-58f2fd3a0be8"
+        }
+      ],
+      "nanoflows": [],
+      "workflows": []
+    },
+    "verification": {
+      "missing": {
+        "pages": [],
+        "entities": [],
+        "microflows": [],
+        "nanoflows": [],
+        "workflows": []
+      },
+      "ok": true,
+      "artifacts": {
+        "ok": true,
+        "missing": {
+          "moduleRoles": [],
+          "userRoles": [],
+          "demoUsers": [],
+          "pageVisibility": [],
+          "homePageButtons": [],
+          "menuItems": [],
+          "widgets": []
+        }
+      },
+      "semantic": {
+        "enabled": false,
+        "ok": true,
+        "errors": []
+      }
+    },
+    "capabilities": {
+      "modules": [
+        "Administration",
+        "Atlas_Core",
+        "Atlas_Web_Content",
+        "DataWidgets",
+        "FeedbackModule",
+        "MyFirstModule",
+        "NanoflowCommons",
+        "WebActions"
+      ],
+      "widgetIds": [],
+      "widgetFamilies": [
+        "datawidgets_module"
+      ]
+    },
+    "commitMessage": "Practical performance builder-stage run: grocery run-01",
+    "ok": true
+  }
+}

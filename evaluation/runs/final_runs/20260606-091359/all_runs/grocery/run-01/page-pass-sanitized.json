@@ -1,0 +1,205 @@
+{
+  "pages": {
+    "specs": [
+      {
+        "name": "home",
+        "layout": "Blank",
+        "widgets": [
+          {
+            "type": "Text",
+            "caption": "Welcome to the Employee Management System"
+          },
+          {
+            "type": "Button",
+            "caption": "View Employees",
+            "onClick": {
+              "type": "Navigation",
+              "page": "employeesOverview"
+            }
+          },
+          {
+            "type": "Button",
+            "caption": "View Complaints",
+            "onClick": {
+              "type": "Navigation",
+              "page": "complaintsOverview"
+            }
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "employeesOverview",
+        "layout": "Table",
+        "entity": "Employee",
+        "widgets": [
+          {
+            "type": "DataGrid",
+            "columns": [
+              {
+                "attribute": "Name"
+              },
+              {
+                "attribute": "ContractType"
+              }
+            ]
+          },
+          {
+            "type": "Button",
+            "caption": "New Employee",
+            "onClick": {
+              "type": "Navigation",
+              "page": "newEmployee"
+            }
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "employeeDetail",
+        "layout": "FormHorizontal",
+        "entity": "Employee",
+        "widgets": [
+          {
+            "type": "TextInput",
+            "attribute": "Name"
+          },
+          {
+            "type": "TextInput",
+            "attribute": "ContractType"
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "newEmployee",
+        "layout": "FormHorizontal",
+        "entity": "Employee",
+        "widgets": [
+          {
+            "type": "TextInput",
+            "attribute": "Name"
+          },
+          {
+            "type": "TextInput",
+            "attribute": "ContractType"
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "complaintsOverview",
+        "layout": "Table",
+        "entity": "Complaint",
+        "widgets": [
+          {
+            "type": "DataGrid",
+            "columns": [
+              {
+                "attribute": "Description"
+              },
+              {
+                "attribute": "Category"
+              }
+            ]
+          },
+          {
+            "type": "Button",
+            "caption": "New Complaint",
+            "onClick": {
+              "type": "Navigation",
+              "page": "newComplaint"
+            }
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "complaintDetail",
+        "layout": "FormHorizontal",
+        "entity": "Complaint",
+        "widgets": [
+          {
+            "type": "TextInput",
+            "attribute": "Description"
+          },
+          {
+            "type": "TextInput",
+            "attribute": "Category"
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "newComplaint",
+        "layout": "FormHorizontal",
+        "entity": "Complaint",
+        "widgets": [
+          {
+            "type": "TextInput",
+            "attribute": "Description"
+          },
+          {
+            "type": "TextInput",
+            "attribute": "Category"
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "salaryStatementOverview",
+        "layout": "Table",
+        "entity": "SalaryStatement",
+        "widgets": [
+          {
+            "type": "DataGrid",
+            "columns": [
+              {
+                "attribute": "Salary"
+              },
+              {
+                "attribute": "paymentDate"
+              }
+            ]
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "salaryStatementDetail",
+        "layout": "FormHorizontal",
+        "entity": "SalaryStatement",
+        "widgets": [
+          {
+            "type": "TextInput",
+            "attribute": "Salary"
+          },
+          {
+            "type": "TextInput",
+            "attribute": "paymentDate"
+          }
+        ],
+        "content": []
+      }
+    ]
+  },
+  "app": {
+    "navigation": {
+      "homePage": "home",
+      "menuItems": [
+        {
+          "caption": "Employees",
+          "page": "employeesOverview"
+        },
+        {
+          "caption": "Complaints",
+          "page": "complaintsOverview"
+        },
+        {
+          "caption": "Salary Statements",
+          "page": "salaryStatementOverview"
+        }
+      ]
+    }
+  }
+}

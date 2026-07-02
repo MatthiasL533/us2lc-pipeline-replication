@@ -1,0 +1,471 @@
+
+> us2lc-pipeline@1.0.0 generate:vn
+> node pipeline/generate-vn-cli.js --input-dir=artifacts/practical-performance/20260528-165228/inputs/cinema --output-dir=artifacts/vn-runs/cinema
+
+{
+  "ok": true,
+  "inputDir": "/workspace/us2lc-pipeline/artifacts/practical-performance/20260528-165228/inputs/cinema",
+  "artifacts": {
+    "ontologyPath": "/workspace/us2lc-pipeline/artifacts/vn-runs/cinema/visual-narrator-ontology.omn",
+    "storiesPath": "/workspace/us2lc-pipeline/artifacts/vn-runs/cinema/visual-narrator-stories.json",
+    "summaryPath": "/workspace/us2lc-pipeline/artifacts/vn-runs/cinema/visual-narrator-summary.json",
+    "rawPath": "/workspace/us2lc-pipeline/artifacts/vn-runs/cinema/visual-narrator-result.json"
+  },
+  "summary": {
+    "classNames": [
+      "Cinema Premium",
+      "Premium",
+      "Cinema",
+      "Subscription Status",
+      "Status",
+      "Subscription",
+      "It",
+      "Need",
+      "End Date",
+      "Date",
+      "End",
+      "Subscription Price",
+      "Price",
+      "Cancellation Date",
+      "Cancellation",
+      "Paymentmethod Detail",
+      "Detail",
+      "Paymentmethod",
+      "Method Detail",
+      "Method",
+      "Movie Showtime",
+      "Showtime",
+      "Movie",
+      "Cinema Room",
+      "Room",
+      "Cinema",
+      "Decision",
+      "Page",
+      "Movie Theatre",
+      "Theatre",
+      "Range",
+      "Practicalperf_cinema_stability",
+      "Streaming Page",
+      "Streaming",
+      "Episode",
+      "Season",
+      "Film House",
+      "House",
+      "Film",
+      "Streaming Platform",
+      "Platform",
+      "Cinema City",
+      "City",
+      "Movie Showing",
+      "Showing",
+      "List",
+      "Privacy"
+    ],
+    "classes": [
+      {
+        "name": "Cinema Premium",
+        "parent": "Premium",
+        "isRole": false
+      },
+      {
+        "name": "Premium",
+        "parent": "",
+        "isRole": false
+      },
+      {
+        "name": "Cinema",
+        "parent": "",
+        "isRole": false
+      },
+      {
+        "name": "Subscription Status",
+        "parent": "Status",
+        "isRole": false
+      },
+      {
+        "name": "Status",
+        "parent": "",
+        "isRole": false
+      },
+      {
+        "name": "Subscription",
+        "parent": "",
+        "isRole": false
+      },
+      {
+        "name": "It",
+        "parent": "",
+        "isRole": false
+      },
+      {
+        "name": "Need",
+        "parent": "",
+        "isRole": false
+      },
+      {
+        "name": "End Date",
+        "parent": "Date",
+        "isRole": false
+      },
+      {
+        "name": "Date",
+        "parent": "",
+        "isRole": false
+      },
+      {
+        "name": "End",
+        "parent": "",
+        "isRole": false
+      },
+      {
+        "name": "Subscription Price",
+        "parent": "Price",
+        "isRole": false
+      },
+      {
+        "name": "Price",
+        "parent": "",
+        "isRole": false
+      },
+      {
+        "name": "Cancellation Date",
+        "parent": "Date",
+        "isRole": false
+      },
+      {
+        "name": "Cancellation",
+        "parent": "",
+        "isRole": false
+      },
+      {
+        "name": "Paymentmethod Detail",
+        "parent": "Detail",
+        "isRole": false
+      },
+      {
+        "name": "Detail",
+        "parent": "",
+        "isRole": false
+      },
+      {
+        "name": "Paymentmethod",
+        "parent": "",
+        "isRole": false
+      },
+      {
+        "name": "Method Detail",
+        "parent": "Detail",
+        "isRole": false
+      },
+      {
+        "name": "Method",
+        "parent": "",
+        "isRole": false
+      },
+      {
+        "name": "Movie Showtime",
+        "parent": "Showtime",
+        "isRole": false
+      },
+      {
+        "name": "Showtime",
+        "parent": "",
+        "isRole": false
+      },
+      {
+        "name": "Movie",
+        "parent": "",
+        "isRole": false
+      },
+      {
+        "name": "Cinema Room",
+        "parent": "Room",
+        "isRole": false
+      },
+      {
+        "name": "Room",
+        "parent": "",
+        "isRole": false
+      },
+      {
+        "name": "Cinema",
+        "parent": "",
+        "isRole": false
+      },
+      {
+        "name": "Decision",
+        "parent": "",
+        "isRole": false
+      },
+      {
+        "name": "Page",
+        "parent": "",
+        "isRole": false
+      },
+      {
+        "name": "Movie Theatre",
+        "parent": "Theatre",
+        "isRole": false
+      },
+      {
+        "name": "Theatre",
+        "parent": "",
+        "isRole": false
+      },
+      {
+        "name": "Range",
+        "parent": "",
+        "isRole": false
+      },
+      {
+        "name": "Practicalperf_cinema_stability",
+        "parent": "",
+        "isRole": false
+      },
+      {
+        "name": "Streaming Page",
+        "parent": "Page",
+        "isRole": false
+      },
+      {
+        "name": "Streaming",
+        "parent": "",
+        "isRole": false
+      },
+      {
+        "name": "Episode",
+        "parent": "",
+        "isRole": false
+      },
+      {
+        "name": "Season",
+        "parent": "",
+        "isRole": false
+      },
+      {
+        "name": "Film House",
+        "parent": "House",
+        "isRole": false
+      },
+      {
+        "name": "House",
+        "parent": "",
+        "isRole": false
+      },
+      {
+        "name": "Film",
+        "parent": "",
+        "isRole": false
+      },
+      {
+        "name": "Streaming Platform",
+        "parent": "Platform",
+        "isRole": false
+      },
+      {
+        "name": "Platform",
+        "parent": "",
+        "isRole": false
+      },
+      {
+        "name": "Cinema City",
+        "parent": "City",
+        "isRole": false
+      },
+      {
+        "name": "City",
+        "parent": "",
+        "isRole": false
+      },
+      {
+        "name": "Movie Showing",
+        "parent": "Showing",
+        "isRole": false
+      },
+      {
+        "name": "Showing",
+        "parent": "",
+        "isRole": false
+      },
+      {
+        "name": "List",
+        "parent": "",
+        "isRole": false
+      },
+      {
+        "name": "Privacy",
+        "parent": "",
+        "isRole": false
+      }
+    ],
+    "relationships": [
+      {
+        "name": "hasPremium",
+        "domain": "Cinema",
+        "range": "Cinema Premium"
+      },
+      {
+        "name": "hasStatus",
+        "domain": "Subscription",
+        "range": "Subscription Status"
+      },
+      {
+        "name": "canAlign With",
+        "domain": "It",
+        "range": "Need"
+      },
+      {
+        "name": "hasDate",
+        "domain": "End",
+        "range": "End Date"
+      },
+      {
+        "name": "hasPrice",
+        "domain": "Subscription",
+        "range": "Subscription Price"
+      },
+      {
+        "name": "hasDate",
+        "domain": "Cancellation",
+        "range": "Cancellation Date"
+      },
+      {
+        "name": "hasDetail",
+        "domain": "Paymentmethod",
+        "range": "Paymentmethod Detail"
+      },
+      {
+        "name": "hasDetail",
+        "domain": "Method",
+        "range": "Method Detail"
+      },
+      {
+        "name": "hasShowtime",
+        "domain": "Movie",
+        "range": "Movie Showtime"
+      },
+      {
+        "name": "hasRoom",
+        "domain": "Cinema",
+        "range": "Cinema Room"
+      },
+      {
+        "name": "hasTheatre",
+        "domain": "Movie",
+        "range": "Movie Theatre"
+      },
+      {
+        "name": "hasPage",
+        "domain": "Streaming",
+        "range": "Streaming Page"
+      },
+      {
+        "name": "hasHouse",
+        "domain": "Film",
+        "range": "Film House"
+      },
+      {
+        "name": "hasPlatform",
+        "domain": "Streaming",
+        "range": "Streaming Platform"
+      },
+      {
+        "name": "hasCity",
+        "domain": "Cinema",
+        "range": "Cinema City"
+      },
+      {
+        "name": "hasShowing",
+        "domain": "Movie",
+        "range": "Movie Showing"
+      }
+    ],
+    "keyNouns": [
+      {
+        "term": "Movie",
+        "weight": 25.64
+      },
+      {
+        "term": "Premium",
+        "weight": 21.8
+      },
+      {
+        "term": "Date",
+        "weight": 14
+      },
+      {
+        "term": "Subscription",
+        "weight": 13.280000000000001
+      },
+      {
+        "term": "Cinema",
+        "weight": 5.32
+      },
+      {
+        "term": "Status",
+        "weight": 5
+      },
+      {
+        "term": "Detail",
+        "weight": 5
+      },
+      {
+        "term": "Price",
+        "weight": 4
+      },
+      {
+        "term": "Streaming",
+        "weight": 3.8000000000000007
+      },
+      {
+        "term": "Episode",
+        "weight": 3.5
+      },
+      {
+        "term": "Platform",
+        "weight": 3.5
+      },
+      {
+        "term": "Season",
+        "weight": 3.5
+      },
+      {
+        "term": "Need",
+        "weight": 3.5
+      },
+      {
+        "term": "House",
+        "weight": 3.5
+      },
+      {
+        "term": "Showing",
+        "weight": 3.5
+      },
+      {
+        "term": "Page",
+        "weight": 3
+      },
+      {
+        "term": "List",
+        "weight": 3
+      },
+      {
+        "term": "Film",
+        "weight": 2.4800000000000004
+      }
+    ],
+    "inferredRoles": [
+      "administrator",
+      "user"
+    ],
+    "discardedClassNames": [
+      "Premium User",
+      "User",
+      "Administrator",
+      "Activity",
+      "Information"
+    ]
+  },
+  "status": "completed",
+  "command": "/workspace/us2lc-pipeline/visual-narrator/.venv/bin/python /workspace/us2lc-pipeline/pipeline/scripts/run_visual_narrator.py --input /workspace/us2lc-pipeline/artifacts/practical-performance/20260528-165228/inputs/cinema/user-stories.txt --system-name PracticalPerf_cinema_Stability"
+}

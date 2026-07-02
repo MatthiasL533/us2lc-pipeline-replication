@@ -1,0 +1,570 @@
+[
+    {
+        "id": "EG0",
+        "conditions": [
+            "so that i have a clear overview",
+            "so that my employees have a clear overview",
+            "so that employee satisfaction rises",
+            "so that all payments are handled correctly and on time",
+            "so that i do not have to worry about local payment regulations for each country",
+            "so that i stay up to date with my financial status",
+            "so that i am most likely to work on hours that best suit i",
+            "so that i don't have to filter through my email for complaints anymore",
+            "so that my problems can be solved",
+            "so that employee satisfaction rises",
+            "so that i can have an overview of the problems other employees face",
+            "so that i can have an overview of the problems my employees face",
+            "so that i can help the employees with their problems",
+            "so that there is an overview of the extent of problem areas",
+            "so that important complaints will be solved swiftly",
+            "so that an employee can stay up to date with the status of my filed complaint",
+            "so that i can easily scale up our operations",
+            "so that i am up to date regarding the status of our new employees",
+            "so that i can easily evaluate all our active employees",
+            "so that i can manually verify all our absent employees",
+            "so that i can access all functionalities easily",
+            "so that i can quickly see my schedule while riding",
+            "so that i can adjust my administration in the way that i prefer",
+            "so that i can adjust my payment routine to my lifestyle",
+            "so that i can easily find my financial information for filing taxes, etc.",
+            "so that my privacy is ensured",
+            "so that the information my employer has is always up to date",
+            "so that i have a clear overview of important work-related information"
+        ],
+        "start": 55,
+        "end": 6501,
+        "paths": [
+            {
+                "start": 55,
+                "end": 135
+            },
+            {
+                "start": 136,
+                "end": 271
+            },
+            {
+                "start": 272,
+                "end": 361
+            },
+            {
+                "start": 362,
+                "end": 480
+            },
+            {
+                "start": 481,
+                "end": 645
+            },
+            {
+                "start": 646,
+                "end": 759
+            },
+            {
+                "start": 760,
+                "end": 2135
+            },
+            {
+                "start": 2136,
+                "end": 2285
+            },
+            {
+                "start": 2286,
+                "end": 271
+            },
+            {
+                "start": 272,
+                "end": 2623
+            },
+            {
+                "start": 2624,
+                "end": 2748
+            },
+            {
+                "start": 2749,
+                "end": 2890
+            },
+            {
+                "start": 2891,
+                "end": 3011
+            },
+            {
+                "start": 3012,
+                "end": 3190
+            },
+            {
+                "start": 3191,
+                "end": 3338
+            },
+            {
+                "start": 3339,
+                "end": 3497
+            },
+            {
+                "start": 3498,
+                "end": 3631
+            },
+            {
+                "start": 3632,
+                "end": 3779
+            },
+            {
+                "start": 3780,
+                "end": 3917
+            },
+            {
+                "start": 3918,
+                "end": 5367
+            },
+            {
+                "start": 5368,
+                "end": 5506
+            },
+            {
+                "start": 5507,
+                "end": 5646
+            },
+            {
+                "start": 5647,
+                "end": 5791
+            },
+            {
+                "start": 5792,
+                "end": 5922
+            },
+            {
+                "start": 5923,
+                "end": 6092
+            },
+            {
+                "start": 6093,
+                "end": 6192
+            },
+            {
+                "start": 6193,
+                "end": 5030
+            },
+            {
+                "start": 5031,
+                "end": 6501
+            }
+        ],
+        "type": "exclusive",
+        "children": [
+            [
+                {
+                    "content": {
+                        "agent": {
+                            "entity_group": "AGENT",
+                            "word": "manager",
+                            "start": 93,
+                            "end": 100,
+                            "score": 0.99
+                        },
+                        "task": {
+                            "entity_group": "TASK",
+                            "word": "send salary statements",
+                            "start": 112,
+                            "end": 134,
+                            "score": 0.99,
+                            "task_id": "T1"
+                        },
+                        "sentence_idx": 1,
+                        "condition": {
+                            "entity_group": "CONDITION",
+                            "word": "so that my employees have a clear overview",
+                            "start": 136,
+                            "end": 178,
+                            "score": 0.99,
+                            "condition_id": "C1"
+                        }
+                    },
+                    "type": "task"
+                }
+            ],
+            [],
+            [],
+            [],
+            [],
+            [
+                {
+                    "content": {
+                        "agent": {
+                            "entity_group": "AGENT",
+                            "word": "manager",
+                            "start": 937,
+                            "end": 944,
+                            "score": 0.99
+                        },
+                        "task": {
+                            "entity_group": "TASK",
+                            "word": "express my preferred working hours",
+                            "start": 724,
+                            "end": 758,
+                            "score": 0.99,
+                            "task_id": "T2"
+                        },
+                        "sentence_idx": 6,
+                        "condition": {
+                            "entity_group": "CONDITION",
+                            "word": "so that i am most likely to work on hours that best suit i",
+                            "start": 760,
+                            "end": 818,
+                            "score": 0.99,
+                            "condition_id": "C3"
+                        }
+                    },
+                    "type": "task"
+                }
+            ],
+            [
+                {
+                    "content": {
+                        "agent": {
+                            "entity_group": "AGENT",
+                            "word": "manager",
+                            "start": 937,
+                            "end": 944,
+                            "score": 0.99
+                        },
+                        "task": {
+                            "entity_group": "TASK",
+                            "word": "semi-automate the scheduling process",
+                            "start": 844,
+                            "end": 880,
+                            "score": 0.99,
+                            "task_id": "T3"
+                        },
+                        "sentence_idx": 6,
+                        "condition": {
+                            "entity_group": "CONDITION",
+                            "word": "so that i am most likely to work on hours that best suit i",
+                            "start": 760,
+                            "end": 818,
+                            "score": 0.99,
+                            "condition_id": "C3"
+                        }
+                    },
+                    "type": "task"
+                },
+                {
+                    "content": {
+                        "agent": {
+                            "entity_group": "AGENT",
+                            "word": "employee",
+                            "start": 1392,
+                            "end": 1400,
+                            "score": 0.99
+                        },
+                        "task": {
+                            "entity_group": "TASK",
+                            "word": "be notified as soon as manual adjustments need to be made",
+                            "start": 1252,
+                            "end": 1309,
+                            "score": 0.99,
+                            "task_id": "T4"
+                        },
+                        "sentence_idx": 9
+                    },
+                    "type": "task"
+                },
+                {
+                    "content": {
+                        "agent": {
+                            "entity_group": "AGENT",
+                            "word": "office employee",
+                            "start": 2070,
+                            "end": 2085,
+                            "score": 0.99
+                        },
+                        "task": {
+                            "entity_group": "TASK",
+                            "word": "the system to automatically verify employees' work hours",
+                            "start": 1942,
+                            "end": 1998,
+                            "score": 0.99,
+                            "task_id": "T6"
+                        },
+                        "sentence_idx": 14
+                    },
+                    "type": "task"
+                },
+                {
+                    "content": {
+                        "agent": {
+                            "entity_group": "AGENT",
+                            "word": "employee",
+                            "start": 2077,
+                            "end": 2085,
+                            "score": 0.99
+                        },
+                        "task": {
+                            "entity_group": "TASK",
+                            "word": "the system to automatically verify employees' work hours",
+                            "start": 1942,
+                            "end": 1998,
+                            "score": 0.99,
+                            "task_id": "T6"
+                        },
+                        "sentence_idx": 14
+                    },
+                    "type": "task"
+                }
+            ],
+            [
+                {
+                    "content": {
+                        "agent": {
+                            "entity_group": "AGENT",
+                            "word": "manager",
+                            "start": 2326,
+                            "end": 2333,
+                            "score": 0.99
+                        },
+                        "task": {
+                            "entity_group": "TASK",
+                            "word": "want to be able to file a complaint regarding my workplace",
+                            "start": 2226,
+                            "end": 2284,
+                            "score": 0.99,
+                            "task_id": "T7"
+                        },
+                        "sentence_idx": 16,
+                        "condition": {
+                            "entity_group": "CONDITION",
+                            "word": "so that my problems can be solved",
+                            "start": 2286,
+                            "end": 2319,
+                            "score": 0.99,
+                            "condition_id": "C4"
+                        }
+                    },
+                    "type": "task"
+                }
+            ],
+            [],
+            [],
+            [],
+            [],
+            [
+                {
+                    "content": {
+                        "agent": {
+                            "entity_group": "AGENT",
+                            "word": "office employee",
+                            "start": 3079,
+                            "end": 3094,
+                            "score": 0.99
+                        },
+                        "task": {
+                            "entity_group": "TASK",
+                            "word": "want to be able to categorize complaints",
+                            "start": 2970,
+                            "end": 3010,
+                            "score": 0.99,
+                            "task_id": "T9"
+                        },
+                        "sentence_idx": 22,
+                        "condition": {
+                            "entity_group": "CONDITION",
+                            "word": "so that there is an overview of the extent of problem areas",
+                            "start": 3012,
+                            "end": 3071,
+                            "score": 0.99,
+                            "condition_id": "C6"
+                        }
+                    },
+                    "type": "task"
+                },
+                {
+                    "content": {
+                        "agent": {
+                            "entity_group": "AGENT",
+                            "word": "employee",
+                            "start": 3086,
+                            "end": 3094,
+                            "score": 0.99
+                        },
+                        "task": {
+                            "entity_group": "TASK",
+                            "word": "want to be able to categorize complaints",
+                            "start": 2970,
+                            "end": 3010,
+                            "score": 0.99,
+                            "task_id": "T9"
+                        },
+                        "sentence_idx": 22
+                    },
+                    "type": "task"
+                }
+            ],
+            [],
+            [
+                {
+                    "content": {
+                        "agent": {
+                            "entity_group": "AGENT",
+                            "word": "manager",
+                            "start": 3424,
+                            "end": 3431,
+                            "score": 0.99
+                        },
+                        "task": {
+                            "entity_group": "TASK",
+                            "word": "receive a notification",
+                            "start": 3280,
+                            "end": 3302,
+                            "score": 0.99,
+                            "task_id": "T10"
+                        },
+                        "sentence_idx": 24,
+                        "condition": {
+                            "entity_group": "CONDITION",
+                            "word": "so that an employee can stay up to date with the status of my filed complaint",
+                            "start": 3339,
+                            "end": 3416,
+                            "score": 0.99,
+                            "condition_id": "C7"
+                        }
+                    },
+                    "type": "task"
+                }
+            ],
+            [],
+            [],
+            [],
+            [
+                {
+                    "content": {
+                        "agent": {
+                            "entity_group": "AGENT",
+                            "word": "applicant",
+                            "start": 3981,
+                            "end": 3990,
+                            "score": 0.99
+                        },
+                        "task": {
+                            "entity_group": "TASK",
+                            "word": "have an overview of all our absent employees",
+                            "start": 3872,
+                            "end": 3916,
+                            "score": 0.99,
+                            "task_id": "T11"
+                        },
+                        "sentence_idx": 28,
+                        "condition": {
+                            "entity_group": "CONDITION",
+                            "word": "so that i can manually verify all our absent employees",
+                            "start": 3918,
+                            "end": 3972,
+                            "score": 0.99,
+                            "condition_id": "C8"
+                        }
+                    },
+                    "type": "task"
+                }
+            ],
+            [
+                {
+                    "content": {
+                        "agent": {
+                            "entity_group": "AGENT",
+                            "word": "manager",
+                            "start": 4262,
+                            "end": 4269,
+                            "score": 0.99
+                        },
+                        "task": {
+                            "entity_group": "TASK",
+                            "word": "view my employee's contracts at any given time",
+                            "start": 4149,
+                            "end": 4195,
+                            "score": 0.99,
+                            "task_id": "T12"
+                        },
+                        "sentence_idx": 30
+                    },
+                    "type": "task"
+                },
+                {
+                    "content": {
+                        "agent": {
+                            "entity_group": "AGENT",
+                            "word": "employee",
+                            "start": 4300,
+                            "end": 4308,
+                            "score": 0.99
+                        },
+                        "task": {
+                            "entity_group": "TASK",
+                            "word": "view my employee's certificates at any given time",
+                            "start": 4292,
+                            "end": 4341,
+                            "score": 0.99,
+                            "task_id": "T13"
+                        },
+                        "sentence_idx": 31
+                    },
+                    "type": "task"
+                },
+                {
+                    "content": {
+                        "agent": {
+                            "entity_group": "AGENT",
+                            "word": "employee",
+                            "start": 5314,
+                            "end": 5322,
+                            "score": 0.99
+                        },
+                        "task": {
+                            "entity_group": "TASK",
+                            "word": "have a user-friendly application",
+                            "start": 5334,
+                            "end": 5366,
+                            "score": 0.99,
+                            "task_id": "T14"
+                        },
+                        "sentence_idx": 38
+                    },
+                    "type": "task"
+                }
+            ],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [
+                {
+                    "content": {
+                        "agent": {
+                            "entity_group": "AGENT",
+                            "word": "employee",
+                            "start": 6387,
+                            "end": 6395,
+                            "score": 0.99
+                        },
+                        "task": {
+                            "entity_group": "TASK",
+                            "word": "want the application as secure as possible",
+                            "start": 6406,
+                            "end": 6448,
+                            "score": 0.99,
+                            "task_id": "T15"
+                        },
+                        "sentence_idx": 46,
+                        "condition": {
+                            "entity_group": "CONDITION",
+                            "word": "so that i have a clear overview of important work-related information",
+                            "start": 6310,
+                            "end": 6379,
+                            "score": 0.99,
+                            "condition_id": "C9"
+                        }
+                    },
+                    "type": "task"
+                }
+            ]
+        ]
+    }
+]

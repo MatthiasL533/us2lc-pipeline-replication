@@ -1,0 +1,351 @@
+# Generated with Visual Narrator
+Prefix: : <http://fakesite.org/practicalperf_grocery_stability.owl#>
+Prefix: owl: <http://www.w3.org/2002/07/owl#>
+Prefix: rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+Prefix: rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>
+Prefix: dc: <http://purl.org/dc/elements/1.1/>
+Prefix: onto: <http://fakesite.org/practicalperf_grocery_stability.owl#>
+
+Ontology: <:>
+
+Annotations:
+	dc:title "PracticalPerf_grocery_Stability",
+	dc:creator "Visual Narrator",
+	rdfs:comment "Generated with Visual Narrator"
+
+AnnotationProperty: dc:creator
+
+AnnotationProperty: dc:title
+
+
+# Relationships
+ObjectProperty: :canEvaluate
+	Domain: :Manager
+	Range: :Employee
+
+ObjectProperty: :canView1
+	Domain: :Employee
+	Range: :Schedule
+
+ObjectProperty: :canView2
+	Domain: :Manager
+	Range: :Schedule
+
+ObjectProperty: :canView3
+	Domain: :OfficeEmployee
+	Range: :Complaint
+
+ObjectProperty: :canView4
+	Domain: :Manager
+	Range: :Complaint
+
+ObjectProperty: :canView5
+	Domain: :Manager
+	Range: :Contract
+
+ObjectProperty: :canView6
+	Domain: :Manager
+	Range: :Certificate
+
+ObjectProperty: :canView7
+	Domain: :Employee
+	Range: :Inbox
+
+ObjectProperty: :canView8
+	Domain: :Employee
+	Range: :Statement
+
+ObjectProperty: :canView9
+	Domain: :Employee
+	Range: :Contract
+
+ObjectProperty: :canKeep1
+	Domain: :Manager
+	Range: :Operation
+
+ObjectProperty: :canKeep2
+	Domain: :Employee
+	Range: :Hour
+
+ObjectProperty: :canKeep3
+	Domain: :Employee
+	Range: :Track
+
+ObjectProperty: :canLose
+	Domain: :Manager
+	Range: :Track
+
+ObjectProperty: :hasEmployee
+	Domain: :Office
+	Range: :OfficeEmployee
+
+ObjectProperty: :canReset
+	Domain: :Employee
+	Range: :Password
+
+ObjectProperty: :canScale
+	Domain: :Manager
+	Range: :Operation
+
+ObjectProperty: :hasStatement
+	Domain: :Salary
+	Range: :SalaryStatement
+
+ObjectProperty: :canStayWith
+	Domain: :Employee
+	Range: :Date
+
+ObjectProperty: :canNavigateThrough
+	Domain: :Employee
+	Range: :Application
+
+ObjectProperty: :canChange
+	Domain: :Employee
+	Range: :Information
+
+ObjectProperty: :canUpTo
+	Domain: :Manager
+	Range: :Date
+
+ObjectProperty: :canFind
+	Domain: :Employee
+	Range: :Information
+
+ObjectProperty: :canAutomate
+	Domain: :Manager
+	Range: :PaymentSystem
+
+ObjectProperty: :canPrioritize
+	Domain: :OfficeEmployee
+	Range: :Complaint
+
+ObjectProperty: :canNotify1
+	Domain: :Manager
+	Range: :Practicalperf_grocery_stability
+
+ObjectProperty: :canNotify2
+	Domain: :Manager
+	Range: :Employee
+
+ObjectProperty: :hasSystem
+	Domain: :Payment
+	Range: :PaymentSystem
+
+ObjectProperty: :canRegister
+	Domain: :Applicant
+	Range: :Account
+
+ObjectProperty: :canSee
+	Domain: :Employee
+	Range: :Schedule
+
+ObjectProperty: :canRespondTo
+	Domain: :OfficeEmployee
+	Range: :Complaint
+
+ObjectProperty: :canHelp
+	Domain: :OfficeEmployee
+	Range: :Employee
+
+ObjectProperty: :canReceive1
+	Domain: :Employee
+	Range: :SalaryStatement
+
+ObjectProperty: :canReceive2
+	Domain: :Employee
+	Range: :Notification
+
+ObjectProperty: :canAuthorize
+	Domain: :Manager
+	Range: :Schedule
+
+ObjectProperty: :canForward
+	Domain: :Manager
+	Range: :Message
+
+ObjectProperty: :canHire
+	Domain: :Manager
+	Range: :Employee
+
+ObjectProperty: :canContact1
+	Domain: :Employee
+	Range: :Management
+
+ObjectProperty: :canContact2
+	Domain: :Manager
+	Range: :Employee
+
+ObjectProperty: :canOutsource
+	Domain: :Manager
+	Range: :Part
+
+ObjectProperty: :canEnable
+	Domain: :Manager
+	Range: :Option
+
+ObjectProperty: :canFile1
+	Domain: :Employee
+	Range: :Complaint
+
+ObjectProperty: :canFile2
+	Domain: :Manager
+	Range: :Complaint
+
+ObjectProperty: :canSend
+	Domain: :Manager
+	Range: :SalaryStatement
+
+ObjectProperty: :canHave1
+	Domain: :Employee
+	Range: :Overview
+
+ObjectProperty: :canHave2
+	Domain: :Manager
+	Range: :Ability
+
+ObjectProperty: :canHave3
+	Domain: :OfficeEmployee
+	Range: :Overview
+
+ObjectProperty: :canHave4
+	Domain: :Manager
+	Range: :Overview
+
+ObjectProperty: :canHave5
+	Domain: :Manager
+	Range: :System
+
+ObjectProperty: :canHave6
+	Domain: :Employee
+	Range: :Application
+
+ObjectProperty: :canCategorize
+	Domain: :OfficeEmployee
+	Range: :Complaint
+
+ObjectProperty: :canChooseBetween1
+	Domain: :Employee
+	Range: :Email
+
+ObjectProperty: :canChooseBetween2
+	Domain: :Employee
+	Range: :Payment
+
+ObjectProperty: :canAccess
+	Domain: :Employee
+	Range: :Account
+
+# Classes
+Class: :SalaryStatement
+	SubClassOf: :Statement
+	Annotations:
+		rdfs:label "Salary Statement"
+
+Class: :Statement
+
+
+Class: :Salary
+
+
+Class: :Employee
+	Annotations:
+		rdfs:comment "Functional Role"
+
+Class: :Overview
+
+
+Class: :Manager
+	Annotations:
+		rdfs:comment "Functional Role"
+
+Class: :Option
+
+
+Class: :PaymentSystem
+	SubClassOf: :System
+	Annotations:
+		rdfs:label "Payment System"
+
+Class: :System
+
+
+Class: :Payment
+
+
+Class: :Part
+
+
+Class: :Notification
+
+
+Class: :Date
+
+
+Class: :Ability
+
+
+Class: :Operation
+
+
+Class: :Schedule
+
+
+Class: :Practicalperf_grocery_stability
+
+
+Class: :Hour
+
+
+Class: :Track
+
+
+Class: :Complaint
+
+
+Class: :OfficeEmployee
+	SubClassOf: :Employee
+	Annotations:
+		rdfs:label "Office Employee",
+		rdfs:comment "Functional Role"
+
+Class: :Office
+
+
+Class: :Applicant
+	Annotations:
+		rdfs:comment "Functional Role"
+
+Class: :Account
+
+
+Class: :Contract
+
+
+Class: :Certificate
+
+
+Class: :Management
+
+
+Class: :Message
+
+
+Class: :Inbox
+
+
+Class: :Password
+
+
+Class: :Application
+
+
+Class: :Email
+
+
+Class: :Information
+
+
+Class: :Process
+
+

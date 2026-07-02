@@ -1,0 +1,556 @@
+{
+  "dataset": "cinema",
+  "run": "run-03",
+  "planPath": "/Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/artifacts/practical-performance/20260528-165228/stability/cinema/run-03/plan.json",
+  "ok": true,
+  "startedAt": "2026-05-30T18:15:12.439Z",
+  "tempPlanPath": "/Users/matthiaslouws/Documents/Repositories/us2lc-pipeline/artifacts/practical-performance/20260528-165228/builder-stage-runs/plans/cinema/run-03/plan.json",
+  "totalMs": 21327,
+  "result": {
+    "appId": "d2a5d856-6ddf-440c-9a47-1203056d4802",
+    "appCreated": true,
+    "seedAppId": null,
+    "branch": "main",
+    "committed": true,
+    "commitRequested": true,
+    "workingCopyId": "e18cdc71-ce80-4059-b5a7-44ec4981bb19",
+    "personas": {
+      "enabled": false,
+      "generatedPageNames": [],
+      "personaNames": []
+    },
+    "stages": [
+      {
+        "stage": "domainModel",
+        "ok": true,
+        "summary": "entitiesCreated=14, associationsCreated=1, enumerationsCreated=0",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 50
+      },
+      {
+        "stage": "flush.afterDomainModel",
+        "ok": true,
+        "summary": "flush.afterDomainModel completed",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 214
+      },
+      {
+        "stage": "security",
+        "ok": true,
+        "summary": "moduleRolesCreated=4, userRolesCreated=4, demoUsersCreated=0",
+        "artifacts": [
+          {
+            "key": "moduleRoleNames",
+            "count": 5
+          },
+          {
+            "key": "userRoleNames",
+            "count": 6
+          },
+          {
+            "key": "demoUserNames",
+            "count": 2
+          }
+        ],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 194
+      },
+      {
+        "stage": "flush.afterSecurity",
+        "ok": true,
+        "summary": "flush.afterSecurity completed",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 310
+      },
+      {
+        "stage": "pageCapabilities",
+        "ok": true,
+        "summary": "pageCapabilities completed",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 1
+      },
+      {
+        "stage": "webClientCompatibility",
+        "ok": true,
+        "summary": "webClientCompatibility completed",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 2
+      },
+      {
+        "stage": "flush.afterWebClientCompatibility",
+        "ok": true,
+        "summary": "flush.afterWebClientCompatibility completed",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 31
+      },
+      {
+        "stage": "pages",
+        "ok": true,
+        "summary": "pages completed",
+        "artifacts": [
+          {
+            "key": "pageNames",
+            "count": 30
+          }
+        ],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 592
+      },
+      {
+        "stage": "navigationUI",
+        "ok": true,
+        "summary": "navigationUI completed",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 43
+      },
+      {
+        "stage": "homePage",
+        "ok": true,
+        "summary": "updatedProfiles=1",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 2
+      },
+      {
+        "stage": "flush.final",
+        "ok": true,
+        "summary": "flush.final completed",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 1055
+      },
+      {
+        "stage": "verification",
+        "ok": true,
+        "summary": "ok=true",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 49
+      },
+      {
+        "stage": "capabilities",
+        "ok": true,
+        "summary": "capabilities completed",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 671
+      },
+      {
+        "stage": "commit",
+        "ok": true,
+        "summary": "commit completed",
+        "artifacts": [],
+        "warnings": [],
+        "errors": [],
+        "durationMs": 9590
+      }
+    ],
+    "createdApp": {
+      "appId": "d2a5d856-6ddf-440c-9a47-1203056d4802",
+      "name": "cinema-run03",
+      "repositoryType": "git"
+    },
+    "beforeCounts": {
+      "pagesInModule": 1,
+      "entitiesInModule": 0,
+      "microflowsInModule": 1,
+      "nanoflowsInModule": 0,
+      "workflowsInModule": 0
+    },
+    "domainModel": {
+      "moduleName": "MyFirstModule",
+      "entitiesCreated": 14,
+      "associationsCreated": 1,
+      "enumerationsCreated": 0
+    },
+    "security": {
+      "moduleName": "MyFirstModule",
+      "securityLevel": "CheckFormsAndMicroflows",
+      "moduleRolesCreated": 4,
+      "userRolesCreated": 4,
+      "demoUsersRequested": 0,
+      "demoUsersCreated": 0,
+      "demoUsersApplied": 0,
+      "demoUserHandling": "notRequested",
+      "skippedDemoUsers": [],
+      "moduleRoleNames": [
+        "MyFirstModuleRoleAdministrator",
+        "MyFirstModuleRoleUser",
+        "PremiumUser",
+        "RegisteredUser",
+        "User"
+      ],
+      "userRoleNames": [
+        "Administrator",
+        "MyFirstModuleRoleAdministrator",
+        "MyFirstModuleRoleUser",
+        "PremiumUser",
+        "RegisteredUser",
+        "User"
+      ],
+      "demoUserNames": [
+        "demo_administrator",
+        "demo_user"
+      ]
+    },
+    "pageCapabilities": null,
+    "webClientCompatibility": {
+      "lookupRequested": true,
+      "classicGridRequested": false,
+      "updated": true,
+      "useOptimizedClient": "No",
+      "previousUseOptimizedClient": "Yes"
+    },
+    "pages": {
+      "moduleName": "MyFirstModule",
+      "layoutQualifiedName": "Atlas_Core.Atlas_Default",
+      "layoutParameterQname": "Atlas_Core.Atlas_Default.Main",
+      "pageNames": [
+        "Home",
+        "Movie_Dashboard",
+        "Movie_Overview",
+        "Movie_NewEdit",
+        "Subscription_Overview",
+        "Subscription_NewEdit",
+        "Date_Overview",
+        "Date_NewEdit",
+        "MovieShowing_Overview",
+        "MovieShowing_NewEdit",
+        "Ensure_Overview",
+        "Ensure_NewEdit",
+        "Premium_Overview",
+        "Premium_NewEdit",
+        "Manually_Overview",
+        "Manually_NewEdit",
+        "User_Overview",
+        "User_NewEdit",
+        "PaymentMethod_Overview",
+        "PaymentMethod_NewEdit",
+        "PaymentTransaction_Overview",
+        "PaymentTransaction_NewEdit",
+        "Cinema_Overview",
+        "Cinema_NewEdit",
+        "FilmHouse_Overview",
+        "FilmHouse_NewEdit",
+        "Season_Overview",
+        "Season_NewEdit",
+        "Episode_Overview",
+        "Episode_NewEdit"
+      ],
+      "dg2Cleanup": {
+        "enabled": true,
+        "targetedPageNames": [],
+        "deletedPageNames": [],
+        "failed": []
+      },
+      "dataGrid2": {
+        "enabled": false,
+        "widgetId": "",
+        "resolvedFrom": "",
+        "useFallbackSchema": false,
+        "probeVariant": null,
+        "configuredWidgets": 0,
+        "attempts": []
+      }
+    },
+    "dg2Cleanup": {
+      "enabled": true,
+      "targetedPageNames": [],
+      "deletedPageNames": [],
+      "failed": []
+    },
+    "navigationUI": {
+      "requested": true,
+      "homeButtonsAdded": 0,
+      "navItemsAdded": 6
+    },
+    "homePage": {
+      "requested": true,
+      "updatedProfiles": 1,
+      "targetPageQualifiedName": "MyFirstModule.Home"
+    },
+    "afterCounts": {
+      "pagesInModule": 31,
+      "entitiesInModule": 14,
+      "microflowsInModule": 1,
+      "nanoflowsInModule": 0,
+      "workflowsInModule": 0
+    },
+    "beforeRefs": {
+      "pages": [
+        {
+          "name": "Home_Web",
+          "id": "5c6805fc-cadf-4d72-a5ef-f25da7cf4c97"
+        }
+      ],
+      "entities": [],
+      "microflows": [
+        {
+          "name": "MyFirstLogic",
+          "id": "4a8475b3-14cb-4100-8963-58f2fd3a0be8"
+        }
+      ],
+      "nanoflows": [],
+      "workflows": []
+    },
+    "afterRefs": {
+      "pages": [
+        {
+          "name": "Home_Web",
+          "id": "5c6805fc-cadf-4d72-a5ef-f25da7cf4c97"
+        },
+        {
+          "name": "Home",
+          "id": "23bd0405-8188-4515-9a04-4662a38cc5bd"
+        },
+        {
+          "name": "Movie_Dashboard",
+          "id": "8d34a88e-e57a-4664-a9cb-b9fdd45f33e9"
+        },
+        {
+          "name": "Movie_Overview",
+          "id": "d5a0ffb8-d77d-4c3d-89f5-3e1f5858e809"
+        },
+        {
+          "name": "Movie_NewEdit",
+          "id": "1c306248-d430-4306-b23b-8bbd9e0d2873"
+        },
+        {
+          "name": "Subscription_Overview",
+          "id": "16e96938-12d8-4d30-9df2-ad97f1221376"
+        },
+        {
+          "name": "Subscription_NewEdit",
+          "id": "46ca3a62-ceab-4777-a6a0-70996d2d9273"
+        },
+        {
+          "name": "Date_Overview",
+          "id": "047b9913-0bb0-426c-a71b-21e11bc9ad3a"
+        },
+        {
+          "name": "Date_NewEdit",
+          "id": "3319e017-0f5e-4b00-b4fe-05460a5618b1"
+        },
+        {
+          "name": "MovieShowing_Overview",
+          "id": "b020acb3-c50b-4eb4-9c58-36410387d806"
+        },
+        {
+          "name": "MovieShowing_NewEdit",
+          "id": "f6b255dc-457d-4450-be92-63297960a6fb"
+        },
+        {
+          "name": "Ensure_Overview",
+          "id": "a01bc021-756d-48ea-915c-0aceb6e82567"
+        },
+        {
+          "name": "Ensure_NewEdit",
+          "id": "a87ba699-e969-42d2-84b2-e0b22776ec34"
+        },
+        {
+          "name": "Premium_Overview",
+          "id": "14d26378-0f74-4a92-abce-0a693328413c"
+        },
+        {
+          "name": "Premium_NewEdit",
+          "id": "be6f0e28-6b76-4a54-9fce-dae584055fad"
+        },
+        {
+          "name": "Manually_Overview",
+          "id": "4f442d47-f694-4fd4-af9f-b5428fc278c6"
+        },
+        {
+          "name": "Manually_NewEdit",
+          "id": "7ffcce4b-8b07-45fb-9b05-1b784f862cfb"
+        },
+        {
+          "name": "User_Overview",
+          "id": "9d17d117-38ef-4454-bb8d-a9d4edea1eaf"
+        },
+        {
+          "name": "User_NewEdit",
+          "id": "740e07be-7f7e-4d5f-8598-1ea4ed9ec51a"
+        },
+        {
+          "name": "PaymentMethod_Overview",
+          "id": "acafaf06-4215-42b4-9066-7fa6f83f7f2c"
+        },
+        {
+          "name": "PaymentMethod_NewEdit",
+          "id": "1a1a431b-0bd7-4227-b9b8-2f2dc851ceea"
+        },
+        {
+          "name": "PaymentTransaction_Overview",
+          "id": "430c2488-fe22-4515-acca-4455092d301b"
+        },
+        {
+          "name": "PaymentTransaction_NewEdit",
+          "id": "e1e0a0d5-d646-43b7-9fec-977a3b590437"
+        },
+        {
+          "name": "Cinema_Overview",
+          "id": "c15f5ff4-56db-4453-9306-9181710c3c76"
+        },
+        {
+          "name": "Cinema_NewEdit",
+          "id": "5a41754a-d7bb-4a07-8e0f-ffb7a9097f9c"
+        },
+        {
+          "name": "FilmHouse_Overview",
+          "id": "e1fcaa11-82d2-4403-93c3-85654ef9298e"
+        },
+        {
+          "name": "FilmHouse_NewEdit",
+          "id": "6172daae-caad-456c-b3d7-1e148aa5792f"
+        },
+        {
+          "name": "Season_Overview",
+          "id": "cd2a6f79-409e-4c4a-a597-ebe270f3cf26"
+        },
+        {
+          "name": "Season_NewEdit",
+          "id": "a97c7c3f-4336-4a99-a278-f01da415bfd0"
+        },
+        {
+          "name": "Episode_Overview",
+          "id": "e39486bb-4f7d-4a5b-8777-cb6f28fc835c"
+        },
+        {
+          "name": "Episode_NewEdit",
+          "id": "3870351e-df85-45dc-83b8-441fdbe9f1fc"
+        }
+      ],
+      "entities": [
+        {
+          "name": "Movie",
+          "id": "ec62cb7b-5b00-4aa5-9331-2e12d3b976a2"
+        },
+        {
+          "name": "Subscription",
+          "id": "cde8bd75-a039-4ab4-837c-76504b0c53c0"
+        },
+        {
+          "name": "Date",
+          "id": "b9deb092-213a-41a7-a787-048ad950ee96"
+        },
+        {
+          "name": "MovieShowing",
+          "id": "16eba3b0-c8ab-4ced-9186-bc407a6a1aa1"
+        },
+        {
+          "name": "Ensure",
+          "id": "121c3de4-c570-4d9f-9f6b-2cc15cfe3632"
+        },
+        {
+          "name": "Premium",
+          "id": "fe6eb659-2e63-4826-9a72-0df103bef3ee"
+        },
+        {
+          "name": "Manually",
+          "id": "ec8b9bf9-3a7b-445a-afd8-c9ffdcea5855"
+        },
+        {
+          "name": "User",
+          "id": "9aaeb545-50ed-4c1b-a357-c5d386a21f83"
+        },
+        {
+          "name": "PaymentMethod",
+          "id": "b16fcc61-b59e-4b15-a331-4f4508029167"
+        },
+        {
+          "name": "PaymentTransaction",
+          "id": "f064179f-a886-4583-84a4-07dce7590135"
+        },
+        {
+          "name": "Cinema",
+          "id": "a49725ff-c1a0-452c-a1cb-de494bcc9330"
+        },
+        {
+          "name": "FilmHouse",
+          "id": "e985765e-dc87-4566-b787-494635aefd7a"
+        },
+        {
+          "name": "Season",
+          "id": "f65a4008-d89b-439f-a272-090dfad4a641"
+        },
+        {
+          "name": "Episode",
+          "id": "9fe39482-d7fa-446c-aef4-945db328debc"
+        }
+      ],
+      "microflows": [
+        {
+          "name": "MyFirstLogic",
+          "id": "4a8475b3-14cb-4100-8963-58f2fd3a0be8"
+        }
+      ],
+      "nanoflows": [],
+      "workflows": []
+    },
+    "verification": {
+      "missing": {
+        "pages": [],
+        "entities": [],
+        "microflows": [],
+        "nanoflows": [],
+        "workflows": []
+      },
+      "ok": true,
+      "artifacts": {
+        "ok": true,
+        "missing": {
+          "moduleRoles": [],
+          "userRoles": [],
+          "demoUsers": [],
+          "pageVisibility": [],
+          "homePageButtons": [],
+          "menuItems": [],
+          "widgets": []
+        }
+      },
+      "semantic": {
+        "enabled": false,
+        "ok": true,
+        "errors": []
+      }
+    },
+    "capabilities": {
+      "modules": [
+        "Administration",
+        "Atlas_Core",
+        "Atlas_Web_Content",
+        "DataWidgets",
+        "FeedbackModule",
+        "MyFirstModule",
+        "NanoflowCommons",
+        "WebActions"
+      ],
+      "widgetIds": [],
+      "widgetFamilies": [
+        "datawidgets_module"
+      ]
+    },
+    "commitMessage": "Practical performance builder-stage run: cinema run-03",
+    "ok": true
+  }
+}

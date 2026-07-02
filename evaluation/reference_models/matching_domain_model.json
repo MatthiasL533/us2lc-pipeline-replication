@@ -1,0 +1,256 @@
+{
+  "appId": "matching-domain-model-from-screenshot",
+  "branch": null,
+  "exportedAt": "2026-05-25",
+  "repository": {
+    "type": "image extraction",
+    "url": "/Users/matthiaslouws/Downloads/WhatsApp Image 2026-05-25 at 22.23.20.jpeg"
+  },
+  "summary": {
+    "domainModels": 1,
+    "modules": [
+      "Matching"
+    ],
+    "entities": 6,
+    "associations": 6,
+    "attributes": 38,
+    "enumerations": 0
+  },
+  "source": {
+    "note": "Entities, attributes, and associations were transcribed from the provided Mendix domain-model screenshot. The Billing bank-account attribute name is partially truncated in the image and is therefore recorded with the inferred name students_bank_account_id."
+  },
+  "domainModels": [
+    {
+      "module": "Matching",
+      "documentation": "Tutor-student matching platform domain model extracted from screenshot.",
+      "entities": [
+        {
+          "name": "Student",
+          "qualifiedName": "Matching.Student",
+          "attributes": [
+            {
+              "name": "student_id",
+              "type": "AutoNumber"
+            },
+            {
+              "name": "student_name",
+              "type": "String"
+            },
+            {
+              "name": "student_email",
+              "type": "String"
+            },
+            {
+              "name": "student_birthday",
+              "type": "DateTime"
+            },
+            {
+              "name": "student_phonenumber",
+              "type": "Integer"
+            },
+            {
+              "name": "student_address",
+              "type": "String"
+            },
+            {
+              "name": "student_subjects",
+              "type": "String"
+            },
+            {
+              "name": "student_availability",
+              "type": "DateTime"
+            }
+          ]
+        },
+        {
+          "name": "Tutor",
+          "qualifiedName": "Matching.Tutor",
+          "attributes": [
+            {
+              "name": "matching_id",
+              "type": "AutoNumber"
+            },
+            {
+              "name": "matching_name",
+              "type": "String"
+            },
+            {
+              "name": "matching_birthday",
+              "type": "String"
+            },
+            {
+              "name": "matching_phonenumber",
+              "type": "Integer"
+            },
+            {
+              "name": "matching_address",
+              "type": "String"
+            },
+            {
+              "name": "social_security_n",
+              "type": "String"
+            },
+            {
+              "name": "rating",
+              "type": "String"
+            },
+            {
+              "name": "matching_subjects",
+              "type": "String"
+            },
+            {
+              "name": "matching_availability",
+              "type": "DateTime"
+            },
+            {
+              "name": "matching_location",
+              "type": "String"
+            },
+            {
+              "name": "experience",
+              "type": "String"
+            },
+            {
+              "name": "car_info",
+              "type": "String"
+            },
+            {
+              "name": "CV_upload",
+              "type": "String"
+            }
+          ]
+        },
+        {
+          "name": "Match",
+          "qualifiedName": "Matching.Match",
+          "attributes": [
+            {
+              "name": "match_id",
+              "type": "AutoNumber"
+            },
+            {
+              "name": "student_id",
+              "type": "AutoNumber"
+            },
+            {
+              "name": "matching_id",
+              "type": "AutoNumber"
+            }
+          ]
+        },
+        {
+          "name": "Session",
+          "qualifiedName": "Matching.Session",
+          "attributes": [
+            {
+              "name": "session_id",
+              "type": "AutoNumber"
+            },
+            {
+              "name": "match_id",
+              "type": "AutoNumber"
+            },
+            {
+              "name": "date_time",
+              "type": "DateTime"
+            },
+            {
+              "name": "duration_time",
+              "type": "Integer"
+            },
+            {
+              "name": "status",
+              "type": "String"
+            },
+            {
+              "name": "in_person",
+              "type": "Boolean"
+            },
+            {
+              "name": "location",
+              "type": "String"
+            }
+          ]
+        },
+        {
+          "name": "Feedback",
+          "qualifiedName": "Matching.Feedback",
+          "attributes": [
+            {
+              "name": "feedback_id",
+              "type": "AutoNumber"
+            },
+            {
+              "name": "match_id",
+              "type": "AutoNumber"
+            },
+            {
+              "name": "given_by",
+              "type": "String"
+            },
+            {
+              "name": "rating",
+              "type": "String"
+            },
+            {
+              "name": "comments",
+              "type": "String"
+            }
+          ]
+        },
+        {
+          "name": "Billing",
+          "qualifiedName": "Matching.Billing",
+          "attributes": [
+            {
+              "name": "payment_id",
+              "type": "AutoNumber"
+            },
+            {
+              "name": "students_bank_account_id",
+              "type": "String"
+            }
+          ]
+        }
+      ],
+      "associations": [
+        {
+          "name": "Tutor_Student",
+          "source": "Matching.Tutor",
+          "target": "Matching.Student",
+          "cardinality": "many-to-many"
+        },
+        {
+          "name": "Match_Student",
+          "source": "Matching.Match",
+          "target": "Matching.Student",
+          "cardinality": "many-to-one"
+        },
+        {
+          "name": "Match_Matching",
+          "source": "Matching.Match",
+          "target": "Matching.Tutor",
+          "cardinality": "many-to-one"
+        },
+        {
+          "name": "Session_Match",
+          "source": "Matching.Session",
+          "target": "Matching.Match",
+          "cardinality": "many-to-one"
+        },
+        {
+          "name": "Session_Feedback",
+          "source": "Matching.Session",
+          "target": "Matching.Feedback",
+          "cardinality": "one-to-many"
+        },
+        {
+          "name": "Session_Billing",
+          "source": "Matching.Session",
+          "target": "Matching.Billing",
+          "cardinality": "one-to-one"
+        }
+      ]
+    }
+  ]
+}

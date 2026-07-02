@@ -1,0 +1,270 @@
+{
+  "pages": {
+    "specs": [
+      {
+        "name": "home",
+        "layout": "Blank",
+        "widgets": [
+          {
+            "type": "Text",
+            "text": "Welcome to the Camp Management System"
+          },
+          {
+            "type": "Button",
+            "caption": "Manage Campers",
+            "onClick": {
+              "type": "Navigation",
+              "page": "camperOverview"
+            }
+          },
+          {
+            "type": "Button",
+            "caption": "Manage Parents",
+            "onClick": {
+              "type": "Navigation",
+              "page": "parentOverview"
+            }
+          },
+          {
+            "type": "Button",
+            "caption": "Manage Groups",
+            "onClick": {
+              "type": "Navigation",
+              "page": "groupOverview"
+            }
+          },
+          {
+            "type": "Button",
+            "caption": "Manage Events",
+            "onClick": {
+              "type": "Navigation",
+              "page": "eventOverview"
+            }
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "camperOverview",
+        "layout": "Table",
+        "entity": "Camper",
+        "widgets": [
+          {
+            "type": "DataGrid",
+            "columns": [
+              {
+                "attribute": "Name"
+              },
+              {
+                "attribute": "EmergencyContactInfo"
+              }
+            ],
+            "dataSource": "camperDataSource"
+          },
+          {
+            "type": "Button",
+            "caption": "New Camper",
+            "onClick": {
+              "type": "Navigation",
+              "page": "newCamper"
+            }
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "newCamper",
+        "layout": "Form",
+        "entity": "Camper",
+        "widgets": [
+          {
+            "type": "TextInput",
+            "attribute": "Name"
+          },
+          {
+            "type": "TextInput",
+            "attribute": "EmergencyContactInfo"
+          },
+          {
+            "type": "Button",
+            "caption": "Save",
+            "onClick": {
+              "type": "SaveChanges"
+            }
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "parentOverview",
+        "layout": "Table",
+        "entity": "Parent",
+        "widgets": [
+          {
+            "type": "DataGrid",
+            "columns": [
+              {
+                "attribute": "Name"
+              },
+              {
+                "attribute": "Email"
+              }
+            ],
+            "dataSource": "parentDataSource"
+          },
+          {
+            "type": "Button",
+            "caption": "New Parent",
+            "onClick": {
+              "type": "Navigation",
+              "page": "newParent"
+            }
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "newParent",
+        "layout": "Form",
+        "entity": "Parent",
+        "widgets": [
+          {
+            "type": "TextInput",
+            "attribute": "Name"
+          },
+          {
+            "type": "TextInput",
+            "attribute": "Email"
+          },
+          {
+            "type": "Button",
+            "caption": "Save",
+            "onClick": {
+              "type": "SaveChanges"
+            }
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "groupOverview",
+        "layout": "Table",
+        "entity": "Group",
+        "widgets": [
+          {
+            "type": "DataGrid",
+            "columns": [
+              {
+                "attribute": "GroupName"
+              }
+            ],
+            "dataSource": "groupDataSource"
+          },
+          {
+            "type": "Button",
+            "caption": "New Group",
+            "onClick": {
+              "type": "Navigation",
+              "page": "newGroup"
+            }
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "newGroup",
+        "layout": "Form",
+        "entity": "Group",
+        "widgets": [
+          {
+            "type": "TextInput",
+            "attribute": "GroupName"
+          },
+          {
+            "type": "Button",
+            "caption": "Save",
+            "onClick": {
+              "type": "SaveChanges"
+            }
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "eventOverview",
+        "layout": "Table",
+        "entity": "Event",
+        "widgets": [
+          {
+            "type": "DataGrid",
+            "columns": [
+              {
+                "attribute": "EventName"
+              },
+              {
+                "attribute": "Schedule"
+              }
+            ],
+            "dataSource": "eventDataSource"
+          },
+          {
+            "type": "Button",
+            "caption": "New Event",
+            "onClick": {
+              "type": "Navigation",
+              "page": "newEvent"
+            }
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "newEvent",
+        "layout": "Form",
+        "entity": "Event",
+        "widgets": [
+          {
+            "type": "TextInput",
+            "attribute": "EventName"
+          },
+          {
+            "type": "DateInput",
+            "attribute": "Schedule"
+          },
+          {
+            "type": "Button",
+            "caption": "Save",
+            "onClick": {
+              "type": "SaveChanges"
+            }
+          }
+        ],
+        "content": []
+      }
+    ]
+  },
+  "app": {
+    "navigation": [
+      {
+        "page": "home",
+        "role": "CampAdministrator"
+      },
+      {
+        "page": "camperOverview",
+        "role": "CampAdministrator"
+      },
+      {
+        "page": "parentOverview",
+        "role": "CampAdministrator"
+      },
+      {
+        "page": "groupOverview",
+        "role": "CampAdministrator"
+      },
+      {
+        "page": "eventOverview",
+        "role": "CampAdministrator"
+      }
+    ]
+  }
+}

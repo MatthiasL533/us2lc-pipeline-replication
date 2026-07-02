@@ -1,0 +1,444 @@
+{
+  "pages": {
+    "specs": [
+      {
+        "name": "home",
+        "layout": "Blank",
+        "widgets": [
+          {
+            "type": "DataGrid",
+            "entity": "Project",
+            "columns": [
+              {
+                "attribute": "Name"
+              },
+              {
+                "attribute": "Department"
+              }
+            ]
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "projectOverview",
+        "layout": "Sidebar",
+        "widgets": [
+          {
+            "type": "DataGrid",
+            "entity": "Project",
+            "columns": [
+              {
+                "attribute": "Name"
+              },
+              {
+                "attribute": "Department"
+              }
+            ]
+          },
+          {
+            "type": "DataView",
+            "entity": "Milestone",
+            "attributes": [
+              {
+                "attribute": "DueDate"
+              },
+              {
+                "attribute": "Status"
+              }
+            ]
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "projectDetail",
+        "layout": "FormHorizontal",
+        "widgets": [
+          {
+            "type": "DataView",
+            "entity": "Project",
+            "attributes": [
+              {
+                "attribute": "Name"
+              },
+              {
+                "attribute": "Department"
+              }
+            ]
+          },
+          {
+            "type": "DataGrid",
+            "entity": "Milestone",
+            "columns": [
+              {
+                "attribute": "DueDate"
+              },
+              {
+                "attribute": "Status"
+              }
+            ]
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "newProject",
+        "layout": "FormHorizontal",
+        "widgets": [
+          {
+            "type": "TextInput",
+            "entity": "Project",
+            "attribute": "Name"
+          },
+          {
+            "type": "TextInput",
+            "entity": "Project",
+            "attribute": "Department"
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "editProject",
+        "layout": "FormHorizontal",
+        "widgets": [
+          {
+            "type": "DataView",
+            "entity": "Project",
+            "attributes": [
+              {
+                "attribute": "Name"
+              },
+              {
+                "attribute": "Department"
+              }
+            ]
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "milestoneOverview",
+        "layout": "Sidebar",
+        "widgets": [
+          {
+            "type": "DataGrid",
+            "entity": "Milestone",
+            "columns": [
+              {
+                "attribute": "DueDate"
+              },
+              {
+                "attribute": "Status"
+              }
+            ]
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "milestoneDetail",
+        "layout": "FormHorizontal",
+        "widgets": [
+          {
+            "type": "DataView",
+            "entity": "Milestone",
+            "attributes": [
+              {
+                "attribute": "DueDate"
+              },
+              {
+                "attribute": "Status"
+              }
+            ]
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "newMilestone",
+        "layout": "FormHorizontal",
+        "widgets": [
+          {
+            "type": "DatePicker",
+            "entity": "Milestone",
+            "attribute": "DueDate"
+          },
+          {
+            "type": "Dropdown",
+            "entity": "Milestone",
+            "attribute": "Status"
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "editMilestone",
+        "layout": "FormHorizontal",
+        "widgets": [
+          {
+            "type": "DataView",
+            "entity": "Milestone",
+            "attributes": [
+              {
+                "attribute": "DueDate"
+              },
+              {
+                "attribute": "Status"
+              }
+            ]
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "taskOverview",
+        "layout": "Sidebar",
+        "widgets": [
+          {
+            "type": "DataGrid",
+            "entity": "Task",
+            "columns": [
+              {
+                "attribute": "Description"
+              },
+              {
+                "attribute": "DueDate"
+              }
+            ]
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "taskDetail",
+        "layout": "FormHorizontal",
+        "widgets": [
+          {
+            "type": "DataView",
+            "entity": "Task",
+            "attributes": [
+              {
+                "attribute": "Description"
+              },
+              {
+                "attribute": "DueDate"
+              }
+            ]
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "newTask",
+        "layout": "FormHorizontal",
+        "widgets": [
+          {
+            "type": "TextInput",
+            "entity": "Task",
+            "attribute": "Description"
+          },
+          {
+            "type": "DatePicker",
+            "entity": "Task",
+            "attribute": "DueDate"
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "editTask",
+        "layout": "FormHorizontal",
+        "widgets": [
+          {
+            "type": "DataView",
+            "entity": "Task",
+            "attributes": [
+              {
+                "attribute": "Description"
+              },
+              {
+                "attribute": "DueDate"
+              }
+            ]
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "fileOverview",
+        "layout": "Sidebar",
+        "widgets": [
+          {
+            "type": "DataGrid",
+            "entity": "File",
+            "columns": [
+              {
+                "attribute": "FileName"
+              },
+              {
+                "attribute": "FileType"
+              }
+            ]
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "fileDetail",
+        "layout": "FormHorizontal",
+        "widgets": [
+          {
+            "type": "DataView",
+            "entity": "File",
+            "attributes": [
+              {
+                "attribute": "FileName"
+              },
+              {
+                "attribute": "FileType"
+              }
+            ]
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "newFile",
+        "layout": "FormHorizontal",
+        "widgets": [
+          {
+            "type": "FileUpload",
+            "entity": "File",
+            "attribute": "FileName"
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "editFile",
+        "layout": "FormHorizontal",
+        "widgets": [
+          {
+            "type": "DataView",
+            "entity": "File",
+            "attributes": [
+              {
+                "attribute": "FileName"
+              },
+              {
+                "attribute": "FileType"
+              }
+            ]
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "deliveryOverview",
+        "layout": "Sidebar",
+        "widgets": [
+          {
+            "type": "DataGrid",
+            "entity": "Delivery",
+            "columns": [
+              {
+                "attribute": "Description"
+              },
+              {
+                "attribute": "GoalDescription"
+              }
+            ]
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "deliveryDetail",
+        "layout": "FormHorizontal",
+        "widgets": [
+          {
+            "type": "DataView",
+            "entity": "Delivery",
+            "attributes": [
+              {
+                "attribute": "Description"
+              },
+              {
+                "attribute": "GoalDescription"
+              }
+            ]
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "newDelivery",
+        "layout": "FormHorizontal",
+        "widgets": [
+          {
+            "type": "TextInput",
+            "entity": "Delivery",
+            "attribute": "Description"
+          },
+          {
+            "type": "TextInput",
+            "entity": "Delivery",
+            "attribute": "GoalDescription"
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "editDelivery",
+        "layout": "FormHorizontal",
+        "widgets": [
+          {
+            "type": "DataView",
+            "entity": "Delivery",
+            "attributes": [
+              {
+                "attribute": "Description"
+              },
+              {
+                "attribute": "GoalDescription"
+              }
+            ]
+          }
+        ],
+        "content": []
+      }
+    ]
+  },
+  "app": {
+    "navigation": {
+      "menuItems": [
+        {
+          "name": "Home",
+          "page": "home"
+        },
+        {
+          "name": "Projects",
+          "page": "projectOverview"
+        },
+        {
+          "name": "Milestones",
+          "page": "milestoneOverview"
+        },
+        {
+          "name": "Tasks",
+          "page": "taskOverview"
+        },
+        {
+          "name": "Files",
+          "page": "fileOverview"
+        },
+        {
+          "name": "Deliveries",
+          "page": "deliveryOverview"
+        }
+      ]
+    }
+  }
+}

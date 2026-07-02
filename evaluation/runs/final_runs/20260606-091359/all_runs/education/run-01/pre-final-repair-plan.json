@@ -1,0 +1,1382 @@
+{
+  "meta": {
+    "planVersion": "1.1.0",
+    "generatedAt": "2026-06-07T10:34:04.414Z",
+    "generatedBy": "pipeline.plan-generator"
+  },
+  "app": {
+    "appId": "",
+    "branch": "main",
+    "moduleName": "MyFirstModule",
+    "layoutQualifiedName": "Atlas_Core.Atlas_Default",
+    "homePageRef": "home",
+    "navigation": {
+      "homePageButtons": [
+        {
+          "pageRef": "appadministrator_overview",
+          "caption": "",
+          "icon": null,
+          "allowedRoles": []
+        },
+        {
+          "pageRef": "freelanceteacher_overview",
+          "caption": "",
+          "icon": null,
+          "allowedRoles": []
+        }
+      ],
+      "menuItems": [
+        {
+          "name": "Home",
+          "pageRef": "home"
+        },
+        {
+          "name": "Freelance Teachers",
+          "pageRef": "freelanceteacher_overview"
+        },
+        {
+          "name": "Modules",
+          "pageRef": "module_overview"
+        },
+        {
+          "name": "Levels",
+          "pageRef": "level_overview"
+        },
+        {
+          "name": "Quizzes",
+          "pageRef": "quiz_overview"
+        },
+        {
+          "name": "Flashcards",
+          "pageRef": "flashcard_overview"
+        },
+        {
+          "name": "Videos",
+          "pageRef": "video_overview"
+        },
+        {
+          "name": "Research Papers",
+          "pageRef": "researchpaper_overview"
+        },
+        {
+          "name": "Slides",
+          "pageRef": "slide_overview"
+        },
+        {
+          "name": "Games",
+          "pageRef": "game_overview"
+        },
+        {
+          "name": "Achievements",
+          "pageRef": "achievement_overview"
+        },
+        {
+          "name": "Skill Assessments",
+          "pageRef": "skillassessment_overview"
+        }
+      ],
+      "homePageButtonRefs": [
+        "appadministrator_overview",
+        "freelanceteacher_overview"
+      ],
+      "navigationItemRefs": [
+        "appadministrator_overview",
+        "freelanceteacher_overview"
+      ]
+    }
+  },
+  "execution": {
+    "commit": false,
+    "dg2Cleanup": true,
+    "forceLegacyWebClientForLookups": true,
+    "createApp": true,
+    "createAppName": "PracticalPerf_education_Stability"
+  },
+  "domainModel": {
+    "entities": [
+      {
+        "name": "FreelanceTeacher",
+        "attributes": [
+          {
+            "name": "KvKNumber",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "TeachingExperience",
+            "type": "Integer",
+            "required": false
+          },
+          {
+            "name": "TechnicalSkillLevel",
+            "type": "Integer",
+            "required": false
+          },
+          {
+            "name": "Email",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "IsActive",
+            "type": "Boolean",
+            "required": false
+          },
+          {
+            "name": "Title",
+            "type": "String",
+            "required": true
+          },
+          {
+            "name": "Description",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "Status",
+            "type": "String",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "Module",
+        "attributes": [
+          {
+            "name": "Title",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "Description",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "LearningObjective",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "Level",
+            "type": "Integer",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "Level",
+        "attributes": [
+          {
+            "name": "Number",
+            "type": "Integer",
+            "required": false
+          },
+          {
+            "name": "Description",
+            "type": "String",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "Quiz",
+        "attributes": [
+          {
+            "name": "Title",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "Description",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "Topic",
+            "type": "String",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "Flashcard",
+        "attributes": [
+          {
+            "name": "Question",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "Answer",
+            "type": "String",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "Video",
+        "attributes": [
+          {
+            "name": "Title",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "Url",
+            "type": "String",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "ResearchPaper",
+        "attributes": [
+          {
+            "name": "Title",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "Doi",
+            "type": "String",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "Slide",
+        "attributes": [
+          {
+            "name": "Title",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "Content",
+            "type": "String",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "Game",
+        "attributes": [
+          {
+            "name": "Title",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "Description",
+            "type": "String",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "Achievement",
+        "attributes": [
+          {
+            "name": "Title",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "Description",
+            "type": "String",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "SkillAssessment",
+        "attributes": [
+          {
+            "name": "Title",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "Description",
+            "type": "String",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "AppAdministrator",
+        "attributes": [
+          {
+            "name": "Name",
+            "type": "String",
+            "required": true
+          },
+          {
+            "name": "Email",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "IsActive",
+            "type": "Boolean",
+            "required": false,
+            "defaultValue": false
+          }
+        ]
+      },
+      {
+        "name": "ChatFunction",
+        "attributes": [
+          {
+            "name": "Name",
+            "type": "String",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "CommunicationSkills",
+        "attributes": [
+          {
+            "name": "Name",
+            "type": "String",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "PresentationSkills",
+        "attributes": [
+          {
+            "name": "Name",
+            "type": "String",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "Confidence",
+        "attributes": [
+          {
+            "name": "Name",
+            "type": "String",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "Compassion",
+        "attributes": [
+          {
+            "name": "Name",
+            "type": "String",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "Collaboration",
+        "attributes": [
+          {
+            "name": "Name",
+            "type": "String",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "Inclusiveness",
+        "attributes": [
+          {
+            "name": "Name",
+            "type": "String",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "GraphicalOverview",
+        "attributes": [
+          {
+            "name": "Name",
+            "type": "String",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "LearningOpportunity",
+        "attributes": [
+          {
+            "name": "Name",
+            "type": "String",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "Notification",
+        "attributes": [
+          {
+            "name": "Name",
+            "type": "String",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "ApprovalStatus",
+        "attributes": [
+          {
+            "name": "Name",
+            "type": "String",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "RemovalReason",
+        "attributes": [
+          {
+            "name": "Name",
+            "type": "String",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "DataUsage",
+        "attributes": [
+          {
+            "name": "FreelanceTeacherId",
+            "type": "Integer",
+            "required": false
+          },
+          {
+            "name": "ModuleId",
+            "type": "Integer",
+            "required": false
+          },
+          {
+            "name": "UsageCount",
+            "type": "Integer",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "LearningOpportunity",
+        "attributes": [
+          {
+            "name": "Name",
+            "type": "String",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "AppUser",
+        "attributes": [
+          {
+            "name": "Name",
+            "type": "String",
+            "required": true
+          },
+          {
+            "name": "Email",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "IsActive",
+            "type": "Boolean",
+            "required": false,
+            "defaultValue": false
+          }
+        ]
+      }
+    ],
+    "associations": [
+      {
+        "name": "Module_Level",
+        "parentEntity": "Module",
+        "childEntity": "Level",
+        "type": "Reference",
+        "owner": "Both",
+        "metadata": {
+          "relationshipType": "Composition"
+        }
+      },
+      {
+        "name": "FreelanceTeacher_Module",
+        "parentEntity": "FreelanceTeacher",
+        "childEntity": "Module",
+        "type": "Reference",
+        "owner": "Both"
+      },
+      {
+        "name": "Module_Quiz",
+        "parentEntity": "Module",
+        "childEntity": "Quiz",
+        "type": "Reference",
+        "owner": "Both",
+        "metadata": {
+          "relationshipType": "Composition"
+        }
+      },
+      {
+        "name": "Module_Video",
+        "parentEntity": "Module",
+        "childEntity": "Video",
+        "type": "Reference",
+        "owner": "Both"
+      },
+      {
+        "name": "Module_ResearchPaper",
+        "parentEntity": "Module",
+        "childEntity": "ResearchPaper",
+        "type": "Reference",
+        "owner": "Both"
+      },
+      {
+        "name": "Module_Slide",
+        "parentEntity": "Module",
+        "childEntity": "Slide",
+        "type": "Reference",
+        "owner": "Both"
+      },
+      {
+        "name": "Module_Flashcard",
+        "parentEntity": "Module",
+        "childEntity": "Flashcard",
+        "type": "Reference",
+        "owner": "Both"
+      },
+      {
+        "name": "Module_Game",
+        "parentEntity": "Module",
+        "childEntity": "Game",
+        "type": "Reference",
+        "owner": "Both"
+      },
+      {
+        "name": "FreelanceTeacher_AppAdministrator",
+        "parentEntity": "AppAdministrator",
+        "childEntity": "FreelanceTeacher",
+        "type": "Reference",
+        "owner": "Both"
+      },
+      {
+        "name": "FreelanceTeacher_Notification",
+        "parentEntity": "FreelanceTeacher",
+        "childEntity": "Notification",
+        "type": "Reference",
+        "owner": "Both"
+      },
+      {
+        "name": "AppAdministrator_DataUsage",
+        "parentEntity": "AppAdministrator",
+        "childEntity": "DataUsage",
+        "type": "Reference",
+        "owner": "Both"
+      },
+      {
+        "name": "Module_Achievement",
+        "parentEntity": "Module",
+        "childEntity": "Achievement",
+        "type": "Reference",
+        "owner": "Both"
+      },
+      {
+        "name": "FreelanceTeacher_SkillAssessment",
+        "parentEntity": "FreelanceTeacher",
+        "childEntity": "SkillAssessment",
+        "type": "Reference",
+        "owner": "Both"
+      }
+    ],
+    "enumerations": [],
+    "_associationDiagnostics": {
+      "rawAssociationCount": 1,
+      "normalizedAssociationCount": 0,
+      "malformedAssociationCandidates": []
+    }
+  },
+  "security": {
+    "enabled": true,
+    "securityLevel": "prototype",
+    "moduleRoles": [
+      "FreelanceTeacher",
+      "AppUser",
+      "AppAdministrator"
+    ],
+    "userRoles": [
+      {
+        "name": "FreelanceTeacher",
+        "description": "Role for freelance teachers",
+        "moduleRoles": [
+          "AppUser"
+        ],
+        "systemModuleRole": "System.User"
+      },
+      {
+        "name": "AppAdministrator",
+        "description": "Role for application administrators",
+        "moduleRoles": [
+          "AppAdministrator"
+        ],
+        "systemModuleRole": "System.User"
+      },
+      {
+        "name": "AppUser",
+        "moduleRoles": [
+          "AppUser"
+        ],
+        "systemModuleRole": "System.User"
+      }
+    ],
+    "demoUsers": []
+  },
+  "pages": {
+    "specs": [
+      {
+        "ref": "home",
+        "name": "Home",
+        "title": "Home",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "AppropriateMaterial Workspace",
+            "renderMode": "H2"
+          },
+          {
+            "type": "dynamicText",
+            "text": "Generated from user stories",
+            "renderMode": "Paragraph"
+          },
+          {
+            "type": "buttonToPage",
+            "caption": "Module Overview",
+            "targetPageRef": "module_overview"
+          },
+          {
+            "type": "buttonToPage",
+            "caption": "appadministrator overview",
+            "targetPageRef": "appadministrator_overview"
+          },
+          {
+            "type": "buttonToPage",
+            "caption": "freelanceteacher overview",
+            "targetPageRef": "freelanceteacher_overview"
+          }
+        ]
+      },
+      {
+        "ref": "module_overview",
+        "name": "module_overview",
+        "title": "Modules Overview",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "Modules Overview",
+            "renderMode": "H2"
+          }
+        ],
+        "entityRef": "MyFirstModule.Module"
+      },
+      {
+        "ref": "module_newedit",
+        "name": "Module_NewEdit",
+        "title": "Module NewEdit",
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "Module",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Title"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Description"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Status"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "CreatedAt"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ],
+        "entityRef": "MyFirstModule.Module",
+        "pageParameters": [
+          {
+            "name": "Module",
+            "entityRef": "MyFirstModule.Module",
+            "required": true
+          }
+        ]
+      },
+      {
+        "ref": "freelanceteacher_overview",
+        "name": "freelanceteacher_overview",
+        "title": "Freelance Teachers Overview",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "Freelance Teachers Overview",
+            "renderMode": "H2"
+          }
+        ],
+        "entityRef": "MyFirstModule.FreelanceTeacher"
+      },
+      {
+        "ref": "freelanceteacher_newedit",
+        "name": "FreelanceTeacher_NewEdit",
+        "title": "FreelanceTeacher NewEdit",
+        "entityRef": "MyFirstModule.FreelanceTeacher",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          {
+            "name": "FreelanceTeacher",
+            "entityRef": "MyFirstModule.FreelanceTeacher",
+            "required": true
+          }
+        ],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "FreelanceTeacher",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Email"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "IsActive"
+              },
+              {
+                "type": "callWorkflowButton",
+                "caption": "Start Freelance Teacher Workflow",
+                "workflowRef": "wf_freelanceteacher",
+                "closePage": true
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "appadministrator_overview",
+        "name": "AppAdministrator_Overview",
+        "title": "AppAdministrator Overview",
+        "entityRef": "MyFirstModule.AppAdministrator",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "AppAdministrator Overview",
+            "renderMode": "H2"
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Create AppAdministrator",
+            "entityRef": "MyFirstModule.AppAdministrator",
+            "targetPageRef": "appadministrator_newedit"
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.AppAdministrator",
+            "autoRowClickToDetail": true,
+            "rowClickTargetPageRef": "appadministrator_newedit",
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name",
+                "autoLabel": true
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Email",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "IsActive",
+                "autoLabel": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "appadministrator_newedit",
+        "name": "AppAdministrator_NewEdit",
+        "title": "AppAdministrator NewEdit",
+        "entityRef": "MyFirstModule.AppAdministrator",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          {
+            "name": "AppAdministrator",
+            "entityRef": "MyFirstModule.AppAdministrator",
+            "required": true
+          }
+        ],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "AppAdministrator",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Email"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "IsActive"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "freelanceteacher_workflow_task",
+        "name": "FreelanceTeacher_WorkflowTask",
+        "title": "Freelance Teacher Workflow Task",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "allowedRoles": [
+          "FreelanceTeacher"
+        ],
+        "pageParameters": [
+          {
+            "name": "WorkflowUserTask",
+            "entityRef": "System.WorkflowUserTask",
+            "required": true
+          }
+        ],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "WorkflowUserTask",
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name",
+                "autoLabel": true
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Description",
+                "autoLabel": true
+              },
+              {
+                "type": "setTaskOutcomeButton",
+                "caption": "Approve",
+                "outcomeValue": "Approve"
+              },
+              {
+                "type": "setTaskOutcomeButton",
+                "caption": "Reject",
+                "outcomeValue": "Reject"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "freelanceteacher_detail",
+        "name": "freelanceteacher_detail",
+        "title": "Freelance Teacher Details",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "Freelance Teacher Details",
+            "renderMode": "H2"
+          }
+        ],
+        "entityRef": "MyFirstModule.FreelanceTeacher"
+      },
+      {
+        "ref": "freelanceteacher_new",
+        "name": "freelanceteacher_new",
+        "title": "Create New Freelance Teacher",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "Create New Freelance Teacher",
+            "renderMode": "H2"
+          }
+        ],
+        "entityRef": "MyFirstModule.FreelanceTeacher"
+      },
+      {
+        "ref": "freelanceteacher_edit",
+        "name": "freelanceteacher_edit",
+        "title": "Edit Freelance Teacher",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "Edit Freelance Teacher",
+            "renderMode": "H2"
+          }
+        ],
+        "entityRef": "MyFirstModule.FreelanceTeacher"
+      },
+      {
+        "ref": "module_detail",
+        "name": "module_detail",
+        "title": "Module Details",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "Module Details",
+            "renderMode": "H2"
+          }
+        ],
+        "entityRef": "MyFirstModule.Module"
+      },
+      {
+        "ref": "level_overview",
+        "name": "level_overview",
+        "title": "Levels Overview",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "Levels Overview",
+            "renderMode": "H2"
+          }
+        ],
+        "entityRef": "MyFirstModule.Level"
+      },
+      {
+        "ref": "quiz_overview",
+        "name": "quiz_overview",
+        "title": "Quizzes Overview",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "Quizzes Overview",
+            "renderMode": "H2"
+          }
+        ],
+        "entityRef": "MyFirstModule.Quiz"
+      },
+      {
+        "ref": "flashcard_overview",
+        "name": "flashcard_overview",
+        "title": "Flashcards Overview",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "Flashcards Overview",
+            "renderMode": "H2"
+          }
+        ],
+        "entityRef": "MyFirstModule.Flashcard"
+      },
+      {
+        "ref": "video_overview",
+        "name": "video_overview",
+        "title": "Videos Overview",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "Videos Overview",
+            "renderMode": "H2"
+          }
+        ],
+        "entityRef": "MyFirstModule.Video"
+      },
+      {
+        "ref": "researchpaper_overview",
+        "name": "researchpaper_overview",
+        "title": "Research Papers Overview",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "Research Papers Overview",
+            "renderMode": "H2"
+          }
+        ],
+        "entityRef": "MyFirstModule.ResearchPaper"
+      },
+      {
+        "ref": "slide_overview",
+        "name": "slide_overview",
+        "title": "Slides Overview",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "Slides Overview",
+            "renderMode": "H2"
+          }
+        ],
+        "entityRef": "MyFirstModule.Slide"
+      },
+      {
+        "ref": "game_overview",
+        "name": "game_overview",
+        "title": "Games Overview",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "Games Overview",
+            "renderMode": "H2"
+          }
+        ],
+        "entityRef": "MyFirstModule.Game"
+      },
+      {
+        "ref": "achievement_overview",
+        "name": "achievement_overview",
+        "title": "Achievements Overview",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "Achievements Overview",
+            "renderMode": "H2"
+          }
+        ],
+        "entityRef": "MyFirstModule.Achievement"
+      },
+      {
+        "ref": "skillassessment_overview",
+        "name": "skillassessment_overview",
+        "title": "Skill Assessments Overview",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "Skill Assessments Overview",
+            "renderMode": "H2"
+          }
+        ],
+        "entityRef": "MyFirstModule.SkillAssessment"
+      }
+    ]
+  },
+  "verification": {
+    "failOnMissing": true
+  },
+  "microflows": {
+    "specs": [
+      {
+        "name": "ApproveFreelanceTeacherProfile",
+        "parameters": [
+          {
+            "name": "freelanceTeacherId",
+            "type": "Integer"
+          },
+          {
+            "name": "approvalStatus",
+            "type": "String"
+          }
+        ],
+        "actions": [
+          {
+            "type": "retrieveObject",
+            "entity": "FreelanceTeacher",
+            "outputVariableName": "FreelanceTeacher_Object"
+          },
+          {
+            "type": "commitObject",
+            "variableName": "FreelanceTeacher_Object"
+          },
+          {
+            "type": "showMessage",
+            "message": "Freelance teacher profile approved successfully."
+          }
+        ]
+      },
+      {
+        "name": "SendNotificationToFreelanceTeacher",
+        "parameters": [
+          {
+            "name": "freelanceTeacherId",
+            "type": "Integer"
+          },
+          {
+            "name": "notificationMessage",
+            "type": "String"
+          }
+        ],
+        "actions": [
+          {
+            "type": "retrieveObject",
+            "entity": "FreelanceTeacher",
+            "outputVariableName": "FreelanceTeacher_Object"
+          },
+          {
+            "type": "createObject",
+            "entity": "Notification",
+            "members": [
+              {
+                "name": "Name",
+                "value": "$notificationMessage"
+              }
+            ],
+            "outputVariableName": "Notification_New"
+          },
+          {
+            "type": "commitObject",
+            "variableName": "Notification_New"
+          },
+          {
+            "type": "showMessage",
+            "message": "Notification sent to freelance teacher successfully."
+          }
+        ]
+      },
+      {
+        "name": "UpdateFreelanceTeacherProfile",
+        "parameters": [
+          {
+            "name": "freelanceTeacherId",
+            "type": "Integer"
+          },
+          {
+            "name": "teachingExperience",
+            "type": "Integer"
+          },
+          {
+            "name": "technicalSkillLevel",
+            "type": "Integer"
+          }
+        ],
+        "actions": [
+          {
+            "type": "retrieveObject",
+            "entity": "FreelanceTeacher",
+            "outputVariableName": "FreelanceTeacher_Object"
+          },
+          {
+            "type": "commitObject",
+            "variableName": "FreelanceTeacher_Object"
+          },
+          {
+            "type": "showMessage",
+            "message": "Freelance teacher profile updated successfully."
+          }
+        ]
+      },
+      {
+        "ref": "mf_freelanceteacher_prepare",
+        "name": "MF_FreelanceTeacher_Prepare",
+        "parameters": [
+          {
+            "name": "WorkflowContext",
+            "type": {
+              "kind": "Object",
+              "entityRef": "MyFirstModule.FreelanceTeacher"
+            },
+            "required": true
+          }
+        ],
+        "actions": [
+          {
+            "type": "changeObject",
+            "targetVariableName": "WorkflowContext",
+            "commit": "yes",
+            "changes": [
+              {
+                "attributeRef": "Status",
+                "valueExpression": "'In review'"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "mf_freelanceteacher_approve",
+        "name": "MF_FreelanceTeacher_Approve",
+        "parameters": [
+          {
+            "name": "WorkflowContext",
+            "type": {
+              "kind": "Object",
+              "entityRef": "MyFirstModule.FreelanceTeacher"
+            },
+            "required": true
+          }
+        ],
+        "actions": [
+          {
+            "type": "changeObject",
+            "targetVariableName": "WorkflowContext",
+            "commit": "yes",
+            "changes": [
+              {
+                "attributeRef": "Status",
+                "valueExpression": "'Approved'"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "mf_freelanceteacher_reject",
+        "name": "MF_FreelanceTeacher_Reject",
+        "parameters": [
+          {
+            "name": "WorkflowContext",
+            "type": {
+              "kind": "Object",
+              "entityRef": "MyFirstModule.FreelanceTeacher"
+            },
+            "required": true
+          }
+        ],
+        "actions": [
+          {
+            "type": "changeObject",
+            "targetVariableName": "WorkflowContext",
+            "commit": "yes",
+            "changes": [
+              {
+                "attributeRef": "Status",
+                "valueExpression": "'Rejected'"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "nanoflows": {
+    "specs": [
+      {
+        "name": "CheckKvKNumber",
+        "parameters": [
+          {
+            "name": "kvkNumber",
+            "type": "String"
+          }
+        ],
+        "actions": [
+          {
+            "type": "decision",
+            "conditionExpression": "$kvkNumber == 'valid'",
+            "trueActions": [],
+            "falseActions": []
+          },
+          {
+            "type": "showMessage",
+            "message": "KvK number is valid."
+          }
+        ]
+      }
+    ]
+  },
+  "workflows": {
+    "specs": [
+      {
+        "ref": "wf_freelanceteacher",
+        "name": "WF_FreelanceTeacher",
+        "bindings": {
+          "contextEntityRef": "MyFirstModule.FreelanceTeacher"
+        },
+        "steps": [
+          {
+            "type": "start",
+            "name": "Start"
+          },
+          {
+            "type": "serviceTask",
+            "name": "FreelanceTeacherPrepare",
+            "handlerMicroflowRef": "mf_freelanceteacher_prepare"
+          },
+          {
+            "type": "userTask",
+            "name": "FreelanceTeacherReview",
+            "taskName": "{1}",
+            "taskNameArgs": [
+              "$WorkflowContext/Title"
+            ],
+            "taskDescription": "{1}",
+            "taskDescriptionArgs": [
+              "$WorkflowContext/Description"
+            ],
+            "taskPageRef": "freelanceteacher_workflow_task",
+            "userRoleRefs": [
+              "FreelanceTeacher"
+            ],
+            "outcomes": [
+              {
+                "value": "Approve",
+                "steps": [
+                  {
+                    "type": "serviceTask",
+                    "name": "Approved",
+                    "handlerMicroflowRef": "mf_freelanceteacher_approve"
+                  },
+                  {
+                    "type": "end",
+                    "name": "Approved"
+                  }
+                ]
+              },
+              {
+                "value": "Reject",
+                "steps": [
+                  {
+                    "type": "serviceTask",
+                    "name": "Rejected",
+                    "handlerMicroflowRef": "mf_freelanceteacher_reject"
+                  },
+                  {
+                    "type": "end",
+                    "name": "Rejected"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

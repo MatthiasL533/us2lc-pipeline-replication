@@ -1,0 +1,1543 @@
+{
+  "meta": {
+    "planVersion": "1.1.0",
+    "generatedAt": "2026-06-06T19:08:49.035Z",
+    "generatedBy": "pipeline.plan-generator"
+  },
+  "app": {
+    "appId": "",
+    "branch": "main",
+    "moduleName": "MyFirstModule",
+    "layoutQualifiedName": "Atlas_Core.Atlas_Default",
+    "homePageRef": "home",
+    "navigation": {
+      "homePageButtons": [
+        {
+          "pageRef": "campadministrator_overview",
+          "caption": "",
+          "icon": null,
+          "allowedRoles": []
+        },
+        {
+          "pageRef": "campcounselor_overview",
+          "caption": "",
+          "icon": null,
+          "allowedRoles": []
+        },
+        {
+          "pageRef": "campers_overview",
+          "caption": "",
+          "icon": null,
+          "allowedRoles": []
+        },
+        {
+          "pageRef": "campworker_overview",
+          "caption": "",
+          "icon": null,
+          "allowedRoles": []
+        }
+      ],
+      "menuItems": [
+        {
+          "pageRef": "campadministrator_overview",
+          "caption": "",
+          "icon": null,
+          "allowedRoles": []
+        },
+        {
+          "pageRef": "campcounselor_overview",
+          "caption": "",
+          "icon": null,
+          "allowedRoles": []
+        },
+        {
+          "pageRef": "campers_overview",
+          "caption": "",
+          "icon": null,
+          "allowedRoles": []
+        },
+        {
+          "pageRef": "campworker_overview",
+          "caption": "",
+          "icon": null,
+          "allowedRoles": []
+        }
+      ],
+      "homePageButtonRefs": [
+        "campadministrator_overview",
+        "campcounselor_overview",
+        "campers_overview",
+        "campworker_overview"
+      ],
+      "navigationItemRefs": [
+        "campadministrator_overview",
+        "campcounselor_overview",
+        "campers_overview",
+        "campworker_overview"
+      ],
+      "home": {
+        "pages": [
+          "camperOverview",
+          "parentOverview",
+          "groupOverview"
+        ]
+      },
+      "camperOverview": {
+        "pages": [
+          "camperNewEdit"
+        ]
+      },
+      "parentOverview": {
+        "pages": [
+          "parentNewEdit"
+        ]
+      },
+      "groupOverview": {
+        "pages": [
+          "groupNewEdit"
+        ]
+      }
+    }
+  },
+  "execution": {
+    "commit": false,
+    "dg2Cleanup": true,
+    "forceLegacyWebClientForLookups": true,
+    "createApp": true,
+    "createAppName": "PracticalPerf_camperplus_Stability"
+  },
+  "domainModel": {
+    "entities": [
+      {
+        "name": "Camper",
+        "attributes": [
+          {
+            "name": "Name",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "EmergencyContactInfo",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "BehavioralStatus",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "MedicalForm",
+            "type": "Boolean",
+            "required": false
+          },
+          {
+            "name": "EmergencyContactName",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "Activity",
+            "type": "String",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "Parent",
+        "attributes": [
+          {
+            "name": "Name",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "Email",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "NotificationPreference",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "RelationshipToCamper",
+            "type": "String",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "Group",
+        "attributes": [
+          {
+            "name": "GroupName",
+            "type": "String",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "Event",
+        "attributes": [
+          {
+            "name": "EventName",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "Schedule",
+            "type": "DateTime",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "Nametag",
+        "attributes": [
+          {
+            "name": "CamperName",
+            "type": "String",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "Reminder",
+        "attributes": [
+          {
+            "name": "ReminderMessage",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "DueDate",
+            "type": "DateTime",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "Position",
+        "attributes": [
+          {
+            "name": "PositionName",
+            "type": "String",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "ScheduleActivity",
+        "attributes": [
+          {
+            "name": "ActivityName",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "Schedule",
+            "type": "DateTime",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "Feedback",
+        "attributes": [
+          {
+            "name": "FeedbackMessage",
+            "type": "String",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "Attendance",
+        "attributes": [
+          {
+            "name": "AttendanceStatus",
+            "type": "Boolean",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "CampAdministrator",
+        "attributes": [
+          {
+            "name": "Name",
+            "type": "String",
+            "required": true
+          },
+          {
+            "name": "Email",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "IsActive",
+            "type": "Boolean",
+            "required": false,
+            "defaultValue": false
+          }
+        ]
+      },
+      {
+        "name": "CampWorker",
+        "attributes": [
+          {
+            "name": "Name",
+            "type": "String",
+            "required": true
+          },
+          {
+            "name": "Email",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "IsActive",
+            "type": "Boolean",
+            "required": false,
+            "defaultValue": false
+          }
+        ]
+      },
+      {
+        "name": "CampCounselor",
+        "attributes": [
+          {
+            "name": "Name",
+            "type": "String",
+            "required": true
+          },
+          {
+            "name": "Email",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "IsActive",
+            "type": "Boolean",
+            "required": false,
+            "defaultValue": false
+          }
+        ]
+      },
+      {
+        "name": "Rule",
+        "attributes": [
+          {
+            "name": "RuleName",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "Description",
+            "type": "String",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "ParentGuardian",
+        "attributes": [
+          {
+            "name": "Name",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "ContactInfo",
+            "type": "String",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "FacilityUsage",
+        "attributes": [
+          {
+            "name": "FacilityName",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "UsageDate",
+            "type": "DateTime",
+            "required": false
+          },
+          {
+            "name": "UsageCount",
+            "type": "Integer",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "ParentFeedback",
+        "attributes": [
+          {
+            "name": "FeedbackMessage",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "SubmissionDate",
+            "type": "DateTime",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "BiWeeklyFeedbackSchedule",
+        "attributes": [
+          {
+            "name": "ScheduleDate",
+            "type": "DateTime",
+            "required": false
+          },
+          {
+            "name": "FeedbackMessage",
+            "type": "String",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "StaffRegistrationForm",
+        "attributes": [
+          {
+            "name": "StaffName",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "StaffEmail",
+            "type": "String",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "CamperGroupAssignment",
+        "attributes": [
+          {
+            "name": "GroupId",
+            "type": "Integer",
+            "required": false
+          },
+          {
+            "name": "CamperId",
+            "type": "Integer",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "EventSchedule",
+        "attributes": [
+          {
+            "name": "EventId",
+            "type": "Integer",
+            "required": false
+          },
+          {
+            "name": "GroupId",
+            "type": "Integer",
+            "required": false
+          },
+          {
+            "name": "ScheduleDate",
+            "type": "DateTime",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "ConsentFormSubmission",
+        "attributes": [
+          {
+            "name": "ConsentFormId",
+            "type": "Integer",
+            "required": false
+          },
+          {
+            "name": "CamperId",
+            "type": "Integer",
+            "required": false
+          },
+          {
+            "name": "SubmissionDate",
+            "type": "DateTime",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "Submission",
+        "attributes": [
+          {
+            "name": "Name",
+            "type": "String",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "Assignment",
+        "attributes": [
+          {
+            "name": "Name",
+            "type": "String",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "PaymentStatus",
+        "attributes": [
+          {
+            "name": "Name",
+            "type": "String",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "TaskAssignment",
+        "attributes": [
+          {
+            "name": "Task",
+            "type": "String",
+            "required": true
+          },
+          {
+            "name": "Assignee",
+            "type": "String",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "BehavioralIncident",
+        "attributes": [
+          {
+            "name": "IncidentDate",
+            "type": "DateTime",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "InventoryManagement",
+        "attributes": [
+          {
+            "name": "Supply",
+            "type": "String",
+            "required": true
+          },
+          {
+            "name": "Quantity",
+            "type": "Integer",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "MaintenanceRequest",
+        "attributes": [
+          {
+            "name": "RequestDate",
+            "type": "DateTime",
+            "required": true
+          },
+          {
+            "name": "Description",
+            "type": "String",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "AttendanceRecord",
+        "attributes": [
+          {
+            "name": "AttendanceDate",
+            "type": "DateTime",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "ParentGuardian",
+        "attributes": [
+          {
+            "name": "Name",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "ContactInfo",
+            "type": "String",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "PaymentStatus",
+        "attributes": [
+          {
+            "name": "Name",
+            "type": "String",
+            "required": true
+          }
+        ]
+      }
+    ],
+    "associations": [
+      {
+        "name": "Camper_Parent",
+        "parentEntity": "Parent",
+        "childEntity": "Camper",
+        "type": "Reference",
+        "owner": "Both"
+      },
+      {
+        "name": "Group_Camper",
+        "parentEntity": "Group",
+        "childEntity": "Camper",
+        "type": "Reference",
+        "owner": "Both"
+      },
+      {
+        "name": "Event_ScheduleActivity",
+        "parentEntity": "Event",
+        "childEntity": "ScheduleActivity",
+        "type": "Reference",
+        "owner": "Both"
+      },
+      {
+        "name": "Camper_ConsentFormSubmission",
+        "parentEntity": "Camper",
+        "childEntity": "ConsentFormSubmission",
+        "type": "Reference",
+        "owner": "Both"
+      },
+      {
+        "name": "Parent_PaymentStatus",
+        "parentEntity": "Parent",
+        "childEntity": "PaymentStatus",
+        "type": "Reference",
+        "owner": "Both"
+      },
+      {
+        "name": "Camper_AttendanceRecord",
+        "parentEntity": "Camper",
+        "childEntity": "AttendanceRecord",
+        "type": "Reference",
+        "owner": "Both"
+      },
+      {
+        "name": "CampAdministrator_CampWorker",
+        "parentEntity": "CampAdministrator",
+        "childEntity": "CampWorker",
+        "type": "Reference",
+        "owner": "Both"
+      },
+      {
+        "name": "CampWorker_CamperGroupAssignment",
+        "parentEntity": "CampWorker",
+        "childEntity": "CamperGroupAssignment",
+        "type": "Reference",
+        "owner": "Both"
+      },
+      {
+        "name": "Camper_BiWeeklyFeedbackSchedule",
+        "parentEntity": "Camper",
+        "childEntity": "BiWeeklyFeedbackSchedule",
+        "type": "Reference",
+        "owner": "Both"
+      },
+      {
+        "name": "Parent_ParentFeedback",
+        "parentEntity": "Parent",
+        "childEntity": "ParentFeedback",
+        "type": "Reference",
+        "owner": "Both"
+      },
+      {
+        "name": "CampAdministrator_FacilityUsage",
+        "parentEntity": "CampAdministrator",
+        "childEntity": "FacilityUsage",
+        "type": "Reference",
+        "owner": "Both"
+      },
+      {
+        "name": "CampWorker_TaskAssignment",
+        "parentEntity": "CampWorker",
+        "childEntity": "TaskAssignment",
+        "type": "Reference",
+        "owner": "Both"
+      }
+    ],
+    "enumerations": [],
+    "_associationDiagnostics": {
+      "rawAssociationCount": 1,
+      "normalizedAssociationCount": 1,
+      "malformedAssociationCandidates": []
+    }
+  },
+  "security": {
+    "enabled": true,
+    "securityLevel": "prototype",
+    "moduleRoles": [
+      "CampAdministrator",
+      "CampWorker",
+      "Parent",
+      "CampCounselor"
+    ],
+    "userRoles": [
+      {
+        "name": "CampAdministrator",
+        "moduleRoles": [
+          "CampAdministrator"
+        ],
+        "description": "Responsible for managing the camp and its operations.",
+        "systemModuleRole": "System.Administrator"
+      },
+      {
+        "name": "CampWorker",
+        "moduleRoles": [
+          "CampWorker"
+        ],
+        "description": "Assists with daily camp activities and tasks.",
+        "systemModuleRole": "System.User"
+      },
+      {
+        "name": "Parent",
+        "moduleRoles": [
+          "Parent"
+        ],
+        "description": "Responsible for their child's well-being and communication with the camp.",
+        "systemModuleRole": "System.User"
+      },
+      {
+        "name": "CampCounselor",
+        "moduleRoles": [
+          "CampCounselor"
+        ],
+        "systemModuleRole": "System.User"
+      }
+    ],
+    "demoUsers": []
+  },
+  "pages": {
+    "specs": [
+      {
+        "ref": "home",
+        "name": "Home",
+        "title": "Home",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "Campers Workspace",
+            "renderMode": "H2"
+          },
+          {
+            "type": "dynamicText",
+            "text": "Generated from user stories",
+            "renderMode": "Paragraph"
+          },
+          {
+            "type": "buttonToPage",
+            "caption": "Campers Dashboard",
+            "targetPageRef": "campers_dashboard"
+          },
+          {
+            "type": "buttonToPage",
+            "caption": "Campers Overview",
+            "targetPageRef": "campers_overview"
+          },
+          {
+            "type": "buttonToPage",
+            "caption": "Group Overview",
+            "targetPageRef": "group_overview"
+          },
+          {
+            "type": "buttonToPage",
+            "caption": "Event Overview",
+            "targetPageRef": "event_overview"
+          },
+          {
+            "type": "buttonToPage",
+            "caption": "campadministrator overview",
+            "targetPageRef": "campadministrator_overview"
+          },
+          {
+            "type": "buttonToPage",
+            "caption": "campcounselor overview",
+            "targetPageRef": "campcounselor_overview"
+          },
+          {
+            "type": "buttonToPage",
+            "caption": "campworker overview",
+            "targetPageRef": "campworker_overview"
+          }
+        ]
+      },
+      {
+        "ref": "group_overview",
+        "name": "Group_Overview",
+        "title": "Group Overview",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "Group Overview",
+            "renderMode": "H2"
+          },
+          {
+            "type": "dynamicText",
+            "text": "Manage group records and open the create dialog when new data is needed.",
+            "renderMode": "Paragraph"
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Add Group",
+            "entityRef": "MyFirstModule.Group",
+            "targetPageRef": "group_newedit"
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.Group",
+            "rowClickTargetPageRef": "group_newedit",
+            "autoRowClickToDetail": true,
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Title",
+                "autoLabel": true
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Description",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Status",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "CreatedAt",
+                "autoLabel": false
+              }
+            ]
+          }
+        ],
+        "entityRef": "MyFirstModule.Group"
+      },
+      {
+        "ref": "group_newedit",
+        "name": "Group_NewEdit",
+        "title": "Group NewEdit",
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "Group",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Title"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Description"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Status"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "CreatedAt"
+              },
+              {
+                "type": "associationInput",
+                "associationRef": "Group_Campers",
+                "targetEntityRef": "MyFirstModule.Campers",
+                "label": "Campers"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ],
+        "entityRef": "MyFirstModule.Group",
+        "pageParameters": [
+          {
+            "name": "Group",
+            "entityRef": "MyFirstModule.Group",
+            "required": true
+          }
+        ]
+      },
+      {
+        "ref": "event_overview",
+        "name": "Event_Overview",
+        "title": "Event Overview",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "Event Overview",
+            "renderMode": "H2"
+          },
+          {
+            "type": "dynamicText",
+            "text": "Manage event records and open the create dialog when new data is needed.",
+            "renderMode": "Paragraph"
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Add Event",
+            "entityRef": "MyFirstModule.Event",
+            "targetPageRef": "event_newedit"
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.Event",
+            "rowClickTargetPageRef": "event_newedit",
+            "autoRowClickToDetail": true,
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Title",
+                "autoLabel": true
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Description",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Status",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "CreatedAt",
+                "autoLabel": false
+              }
+            ]
+          }
+        ],
+        "entityRef": "MyFirstModule.Event"
+      },
+      {
+        "ref": "event_newedit",
+        "name": "Event_NewEdit",
+        "title": "Event NewEdit",
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "Event",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Title"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Description"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Status"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "CreatedAt"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ],
+        "entityRef": "MyFirstModule.Event",
+        "pageParameters": [
+          {
+            "name": "Event",
+            "entityRef": "MyFirstModule.Event",
+            "required": true
+          }
+        ]
+      },
+      {
+        "ref": "campadministrator_overview",
+        "name": "CampAdministrator_Overview",
+        "title": "CampAdministrator Overview",
+        "entityRef": "MyFirstModule.CampAdministrator",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "CampAdministrator Overview",
+            "renderMode": "H2"
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Create CampAdministrator",
+            "entityRef": "MyFirstModule.CampAdministrator",
+            "targetPageRef": "campadministrator_newedit"
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.CampAdministrator",
+            "autoRowClickToDetail": true,
+            "rowClickTargetPageRef": "campadministrator_newedit",
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name",
+                "autoLabel": true
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Email",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "IsActive",
+                "autoLabel": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "campadministrator_newedit",
+        "name": "CampAdministrator_NewEdit",
+        "title": "CampAdministrator NewEdit",
+        "entityRef": "MyFirstModule.CampAdministrator",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          {
+            "name": "CampAdministrator",
+            "entityRef": "MyFirstModule.CampAdministrator",
+            "required": true
+          }
+        ],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "CampAdministrator",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Email"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "IsActive"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "parent_overview",
+        "name": "Parent_Overview",
+        "title": "Parent Overview",
+        "entityRef": "MyFirstModule.Parent",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "Parent Overview",
+            "renderMode": "H2"
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Create Parent",
+            "entityRef": "MyFirstModule.Parent",
+            "targetPageRef": "parent_newedit"
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.Parent",
+            "autoRowClickToDetail": true,
+            "rowClickTargetPageRef": "parent_newedit",
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name",
+                "autoLabel": true
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Email",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "IsActive",
+                "autoLabel": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "parent_newedit",
+        "name": "Parent_NewEdit",
+        "title": "Parent NewEdit",
+        "entityRef": "MyFirstModule.Parent",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          {
+            "name": "Parent",
+            "entityRef": "MyFirstModule.Parent",
+            "required": true
+          }
+        ],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "Parent",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Email"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "IsActive"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "campworker_overview",
+        "name": "CampWorker_Overview",
+        "title": "CampWorker Overview",
+        "entityRef": "MyFirstModule.CampWorker",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "CampWorker Overview",
+            "renderMode": "H2"
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Create CampWorker",
+            "entityRef": "MyFirstModule.CampWorker",
+            "targetPageRef": "campworker_newedit"
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.CampWorker",
+            "autoRowClickToDetail": true,
+            "rowClickTargetPageRef": "campworker_newedit",
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name",
+                "autoLabel": true
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Email",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "IsActive",
+                "autoLabel": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "campworker_newedit",
+        "name": "CampWorker_NewEdit",
+        "title": "CampWorker NewEdit",
+        "entityRef": "MyFirstModule.CampWorker",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          {
+            "name": "CampWorker",
+            "entityRef": "MyFirstModule.CampWorker",
+            "required": true
+          }
+        ],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "CampWorker",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Email"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "IsActive"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "campcounselor_overview",
+        "name": "CampCounselor_Overview",
+        "title": "CampCounselor Overview",
+        "entityRef": "MyFirstModule.CampCounselor",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "CampCounselor Overview",
+            "renderMode": "H2"
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Create CampCounselor",
+            "entityRef": "MyFirstModule.CampCounselor",
+            "targetPageRef": "campcounselor_newedit"
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.CampCounselor",
+            "autoRowClickToDetail": true,
+            "rowClickTargetPageRef": "campcounselor_newedit",
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name",
+                "autoLabel": true
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Email",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "IsActive",
+                "autoLabel": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "campcounselor_newedit",
+        "name": "CampCounselor_NewEdit",
+        "title": "CampCounselor NewEdit",
+        "entityRef": "MyFirstModule.CampCounselor",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          {
+            "name": "CampCounselor",
+            "entityRef": "MyFirstModule.CampCounselor",
+            "required": true
+          }
+        ],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "CampCounselor",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Email"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "IsActive"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "camperoverview",
+        "name": "camperOverview",
+        "title": "camper Overview",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "camper Overview",
+            "renderMode": "H2"
+          }
+        ],
+        "entityRef": "MyFirstModule.Camper"
+      },
+      {
+        "ref": "campernewedit",
+        "name": "camperNewEdit",
+        "title": "camper New Edit",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "camper New Edit",
+            "renderMode": "H2"
+          }
+        ],
+        "entityRef": "MyFirstModule.Camper"
+      },
+      {
+        "ref": "parentoverview",
+        "name": "parentOverview",
+        "title": "parent Overview",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "parent Overview",
+            "renderMode": "H2"
+          }
+        ],
+        "entityRef": "MyFirstModule.Parent"
+      },
+      {
+        "ref": "parentnewedit",
+        "name": "parentNewEdit",
+        "title": "parent New Edit",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "parent New Edit",
+            "renderMode": "H2"
+          }
+        ],
+        "entityRef": "MyFirstModule.Parent"
+      },
+      {
+        "ref": "groupoverview",
+        "name": "groupOverview",
+        "title": "group Overview",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "group Overview",
+            "renderMode": "H2"
+          }
+        ],
+        "entityRef": "MyFirstModule.Group"
+      },
+      {
+        "ref": "groupnewedit",
+        "name": "groupNewEdit",
+        "title": "group New Edit",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "group New Edit",
+            "renderMode": "H2"
+          }
+        ],
+        "entityRef": "MyFirstModule.Group"
+      }
+    ]
+  },
+  "verification": {
+    "failOnMissing": true
+  },
+  "microflows": {
+    "specs": [
+      {
+        "name": "CreateNametagForCamper",
+        "parameters": [
+          {
+            "name": "camperId",
+            "type": "Integer"
+          }
+        ],
+        "actions": [
+          {
+            "type": "retrieveObject",
+            "entity": "Camper",
+            "variableName": "camper",
+            "outputVariableName": "camper"
+          },
+          {
+            "type": "createObject",
+            "entity": "Nametag",
+            "variableName": "nametag",
+            "outputVariableName": "nametag"
+          },
+          {
+            "type": "commitObject",
+            "variableName": "nametag"
+          }
+        ]
+      },
+      {
+        "name": "SuspendCamper",
+        "parameters": [
+          {
+            "name": "camperId",
+            "type": "Integer"
+          }
+        ],
+        "actions": [
+          {
+            "type": "retrieveObject",
+            "entity": "Camper",
+            "variableName": "camper",
+            "outputVariableName": "camper"
+          },
+          {
+            "type": "commitObject",
+            "variableName": "camper"
+          }
+        ]
+      },
+      {
+        "name": "SendReminderToParent",
+        "parameters": [
+          {
+            "name": "parentId",
+            "type": "Integer"
+          },
+          {
+            "name": "reminderMessage",
+            "type": "String"
+          }
+        ],
+        "actions": [
+          {
+            "type": "retrieveObject",
+            "entity": "Parent",
+            "variableName": "parent",
+            "outputVariableName": "parent"
+          },
+          {
+            "type": "showMessage",
+            "message": "$reminderMessage",
+            "title": "Reminder for $parent.Name"
+          }
+        ]
+      }
+    ]
+  },
+  "nanoflows": {
+    "specs": [
+      {
+        "name": "CheckCamperAttendance",
+        "parameters": [
+          {
+            "name": "camperId",
+            "type": "Integer"
+          }
+        ],
+        "actions": [
+          {
+            "type": "retrieveObject",
+            "entity": "Camper",
+            "variableName": "camper",
+            "outputVariableName": "camper"
+          },
+          {
+            "type": "decision",
+            "trueActions": [
+              {
+                "type": "showMessage",
+                "message": "Camper $camper.Name is present."
+              }
+            ],
+            "falseActions": [
+              {
+                "type": "showMessage",
+                "message": "Camper $camper.Name is absent."
+              }
+            ],
+            "conditionExpression": "$camper.AttendanceStatus = true"
+          }
+        ]
+      }
+    ]
+  }
+}

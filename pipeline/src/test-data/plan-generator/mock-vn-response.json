@@ -1,0 +1,78 @@
+{
+  "ok": true,
+  "inputPath": "/tmp/user-stories.txt",
+  "systemName": "TicketSystem",
+  "ontology": "Ontology: <http://fakesite.org/ticketsystem.owl>\n\n# Relationships\nObjectProperty: :submits\n\tDomain: :Employee\n\tRange: :Ticket\n\n# Classes\nClass: :Employee\nClass: :Ticket\nClass: :TicketComment\n",
+  "stories": [
+    {
+      "number": 1,
+      "text": "As an employee, I want to submit a ticket.",
+      "role": {
+        "name": "Employee",
+        "compound": []
+      },
+      "means": {
+        "mainObject": "Ticket",
+        "compound": []
+      },
+      "json": {
+        "number": 1,
+        "text": "As an employee, I want to submit a ticket."
+      }
+    }
+  ],
+  "failedStories": [],
+  "classes": [
+    {
+      "name": "Employee",
+      "parent": "Person",
+      "isRole": true,
+      "stories": [
+        1
+      ]
+    },
+    {
+      "name": "Ticket",
+      "parent": "",
+      "isRole": false,
+      "stories": [
+        1
+      ]
+    },
+    {
+      "name": "TicketComment",
+      "parent": "",
+      "isRole": false,
+      "stories": [
+        1
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "name": "submits",
+      "domain": "Employee",
+      "range": "Ticket",
+      "stories": [
+        1
+      ]
+    }
+  ],
+  "inferredRoles": [
+    "Employee"
+  ],
+  "keyNouns": [
+    {
+      "term": "Ticket",
+      "weight": 2
+    },
+    {
+      "term": "Comment",
+      "weight": 1
+    }
+  ],
+  "stats": {
+    "successCount": 1,
+    "failedCount": 0
+  }
+}

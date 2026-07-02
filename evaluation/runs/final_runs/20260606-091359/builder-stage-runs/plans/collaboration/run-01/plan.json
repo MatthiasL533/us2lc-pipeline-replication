@@ -1,0 +1,3267 @@
+{
+  "meta": {
+    "planVersion": "1.1.0",
+    "generatedAt": "2026-06-06T16:18:15.123Z",
+    "generatedBy": "pipeline.plan-generator"
+  },
+  "app": {
+    "appId": "",
+    "branch": "main",
+    "moduleName": "MyFirstModule",
+    "layoutQualifiedName": "Atlas_Core.Atlas_Default",
+    "homePageRef": "home",
+    "navigation": {
+      "homePageButtons": [
+        {
+          "pageRef": "client_overview",
+          "caption": "",
+          "allowedRoles": []
+        },
+        {
+          "pageRef": "delivery_overview",
+          "caption": "",
+          "allowedRoles": []
+        },
+        {
+          "pageRef": "feedback_overview",
+          "caption": "",
+          "allowedRoles": []
+        },
+        {
+          "pageRef": "accesscontrol_overview",
+          "caption": "",
+          "allowedRoles": []
+        },
+        {
+          "pageRef": "appadministrator_overview",
+          "caption": "",
+          "allowedRoles": []
+        },
+        {
+          "pageRef": "appuser_overview",
+          "caption": "",
+          "allowedRoles": []
+        }
+      ],
+      "menuItems": [
+        {
+          "pageRef": "client_overview",
+          "caption": "",
+          "allowedRoles": []
+        },
+        {
+          "pageRef": "delivery_overview",
+          "caption": "",
+          "allowedRoles": []
+        },
+        {
+          "pageRef": "feedback_overview",
+          "caption": "",
+          "allowedRoles": []
+        },
+        {
+          "pageRef": "accesscontrol_overview",
+          "caption": "",
+          "allowedRoles": []
+        },
+        {
+          "pageRef": "appadministrator_overview",
+          "caption": "",
+          "allowedRoles": []
+        },
+        {
+          "pageRef": "appuser_overview",
+          "caption": "",
+          "allowedRoles": []
+        }
+      ],
+      "homePageButtonRefs": [
+        "client_overview",
+        "delivery_overview",
+        "feedback_overview",
+        "accesscontrol_overview",
+        "appadministrator_overview",
+        "appuser_overview"
+      ],
+      "navigationItemRefs": [
+        "client_overview",
+        "delivery_overview",
+        "feedback_overview",
+        "accesscontrol_overview",
+        "appadministrator_overview",
+        "appuser_overview"
+      ],
+      "homePage": "home"
+    }
+  },
+  "execution": {
+    "commit": true,
+    "dg2Cleanup": true,
+    "forceLegacyWebClientForLookups": true,
+    "createApp": true,
+    "createAppName": "rerun-collaboration-run01",
+    "commitMessage": "Rerun practical performance builder-stage run: collaboration run-01"
+  },
+  "domainModel": {
+    "entities": [
+      {
+        "name": "Project",
+        "attributes": [
+          {
+            "name": "Name",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "Department",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "ResourceId",
+            "type": "String",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "Milestone",
+        "attributes": [
+          {
+            "name": "DueDate",
+            "type": "DateTime",
+            "required": false
+          },
+          {
+            "name": "Status",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "Priority",
+            "type": "Integer",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "Delivery",
+        "attributes": [
+          {
+            "name": "Description",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "GoalDescription",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "Published",
+            "type": "Boolean",
+            "required": false
+          },
+          {
+            "name": "PublicationDate",
+            "type": "DateTime",
+            "required": false
+          },
+          {
+            "name": "RatingScale",
+            "type": "Integer",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "File",
+        "attributes": [
+          {
+            "name": "Name",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "AccessLevel",
+            "type": "String",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "Task",
+        "attributes": [
+          {
+            "name": "Description",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "DueDate",
+            "type": "DateTime",
+            "required": false
+          },
+          {
+            "name": "Status",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "Priority",
+            "type": "Integer",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "Feedback",
+        "attributes": [
+          {
+            "name": "Rating",
+            "type": "Integer",
+            "required": false
+          },
+          {
+            "name": "Comment",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "Criteria",
+            "type": "String",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "TeamMember",
+        "attributes": [
+          {
+            "name": "Name",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "Role",
+            "type": "String",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "Client",
+        "attributes": [
+          {
+            "name": "Name",
+            "type": "String",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "ProjectManager",
+        "attributes": [
+          {
+            "name": "Name",
+            "type": "String",
+            "required": true
+          },
+          {
+            "name": "Email",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "IsActive",
+            "type": "Boolean",
+            "required": false,
+            "defaultValue": false
+          }
+        ]
+      },
+      {
+        "name": "ArchiveStatus",
+        "attributes": [
+          {
+            "name": "Name",
+            "type": "String",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "Notification",
+        "attributes": [
+          {
+            "name": "Name",
+            "type": "String",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "DraftDelivery",
+        "attributes": [
+          {
+            "name": "Description",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "GoalDescription",
+            "type": "String",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "Resource",
+        "attributes": [
+          {
+            "name": "Name",
+            "type": "String",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "AccessControl",
+        "attributes": [
+          {
+            "name": "Name",
+            "type": "String",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "Subtask",
+        "attributes": [
+          {
+            "name": "Name",
+            "type": "String",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "CommentThread",
+        "attributes": [
+          {
+            "name": "Name",
+            "type": "String",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "ChatRoom",
+        "attributes": [
+          {
+            "name": "Name",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "Description",
+            "type": "String",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "ProjectTeam",
+        "attributes": [
+          {
+            "name": "Name",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "Description",
+            "type": "String",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "AppAdministrator",
+        "attributes": [
+          {
+            "name": "Name",
+            "type": "String",
+            "required": true
+          },
+          {
+            "name": "Email",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "IsActive",
+            "type": "Boolean",
+            "required": false,
+            "defaultValue": false
+          }
+        ]
+      },
+      {
+        "name": "AppUser",
+        "attributes": [
+          {
+            "name": "Name",
+            "type": "String",
+            "required": true
+          },
+          {
+            "name": "Email",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "IsActive",
+            "type": "Boolean",
+            "required": false,
+            "defaultValue": false
+          }
+        ]
+      },
+      {
+        "name": "Employee",
+        "attributes": [
+          {
+            "name": "Name",
+            "type": "String",
+            "required": true
+          },
+          {
+            "name": "Email",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "IsActive",
+            "type": "Boolean",
+            "required": false,
+            "defaultValue": false
+          }
+        ]
+      }
+    ],
+    "associations": [
+      {
+        "name": "Project_Milestone",
+        "parentEntity": "Project",
+        "childEntity": "Milestone",
+        "type": "Reference",
+        "owner": "Both"
+      },
+      {
+        "name": "Delivery_File",
+        "parentEntity": "Delivery",
+        "childEntity": "File",
+        "type": "Reference",
+        "owner": "Both"
+      },
+      {
+        "name": "Task_File",
+        "parentEntity": "Task",
+        "childEntity": "File",
+        "type": "Reference",
+        "owner": "Both"
+      },
+      {
+        "name": "Project_Resource",
+        "parentEntity": "Project",
+        "childEntity": "Resource",
+        "type": "Reference",
+        "owner": "Both"
+      },
+      {
+        "name": "Task_TeamMember",
+        "parentEntity": "Task",
+        "childEntity": "TeamMember",
+        "type": "Reference",
+        "owner": "Both"
+      },
+      {
+        "name": "Project_TeamMember",
+        "parentEntity": "Project",
+        "childEntity": "TeamMember",
+        "type": "Reference",
+        "owner": "Both"
+      },
+      {
+        "name": "Delivery_Client",
+        "parentEntity": "Delivery",
+        "childEntity": "Client",
+        "type": "Reference",
+        "owner": "Both"
+      },
+      {
+        "name": "Task_Subtask",
+        "parentEntity": "Task",
+        "childEntity": "Subtask",
+        "type": "Reference",
+        "owner": "Both"
+      },
+      {
+        "name": "ProjectManager_Project",
+        "parentEntity": "ProjectManager",
+        "childEntity": "Project",
+        "type": "Reference",
+        "owner": "Both"
+      },
+      {
+        "name": "File_AccessControl",
+        "parentEntity": "File",
+        "childEntity": "AccessControl",
+        "type": "Reference",
+        "owner": "Both"
+      },
+      {
+        "name": "ChatRoom_ChatMessage",
+        "parentEntity": "ChatRoom",
+        "childEntity": "CommentThread",
+        "type": "Reference",
+        "owner": "Both"
+      },
+      {
+        "name": "Project_ChatRoom",
+        "parentEntity": "Project",
+        "childEntity": "ChatRoom",
+        "type": "Reference",
+        "owner": "Both"
+      }
+    ],
+    "enumerations": []
+  },
+  "security": {
+    "enabled": true,
+    "securityLevel": "prototype",
+    "moduleRoles": [
+      "ProjectManager",
+      "AppAdministrator",
+      "TeamMember",
+      "AppUser",
+      "Client",
+      "Employee"
+    ],
+    "userRoles": [
+      {
+        "name": "ProjectManager",
+        "description": "Manages projects and has full control over project-related actions.",
+        "moduleRoles": [
+          "AppAdministrator"
+        ],
+        "systemModuleRole": "System.User"
+      },
+      {
+        "name": "TeamMember",
+        "description": "Participates in projects and has limited access to project-related actions.",
+        "moduleRoles": [
+          "AppUser"
+        ],
+        "systemModuleRole": "System.User"
+      },
+      {
+        "name": "Client",
+        "description": "Receives deliveries and provides feedback.",
+        "moduleRoles": [
+          "AppUser"
+        ],
+        "systemModuleRole": "System.User"
+      },
+      {
+        "name": "AppAdministrator",
+        "moduleRoles": [
+          "AppAdministrator"
+        ],
+        "systemModuleRole": "System.User"
+      },
+      {
+        "name": "AppUser",
+        "moduleRoles": [
+          "AppUser"
+        ],
+        "systemModuleRole": "System.User"
+      },
+      {
+        "name": "Employee",
+        "moduleRoles": [
+          "Employee"
+        ],
+        "systemModuleRole": "System.User"
+      }
+    ],
+    "demoUsers": []
+  },
+  "pages": {
+    "specs": [
+      {
+        "ref": "home",
+        "name": "Home",
+        "title": "Home",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "Task Workspace",
+            "renderMode": "H2",
+            "content": [],
+            "itemContent": [],
+            "templateContent": []
+          },
+          {
+            "type": "dynamicText",
+            "text": "Generated from user stories",
+            "renderMode": "Paragraph",
+            "content": [],
+            "itemContent": [],
+            "templateContent": []
+          },
+          {
+            "type": "buttonToPage",
+            "caption": "Task Dashboard",
+            "targetPageRef": "task_dashboard",
+            "content": [],
+            "itemContent": [],
+            "templateContent": []
+          },
+          {
+            "type": "buttonToPage",
+            "caption": "File Overview",
+            "targetPageRef": "file_overview",
+            "content": [],
+            "itemContent": [],
+            "templateContent": []
+          },
+          {
+            "type": "buttonToPage",
+            "caption": "Task Overview",
+            "targetPageRef": "task_overview",
+            "content": [],
+            "itemContent": [],
+            "templateContent": []
+          },
+          {
+            "type": "buttonToPage",
+            "caption": "Delivery Overview",
+            "targetPageRef": "delivery_overview",
+            "content": [],
+            "itemContent": [],
+            "templateContent": []
+          },
+          {
+            "type": "buttonToPage",
+            "caption": "Project Overview",
+            "targetPageRef": "project_overview",
+            "content": [],
+            "itemContent": [],
+            "templateContent": []
+          },
+          {
+            "type": "buttonToPage",
+            "caption": "Feedback Overview",
+            "targetPageRef": "feedback_overview",
+            "content": [],
+            "itemContent": [],
+            "templateContent": []
+          },
+          {
+            "type": "buttonToPage",
+            "caption": "client overview",
+            "targetPageRef": "client_overview",
+            "content": [],
+            "itemContent": [],
+            "templateContent": []
+          },
+          {
+            "type": "buttonToPage",
+            "caption": "accesscontrol overview",
+            "targetPageRef": "accesscontrol_overview"
+          },
+          {
+            "type": "buttonToPage",
+            "caption": "appadministrator overview",
+            "targetPageRef": "appadministrator_overview"
+          },
+          {
+            "type": "buttonToPage",
+            "caption": "appuser overview",
+            "targetPageRef": "appuser_overview"
+          }
+        ]
+      },
+      {
+        "ref": "task_dashboard",
+        "name": "Task_Dashboard",
+        "title": "Task Dashboard",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "Task Dashboard",
+            "renderMode": "H2",
+            "content": [],
+            "itemContent": [],
+            "templateContent": []
+          },
+          {
+            "type": "dynamicText",
+            "text": "Overview and data management for task.",
+            "renderMode": "Paragraph",
+            "content": [],
+            "itemContent": [],
+            "templateContent": []
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Add Task",
+            "entityRef": "MyFirstModule.Task",
+            "targetPageRef": "task_newedit",
+            "content": [],
+            "itemContent": [],
+            "templateContent": []
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.Task",
+            "rowClickTargetPageRef": "task_newedit",
+            "autoRowClickToDetail": true,
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Description",
+                "autoLabel": false,
+                "content": [],
+                "itemContent": [],
+                "templateContent": []
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Status",
+                "autoLabel": false,
+                "content": [],
+                "itemContent": [],
+                "templateContent": []
+              }
+            ],
+            "content": [],
+            "templateContent": []
+          }
+        ],
+        "entityRef": "MyFirstModule.Task"
+      },
+      {
+        "ref": "file_overview",
+        "name": "File_Overview",
+        "title": "File Overview",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "File Overview",
+            "renderMode": "H2",
+            "content": [],
+            "itemContent": [],
+            "templateContent": []
+          },
+          {
+            "type": "dynamicText",
+            "text": "Manage file records and open the create dialog when new data is needed.",
+            "renderMode": "Paragraph",
+            "content": [],
+            "itemContent": [],
+            "templateContent": []
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Add File",
+            "entityRef": "MyFirstModule.File",
+            "targetPageRef": "file_newedit",
+            "content": [],
+            "itemContent": [],
+            "templateContent": []
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.File",
+            "rowClickTargetPageRef": "file_newedit",
+            "autoRowClickToDetail": true,
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "AccessLevel",
+                "autoLabel": true
+              }
+            ],
+            "content": [],
+            "templateContent": []
+          }
+        ],
+        "entityRef": "MyFirstModule.File"
+      },
+      {
+        "ref": "file_newedit",
+        "name": "File_NewEdit",
+        "title": "File NewEdit",
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "File",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "AccessLevel"
+              },
+              {
+                "type": "associationInput",
+                "associationRef": "Delivery_File",
+                "targetEntityRef": "MyFirstModule.Delivery",
+                "label": "Delivery"
+              },
+              {
+                "type": "associationInput",
+                "associationRef": "Task_File",
+                "targetEntityRef": "MyFirstModule.Task",
+                "label": "Task"
+              },
+              {
+                "type": "associationInput",
+                "associationRef": "File_AccessControl",
+                "targetEntityRef": "MyFirstModule.AccessControl",
+                "label": "Access Control"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ],
+        "entityRef": "MyFirstModule.File",
+        "pageParameters": [
+          {
+            "name": "File",
+            "entityRef": "MyFirstModule.File",
+            "required": true
+          }
+        ],
+        "layoutQualifiedName": "Atlas_Core.PopupLayout"
+      },
+      {
+        "ref": "task_overview",
+        "name": "Task_Overview",
+        "title": "Task Overview",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "Task Overview",
+            "renderMode": "H2",
+            "content": [],
+            "itemContent": [],
+            "templateContent": []
+          },
+          {
+            "type": "dynamicText",
+            "text": "Manage task records and open the create dialog when new data is needed.",
+            "renderMode": "Paragraph",
+            "content": [],
+            "itemContent": [],
+            "templateContent": []
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Add Task",
+            "entityRef": "MyFirstModule.Task",
+            "targetPageRef": "task_newedit",
+            "content": [],
+            "itemContent": [],
+            "templateContent": []
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.Task",
+            "rowClickTargetPageRef": "task_newedit",
+            "autoRowClickToDetail": true,
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Description",
+                "autoLabel": false,
+                "content": [],
+                "itemContent": [],
+                "templateContent": []
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Status",
+                "autoLabel": false,
+                "content": [],
+                "itemContent": [],
+                "templateContent": []
+              }
+            ],
+            "content": [],
+            "templateContent": []
+          }
+        ],
+        "entityRef": "MyFirstModule.Task"
+      },
+      {
+        "ref": "task_newedit",
+        "name": "Task_NewEdit",
+        "title": "Task NewEdit",
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "Task",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Description"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "DueDate"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Status"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Priority"
+              },
+              {
+                "type": "associationInput",
+                "associationRef": "Task_File",
+                "targetEntityRef": "MyFirstModule.File",
+                "label": "File"
+              },
+              {
+                "type": "associationInput",
+                "associationRef": "Task_TeamMember",
+                "targetEntityRef": "MyFirstModule.TeamMember",
+                "label": "Team Member"
+              },
+              {
+                "type": "associationInput",
+                "associationRef": "Task_Subtask",
+                "targetEntityRef": "MyFirstModule.Subtask",
+                "label": "Subtask"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ],
+        "entityRef": "MyFirstModule.Task",
+        "pageParameters": [
+          {
+            "name": "Task",
+            "entityRef": "MyFirstModule.Task",
+            "required": true
+          }
+        ],
+        "layoutQualifiedName": "Atlas_Core.PopupLayout"
+      },
+      {
+        "ref": "delivery_overview",
+        "name": "Delivery_Overview",
+        "title": "Delivery Overview",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "Delivery Overview",
+            "renderMode": "H2",
+            "content": [],
+            "itemContent": [],
+            "templateContent": []
+          },
+          {
+            "type": "dynamicText",
+            "text": "Manage delivery records and open the create dialog when new data is needed.",
+            "renderMode": "Paragraph",
+            "content": [],
+            "itemContent": [],
+            "templateContent": []
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Add Delivery",
+            "entityRef": "MyFirstModule.Delivery",
+            "targetPageRef": "delivery_newedit",
+            "content": [],
+            "itemContent": [],
+            "templateContent": []
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.Delivery",
+            "rowClickTargetPageRef": "delivery_newedit",
+            "autoRowClickToDetail": true,
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Description",
+                "autoLabel": false,
+                "content": [],
+                "itemContent": [],
+                "templateContent": []
+              }
+            ],
+            "content": [],
+            "templateContent": []
+          }
+        ],
+        "entityRef": "MyFirstModule.Delivery"
+      },
+      {
+        "ref": "delivery_newedit",
+        "name": "Delivery_NewEdit",
+        "title": "Delivery NewEdit",
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "Delivery",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Description"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "GoalDescription"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Published"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "PublicationDate"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "RatingScale"
+              },
+              {
+                "type": "associationInput",
+                "associationRef": "Delivery_File",
+                "targetEntityRef": "MyFirstModule.File",
+                "label": "File"
+              },
+              {
+                "type": "associationInput",
+                "associationRef": "Delivery_Client",
+                "targetEntityRef": "MyFirstModule.Client",
+                "label": "Client"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ],
+        "entityRef": "MyFirstModule.Delivery",
+        "pageParameters": [
+          {
+            "name": "Delivery",
+            "entityRef": "MyFirstModule.Delivery",
+            "required": true
+          }
+        ],
+        "layoutQualifiedName": "Atlas_Core.PopupLayout"
+      },
+      {
+        "ref": "project_overview",
+        "name": "Project_Overview",
+        "title": "Project Overview",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "Project Overview",
+            "renderMode": "H2",
+            "content": [],
+            "itemContent": [],
+            "templateContent": []
+          },
+          {
+            "type": "dynamicText",
+            "text": "Manage project records and open the create dialog when new data is needed.",
+            "renderMode": "Paragraph",
+            "content": [],
+            "itemContent": [],
+            "templateContent": []
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Add Project",
+            "entityRef": "MyFirstModule.Project",
+            "targetPageRef": "project_newedit",
+            "content": [],
+            "itemContent": [],
+            "templateContent": []
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.Project",
+            "rowClickTargetPageRef": "project_newedit",
+            "autoRowClickToDetail": true,
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Department",
+                "autoLabel": true
+              }
+            ],
+            "content": [],
+            "templateContent": []
+          }
+        ],
+        "entityRef": "MyFirstModule.Project"
+      },
+      {
+        "ref": "project_newedit",
+        "name": "Project_NewEdit",
+        "title": "Project NewEdit",
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "Project",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Department"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "ResourceId"
+              },
+              {
+                "type": "associationInput",
+                "associationRef": "Project_Milestone",
+                "targetEntityRef": "MyFirstModule.Milestone",
+                "label": "Milestone"
+              },
+              {
+                "type": "associationInput",
+                "associationRef": "Project_Resource",
+                "targetEntityRef": "MyFirstModule.Resource",
+                "label": "Resource"
+              },
+              {
+                "type": "associationInput",
+                "associationRef": "Project_TeamMember",
+                "targetEntityRef": "MyFirstModule.TeamMember",
+                "label": "Team Member"
+              },
+              {
+                "type": "associationInput",
+                "associationRef": "ProjectManager_Project",
+                "targetEntityRef": "MyFirstModule.ProjectManager",
+                "label": "Project Manager"
+              },
+              {
+                "type": "associationInput",
+                "associationRef": "Project_ChatRoom",
+                "targetEntityRef": "MyFirstModule.ChatRoom",
+                "label": "Chat Room"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ],
+        "entityRef": "MyFirstModule.Project",
+        "pageParameters": [
+          {
+            "name": "Project",
+            "entityRef": "MyFirstModule.Project",
+            "required": true
+          }
+        ],
+        "layoutQualifiedName": "Atlas_Core.PopupLayout"
+      },
+      {
+        "ref": "feedback_overview",
+        "name": "Feedback_Overview",
+        "title": "Feedback Overview",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "Feedback Overview",
+            "renderMode": "H2",
+            "content": [],
+            "itemContent": [],
+            "templateContent": []
+          },
+          {
+            "type": "dynamicText",
+            "text": "Manage feedback records and open the create dialog when new data is needed.",
+            "renderMode": "Paragraph",
+            "content": [],
+            "itemContent": [],
+            "templateContent": []
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Add Feedback",
+            "entityRef": "MyFirstModule.Feedback",
+            "targetPageRef": "feedback_newedit",
+            "content": [],
+            "itemContent": [],
+            "templateContent": []
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.Feedback",
+            "rowClickTargetPageRef": "feedback_newedit",
+            "autoRowClickToDetail": true,
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Rating",
+                "autoLabel": true
+              }
+            ],
+            "content": [],
+            "templateContent": []
+          }
+        ],
+        "entityRef": "MyFirstModule.Feedback"
+      },
+      {
+        "ref": "feedback_newedit",
+        "name": "Feedback_NewEdit",
+        "title": "Feedback NewEdit",
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "Feedback",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Rating"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Comment"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Criteria"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ],
+        "entityRef": "MyFirstModule.Feedback",
+        "pageParameters": [
+          {
+            "name": "Feedback",
+            "entityRef": "MyFirstModule.Feedback",
+            "required": true
+          }
+        ],
+        "layoutQualifiedName": "Atlas_Core.PopupLayout"
+      },
+      {
+        "ref": "projectmanager_overview",
+        "name": "ProjectManager_Overview",
+        "title": "ProjectManager Overview",
+        "entityRef": "MyFirstModule.ProjectManager",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "ProjectManager Overview",
+            "renderMode": "H2",
+            "content": [],
+            "itemContent": [],
+            "templateContent": []
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Create ProjectManager",
+            "entityRef": "MyFirstModule.ProjectManager",
+            "targetPageRef": "projectmanager_newedit",
+            "content": [],
+            "itemContent": [],
+            "templateContent": []
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.ProjectManager",
+            "autoRowClickToDetail": true,
+            "rowClickTargetPageRef": "projectmanager_newedit",
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name",
+                "autoLabel": true,
+                "content": [],
+                "itemContent": [],
+                "templateContent": []
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Email",
+                "autoLabel": false,
+                "content": [],
+                "itemContent": [],
+                "templateContent": []
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "IsActive",
+                "autoLabel": false,
+                "content": [],
+                "itemContent": [],
+                "templateContent": []
+              }
+            ],
+            "content": [],
+            "templateContent": []
+          }
+        ]
+      },
+      {
+        "ref": "projectmanager_newedit",
+        "name": "ProjectManager_NewEdit",
+        "title": "ProjectManager NewEdit",
+        "entityRef": "MyFirstModule.ProjectManager",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          {
+            "name": "ProjectManager",
+            "entityRef": "MyFirstModule.ProjectManager",
+            "required": true
+          }
+        ],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "ProjectManager",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Email"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "IsActive"
+              },
+              {
+                "type": "associationInput",
+                "associationRef": "ProjectManager_Project",
+                "targetEntityRef": "MyFirstModule.Project",
+                "label": "Project"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "teammember_overview",
+        "name": "TeamMember_Overview",
+        "title": "TeamMember Overview",
+        "entityRef": "MyFirstModule.TeamMember",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "TeamMember Overview",
+            "renderMode": "H2",
+            "content": [],
+            "itemContent": [],
+            "templateContent": []
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Create TeamMember",
+            "entityRef": "MyFirstModule.TeamMember",
+            "targetPageRef": "teammember_newedit",
+            "content": [],
+            "itemContent": [],
+            "templateContent": []
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.TeamMember",
+            "autoRowClickToDetail": true,
+            "rowClickTargetPageRef": "teammember_newedit",
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name",
+                "autoLabel": true,
+                "content": [],
+                "itemContent": [],
+                "templateContent": []
+              }
+            ],
+            "content": [],
+            "templateContent": []
+          }
+        ]
+      },
+      {
+        "ref": "teammember_newedit",
+        "name": "TeamMember_NewEdit",
+        "title": "TeamMember NewEdit",
+        "entityRef": "MyFirstModule.TeamMember",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          {
+            "name": "TeamMember",
+            "entityRef": "MyFirstModule.TeamMember",
+            "required": true
+          }
+        ],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "TeamMember",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Role"
+              },
+              {
+                "type": "associationInput",
+                "associationRef": "Task_TeamMember",
+                "targetEntityRef": "MyFirstModule.Task",
+                "label": "Task"
+              },
+              {
+                "type": "associationInput",
+                "associationRef": "Project_TeamMember",
+                "targetEntityRef": "MyFirstModule.Project",
+                "label": "Project"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "client_overview",
+        "name": "Client_Overview",
+        "title": "Client Overview",
+        "entityRef": "MyFirstModule.Client",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "Client Overview",
+            "renderMode": "H2",
+            "content": [],
+            "itemContent": [],
+            "templateContent": []
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Create Client",
+            "entityRef": "MyFirstModule.Client",
+            "targetPageRef": "client_newedit",
+            "content": [],
+            "itemContent": [],
+            "templateContent": []
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.Client",
+            "autoRowClickToDetail": true,
+            "rowClickTargetPageRef": "client_newedit",
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name",
+                "autoLabel": true,
+                "content": [],
+                "itemContent": [],
+                "templateContent": []
+              }
+            ],
+            "content": [],
+            "templateContent": []
+          }
+        ]
+      },
+      {
+        "ref": "client_newedit",
+        "name": "Client_NewEdit",
+        "title": "Client NewEdit",
+        "entityRef": "MyFirstModule.Client",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          {
+            "name": "Client",
+            "entityRef": "MyFirstModule.Client",
+            "required": true
+          }
+        ],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "Client",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name"
+              },
+              {
+                "type": "associationInput",
+                "associationRef": "Delivery_Client",
+                "targetEntityRef": "MyFirstModule.Delivery",
+                "label": "Delivery"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "projectoverview",
+        "name": "projectOverview",
+        "title": "project Overview",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "project Overview",
+            "renderMode": "H2",
+            "content": [],
+            "itemContent": [],
+            "templateContent": []
+          }
+        ]
+      },
+      {
+        "ref": "projectdetail",
+        "name": "projectDetail",
+        "title": "project Detail",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "project Detail",
+            "renderMode": "H2",
+            "content": [],
+            "itemContent": [],
+            "templateContent": []
+          }
+        ]
+      },
+      {
+        "ref": "newproject",
+        "name": "newProject",
+        "title": "new Project",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "new Project",
+            "renderMode": "H2",
+            "content": [],
+            "itemContent": [],
+            "templateContent": []
+          }
+        ]
+      },
+      {
+        "ref": "editproject",
+        "name": "editProject",
+        "title": "edit Project",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "edit Project",
+            "renderMode": "H2",
+            "content": [],
+            "itemContent": [],
+            "templateContent": []
+          }
+        ]
+      },
+      {
+        "ref": "milestoneoverview",
+        "name": "milestoneOverview",
+        "title": "milestone Overview",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "milestone Overview",
+            "renderMode": "H2",
+            "content": [],
+            "itemContent": [],
+            "templateContent": []
+          }
+        ]
+      },
+      {
+        "ref": "milestonedetail",
+        "name": "milestoneDetail",
+        "title": "milestone Detail",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "milestone Detail",
+            "renderMode": "H2",
+            "content": [],
+            "itemContent": [],
+            "templateContent": []
+          }
+        ]
+      },
+      {
+        "ref": "newmilestone",
+        "name": "newMilestone",
+        "title": "new Milestone",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "new Milestone",
+            "renderMode": "H2",
+            "content": [],
+            "itemContent": [],
+            "templateContent": []
+          }
+        ]
+      },
+      {
+        "ref": "editmilestone",
+        "name": "editMilestone",
+        "title": "edit Milestone",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "edit Milestone",
+            "renderMode": "H2",
+            "content": [],
+            "itemContent": [],
+            "templateContent": []
+          }
+        ]
+      },
+      {
+        "ref": "deliveryoverview",
+        "name": "deliveryOverview",
+        "title": "delivery Overview",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "delivery Overview",
+            "renderMode": "H2",
+            "content": [],
+            "itemContent": [],
+            "templateContent": []
+          }
+        ]
+      },
+      {
+        "ref": "deliverydetail",
+        "name": "deliveryDetail",
+        "title": "delivery Detail",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "delivery Detail",
+            "renderMode": "H2",
+            "content": [],
+            "itemContent": [],
+            "templateContent": []
+          }
+        ]
+      },
+      {
+        "ref": "newdelivery",
+        "name": "newDelivery",
+        "title": "new Delivery",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "new Delivery",
+            "renderMode": "H2",
+            "content": [],
+            "itemContent": [],
+            "templateContent": []
+          }
+        ]
+      },
+      {
+        "ref": "editdelivery",
+        "name": "editDelivery",
+        "title": "edit Delivery",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "edit Delivery",
+            "renderMode": "H2",
+            "content": [],
+            "itemContent": [],
+            "templateContent": []
+          }
+        ]
+      },
+      {
+        "ref": "fileoverview",
+        "name": "fileOverview",
+        "title": "file Overview",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "file Overview",
+            "renderMode": "H2",
+            "content": [],
+            "itemContent": [],
+            "templateContent": []
+          }
+        ]
+      },
+      {
+        "ref": "filedetail",
+        "name": "fileDetail",
+        "title": "file Detail",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "file Detail",
+            "renderMode": "H2",
+            "content": [],
+            "itemContent": [],
+            "templateContent": []
+          }
+        ]
+      },
+      {
+        "ref": "newfile",
+        "name": "newFile",
+        "title": "new File",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "new File",
+            "renderMode": "H2",
+            "content": [],
+            "itemContent": [],
+            "templateContent": []
+          }
+        ]
+      },
+      {
+        "ref": "editfile",
+        "name": "editFile",
+        "title": "edit File",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "edit File",
+            "renderMode": "H2",
+            "content": [],
+            "itemContent": [],
+            "templateContent": []
+          }
+        ]
+      },
+      {
+        "ref": "taskoverview",
+        "name": "taskOverview",
+        "title": "task Overview",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "task Overview",
+            "renderMode": "H2",
+            "content": [],
+            "itemContent": [],
+            "templateContent": []
+          }
+        ]
+      },
+      {
+        "ref": "taskdetail",
+        "name": "taskDetail",
+        "title": "task Detail",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "task Detail",
+            "renderMode": "H2",
+            "content": [],
+            "itemContent": [],
+            "templateContent": []
+          }
+        ]
+      },
+      {
+        "ref": "newtask",
+        "name": "newTask",
+        "title": "new Task",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "new Task",
+            "renderMode": "H2",
+            "content": [],
+            "itemContent": [],
+            "templateContent": []
+          }
+        ]
+      },
+      {
+        "ref": "edittask",
+        "name": "editTask",
+        "title": "edit Task",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "edit Task",
+            "renderMode": "H2",
+            "content": [],
+            "itemContent": [],
+            "templateContent": []
+          }
+        ]
+      },
+      {
+        "ref": "feedbackoverview",
+        "name": "feedbackOverview",
+        "title": "feedback Overview",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "feedback Overview",
+            "renderMode": "H2",
+            "content": [],
+            "itemContent": [],
+            "templateContent": []
+          }
+        ]
+      },
+      {
+        "ref": "feedbackdetail",
+        "name": "feedbackDetail",
+        "title": "feedback Detail",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "feedback Detail",
+            "renderMode": "H2",
+            "content": [],
+            "itemContent": [],
+            "templateContent": []
+          }
+        ]
+      },
+      {
+        "ref": "newfeedback",
+        "name": "newFeedback",
+        "title": "new Feedback",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "new Feedback",
+            "renderMode": "H2",
+            "content": [],
+            "itemContent": [],
+            "templateContent": []
+          }
+        ]
+      },
+      {
+        "ref": "editfeedback",
+        "name": "editFeedback",
+        "title": "edit Feedback",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "edit Feedback",
+            "renderMode": "H2",
+            "content": [],
+            "itemContent": [],
+            "templateContent": []
+          }
+        ]
+      },
+      {
+        "ref": "milestone_overview",
+        "name": "Milestone_Overview",
+        "title": "Milestone Overview",
+        "entityRef": "MyFirstModule.Milestone",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "Milestone Overview",
+            "renderMode": "H2"
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Create Milestone",
+            "entityRef": "MyFirstModule.Milestone",
+            "targetPageRef": "milestone_newedit"
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.Milestone",
+            "autoRowClickToDetail": true,
+            "rowClickTargetPageRef": "milestone_newedit",
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "DueDate",
+                "autoLabel": true
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Status",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Priority",
+                "autoLabel": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "milestone_newedit",
+        "name": "Milestone_NewEdit",
+        "title": "Milestone NewEdit",
+        "entityRef": "MyFirstModule.Milestone",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          {
+            "name": "Milestone",
+            "entityRef": "MyFirstModule.Milestone",
+            "required": true
+          }
+        ],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "Milestone",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "DueDate"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Status"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Priority"
+              },
+              {
+                "type": "associationInput",
+                "associationRef": "Project_Milestone",
+                "targetEntityRef": "MyFirstModule.Project",
+                "label": "Project"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "archivestatus_overview",
+        "name": "ArchiveStatus_Overview",
+        "title": "ArchiveStatus Overview",
+        "entityRef": "MyFirstModule.ArchiveStatus",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "ArchiveStatus Overview",
+            "renderMode": "H2"
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Create ArchiveStatus",
+            "entityRef": "MyFirstModule.ArchiveStatus",
+            "targetPageRef": "archivestatus_newedit"
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.ArchiveStatus",
+            "autoRowClickToDetail": true,
+            "rowClickTargetPageRef": "archivestatus_newedit",
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name",
+                "autoLabel": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "archivestatus_newedit",
+        "name": "ArchiveStatus_NewEdit",
+        "title": "ArchiveStatus NewEdit",
+        "entityRef": "MyFirstModule.ArchiveStatus",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          {
+            "name": "ArchiveStatus",
+            "entityRef": "MyFirstModule.ArchiveStatus",
+            "required": true
+          }
+        ],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "ArchiveStatus",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "notification_overview",
+        "name": "Notification_Overview",
+        "title": "Notification Overview",
+        "entityRef": "MyFirstModule.Notification",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "Notification Overview",
+            "renderMode": "H2"
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Create Notification",
+            "entityRef": "MyFirstModule.Notification",
+            "targetPageRef": "notification_newedit"
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.Notification",
+            "autoRowClickToDetail": true,
+            "rowClickTargetPageRef": "notification_newedit",
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name",
+                "autoLabel": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "notification_newedit",
+        "name": "Notification_NewEdit",
+        "title": "Notification NewEdit",
+        "entityRef": "MyFirstModule.Notification",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          {
+            "name": "Notification",
+            "entityRef": "MyFirstModule.Notification",
+            "required": true
+          }
+        ],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "Notification",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "draftdelivery_overview",
+        "name": "DraftDelivery_Overview",
+        "title": "DraftDelivery Overview",
+        "entityRef": "MyFirstModule.DraftDelivery",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "DraftDelivery Overview",
+            "renderMode": "H2"
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Create DraftDelivery",
+            "entityRef": "MyFirstModule.DraftDelivery",
+            "targetPageRef": "draftdelivery_newedit"
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.DraftDelivery",
+            "autoRowClickToDetail": true,
+            "rowClickTargetPageRef": "draftdelivery_newedit",
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Description",
+                "autoLabel": true
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "GoalDescription",
+                "autoLabel": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "draftdelivery_newedit",
+        "name": "DraftDelivery_NewEdit",
+        "title": "DraftDelivery NewEdit",
+        "entityRef": "MyFirstModule.DraftDelivery",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          {
+            "name": "DraftDelivery",
+            "entityRef": "MyFirstModule.DraftDelivery",
+            "required": true
+          }
+        ],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "DraftDelivery",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Description"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "GoalDescription"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "resource_overview",
+        "name": "Resource_Overview",
+        "title": "Resource Overview",
+        "entityRef": "MyFirstModule.Resource",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "Resource Overview",
+            "renderMode": "H2"
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Create Resource",
+            "entityRef": "MyFirstModule.Resource",
+            "targetPageRef": "resource_newedit"
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.Resource",
+            "autoRowClickToDetail": true,
+            "rowClickTargetPageRef": "resource_newedit",
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name",
+                "autoLabel": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "resource_newedit",
+        "name": "Resource_NewEdit",
+        "title": "Resource NewEdit",
+        "entityRef": "MyFirstModule.Resource",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          {
+            "name": "Resource",
+            "entityRef": "MyFirstModule.Resource",
+            "required": true
+          }
+        ],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "Resource",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name"
+              },
+              {
+                "type": "associationInput",
+                "associationRef": "Project_Resource",
+                "targetEntityRef": "MyFirstModule.Project",
+                "label": "Project"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "accesscontrol_overview",
+        "name": "AccessControl_Overview",
+        "title": "AccessControl Overview",
+        "entityRef": "MyFirstModule.AccessControl",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "AccessControl Overview",
+            "renderMode": "H2"
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Create AccessControl",
+            "entityRef": "MyFirstModule.AccessControl",
+            "targetPageRef": "accesscontrol_newedit"
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.AccessControl",
+            "autoRowClickToDetail": true,
+            "rowClickTargetPageRef": "accesscontrol_newedit",
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name",
+                "autoLabel": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "accesscontrol_newedit",
+        "name": "AccessControl_NewEdit",
+        "title": "AccessControl NewEdit",
+        "entityRef": "MyFirstModule.AccessControl",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          {
+            "name": "AccessControl",
+            "entityRef": "MyFirstModule.AccessControl",
+            "required": true
+          }
+        ],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "AccessControl",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name"
+              },
+              {
+                "type": "associationInput",
+                "associationRef": "File_AccessControl",
+                "targetEntityRef": "MyFirstModule.File",
+                "label": "File"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "subtask_overview",
+        "name": "Subtask_Overview",
+        "title": "Subtask Overview",
+        "entityRef": "MyFirstModule.Subtask",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "Subtask Overview",
+            "renderMode": "H2"
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Create Subtask",
+            "entityRef": "MyFirstModule.Subtask",
+            "targetPageRef": "subtask_newedit"
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.Subtask",
+            "autoRowClickToDetail": true,
+            "rowClickTargetPageRef": "subtask_newedit",
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name",
+                "autoLabel": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "subtask_newedit",
+        "name": "Subtask_NewEdit",
+        "title": "Subtask NewEdit",
+        "entityRef": "MyFirstModule.Subtask",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          {
+            "name": "Subtask",
+            "entityRef": "MyFirstModule.Subtask",
+            "required": true
+          }
+        ],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "Subtask",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name"
+              },
+              {
+                "type": "associationInput",
+                "associationRef": "Task_Subtask",
+                "targetEntityRef": "MyFirstModule.Task",
+                "label": "Task"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "commentthread_overview",
+        "name": "CommentThread_Overview",
+        "title": "CommentThread Overview",
+        "entityRef": "MyFirstModule.CommentThread",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "CommentThread Overview",
+            "renderMode": "H2"
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Create CommentThread",
+            "entityRef": "MyFirstModule.CommentThread",
+            "targetPageRef": "commentthread_newedit"
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.CommentThread",
+            "autoRowClickToDetail": true,
+            "rowClickTargetPageRef": "commentthread_newedit",
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name",
+                "autoLabel": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "commentthread_newedit",
+        "name": "CommentThread_NewEdit",
+        "title": "CommentThread NewEdit",
+        "entityRef": "MyFirstModule.CommentThread",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          {
+            "name": "CommentThread",
+            "entityRef": "MyFirstModule.CommentThread",
+            "required": true
+          }
+        ],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "CommentThread",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name"
+              },
+              {
+                "type": "associationInput",
+                "associationRef": "ChatRoom_ChatMessage",
+                "targetEntityRef": "MyFirstModule.ChatRoom",
+                "label": "Chat Room"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "chatroom_overview",
+        "name": "ChatRoom_Overview",
+        "title": "ChatRoom Overview",
+        "entityRef": "MyFirstModule.ChatRoom",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "ChatRoom Overview",
+            "renderMode": "H2"
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Create ChatRoom",
+            "entityRef": "MyFirstModule.ChatRoom",
+            "targetPageRef": "chatroom_newedit"
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.ChatRoom",
+            "autoRowClickToDetail": true,
+            "rowClickTargetPageRef": "chatroom_newedit",
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name",
+                "autoLabel": true
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Description",
+                "autoLabel": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "chatroom_newedit",
+        "name": "ChatRoom_NewEdit",
+        "title": "ChatRoom NewEdit",
+        "entityRef": "MyFirstModule.ChatRoom",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          {
+            "name": "ChatRoom",
+            "entityRef": "MyFirstModule.ChatRoom",
+            "required": true
+          }
+        ],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "ChatRoom",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Description"
+              },
+              {
+                "type": "associationInput",
+                "associationRef": "ChatRoom_ChatMessage",
+                "targetEntityRef": "MyFirstModule.CommentThread",
+                "label": "Comment Thread"
+              },
+              {
+                "type": "associationInput",
+                "associationRef": "Project_ChatRoom",
+                "targetEntityRef": "MyFirstModule.Project",
+                "label": "Project"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "projectteam_overview",
+        "name": "ProjectTeam_Overview",
+        "title": "ProjectTeam Overview",
+        "entityRef": "MyFirstModule.ProjectTeam",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "ProjectTeam Overview",
+            "renderMode": "H2"
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Create ProjectTeam",
+            "entityRef": "MyFirstModule.ProjectTeam",
+            "targetPageRef": "projectteam_newedit"
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.ProjectTeam",
+            "autoRowClickToDetail": true,
+            "rowClickTargetPageRef": "projectteam_newedit",
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name",
+                "autoLabel": true
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Description",
+                "autoLabel": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "projectteam_newedit",
+        "name": "ProjectTeam_NewEdit",
+        "title": "ProjectTeam NewEdit",
+        "entityRef": "MyFirstModule.ProjectTeam",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          {
+            "name": "ProjectTeam",
+            "entityRef": "MyFirstModule.ProjectTeam",
+            "required": true
+          }
+        ],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "ProjectTeam",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Description"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "appadministrator_overview",
+        "name": "AppAdministrator_Overview",
+        "title": "AppAdministrator Overview",
+        "entityRef": "MyFirstModule.AppAdministrator",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "AppAdministrator Overview",
+            "renderMode": "H2"
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Create AppAdministrator",
+            "entityRef": "MyFirstModule.AppAdministrator",
+            "targetPageRef": "appadministrator_newedit"
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.AppAdministrator",
+            "autoRowClickToDetail": true,
+            "rowClickTargetPageRef": "appadministrator_newedit",
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name",
+                "autoLabel": true
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Email",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "IsActive",
+                "autoLabel": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "appadministrator_newedit",
+        "name": "AppAdministrator_NewEdit",
+        "title": "AppAdministrator NewEdit",
+        "entityRef": "MyFirstModule.AppAdministrator",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          {
+            "name": "AppAdministrator",
+            "entityRef": "MyFirstModule.AppAdministrator",
+            "required": true
+          }
+        ],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "AppAdministrator",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Email"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "IsActive"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "appuser_overview",
+        "name": "AppUser_Overview",
+        "title": "AppUser Overview",
+        "entityRef": "MyFirstModule.AppUser",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "AppUser Overview",
+            "renderMode": "H2"
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Create AppUser",
+            "entityRef": "MyFirstModule.AppUser",
+            "targetPageRef": "appuser_newedit"
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.AppUser",
+            "autoRowClickToDetail": true,
+            "rowClickTargetPageRef": "appuser_newedit",
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name",
+                "autoLabel": true
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Email",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "IsActive",
+                "autoLabel": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "appuser_newedit",
+        "name": "AppUser_NewEdit",
+        "title": "AppUser NewEdit",
+        "entityRef": "MyFirstModule.AppUser",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          {
+            "name": "AppUser",
+            "entityRef": "MyFirstModule.AppUser",
+            "required": true
+          }
+        ],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "AppUser",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Email"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "IsActive"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "employee_overview",
+        "name": "Employee_Overview",
+        "title": "Employee Overview",
+        "entityRef": "MyFirstModule.Employee",
+        "content": [
+          {
+            "type": "dynamicText",
+            "text": "Employee Overview",
+            "renderMode": "H2"
+          },
+          {
+            "type": "createObjectButton",
+            "caption": "Create Employee",
+            "entityRef": "MyFirstModule.Employee",
+            "targetPageRef": "employee_newedit"
+          },
+          {
+            "type": "listView",
+            "entityRef": "MyFirstModule.Employee",
+            "autoRowClickToDetail": true,
+            "rowClickTargetPageRef": "employee_newedit",
+            "itemContent": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name",
+                "autoLabel": true
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Email",
+                "autoLabel": false
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "IsActive",
+                "autoLabel": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ref": "employee_newedit",
+        "name": "Employee_NewEdit",
+        "title": "Employee NewEdit",
+        "entityRef": "MyFirstModule.Employee",
+        "layoutQualifiedName": "Atlas_Core.PopupLayout",
+        "pageParameters": [
+          {
+            "name": "Employee",
+            "entityRef": "MyFirstModule.Employee",
+            "required": true
+          }
+        ],
+        "content": [
+          {
+            "type": "dataView",
+            "pageParameterName": "Employee",
+            "labelWidth": 3,
+            "content": [
+              {
+                "type": "attributeInput",
+                "attributeRef": "Name"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "Email"
+              },
+              {
+                "type": "attributeInput",
+                "attributeRef": "IsActive"
+              },
+              {
+                "type": "saveChangesButton",
+                "caption": "Save",
+                "closePage": true
+              },
+              {
+                "type": "cancelChangesButton",
+                "caption": "Cancel",
+                "closePage": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "verification": {
+    "failOnMissing": true
+  },
+  "microflows": {
+    "specs": [
+      {
+        "name": "CreateProject",
+        "parameters": [
+          {
+            "name": "projectName",
+            "type": "String"
+          },
+          {
+            "name": "department",
+            "type": "String"
+          }
+        ],
+        "actions": [
+          {
+            "type": "createObject",
+            "entity": "Project",
+            "outputVariableName": "Project_New"
+          },
+          {
+            "type": "changeObject",
+            "targetVariableName": "Project_New",
+            "changes": [
+              {
+                "attributeRef": "Name",
+                "valueExpression": "$projectName"
+              },
+              {
+                "attributeRef": "Department",
+                "valueExpression": "$department"
+              }
+            ]
+          },
+          {
+            "type": "commitObject",
+            "variableName": "Project_New"
+          }
+        ]
+      },
+      {
+        "name": "ArchiveProject",
+        "parameters": [
+          {
+            "name": "projectId",
+            "type": "String"
+          }
+        ],
+        "actions": [
+          {
+            "type": "retrieveObject",
+            "entity": "Project",
+            "id": "$projectId",
+            "outputVariableName": "Project_Object"
+          },
+          {
+            "type": "commitObject",
+            "variableName": "Project_Object"
+          }
+        ]
+      },
+      {
+        "name": "CreateMilestone",
+        "parameters": [
+          {
+            "name": "projectId",
+            "type": "String"
+          },
+          {
+            "name": "dueDate",
+            "type": "DateTime"
+          }
+        ],
+        "actions": [
+          {
+            "type": "retrieveObject",
+            "entity": "Project",
+            "id": "$projectId",
+            "outputVariableName": "Project_Object"
+          },
+          {
+            "type": "createObject",
+            "entity": "Milestone",
+            "outputVariableName": "Milestone_New"
+          },
+          {
+            "type": "changeObject",
+            "targetVariableName": "Milestone_New",
+            "changes": [
+              {
+                "attributeRef": "DueDate",
+                "valueExpression": "$dueDate"
+              }
+            ]
+          },
+          {
+            "type": "commitObject",
+            "variableName": "Milestone_New"
+          }
+        ]
+      },
+      {
+        "name": "CreateDelivery",
+        "parameters": [
+          {
+            "name": "projectId",
+            "type": "String"
+          },
+          {
+            "name": "description",
+            "type": "String"
+          }
+        ],
+        "actions": [
+          {
+            "type": "retrieveObject",
+            "entity": "Project",
+            "id": "$projectId",
+            "outputVariableName": "Project_Object"
+          },
+          {
+            "type": "createObject",
+            "entity": "Delivery",
+            "outputVariableName": "Delivery_New"
+          },
+          {
+            "type": "changeObject",
+            "targetVariableName": "Delivery_New",
+            "changes": [
+              {
+                "attributeRef": "Description",
+                "valueExpression": "$description"
+              }
+            ]
+          },
+          {
+            "type": "commitObject",
+            "variableName": "Delivery_New"
+          }
+        ]
+      },
+      {
+        "name": "PublishFeedback",
+        "parameters": [
+          {
+            "name": "deliveryId",
+            "type": "String"
+          },
+          {
+            "name": "rating",
+            "type": "Integer"
+          },
+          {
+            "name": "comment",
+            "type": "String"
+          }
+        ],
+        "actions": [
+          {
+            "type": "retrieveObject",
+            "entity": "Delivery",
+            "id": "$deliveryId",
+            "outputVariableName": "Delivery_Object"
+          },
+          {
+            "type": "createObject",
+            "entity": "Feedback",
+            "outputVariableName": "Feedback_New"
+          },
+          {
+            "type": "changeObject",
+            "targetVariableName": "Feedback_New",
+            "changes": [
+              {
+                "attributeRef": "Rating",
+                "valueExpression": "$rating"
+              },
+              {
+                "attributeRef": "Comment",
+                "valueExpression": "$comment"
+              }
+            ]
+          },
+          {
+            "type": "commitObject",
+            "variableName": "Feedback_New"
+          }
+        ]
+      }
+    ]
+  },
+  "nanoflows": {
+    "specs": [
+      {
+        "name": "GetProjectMilestones",
+        "parameters": [
+          {
+            "name": "projectId",
+            "type": "String"
+          }
+        ],
+        "actions": [
+          {
+            "type": "retrieveObject",
+            "entity": "Project",
+            "id": "$projectId",
+            "outputVariableName": "Project_Object"
+          },
+          {
+            "type": "retrieveList",
+            "entity": "Milestone",
+            "association": "Project_Milestone",
+            "outputVariableName": "Milestone_List"
+          },
+          {
+            "type": "returnValue",
+            "value": "$milestones"
+          }
+        ]
+      },
+      {
+        "name": "GetDeliveryFiles",
+        "parameters": [
+          {
+            "name": "deliveryId",
+            "type": "String"
+          }
+        ],
+        "actions": [
+          {
+            "type": "retrieveObject",
+            "entity": "Delivery",
+            "id": "$deliveryId",
+            "outputVariableName": "Delivery_Object"
+          },
+          {
+            "type": "retrieveList",
+            "entity": "File",
+            "association": "Delivery_File",
+            "outputVariableName": "File_List"
+          },
+          {
+            "type": "returnValue",
+            "value": "$files"
+          }
+        ]
+      }
+    ]
+  },
+  "workflows": {
+    "specs": []
+  }
+}

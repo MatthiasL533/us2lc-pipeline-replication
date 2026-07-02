@@ -1,0 +1,246 @@
+{
+  "pages": {
+    "specs": [
+      {
+        "name": "home",
+        "layout": "Blank",
+        "widgets": [
+          {
+            "type": "Text",
+            "caption": "Welcome to Daily Sports"
+          },
+          {
+            "type": "Button",
+            "caption": "Sign up",
+            "onClick": {
+              "type": "Open page",
+              "page": "newCustomer"
+            }
+          },
+          {
+            "type": "Button",
+            "caption": "Log in",
+            "onClick": {
+              "type": "Open page",
+              "page": "login"
+            }
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "newCustomer",
+        "layout": "Form horizontal",
+        "widgets": [
+          {
+            "type": "TextInput",
+            "attributeRef": "NewCustomer.Name"
+          },
+          {
+            "type": "TextInput",
+            "attributeRef": "NewCustomer.Email"
+          },
+          {
+            "type": "Button",
+            "caption": "Sign up",
+            "onClick": {
+              "type": "Create object",
+              "entity": "NewCustomer"
+            }
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "login",
+        "layout": "Form horizontal",
+        "widgets": [
+          {
+            "type": "TextInput",
+            "attributeRef": "AppUser.Name"
+          },
+          {
+            "type": "PasswordInput",
+            "attributeRef": "AppUser.Password"
+          },
+          {
+            "type": "Button",
+            "caption": "Log in",
+            "onClick": {
+              "type": "Sign in",
+              "username": "$AppUser.Name",
+              "password": "$AppUser.Password"
+            }
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "customerOverview",
+        "layout": "Table",
+        "widgets": [
+          {
+            "type": "Data grid",
+            "entity": "Customer",
+            "columns": [
+              {
+                "attributeRef": "firstName"
+              },
+              {
+                "attributeRef": "lastName"
+              },
+              {
+                "attributeRef": "Email"
+              }
+            ]
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "customerDetail",
+        "layout": "Form horizontal",
+        "widgets": [
+          {
+            "type": "TextInput",
+            "attributeRef": "Customer.firstName"
+          },
+          {
+            "type": "TextInput",
+            "attributeRef": "Customer.lastName"
+          },
+          {
+            "type": "TextInput",
+            "attributeRef": "Customer.Email"
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "trainerOverview",
+        "layout": "Table",
+        "widgets": [
+          {
+            "type": "Data grid",
+            "entity": "Trainer",
+            "columns": [
+              {
+                "attributeRef": "firstName"
+              },
+              {
+                "attributeRef": "lastName"
+              }
+            ]
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "trainerDetail",
+        "layout": "Form horizontal",
+        "widgets": [
+          {
+            "type": "TextInput",
+            "attributeRef": "Trainer.firstName"
+          },
+          {
+            "type": "TextInput",
+            "attributeRef": "Trainer.lastName"
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "lessonOverview",
+        "layout": "Table",
+        "widgets": [
+          {
+            "type": "Data grid",
+            "entity": "Lesson",
+            "columns": [
+              {
+                "attributeRef": "Title"
+              },
+              {
+                "attributeRef": "Description"
+              }
+            ]
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "lessonDetail",
+        "layout": "Form horizontal",
+        "widgets": [
+          {
+            "type": "TextInput",
+            "attributeRef": "Lesson.Title"
+          },
+          {
+            "type": "TextInput",
+            "attributeRef": "Lesson.Description"
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "subscriptionOverview",
+        "layout": "Table",
+        "widgets": [
+          {
+            "type": "Data grid",
+            "entity": "Subscription",
+            "columns": [
+              {
+                "attributeRef": "startDate"
+              },
+              {
+                "attributeRef": "endDate"
+              }
+            ]
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "subscriptionDetail",
+        "layout": "Form horizontal",
+        "widgets": [
+          {
+            "type": "Date input",
+            "attributeRef": "Subscription.startDate"
+          },
+          {
+            "type": "Date input",
+            "attributeRef": "Subscription.endDate"
+          }
+        ],
+        "content": []
+      }
+    ]
+  },
+  "app": {
+    "navigation": {
+      "homePage": "home",
+      "menuItems": [
+        {
+          "caption": "Customers",
+          "page": "customerOverview"
+        },
+        {
+          "caption": "Trainers",
+          "page": "trainerOverview"
+        },
+        {
+          "caption": "Lessons",
+          "page": "lessonOverview"
+        },
+        {
+          "caption": "Subscriptions",
+          "page": "subscriptionOverview"
+        }
+      ]
+    }
+  }
+}

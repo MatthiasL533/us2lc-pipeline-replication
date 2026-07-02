@@ -1,0 +1,60 @@
+{
+  "ok": true,
+  "inputPath": "/tmp/user-stories.txt",
+  "outputDir": "/tmp/process-visualizer-run",
+  "model": "mock",
+  "ollamaUrl": "http://127.0.0.1:11434",
+  "entities": [
+    { "entity_group": "AGENT", "word": "employee", "start": 6, "end": 14, "score": 0.99 },
+    { "entity_group": "TASK", "word": "submit a ticket", "start": 26, "end": 41, "score": 0.99 },
+    { "entity_group": "AGENT", "word": "manager", "start": 50, "end": 57, "score": 0.99 },
+    { "entity_group": "TASK", "word": "approve or reject the ticket", "start": 69, "end": 97, "score": 0.99 }
+  ],
+  "bpmnStructure": [
+    {
+      "content": {
+        "agent": { "entity_group": "AGENT", "word": "employee" },
+        "task": { "entity_group": "TASK", "word": "submit a ticket", "task_id": "T0" },
+        "sentence_idx": 0
+      },
+      "type": "task"
+    },
+    {
+      "id": "EG0",
+      "conditions": ["If the ticket is valid", "If the ticket is invalid"],
+      "type": "exclusive",
+      "children": [
+        [
+          {
+            "content": {
+              "agent": { "entity_group": "AGENT", "word": "manager" },
+              "task": { "entity_group": "TASK", "word": "approve the ticket", "task_id": "T1" },
+              "condition": { "entity_group": "CONDITION", "word": "If the ticket is valid" },
+              "sentence_idx": 1
+            },
+            "type": "task"
+          }
+        ],
+        [
+          {
+            "content": {
+              "agent": { "entity_group": "AGENT", "word": "manager" },
+              "task": { "entity_group": "TASK", "word": "reject the ticket", "task_id": "T2" },
+              "condition": { "entity_group": "CONDITION", "word": "If the ticket is invalid" },
+              "sentence_idx": 1
+            },
+            "type": "task"
+          }
+        ]
+      ]
+    }
+  ],
+  "graphData": {},
+  "graphSourcePath": "/tmp/process-visualizer-run/process-visualizer.gv",
+  "graphImagePath": "/tmp/process-visualizer-run/process-visualizer.png",
+  "logsDir": "/tmp/process-visualizer-run/output_logs",
+  "stats": {
+    "entityCount": 4,
+    "topLevelElementCount": 2
+  }
+}
